@@ -1,6 +1,7 @@
 module.exports = {
     port: 8080,
     dest: 'docs',
+    base: '/docs',
     evergreen: true,
     title: '鹏展博',
     description: '热爱前端，热爱健身，热爱生活',
