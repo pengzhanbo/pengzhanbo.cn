@@ -15,6 +15,7 @@ module.exports = {
             '/面试题以及个人答案CSS篇',
             '/面试题以及个人答案JS篇'
         ],
-        displayAllHeaders: true
+        displayAllHeaders: true,
+        lastUpdated: 'Last Updated'
     }
 };
