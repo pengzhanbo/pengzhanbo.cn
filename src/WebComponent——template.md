@@ -1,10 +1,12 @@
-# WebComponent——template
-> _pengzhanbo_ | 
-> _2018-03-19_
-___
-### template 简介
+---
+title: WebComponent——template
+time: 2018-3-19
+lang: zh-CN
+---
 
 在web开发领域中，模板并不少见。从服务器端的模板语言，如`Django`、`jsp`等，应用十分广泛，存在了很长时间。又如前端，早期例如`art(artTemplate)`，以及近年来，大多数的MV*框架涌现，绝大多数在展现层使用了同样的渲染机制：模板。
+
+<!-- more -->
 
 > __定义__   
 >模板，一个拥有预制格式的文档或者文件，可作为特定应用的出发点，这样就避免在每次使用格式的时候都重复创建。

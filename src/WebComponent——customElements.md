@@ -1,11 +1,16 @@
-# WebComponent——custom elements
+---
+title: WebComponent——custom elements
+time: 2018-8-1
+lang: zh-CN
+---
 
-> _pengzhanbo | 2018-08-01_
-____
 
 在我们的web应用开发中，HTML标签为我们提供了基础的应用和交互，我们使用HTML标签构建了各种各样丰富的web应用。
 
-然而在我们开发web应用的过程中，html标签提供的语义化并不能完全满足我们的场景。虽然在HTML5标准中，也增加了不少包括`<header>`、`<section>`、`<article>`、`<nav>`、`<container>`、`<footer>`等语义化标签，但它们主要是为内容或布局添加的通用语义化标签，在实际的场景中，我们还需要使用 `class` 等一些属性或者辅助说明，声明该标签的具体语义。    
+然而在我们开发web应用的过程中，html标签提供的语义化并不能完全满足我们的场景。虽然在HTML5标准中，也增加了不少包括`<header>`、`<section>`、`<article>`、`<nav>`、`<container>`、`<footer>`等语义化标签，但它们主要是为内容或布局添加的通用语义化标签，在实际的场景中，我们还需要使用 `class` 等一些属性或者辅助说明，声明该标签的具体语义。  
+
+<!-- more -->
+
 ``` html
 <div class="login-wrapper"></div>
 ```

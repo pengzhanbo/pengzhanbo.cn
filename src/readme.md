@@ -1,5 +1,6 @@
 ---
 home: true
-actionText: 阅读最近文章
-actionLink: /面试题以及个人答案JS篇
+lang: zh-CN
+heroImage: /helloboy.gif
+footer: 基于vuepress构建的静态博客，托管github page
 ---
