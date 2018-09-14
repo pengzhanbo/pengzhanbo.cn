@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <slot name="top"/>
-    <h3 class="page-title">
+    <h3 class="page-content-title">
       {{$page.frontmatter.title}}
       <small v-if="$page.frontmatter.time">
         create: {{$page.frontmatter.time}}
@@ -204,7 +204,7 @@ function find (page, items, offset) {
 
 .page
   padding-bottom 2rem
-.page-title
+.page-content-title
   @extend $wrapper
   padding $navbarHeight+1rem 2.5rem 1rem
   font-size 2em
