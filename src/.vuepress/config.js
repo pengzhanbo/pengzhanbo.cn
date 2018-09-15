@@ -11,11 +11,12 @@ module.exports = {
     themeConfig: {
         logo: '/g.gif',
         sidebar: [
+            '/WebComponent/template',
+            '/WebComponent/HTMLImport',
+            '/WebComponent/shadowDOM',
+            '/WebComponent/customElements',
+            '/Jenkins',
             '/vue组件间数据通信',
-            '/WebComponent——customElements',
-            '/WebComponent——HTMLImport',
-            '/WebComponent——shadowDOM',
-            '/WebComponent——template',
             '/前端的思考与杂谈',
             '/面试题以及个人答案CSS篇',
             '/面试题以及个人答案JS篇'
