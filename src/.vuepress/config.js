@@ -4,9 +4,12 @@ module.exports = {
     evergreen: true,
     title: '鹏展博',
     lang: 'zh-CN',
+    serviceWorker: true,
     description: '热爱前端，热爱健身，热爱生活',
     head: [
-        ['link', {rel: 'icon', href: '/g.gif'}]
+        ['link', {rel: 'icon', href: '/g.gif'}],
+        ['meta', {'name': 'keywords', content: '鹏展博,前端，健身'}],
+        ['meta', {'http-equiv': 'X-UA-Compatible', content: 'id=edg'}]
     ],
     themeConfig: {
         logo: '/g.gif',
@@ -24,7 +27,10 @@ module.exports = {
         displayAllHeaders: true,
         lastUpdated: 'Last Updated',
         prev: '',
-        next: ''
+        next: '',
+        serviceWorker: {
+            updatePopup: true
+        }
     },
     markdown: {
         lineNumbers: true

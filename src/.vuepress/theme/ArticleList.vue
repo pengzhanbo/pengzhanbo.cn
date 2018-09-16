@@ -39,5 +39,9 @@ function parsePage(pages) {
         li
             padding-bottom .5rem
             border-bottom solid $borderColor 1px
+            &:last-child
+                border-bottom none
+            h4
+                font-size 1.4em
 </style>
 

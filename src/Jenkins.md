@@ -25,7 +25,7 @@ yum install jenkins
 - __默认安装目录__ : `/var/lib/jenkins`
 - __默认日志目录__ ：`/var/log/jenkins`
 - __默认缓存目录__ : `/var/cache/jenkins`
-- __默认admin密码目录__ : `/var/lib/jenkins/secrets/initialAdminPassword`
+- __默认admin密码文件__ : `/var/lib/jenkins/secrets/initialAdminPassword`
 - __配置文件__ : `/etc/sysconfig/jenkins`
 
 ### 运行
