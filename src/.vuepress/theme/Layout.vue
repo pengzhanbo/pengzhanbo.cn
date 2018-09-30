@@ -9,7 +9,6 @@
       v-if="shouldShowNavbar"
       @toggle-sidebar="toggleSidebar"
     />
-
     <div
       class="sidebar-mask"
       @click="toggleSidebar(false)"
@@ -35,7 +34,6 @@
     >
       <component :is="$page.frontmatter.layout"/>
     </div>
-
     <Home 
       v-else-if="$page.frontmatter.home"
       :sidebar-items="sidebarItems"
@@ -53,8 +51,8 @@
         name="page-bottom"
         slot="bottom"
       />
+      <div id="bdxzh"></div>
     </Page>
-
     <SWUpdatePopup :updateEvent="swUpdateEvent"/>
   </div>
 </template>
@@ -147,6 +145,18 @@ export default {
     })
 
     this.$on('sw-updated', this.onSWUpdated)
+    cambrian.isBox({
+        success({result}) {
+          if (result) {
+            cambrian.bar({
+                data: {
+                    type: 'tail',
+                    anchor: document.getElementById('bdxzh')
+                }
+            });
+          }
+        }
+    });
   },
 
   methods: {

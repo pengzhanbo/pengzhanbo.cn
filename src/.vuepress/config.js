@@ -9,7 +9,8 @@ module.exports = {
     head: [
         ['link', {rel: 'icon', href: '/g.gif'}],
         ['meta', {'name': 'keywords', content: '鹏展博,前端，健身'}],
-        ['meta', {'http-equiv': 'X-UA-Compatible', content: 'id=edg'}]
+        ['meta', {'http-equiv': 'X-UA-Compatible', content: 'id=edg'}],
+        ['script', {src: 'https://xiongzhang.baidu.com/sdk/c.js?appid=1612960656404183'}]
     ],
     themeConfig: {
         logo: '/g.gif',
