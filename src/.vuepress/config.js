@@ -19,12 +19,12 @@ module.exports = {
             '/WebComponent/HTMLImport',
             '/WebComponent/shadowDOM',
             '/WebComponent/customElements',
+            '/vsCode插件推荐',
             '/Jenkins',
             '/vue组件间数据通信',
             // '/前端的思考与杂谈',
             '/面试题以及个人答案CSS篇',
-            '/面试题以及个人答案JS篇',
-            '/vsCode插件推荐'
+            '/面试题以及个人答案JS篇'
         ],
         displayAllHeaders: true,
         lastUpdated: 'Last Updated',
