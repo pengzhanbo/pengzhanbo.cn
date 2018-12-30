@@ -4,6 +4,10 @@ time: 2018/12/29
 lang: zh-CN
 ---
 
+`VS Code` 作为我现在工作中最常用的编辑器，也是我十分喜欢的编辑器。它强大的功能和插件系统，对我的工作提供了很多帮助和支持。将我在工作中经常使用的插件，推荐给大家。
+
+<!-- more -->
+
 ### Code
 
 1. [Code Spell Checker](https://github.com/Jason-Rev/vscode-spell-checker)
