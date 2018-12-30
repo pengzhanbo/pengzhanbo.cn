@@ -21,9 +21,10 @@ module.exports = {
             '/WebComponent/customElements',
             '/Jenkins',
             '/vue组件间数据通信',
-            '/前端的思考与杂谈',
+            // '/前端的思考与杂谈',
             '/面试题以及个人答案CSS篇',
-            '/面试题以及个人答案JS篇'
+            '/面试题以及个人答案JS篇',
+            '/vsCode插件推荐'
         ],
         displayAllHeaders: true,
         lastUpdated: 'Last Updated',
