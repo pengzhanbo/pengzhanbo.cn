@@ -15,12 +15,13 @@ module.exports = {
     themeConfig: {
         logo: '/g.gif',
         sidebar: [
+            '/vsCode插件推荐',
+            '/正则表达式',
+            '/Jenkins',
             '/WebComponent/template',
             '/WebComponent/HTMLImport',
             '/WebComponent/shadowDOM',
             '/WebComponent/customElements',
-            '/vsCode插件推荐',
-            '/Jenkins',
             '/vue组件间数据通信',
             // '/前端的思考与杂谈',
             '/面试题以及个人答案CSS篇',
