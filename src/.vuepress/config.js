@@ -20,7 +20,7 @@ module.exports = {
             '/Jenkins',
             '/WebComponent/template',
             '/WebComponent/HTMLImport',
-            '/WebComponent/shadowDOM',
+            // '/WebComponent/shadowDOM',
             '/WebComponent/customElements',
             '/vue组件间数据通信',
             // '/前端的思考与杂谈',
