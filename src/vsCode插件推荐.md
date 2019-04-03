@@ -107,6 +107,10 @@ lang: zh-CN
 
     FTP 上传/下载插件。
 
+3. [Rest Client](https://github.com/Huachao/vscode-restclient)
+
+    允许你在 `VSCode` 中发送HTTP请求，并查看response的内容。
+
 ### Framework support
 
 1. [Vetur](https://github.com/vuejs/vetur)
