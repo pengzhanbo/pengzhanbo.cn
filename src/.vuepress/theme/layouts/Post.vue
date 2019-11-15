@@ -2,6 +2,7 @@
   <div id="vuperess-theme-blog__post-layout">
     <div class="vuepress-blog-theme-content">
       <h3>{{$page.frontmatter.title}}</h3>
+      <Tags :tags="$page.frontmatter.tags || []" />
       <Content/>
       <hr/>
       <Comment/>
@@ -13,11 +14,12 @@
 <script>
   import Toc from '@theme/components/Toc.vue'
   import { Comment } from '@vuepress/plugin-blog/lib/client/components'
-  
+  import Tags from '../components/Tags.vue';
   export default {
     components: {
       Toc,
       Comment,
+      Tags
     },
   }
 </script>

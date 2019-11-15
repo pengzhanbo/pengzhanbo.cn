@@ -5,9 +5,10 @@
         <div class="ui-post-title">
           <NavLink :link="page.path">{{ page.title }}</NavLink>
         </div>
-        
-        <div class="ui-post-summary">
-          {{ page.frontmatter.summary || page.summary }}
+        <Tags :tags="page.frontmatter.tags || []" />
+        <div class="ui-post-summary" v-html="page.excerpt" v-if="page.excerpt"></div>
+        <div class="ui-post-summary" v-else>
+          {{page.frontmatter.summary || page.summary }}
           <!-- <Content :page-key="page.key" slot-key="intro"/>-->
         </div>
 
@@ -33,9 +34,9 @@
   import Vue from 'vue'
   import { NavigationIcon, ClockIcon } from 'vue-feather-icons'
   import { Pagination, SimplePagination } from '@vuepress/plugin-blog/lib/client/components'
-  
+  import Tags from '../components/Tags.vue';
   export default {
-    components: { NavigationIcon, ClockIcon },
+    components: { NavigationIcon, ClockIcon, Tags },
 
     data() {
       return {

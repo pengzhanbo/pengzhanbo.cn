@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "vuepress build src",
+    "release": "npm run build && git add -A && git commit -m \"chore: push release blog\" && git push"
   },
   "author": "",
   "license": "ISC",
