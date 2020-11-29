@@ -31,7 +31,7 @@ module.exports = {
             contact: [
                 {
                     type: 'github',
-                    link: 'https://github.com/volodymyr-lian'
+                    link: 'https://github.com/pengzhanbo'
                 }
             ],
             copyright: [
@@ -80,7 +80,7 @@ module.exports = {
                     id: 'post',
                     dirname: '_post',
                     path: '/',
-                    itemPermalink: '/post/:year/:month/:day/:slug',
+                    itemPermalink: 'post/:year/:month/:day/:slug',
                     pagination: {
                         lengthPerPage: 10,
                         sorter: (prev, next) => {

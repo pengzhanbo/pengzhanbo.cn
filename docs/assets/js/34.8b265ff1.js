@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[34],{202:function(t,e,n){"use strict";n.r(e);var s=n(4),l=Object(s.a)({},(function(){var t=this.$createElement,e=this._self._c||t;return e("ContentSlotsDistributor",{attrs:{"slot-key":this.$parent.slotKey}},[e("p",[this._v("适用于大型 web 前端应用的前端解决方案——微前端。")])])}),[],!1,null,null,null);e.default=l.exports}}]);
