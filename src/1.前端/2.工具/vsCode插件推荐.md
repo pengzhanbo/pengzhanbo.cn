@@ -4,6 +4,8 @@ lang: zh-CN
 createTime: 2018/12/29 11:15:27
 permalink: /post/ofp08jd8
 author: pengzhanbo
+tags:
+  - vsCode plugin
 top: false
 type:   # original: 原创: reprint 转载  可为空不填
 ---

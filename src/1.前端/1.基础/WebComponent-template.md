@@ -3,7 +3,8 @@ title: WebComponent——template
 lang: zh-CN
 tags: 
   - WebComponent
-createTime: 2018/3/19 11:15:27
+  - javascript
+createTime: 2018/8/2 11:15:27
 permalink: /post/5fmy4kla
 author: pengzhanbo
 top: false

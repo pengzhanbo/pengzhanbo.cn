@@ -4,6 +4,8 @@ lang: zh-CN
 createTime: 2018/09/16 11:15:27
 permalink: /post/bmtl5ah4
 author: pengzhanbo
+tags:
+  - 工具
 top: false
 type:   # original: 原创: reprint 转载  可为空不填
 ---
@@ -97,7 +99,7 @@ chkconfig jenkins on
 
 如：配置全局 GIT：
 
-<img src="/images/jenkins_globalconfig.png" class="zoom-custom-imgs" alt="全局配置git" />
+![](/images/jenkins_globalconfig.png)
 
 ### 用户管理以及用户权限
 - 使用`admin`权限的账号，进入`系统管理 > 用户管理`, 可以添加/修改/删除 用户。
@@ -108,10 +110,10 @@ chkconfig jenkins on
 为项目添加 `git`分支/标签选择参数构建配置，从而方便通过不同分支构建项目。
 
 项目配置：
-<img class="zoom-custom-imgs" src="https://wiki.jenkins-ci.org/download/attachments/58917601/image2018-9-20_22-0-7.png?version=1&modificationDate=1537473611000&api=v2" alt="Git Parameter" />
+![](https://wiki.jenkins-ci.org/download/attachments/58917601/image2018-9-20_22-0-7.png?version=1&modificationDate=1537473611000&api=v2)
 
 参数化构建：
-<img class="zoom-custom-imgs" src="https://wiki.jenkins-ci.org/download/attachments/58917601/image2018-9-20_22-2-47.png?version=1&modificationDate=1537473769000&api=v2" alt="build width paramters form" />
+![](https://wiki.jenkins-ci.org/download/attachments/58917601/image2018-9-20_22-2-47.png?version=1&modificationDate=1537473769000&api=v2)
 
 基础`pipeline`配置：
 ``` groovy
