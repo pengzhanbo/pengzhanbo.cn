@@ -13,6 +13,7 @@
     "vuepress": "^2.0.0-beta.36"
   },
   "dependencies": {
+    "@pengzhanbo/vuepress-plugin-caniuse": "^1.0.1",
     "@pengzhanbo/vuepress-theme-plume": "^1.0.0-beta.7",
     "@vuepress/plugin-container": "^2.0.0-beta.36"
   }

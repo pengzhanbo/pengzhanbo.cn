@@ -137,6 +137,20 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@pengzhanbo/vuepress-plugin-caniuse@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@pengzhanbo/vuepress-plugin-caniuse/-/vuepress-plugin-caniuse-1.0.1.tgz#3016dad5cd7eb41bad3cc2794a8144ae517efd11"
+  integrity sha512-FmPfRBSYlxjXjPQ160xlXVclIXfKOaMAMWjbyLWiF1AZNj6pyCOGf5tSUw3dSfPwunHkl4jh+ReVrpOXzdo/vw==
+  dependencies:
+    "@vuepress/client" "^2.0.0-beta.35"
+    "@vuepress/core" "^2.0.0-beta.36"
+    "@vuepress/plugin-container" "^2.0.0-beta.36"
+    "@vuepress/utils" "^2.0.0-beta.35"
+    markdown-it-container "^3.0.0"
+    rimraf "^3.0.2"
+    typescript "^4.6.2"
+    vuepress "^2.0.0-beta.36"
+
 "@pengzhanbo/vuepress-theme-plume@^1.0.0-beta.7":
   version "1.0.0-beta.7"
   resolved "https://registry.yarnpkg.com/@pengzhanbo/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.7.tgz#cd3b158543364ab3e4313a85452bbcb81bf195d2"

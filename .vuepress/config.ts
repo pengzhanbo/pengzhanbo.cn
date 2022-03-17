@@ -15,7 +15,7 @@ export default defineUserConfig<DefaultThemeOptions>({
         ['link', { rel: 'icon', href: '/g.gif' }],
         ['meta', { 'name': 'keywords', content: '鹏展博,前端，健身' }],
         ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'id=edg' }],
-        ['script', { src: 'https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js', defer: 'defer' }]
+        // ['script', { src: 'https://cdn.jsdelivr.net/gh/ireade/caniuse-embed/public/caniuse-embed.min.js', defer: 'defer' }]
     ],
     theme: '@pengzhanbo/vuepress-theme-plume',
     themeConfig: {
@@ -27,9 +27,6 @@ export default defineUserConfig<DefaultThemeOptions>({
         description: '学习，生活，娱乐，我全都要',
     },
     plugins: [
-      [
-        '@vuepress/container',
-        resolveCanIuseOption('caniuse')
-      ]
+      ['@pengzhanbo/vuepress-plugin-caniuse', 'embed'] // embed | image
     ]
 })
