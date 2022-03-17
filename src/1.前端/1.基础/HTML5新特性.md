@@ -1,9 +1,9 @@
 ---
 title: HTML5新特性
 createTime: 2018/02/17 12:49:58
-permalink: /post/8rv45yuy  # 文章永久链接，自动生成，可自行配置
+permalink: /post/8rv45yuy
 author: pengzhanbo
-tags:
+tags: 
   - html
 top: false
 type:   # original: 原创: reprint 转载  可为空不填
