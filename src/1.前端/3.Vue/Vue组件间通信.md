@@ -4,10 +4,10 @@ lang: zh-CN
 tags: 
   - vue
 createTime: 2018/07/20 11:15:27
-permalink: /post/iezlvhvg
+permalink: /article/iezlvhvg
 author: pengzhanbo
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 在我们在进行基于[Vue](https://cn.vuejs.org/)的项目开发时，组件间的数据通信，是我们必须考虑的。
 

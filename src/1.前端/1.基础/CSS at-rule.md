@@ -1,12 +1,12 @@
 ---
 title: CSS At-Rules
 createTime: 2018/10/06 08:16:38
-permalink: /post/btkqop1a
+permalink: /article/btkqop1a
 author: pengzhanbo
 tags: 
   - css
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 ## @charset

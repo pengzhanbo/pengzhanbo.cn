@@ -4,10 +4,10 @@ tags:
   - WebComponent
   - javascript
 createTime: 2018/08/01 11:15:27
-permalink: /post/m63fd7lf
+permalink: /article/m63fd7lf
 author: pengzhanbo
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 

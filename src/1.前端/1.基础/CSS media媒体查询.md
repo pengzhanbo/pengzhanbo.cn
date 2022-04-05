@@ -1,12 +1,12 @@
 ---
 title: CSS 媒体查询
 createTime: 2018/08/18 08:43:02
-permalink: /post/fe5ruia1
+permalink: /article/fe5ruia1
 author: pengzhanbo
 tags: 
   - css
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 开发响应式网站时，常常需要使用到 media 媒体查询。这里总结下媒体查询的使用方法。

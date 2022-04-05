@@ -3,10 +3,10 @@ title: 面试题以及个人答案 JS篇
 tags: 
   - 面试
 createTime: 2018/08/23 11:15:27
-permalink: /post/4ml7z17g
+permalink: /article/4ml7z17g
 author: pengzhanbo
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 ### JS：变量声明方式有哪些，有什么区别？

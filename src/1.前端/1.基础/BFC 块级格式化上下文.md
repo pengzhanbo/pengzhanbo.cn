@@ -1,12 +1,12 @@
 ---
 title: BFC 块级格式化上下文
 createTime: 2018/05/17 12:28:33
-permalink: /post/o5g7ggvf
+permalink: /article/o5g7ggvf
 author: pengzhanbo
 top: false
 tags: 
   - html
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 ## 概念
 

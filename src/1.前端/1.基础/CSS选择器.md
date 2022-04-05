@@ -1,12 +1,12 @@
 ---
 title: CSS选择器
 createTime: 2018/09/20 03:29:20
-permalink: /post/8vev8ixl
+permalink: /article/8vev8ixl
 author: pengzhanbo
 tags: 
   - css
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 ## Basic Selectors 基础选择器

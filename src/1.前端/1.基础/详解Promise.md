@@ -1,10 +1,10 @@
 ---
 title: 详解 Promise
 createTime: 2020/11/22 12:58:28
-permalink: /post/q40nq4hv
+permalink: /article/q40nq4hv
 author: pengzhanbo
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 ## 概述

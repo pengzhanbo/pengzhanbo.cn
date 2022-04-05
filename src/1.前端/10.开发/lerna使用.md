@@ -1,10 +1,10 @@
 ---
 title: lerna使用
 createTime: 2021/11/26 06:28:37
-permalink: /post/i1wc1uld  # 文章永久链接，自动生成，可自行配置
+permalink: /article/i1wc1uld
 author: pengzhanbo
 top: false
-type:   # original: 原创: reprint 转载  可为空不填
+type: null
 ---
 
 ![lerna](https://user-images.githubusercontent.com/645641/79596653-38f81200-80e1-11ea-98cd-1c6a3bb5de51.png)
