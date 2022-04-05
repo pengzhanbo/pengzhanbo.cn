@@ -29,25 +29,13 @@ export default defineUserConfig<PlumeThemeOptions>({
       github: 'pengzhanbo',
       QQ: '942450674',
     },
-    navbar: [
-      { text: '首页', link: '/' },
-      {
-        text: '分类',
-        link: '/category/',
-      },
-      {
-        text: '标签',
-        link: '/tag/',
-      },
-    ],
+    navbar: [],
     footer: {
       copyright: 'Copyright © 2022-present pengzhanbo',
       content: '',
     },
     themePlugins: {
-      caniuse: {
-        mode: 'embed',
-      },
+      caniuse: { mode: 'embed' },
       search: {
         locales: {
           '/': {
