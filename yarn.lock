@@ -352,23 +352,23 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.31.tgz#c90de7126d833dcd3a4c7534d534be2fb41faa4e"
   integrity sha512-ymN2pj6zEjiKJZbrf98UM2pfDd6F2H7ksKw7NDt/ZZ1fh5Ei39X5tABugtT03ZRlWd9imccoK0hE8hpjpU7irQ==
 
-"@vuepress-plume/vuepress-plugin-caniuse@1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-caniuse/-/vuepress-plugin-caniuse-1.0.0-beta.5.tgz#38e66f74156fbe78bc87456d6cfd46429d778ec6"
-  integrity sha512-azaLNnkSeuPgILZrQXtOsYGT7ZcbnKRN0bQcwLMz7jb6MEVd9dq7DydhIaW7uYGFMHx/TPjdp0G+KqtmWthkqw==
+"@vuepress-plume/vuepress-plugin-caniuse@1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-caniuse/-/vuepress-plugin-caniuse-1.0.0-beta.6.tgz#7712e8a3e7db8710325e9e4871967610ae90a65c"
+  integrity sha512-Jst2pE0oM8iuOU+k1mcCPHDt+Xo13fkCzrJFHYDiU4BNeveR4eOR3rPMM+aRGUz6va9O909L56kNMPtfoYDzOw==
   dependencies:
     "@vuepress/client" "^2.0.0-beta.37"
     "@vuepress/core" "^2.0.0-beta.37"
     "@vuepress/utils" "^2.0.0-beta.37"
     markdown-it-container "^3.0.0"
 
-"@vuepress-plume/vuepress-theme-plume@^1.0.0-beta.5":
-  version "1.0.0-beta.5"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.5.tgz#7df1ebdca18f699aa778ebde87f1ef8e4fa4201d"
-  integrity sha512-/+iehOgToaFYq326ny6Jf/UU3iGnB3ZhtXBsPTDIz3Bn87N04gEeSTm5s8tJNqTdEpzF6Yiyj3KiIGUcPQ5dEw==
+"@vuepress-plume/vuepress-theme-plume@^1.0.0-beta.6":
+  version "1.0.0-beta.6"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.6.tgz#2bb12c7b1773b59e1b6815835dac7d8bd3167ae1"
+  integrity sha512-PcHUxr8IkWMws974b04H4q+pEKh6hJh4pQQcCv7wGz+4TQ+kNqDYzzAdp6ggVvJJesPFmkUAtuepjy8FPwMqgA==
   dependencies:
     "@types/lodash.merge" "^4.6.6"
-    "@vuepress-plume/vuepress-plugin-caniuse" "1.0.0-beta.5"
+    "@vuepress-plume/vuepress-plugin-caniuse" "1.0.0-beta.6"
     "@vuepress/client" "^2.0.0-beta.37"
     "@vuepress/core" "^2.0.0-beta.37"
     "@vuepress/plugin-container" "^2.0.0-beta.37"
