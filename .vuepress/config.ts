@@ -3,9 +3,14 @@ import type {PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
 import { path } from '@vuepress/utils'
 
 export default defineUserConfig<PlumeThemeOptions>({
-  lang: 'zh',
-  title: '鹏展博',
-  description: '热爱生活',
+  lang: 'zh-CN',
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: '鹏展博',
+      description: '热爱生活',
+    },
+  },
   dest: 'docs',
   public: path.resolve(__dirname, '../public'),
   temp: path.resolve(__dirname, '.temp'),
@@ -35,7 +40,6 @@ export default defineUserConfig<PlumeThemeOptions>({
       content: '',
     },
     themePlugins: {
-      caniuse: { mode: 'embed' },
       search: {
         locales: {
           '/': {
