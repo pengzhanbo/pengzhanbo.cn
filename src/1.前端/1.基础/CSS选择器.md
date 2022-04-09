@@ -5,8 +5,6 @@ permalink: /article/8vev8ixl
 author: pengzhanbo
 tags: 
   - css
-top: false
-type: null
 ---
 
 ## Basic Selectors 基础选择器

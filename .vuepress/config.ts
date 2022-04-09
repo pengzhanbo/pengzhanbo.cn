@@ -1,6 +1,7 @@
 import { defineUserConfig } from 'vuepress'
 import type {PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
 import { path } from '@vuepress/utils'
+import notes from './notes'
 
 export default defineUserConfig<PlumeThemeOptions>({
   lang: 'zh-CN',
@@ -34,7 +35,12 @@ export default defineUserConfig<PlumeThemeOptions>({
       github: 'pengzhanbo',
       QQ: '942450674',
     },
-    navbar: [],
+    navbar: [{ text: 'Theme-Plume', link: '/note/vuepress-theme-plume' }],
+    notes: {
+      dir: 'notes',
+      link: '/note',
+      notes,
+    },
     footer: {
       copyright: 'Copyright © 2022-present pengzhanbo',
       content: '',

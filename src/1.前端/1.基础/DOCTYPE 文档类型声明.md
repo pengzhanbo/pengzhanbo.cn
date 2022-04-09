@@ -5,8 +5,6 @@ permalink: /article/s8udp6vp
 author: pengzhanbo
 tags: 
   - html
-top: false
-type: null
 ---
 Web世界中，随着历史的发展，技术的迭代，发展出了许多不同的文档，只有了解文档的类型，浏览器才能正确的解析渲染文档。
 

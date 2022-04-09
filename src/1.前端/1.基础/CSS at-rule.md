@@ -5,8 +5,6 @@ permalink: /article/btkqop1a
 author: pengzhanbo
 tags: 
   - css
-top: false
-type: null
 ---
 
 ## @charset

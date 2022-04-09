@@ -6,8 +6,6 @@ permalink: /article/bmtl5ah4
 author: pengzhanbo
 tags: 
   - 工具
-top: false
-type: null
 ---
 
 [Jenkins](https://jenkins.io/) 是一款功能强大的应用程序，允许持续集成和持续交付项目。这里记录一些 Jenkins 使用的方法。
