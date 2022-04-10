@@ -1,5 +1,8 @@
 {
     "cSpell.words": [
         "proto"
-    ]
+    ],
+    "path-intellisense.mappings": {
+      "/": "${workspaceFolder}/public"
+    }
 }
