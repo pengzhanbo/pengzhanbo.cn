@@ -3,6 +3,8 @@ title: Vuepress-theme-plume
 createTime: 2022/04/08 08:52:12
 author: pengzhanbo
 permalink: /note/vuepress-theme-plume/
+article: true
+sticky: true
 ---
 
 项目地址：[Vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
