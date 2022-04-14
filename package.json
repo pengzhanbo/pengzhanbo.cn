@@ -13,6 +13,6 @@
     "vuepress": "^2.0.0-beta.39"
   },
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "^1.0.0-beta.17"
+    "@vuepress-plume/vuepress-theme-plume": "^1.0.0-beta.18"
   }
 }
