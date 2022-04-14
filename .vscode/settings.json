@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
-        "proto"
+      "CSSOM",
+      "proto"
     ],
     "path-intellisense.mappings": {
       "/": "${workspaceFolder}/public"

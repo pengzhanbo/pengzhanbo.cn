@@ -35,7 +35,15 @@ export default defineUserConfig<PlumeThemeOptions>({
       github: 'pengzhanbo',
       QQ: '942450674',
     },
-    navbar: [{ text: 'Theme-Plume', link: '/note/vuepress-theme-plume' }],
+    navbar: [
+      { text: 'Theme-Plume', link: '/note/vuepress-theme-plume' },
+      {
+        text: '笔记',
+        children: [
+          { text: '面试题解析', link: '/note/interview-question/' },
+        ]
+      }
+    ],
     notes: {
       dir: 'notes',
       link: '/note',

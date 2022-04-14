@@ -1,12 +1,19 @@
 ---
-title: BFC 块级格式化上下文
-createTime: 2018/05/17 12:28:33
-permalink: /article/o5g7ggvf
+title: BFC块级格式化上下文
+createTime: 2022/04/13 02:33:55
 author: pengzhanbo
-tags: 
-  - html
+permalink: /note/interview-question/p1gn97x5/
 ---
-## 概念
+
+::: tip 提问
+
+- 什么是 BFC ?
+- 如何创建BFC ?
+- BFC有什么作用 ？
+:::
+
+
+## 什么是 BFC
 
 BFC, Block Formatting Context。是 W3C CSS2.1规范中的一个概念。 是页面中的一块块级渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和作用。
 
