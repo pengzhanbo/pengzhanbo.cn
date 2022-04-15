@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
+      "Brotli",
       "CSSOM",
-      "proto"
+      "instanceof",
+      "proto",
+      "typeof"
     ],
     "path-intellisense.mappings": {
       "/": "${workspaceFolder}/public"

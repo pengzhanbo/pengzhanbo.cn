@@ -10,6 +10,8 @@ export default {
       children: [
         'DOCTYPE',
         '元素的分类',
+        'HTML5新特性',
+        '语义化理解'
       ]
     },
     {
@@ -26,7 +28,19 @@ export default {
     {
       text: 'JavaScript',
       dir: 'JavaScript',
-      children: []
+      children: [
+        '数据类型',
+        '数据类型转换',
+        '栈和堆',
+        '原型和原型链',
+        '作用域链',
+        '闭包',
+        '严格模式',
+        'this对象',
+        'NaN',
+        '事件',
+        '写一个通用事件侦听器',
+      ]
     },
     {
       text: '浏览器',
@@ -37,8 +51,8 @@ export default {
         '渲染原理',
         '浏览器解析过程',
         '浏览器渲染过程',
-        // '重绘与回流',
-        // '标准模式和怪异模式',
+        '重绘与回流',
+        '浏览器存储',
       ]
     },
     {
@@ -69,7 +83,10 @@ export default {
     {
       text: '其他',
       dir: '其他',
-      children: []
+      children: [
+        '前端SEO',
+        '前端性能优化',
+      ]
     },
   ]
 }
