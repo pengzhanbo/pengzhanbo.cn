@@ -29,6 +29,7 @@ export default {
       text: 'JavaScript',
       dir: 'JavaScript',
       children: [
+        '变量',
         '数据类型',
         '数据类型转换',
         '栈和堆',
@@ -40,6 +41,12 @@ export default {
         'NaN',
         '事件',
         '写一个通用事件侦听器',
+        '跨域',
+        '模块化',
+        '模块加载器原理',
+        '浅拷贝和深拷贝',
+        'DOM节点操作',
+        '节流与防抖',
       ]
     },
     {
@@ -53,6 +60,8 @@ export default {
         '浏览器渲染过程',
         '重绘与回流',
         '浏览器存储',
+        '垃圾回收机制',
+        '内存泄露',
       ]
     },
     {
@@ -78,6 +87,11 @@ export default {
     {
       text: '工具',
       dir: '工具',
+      children: []
+    },
+    {
+      text: '常用库',
+      der: '常用库',
       children: []
     },
     {
