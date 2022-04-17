@@ -36,4 +36,4 @@ permalink: /note/interview-question/y5w6l1js/
 - `getAttribute(key)`
 - `setAttribute(key, value)`
 - `hasAttribute(key)`
-- removeAttribute(key)`
+- `removeAttribute(key)`

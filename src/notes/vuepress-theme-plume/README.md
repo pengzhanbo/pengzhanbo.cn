@@ -1,5 +1,5 @@
 ---
-title: Vuepress-theme-plume
+title: vuepress-theme-plume
 createTime: 2022/04/08 08:52:12
 author: pengzhanbo
 permalink: /note/vuepress-theme-plume/
@@ -8,6 +8,10 @@ sticky: true
 ---
 
 项目地址：[Vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
+
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-theme-plume.svg)
+
+![npm](https://img.shields.io/npm/dm/@vuepress-plume/vuepress-theme-plume?style=flat)
 
 __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 
