@@ -100,11 +100,8 @@ export default {
       text: 'NodeJs',
       dir: 'NodeJs',
       children: [
-        // 'webpack',
-        // '如何写一个webpack插件',
-        // 'rollup',
-        // 'vite',
-        // 'esbuild',
+        'webpack',
+        'rollup',
       ]
     },
     {
