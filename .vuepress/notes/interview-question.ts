@@ -53,6 +53,7 @@ export default {
         '跨域',
         '节流与防抖',
         'promise',
+        '设计模式'
       ]
     },
     {
@@ -74,7 +75,16 @@ export default {
     {
       text: '计算机网络',
       dir: '计算机网络',
-      children: []
+      children: [
+        'http协议',
+        'http缓存',
+        'http2',
+        'TCP协议',
+        'UDP协议',
+        'CDN',
+        '代理',
+        '负载均衡'
+      ]
     },
     {
       text: 'Vue',
@@ -89,20 +99,31 @@ export default {
     {
       text: 'NodeJs',
       dir: 'NodeJs',
-      children: []
+      children: [
+        // 'webpack',
+        // '如何写一个webpack插件',
+        // 'rollup',
+        // 'vite',
+        // 'esbuild',
+      ]
     },
     {
       text: '工具',
       dir: '工具',
       children: [
-        'git'
+        'git',
+        'git-hook',
+        'jenkins',
+        '代码检查工具',
       ]
     },
     {
       text: '常用库',
       dir: '常用库',
       children: [
-        'axios'
+        'axios',
+        'lodash',
+        'UI框架'
       ]
     },
     {
