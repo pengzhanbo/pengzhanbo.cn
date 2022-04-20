@@ -44,6 +44,7 @@ export default {
         '数组和对象',
         '集合对象',
         'this对象',
+        '函数与箭头函数',
         '事件',
         '写一个通用事件侦听器',
         '模块化',
@@ -53,7 +54,8 @@ export default {
         '跨域',
         '节流与防抖',
         'promise',
-        '设计模式'
+        '设计模式',
+        'MV-设计模式'
       ]
     },
     {
@@ -70,6 +72,7 @@ export default {
         '垃圾回收机制',
         '内存泄露',
         '事件循环',
+        '浏览器输入URL',
       ]
     },
     {
@@ -100,8 +103,8 @@ export default {
       text: 'NodeJs',
       dir: 'NodeJs',
       children: [
+        '模块打包器',
         'webpack',
-        'rollup',
       ]
     },
     {
