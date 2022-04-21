@@ -86,13 +86,27 @@ export default {
         'UDP协议',
         'CDN',
         '代理',
-        '负载均衡'
+        '负载均衡',
       ]
     },
     {
       text: 'Vue',
       dir: 'Vue',
-      children: []
+      children: [
+        'VirtualDom',
+        {
+          text: 'vue@3',
+          children: [
+            '响应式原理v3'
+          ]
+        },
+        {
+          text: 'vue@2',
+          children: [
+            '响应式原理v2'
+          ]
+        },
+      ]
     },
     {
       text: 'React',
@@ -124,6 +138,17 @@ export default {
         'axios',
         'lodash',
         'UI框架'
+      ]
+    },
+    {
+      text: '安全',
+      dir: '安全',
+      children: [
+        'XSS攻击',
+        'CSRF攻击',
+        'SQL注入攻击',
+        'CSP内容安全',
+        '点击劫持'
       ]
     },
     {
