@@ -706,10 +706,10 @@
     "@vuepress/utils" "^2.0.0-beta.38"
     markdown-it-container "^3.0.0"
 
-"@vuepress-plume/vuepress-theme-plume@^1.0.0-beta.22":
-  version "1.0.0-beta.22"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.22.tgz#9d283873caebc2c24cc687a1b8d98c6184fa19b0"
-  integrity sha512-P/0GFXs3mc6YQfUOjcMXQX/x2wMLIXB/+0ugcbtxadV6vk8+CcoSJrKFUkglyJ3kIKyYJc1FieYbZcNuR6Pbtw==
+"@vuepress-plume/vuepress-theme-plume@^1.0.0-beta.23":
+  version "1.0.0-beta.23"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.23.tgz#df2fcb2acb8780a69ea99fae256df589f709ace1"
+  integrity sha512-mTKbT6MsdNNq+VQgdGRSj9RpI6arSR54z3wYc7xTSh9QU9vlEzaLmNlikeMycZrcSotiOlY/TzYoEod9XAaa2A==
   dependencies:
     "@types/lodash.merge" "^4.6.6"
     "@vuepress-plume/vuepress-plugin-caniuse" "1.0.0-beta.8"
