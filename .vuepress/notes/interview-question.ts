@@ -21,6 +21,7 @@ export default {
         '盒模型',
         '外边距合并',
         'BFC块级格式化上下文',
+        'IFC,GFC,FFC',
         'CSS浮动',
         '元素垂直居中',
         'Flex弹性布局',
@@ -36,6 +37,7 @@ export default {
         '数据类型转换',
         '栈和堆',
         '原型和原型链',
+        '执行上下文和执行栈',
         '作用域链',
         '闭包',
         '严格模式',
@@ -45,6 +47,7 @@ export default {
         '集合对象',
         'this对象',
         '函数与箭头函数',
+        'new操作符',
         '事件',
         '写一个通用事件侦听器',
         '模块化',
@@ -94,6 +97,9 @@ export default {
       dir: 'Vue',
       children: [
         'VirtualDom',
+        'v-if和v-show的区别',
+        'v-if和v-for优先级',
+        'v-model',
         {
           text: 'vue@3',
           children: [
@@ -103,7 +109,10 @@ export default {
         {
           text: 'vue@2',
           children: [
-            '响应式原理v2'
+            '响应式原理v2',
+            'data为什么必须是函数v2',
+            '组件通信方式v2',
+            '生命周期v2'
           ]
         },
       ]
@@ -119,6 +128,7 @@ export default {
       children: [
         '模块打包器',
         'webpack',
+        'pm2'
       ]
     },
     {
