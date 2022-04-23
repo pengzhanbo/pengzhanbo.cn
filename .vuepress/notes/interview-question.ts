@@ -100,6 +100,8 @@ export default {
         'v-if和v-show的区别',
         'v-if和v-for优先级',
         'v-model',
+        'computed和watch',
+        'keep-alive',
         {
           text: 'vue@3',
           children: [
@@ -112,7 +114,8 @@ export default {
             '响应式原理v2',
             'data为什么必须是函数v2',
             '组件通信方式v2',
-            '生命周期v2'
+            '生命周期v2',
+            '路由v2'
           ]
         },
       ]
