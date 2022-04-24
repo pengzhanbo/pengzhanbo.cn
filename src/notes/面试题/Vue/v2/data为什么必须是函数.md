@@ -5,6 +5,9 @@ author: pengzhanbo
 permalink: /note/interview-question/rumwg3ew/
 ---
 
+[![vue@2](https://img.shields.io/badge/vue-%402-brightgreen)](https://cn.vuejs.org/)
+
+
 ::: tip 提问
 在vue2的组件中，data为什么必须是一个函数
 :::

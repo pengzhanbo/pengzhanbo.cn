@@ -4,6 +4,7 @@
       "CSSOM",
       "esbuild",
       "instanceof",
+      "Pinia",
       "proto",
       "typeof"
     ],

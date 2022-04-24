@@ -98,24 +98,33 @@ export default {
       children: [
         'VirtualDom',
         'v-if和v-show的区别',
-        'v-if和v-for优先级',
-        'v-model',
         'computed和watch',
         'keep-alive',
+        'vue2和vue3的区别',
         {
           text: 'vue@3',
+          dir: 'v3',
           children: [
-            '响应式原理v3'
+            '响应式原理',
+            '组件通信方式',
+            '生命周期',
+            'v-model',
+            'v-if和v-for优先级',
+            '指令',
+            '路由'
           ]
         },
         {
           text: 'vue@2',
+          dir: 'v2',
           children: [
-            '响应式原理v2',
-            'data为什么必须是函数v2',
-            '组件通信方式v2',
-            '生命周期v2',
-            '路由v2'
+            '响应式原理',
+            'data为什么必须是函数',
+            'v-if和v-for优先级',
+            '组件通信方式',
+            '生命周期',
+            '指令',
+            '路由'
           ]
         },
       ]

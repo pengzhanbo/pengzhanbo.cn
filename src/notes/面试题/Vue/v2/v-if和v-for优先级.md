@@ -5,8 +5,10 @@ author: pengzhanbo
 permalink: /note/interview-question/w6mai9ic/
 ---
 
+[![vue@2](https://img.shields.io/badge/vue-%402-brightgreen)](https://cn.vuejs.org/)
+
 :::  tip 提问
-1. `v-if` 和 `v-for` 哪个优先级高？
+1. vue2中 `v-if` 和 `v-for` 哪个优先级高？
 2. 当需要同时使用时，该如何进行优化？
 :::
 
