@@ -1,9 +1,8 @@
-import { defineUserConfig } from 'vuepress'
-import type {PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
 import { path } from '@vuepress/utils'
+import { definePlumeConfig } from '@vuepress-plume/vuepress-theme-plume'
 import notes from './notes'
 
-export default defineUserConfig<PlumeThemeOptions>({
+export default definePlumeConfig({
   lang: 'zh-CN',
   locales: {
     '/': {
@@ -44,11 +43,7 @@ export default defineUserConfig<PlumeThemeOptions>({
         ]
       }
     ],
-    notes: {
-      dir: 'notes',
-      link: '/note',
-      notes,
-    },
+    notes,
     footer: {
       copyright: 'Copyright © 2022-present pengzhanbo',
       content: '',
@@ -72,22 +67,16 @@ export default defineUserConfig<PlumeThemeOptions>({
         reactionsEnabled: true,
         inputPosition: 'top',
       },
+      markdownEnhance: {
+        sub: true,
+        sup: true,
+        container: true,
+        codegroup: true,
+        align: true,
+        mark: true,
+        tasklist: true,
+        demo: true,
+      }
     },
   },
 })
-/**
-<script src="https://giscus.app/client.js"
-        data-repo="pengzhanbo/pengzhanbo-blog-vuepress"
-        data-repo-id="MDEwOlJlcG9zaXRvcnkxNDgwMzY4MDc="
-        data-category="Announcements"
-        data-category-id="DIC_kwDOCNLcx84COcVd"
-        data-mapping="pathname"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="top"
-        data-theme="light"
-        data-lang="zh-CN"
-        crossorigin="anonymous"
-        async>
-</script>
- */

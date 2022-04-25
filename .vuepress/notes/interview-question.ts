@@ -22,6 +22,7 @@ export default {
         '外边距合并',
         'BFC块级格式化上下文',
         'IFC,GFC,FFC',
+        '像素',
         'CSS浮动',
         '元素垂直居中',
         'Flex弹性布局',
@@ -48,6 +49,7 @@ export default {
         'this对象',
         '函数与箭头函数',
         'new操作符',
+        '函数柯里化',
         '事件',
         '写一个通用事件侦听器',
         '模块化',
@@ -138,9 +140,6 @@ export default {
       text: 'NodeJs',
       dir: 'NodeJs',
       children: [
-        '模块打包器',
-        'webpack',
-        'pm2'
       ]
     },
     {
@@ -151,6 +150,9 @@ export default {
         'git-hook',
         'jenkins',
         '代码检查工具',
+        '模块打包器',
+        'webpack',
+        'pm2',
       ]
     },
     {
@@ -171,6 +173,25 @@ export default {
         'SQL注入攻击',
         'CSP内容安全',
         '点击劫持'
+      ]
+    },
+    {
+      text: '算法',
+      dir: '算法',
+      children: [
+        {
+          text: '排序算法',
+          dir: '排序',
+          children: [
+            '冒泡排序',
+            '选择排序',
+            '插入排序',
+            '希尔排序',
+            '归并排序',
+            '快速排序',
+            '排序算法总结',
+          ]
+        }
       ]
     },
     {
