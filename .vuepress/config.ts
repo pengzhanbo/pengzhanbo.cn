@@ -1,8 +1,9 @@
 import { path } from '@vuepress/utils'
-import { definePlumeConfig } from '@vuepress-plume/vuepress-theme-plume'
+import type { PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
+import { defineUserConfig} from 'vuepress'
 import notes from './notes'
 
-export default definePlumeConfig({
+export default defineUserConfig<PlumeThemeOptions>({
   lang: 'zh-CN',
   locales: {
     '/': {
