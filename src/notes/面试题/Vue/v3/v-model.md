@@ -38,7 +38,7 @@ v-model 的原理
 <script>
 export default {
   props: ['modelValue'],
-  emits: ['update:modelValue']
+  emits: ['update:modelValue'],
 }
 </script>
 ```
