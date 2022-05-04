@@ -22,6 +22,7 @@ export default defineUserConfig({
     ['link', { rel: 'icon', href: '/g.gif' }],
     ['meta', { 'name': 'keywords', content: '鹏展博,前端，健身' }],
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'id=edg' }],
+    ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7'}]
   ],
   theme: themePlume({
     logo: '/g.gif',
