@@ -1,9 +1,11 @@
 import { path } from '@vuepress/utils'
-import type { PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
 import { defineUserConfig} from 'vuepress'
 import notes from './notes'
+import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
 
-export default defineUserConfig<PlumeThemeOptions>({
+console.log('NODE_ENV', process.env.NODE_ENV);
+
+export default defineUserConfig({
   lang: 'zh-CN',
   locales: {
     '/': {
@@ -21,10 +23,10 @@ export default defineUserConfig<PlumeThemeOptions>({
     ['meta', { 'name': 'keywords', content: '鹏展博,前端，健身' }],
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'id=edg' }],
   ],
-  theme: '@vuepress-plume/vuepress-theme-plume',
-  themeConfig: {
+  theme: themePlume({
     logo: '/g.gif',
     darkMode: true,
+    hostname: "https://pengzhanbo.cn/",
     avatar: {
       name: '鹏展博',
       url: '/images/blogger.jpg',
@@ -79,5 +81,5 @@ export default defineUserConfig<PlumeThemeOptions>({
         demo: true,
       }
     },
-  },
+  }),
 })
