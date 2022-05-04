@@ -3,6 +3,8 @@ import { defineUserConfig} from 'vuepress'
 import notes from './notes'
 import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
 
+console.log('NODE_ENV', process.env.NODE_ENV);
+
 export default defineUserConfig({
   lang: 'zh-CN',
   locales: {
@@ -24,6 +26,7 @@ export default defineUserConfig({
   theme: themePlume({
     logo: '/g.gif',
     darkMode: true,
+    hostname: "https://pengzhanbo.cn/",
     avatar: {
       name: '鹏展博',
       url: '/images/blogger.jpg',
