@@ -1,10 +1,16 @@
-import { path } from '@vuepress/utils'
+import { path, fs } from '@vuepress/utils'
 import { defineUserConfig} from 'vuepress'
 import notes from './notes'
 import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
 import { googleAnalyticsPlugin  } from '@vuepress/plugin-google-analytics'
 
-console.log('NODE_ENV', process.env.NODE_ENV);
+const robotsContent = `
+# Algolia-Crawler-Verif: A1A1F2E6307A7403
+
+User-agent: *
+Allow: /
+Sitemap: https://pengzhanbo.cn/sitemap.xml
+`
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -31,6 +37,12 @@ export default defineUserConfig({
       id: 'G-TMXNCJR2K7'
     })
   ],
+  onGenerated: (app) => {
+    const filepath = app.dir.dest('robots.txt')
+    setTimeout(() => {
+      fs.writeFileSync(filepath, robotsContent, 'utf-8')
+    }, 500)
+  },
   theme: themePlume({
     logo: '/g.gif',
     darkMode: true,
