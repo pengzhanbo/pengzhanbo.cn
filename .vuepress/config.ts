@@ -2,6 +2,7 @@ import { path } from '@vuepress/utils'
 import { defineUserConfig} from 'vuepress'
 import notes from './notes'
 import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
+import { googleAnalyticsPlugin  } from '@vuepress/plugin-google-analytics'
 
 console.log('NODE_ENV', process.env.NODE_ENV);
 
@@ -22,7 +23,13 @@ export default defineUserConfig({
     ['link', { rel: 'icon', href: '/g.gif' }],
     ['meta', { 'name': 'keywords', content: '鹏展博,前端，健身' }],
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'id=edg' }],
-    ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7'}]
+    ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7'}],
+    ['meta', { name: 'google-site-verification', content: 'X5YSaTDn-pKqQBUKD_05_dQcxVItzEq7Rlbg2ZEU7AM' }],
+  ],
+  plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-TMXNCJR2K7'
+    })
   ],
   theme: themePlume({
     logo: '/g.gif',
