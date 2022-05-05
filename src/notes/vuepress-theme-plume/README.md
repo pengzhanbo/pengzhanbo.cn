@@ -57,25 +57,23 @@ npm i @vuepress-plume/vuepress-theme-plume
 ``` ts
 // .vuepress/config.ts
 import { defineUserConfig } from 'vuepress'
-import type { PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
-export default defineUserConfig<PlumeThemeOptions>({
-  theme: '@vuepress-plume/vuepress-theme-plume',
-  themeConfig: {
+import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
+export default defineUserConfig({
+  theme: themePlume({
     // more...
-  }
+  })
 })
 ```
 :::
 ::: code-group-item js
 ``` js
 // .vuepress/config.js
-import { defineUserConfig } from 'vuepress'
-module.exports = defineUserConfig({
-  theme: '@vuepress-plume/vuepress-theme-plume',
-  themeConfig: {
+import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
+module.exports = {
+  theme: themePlume({
     // more...
-  }
-})
+  })
+}
 ```
 :::
 ::::
