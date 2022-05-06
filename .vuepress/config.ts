@@ -49,7 +49,7 @@ export default defineUserConfig({
     hostname: "https://pengzhanbo.cn/",
     avatar: {
       name: '鹏展博',
-      url: '/images/blogger.jpg',
+      url: '/images/blogger.png',
       description: 'good good study, day day up !'
     },
     social: {

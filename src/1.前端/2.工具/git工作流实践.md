@@ -5,7 +5,7 @@ author: pengzhanbo
 permalink: /article/cjeo0sia/
 tags: 
   - 工具
-article: false
+banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
 ---
 
 这是一篇在我个人工作实践中，在我参与的，负责的项目、团队协作中，逐步调整，适合于一些实际场景的 git 工作流实践。
@@ -99,7 +99,7 @@ article: false
 
   
 流程图：
-![git-work-flow](http://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png)
+![git-work-flow](https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png)
 
 可以看出，整个方案只有四条主要的分支，且不同功能分支到其他分支都是单向的。
 
