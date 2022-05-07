@@ -72,6 +72,9 @@ export default defineUserConfig({
       content: '',
     },
     themePlugins: {
+      baiduTongji: {
+        key: '8a4e65dd3f2d30e64c828481295e09d1'    
+      },
       search: {
         locales: {
           '/': {
