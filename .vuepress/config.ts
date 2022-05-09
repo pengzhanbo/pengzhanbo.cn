@@ -58,7 +58,7 @@ export default defineUserConfig({
       QQ: '942450674',
     },
     navbar: [
-      { text: 'Theme-Plume', link: '/note/vuepress-theme-plume' },
+      { text: 'Theme-Plume', link: '/note/vuepress-theme-plume/' },
       {
         text: '笔记',
         children: [
@@ -75,62 +75,62 @@ export default defineUserConfig({
       baiduTongji: {
         key: '8a4e65dd3f2d30e64c828481295e09d1'    
       },
-      search: {
-        locales: {
-          '/': {
-            placeholder: '搜索',
-          },
-        },
-      },
-      // search: false,
-      // docsearch: {
-      //   appId: 'TUDF70KY7U',
-      //   apiKey: '9a9c80617c2cac5406c80f47d87d0031',
-      //   indexName: 'netlify_2d58513b-ff0d-45b2-ad45-21f7eb21eb27_main_all',
+      // search: {
       //   locales: {
-      //     '/zh/': {
-      //       placeholder: '搜索文档',
-      //       translations: {
-      //         button: {
-      //           buttonText: '搜索文档',
-      //           buttonAriaLabel: '搜索文档',
-      //         },
-      //         modal: {
-      //           searchBox: {
-      //             resetButtonTitle: '清除查询条件',
-      //             resetButtonAriaLabel: '清除查询条件',
-      //             cancelButtonText: '取消',
-      //             cancelButtonAriaLabel: '取消',
-      //           },
-      //           startScreen: {
-      //             recentSearchesTitle: '搜索历史',
-      //             noRecentSearchesText: '没有搜索历史',
-      //             saveRecentSearchButtonTitle: '保存至搜索历史',
-      //             removeRecentSearchButtonTitle: '从搜索历史中移除',
-      //             favoriteSearchesTitle: '收藏',
-      //             removeFavoriteSearchButtonTitle: '从收藏中移除',
-      //           },
-      //           errorScreen: {
-      //             titleText: '无法获取结果',
-      //             helpText: '你可能需要检查你的网络连接',
-      //           },
-      //           footer: {
-      //             selectText: '选择',
-      //             navigateText: '切换',
-      //             closeText: '关闭',
-      //             searchByText: '搜索提供者',
-      //           },
-      //           noResultsScreen: {
-      //             noResultsText: '无法找到相关结果',
-      //             suggestedQueryText: '你可以尝试查询',
-      //             reportMissingResultsText: '你认为该查询应该有结果？',
-      //             reportMissingResultsLinkText: '点击反馈',
-      //           },
-      //         },
-      //       },
+      //     '/': {
+      //       placeholder: '搜索',
       //     },
       //   },
       // },
+      // search: false,
+      docsearch: {
+        appId: 'KRJOJ00KBL',
+        apiKey: '3f3b13613235873fbcbc9d304de18126',
+        indexName: 'pengzhanbo',
+        locales: {
+          '/zh/': {
+            placeholder: '搜索文档',
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档',
+              },
+              modal: {
+                searchBox: {
+                  resetButtonTitle: '清除查询条件',
+                  resetButtonAriaLabel: '清除查询条件',
+                  cancelButtonText: '取消',
+                  cancelButtonAriaLabel: '取消',
+                },
+                startScreen: {
+                  recentSearchesTitle: '搜索历史',
+                  noRecentSearchesText: '没有搜索历史',
+                  saveRecentSearchButtonTitle: '保存至搜索历史',
+                  removeRecentSearchButtonTitle: '从搜索历史中移除',
+                  favoriteSearchesTitle: '收藏',
+                  removeFavoriteSearchButtonTitle: '从收藏中移除',
+                },
+                errorScreen: {
+                  titleText: '无法获取结果',
+                  helpText: '你可能需要检查你的网络连接',
+                },
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                  closeText: '关闭',
+                  searchByText: '搜索提供者',
+                },
+                noResultsScreen: {
+                  noResultsText: '无法找到相关结果',
+                  suggestedQueryText: '你可以尝试查询',
+                  reportMissingResultsText: '你认为该查询应该有结果？',
+                  reportMissingResultsLinkText: '点击反馈',
+                },
+              },
+            },
+          },
+        },
+      },
       comment: {
         type: 'giscus',
         comment: true,

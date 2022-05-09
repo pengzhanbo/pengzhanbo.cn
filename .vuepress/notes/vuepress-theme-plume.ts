@@ -1,7 +1,7 @@
 export default {
   text: 'VuePress-theme-plume',
   dir: 'vuepress-theme-plume',
-  link: '/vuepress-theme-plume',
+  link: '/vuepress-theme-plume/',
   sidebar: [
     '',
     {

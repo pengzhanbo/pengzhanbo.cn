@@ -1,5 +1,5 @@
 export default {
-  link: '/interview-question',
+  link: '/interview-question/',
   text: '面试题解析',
   dir: '面试题',
   sidebar: [
