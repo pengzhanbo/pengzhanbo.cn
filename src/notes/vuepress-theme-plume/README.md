@@ -24,7 +24,7 @@ __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 :::
 
 - [快速开始](/note/vuepress-theme-plume/quick-start/)
-- [配置](/note/vuepress-theme-plume/config/)
+- [配置](/note/vuepress-theme-plume/theme-config/)
 - [编写文章](/note/vuepress-theme-plume/write-article/)
 
 ## 功能
