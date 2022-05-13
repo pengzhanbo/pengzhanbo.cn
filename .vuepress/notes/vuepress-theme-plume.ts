@@ -1,4 +1,6 @@
-export default {
+import { definePlumeNotesItemConfig } from '@vuepress-plume/vuepress-theme-plume'
+
+export default definePlumeNotesItemConfig({
   text: 'VuePress-theme-plume',
   dir: 'vuepress-theme-plume',
   link: '/vuepress-theme-plume/',
@@ -33,4 +35,4 @@ export default {
       ]
     }
   ]
-}
+})

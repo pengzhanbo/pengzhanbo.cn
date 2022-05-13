@@ -11,14 +11,13 @@ sticky: true
 
 ![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-theme-plume.svg)
 
-![npm](https://img.shields.io/npm/dm/@vuepress-plume/vuepress-theme-plume?style=flat)
+![npm](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-theme-plume?style=flat)
 
 __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 
 ::: warning 提示
-主题尚处于开发阶段。
 
-基于 VuePress@v2, 仍处于 Beta。
+基于 VuePress@v2, 仍处于 Beta 阶段。
 
 这意味着功能和API尚未固定，在未来的更新中仍有概率出现破坏更改。
 :::
@@ -28,6 +27,7 @@ __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 - [编写文章](/note/vuepress-theme-plume/write-article/)
 
 ## 功能
+
 - 低配置化，安装后仅需少量的配置即可使用
 - markdown功能增强，支持 代码分组、嵌入代码demo、内容增强容器。
 - 支持 文章分类、标签、归档

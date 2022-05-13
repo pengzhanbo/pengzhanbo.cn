@@ -1,4 +1,6 @@
-export default {
+import { definePlumeNotesItemConfig } from '@vuepress-plume/vuepress-theme-plume'
+
+export default definePlumeNotesItemConfig({
   link: '/interview-question/',
   text: '面试题解析',
   dir: '面试题',
@@ -203,4 +205,4 @@ export default {
       ]
     },
   ]
-}
+})
