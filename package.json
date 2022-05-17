@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "vuepress dev src --config .vuepress/config.ts --clean-cache --clean-temp",
-    "build": "vuepress build src --config .vuepress/config.ts --clean-cache --clean-temp"
+    "build": "vuepress build src --config .vuepress/config.ts --clean-cache --clean-temp",
+    "serve": "anywhere -s -h localhost -d docs"
   },
   "author": "pengzhanbo",
   "license": "ISC",
@@ -13,7 +14,8 @@
     "vuepress": "^2.0.0-beta.45"
   },
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "^1.0.0-beta.35",
-    "@vuepress/plugin-google-analytics": "^2.0.0-beta.45"
+    "@vuepress-plume/vuepress-theme-plume": "^1.0.0-beta.36",
+    "@vuepress/plugin-google-analytics": "^2.0.0-beta.45",
+    "anywhere": "^1.6.0"
   }
 }
