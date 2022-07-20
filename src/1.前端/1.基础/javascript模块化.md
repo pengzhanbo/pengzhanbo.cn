@@ -56,9 +56,9 @@ CommonJs规范和当时出现的NodeJs相得益彰，共同走入了开发者的
 - `require` 用于加载某个模块。
 - `module` 表示当前模块，是一个对象。这个对象中保存了当前模块的信息。`exports` 是 `module` 上的一个属性，保存了当前模块要导出的接口或者变量，使用 `require` 加载的某个模块获取到的值就是那个模块使用 `exports` 导出的值。
 
-:::: code-group
+::: code-tabs
 
-::: code-group-item a.js
+@tab a.js
 ``` js
 var name = 'Mark';
 var age = 18;
@@ -68,9 +68,8 @@ module.exports.getAge = function () {
   return age;
 }
 ```
-:::
 
-::: code-group-item b.js:active
+@tab:active b.js
 ``` js
 var moduleA = require('./a.js')
 console.log(moduleA.a); // Mark
@@ -80,7 +79,6 @@ console.log(moduleA.getAge()); // 18
 ```
 :::
 
-::::
 
 在NodeJs环境中，CommonJs的模块由于在服务器环境下，可以从本地进行加载，即 同步加载。
 
@@ -205,18 +203,17 @@ webpack 内部实现了 不同的 模块化规范，包括 匿名函数闭包`ii
 ``` html
 <script type="module" src="/moduleA.js"></script>
 ```
-:::: code-group
+::: code-tabs
 
-::: code-group-item moduleA.js
+@tab moduleA.js
 ``` js
 import { name, getAge } from './moduleB.js';
 
 console.log(name);
 console.log(getAge());
 ```
-:::
 
-::: code-group-item moduleB.js
+@tab moduleB.js
 ``` js
 export const name = 'Mark';
 
@@ -228,7 +225,6 @@ export function getAge() {
 ```
 :::
 
-::::
 
 
 ## Deno模块加载

@@ -1,6 +1,7 @@
 import { path, fs } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin  } from '@vuepress/plugin-google-analytics'
+import shikiPlugin from '@vuepress/plugin-shiki'
 import theme from './theme'
 
 const robotsContent = `
@@ -34,8 +35,9 @@ export default defineUserConfig({
   plugins: [
     googleAnalyticsPlugin({
       id: 'G-TMXNCJR2K7'
-    })
-  ],
+    }),
+    process.env.NODE_ENV === 'production' && shikiPlugin({ theme: 'one-dark-pro' }),
+  ].filter(Boolean) as any,
   onGenerated: (app) => {
     const filepath = app.dir.dest('robots.txt')
     setTimeout(() => {

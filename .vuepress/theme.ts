@@ -26,6 +26,7 @@ export default themePlume({
     baiduTongji: {
       key: '8a4e65dd3f2d30e64c828481295e09d1'    
     },
+    prismjs: process.env.NODE_ENV === 'development' ? undefined : false,
     docsearch: {
       appId: 'KRJOJ00KBL',
       apiKey: '3f3b13613235873fbcbc9d304de18126',
@@ -75,7 +76,7 @@ export default themePlume({
       },
     },
     comment: {
-      type: 'giscus',
+      provider: 'Giscus',
       comment: true,
       repo: 'pengzhanbo/pengzhanbo-blog-vuepress',
       repoId: 'MDEwOlJlcG9zaXRvcnkxNDgwMzY4MDc=',
@@ -85,15 +86,5 @@ export default themePlume({
       reactionsEnabled: true,
       inputPosition: 'top',
     },
-    markdownEnhance: {
-      sub: true,
-      sup: true,
-      container: true,
-      codegroup: true,
-      align: true,
-      mark: true,
-      tasklist: true,
-      demo: true,
-    }
   },
 })
