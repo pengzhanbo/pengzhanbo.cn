@@ -31,7 +31,7 @@ permalink: /note/interview-question/bvx4d2u5/
 }
 ```
 
-::: demo CSS三角形
+::: normal-demo CSS三角形
 
 ```html
 <div class="triangle-demo"></div>
