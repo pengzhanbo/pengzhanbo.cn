@@ -44,7 +44,7 @@ pnpm add @vuepress-plume/vuepress-plugin-caniuse
 
 ::: code-tabs
 @tab .vuepress/config.ts
-``` ts {2,6}
+``` ts
 import { defineUserConfig } from 'vuepress'
 import { caniusePlugin } from '@vuepress-plume/vuepress-plugin-caniuse'
 
@@ -54,9 +54,8 @@ export default defineUserConfig({
   ]
 })
 ```
-
 @tab .vuepress/config.js
-``` js {1,5}
+``` js
 const { caniusePlugin } = require('@vuepress-plume/vuepress-plugin-caniuse')
 
 module.exports = {

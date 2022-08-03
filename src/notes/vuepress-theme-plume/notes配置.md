@@ -9,7 +9,7 @@ permalink: /note/vuepress-theme-plume/notes-config/
 
 ## 配置
 所有主题内部使用的插件， 均在 `notes` 字段中进行配置。
-``` js {3-5}
+``` js
 module.exports = {
   themeConfig: {
     notes: {
