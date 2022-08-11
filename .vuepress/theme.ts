@@ -3,12 +3,12 @@ import notes from './notes'
 import navbar from './navbar'
 
 export default themePlume({
-  logo: '/g.gif',
+  logo: '/images/blogger-fav.png',
   darkMode: true,
   hostname: "https://pengzhanbo.cn/",
   avatar: {
     name: '鹏展博',
-    url: '/images/blogger.png',
+    url: '/images/blogger-fav.png',
     description: 'good good study, day day up !'
   },
   social: {

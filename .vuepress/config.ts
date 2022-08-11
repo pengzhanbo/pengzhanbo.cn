@@ -26,12 +26,13 @@ export default defineUserConfig({
   temp: path.resolve(__dirname, '.temp'),
   cache: path.resolve(__dirname, '.cache'),
   head: [
-    ['link', { rel: 'icon', href: '/g.gif' }],
+    ['link', { rel: 'icon', href: '/images/blogger-fav.png' }],
     ['meta', { 'name': 'keywords', content: '鹏展博,前端，健身' }],
     ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'id=edg' }],
     ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7'}],
     ['meta', { name: 'google-site-verification', content: 'X5YSaTDn-pKqQBUKD_05_dQcxVItzEq7Rlbg2ZEU7AM' }],
   ],
+  shouldPrefetch: false,
   plugins: [
     googleAnalyticsPlugin({
       id: 'G-TMXNCJR2K7'
