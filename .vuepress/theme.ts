@@ -9,7 +9,7 @@ export default themePlume({
   avatar: {
     name: '鹏展博',
     url: '/images/blogger-fav.png',
-    description: 'good good study, day day up !'
+    description: '知行合一'
   },
   social: {
     email: 'volodymyr@foxmail.com',
