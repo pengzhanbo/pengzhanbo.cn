@@ -7,7 +7,7 @@ permalink: /article/84nu27cz/
 
 `pnpm` 是一款新兴不久的包管理器，相比于 `npm` 和 `yarn`，`pnpm` 拥有更快的安装速度，同时节约磁盘空间。
 
-<!--more-->
+<!-- more -->
 
 ## 介绍
 
