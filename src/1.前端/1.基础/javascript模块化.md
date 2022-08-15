@@ -3,7 +3,7 @@ title: javascript模块化 发展历程
 createTime: 2022/04/10 03:00:41
 author: pengzhanbo
 permalink: /article/javascript-modules/
-sticky: 10
+# sticky: 10
 ---
 
 javascript模块化的发展，距今已有10个年头左右。

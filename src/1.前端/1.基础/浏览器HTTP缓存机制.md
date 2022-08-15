@@ -3,7 +3,7 @@ title: HTTP缓存机制
 createTime: 2019/08/24 12:18:39
 author: pengzhanbo
 permalink: /article/c3ez957l/
-sticky: true
+# sticky: true
 ---
 
 ::: note

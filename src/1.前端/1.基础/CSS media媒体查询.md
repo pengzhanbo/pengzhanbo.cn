@@ -1,7 +1,7 @@
 ---
 title: CSS 媒体查询
 createTime: 2018/08/18 08:43:02
-permalink: /article/fe5ruia1
+permalink: /article/fe5ruia1/
 author: pengzhanbo
 tags: 
   - css

@@ -5,7 +5,7 @@ tags:
   - WebComponent
   - javascript
 createTime: 2018/8/2 11:15:27
-permalink: /article/5fmy4kla
+permalink: /article/5fmy4kla/
 author: pengzhanbo
 ---
 

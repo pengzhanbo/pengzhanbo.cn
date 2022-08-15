@@ -1,7 +1,7 @@
 ---
 title: CSS选择器
 createTime: 2018/09/20 03:29:20
-permalink: /article/8vev8ixl
+permalink: /article/8vev8ixl/
 author: pengzhanbo
 tags: 
   - css
