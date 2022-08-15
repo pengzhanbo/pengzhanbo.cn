@@ -664,20 +664,20 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.37.tgz#8e6adc3f2759af52f0e85863dfb0b711ecc5c702"
   integrity sha512-4rSJemR2NQIo9Klm1vabqWjD8rs/ZaJSzMxkMNeJS6lHiUjjUeYFbooN19NgFjztubEKh3WlZUeOLVdbbUWHsw==
 
-"@vuepress-plume/vuepress-plugin-baidu-tongji@1.0.0-beta.42":
-  version "1.0.0-beta.42"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-baidu-tongji/-/vuepress-plugin-baidu-tongji-1.0.0-beta.42.tgz#c4f464cb1119f472b460984cc3851d49f53079dc"
-  integrity sha512-vj4q80CbIGCBT/E0ip/M1+liAAPnjCNjgyJp463doJ1u9ph1Vrrg5plitJ2Ap5aD6wHvrY7/UmpXvU2E1VTrRg==
+"@vuepress-plume/vuepress-plugin-baidu-tongji@1.0.0-beta.43":
+  version "1.0.0-beta.43"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-baidu-tongji/-/vuepress-plugin-baidu-tongji-1.0.0-beta.43.tgz#776a0880e5679f7a0aa5f3b89c1fe50645b69aa4"
+  integrity sha512-EYis4kfKznl7Uy3IlS25bDD4+V9F4gXvSFgi0dllqhd35iarzMmycZ2UHVRISUKGlXOclRV7AC+Az9R9p63ogA==
   dependencies:
     "@vuepress/client" "2.0.0-beta.49"
     "@vuepress/core" "2.0.0-beta.49"
     "@vuepress/shared" "2.0.0-beta.49"
     "@vuepress/utils" "2.0.0-beta.49"
 
-"@vuepress-plume/vuepress-plugin-caniuse@1.0.0-beta.42":
-  version "1.0.0-beta.42"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-caniuse/-/vuepress-plugin-caniuse-1.0.0-beta.42.tgz#c37f0dd0a4a8e73af7735754777cb5550d5af123"
-  integrity sha512-5X5s+AeNZC49onjXRcMwv1MC5kHURXDbvul13hD6WMbltz1SB6QSRJfZCgHgEqfUnP/r9p/NQtd4nf9t5rKzJQ==
+"@vuepress-plume/vuepress-plugin-caniuse@1.0.0-beta.43":
+  version "1.0.0-beta.43"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-caniuse/-/vuepress-plugin-caniuse-1.0.0-beta.43.tgz#c9efc63734e48e9016e70e74b66c0331d396c436"
+  integrity sha512-V7ktAbzbJ3bSqLQ+V37cQZ0Lf/hCnQQvVO1RlbNEs0a2nZUm82cS3g8Dqk7O+DgQsyEHqmTnIrUy/BcS6a5YGQ==
   dependencies:
     "@vuepress/cli" "2.0.0-beta.49"
     "@vuepress/client" "2.0.0-beta.49"
@@ -685,10 +685,10 @@
     "@vuepress/utils" "2.0.0-beta.49"
     markdown-it-container "^3.0.0"
 
-"@vuepress-plume/vuepress-plugin-copy-code@1.0.0-beta.42":
-  version "1.0.0-beta.42"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-copy-code/-/vuepress-plugin-copy-code-1.0.0-beta.42.tgz#6ee405764b32f36efac3a7e6950324e9cc70db4c"
-  integrity sha512-SW5/AbU9CMg2sPGT6QZHEpCgfwwaLnjevleFxavmQI/dAd8LZ2lUSDGbsliywGmLemzJ8fP6DTfUTnWHdQ/Tmg==
+"@vuepress-plume/vuepress-plugin-copy-code@1.0.0-beta.43":
+  version "1.0.0-beta.43"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-plugin-copy-code/-/vuepress-plugin-copy-code-1.0.0-beta.43.tgz#6c7bdb1da02ff84f07eac7744358214f6efa8891"
+  integrity sha512-PAIphvByAt1FTHujEs/watZxTrFnDytR3KYtMxOHm7WdUEVCMaYqxvSEf5JDVwTrhPunYOPTwd6d6uxBvx+y4w==
   dependencies:
     "@vuepress/client" "2.0.0-beta.49"
     "@vuepress/core" "2.0.0-beta.49"
@@ -697,15 +697,15 @@
     vue "^3.2.37"
     vue-router "4.1.2"
 
-"@vuepress-plume/vuepress-theme-plume@^1.0.0-beta.42":
-  version "1.0.0-beta.42"
-  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.42.tgz#ad75c204cd38cccccf6dc81ab5ed63efa30032de"
-  integrity sha512-E2lEDqKWIJle2pqdr2TE4mpyPYNm8XKwKEhr+XoSH70JZu5ZpQNXLEnEIgviVGk0ThVxOx0dXQG3zBuj+IVJ7g==
+"@vuepress-plume/vuepress-theme-plume@^1.0.0-beta.43":
+  version "1.0.0-beta.43"
+  resolved "https://registry.yarnpkg.com/@vuepress-plume/vuepress-theme-plume/-/vuepress-theme-plume-1.0.0-beta.43.tgz#71a11bee70f3828e7c99419078cb846e823363b9"
+  integrity sha512-6JoIPS4m6L0sdavqh5Pv+IE0WkPlIdCH0ZrA+GR4zC1Ys3oGi4NSAEU+1WL2essEFVtTXZspmK+lavZUy3WeCQ==
   dependencies:
     "@types/lodash.merge" "^4.6.6"
-    "@vuepress-plume/vuepress-plugin-baidu-tongji" "1.0.0-beta.42"
-    "@vuepress-plume/vuepress-plugin-caniuse" "1.0.0-beta.42"
-    "@vuepress-plume/vuepress-plugin-copy-code" "1.0.0-beta.42"
+    "@vuepress-plume/vuepress-plugin-baidu-tongji" "1.0.0-beta.43"
+    "@vuepress-plume/vuepress-plugin-caniuse" "1.0.0-beta.43"
+    "@vuepress-plume/vuepress-plugin-copy-code" "1.0.0-beta.43"
     "@vuepress/client" "2.0.0-beta.49"
     "@vuepress/core" "2.0.0-beta.49"
     "@vuepress/plugin-active-header-links" "2.0.0-beta.49"
