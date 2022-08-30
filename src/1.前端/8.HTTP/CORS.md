@@ -52,7 +52,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码中
 对于不需要携带身份凭证的请求，服务器可以指定改字段的值为通配符(`*`)，表示允许来自所有域的请求。
 
 语法：
-``` http
+```
 Access-Control-Allow-Origin: <origin>
 Access-Control-Allow-Origin: *
 ```
@@ -67,14 +67,14 @@ Access-Control-Allow-Origin: *
 **示例1：**
 
 允许所有域访问
-``` http
+```
 Access-Control-Allow-Origin: *
 ```
 
 **示例2：**
 
 允许来自 https://pengzhanbo.cn 的请求
-``` http
+```
 Access-Control-Allow-Origin: https://pengzhanbo.cn
 Vary: Origin
 ```
@@ -85,13 +85,13 @@ Vary: Origin
 **指明了实际请求所允许使用的HTTP方法或方法列表**。
 
 语法：
-``` http
+```
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
 
 示例：
 
-``` http
+```
 Access-Control-Allow-Methods: POST, GET, OPTIONS
 ```
 
@@ -101,7 +101,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 **指明了实际请求中允许携带的首部字段**。
 
 语法：
-``` http
+```
 Access-Control-Allow-Headers: <header-name>[, header-name]*
 Access-Control-Allow-Headers: *
 ```
@@ -116,7 +116,7 @@ Access-Control-Allow-Headers: *
 
 自定义请求头。 除了 CORS 安全清单列出的请求头外，支持 自定义请求头 X-Custom-Header
 
-``` http
+```
 Access-Control-Allow-Headers: X-Custom-Header
 ```
 
@@ -124,7 +124,7 @@ Access-Control-Allow-Headers: X-Custom-Header
 
 多个自定义请求头。
 
-``` http
+```
 Access-Control-Allow-Headers: X-Custom-Header, X-My-Header
 ```
 
@@ -135,7 +135,7 @@ Access-Control-Allow-Headers: X-Custom-Header, X-My-Header
 返回结果是指： **Access-Control-Allow-Methods** 和 **Access-Control-Allow-Headers** 提供的信息。
 
 语法：
-``` http
+```
 Access-Control-Max-Age: <delta-seconds>
 ```
 
@@ -147,7 +147,7 @@ Access-Control-Max-Age: <delta-seconds>
 **示例**
 
 将预检请求缓存 10分钟：
-``` http
+```
 Access-Control-Max-Age: 600
 ```
 
@@ -170,19 +170,19 @@ Access-Control-Max-Age: 600
 如果期望让客户端可以访问到其他的首部信息，可以将它们 该字段受列出来。
 
 语法：
-``` http
+```
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
 **示例**
 
 暴露一个非简单响应首部：
-``` http
+```
 Access-Control-Expose-Headers: X-My-Header
 ```
 
 暴露多个非简单响应首部：
-``` http
+```
 Access-Control-Expose-Headers: X-My-Header, X-Custom-Header
 ```
 
@@ -196,7 +196,7 @@ Access-Control-Expose-Headers: X-My-Header, X-Custom-Header
 Credentials 可以是 `cookies`、 `authorization headers` 或 `TLS client certificates`。
 
 语法：
-``` http
+```
 Access-Control-Allow-Credentials: true
 ```
 
@@ -247,7 +247,7 @@ fetch('https://pengzhanbo.cn', {
 
 语法：
 
-``` http
+```
 Origin: <origin>
 ```
 
@@ -259,7 +259,7 @@ origin 参数的值为源站的URI。不包含任何路径信息，仅表示服�
 
 语法：
 
-``` http
+```
 Access-Control-Request-Method: <method>
 ```
 
@@ -269,7 +269,7 @@ Access-Control-Request-Method: <method>
 
 语法：
 
-``` http
+```
 Access-Control-Request-Headers: <header-name>[, <header-name>]*
 ```
 

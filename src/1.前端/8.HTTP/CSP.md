@@ -32,7 +32,7 @@ XSS攻击是一种常见的、危害极大的网络攻击手段。它利用浏�
 ## 制定策略
 
 `CSP` 通过 声明 HTTP 头部字段 `Content-Security-Policy` 来启用和配置策略：
-``` http
+```
 Content-Security-Policy: policy;
 Content-Security-Policy: policy; policy;
 ```
@@ -46,7 +46,7 @@ Content-Security-Policy: policy; policy;
 为其他CSP指令提供备选项，如果其他指令不存在，用户代理会查找并应用该值，如果其他指令有配置值，那么则不会应用 default-src的值。
 
 default-src 策略允许指定一个或多个值：
-``` http
+```
 Content-Security-Policy: default-src <source>;
 Content-Security-Policy: default-src <source> <source>;
 ```
@@ -55,7 +55,7 @@ Content-Security-Policy: default-src <source> <source>;
 
 脚本内容安全策略指令，包括限制 外部资源、内联脚本、eval函数。
 
-``` http
+```
 Content-Security-Policy: script-src <source>
 ```
 
@@ -64,7 +64,7 @@ Content-Security-Policy: script-src <source>
 CSS文件内容安全策略指令，包括限制 内联样式表、通过`<link>` 引入的css文件、样式中通过 `@import` 导入的css文件、
 元素的 `style` 属性、 `style.cssText` 属性、以及 `el.setAttribute('style', '')`
 
-``` http
+```
 Content-Security-Policy: style-src <source>
 ```
 
@@ -72,7 +72,7 @@ Content-Security-Policy: style-src <source>
 
 图片资源内容安全策略指令， 限制通过 `<img>` 加载的图片资源
 
-``` http
+```
 Content-Security-Policy: img-src <source>
 ```
 
@@ -80,7 +80,7 @@ Content-Security-Policy: img-src <source>
 
 媒体资源内容安全策略指令，限制通过 `<audio>`、`<video>`、`<track>` 加载的媒体资源
 
-``` http
+```
 Content-Security-Policy: media-src <source>
 ```
 
@@ -137,7 +137,7 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
 
   使用 sha256、sha384 或 sha512 编码过的内联脚本或样式。其由用短划线分隔的两部分组成：用于创建哈希的加密算法，以及脚本或样式 base64 编码的哈希值。当生成哈希值的时候，不要包含 `<script>` 或 `<style>` 标签，同时注意字母大小写与空格——包括首尾空格——都是会影响生成的结果的。
 
-  ``` http
+  ```
   Content-Security-Policy: default-src sha256-abcdef;
   ```
 - `'strict-dynamic'`
@@ -173,7 +173,7 @@ http {
 
 默认只允许加载本站资源
 
-``` http
+```
 Content-Security-Policy: default-src 'self';
 ```
 
@@ -181,14 +181,14 @@ Content-Security-Policy: default-src 'self';
 
 默认只允许加载本站资源，但允许任意来源图片资源
 
-``` http
+```
 Content-Security-Policy: default-src 'self'; img-src *;
 ```
 
 ### 示例3
 
 默认只允许加载本站资源，允许 script资源、css资源、图片资源从指定cdn域名加载
-``` http
+```
 Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.example.com; style-src  'self' https://cdn.example.com; img-src 'self' https://cdn.example.com;
 ```
 
@@ -196,7 +196,7 @@ Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.examp
 
 阻止所有 iframe 窗口，允许本站加载其他资源
 
-``` http
+```
 Content-Security-Policy: default-src 'self'; frame-src 'none';
 ```
 
@@ -204,7 +204,7 @@ Content-Security-Policy: default-src 'self'; frame-src 'none';
 
 执行特定 nonce 的内联脚本：
 
-``` http
+```
 Content-Security-Policy: script-src 'nonce-abcdef' 'self';
 ```
 
@@ -218,7 +218,7 @@ Content-Security-Policy: script-src 'nonce-abcdef' 'self';
 
 Hash 值相符的脚本才能执行：
 
-``` http
+```
 Content-Security-Policy: script-src 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='
 ```
 该hash值必须是 script 标签内容的 sha256 值，代码才能执行：
@@ -232,7 +232,7 @@ Content-Security-Policy: script-src 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZ
 
 启用 CSP 后，默认情况下，违例报告不会发送。我们可以通过配置 `report-uri` 策略指令，并提供至少一个URI地址去递交报告。
 
-``` http
+```
 Content-Security-Policy: default-src 'self'; report-uri http://report.example.com/csp;
 ```
 
