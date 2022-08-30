@@ -25,23 +25,23 @@ webpack是一个用于 现代javascript应用程序的静态模块打包工具�
 
 ## 工作原理
 
-- 项目中的每一个文件都是一个模块。模块之间通过引用，会形成依赖关系，多个依赖关系，形成了依赖关系图；
-- 通过loader可以对模块进行解析或者其他操作；
-- 在打包过程中，模块会被合并成chunk；
-- 根据入口文件创建chunk组；
-- 根据入口文件开始的模块依赖形成的依赖关系图，将这些模块添加到chunk中；
-- 通过plugins可以在webpack的各个生命周期进行操作
-- 根据chunk进行打包输出
+1. 读取 `webpack` 的配置参数；
+2. 启动 `webpack` , 创建 `compiler` 对象，开始解析项目；
+3. 从入口文件 `entry` 开始解析，并找到其导入的**依赖模块**，递归遍历分析，形成**依赖关系树**；
+4. 对不同的文件类型资源的依赖模块文件，使用对应的 `Loader` 进行转换，最终转为 webpack的有效模块；
+5. 在编译过程中， `webpack` 通过 发布订阅模式，向外抛出一些 `hooks` ，`webpack` 的 `Plugin` 通过监听各个 `hooks` ，
+   执行插件任务，扩展 `webpack` 的功能，干预输出结果。
+6. 根据 输出配置 `output` ，将打包构建好的资源文件 输出。
 
 ## loader
 
-loader用于对模块的源代码进行解析转换。
+将其他类型的资源文件转换为 webpack能够处理的有效模块。
 
 ## plugin
 
 plugin是webpack的核心功能，其目的是在于解决loader无法解决的其他事上。
 
-plugin可以在webpack访问到webpack的整个生命周期，并且可以访问到compile对象，这使得plugin拥有非常强大的能力。
+plugin可以在webpack访问到webpack的整个生命周期，并且可以访问到compile对象，以及当前编译过程对象 compilation, 这使得plugin拥有非常强大的能力。
 
 ## loader和plugin的区别
 
@@ -49,7 +49,6 @@ loader仅能对其关联的模块类型进行解析转换，不能访问到webpa
 
 plugin是对webpack的扩展，可以访问到webpack整个生命周期。
 
-（几乎loader能做到的事情，均可以通过plugin实现，但loader可以更关注于模块解析本身）
 
 ## webpack 优化
 
