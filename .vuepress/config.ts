@@ -1,8 +1,10 @@
-import { path, fs } from '@vuepress/utils'
+import { path, fs, getDirname } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin  } from '@vuepress/plugin-google-analytics'
 import shikiPlugin from '@vuepress/plugin-shiki'
 import theme from './theme'
+
+const __dirname = getDirname(import.meta.url)
 
 const robotsContent = `
 # Algolia-Crawler-Verif: A1A1F2E6307A7403
@@ -45,5 +47,5 @@ export default defineUserConfig({
       fs.writeFileSync(filepath, robotsContent, 'utf-8')
     }, 500)
   },
-  theme,
+  theme: theme as any,
 })
