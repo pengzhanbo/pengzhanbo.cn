@@ -2,6 +2,7 @@ import { definePlumeNotesConfig } from '@vuepress-plume/vuepress-theme-plume'
 import vuepressThemePlume from './vuepress-theme-plume'
 import interviewQuestion from './interview-question'
 import vuepressPlugin from './vuepress-plugin'
+import typeChallenges from './type-challenges'
 
 export default definePlumeNotesConfig({
   dir: 'notes',
@@ -10,5 +11,6 @@ export default definePlumeNotesConfig({
     vuepressThemePlume,
     interviewQuestion,
     vuepressPlugin,
+    typeChallenges,
   ]
 })

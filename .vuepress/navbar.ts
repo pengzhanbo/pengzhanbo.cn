@@ -13,10 +13,10 @@ export default [
     ]
   },
   { text: '面试题解析', link: '/note/interview-question/' },
-  // {
-  //   text: '笔记',
-  //   children: [
-  //     { text: '面试题解析', link: '/note/interview-question/' },
-  //   ]
-  // }
+  {
+    text: '笔记',
+    children: [
+      { text: 'type-challenges', link: '/note/type-challenges/' },
+    ]
+  }
 ]
