@@ -4,4 +4,4 @@
 
 [build]
   publish = "docs"
-  command = "pnpm install && npx pnpm build"
+  command = "pnpm install && pnpm build"
