@@ -19,7 +19,7 @@ type isPillarMen = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Dio'> // e
 
 知识点：
 - 类型约束
-- 数组解构
+- 数组展开
 - 条件类型判断 `infer` 关键词
 - 类型递归
 
