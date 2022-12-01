@@ -31,7 +31,7 @@ todo.description = "barFoo" // Error: cannot reassign a readonly property
 
 ### 解题思路
 
-本题是对 `ReadOnly` 的自定义实现，需要掌握的 `TS` 基础知识点包括：
+本题是对 `Readonly` 的自定义实现，需要掌握的 `TS` 基础知识点包括：
 
 - 对象类型的 `索引签名`
 - 泛型

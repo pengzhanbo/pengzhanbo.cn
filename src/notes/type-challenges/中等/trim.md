@@ -1,0 +1,6 @@
+---
+title: ➖ Trim
+createTime: 2022/12/01 03:55:31
+author: pengzhanbo
+permalink: /note/type-challenges/qme4axol/
+---
