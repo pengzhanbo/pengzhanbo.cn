@@ -172,7 +172,7 @@ export default definePlumeNotesItemConfig({
         'sum',
         'multiply',
         'tag',
-        'inclusiveRage',
+        'inclusiveRange',
         'sort',
         'distributeUnions',
         'assertArrayIndex',
