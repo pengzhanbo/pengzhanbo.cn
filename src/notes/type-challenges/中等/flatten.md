@@ -5,3 +5,9 @@ author: pengzhanbo
 permalink: /note/type-challenges/medium/flatten/
 ---
 
+::: info 题目
+Github: []()
+
+```ts
+```
+:::
