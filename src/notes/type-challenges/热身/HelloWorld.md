@@ -2,7 +2,7 @@
 title: ✔️ Hello World
 createTime: 2022/11/30 02:14:31
 author: pengzhanbo
-permalink: /note/type-challenges/lbhv8dcp/
+permalink: /note/type-challenges/warm-up/hello-world/
 ---
 
 ::: info 题目

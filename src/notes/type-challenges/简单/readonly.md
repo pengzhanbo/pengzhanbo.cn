@@ -2,7 +2,7 @@
 title: ✔️ Readonly
 createTime: 2022/11/30 03:06:24
 author: pengzhanbo
-permalink: /note/type-challenges/ykl60x4a/
+permalink: /note/type-challenges/easy/readonly/
 ---
 
 ::: info 题目
