@@ -1,5 +1,5 @@
 ---
-title: ➖ GetReturnType
+title: ✔️ GetReturnType
 createTime: 2022/12/01 04:26:29
 author: pengzhanbo
 permalink: /note/type-challenges/medium/get-return-type/
@@ -19,5 +19,18 @@ const fn = (v: boolean) => {
 }
 
 type a = MyReturnType<typeof fn> // 应推导出 "1 | 2"
+```
+:::
+
+### 解题思路
+
+知识点：
+- 条件类型推断 `infer` 关键词
+
+通过 条件类型推断，泛型参数 `T` 是否是 函数类型，通过 `infer` 关键词从条件类型推断为真时，获取函数返回类型。
+
+::: details Answer
+```ts
+type MyReturnType<T> = T extends (...args: any) => infer R ? R : never
 ```
 :::
