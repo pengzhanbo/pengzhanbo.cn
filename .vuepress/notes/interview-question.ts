@@ -5,11 +5,10 @@ export default definePlumeNotesItemConfig({
   text: '面试题解析',
   dir: '面试题',
   sidebar: [
-    '',
     {
       text: 'HTML',
       dir: 'HTML',
-      children: [
+      items: [
         'DOCTYPE',
         '元素的分类',
         'HTML5新特性',
@@ -19,7 +18,7 @@ export default definePlumeNotesItemConfig({
     {
       text: 'CSS',
       dir: 'CSS',
-      children: [
+      items: [
         '盒模型',
         '外边距合并',
         'BFC块级格式化上下文',
@@ -34,7 +33,7 @@ export default definePlumeNotesItemConfig({
     {
       text: 'JavaScript',
       dir: 'JavaScript',
-      children: [
+      items: [
         '变量',
         '数据类型',
         '数据类型转换',
@@ -68,7 +67,7 @@ export default definePlumeNotesItemConfig({
     {
       text: '浏览器',
       dir: '浏览器',
-      children: [
+      items: [
         '对浏览器的理解',
         '浏览器内核',
         '渲染原理',
@@ -85,7 +84,7 @@ export default definePlumeNotesItemConfig({
     {
       text: '计算机网络',
       dir: '计算机网络',
-      children: [
+      items: [
         'http协议',
         'http缓存',
         'http2',
@@ -99,7 +98,7 @@ export default definePlumeNotesItemConfig({
     {
       text: 'Vue',
       dir: 'Vue',
-      children: [
+      items: [
         'VirtualDom',
         'v-if和v-show的区别',
         'computed和watch',
@@ -108,7 +107,7 @@ export default definePlumeNotesItemConfig({
         {
           text: 'vue@3',
           dir: 'v3',
-          children: [
+          items: [
             '响应式原理',
             '组件通信方式',
             '生命周期',
@@ -121,7 +120,7 @@ export default definePlumeNotesItemConfig({
         {
           text: 'vue@2',
           dir: 'v2',
-          children: [
+          items: [
             '响应式原理',
             'data为什么必须是函数',
             'v-if和v-for优先级',
@@ -136,18 +135,18 @@ export default definePlumeNotesItemConfig({
     {
       text: 'React',
       dir: 'React',
-      children: []
+      items: []
     },
     {
       text: 'NodeJs',
       dir: 'NodeJs',
-      children: [
+      items: [
       ]
     },
     {
       text: '工具',
       dir: '工具',
-      children: [
+      items: [
         'git',
         'git-hook',
         'jenkins',
@@ -160,7 +159,7 @@ export default definePlumeNotesItemConfig({
     {
       text: '常用库',
       dir: '常用库',
-      children: [
+      items: [
         'axios',
         'lodash',
         'UI框架'
@@ -169,7 +168,7 @@ export default definePlumeNotesItemConfig({
     {
       text: '安全',
       dir: '安全',
-      children: [
+      items: [
         'XSS攻击',
         'CSRF攻击',
         'SQL注入攻击',
@@ -180,11 +179,11 @@ export default definePlumeNotesItemConfig({
     {
       text: '算法',
       dir: '算法',
-      children: [
+      items: [
         {
           text: '排序算法',
           dir: '排序',
-          children: [
+          items: [
             '冒泡排序',
             '选择排序',
             '插入排序',
@@ -199,7 +198,7 @@ export default definePlumeNotesItemConfig({
     {
       text: '其他',
       dir: '其他',
-      children: [
+      items: [
         '前端SEO',
         '前端性能优化',
       ]

@@ -1,26 +1,24 @@
-import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
+import { plumeTheme } from '@vuepress-plume/vuepress-theme-plume'
 import notes from './notes'
 import navbar from './navbar'
 
-export default themePlume({
+export default plumeTheme({
   logo: '/images/blogger-fav.png',
-  darkMode: true,
+  appearance: true,
   hostname: "https://pengzhanbo.cn/",
   avatar: {
     name: '鹏展博',
     url: '/images/blogger-fav.png',
     description: '知行合一'
   },
-  social: {
-    email: 'volodymyr@foxmail.com',
-    github: 'pengzhanbo',
-    QQ: '942450674',
-  },
+  social: [
+    { icon: 'github', link: 'https://github.com/pengzhanbo' }
+  ],
   navbar,
   notes,
   footer: {
     copyright: 'Copyright © 2022-present pengzhanbo',
-    content: '',
+    message: '',
   },
   themePlugins: {
     baiduTongji: {

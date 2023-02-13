@@ -8,18 +8,18 @@ export default definePlumeNotesItemConfig({
     '',
     {
       text: '指南',
-      children: [
+      items: [
         '快速开始',
         '编写文章',
       ]
     },
     {
       text: '配置',
-      children: [
+      items: [
         {
           text: '主题配置',
           link: '主题配置',
-          children: [
+          items: [
             '主题插件配置',
             'notes配置',
           ]
@@ -29,7 +29,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       text: '功能',
-      children: [
+      items: [
         '基础功能',
         'markdown增强',
       ]

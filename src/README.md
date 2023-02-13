@@ -1,5 +1,8 @@
 ---
 home: true
-banner: /images/big-banner.jpg
-motto: 世间的美好总是不期而遇，恬静而自然。
+banner: /images/home-banner.jpg
+hero: 
+  name: 鹏展博
+  profession: Front End Developer
+  text: 世间的美好总是不期而遇
 ---

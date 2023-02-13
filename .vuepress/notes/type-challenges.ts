@@ -9,14 +9,14 @@ export default definePlumeNotesItemConfig({
     {
       dir: '热身',
       text: '热身(1)',
-      children: [
+      items: [
         'HelloWorld',
       ]
     },
     {
       dir: '简单',
       text: '简单(13)',
-      children: [
+      items: [
         'pick',
         'readonly',
         'tupleToObject',
@@ -35,7 +35,7 @@ export default definePlumeNotesItemConfig({
     {
       dir: '中等',
       text: '中等(75)',
-      children: [
+      items: [
         'getReturnType',
         'omit',
         'readonly2',
@@ -114,7 +114,7 @@ export default definePlumeNotesItemConfig({
     {
       dir: '困难',
       text: '困难(43)',
-      children: [
+      items: [
         'simpleVue',
         'currying1',
         'unionToIntersection',
@@ -163,7 +163,7 @@ export default definePlumeNotesItemConfig({
     {
       dir: '地狱',
       text: '地狱(14)',
-      children: [
+      items: [
         'getReadonlyKeys',
         'queryStringParser',
         'slice',
