@@ -1,7 +1,6 @@
 import { path, fs, getDirname } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin  } from '@vuepress/plugin-google-analytics'
-// import shikiPlugin from '@vuepress/plugin-shiki'
 import theme from './theme'
 
 const __dirname = getDirname(import.meta.url)
@@ -39,7 +38,6 @@ export default defineUserConfig({
     googleAnalyticsPlugin({
       id: 'G-TMXNCJR2K7'
     }),
-    // process.env.NODE_ENV === 'production' && shikiPlugin({ theme: 'one-dark-pro' }),
   ].filter(Boolean) as any,
   onGenerated: (app) => {
     const filepath = app.dir.dest('robots.txt')

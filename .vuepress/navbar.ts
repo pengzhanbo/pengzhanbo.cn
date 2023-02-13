@@ -1,7 +1,7 @@
 import { NavItem } from "@vuepress-plume/vuepress-theme-plume";
 
 export default [
-  { text: '博客', link: '/blog/' },
+  { text: '博客', link: '/blog/', activeMatch: '/(blog|article)/' },
   {
     text: 'VuePress',
     items: [
