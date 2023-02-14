@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@types/node': ^18.13.0
-  '@vuepress-plume/vuepress-theme-plume': 1.0.0-beta.53
+  '@vuepress-plume/vuepress-theme-plume': 1.0.0-beta.54
   '@vuepress/client': 2.0.0-beta.60
   '@vuepress/plugin-google-analytics': 2.0.0-beta.60
   '@vuepress/utils': 2.0.0-beta.60
@@ -11,7 +11,7 @@ specifiers:
   vuepress: 2.0.0-beta.60
 
 dependencies:
-  '@vuepress-plume/vuepress-theme-plume': 1.0.0-beta.53_vuepress@2.0.0-beta.60
+  '@vuepress-plume/vuepress-theme-plume': 1.0.0-beta.54_vuepress@2.0.0-beta.60
   '@vuepress/client': 2.0.0-beta.60
   '@vuepress/plugin-google-analytics': 2.0.0-beta.60
   '@vuepress/utils': 2.0.0-beta.60
@@ -1108,8 +1108,8 @@ packages:
     resolution: {integrity: sha512-BHGyyGN3Q97EZx0taMQ+OLNuZcW3d37ZEVmEAyeoA9ERdGvm9Irc/0Fua8SNyOtV1w6BS4q25wbMzJujO9HIfQ==}
     dev: false
 
-  /@vuepress-plume/vuepress-plugin-auto-frontmatter/1.0.0-beta.53:
-    resolution: {integrity: sha512-LD8gcsXTEJHNrnCop6UykABC/qN6X9tOsMNJgrqy0Int1g63vWyJrAJA0VnWEoQXFhdOqQn2m1/Mi8ijl8WAiA==}
+  /@vuepress-plume/vuepress-plugin-auto-frontmatter/1.0.0-beta.54:
+    resolution: {integrity: sha512-5kRb5SrmVCPs7hBuno9jT17oepUM6HArZNff0nhMV3HYimt6ZBrwAiRjLM9o0e+kjzB48AtAbeI70FIo6cJT9Q==}
     dependencies:
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/shared': 2.0.0-beta.60
@@ -1122,8 +1122,8 @@ packages:
       - supports-color
     dev: false
 
-  /@vuepress-plume/vuepress-plugin-baidu-tongji/1.0.0-beta.53:
-    resolution: {integrity: sha512-4mxHK8o69LK1zn7+TXI4GXiGXnTTx8icDDOg0xR9flb7vNgzfGybddlLy6pfDD8M5S4THk/XDZUIbUrorDHDIQ==}
+  /@vuepress-plume/vuepress-plugin-baidu-tongji/1.0.0-beta.54:
+    resolution: {integrity: sha512-CO1KTFZGopcqup595cG9rvZ8SNTFNYNdCIhzY8aejF1EGJlfUKrp0i145SLsIDik26DLPNJOpWl7nbhwcQOLSQ==}
     dependencies:
       '@vuepress/client': 2.0.0-beta.60
       '@vuepress/core': 2.0.0-beta.60
@@ -1133,8 +1133,8 @@ packages:
       - supports-color
     dev: false
 
-  /@vuepress-plume/vuepress-plugin-blog-data/1.0.0-beta.53:
-    resolution: {integrity: sha512-yfk4jCO02i2aRxYf6IZAu3zsSybArGmyvkNb6V2VvgQYLojfVApueyLGOGb1Q0uNajqHjSAHTuPaKPxCbwaJ2Q==}
+  /@vuepress-plume/vuepress-plugin-blog-data/1.0.0-beta.54:
+    resolution: {integrity: sha512-MwA7EoDJHkEohxnYhbk/MpuagxtPTTVatLyJQTFzPwRwI3CxnFQ3Fn8JJBBV7QwZgmTccJj5zujWAIZGrZTV4g==}
     dependencies:
       '@vue/devtools-api': 6.5.0
       '@vuepress/client': 2.0.0-beta.60
@@ -1148,8 +1148,8 @@ packages:
       - supports-color
     dev: false
 
-  /@vuepress-plume/vuepress-plugin-caniuse/1.0.0-beta.53:
-    resolution: {integrity: sha512-VjC+R51qX1o78nrrXDTtUADrid7h21yEvZl8BZF3Ntxkoy7Gk8DyPxajPxtlSRLEFCpldkxqhXej7tqGF1i1qA==}
+  /@vuepress-plume/vuepress-plugin-caniuse/1.0.0-beta.54:
+    resolution: {integrity: sha512-eRtlgf3xZQMCK9Ho5Ny8aMYDNwFt9l+Hy06ZC1b6OJhjt7rajuRQ2F18IuyOf5bjrXOPXJi0qihVR6Pl7euEzA==}
     dependencies:
       '@types/markdown-it': 12.2.3
       '@vuepress/cli': 2.0.0-beta.60
@@ -1161,8 +1161,8 @@ packages:
       - supports-color
     dev: false
 
-  /@vuepress-plume/vuepress-plugin-copy-code/1.0.0-beta.53:
-    resolution: {integrity: sha512-GcwuLsmNP8tFXobJ6ghgIdM8YagsllyrLvaUHt7HwC080rR2oWBY1rsyzaBgYDUCSdlnfT7KQGW0mkPzVDKw0w==}
+  /@vuepress-plume/vuepress-plugin-copy-code/1.0.0-beta.54:
+    resolution: {integrity: sha512-BN+4vGnwJ3V+gAqFsFi0IN3Q1r0DlTJF74TL1K0IfgxuC+XKLS0E5BS/RWZxftVacjgik3js0ye7WYM+I7Dd5w==}
     dependencies:
       '@vuepress/client': 2.0.0-beta.60
       '@vuepress/core': 2.0.0-beta.60
@@ -1174,8 +1174,8 @@ packages:
       - supports-color
     dev: false
 
-  /@vuepress-plume/vuepress-plugin-notes-data/1.0.0-beta.53:
-    resolution: {integrity: sha512-tnQGF0FfsKe7E/X6GjlEQutDJ4LBxbYTYR90cbj8/Hc4Y0HGkKm4mkM0qEVkmopnZMi7cJwP9svSNAwaKA33Gw==}
+  /@vuepress-plume/vuepress-plugin-notes-data/1.0.0-beta.54:
+    resolution: {integrity: sha512-FUlCoG2qsZEkoZ7eFevHJ2TLQ2/7K0CwlP74ynV8vuqSjXau+Q87/f0FRieaobi2K0KIF8vkKRiIED5D2EW9qg==}
     dependencies:
       '@vue/devtools-api': 6.5.0
       '@vuepress/client': 2.0.0-beta.60
@@ -1189,16 +1189,16 @@ packages:
       - supports-color
     dev: false
 
-  /@vuepress-plume/vuepress-theme-plume/1.0.0-beta.53_vuepress@2.0.0-beta.60:
-    resolution: {integrity: sha512-K7XDMoE2GBo2Ffpgko4gI6Sckf+Ox868RDwqNNBntYxVCaDxJlLe/a+nN1fDhvXB9yQI6gLBEy1ppcWI4JvkIw==}
+  /@vuepress-plume/vuepress-theme-plume/1.0.0-beta.54_vuepress@2.0.0-beta.60:
+    resolution: {integrity: sha512-GGxyfzD1yHQ86gI2S6nyRxGwbbOCLwEn5gxAQ0vS6E9nBeOV+BQ9oHazrWGVm15yDG8ASs8WaYrMkPkrUx4bBw==}
     dependencies:
       '@types/lodash.merge': 4.6.7
-      '@vuepress-plume/vuepress-plugin-auto-frontmatter': 1.0.0-beta.53
-      '@vuepress-plume/vuepress-plugin-baidu-tongji': 1.0.0-beta.53
-      '@vuepress-plume/vuepress-plugin-blog-data': 1.0.0-beta.53
-      '@vuepress-plume/vuepress-plugin-caniuse': 1.0.0-beta.53
-      '@vuepress-plume/vuepress-plugin-copy-code': 1.0.0-beta.53
-      '@vuepress-plume/vuepress-plugin-notes-data': 1.0.0-beta.53
+      '@vuepress-plume/vuepress-plugin-auto-frontmatter': 1.0.0-beta.54
+      '@vuepress-plume/vuepress-plugin-baidu-tongji': 1.0.0-beta.54
+      '@vuepress-plume/vuepress-plugin-blog-data': 1.0.0-beta.54
+      '@vuepress-plume/vuepress-plugin-caniuse': 1.0.0-beta.54
+      '@vuepress-plume/vuepress-plugin-copy-code': 1.0.0-beta.54
+      '@vuepress-plume/vuepress-plugin-notes-data': 1.0.0-beta.54
       '@vuepress/client': 2.0.0-beta.60
       '@vuepress/core': 2.0.0-beta.60
       '@vuepress/plugin-active-header-links': 2.0.0-beta.60

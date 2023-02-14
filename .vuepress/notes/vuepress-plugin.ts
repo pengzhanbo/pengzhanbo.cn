@@ -9,7 +9,6 @@ export default definePlumeNotesItemConfig({
     {
       dir: 'netlify-functions',
       text: 'plugin-netlify-functions',
-      link: 'netlify-functions',
       items: [
         '',
         '介绍',

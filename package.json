@@ -13,7 +13,7 @@
   "author": "pengzhanbo",
   "license": "ISC",
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.53",
+    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.54",
     "@vuepress/client": "2.0.0-beta.60",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.60",
     "@vuepress/utils": "2.0.0-beta.60",
@@ -23,5 +23,12 @@
   },
   "devDependencies": {
     "@types/node": "^18.13.0"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
   }
 }

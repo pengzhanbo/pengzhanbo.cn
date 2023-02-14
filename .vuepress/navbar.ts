@@ -1,9 +1,11 @@
 import { NavItem } from "@vuepress-plume/vuepress-theme-plume";
 
 export default [
+  { text: '首页', link: '/' },
   { text: '博客', link: '/blog/', activeMatch: '/(blog|article)/' },
+  { text: 'Projects', link: '/projects/' },
   {
-    text: 'VuePress',
+    text: 'vuepress',
     items: [
       { text: 'theme-plume', link: '/note/vuepress-theme-plume/', activeMatch: '/note/vuepress-theme-plume/' },
       { 
@@ -15,11 +17,11 @@ export default [
       }
     ]
   },
-  { text: '面试题解析', link: '/note/interview-question/', activeMatch: '/note/interview-question/' },
   {
     text: '笔记',
     items: [
       { text: 'type-challenges', link: '/note/type-challenges/', activeMatch: '/note/type-challenges/' },
+      { text: '面试题解析', link: '/note/interview-question/', activeMatch: '/note/interview-question/' },
     ]
   }
 ] as NavItem[]
