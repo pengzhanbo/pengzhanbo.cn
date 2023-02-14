@@ -9,7 +9,7 @@ export default plumeTheme({
   avatar: {
     name: '鹏展博',
     url: '/images/blogger-fav.png',
-    description: '知行合一'
+    description: '世间的美好总是不期而遇'
   },
   social: [
     { icon: 'github', link: 'https://github.com/pengzhanbo' }
@@ -18,7 +18,6 @@ export default plumeTheme({
   notes,
   footer: {
     copyright: 'Copyright © 2022-present pengzhanbo',
-    message: '',
   },
   themePlugins: {
     baiduTongji: {
