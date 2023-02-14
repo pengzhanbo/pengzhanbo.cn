@@ -47,12 +47,21 @@ article: false
 
 基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。
 
+----
+
 ### vuepress-theme-plume
 
 ![](https://img.shields.io/github/stars/pengzhanbo/vuepress-theme-plume?style=social)
 ![](https://img.shields.io/npm/v/@vuepress-plume/vuepress-theme-plume?style=flat-square)
 ![](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-theme-plume?style=flat-square)
 
+仓库地址：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
+
+**说明：**
+
+一个简约的 vuepress 主题。开箱即用，仅需少量配置即可使用。
+
+----
 ### spearjs
 
 ![](https://img.shields.io/github/stars/pengzhanbo/spearjs?style=social)

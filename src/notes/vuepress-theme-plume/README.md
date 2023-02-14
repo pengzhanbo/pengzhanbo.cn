@@ -7,7 +7,7 @@ article: true
 sticky: true
 ---
 
-项目地址：[Vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
+项目地址：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
 
 ![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-theme-plume.svg)
 
