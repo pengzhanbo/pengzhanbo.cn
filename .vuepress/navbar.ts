@@ -7,7 +7,12 @@ export default [
   {
     text: 'vuepress',
     items: [
-      { text: 'theme-plume', link: '/note/vuepress-theme-plume/', activeMatch: '/note/vuepress-theme-plume/' },
+      {
+        text: 'Theme',
+        items: [
+          { text: 'vuepress-theme-plume', link: '/note/vuepress-theme-plume/' }
+        ]
+        },
       { 
         text: 'Plugin', 
         items: [

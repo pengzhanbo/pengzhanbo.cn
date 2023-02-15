@@ -81,13 +81,15 @@ interface PlumeThemeNotesConfigItem {
 
 这个字段是用于配置当前 note 的 sidebar 左侧导航栏
 
-- 类型： `(PlumeThemeNotesConfigItem | string)[]`
+- 类型： `'auto' | (PlumeThemeNotesConfigItem | string)[]`
 - 详情：
   - 如果子元素为字符串时，可以是相对于 dir目录的md文件路径，可以省略`.md`后缀，也可以是生成的文章，`frontmatter`中的
     `permalink`的链接， 如果为空，则表示当前文件夹下的 `README.md`文件
   - 如果子元素是`PlumeThemeNotesConfigItem`, 其中 `text` 表示 sidebar显示的文案，
     `link` 等价于 上一条 string 的规则。
     `children` 可以继续嵌套`(PlumeThemeNotesConfigItem | string)`
+
+  - 如果指定配置为 `'auto'` ，将通过文件路径地址，自动推导生成 sidebar
 
 ## 示例
 

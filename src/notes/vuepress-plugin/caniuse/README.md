@@ -8,8 +8,7 @@ permalink: /note/vuepress-plugin/caniuse/
 项目地址： [vuepress-plugin-caniuse](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-caniuse)
 
 ![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-caniuse.svg)
-
-![npm download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-caniuse)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-caniuse)
 
 ## 指南
 

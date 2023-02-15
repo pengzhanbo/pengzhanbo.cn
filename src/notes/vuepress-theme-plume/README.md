@@ -10,7 +10,6 @@ sticky: true
 项目地址：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
 
 ![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-theme-plume.svg)
-
 ![npm](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-theme-plume?style=flat)
 
 __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
@@ -56,9 +55,9 @@ npm i @vuepress-plume/vuepress-theme-plume
 ``` ts
 // .vuepress/config.ts
 import { defineUserConfig } from 'vuepress'
-import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
+import { plumeTheme } from '@vuepress-plume/vuepress-theme-plume'
 export default defineUserConfig({
-  theme: themePlume({
+  theme: plumeTheme({
     // more...
   })
 })
@@ -67,9 +66,9 @@ export default defineUserConfig({
 @tab js
 ``` js
 // .vuepress/config.js
-import { themePlume } from '@vuepress-plume/vuepress-theme-plume'
+import { plumeTheme } from '@vuepress-plume/vuepress-theme-plume'
 module.exports = {
-  theme: themePlume({
+  theme: plumeTheme({
     // more...
   })
 }

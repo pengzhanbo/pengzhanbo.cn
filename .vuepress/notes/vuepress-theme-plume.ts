@@ -18,7 +18,7 @@ export default definePlumeNotesItemConfig({
       items: [
         {
           text: '主题配置',
-          link: '主题配置',
+          link: '/note/vuepress-theme-plume/theme-config/',
           items: [
             '主题插件配置',
             'notes配置',
