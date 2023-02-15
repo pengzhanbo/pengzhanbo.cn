@@ -12,7 +12,8 @@ export default plumeTheme({
     description: '世间的美好总是不期而遇'
   },
   social: [
-    { icon: 'github', link: 'https://github.com/pengzhanbo' }
+    { icon: 'github', link: 'https://github.com/pengzhanbo' },
+    { icon: 'discord', link: 'https://discord.gg/ZPV9tQyRuh' },
   ],
   navbar,
   notes,
