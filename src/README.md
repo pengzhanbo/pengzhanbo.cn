@@ -12,6 +12,6 @@ hero:
       theme: brand
     - 
       text: Github
-      link: https://github/pengzhanbo
+      link: https://github.com/pengzhanbo
       theme: alt
 ---
