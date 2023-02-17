@@ -18,7 +18,7 @@ export default plumeTheme({
   navbar,
   notes,
   footer: {
-    copyright: 'Copyright © 2022-present pengzhanbo',
+    copyright: 'MIT LICENSE | Copyright © 2022-present pengzhanbo',
   },
   themePlugins: {
     baiduTongji: {
