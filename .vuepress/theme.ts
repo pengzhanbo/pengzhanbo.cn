@@ -75,10 +75,10 @@ export default plumeTheme({
     comment: {
       provider: 'Giscus',
       comment: true,
-      repo: 'pengzhanbo/pengzhanbo-blog-vuepress',
+      repo: 'pengzhanbo/pengzhanbo.cn',
       repoId: 'MDEwOlJlcG9zaXRvcnkxNDgwMzY4MDc=',
-      category: 'Announcements',
-      categoryId: 'DIC_kwDOCNLcx84COcVd',
+      category: 'General',
+      categoryId: 'DIC_kwDOCNLcx84COcVe',
       mapping: 'pathname',
       reactionsEnabled: true,
       inputPosition: 'top',
