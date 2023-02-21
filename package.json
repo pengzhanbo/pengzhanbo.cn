@@ -1,5 +1,5 @@
 {
-  "name": "pengzhanbo-blog-vuepress",
+  "name": "pengzhanbo.cn",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -11,7 +11,7 @@
     "preview": "anywhere -s -h localhost -d docs"
   },
   "author": "pengzhanbo",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.62",
     "@vuepress/client": "2.0.0-beta.60",
