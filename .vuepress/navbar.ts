@@ -3,32 +3,35 @@ import { NavItem } from "@vuepress-plume/vuepress-theme-plume";
 export default [
   { text: '首页', link: '/', icon: 'material-symbols:home' },
   { text: '博客', link: '/blog/', activeMatch: '/(blog|article)/', icon: 'material-symbols:menu-book' },
-  { text: 'Projects', link: '/projects/', icon: 'mdi:open-source-initiative' },
+  { text: 'Projects', link: '/projects/', icon: 'ri:open-source-fill' },
   {
-    text: 'vuepress',
-    icon: 'la:vuejs',
+    text: '技术文档',
+    icon: 'mdi:idea',
     items: [
       {
-        text: 'Theme',
+        text: 'Vuepress Theme',
+        icon: 'icon-park-solid:theme',
         items: [
-          { text: 'vuepress-theme-plume', link: '/note/vuepress-theme-plume/' }
+          { text: 'vuepress-theme-plume', link: '/note/vuepress-theme-plume/', icon: 'mdi:paper-airplane' }
         ]
         },
       { 
-        text: 'Plugin', 
+        text: 'Vuepress Plugin', 
+        icon: 'mingcute:plugin-2-fill',
         items: [
-          { text: 'caniuse', link: '/note/vuepress-plugin/caniuse/', activeMatch: '/note/vuepress-plugin/caniuse/' },
-          { text: 'netlify-functions', link: '/note/vuepress-plugin/netlify-functions/', activeMatch: '/note/vuepress-plugin/netlify-functions/' },
+          { text: 'caniuse', link: '/note/vuepress-plugin/caniuse/', activeMatch: '/note/vuepress-plugin/caniuse/', icon: 'pajamas:feature-flag' },
+          { text: 'netlify-functions', link: '/note/vuepress-plugin/netlify-functions/', activeMatch: '/note/vuepress-plugin/netlify-functions/', icon: 'teenyicons:netlify-solid' },
         ], 
       }
     ]
   },
   {
     text: '笔记',
-    icon: 'icon-park-outline:bookshelf',
+    icon: 'icon-park-solid:bookshelf',
     items: [
-      { text: 'type-challenges', link: '/note/type-challenges/', activeMatch: '/note/type-challenges/' },
-      { text: '面试题解析', link: '/note/interview-question/', activeMatch: '/note/interview-question/' },
+      { text: '书籍推荐', link: '/ebooks/', icon: 'material-symbols:recommend', activeMatch: '/ebooks/' },
+      { text: '面试题解析', link: '/note/interview-question/', activeMatch: '/note/interview-question/', icon: 'codicon:comment-unresolved' },
+      { text: 'type-challenges', link: '/note/type-challenges/', activeMatch: '/note/type-challenges/', icon: 'mdi:language-typescript' },
     ]
   }
 ] as NavItem[]
