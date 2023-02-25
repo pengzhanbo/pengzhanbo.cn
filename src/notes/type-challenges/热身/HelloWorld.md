@@ -24,10 +24,10 @@ type test = Expect<Equal<HelloWorld, string>>
 
 ### 解题思路
 
-这道题目仅作为热身，只要稍微有学习过 `typescript`，有个入门的基础，都能很容易做出来。
+这道题目仅作为热身，用于熟悉 `type-challenges`， 了解如何接受挑战。
+在这里，只需要将 `any` 改为 `string` 即可。
 
-::: details answer
 ```ts
 type HelloWorld = string
 ```
-:::
+
