@@ -29,7 +29,7 @@ type isPillarMen = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Dio'> // e
 在 `TS` 类型系统中，实现 **全等判断**，需要通过 `extends` 关键词，以及 函数的返回值类型，才能正确的判断两个类型是否完全一致。
 
 假设需要对比泛型参数 `<X, Y>`  是否全等，需要通过构造函数类型 `<T>() => T extends X ? 1 : 2`， 以及函数类型
-`<T>() => T extends Y ? 1 : 2`，再通过 `extends` 关键词，判断两个函数类型是否具有继承关系，即可间接推断
+`<T>() => T extends Y ? 1 : 2`，再通过 `extends` 关键词做条件类型，判断两个函数类型是否具有继承关系，即可间接推断
 出类型 `X`  是否全等于类型`Y`。
 
 ```ts
@@ -43,9 +43,8 @@ type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends (<T>() => T extends Y 
 通过构造 `T extends [infer F, ...infer O]` 条件类型推断，在条件为真时，使用 `infer F`取出数组的第一个元素
 于 类型`U` 进行 `Equal`。如果对比为 `false` ，则继续将 `infer O` 获取的数组`T`剩余成员，继续传入 `Includes` 类型中递归对比。
 
+### 答案
 
-
-::: details Answer
 ```ts
 type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2
   ? true : false
@@ -55,4 +54,11 @@ type Includes<T extends readonly any[], U> = T extends [infer F, ...infer O]
     : Includes<O, U>
   : false
 ```
-:::
+
+### 参考
+
+> - [泛型 Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+> - [泛型约束 Generics Constraints](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints)
+> - [条件类型 Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
+> - [条件类型分支 Distributive Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types)
+> - [条件类型中的类型推断 Type Inference in Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
