@@ -18,14 +18,15 @@ type B = If<false, 'a', 'b'> // expected to be 'b'
 
 ### 解题思路
 
-知识点：
-- 泛型类型约束
-- 条件类型推断
 
-**通过泛型类型约束为 `boolean` , 条件类型推断 `T` 是否继承 `true` 。**
+通过泛型类型约束 `C` 为 `boolean` , 条件类型推断 `C` 计算结果是否为 `true` 。
 
-::: details answer
+### 答案
+
 ```ts
 type If<C extends boolean, T, F> = C extends true ? T : F
 ```
-:::
+
+### 参考
+
+> - [条件类型 Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
