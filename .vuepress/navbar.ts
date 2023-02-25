@@ -9,6 +9,13 @@ export default [
     icon: 'mdi:idea',
     items: [
       {
+        text: 'Vite Plugin',
+        icon: 'vscode-icons:file-type-vite',
+        items: [
+          { text: 'vite-plugin-mock-dev-server', link: 'https://vite-plugin-mock-dev-server.netlify.app/', icon: 'carbon:server-proxy' }
+        ]
+      },
+      {
         text: 'Vuepress Theme',
         icon: 'icon-park-solid:theme',
         items: [
