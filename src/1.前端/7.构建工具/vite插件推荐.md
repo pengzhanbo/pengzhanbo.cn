@@ -40,7 +40,7 @@ permalink: /article/8vac55c7/
 
 - [vite-tsconfig-paths](https://github.com/aleclarson/vite-tsconfig-paths) - 支持 `tsconfig.json`的 `paths` mapping
 - [vite-plugin-inspect](https://github.com/antfu/vite-plugin-inspect) - 审查`vite-plugin`中间状态
-- [vite-plugin-mock-dev-server](https://github.com/pengzhanbo/vite-plugin-mock-dev-server) - 在 vite 开发服务中注入 `mock-server` ，听过 `API Mock data` 支持
+- [vite-plugin-mock-dev-server](https://github.com/pengzhanbo/vite-plugin-mock-dev-server) - 在 vite 开发服务中注入 `mock-server` ，提供 `API Mock data` 支持
 - [unplugin-icons](https://github.com/antfu/unplugin-icons) - 将 icons 资源转化为组件
 - [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) - widicss 支持
 - [@vitejs/plugin-legacy](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy) - 低版本浏览器支持

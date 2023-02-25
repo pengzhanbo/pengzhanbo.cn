@@ -5,3 +5,8 @@
 [build]
   publish = "docs"
   command = "pnpm install && pnpm build"
+
+[[headers]]
+  for = "/service-worker.js"
+  [headerr.values]
+    cache-control = "no-cache,max-age=100"
