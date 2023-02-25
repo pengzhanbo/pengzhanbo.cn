@@ -10,6 +10,8 @@ Github: [First of array](https://github.com/type-challenges/type-challenges/blob
 
 实现一个通用`First<T>`，它接受一个数组T并返回它的第一个元素的类型。
 
+### 答案
+
 ``` ts
 type arr1 = ['a', 'b', 'c']
 type arr2 = [3, 2, 1]
