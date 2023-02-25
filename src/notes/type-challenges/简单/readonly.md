@@ -31,16 +31,15 @@ todo.description = "barFoo" // Error: cannot reassign a readonly property
 
 ### 解题思路
 
-基础知识点：
+使一个对象的所有属性都是只读属性，需要遍历对象的每一个键，并使用 `readonly` 修饰符。
 
-- 对象类型的 `索引签名`
-- 泛型
-- `readonly` 属性修饰符
+在这里，直接使用 **映射类型** ，对该类型的每个属性，获取它的键并为其添加 `readonly` 修饰符
 
-::: details answer
 ```ts
 type MyReadonly<T> = {
   readonly [P in keyof T]: T[P]
 }
 ```
-:::
+### 参考
+
+> - [映射类型 Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
