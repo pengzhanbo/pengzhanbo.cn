@@ -20,27 +20,18 @@ type result = TupleToObject<typeof tuple>
 
 ### 解题思路
 
-基础知识点：
-- `in` 操作符
-- `number` 索引获取元组所有元素的 联合类型
-- 泛型类型约束
+解题的关键在于获取数组中的所有值，并将其作为新对象中的键和值。
 
-**元组转为联合类型，并将这个联合类型作为对象的属性约束，同时作为其值；对于泛型入参，需要将其约束为元组，同时保证元组的元素类型可以作为对象的属性。**
+可以使用 **索引类型** `T[number]` 从数组中获取所有值，通过 **映射类型**，遍历 `T[number]` 中的值，并返回新的类型，其中 键 和  值 是 `T[number]` 的类型。
 
-- 元组转联合类型
-  ```ts
-  const tuple = ['small', 'medium', 'large'] as const
-
-  type ToUnion<T extends readonly unknown[]> = T[number]
-
-  type TupleUnion = ToUnion<typeof tuple> //  'small' | 'medium' | 'large'
-  ```
-
-::: details answer
 ```ts
 type TupleToObject<T extends readonly PropertyKey[]> = {
   [P in T[number]]: P
 }
 ```
-:::
+
+### 参考
+
+> - [映射类型 Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
+> - [索引访问类型 Indexed Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
 
