@@ -35,6 +35,8 @@ todo.description = "barFoo" // Error: cannot reassign a readonly property
 
 在这里，直接使用 **映射类型** ，对该类型的每个属性，获取它的键并为其添加 `readonly` 修饰符
 
+### 答案
+
 ```ts
 type MyReadonly<T> = {
   readonly [P in keyof T]: T[P]
