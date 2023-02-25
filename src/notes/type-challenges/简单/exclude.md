@@ -28,6 +28,8 @@ type Result = MyExclude<'a' | 'b' | 'c', 'a'> // 'b' | 'c'
 type MyExclude<T, U> = T extends U ? never : T
 ```
 
+### 答案
+
 ### 参考
 
 > [分配条件类型 Distributive Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types)
