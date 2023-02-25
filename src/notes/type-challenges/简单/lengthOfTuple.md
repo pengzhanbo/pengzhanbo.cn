@@ -24,6 +24,8 @@ type spaceXLength = Length<spaceX> // expected 5
 在 javascript 中， 通过 `length` 属性获取数组的长度，在类型上，也同样可以通过 `length` 获取数组的长度。
 同时，需要约束 `T` 的类型为 只读数组。
 
+### 答案
+
 ``` ts
 type Length<T extends readonly any[]> = T['length']
 ```
