@@ -21,17 +21,13 @@ type spaceXLength = Length<spaceX> // expected 5
 
 ### 解题思路
 
-知识点：
-- 泛型约束
-- `readonlyArray` 类型
-- `length` 索引访问
+在 javascript 中， 通过 `length` 属性获取数组的长度，在类型上，也同样可以通过 `length` 获取数组的长度。
+同时，需要约束 `T` 的类型为 只读数组。
 
-
-**泛型入参类型约束为 `readonly array`, 通过 `T['length']` 获取数组长度**
-
-
-::: details answer
 ``` ts
 type Length<T extends readonly any[]> = T['length']
 ```
-:::
+
+### 参考
+
+> - [索引访问类型 Indexed Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
