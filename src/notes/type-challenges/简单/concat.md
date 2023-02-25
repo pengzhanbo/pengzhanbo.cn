@@ -17,15 +17,14 @@ type Result = Concat<[1], [2]> // expected to be [1, 2]
 
 ### 解题思路
 
-知识点：
+泛型参数 `T` `U` 约束为可变元组类型，通过 数组展开，合并到新的数组中。
 
-- 类型约束
-- 数组展开
+### 答案
 
-泛型参数 `T` `U` 约束为数组类型，通过 数组解构，合并到新的数组中。
-
-::: details Answer
 ```ts
 type Concat<T extends any[], U extends any[]> = [...T, ...U]
 ```
-:::
+
+### 参考
+
+> - [可变元组 Variadic Tuple Types](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-0.html#variadic-tuple-types)
