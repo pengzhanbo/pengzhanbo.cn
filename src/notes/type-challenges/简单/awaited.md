@@ -19,23 +19,26 @@ type Result = MyAwaited<ExampleType> // string
 ```
 :::
 
-知识点：
-- 内置类型 `PromiseLike`
-- 泛型约束
-- 条件类型推断 `infer` 关键词
-- 类型递归
 
-`PromiseLike` 是一个拥有 `then()` 方法的对象类型(Promise/A+规范)；
+### 解题思路
 
-类型参数需要约束为 `PromiseLike`，通过条件类型推断，获取`PromiseLike<T>`的参数类型;
+这个挑战中，需要对类型 `Promise<ExampleType>` 进行展开，**展开** 指的是，从一个类型中提取其内部的类型。
+在 typescript 中，可以通过 **条件类型的类型推断**，将推断结果赋值给 类型参数，这里需要借助 关键词 `infer`。
+需要注意的是，条件类型的类型推断，只能在条件分支为 `true` 中可以使用 类型参数。
 
-通过类型自调用进行递归推断，从而获取最终的`Promise` 的返回类型。
+在题目的示例中，`Promise<string>` 展开类型为 `string` ，但我们需要处理 `T` 的任意情况，包括 `<Promise<Promise<string>>`。这时候还需要运用到 typescript 的 **类型递归**，直到不能展开为止，这个过程是调用
+`MyAwaited`自身实现的。
 
 
-::: details answer
+### 答案
+
 ```ts
-type MyAwaited<T extends PromiseLike<any>> = T extends PromiseLike<infer R>
-  ? R extends PromiseLike<any> ? MyAwaited<R> : R
-  : never
+type MyAwaited<T> = T extends PromiseLike<infer R>
+  ? MyAwaited<R>
+  : T
 ```
-:::
+
+### 参考
+
+> - [条件类型 Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
+> - [条件类型中的类型推断 Type Inference in Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
