@@ -38,6 +38,8 @@ const todo: TodoPreview = {
 在这个挑战中，需要从 `联合(union) K` 中取得所有内容，遍历并返回一个仅包含这些键的新的类型。
 同时 `联合(union) K` 仅能包含 `T` 的键值。
 
+### 答案
+
 ```ts
 type MyPick<T, K extends keyof T> = {
   [P in K]: T[P]
