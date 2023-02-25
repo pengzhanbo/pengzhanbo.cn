@@ -24,6 +24,8 @@ type result = TupleToObject<typeof tuple>
 
 可以使用 **索引类型** `T[number]` 从数组中获取所有值，通过 **映射类型**，遍历 `T[number]` 中的值，并返回新的类型，其中 键 和  值 是 `T[number]` 的类型。
 
+### 答案
+
 ```ts
 type TupleToObject<T extends readonly PropertyKey[]> = {
   [P in T[number]]: P
