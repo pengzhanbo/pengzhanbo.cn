@@ -19,13 +19,17 @@ type FunctionParamsType = MyParameters<typeof foo> // [arg1: string, arg2: numbe
 
 ### 解题思路
 
-知识点：
-- 泛型参数 类型约束
-- 条件类型推断 `infer` 关键字
+通过 条件类型推断，获取函数的参数类型
 
-::: details Answer
+### 答案
+
 ```ts
-type MyParameters<T extends (...args: any) => any> = T extends (...args: infer R) => any
+type MyParameters<T> = T extends (...args: infer R) => any
   ? R : never
 ```
-:::
+
+### 参考
+
+> - [泛型 Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
+> - [条件类型 Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
+> - [条件类型内推断 Inferring Within Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
