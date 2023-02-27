@@ -24,13 +24,16 @@ type a = MyReturnType<typeof fn> // 应推导出 "1 | 2"
 
 ### 解题思路
 
-知识点：
-- 条件类型推断 `infer` 关键词
+通过使用条件类型中的类型推断，泛型参数 `T` 是否可以分配给 `() => void`，通过类型参数从条件类型推断为真时，获取函数返回类型， `() => infer R` 。同时，我们并不关心函数是否带参数，所以还需要添加 `...args: any[]` 表示可以接受任何参数。
 
-通过 条件类型推断，泛型参数 `T` 是否是 函数类型，通过 `infer` 关键词从条件类型推断为真时，获取函数返回类型。
 
-::: details Answer
+### 答案
+
 ```ts
-type MyReturnType<T> = T extends (...args: any) => infer R ? R : never
+type MyReturnType<T> = T extends (...args: any[]) => infer R ? R : never
 ```
-:::
+
+### 参考
+
+> - [条件类型 Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
+> - [条件类型中的类型推断 Type Inference in Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types)
