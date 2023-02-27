@@ -1,4 +1,4 @@
-import { NavItem } from "@vuepress-plume/vuepress-theme-plume";
+import { NavItem } from '@vuepress-plume/vuepress-theme-plume'
 
 export default [
   { text: '首页', link: '/', icon: 'material-symbols:home' },
@@ -27,6 +27,10 @@ export default [
         icon: 'mingcute:plugin-2-fill',
         items: [
           { text: 'caniuse', link: '/note/vuepress-plugin/caniuse/', activeMatch: '/note/vuepress-plugin/caniuse/', icon: 'pajamas:feature-flag' },
+          { text: 'auto-frontmatter', link: '/note/vuepress-plugin/auto-frontmatter/', activeMatch: '/note/vuepress-plugin/auto-frontmatter/', icon: 'material-symbols:move-selection-down-rounded' },
+          { text: 'blog-data', link: '/note/vuepress-plugin/blog-data/', activeMatch: '/note/vuepress-plugin/blog-data/', icon: 'ic:baseline-post-add' },
+          { text: 'notes-data', link: '/note/vuepress-plugin/notes-data/', activeMatch: '/note/vuepress-plugin/notes-data/', icon: 'material-symbols:note-alt-rounded' },
+          { text: 'iconify', link: '/note/vuepress-plugin/iconify/', activeMatch: '/note/vuepress-plugin/iconify/', icon: 'line-md:iconify1' },
           { text: 'netlify-functions', link: '/note/vuepress-plugin/netlify-functions/', activeMatch: '/note/vuepress-plugin/netlify-functions/', icon: 'teenyicons:netlify-solid' },
         ], 
       }
