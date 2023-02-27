@@ -15,7 +15,7 @@ permalink: /article/8vac55c7/
 
 - [@vitejs/plugin-vue](https://github.com/vitejs/vite/tree/main/packages/plugin-vue) - `vue3` 官方支持。
 - [@vitejs/plugin-vue-jsx](https://github.com/vitejs/vite/tree/main/packages/plugin-vue-jsx) - `vue3` JSX 语法插件，官方支持
-- [@vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2) - vue2 支持
+- [vite-plugin-vue2](https://github.com/underfin/vite-plugin-vue2) - vue2 支持
 - [vite-plugin-pages](https://github.com/hannoeru/vite-plugin-pages) - 基于文件系统自动创建路由。
 - [unplugin-vue-i18n](https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n) - `vue-i18n` 国际化方案的配套插件
 
