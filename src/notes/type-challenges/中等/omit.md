@@ -29,25 +29,20 @@ const todo: TodoPreview = {
 
 ### 解题思路
 
-知识点：
-
-- 对象类型索引签名
-- 映射类型
-- `in` 操作符
-- 内置类型 `Exclude`
-- `keyof` 操作符
-
-通过 `keyof`操作符，获取泛型 T 的属性名组成的联合类型；
-
-通过 `Exclude<T, K>` 排除 `T` 中 与`K` 相同的成员，创建新的联合类型；
-
-使用 `in` 操作符 遍历该联合类型，创建一个映射类型的 泛型属性 `P` 实现属性名推导。
+首先需要通过 `K extends keyof T` 约束`K` 只包含 类型 `T` 的键。
+然后使用内置类型 `Exclude` 帮助我们从 `keyof T` 中排除 `K` 的键。
+最后新对象的值为 原类型的相对应键的值类型
 
 
-::: details Answer
+### 答案
+
 ```ts
 type MyOmit<T, K extends keyof T> = {
   [P in Exclude<keyof T, K>]: T[P]
 }
 ```
-:::
+
+### 参考
+
+> - [映射类型 Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
+> - [索引类型 indexed Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
