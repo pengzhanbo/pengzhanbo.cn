@@ -45,6 +45,7 @@ permalink: /article/8vac55c7/
 - [vite-plugin-windicss](https://github.com/windicss/vite-plugin-windicss) - widicss 支持
 - [@vitejs/plugin-legacy](https://github.com/vitejs/vite/tree/main/packages/plugin-legacy) - 低版本浏览器支持
 - [unplugin-auto-import](https://github.com/antfu/unplugin-auto-import) - 自动导入模块
+- [vite-plugin-remove-console](https://github.com/xiaoxian521/vite-plugin-remove-console) - 可配置的删除代码中的 `console`
 
 ## 其他
 
