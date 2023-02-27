@@ -1,14 +1,13 @@
 ---
-title: 指南
+title: netlify-functions
 createTime: 2022/05/13 01:28:38
 author: pengzhanbo
 permalink: /note/vuepress-plugin/netlify-functions/
 ---
 
-项目地址： [vuepress-plugin-caniuse](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-netlify-functions)
+项目地址： [vuepress-plugin-netlify-functions](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-netlify-functions)
 
 ![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-netlify-functions.svg)
-
 ![npm download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-netlify-functions)
 
 如果你的 vuepress 站点是部署在 netlify 的，而且希望能够使用netlify functions 来做 serverless。
