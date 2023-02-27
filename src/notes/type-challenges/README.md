@@ -12,7 +12,7 @@ permalink: /note/type-challenges/
 [type-challenges](https://github.com/type-challenges/type-challenges) 是一个能够让你更好的
 了解 `typescript` 类型系统的开源项目。
 
-本笔记整理记录了我个人在解答这个项目中的问题，答案、所使用的解题思路，以及相关的 `typescript` 知识点。
+本笔记整理记录了我个人在解答这个项目中的挑战，所使用的解题思路，回答，以及相关的 `typescript` 知识点。
 
 根据 [type-challenges](https://github.com/type-challenges/type-challenges) 的题目难度，
 分为了五个难度：
