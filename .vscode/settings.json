@@ -6,6 +6,8 @@
       "CSSOM",
       "docsearch",
       "esbuild",
+      "frontmatter",
+      "iconify",
       "instanceof",
       "nightwatch",
       "Pinia",
