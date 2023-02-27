@@ -6,24 +6,49 @@ permalink: /ebooks/
 article: false
 ---
 
-## 前端
-### Javascript
+## HTML
+
+- <Badge >推荐</Badge> **`《Head First HTML与CSS（第2版）》`** - 初学者入门
+- <Badge >推荐</Badge> **`《HTML5+JavaScript动画基础》`** - 动画基础入门
+
+
+- <Badge type="warning">过时</Badge> **`《HTML5权威指南》`** - 初学者入门
+- <Badge type="warning">过时</Badge> **`《HTML5与CSS3权威指南》`** - 初学者入门
+- <Badge type="warning">过时</Badge> **`《HTML5程序设计》`** - 初学者入门
+- <Badge type="warning">过时</Badge> **`《HTML5揭秘》`** - 入门
+
+## CSS
+
+- <Badge >推荐</Badge> **`《深入解析 CSS》`** - CSS 入门进阶
+- <Badge >推荐</Badge> **`《CSS 揭秘》`** - CSS 进阶
+- <Badge >推荐</Badge> **`《CSS 世界》`** - 包含很多实用技巧和奇淫巧技，但缺少整体性，通读一遍后二次阅读可以挑认为有价值的部分看，对提升CSS水平有很好的帮助
+
+- <Badge type="warning">过时</Badge> **`《精彩绝伦的CSS》`** - 初学者入门
+
+## Javascript
+
+- <Badge >必读</Badge> **`《JavaScript权威指南（第7版）》`** - 入门经典
+- <Badge >必读</Badge> **`《JavaScript高级程序设计（第4版）》`** - 必读经典
+- <Badge >推荐</Badge> **`《JavaScript语言精粹》`** - 入门进阶
+- <Badge >推荐</Badge> **`《高性能JavaScript》`** - 入门进阶
+- <Badge >推荐</Badge> **`《你不知道的JavaScript》`** - 入门进阶
+- <Badge >推荐</Badge> **`《JavaScript DOM编程艺术 （第2版）》`** - 入门进阶
+- <Badge >推荐</Badge> **`《javascript设计模式》`** - 进阶
+- <Badge >推荐</Badge> **`《JavaScript设计模式与开发实践》`** - 进阶
+
 
 - [Javascript Guidebook](https://tsejx.github.io/javascript-guidebook/) - Javascript 知识图谱
 
 
-### Typescript
+## Typescript
 
 - [TypeScript 使用手册](https://github.com/zhongsp/TypeScript) - TypeScript 使用手册（中文版）翻译。
 - [TypeScript Deep Dive](https://github.com/jkchao/typescript-book-chinese) - TypeScript Deep Dive 中文版
 
-### CSS
-
-- **《CSS 世界》** - 作者张鑫旭专研CSS十年后的心得，包含很多实用技巧和奇淫巧技，但废话也不少，缺少整体性，通读一遍后二次阅读可以挑认为有价值的部分看即可，对提升CSS水平有很好的帮助。但不推荐《CSS世界 2》，相比第一本，质量严重下降。
-- **《CSS 揭秘》** - CSS 技术进阶，包含很多实用技巧。
-
 ## 算法
 
+- <Badge >推荐</Badge> **`《算法（第4版）》`**
+- <Badge >推荐</Badge> **`《算法导论》`**
 - [awesome-coding-js](https://github.com/ConardLi/awesome-coding-js) - 用JavaScript实现的算法和数据结构
 
 ## Rust
@@ -31,3 +56,8 @@ article: false
 - [Rust Course](https://course.rs/) - 《Rust 圣经》，非常好的 Rust 入门书籍
 - [Rust by example](https://rustwiki.org/zh-CN/rust-by-example/) - 跟着例子学习 Rust
 - [Rusty Book](https://rusty.course.rs/) - 《锈书》，适合Rust新手进阶
+
+## 计算机网络
+
+- <Badge >推荐</Badge> **`《HTTP权威指南》`** - 工具书
+- <Badge >推荐</Badge> **`《图解HTTP》`**  - 入门
