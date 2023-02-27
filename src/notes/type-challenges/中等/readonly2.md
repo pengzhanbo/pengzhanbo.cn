@@ -50,7 +50,7 @@ todo.completed = true // OK
 合并两个对象类型即可实现 `MyReadonly<T, K>`
 
 
-::: details Answer
+
 ```ts
 type MyReadonly2<T, K extends keyof T = keyof T> = {
   readonly [P in K]: T[P]
@@ -58,4 +58,4 @@ type MyReadonly2<T, K extends keyof T = keyof T> = {
   [P in Exclude<keyof T, K>]: T[P]
 }
 ```
-:::
+
