@@ -10,7 +10,6 @@ Github: [First of array](https://github.com/type-challenges/type-challenges/blob
 
 实现一个通用`First<T>`，它接受一个数组T并返回它的第一个元素的类型。
 
-### 答案
 
 ``` ts
 type arr1 = ['a', 'b', 'c']
@@ -29,6 +28,7 @@ type head2 = First<arr2> // expected to be 3
 所以在获取数组的第一个元素类型前，需要检查数组是否为空。
 可以通过 **条件类型** 推断数组是否为空，如果为空，则什么都不返回。
 
+### 答案
 
 ```ts
 type First<T extends any[]> = T extends [] ? never : T[0]
