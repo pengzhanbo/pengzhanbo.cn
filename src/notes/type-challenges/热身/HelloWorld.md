@@ -27,6 +27,8 @@ type test = Expect<Equal<HelloWorld, string>>
 这道题目仅作为热身，用于熟悉 `type-challenges`， 了解如何接受挑战。
 在这里，只需要将 `any` 改为 `string` 即可。
 
+### 答案
+
 ```ts
 type HelloWorld = string
 ```
