@@ -42,9 +42,7 @@ export default defineUserConfig({
   ],
   shouldPrefetch: false,
   plugins: [
-    googleAnalyticsPlugin({
-      id: 'G-TMXNCJR2K7'
-    }),
+    googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
     pwaPlugin({ skipWaiting: true, })
   ],
   onGenerated: (app) => {

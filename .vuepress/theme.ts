@@ -27,6 +27,9 @@ export default plumeTheme({
     shiki: {
       theme: 'one-dark-pro'
     },
+    markdownEnhance: {
+      katex: true,
+    },
     docsearch: {
       appId: 'KRJOJ00KBL',
       apiKey: '3f3b13613235873fbcbc9d304de18126',
