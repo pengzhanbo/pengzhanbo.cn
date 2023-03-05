@@ -41,6 +41,7 @@ export default [
     icon: 'icon-park-solid:bookshelf',
     items: [
       { text: '书籍推荐', link: '/ebooks/', icon: 'material-symbols:recommend', activeMatch: '/ebooks/' },
+      { text: '站点导航', link: '/sites-collect/', icon: 'mdi:roadmap', activeMatch: '/sites-collect' },
       { text: '前端面试题', link: '/note/interview-question/', activeMatch: '/note/interview-question/', icon: 'codicon:comment-unresolved' },
       { text: 'type-challenges', link: '/note/type-challenges/', activeMatch: '/note/type-challenges/', icon: 'mdi:language-typescript' },
       { text: 'Rust学习简记', link: '/note/learn-rust/', activeMatch: '/note/learn-rust/', icon: 'mdi:language-rust' }
