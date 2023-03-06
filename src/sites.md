@@ -27,9 +27,14 @@ article: false
 | [Qwik](https://qwik.builder.io/docs/overview/)
 | [Alpine](https://alpinejs.dev/)
 
+[express](https://expressjs.com/)
+| [koa](https://koajs.com/)
+| [fastify](https://www.fastify.io/)
+
 [next.js](https://nextjs.org/)
 | [nuxt.js](https://nuxtjs.org/)
 | [nest.js](https://nestjs.com/)
+| [loopback](https://loopback.io/)
 
 
 ### 微前端
@@ -54,16 +59,30 @@ article: false
 | [WindiCSS](https://windicss.org/)
 | [unocss](https://uno.antfu.me/)
 
-### Vue UI
+### Vue
 
-[Element-Plus](https://element-plus.org/)
-| [Naive UI](https://www.naiveui.com/)
-| [Vant](https://vant-ui.github.io/vant/)
+[element-plus](https://element-plus.org/)
+| [naive UI](https://www.naiveui.com/)
+| [vant](https://vant-ui.github.io/vant/)
+| [cube ui](https://didi.github.io/cube-ui/)
 
-### React UI
+[vue-use](https://vueuse.org/)
+| [pinia](https://pinia.vuejs.org/)
+
+### React
 
 [ant-design](https://ant.design/)
 | [material-ui](https://mui.com/core/)
+
+[react-use](http://streamich.github.io/react-use)
+| [react-hook-form](https://react-hook-form.com/)
+| [a-hooks](https://ahooks.js.org/)
+
+[umijs](https://umijs.org/)
+| [formily](https://formilyjs.org/)
+
+[react-dnd](http://react-dnd.github.io/react-dnd)
+| [recoil](https://recoiljs.org/)
 
 ## 图标
 
@@ -87,6 +106,7 @@ article: false
 | [vitepress](https://vitepress.vuejs.org/)
 | [Astro](https://astro.build/)
 | [Hexo](https://hexo.io/)
+| [slidev](https://sli.dev/)
 
 
 ## 社区
@@ -149,3 +169,41 @@ article: false
 
 [nginx 配置生成](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhCN)
 | [can I use](https://caniuse.com/)
+
+## Test
+
+[storybook](https://storybook.js.org/)
+| [cypress](https://cypress.io/)
+| [jest](https://jestjs.io/)
+| [mocha](https://mochajs.org/)
+| [ava](https://github.com/avajs/ava)
+| [karma](http://karma-runner.github.io/)
+| [nightwatch](https://nightwatchjs.org/)
+| [sinon](https://sinonjs.org/)
+| [vitest](https://vitest.dev/)
+| [chai](https://chaijs.github.io/)
+| [tape](https://github.com/ljharb/tape)
+| [istanbul](https://istanbul.js.org/)
+| [uvu](https://github.com/lukeed/uvu)
+
+## Chart
+
+[D3](https://d3js.org/)
+| [Chart.js](https://bestofjs.org/projects/chartjs)
+| [Mermaid](http://mermaid.js.org/)
+| [ECharts](https://echarts.apache.org/)
+| [ApexCharts](https://apexcharts.com/)
+| [visx](https://airbnb.io/visx)
+| [G2](https://github.com/antvis/G2)
+| [G6](https://g6.antv.antgroup.com/)
+| [C3.js](http://c3js.org/)
+| [F2](https://f2.antv.vision/zh)
+| [X6](https://x6.antv.antgroup.com/en)
+| [G2Plot](https://g2plot.antv.antgroup.com/)
+
+## 桌面应用开发
+
+- [Electron](https://electronjs.org/) - 内置 node + chromium，打包后比较重
+- [Tauri](https://tauri.app/) - rust + 系统webview 2, 打包后很轻
+- [gluon](https://gluonjs.org/) - 新兴框架，依赖安装系统的 nodejs + browser， 打包后很轻
+- [neutralino](https://neutralino.js.org/) - 专注于轻量级 桌面应用。
