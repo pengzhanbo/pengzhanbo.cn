@@ -44,7 +44,8 @@ export default [
       { text: '站点导航', link: '/sites-collect/', icon: 'mdi:roadmap', activeMatch: '/sites-collect' },
       { text: '前端面试题', link: '/note/interview-question/', activeMatch: '/note/interview-question/', icon: 'codicon:comment-unresolved' },
       { text: 'type-challenges', link: '/note/type-challenges/', activeMatch: '/note/type-challenges/', icon: 'mdi:language-typescript' },
-      { text: 'Rust学习简记', link: '/note/learn-rust/', activeMatch: '/note/learn-rust/', icon: 'mdi:language-rust' }
+      { text: 'Rust学习简记', link: '/note/learn-rust/', activeMatch: '/note/learn-rust/', icon: 'mdi:language-rust' },
+      { text: 'You-Need-Know-Vite', link: 'https://you-need-know-vite.netlify.app/', icon: 'vscode-icons:file-type-vite' }
     ]
   }
 ] as NavItem[]
