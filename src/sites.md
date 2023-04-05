@@ -16,7 +16,7 @@ article: false
 
 ## 库/框架
 
-[React](https://reactjs.org/docs/getting-started.html)
+[React](https://zh-hans.reactjs.org/)
 | [Vue](https://cn.vuejs.org/guide/introduction.html)
 | [Angular](https://angular.io/)
 | [Cycle.js](https://cycle.js.org/)
