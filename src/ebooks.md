@@ -53,13 +53,13 @@ article: false
 
 ## Rust
 
-- [Rust Course](https://course.rs/) - 《Rust 圣经》，非常好的 Rust 入门书籍
-- [Rust by example](https://rustwiki.org/zh-CN/rust-by-example/) - 跟着例子学习 Rust
-- [Rusty Book](https://rusty.course.rs/) - 《锈书》，适合Rust新手进阶
-- [The Rust Programming Language](https://doc.rust-lang.org/book/) - The Rust Programming Language
-- [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/) - Rust 程序设计语言 中文版
-- [Rust秘典](https://doc.rust-lang.org/nomicon/index.html) - Unsafe Rust 的黑魔法指南。它有时被称作“死灵书”。
-- [Rust秘典](https://nomicon.purewhite.io/) - Rust秘典 中文版
+- <Badge >推荐</Badge> [Rust Course](https://course.rs/) - 《Rust 圣经》，非常好的 Rust 入门书籍
+- <Badge >推荐</Badge> [Rust by example](https://rustwiki.org/zh-CN/rust-by-example/) - 跟着例子学习 Rust
+- <Badge >推荐</Badge> [Rusty Book](https://rusty.course.rs/) - 《锈书》，适合Rust新手进阶
+- <Badge >推荐</Badge> [The Rust Programming Language](https://doc.rust-lang.org/book/) - The Rust Programming Language
+- <Badge >推荐</Badge> [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/) - Rust 程序设计语言 中文版
+- <Badge >推荐</Badge> [Rust秘典](https://doc.rust-lang.org/nomicon/index.html) - Unsafe Rust 的黑魔法指南。它有时被称作“死灵书”。
+- <Badge >推荐</Badge> [Rust秘典](https://nomicon.purewhite.io/) - Rust秘典 中文版
 
 ## 计算机网络
 
