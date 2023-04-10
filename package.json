@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "type": "module",
-  "packageManager": "pnpm@7.27.0",
+  "packageManager": "pnpm@7.30.0",
   "scripts": {
     "dev": "vuepress dev src --config .vuepress/config.ts --clean-cache --clean-temp",
     "build": "vuepress build src --config .vuepress/config.ts --clean-cache --clean-temp",
