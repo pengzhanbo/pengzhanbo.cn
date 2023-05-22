@@ -58,6 +58,8 @@ article: false
 - <Badge >推荐</Badge> [Rusty Book](https://rusty.course.rs/) - 《锈书》，适合Rust新手进阶
 - <Badge >推荐</Badge> [The Rust Programming Language](https://doc.rust-lang.org/book/) - The Rust Programming Language
 - <Badge >推荐</Badge> [Rust 程序设计语言](https://kaisery.github.io/trpl-zh-cn/) - Rust 程序设计语言 中文版
+- <Badge >推荐</Badge> [Rust 程序设计语言](https://rustwiki.org/zh-CN/book/) - Rust 程序设计语言 中文(翻译版)
+- <Badge >推荐</Badge> [Rust 标准库](https://rustwiki.org/zh-CN/std/) - Rust 标准库 中文版
 - <Badge >推荐</Badge> [Rust秘典](https://doc.rust-lang.org/nomicon/index.html) - Unsafe Rust 的黑魔法指南。它有时被称作“死灵书”。
 - <Badge >推荐</Badge> [Rust秘典](https://nomicon.purewhite.io/) - Rust秘典 中文版
 
