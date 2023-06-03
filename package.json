@@ -13,17 +13,17 @@
   "author": "pengzhanbo",
   "license": "GPL-3.0",
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.69",
-    "@vuepress/client": "2.0.0-beta.61",
-    "@vuepress/plugin-google-analytics": "2.0.0-beta.61",
-    "@vuepress/plugin-pwa": "2.0.0-beta.61",
-    "@vuepress/utils": "2.0.0-beta.61",
+    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.70",
+    "@vuepress/client": "2.0.0-beta.62",
+    "@vuepress/plugin-google-analytics": "2.0.0-beta.62",
+    "@vuepress/plugin-pwa": "2.0.0-beta.62",
+    "@vuepress/utils": "2.0.0-beta.62",
     "anywhere": "^1.6.0",
-    "vue": "^3.2.47",
-    "vuepress": "2.0.0-beta.61"
+    "vue": "^3.3.4",
+    "vuepress": "2.0.0-beta.62"
   },
   "devDependencies": {
-    "@types/node": "^18.16.5"
+    "@types/node": "^18.16.16"
   },
   "pnpm": {
     "peerDependencyRules": {
