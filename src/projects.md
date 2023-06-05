@@ -12,7 +12,7 @@ article: false
 
 ![](https://img.shields.io/github/stars/pengzhanbo/vite-plugin-mock-dev-server?style=social)
 ![](https://img.shields.io/npm/v/vite-plugin-mock-dev-server?style=flat-square)
-![](https://img.shields.io/npm/dm/vite-plugin-mock-dev-server?style=flat-square)
+![](https://img.shields.io/npm/dt/vite-plugin-mock-dev-server?style=flat-square)
 
 
 仓库地址： [vite-plugin-mock-dev-server](https://github.com/pengzhanbo/vite-plugin-mock-dev-server)
