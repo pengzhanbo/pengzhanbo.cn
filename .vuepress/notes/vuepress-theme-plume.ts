@@ -22,6 +22,7 @@ export default definePlumeNotesItemConfig({
           items: [
             '主题插件配置',
             'notes配置',
+            '多语言配置',
           ]
         },
         '页面配置',
