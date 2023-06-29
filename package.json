@@ -13,7 +13,7 @@
   "author": "pengzhanbo",
   "license": "GPL-3.0",
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.73",
+    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.74",
     "@vuepress/client": "2.0.0-beta.63",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.63",
     "@vuepress/plugin-pwa": "2.0.0-beta.63",
