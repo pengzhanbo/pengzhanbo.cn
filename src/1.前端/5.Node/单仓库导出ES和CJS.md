@@ -17,7 +17,7 @@ permalink: /article/exports-esm-and-cjs/
 在过去的时间里，JavaScript 并没有一套标准的模块化系统，并且在过去的时间里，逐渐发展出了各种模块化解决方案，
 其中最主流的有两种模块化方案：
 
-- `CommonJs`： 即`cjs`,通过 `require('package')` 导出，`module.exports` 导入。
+- `CommonJs`： 即`cjs`,通过 `require('package')` 导入，`module.exports` 导出。
   这套模块化系统应用与在`NodeJs` 和 `NPM packages`。
 
   ```js
