@@ -1,6 +1,8 @@
 ---
 home: true
 banner: /images/home-banner.jpg
+bannerMask: 
+  dark: 0.2
 hero: 
   name: 鹏展博
   tagline: Front End Developer

@@ -6,7 +6,7 @@
   "type": "module",
   "packageManager": "pnpm@8.5.0",
   "scripts": {
-    "dev": "vuepress dev src --config .vuepress/config.ts --clean-cache --clean-temp",
+    "dev": "vuepress dev src --config .vuepress/config.ts",
     "build": "vuepress build src --config .vuepress/config.ts --clean-cache --clean-temp",
     "preview": "anywhere -s -h localhost -d docs"
   },
