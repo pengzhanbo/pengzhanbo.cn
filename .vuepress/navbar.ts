@@ -87,13 +87,19 @@ export default [
         text: "书籍推荐",
         link: "/ebooks/",
         icon: "material-symbols:recommend",
-        activeMatch: "/ebooks/",
+        activeMatch: "^/ebooks/",
       },
       {
         text: "站点导航",
         link: "/sites-collect/",
         icon: "mdi:roadmap",
-        activeMatch: "/sites-collect",
+        activeMatch: "^/sites-collect",
+      },
+      {
+        text: "Command-Line Interface",
+        link: "/cli",
+        icon: "grommet-icons:cli",
+        activeMatch: '^/cli'
       },
       {
         text: "前端面试题",
@@ -104,13 +110,13 @@ export default [
       {
         text: "type-challenges",
         link: "/note/type-challenges/",
-        activeMatch: "/note/type-challenges/",
+        activeMatch: "^/note/type-challenges/",
         icon: "mdi:language-typescript",
       },
       {
         text: "Rust学习简记",
         link: "/note/learn-rust/",
-        activeMatch: "/note/learn-rust/",
+        activeMatch: "^/note/learn-rust/",
         icon: "mdi:language-rust",
       },
       {
