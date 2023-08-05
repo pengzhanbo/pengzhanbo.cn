@@ -34,13 +34,12 @@ export default defineUserConfig({
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }],
     // ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
     ['meta', { 'name': 'keywords', content: '鹏展博,前端,pengzhanbo,front-end' }],
-    ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'id=edg' }],
+    ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edg' }],
     ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
     ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7'}],
     ['meta', { name: 'google-site-verification', content: 'X5YSaTDn-pKqQBUKD_05_dQcxVItzEq7Rlbg2ZEU7AM' }],
   ],
-  shouldPrefetch: false,
   plugins: [
     googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
     // pwaPlugin({ skipWaiting: true, })

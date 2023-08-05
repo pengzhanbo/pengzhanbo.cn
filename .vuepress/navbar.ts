@@ -97,7 +97,7 @@ export default [
       },
       {
         text: "Command-Line Interface",
-        link: "/cli",
+        link: "/cli/",
         icon: "grommet-icons:cli",
         activeMatch: '^/cli'
       },
