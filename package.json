@@ -13,7 +13,7 @@
   "author": "pengzhanbo",
   "license": "GPL-3.0",
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.82",
+    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.83",
     "@vuepress/client": "2.0.0-beta.66",
     "@vuepress/plugin-google-analytics": "2.0.0-beta.66",
     "@vuepress/plugin-pwa": "2.0.0-beta.66",
@@ -23,7 +23,7 @@
     "vuepress": "2.0.0-beta.66"
   },
   "devDependencies": {
-    "@types/node": "^20.4.6"
+    "@types/node": "^20.4.8"
   },
   "pnpm": {
     "peerDependencyRules": {
