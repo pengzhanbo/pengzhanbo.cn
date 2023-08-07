@@ -5,7 +5,7 @@ export default [
   {
     text: "博客",
     link: "/blog/",
-    activeMatch: "/(blog|article)/",
+    activeMatch: "^/(blog|article)/",
     icon: "material-symbols:menu-book",
   },
   { text: "Projects", link: "/projects/", icon: "ri:open-source-fill" },
@@ -104,7 +104,7 @@ export default [
       {
         text: "前端面试题",
         link: "/note/interview-question/",
-        activeMatch: "/note/interview-question/",
+        activeMatch: "^/note/interview-question/",
         icon: "codicon:comment-unresolved",
       },
       {
@@ -131,4 +131,4 @@ export default [
       },
     ],
   },
-] as NavItem[];
+] as NavItem[]
