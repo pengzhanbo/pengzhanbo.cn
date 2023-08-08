@@ -25,7 +25,7 @@ permalink: /note/interview-question/w122van2/
 首先，`Virtual DOM` 本身并没有比原生DOM直接操作DOM要快，但是 `Virtual DOM` 这种方法对于需要进行大量的DOM操作，
 操作颗粒比较细、多、复杂的场景下，能够很好的提高操作效率。
 
-通过在操作DOM前，确定最小的修改范围，尽可能的减少DOM操作带来的回流和重绘的影响。
+通过在操作DOM前，通过 Diff 算法对比新旧两个`Virtual DOM`，我们可以 确定最小的更新范围，尽可能的减少DOM操作带来的回流和重绘的影响。
 
 其目的是是提高了我们的开发时的可维护性，在任意情况下，都能保证在 `Virtual DOM` 带来的尽量小的性能消耗操作DOM。
 

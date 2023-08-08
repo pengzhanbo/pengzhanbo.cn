@@ -16,6 +16,8 @@ permalink: /note/interview-question/45rxs5yv/
 
 这是 vue3 和 vue2 的其中一个重要的区别点。
 
+在 vue3 中，最好不要同时使用 `v-if` 和 `v-for`。
+
 ## 优化
 
 同时使用时，由于优先级的原因，总是先执行判断，确认条件为 true是，才进行渲染和执行循环。
