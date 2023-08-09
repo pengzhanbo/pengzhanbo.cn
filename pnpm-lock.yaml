@@ -230,7 +230,7 @@ packages:
       debug: 4.3.4
       gensync: 1.0.0-beta.2
       json5: 2.2.3
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -304,7 +304,7 @@ packages:
       '@babel/helper-validator-option': 7.22.5
       browserslist: 4.21.5
       lru-cache: 5.1.1
-      semver: 6.3.0
+      semver: 6.3.1
     dev: false
 
   /@babel/helper-compilation-targets@7.22.9(@babel/core@7.22.9):
@@ -362,7 +362,7 @@ packages:
       debug: 4.3.4
       lodash.debounce: 4.0.8
       resolve: 1.22.1
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1386,7 +1386,7 @@ packages:
       babel-plugin-polyfill-corejs3: 0.6.0(@babel/core@7.22.5)
       babel-plugin-polyfill-regenerator: 0.4.1(@babel/core@7.22.5)
       core-js-compat: 3.28.0
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -3139,7 +3139,7 @@ packages:
       '@babel/compat-data': 7.22.5
       '@babel/core': 7.22.5
       '@babel/helper-define-polyfill-provider': 0.3.3(@babel/core@7.22.5)
-      semver: 6.3.0
+      semver: 6.3.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -6244,7 +6244,7 @@ packages:
     dependencies:
       hosted-git-info: 2.8.9
       resolve: 1.22.1
-      semver: 5.7.1
+      semver: 5.7.2
       validate-npm-package-license: 3.0.4
     dev: false
 
@@ -6928,13 +6928,8 @@ packages:
       kind-of: 6.0.3
     dev: false
 
-  /semver@5.7.1:
-    resolution: {integrity: sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==}
-    hasBin: true
-    dev: false
-
-  /semver@6.3.0:
-    resolution: {integrity: sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==}
+  /semver@5.7.2:
+    resolution: {integrity: sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g==}
     hasBin: true
     dev: false
 
