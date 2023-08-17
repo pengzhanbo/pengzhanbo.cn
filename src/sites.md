@@ -85,6 +85,10 @@ article: false
 [react-dnd](http://react-dnd.github.io/react-dnd)
 | [recoil](https://recoiljs.org/)
 
+[swr](https://swr.vercel.app/)
+
+[awesome-react](https://github.com/enaqx/awesome-react)
+
 ## 图标
 
 [xicons](https://www.xicons.org/#/)
