@@ -63,7 +63,12 @@ article: false
 - <Badge >推荐</Badge> [Rust 标准库](https://rustwiki.org/zh-CN/std/) - Rust 标准库 中文版
 - <Badge >推荐</Badge> [Rust秘典](https://doc.rust-lang.org/nomicon/index.html) - Unsafe Rust 的黑魔法指南。它有时被称作“死灵书”。
 - <Badge >推荐</Badge> [Rust秘典](https://nomicon.purewhite.io/) - Rust秘典 中文版
+- 
 
+## Go
+
+- <Badge >推荐</Badge> [Go语言圣经（中文版）](https://golang-china.github.io/gopl-zh/) - 入门
+- <Badge >推荐</Badge> [Go语言高级编程](https://chai2010.cn/advanced-go-programming-book/) - 进阶
 
 ## 计算机网络
 
