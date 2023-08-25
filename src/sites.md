@@ -169,6 +169,10 @@ article: false
 [正则生成，图解](https://regex-vis.com/)
 | [正则测试](https://regex101.com/)
 
+### shell
+
+[tldr](https://tldr.sh/) - 在线帮助手册
+
 ### 开源
 
 - [bestofjs](https://bestofjs.org/) - 前端开源项目最新热点趋势
