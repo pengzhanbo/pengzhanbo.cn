@@ -6,7 +6,7 @@ permalink: /article/gq88mn6a/
 ---
 
 ::: center
-![webpack](https://www.webpackjs.com/32dc115fbfd1340f919f0234725c6fb4.png){width="100px"}
+![webpack](https://www.webpackjs.com/icon-square-small.85ba630cf0c5f29ae3e3.svg){width=100}
 :::
 
 ## 前言
