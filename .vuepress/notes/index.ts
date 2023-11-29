@@ -14,5 +14,5 @@ export default definePlumeNotesConfig({
     vuepressPlugin,
     typeChallenges,
     learnRust,
-  ]
+  ],
 })

@@ -11,7 +11,7 @@ export default definePlumeNotesItemConfig({
       items: [
         '快速开始',
         '编写文章',
-      ]
+      ],
     },
     {
       text: '配置',
@@ -23,17 +23,17 @@ export default definePlumeNotesItemConfig({
             '主题插件配置',
             'notes配置',
             '多语言配置',
-          ]
+          ],
         },
         '页面配置',
-      ]
+      ],
     },
     {
       text: '功能',
       items: [
         '基础功能',
         'markdown增强',
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 })

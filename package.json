@@ -1,17 +1,17 @@
 {
   "name": "pengzhanbo.cn",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
   "type": "module",
+  "version": "1.0.0",
+  "private": true,
   "packageManager": "pnpm@8.10.5",
+  "description": "",
+  "author": "pengzhanbo",
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "vuepress dev src --config .vuepress/config.ts",
     "build": "vuepress build src --config .vuepress/config.ts --clean-cache --clean-temp",
     "preview": "anywhere -s -h localhost -d docs"
   },
-  "author": "pengzhanbo",
-  "license": "GPL-3.0",
   "dependencies": {
     "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.86",
     "@vuepress/client": "2.0.0-rc.0",
@@ -24,7 +24,8 @@
     "vuepress": "2.0.0-rc.0"
   },
   "devDependencies": {
-    "@types/node": "^20.9.1"
+    "@types/node": "^20.9.1",
+    "typescript": "^5.3.2"
   },
   "pnpm": {
     "peerDependencyRules": {

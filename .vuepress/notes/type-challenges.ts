@@ -12,7 +12,7 @@ export default definePlumeNotesItemConfig({
       collapsed: false,
       items: [
         'HelloWorld',
-      ]
+      ],
     },
     {
       dir: '简单',
@@ -32,7 +32,7 @@ export default definePlumeNotesItemConfig({
         'push',
         'unshift',
         'parameters',
-      ]
+      ],
     },
     {
       dir: '中等',
@@ -112,7 +112,7 @@ export default definePlumeNotesItemConfig({
         'deepMutable',
         'all',
         'filter',
-      ]
+      ],
     },
     {
       dir: '困难',
@@ -162,7 +162,7 @@ export default definePlumeNotesItemConfig({
         'fizzBuzz',
         'runLengthEncoding',
         'treePathArray',
-      ]
+      ],
     },
     {
       dir: '地狱',
@@ -183,7 +183,7 @@ export default definePlumeNotesItemConfig({
         'assertArrayIndex',
         'jsonParser',
         'subtract',
-      ]
+      ],
     },
-  ]
+  ],
 })

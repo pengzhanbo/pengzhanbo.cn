@@ -5,11 +5,11 @@ import navbar from './navbar'
 export default plumeTheme({
   logo: '/images/blogger-fav.png',
   appearance: true,
-  hostname: "https://pengzhanbo.cn/",
+  hostname: 'https://pengzhanbo.cn/',
   avatar: {
     name: '鹏展博',
     url: '/images/blogger-fav.png',
-    description: '世间的美好总是不期而遇'
+    description: '世间的美好总是不期而遇',
   },
   social: [
     { icon: 'github', link: 'https://github.com/pengzhanbo' },
@@ -22,10 +22,10 @@ export default plumeTheme({
   },
   themePlugins: {
     baiduTongji: {
-      key: '8a4e65dd3f2d30e64c828481295e09d1'    
+      key: '8a4e65dd3f2d30e64c828481295e09d1',
     },
     shiki: {
-      theme: 'one-dark-pro'
+      theme: 'one-dark-pro',
     },
     markdownEnhance: {
       katex: true,

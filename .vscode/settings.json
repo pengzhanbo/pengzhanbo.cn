@@ -1,35 +1,32 @@
 {
-    "cSpell.words": [
-      "Brotli",
-      "caniuse",
-      "commitlint",
-      "CSSOM",
-      "docsearch",
-      "esbuild",
-      "frontmatter",
-      "iconify",
-      "instanceof",
-      "msvc",
-      "nightwatch",
-      "Pinia",
-      "proto",
-      "rustc",
-      "rustup",
-      "shiki",
-      "struct",
-      "Tongji",
-      "typeof"
-    ],
-    "path-intellisense.mappings": {
-      "/": "${workspaceFolder}/public"
-    },
-    "search.exclude": {
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/*.code-search": true,
-      ".vscode": true,
-      "**/.temp": true,
-      "docs/**": true,
-      "yarn.lock": true,
-    }
+  "cSpell.words": [
+    "Brotli",
+    "caniuse",
+    "commitlint",
+    "CSSOM",
+    "docsearch",
+    "esbuild",
+    "frontmatter",
+    "iconify",
+    "instanceof",
+    "msvc",
+    "nightwatch",
+    "Pinia",
+    "proto",
+    "rustc",
+    "rustup",
+    "shiki",
+    "struct",
+    "Tongji",
+    "typeof"
+  ],
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/*.code-search": true,
+    ".vscode": true,
+    "**/.temp": true,
+    "docs/**": true,
+    "yarn.lock": true
+  }
 }

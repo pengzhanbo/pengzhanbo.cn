@@ -1,6 +1,7 @@
-import { path, fs, getDirname } from '@vuepress/utils'
+import { fs, getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
-import { googleAnalyticsPlugin  } from '@vuepress/plugin-google-analytics'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+
 // import { pwaPlugin } from '@vuepress/plugin-pwa'
 import theme from './theme'
 
@@ -33,11 +34,11 @@ export default defineUserConfig({
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }],
     // ['link', { rel: 'manifest', href: '/manifest.webmanifest' }],
-    ['meta', { 'name': 'keywords', content: '鹏展博,前端,pengzhanbo,front-end' }],
-    ['meta', { 'http-equiv': 'X-UA-Compatible', content: 'IE=edg' }],
+    ['meta', { name: 'keywords', content: '鹏展博,前端,pengzhanbo,front-end' }],
+    ['meta', { 'http-equiv': 'X-UA-Compatible', 'content': 'IE=edg' }],
     ['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
     ['meta', { name: 'theme-color', content: '#ffffff' }],
-    ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7'}],
+    ['meta', { name: 'msvalidate.01', content: 'F93FF013B8AA2553779A91388C14A0F7' }],
     ['meta', { name: 'google-site-verification', content: 'X5YSaTDn-pKqQBUKD_05_dQcxVItzEq7Rlbg2ZEU7AM' }],
   ],
   plugins: [
@@ -50,5 +51,5 @@ export default defineUserConfig({
       fs.writeFileSync(filepath, robotsContent, 'utf-8')
     }, 500)
   },
-  theme: theme,
+  theme,
 })

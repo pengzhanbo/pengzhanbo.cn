@@ -23,9 +23,9 @@ export default definePlumeNotesItemConfig({
             '功能',
             'API',
             'functions开发指南',
-          ]
-        }
-      ]
+          ],
+        },
+      ],
     },
-  ]
+  ],
 })
