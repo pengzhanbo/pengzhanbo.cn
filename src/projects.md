@@ -62,6 +62,19 @@ article: false
 一个简约的 vuepress 主题。开箱即用，仅需少量配置即可使用。
 
 ----
+
+### stylelint-define-config
+
+![](https://img.shields.io/github/stars/stylelint-types/stylelint-define-config?style=social)
+![](https://img.shields.io/npm/v/stylelint-define-config?style=flat-square)
+![](https://img.shields.io/npm/dt/stylelint-define-config?style=flat-square)
+
+仓库地址： [stylelint-define-config](https://github.com/stylelint-types/stylelint-define-config)
+
+**说明：**
+
+为 `stylelint` 提供 `defineConfig` 配置类型帮助，可以在 `stylelint.config.js` 中配置自定义配置。
+
 ### spearjs
 
 ![](https://img.shields.io/github/stars/pengzhanbo/spearjs?style=social)
