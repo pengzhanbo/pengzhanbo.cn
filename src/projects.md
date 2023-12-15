@@ -75,6 +75,8 @@ article: false
 
 为 `stylelint` 提供 `defineConfig` 配置类型帮助，可以在 `stylelint.config.js` 中配置自定义配置。
 
+----
+
 ### spearjs
 
 ![](https://img.shields.io/github/stars/pengzhanbo/spearjs?style=social)
