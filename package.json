@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@8.12.1",
   "description": "",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -13,19 +13,19 @@
     "preview": "anywhere -s -h localhost -d docs"
   },
   "dependencies": {
-    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.86",
+    "@vuepress-plume/vuepress-theme-plume": "1.0.0-beta.89",
     "@vuepress/client": "2.0.0-rc.0",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
     "@vuepress/plugin-pwa": "2.0.0-rc.0",
     "@vuepress/utils": "2.0.0-rc.0",
     "anywhere": "^1.6.0",
     "katex": "^0.16.9",
-    "vue": "^3.3.8",
+    "vue": "^3.3.13",
     "vuepress": "2.0.0-rc.0"
   },
   "devDependencies": {
-    "@types/node": "^20.9.1",
-    "typescript": "^5.3.2"
+    "@types/node": "^20.10.5",
+    "typescript": "^5.3.3"
   },
   "pnpm": {
     "peerDependencyRules": {
