@@ -5,10 +5,11 @@ createTime: 2023/12/23 13:21:28
 permalink: /note/vuepress-plugin/shikiji/
 ---
 
-项目地址： [@vuepress-plume/plugin-shikiji](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-shikiji)
+[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-shikiji?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-shikiji){style="margin-right:8px"}
+[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-shikiji?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-shikiji){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-shikiji)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-shikiji.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-shikiji)
+
 
 ## 指南
 

@@ -5,11 +5,11 @@ createTime: 2023/02/26 05:07:59
 permalink: /note/vuepress-plugin/notes-data/
 ---
 
-项目地址： [@vuepress-plume/plugin-notes-data](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-notes-data)
+[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-notes-data?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-notes-data){style="margin-right:8px"}
+[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-notes-data){style="margin-right:8px"}
+[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-notes-data?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-notes-data){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-notes-data)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-notes-data.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-notes-data?label=beta%20downloads)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-notes-data)
 
 ## 指南
 

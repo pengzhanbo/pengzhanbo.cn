@@ -5,11 +5,13 @@ createTime: 2023/02/26 04:21:15
 permalink: /note/vuepress-plugin/auto-frontmatter/
 ---
 
-项目地址： [@vuepress-plume/plugin-auto-frontmatter](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-auto-frontmatter)
+[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-auto-frontmatter?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-auto-frontmatter){style="margin-right:8px"}
+[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-auto-frontmatter?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-auto-frontmatter){style="margin-right:8px"}
+[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-auto-frontmatter?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-auto-frontmatter){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-auto-frontmatter)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-auto-frontmatter.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-auto-frontmatter?label=beta%20downloads)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-auto-frontmatter)
+
+
 ## 指南
 
 通过自定义规则，为你的 vuepress 站点的 `markdown` 文件，自动生成 `frontmatter` 配置，并插入到文件内容头部。

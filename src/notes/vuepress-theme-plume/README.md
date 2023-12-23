@@ -5,16 +5,18 @@ permalink: /note/vuepress-theme-plume/
 author: 鹏展博
 ---
 
+[![npm version](https://img.shields.io/npm/v/vuepress-theme-plume?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/vuepress-theme-plume){style="margin-right:8px"}
+[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-theme-plume?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/vuepress-theme-plume){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume)
+
+<!-- [![npm download](https://img.shields.io/npm/dy/vuepress-theme-plume?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/vuepress-theme-plume){style="margin-right:8px"} -->
+
 ::: info 提示
 基于 [vuePress-next](https://github.com/vuepress/vuepress-next), 目前处于 RC 阶段。
 
 这意味着功能和API 趋于稳定，但在未来的更新中仍有小概率出现破坏更改。
 :::
 
-项目地址：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
-
-![npm version](https://badge.fury.io/js/vuepress-theme-plume.svg)
-![npm](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-theme-plume?style=flat)
 
 __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 

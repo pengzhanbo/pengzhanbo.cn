@@ -5,11 +5,10 @@ author: pengzhanbo
 permalink: /note/vuepress-plugin/caniuse/
 ---
 
-项目地址： [@vuepress-plume/plugin-caniuse](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-caniuse)
-
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-caniuse.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-caniuse?label=beta%20downloads)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-caniuse)
+[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-caniuse?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-caniuse){style="margin-right:8px"}
+[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-caniuse?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-caniuse){style="margin-right:8px"}
+[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-caniuse?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-caniuse){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-caniuse)
 
 
 ## 指南

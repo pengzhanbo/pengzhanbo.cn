@@ -5,11 +5,11 @@ author: pengzhanbo
 permalink: /note/vuepress-plugin/netlify-functions/
 ---
 
-项目地址： [vuepress-plume/plugin-netlify-functions](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-netlify-functions)
+[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-netlify-functions?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-netlify-functions){style="margin-right:8px"}
+[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-netlify-functions?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-netlify-functions){style="margin-right:8px"}
+[![npm download](https://img.shields.io/npm/dy/vuepress-plugin-netlify-functions?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/vuepress-plugin-netlify-functions){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-netlify-functions)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-netlify-functions.svg)
-![npm download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-netlify-functions?label=beta%20downloads)
-![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-netlify-functions)
 
 如果你的 vuepress 站点是部署在 netlify 的，而且希望能够使用netlify functions 来做 serverless。
 
@@ -25,16 +25,16 @@ permalink: /note/vuepress-plugin/netlify-functions/
 ::: code-tabs
 @tab npm
 ``` sh
-npm install @vuepress-plume/plugin-netlify-functions
+npm install vuepress-plugin-netlify-functions
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/plugin-netlify-functions
+yarn add vuepress-plugin-netlify-functions
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/plugin-netlify-functions
+pnpm add vuepress-plugin-netlify-functions
 ```
 :::

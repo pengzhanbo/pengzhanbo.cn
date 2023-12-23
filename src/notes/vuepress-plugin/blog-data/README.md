@@ -5,11 +5,12 @@ createTime: 2023/02/26 05:06:44
 permalink: /note/vuepress-plugin/blog-data/
 ---
 
-项目地址： [@vuepress-plume/plugin-blog-data](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-blog-data)
+[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-blog-data){style="margin-right:8px"}
+[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-blog-data){style="margin-right:8px"}
+[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-blog-data){style="margin-right:8px"}
+[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-blog-data)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-blog-data.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-blog-data?label=beta%20downloads)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-blog-data)
+
 
 ## 指南
 

@@ -6,6 +6,7 @@ export default plumeTheme({
   logo: '/images/blogger-fav.png',
   appearance: true,
   hostname: 'https://pengzhanbo.cn/',
+  repo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
   avatar: {
     name: '鹏展博',
     url: '/images/blogger-fav.png',
@@ -22,7 +23,13 @@ export default plumeTheme({
   },
   outlineLabel: '内容大纲',
   returnToTopLabel: '返回顶部',
+  contributors: false,
+  editLink: true,
+  editLinkText: '在 GitHub 上编辑此页',
+  lastUpdatedText: '上次更新',
+  docsDir: 'src',
   themePlugins: {
+    externalLinkIcon: false,
     shikiji: {
       theme: { light: "vitesse-light", dark: 'vitesse-dark' },
     },
