@@ -1,4 +1,4 @@
-import { definePlumeNotesItemConfig } from '@vuepress-plume/vuepress-theme-plume'
+import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
 export default definePlumeNotesItemConfig({
   text: 'VuePress-theme-plume',
@@ -32,6 +32,9 @@ export default definePlumeNotesItemConfig({
       text: '功能',
       items: [
         '基础功能',
+        '内置插件',
+        '全局组件',
+        '代码块高亮',
         'markdown增强',
       ],
     },

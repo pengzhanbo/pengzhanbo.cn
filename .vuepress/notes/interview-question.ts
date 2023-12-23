@@ -1,4 +1,4 @@
-import { definePlumeNotesItemConfig } from '@vuepress-plume/vuepress-theme-plume'
+import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
 export default definePlumeNotesItemConfig({
   link: '/interview-question/',

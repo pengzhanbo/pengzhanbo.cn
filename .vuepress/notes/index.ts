@@ -1,4 +1,4 @@
-import { definePlumeNotesConfig } from '@vuepress-plume/vuepress-theme-plume'
+import { definePlumeNotesConfig } from 'vuepress-theme-plume'
 import vuepressThemePlume from './vuepress-theme-plume'
 import interviewQuestion from './interview-question'
 import vuepressPlugin from './vuepress-plugin'

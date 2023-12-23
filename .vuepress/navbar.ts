@@ -1,4 +1,4 @@
-import type { NavItem } from '@vuepress-plume/vuepress-theme-plume'
+import type { NavItem } from 'vuepress-theme-plume'
 
 export default [
   { text: '首页', link: '/', icon: 'material-symbols:home' },
@@ -12,6 +12,7 @@ export default [
   {
     text: '技术文档',
     icon: 'mdi:idea',
+    activeMatch: '^/note/(vuepress-theme-plume|vuepress-plugin)/',
     items: [
       {
         text: 'Vite Plugin',
@@ -32,6 +33,7 @@ export default [
             text: 'vuepress-theme-plume',
             link: '/note/vuepress-theme-plume/',
             icon: 'mdi:paper-airplane',
+            activeMatch: '^/note/vuepress-theme-plume/',
           },
         ],
       },
@@ -62,6 +64,12 @@ export default [
             link: '/note/vuepress-plugin/notes-data/',
             activeMatch: '/note/vuepress-plugin/notes-data/',
             icon: 'material-symbols:note-alt-rounded',
+          },
+          {
+            text: 'shikiji',
+            link: '/note/vuepress-plugin/shikiji/',
+            activeMatch: '/note/vuepress-plugin/shikiji/',
+            icon: 'material-symbols-light:code-blocks-outline-rounded',
           },
           {
             text: 'iconify',

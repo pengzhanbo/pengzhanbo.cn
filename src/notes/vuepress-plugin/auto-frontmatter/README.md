@@ -5,11 +5,11 @@ createTime: 2023/02/26 04:21:15
 permalink: /note/vuepress-plugin/auto-frontmatter/
 ---
 
-项目地址： [vuepress-plugin-auto-frontmatter](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-auto-frontmatter)
+项目地址： [@vuepress-plume/plugin-auto-frontmatter](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-auto-frontmatter)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-auto-frontmatter.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-auto-frontmatter)
-
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-auto-frontmatter.svg)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-auto-frontmatter?label=beta%20downloads)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-auto-frontmatter)
 ## 指南
 
 通过自定义规则，为你的 vuepress 站点的 `markdown` 文件，自动生成 `frontmatter` 配置，并插入到文件内容头部。
@@ -19,17 +19,17 @@ permalink: /note/vuepress-plugin/auto-frontmatter/
 ::: code-tabs
 @tab  npm
 ``` sh
-npm install @vuepress-plume/vuepress-plugin-auto-frontmatter
+npm install @vuepress-plume/plugin-auto-frontmatter
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/vuepress-plugin-auto-frontmatter
+yarn add @vuepress-plume/plugin-auto-frontmatter
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/vuepress-plugin-auto-frontmatter
+pnpm add @vuepress-plume/plugin-auto-frontmatter
 ```
 :::
 
@@ -37,7 +37,7 @@ pnpm add @vuepress-plume/vuepress-plugin-auto-frontmatter
 
 ```ts
 // .vuepress/config.ts
-import  { autoFrontmatterPlugin } from '@vuepress-plume/vuepress-plugin-auto-frontmatter'
+import  { autoFrontmatterPlugin } from '@vuepress-plume/plugin-auto-frontmatter'
 export default {
   //...
   plugins: [

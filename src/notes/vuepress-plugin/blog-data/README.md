@@ -5,10 +5,11 @@ createTime: 2023/02/26 05:06:44
 permalink: /note/vuepress-plugin/blog-data/
 ---
 
-项目地址： [vuepress-plugin-blog-data](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-blog-data)
+项目地址： [@vuepress-plume/plugin-blog-data](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-blog-data)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-blog-data.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-blog-data)
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-blog-data.svg)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-blog-data?label=beta%20downloads)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-blog-data)
 
 ## 指南
 
@@ -21,17 +22,17 @@ permalink: /note/vuepress-plugin/blog-data/
 ::: code-tabs
 @tab  npm
 ``` sh
-npm install @vuepress-plume/vuepress-plugin-blog-data
+npm install @vuepress-plume/plugin-blog-data
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/vuepress-plugin-blog-data
+yarn add @vuepress-plume/plugin-blog-data
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/vuepress-plugin-blog-data
+pnpm add @vuepress-plume/plugin-blog-data
 ```
 :::
 
@@ -39,7 +40,7 @@ pnpm add @vuepress-plume/vuepress-plugin-blog-data
 
 ```ts
 // .vuepress/config.ts
-import blogDataPlugin from '@vuepress-plume/vuepress-plugin-blog-data'
+import blogDataPlugin from '@vuepress-plume/plugin-blog-data'
 module.exports = {
   //...
   plugins: [
@@ -84,7 +85,7 @@ interface BlogDataPluginOptions {
 
 ```vue
 <script lang="ts" setup>
-import { useBlogPostData } from '@vuepress-plume/vuepress-plugin-blog-data/client'
+import { useBlogPostData } from '@vuepress-plume/plugin-blog-data/client'
 const postList = useBlogPostData()
 </script>
 <template>

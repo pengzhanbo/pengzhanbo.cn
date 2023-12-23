@@ -5,10 +5,12 @@ author: pengzhanbo
 permalink: /note/vuepress-plugin/caniuse/
 ---
 
-项目地址： [vuepress-plugin-caniuse](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-caniuse)
+项目地址： [@vuepress-plume/plugin-caniuse](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-caniuse)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-caniuse.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-caniuse)
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-caniuse.svg)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-caniuse?label=beta%20downloads)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-caniuse)
+
 
 ## 指南
 
@@ -21,17 +23,17 @@ permalink: /note/vuepress-plugin/caniuse/
 ::: code-tabs
 @tab  npm
 ``` sh
-npm install @vuepress-plume/vuepress-plugin-caniuse
+npm install @vuepress-plume/plugin-caniuse
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/vuepress-plugin-caniuse
+yarn add @vuepress-plume/plugin-caniuse
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/vuepress-plugin-caniuse
+pnpm add @vuepress-plume/plugin-caniuse
 ```
 :::
 
@@ -45,7 +47,7 @@ pnpm add @vuepress-plume/vuepress-plugin-caniuse
 @tab .vuepress/config.ts
 ``` ts
 import { defineUserConfig } from 'vuepress'
-import { caniusePlugin } from '@vuepress-plume/vuepress-plugin-caniuse'
+import { caniusePlugin } from '@vuepress-plume/plugin-caniuse'
 
 export default defineUserConfig({
   plugins: [
@@ -55,7 +57,7 @@ export default defineUserConfig({
 ```
 @tab .vuepress/config.js
 ``` js
-const { caniusePlugin } = require('@vuepress-plume/vuepress-plugin-caniuse')
+const { caniusePlugin } = require('@vuepress-plume/plugin-caniuse')
 
 module.exports = {
   plugins: [

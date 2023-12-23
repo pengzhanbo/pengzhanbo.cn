@@ -5,6 +5,12 @@ createTime: 2023/02/26 05:07:59
 permalink: /note/vuepress-plugin/notes-data/
 ---
 
+项目地址： [@vuepress-plume/plugin-notes-data](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-notes-data)
+
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-notes-data.svg)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-notes-data?label=beta%20downloads)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-notes-data)
+
 ## 指南
 
 根据配置，读取 vuepress 应用下的 markdown 文件，将符合规则的 `page` 归类为 `notes` ，
@@ -18,17 +24,17 @@ permalink: /note/vuepress-plugin/notes-data/
 ::: code-tabs
 @tab  npm
 ``` sh
-npm install @vuepress-plume/vuepress-plugin-notes-data
+npm install @vuepress-plume/plugin-notes-data
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/vuepress-plugin-notes-data
+yarn add @vuepress-plume/plugin-notes-data
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/vuepress-plugin-notes-data
+pnpm add @vuepress-plume/plugin-notes-data
 ```
 :::
 
@@ -36,7 +42,7 @@ pnpm add @vuepress-plume/vuepress-plugin-notes-data
 
 ```ts
 // .vuepress/config.ts
-import notesDataPlugin from '@vuepress-plume/vuepress-plugin-notes-data'
+import notesDataPlugin from '@vuepress-plume/plugin-notes-data'
 module.exports = {
   //...
   plugins: [
@@ -83,7 +89,7 @@ type NotesSidebarItem = {
 
 ```vue
 <script lang="ts" setup>
-import { useNotesData } from '@vuepress-plume/vuepress-plugin-notes-data/client'
+import { useNotesData } from '@vuepress-plume/plugin-notes-data/client'
 const notesData = useNotesData()
 </script>
 ```

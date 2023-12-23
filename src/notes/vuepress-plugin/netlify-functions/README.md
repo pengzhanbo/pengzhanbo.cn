@@ -5,10 +5,11 @@ author: pengzhanbo
 permalink: /note/vuepress-plugin/netlify-functions/
 ---
 
-项目地址： [vuepress-plugin-netlify-functions](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-netlify-functions)
+项目地址： [vuepress-plume/plugin-netlify-functions](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-netlify-functions)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-netlify-functions.svg)
-![npm download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-netlify-functions)
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-netlify-functions.svg)
+![npm download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-netlify-functions?label=beta%20downloads)
+![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-netlify-functions)
 
 如果你的 vuepress 站点是部署在 netlify 的，而且希望能够使用netlify functions 来做 serverless。
 
@@ -24,16 +25,16 @@ permalink: /note/vuepress-plugin/netlify-functions/
 ::: code-tabs
 @tab npm
 ``` sh
-npm install @vuepress-plume/vuepress-plugin-netlify-functions
+npm install @vuepress-plume/plugin-netlify-functions
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/vuepress-plugin-netlify-functions
+yarn add @vuepress-plume/plugin-netlify-functions
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/vuepress-plugin-netlify-functions
+pnpm add @vuepress-plume/plugin-netlify-functions
 ```
 :::

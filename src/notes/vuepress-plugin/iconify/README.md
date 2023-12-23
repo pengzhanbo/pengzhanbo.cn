@@ -5,10 +5,11 @@ createTime: 2023/02/26 05:07:33
 permalink: /note/vuepress-plugin/iconify/
 ---
 
-项目地址： [vuepress-plugin-iconify](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/packages/plugin-iconify)
+项目地址： [@vuepress-plume/plugin-iconify](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-iconify)
 
-![npm version](https://badge.fury.io/js/@vuepress-plume%2Fvuepress-plugin-iconify.svg)
-![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-iconify)
+![npm version](https://badge.fury.io/js/@vuepress-plume%2Fplugin-iconify.svg)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-plugin-iconify?label=beta%20downloads)
+![npm download](https://img.shields.io/npm/dt/@vuepress-plume/plugin-iconify)
 
 ## 指南
 
@@ -21,17 +22,17 @@ permalink: /note/vuepress-plugin/iconify/
 ::: code-tabs
 @tab  npm
 ``` sh
-npm install @vuepress-plume/vuepress-plugin-iconify
+npm install @vuepress-plume/plugin-iconify
 ```
 
 @tab:active yarn
 ``` sh
-yarn add @vuepress-plume/vuepress-plugin-iconify
+yarn add @vuepress-plume/plugin-iconify
 ```
 
 @tab pnpm
 ``` sh
-pnpm add @vuepress-plume/vuepress-plugin-iconify
+pnpm add @vuepress-plume/plugin-iconify
 ```
 :::
 
@@ -39,7 +40,7 @@ pnpm add @vuepress-plume/vuepress-plugin-iconify
 
 ```ts
 // .vuepress/config.ts
-import iconifyPlugin from '@vuepress-plume/vuepress-plugin-iconify'
+import iconifyPlugin from '@vuepress-plume/plugin-iconify'
 module.exports = {
   //...
   plugins: [

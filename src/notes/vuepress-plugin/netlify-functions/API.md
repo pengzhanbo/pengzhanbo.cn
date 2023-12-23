@@ -51,7 +51,7 @@ __类型：__ `{ sourceDirectory: string, destDirectory: string, proxyPrefix: st
 在开发 vuepress plugin 时使用，为插件提供 `netlify functiosn` 支持
 
 ``` ts
-import { useNetlifyFunctionsPlugin } from '@vuepress-plume/vuepress-plugin-netlify-functions'
+import { useNetlifyFunctionsPlugin } from '@vuepress-plume/plugin-netlify-functions'
 
 const myPlugin = (): Plugin => {
   return (app: App) => {

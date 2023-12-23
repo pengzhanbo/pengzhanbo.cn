@@ -1,4 +1,4 @@
-import { definePlumeNotesItemConfig } from '@vuepress-plume/vuepress-theme-plume'
+import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
 export default definePlumeNotesItemConfig({
   dir: 'vuepress-plugin',
@@ -12,6 +12,7 @@ export default definePlumeNotesItemConfig({
         'auto-frontmatter/README',
         'blog-data/README',
         'notes-data/README',
+        'shikiji/README',
         'iconify/README',
         {
           dir: 'netlify-functions',

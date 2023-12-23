@@ -47,7 +47,6 @@ module.exports = {
 - 默认值： `[]`
 - 详情： note数组，配置多个 note
 
-#### `PlumeThemeNotesItem`
 ``` ts
 interface PlumeThemeNotesItem {
   /**
@@ -112,7 +111,7 @@ _notes
 @tab config.ts
 ``` ts
 import { defineUserConfig } from 'vuepress'
-import type {PlumeThemeOptions } from '@vuepress-plume/vuepress-theme-plume'
+import type {PlumeThemeOptions } from 'vuepress-theme-plume'
 import notes from './notes.ts'
 export default defineUserConfig<PlumeThemeOptions>({
   themeConfig: {

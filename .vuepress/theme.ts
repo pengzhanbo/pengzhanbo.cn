@@ -1,4 +1,4 @@
-import { plumeTheme } from '@vuepress-plume/vuepress-theme-plume'
+import { plumeTheme } from 'vuepress-theme-plume'
 import notes from './notes'
 import navbar from './navbar'
 
@@ -20,12 +20,14 @@ export default plumeTheme({
   footer: {
     copyright: 'Copyright © 2022-present pengzhanbo',
   },
+  outlineLabel: '内容大纲',
+  returnToTopLabel: '返回顶部',
   themePlugins: {
+    shikiji: {
+      theme: { light: "vitesse-light", dark: 'vitesse-dark' },
+    },
     baiduTongji: {
       key: '8a4e65dd3f2d30e64c828481295e09d1',
-    },
-    shiki: {
-      theme: 'one-dark-pro',
     },
     markdownEnhance: {
       katex: true,
