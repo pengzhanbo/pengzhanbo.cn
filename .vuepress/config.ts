@@ -16,10 +16,10 @@ Sitemap: https://pengzhanbo.cn/sitemap.xml
 `
 
 export default defineUserConfig({
-  lang: 'zh-CN',
+  lang: 'zh',
   locales: {
     '/': {
-      lang: 'zh-CN',
+      lang: 'zh',
       title: '鹏展博',
       description: '热爱生活',
     },
