@@ -11,6 +11,7 @@ export default definePlumeNotesItemConfig({
       items: [
         '快速开始',
         '编写文章',
+        '效果预览',
       ],
     },
     {
@@ -26,6 +27,7 @@ export default definePlumeNotesItemConfig({
           ],
         },
         '页面配置',
+        '自定义样式',
       ],
     },
     {
