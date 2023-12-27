@@ -16,6 +16,11 @@ export default plumeTheme({
     { icon: 'github', link: 'https://github.com/pengzhanbo' },
     { icon: 'discord', link: 'https://discord.gg/ZPV9tQyRuh' },
   ],
+  blog: {
+    link: '/blog/',
+    include: ['**/*.md'],
+    pagination: { prevPageText: '上一页', 'nextPageText': '下一页' }
+  },
   navbar,
   notes,
   footer: {
@@ -27,6 +32,8 @@ export default plumeTheme({
   editLink: true,
   editLinkText: '在 GitHub 上编辑此页',
   lastUpdatedText: '上次更新',
+  prevPageLabel: '上一页',
+  nextPageLabel: '下一页',
   docsDir: 'src',
   themePlugins: {
     externalLinkIcon: false,
