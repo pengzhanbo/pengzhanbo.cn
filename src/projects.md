@@ -52,8 +52,9 @@ article: false
 ### vuepress-theme-plume
 
 ![](https://img.shields.io/github/stars/pengzhanbo/vuepress-theme-plume?style=social)
-![](https://img.shields.io/npm/v/@vuepress-plume/vuepress-theme-plume?style=flat-square)
-![](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-theme-plume?style=flat-square)
+![](https://img.shields.io/npm/v/vuepress-theme-plume?style=flat-square)
+![](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-theme-plume?style=flat-square&label=beta%20downloads)
+![](https://img.shields.io/npm/dt/vuepress-theme-plume?style=flat-square)
 
 仓库地址：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
 
