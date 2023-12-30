@@ -71,7 +71,7 @@ module.exports = {
 在你的 文章 markdown文件中，使用以下格式：
 
 ``` md
-::: caniuse <feature>
+::: caniuse <feature> {browser_versions}
 :::
 ```
 
@@ -97,3 +97,26 @@ __options:__ `[CanIUsePluginOptions]`
 - `options.mode`: 配置 can-i-use 在 文章中的 嵌入模式, 默认： `image`
   - `image`： 嵌入 特性图表图片
   - `embed`:  嵌入 iframe， 实时的，可交互的模式
+
+## Markdown 语法
+
+``` md
+::: caniuse <feature> {browser_versions}
+:::
+```
+
+### `<feature>` 
+
+必填。 正确取值请参考 [https://caniuse.bitsofco.de/](https://caniuse.bitsofco.de/)
+
+### `{browser_versions}`
+
+可选。当前特性在多个版本中的支持情况。
+
+默认值为: `{-2,-1,1}`
+
+格式： `{number,number,...}`  取值范围为 `-5 ~ 3`
+
+- 小于`0` 表示低于当前浏览器版本的支持情况
+- `0` 表示当前浏览器版本的支持情况
+- 大于`0` 表示高于当前浏览器版本的支持情况

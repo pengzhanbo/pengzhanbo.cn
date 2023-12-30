@@ -13,6 +13,7 @@ export default definePlumeNotesItemConfig({
         'blog-data/README',
         'notes-data/README',
         'shikiji/README',
+        'content-update/README',
         'iconify/README',
         {
           dir: 'netlify-functions',

@@ -15,6 +15,12 @@ permalink: /note/vuepress-plugin/shikiji/
 
 使用 [`shikiji`](https://shikiji.netlify.app/) 来为 Markdown 代码块启用代码高亮。
 
+::: warning 说明
+`vuepress@v2` 将会在新的版本中， 对 `@vuepress/plugin-shiki` 做出调整，迁移 `shiki` 至 `shikiji`。
+
+当前主题将会持续关注其进度，在其实现预期的功能后，主题会迁移至官方插件。
+:::
+
 ## 安装
 
 ::: code-tabs

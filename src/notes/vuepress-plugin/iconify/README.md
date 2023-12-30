@@ -58,20 +58,46 @@ module.exports = {
 ```ts
 interface IconifyOptions {
   /**
-   * 组件名， 默认 `Iconify`
+   * 组件名，
+   * @default `Iconify`
    */
   componentName?: string
+  /**
+   * 默认图标颜色
+   * @default `currentColor`
+   */
   color?: string
+  /**
+   * 图标大小
+   * @default '1em'
+   */
   size?: string | number
 }
 ```
 
-### Component
+## Component
 
 ```vue
 <template>
   <Iconify name="material-symbols:home" color="currentColor" size="1em" />
 </template>
+```
+
+### Props 
+
+```ts
+interface Props {
+  name?: string
+  size?: string | number
+  color?: string
+  mode?: 'style' | 'svg' | 'mask' | 'bg'
+  style?: StyleValue
+  flip?: string
+  vFlip?: boolean
+  hFlip?: boolean
+  inline?: boolean
+  rotate?: number
+}
 ```
 
 效果： <Iconify name="material-symbols:home" color="currentColor" size="1em" />
