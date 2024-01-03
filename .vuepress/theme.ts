@@ -41,7 +41,7 @@ export default plumeTheme({
       theme: { light: "vitesse-light", dark: 'vitesse-dark' },
     },
     baiduTongji: {
-      key: '8a4e65dd3f2d30e64c828481295e09d1',
+      key: '49ebcb8d1abfcde890ef6f320a101db7',
     },
     markdownEnhance: {
       katex: true,
