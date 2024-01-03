@@ -110,7 +110,7 @@ var nas;
 var var9;
 ```
 
-可以使用标准 JSDoc 语法或 TypeScript 语法，使用字符串和数字索引签名来指定类地图和类数组对象。
+可以使用标准 JSDoc 语法或 TypeScript 语法，使用字符串和数字索引签名来指定类 Map 和类 Array 对象。
 
 ```js
 /**
@@ -161,7 +161,7 @@ var question;
 #### Casts
 
 TypeScript 借用了 Google Closure 的强制转换语法。
-`@type` 这允许通过在任何带括号的表达式之前添加标签来将类型转换为其他类型。
+这允许 `@type` 通过在任何带括号的表达式之前添加标签来将类型转换为其他类型。
 
 ```js
 /**
