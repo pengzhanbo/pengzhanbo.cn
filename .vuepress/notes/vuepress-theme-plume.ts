@@ -1,7 +1,6 @@
 import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
 export default definePlumeNotesItemConfig({
-  text: 'VuePress-theme-plume',
   dir: 'vuepress-theme-plume',
   link: '/vuepress-theme-plume/',
   sidebar: [

@@ -2,7 +2,6 @@ import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
 export default definePlumeNotesItemConfig({
   link: '/type-challenges/',
-  text: 'Type Challenges',
   dir: 'type-challenges',
   sidebar: [
     '',

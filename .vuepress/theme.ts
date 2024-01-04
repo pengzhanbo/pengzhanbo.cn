@@ -4,9 +4,13 @@ import navbar from './navbar'
 
 export default plumeTheme({
   logo: '/images/blogger-fav.png',
-  appearance: true,
   hostname: 'https://pengzhanbo.cn/',
   repo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
+  docsDir: 'src',
+
+  navbar,
+  notes,
+
   avatar: {
     name: '鹏展博',
     url: '/images/blogger-fav.png',
@@ -16,36 +20,22 @@ export default plumeTheme({
     { icon: 'github', link: 'https://github.com/pengzhanbo' },
     { icon: 'discord', link: 'https://discord.gg/ZPV9tQyRuh' },
   ],
-  blog: {
-    link: '/blog/',
-    include: ['**/*.md'],
-    pagination: { prevPageText: '上一页', 'nextPageText': '下一页' }
-  },
-  navbar,
-  notes,
-  footer: {
-    copyright: 'Copyright © 2022-present pengzhanbo',
-  },
+
+  blog: { pagination: { prevPageText: '上一页', nextPageText: '下一页' } },
+  footer: { copyright: 'Copyright © 2022-present pengzhanbo' },
   outlineLabel: '内容大纲',
   returnToTopLabel: '返回顶部',
+  appearance: true,
   contributors: false,
   editLink: true,
   editLinkText: '在 GitHub 上编辑此页',
   lastUpdatedText: '上次更新',
   prevPageLabel: '上一页',
   nextPageLabel: '下一页',
-  docsDir: 'src',
-  themePlugins: {
+
+  plugins: {
     externalLinkIcon: false,
-    shikiji: {
-      theme: { light: "vitesse-light", dark: 'vitesse-dark' },
-    },
-    baiduTongji: {
-      key: '49ebcb8d1abfcde890ef6f320a101db7',
-    },
-    markdownEnhance: {
-      katex: true,
-    },
+    baiduTongji: { key: '49ebcb8d1abfcde890ef6f320a101db7' },
     docsearch: {
       appId: 'KRJOJ00KBL',
       apiKey: '3f3b13613235873fbcbc9d304de18126',

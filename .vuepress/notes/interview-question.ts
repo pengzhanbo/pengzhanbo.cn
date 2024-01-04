@@ -2,16 +2,13 @@ import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
 export default definePlumeNotesItemConfig({
   link: '/interview-question/',
-  text: '面试题解析',
   dir: '面试题',
   sidebar: [
     {
-      text: 'HTML',
       dir: 'HTML',
       items: ['DOCTYPE', '元素的分类', 'HTML5新特性', '语义化理解'],
     },
     {
-      text: 'CSS',
       dir: 'CSS',
       items: [
         '盒模型',
@@ -26,7 +23,6 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: 'JavaScript',
       dir: 'JavaScript',
       items: [
         '变量',
@@ -60,7 +56,6 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: '浏览器',
       dir: '浏览器',
       items: [
         '对浏览器的理解',
@@ -77,7 +72,6 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: '计算机网络',
       dir: '计算机网络',
       items: [
         'http协议',
@@ -91,7 +85,6 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: 'Vue',
       dir: 'Vue',
       items: [
         'VirtualDom',
@@ -131,17 +124,14 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: 'React',
       dir: 'React',
       items: [],
     },
     {
-      text: 'NodeJs',
       dir: 'NodeJs',
       items: [],
     },
     {
-      text: '工具',
       dir: '工具',
       items: [
         'git',
@@ -154,17 +144,14 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: '常用库',
       dir: '常用库',
       items: ['axios', 'lodash', 'UI框架'],
     },
     {
-      text: '安全',
       dir: '安全',
       items: ['XSS攻击', 'CSRF攻击', 'SQL注入攻击', 'CSP内容安全', '点击劫持'],
     },
     {
-      text: '算法',
       dir: '算法',
       items: [
         {
@@ -183,7 +170,6 @@ export default definePlumeNotesItemConfig({
       ],
     },
     {
-      text: '其他',
       dir: '其他',
       items: ['前端SEO', '前端性能优化'],
     },

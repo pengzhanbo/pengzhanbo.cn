@@ -1,6 +1,6 @@
-import type { NavItem } from 'vuepress-theme-plume'
+import  { defineNavbar } from 'vuepress-theme-plume'
 
-export default [
+export default defineNavbar([
   { text: '首页', link: '/', icon: 'material-symbols:home' },
   {
     text: '博客',
@@ -139,4 +139,4 @@ export default [
       },
     ],
   },
-] as NavItem[]
+])
