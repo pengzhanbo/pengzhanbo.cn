@@ -15,7 +15,7 @@ markdown 增强 由 [vuepress-plugin-md-enhance](https://vuepress-theme-hope.git
 2. note 注释
 3. info 信息
 4. warning 警告
-5. danger 危险
+5. caution 危险
 6. details 详情
 
 - 提示
@@ -134,6 +134,25 @@ markdown 增强 由 [vuepress-plugin-md-enhance](https://vuepress-theme-hope.git
 将这个内容进行 ==标记== ，变成高亮。
 ```
 将这个内容进行 ==标记== ，变成高亮。
+
+## 上下角标
+
+```md
+- 上角标： 19^th^
+- 下角标： H~2~O
+```
+
+- 上角标： 19^th^
+- 下角标： H~2~O
+
+## 数学表达式
+
+```md
+数学表达式： $-(2^{n-1})$ ~ $2^{n-1} -1$
+```
+
+
+数学表达式： $-(2^{n-1})$ ~ $2^{n-1} -1$
 
 ## 代码块分组
 

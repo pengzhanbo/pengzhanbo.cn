@@ -8,15 +8,44 @@ permalink: /note/vuepress-theme-plume/notes-config/
 `notes` 功能，是为了在本主题满足了 Blog的基本功能后，期望能够 以 `note` 或者 `book` 的形式聚合文章而形成的，形式上类似于 `vuepress` 默认主题的功能。同时也减少了配置的复杂度。
 
 ## 配置
-所有主题内部使用的插件， 均在 `notes` 字段中进行配置。
-``` js
-module.exports = {
-  themeConfig: {
+
+在主题函数的 `notes` 字段中进行配置。
+
+``` ts
+import { defineUserConfig } from 'vuepress'
+import { themePlume } from 'vuepress-theme-plume'
+
+export default defineUserConfig({
+  theme: themePlume({
     notes: {
       // this
     }
-  }
-}
+  })
+})
+```
+
+多语言下配置：
+
+``` ts
+import { defineUserConfig } from 'vuepress'
+import { themePlume } from 'vuepress-theme-plume'
+
+export default defineUserConfig({
+  theme: themePlume({
+    locales: {
+      '/': {
+        notes: {
+          // this
+        }
+      },
+      '/en/': {
+        notes: {
+          // this
+        }
+      }
+    }
+  })
+})
 ```
 
 ## 配置字段
@@ -52,7 +81,7 @@ interface PlumeThemeNotesItem {
   /**
    * note 标题
    */
-  text: string
+  text?: string
   /*
    * note 链接，相对于 前面配置的 link。
    * 如 /typescript-learn/  映射到访问链接则为 /note//typescript-learn/
@@ -128,7 +157,6 @@ export default defineUserConfig<PlumeThemeOptions>({
 ``` ts
 export default [
   {
-    text: 'VuePress-theme-plume',
     dir: 'vuepress-theme-plume',
     link: '/vuepress-theme-plume',
     sidebar: [

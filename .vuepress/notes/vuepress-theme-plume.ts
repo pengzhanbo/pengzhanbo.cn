@@ -16,19 +16,15 @@ export default definePlumeNotesItemConfig({
     {
       text: '配置',
       items: [
-        {
-          text: '主题配置',
-          link: '/note/vuepress-theme-plume/theme-config/',
-          items: [
-            '主题插件配置',
-            'notes配置',
-            '多语言配置',
-          ],
-        },
+        '主题配置',
+        '多语言配置',
+        '主题插件配置',
+        '导航栏配置',
+        'notes配置',
         '页面配置',
+        '内容搜索',
         '自定义样式',
         '扩展页面',
-        '内容搜索',
       ],
     },
     {

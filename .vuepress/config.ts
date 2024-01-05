@@ -30,5 +30,6 @@ export default defineUserConfig({
   plugins: [
     googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
   ],
+  
   theme,
 })
