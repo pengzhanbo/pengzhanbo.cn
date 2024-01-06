@@ -7,6 +7,7 @@ export default plumeTheme({
   hostname: 'https://pengzhanbo.cn/',
   repo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
   docsDir: 'src',
+  contributors: false,
 
   navbar,
   notes,
