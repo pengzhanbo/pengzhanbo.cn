@@ -23,6 +23,7 @@ export default definePlumeNotesItemConfig({
         'notes配置',
         '页面配置',
         '内容搜索',
+        '文章评论',
         '自定义样式',
         '扩展页面',
       ],

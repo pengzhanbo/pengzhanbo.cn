@@ -141,15 +141,17 @@ _notes
 ``` ts
 import { defineUserConfig } from 'vuepress'
 import type {PlumeThemeOptions } from 'vuepress-theme-plume'
+import { plumeTheme } from 'vuepress-theme-plume'
 import notes from './notes.ts'
+
 export default defineUserConfig<PlumeThemeOptions>({
-  themeConfig: {
+  theme: plumeTheme({
     notes: {
       dir: '_notes',
       link: '/note/',
       notes,
     }
-  }
+  })
 })
 ```
 

@@ -89,6 +89,58 @@ markdown 增强 由 [vuepress-plugin-md-enhance](https://vuepress-theme-hope.git
   详情信息
   :::
 
+## GFM alerts
+
+提供 github flavored markdown 的 alerts 支持。
+
+```md
+> [!note]
+> This is a note
+```
+
+> [!note]
+> This is a note
+
+```md
+> [!info]
+> This is a info
+```
+
+> [!info]
+> This is a info
+
+```md
+> [!warning]
+> This is a warning
+```
+
+> [!warning]
+> This is a warning
+
+```md
+> [!caution]
+> This is a caution
+```
+
+> [!caution]
+> This is a caution
+
+```md
+> [!tip]
+> This is a tip
+```
+
+> [!tip]
+> This is a tip
+
+```md
+> [!important]
+> This is a important
+```
+
+> [!important]
+> This is a important
+
 ## 自定义对齐
 
 - 左对齐
@@ -153,6 +205,30 @@ markdown 增强 由 [vuepress-plugin-md-enhance](https://vuepress-theme-hope.git
 
 
 数学表达式： $-(2^{n-1})$ ~ $2^{n-1} -1$
+
+## 内容分组
+
+````md
+::: tabs
+@tab 分组选项卡1
+分组选项卡内容 1
+
+**任意的 Markdown 语法**
+
+@tab 分组选项卡2
+分组选项卡内容 2
+:::
+````
+
+::: tabs
+@tab 分组选项卡1
+分组选项卡内容 1
+
+**任意的 Markdown 语法**
+
+@tab 分组选项卡2
+分组选项卡内容 2
+:::
 
 ## 代码块分组
 
@@ -603,6 +679,18 @@ export default () => {
 :::
 ````
 ::::
+
+## 脚注
+
+````md
+人生自古谁无死，留取丹心照汗青[^脚注1]。
+
+[^脚注1]: 出自 宋·文天祥 **《过零丁洋》**
+````
+
+人生自古谁无死，留取丹心照汗青[^脚注1]。
+
+[^脚注1]: 出自 宋·文天祥 **《过零丁洋》**
 
 ## 其他支持
 

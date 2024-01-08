@@ -1,6 +1,6 @@
-import  { defineNavbar } from 'vuepress-theme-plume'
+import  { defineNavbarConfig } from 'vuepress-theme-plume'
 
-export default defineNavbar([
+export default defineNavbarConfig([
   { text: '首页', link: '/', icon: 'material-symbols:home' },
   {
     text: '博客',
