@@ -13,19 +13,25 @@
     "preview": "anywhere -s -h localhost -d docs"
   },
   "dependencies": {
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
     "@vuepress/client": "2.0.0-rc.0",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.0",
     "@vuepress/utils": "2.0.0-rc.0",
     "anywhere": "^1.6.0",
-    "vue": "^3.4.5",
+    "vue": "^3.4.10",
     "vuepress": "2.0.0-rc.0",
-    "vuepress-theme-plume": "1.0.0-rc.20"
+    "vuepress-theme-plume": "1.0.0-rc.24"
   },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
         "@algolia/client-search"
       ]
+    },
+    "patchedDependencies": {
+      "@vuepress/markdown@2.0.0-rc.0": "patches/@vuepress__markdown@2.0.0-rc.0.patch"
     }
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
   }
 }

@@ -36,6 +36,7 @@ export default definePlumeNotesItemConfig({
         '全局组件',
         '代码块高亮',
         'markdown增强',
+        '实验性功能',
       ],
     },
   ],
