@@ -1,7 +1,7 @@
 import { getDirname, path } from '@vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import theme from './theme'
+import theme from './.vuepress/theme.js'
 
 const __dirname = getDirname(import.meta.url)
 const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
@@ -12,9 +12,9 @@ export default defineUserConfig({
     '/': { lang: 'zh-CN', title: '鹏展博', description: '热爱生活' },
   },
   dest: 'docs',
-  public: resolve('../public'),
-  temp: resolve('.temp'),
-  cache: resolve('.cache'),
+  public: resolve('public'),
+  temp: resolve('.vuepress/.temp'),
+  cache: resolve('.vuepress/.cache'),
   head: [
     ['link', { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' }],
     ['link', { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' }],
@@ -30,6 +30,6 @@ export default defineUserConfig({
   plugins: [
     googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
   ],
-  
+
   theme,
 })

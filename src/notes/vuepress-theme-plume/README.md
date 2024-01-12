@@ -5,10 +5,7 @@ permalink: /note/vuepress-theme-plume/
 author: 鹏展博
 ---
 
-[![npm version](https://img.shields.io/npm/v/vuepress-theme-plume?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/vuepress-theme-plume){style="margin-right:8px"}
-[![npm beta download](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-theme-plume?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/vuepress-theme-plume){style="margin-right:8px"}
-[![npm download](https://img.shields.io/npm/dm/vuepress-theme-plume?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/vuepress-theme-plume){style="margin-right:8px"}
-[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume)
+<Stamps :stamps="['nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-theme-plume' }, 'ndy', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
 
 ::: tip
 基于 [vuepress-next](https://github.com/vuepress/vuepress-next), 目前处于 RC 阶段。
@@ -36,16 +33,16 @@ __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 ::: code-tabs
 @tab pnpm
 ```sh
-pnpm add vuepress-theme-plume
+pnpm add vuepress-theme-plume vuepress@next @vuepress/client@next vue
 ```
 @tab yarn
 ``` sh
-yarn add vuepress-theme-plume
+yarn add vuepress-theme-plume vuepress@next @vuepress/client@next
 ```
 
 @tab npm
 ``` sh
-npm i vuepress-theme-plume
+npm i vuepress-theme-plume vuepress@next @vuepress/client@next
 ```
 :::
 
@@ -56,6 +53,7 @@ npm i vuepress-theme-plume
 ``` ts
 // .vuepress/config.ts
 import { defineUserConfig } from 'vuepress'
+
 import { plumeTheme } from 'vuepress-theme-plume'
 export default defineUserConfig({
   theme: plumeTheme({
@@ -68,7 +66,8 @@ export default defineUserConfig({
 ``` js
 // .vuepress/config.js
 import { plumeTheme } from 'vuepress-theme-plume'
-module.exports = {
+
+export default {
   theme: plumeTheme({
     // more...
   })

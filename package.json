@@ -8,8 +8,8 @@
   "author": "pengzhanbo",
   "license": "GPL-3.0",
   "scripts": {
-    "dev": "vuepress dev src --config .vuepress/config.ts",
-    "build": "vuepress build src --config .vuepress/config.ts --clean-cache --clean-temp",
+    "dev": "vuepress dev src",
+    "build": "vuepress build src --clean-cache --clean-temp",
     "preview": "anywhere -s -h localhost -d docs"
   },
   "dependencies": {

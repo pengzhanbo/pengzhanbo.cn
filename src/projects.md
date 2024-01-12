@@ -10,26 +10,18 @@ article: false
 
 ### vite-plugin-mock-dev-server
 
-![](https://img.shields.io/github/stars/pengzhanbo/vite-plugin-mock-dev-server?style=social)
-![](https://img.shields.io/npm/v/vite-plugin-mock-dev-server?style=flat-square)
-![](https://img.shields.io/npm/dt/vite-plugin-mock-dev-server?style=flat-square)
+<Stamps stamps="gs,nv,ndt,ndy,g" repo="pengzhanbo/vite-plugin-mock-dev-server" />
 
-
-仓库地址： [vite-plugin-mock-dev-server](https://github.com/pengzhanbo/vite-plugin-mock-dev-server)
 
 **说明：** 
 
-`vite-plugin-mock-dev-server` 专注于在 `Vite` 开发环境下 提供 Mock 服务。 通过 `vite` 内置的 `http` 和 `http-proxy` 服务，以 `middleware` 的方式，对 `server.proxy` 配置的代理路径 进行二次拦截，命中规则后，返回配置的 mock data 。
+`vite-plugin-mock-dev-server` 专注于在 `Vite` 开发环境下 提供 Mock 服务。 通过 `vite` 内置的 `http` 和 `http-proxy` 服务，以 `middleware` 的方式，对 `server.proxy` 配置的代理路径 进行二次拦截，命中规则后，返回配置的 mock data 。同时支持 mock WebSocket 服务。
 
 ----
 
 ### vite-plugin-image-placeholder
 
-![](https://img.shields.io/github/stars/pengzhanbo/vite-plugin-image-placeholder?style=social)
-![](https://img.shields.io/npm/v/vite-plugin-image-placeholder?style=flat-square)
-![](https://img.shields.io/npm/dt/vite-plugin-image-placeholder?style=flat-square)
-
-仓库地址：[vite-plugin-image-placeholder](https://github.com/pengzhanbo/vite-plugin-image-placeholder)
+<Stamps stamps="gs,nv,ndt,g" repo="pengzhanbo/vite-plugin-image-placeholder" />
 
 **说明：**
 
@@ -39,9 +31,7 @@ article: false
 
 ### vulcan
 
-![](https://img.shields.io/github/stars/pengzhanbo/vulcan?style=social)
-
-仓库地址： [vulcan](https://github.com/pengzhanbo/vulcan)
+<Stamps stamps="gs,g" repo="pengzhanbo/vulcan" />
 
 **说明：**
 
@@ -51,12 +41,7 @@ article: false
 
 ### vuepress-theme-plume
 
-![](https://img.shields.io/github/stars/pengzhanbo/vuepress-theme-plume?style=social)
-![](https://img.shields.io/npm/v/vuepress-theme-plume?style=flat-square)
-![](https://img.shields.io/npm/dt/@vuepress-plume/vuepress-theme-plume?style=flat-square&label=beta%20downloads)
-![](https://img.shields.io/npm/dt/vuepress-theme-plume?style=flat-square)
-
-仓库地址：[vuepress-theme-plume](https://github.com/pengzhanbo/vuepress-theme-plume)
+<Stamps :stamps="['gs', 'nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-theme-plume' }, 'ndt', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
 
 **说明：**
 
@@ -64,13 +49,19 @@ article: false
 
 ----
 
+### @any-hooks/solid
+
+<Stamps stamps="gs,nv,ndt,g" repo="any-hooks/solid-hooks" package="@any-hooks/solid" />
+
+**说明：**
+
+一套高质量可靠的 Solidjs Hooks 库。
+
+----
+
 ### stylelint-define-config
 
-![](https://img.shields.io/github/stars/stylelint-types/stylelint-define-config?style=social)
-![](https://img.shields.io/npm/v/stylelint-define-config?style=flat-square)
-![](https://img.shields.io/npm/dt/stylelint-define-config?style=flat-square)
-
-仓库地址： [stylelint-define-config](https://github.com/stylelint-types/stylelint-define-config)
+<Stamps stamps="gs,nv,ndt,g" repo="stylelint-types/stylelint-define-config" />
 
 **说明：**
 
@@ -80,9 +71,7 @@ article: false
 
 ### spearjs
 
-![](https://img.shields.io/github/stars/pengzhanbo/spearjs?style=social)
-
-仓库地址： [spearjs](https://github.com/pengzhanbo/spearjs)
+<Stamps stamps="gs,g" repo="pengzhanbo/spearjs" />
 
 **说明：**
 
