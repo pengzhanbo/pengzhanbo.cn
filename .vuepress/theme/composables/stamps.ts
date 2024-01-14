@@ -33,6 +33,7 @@ export interface StampsProps {
 export interface StampInfo {
   img: string
   link?: string
+  alt?: string
 }
 
 const hostname = 'https://img.shields.io'
@@ -98,46 +99,55 @@ export function resolveStamp(stamp: StampItem): StampInfo {
       return {
         img: `${hostname}/badge/source-a?logo=github&color=${labelColor}`,
         link: githubLink,
+        alt: 'github source',
       }
     case 'gs':
       return {
         img: `${hostname}/github/stars/${stamp.repo}?style=social`,
         link: githubLink,
+        alt: 'github stars',
       }
     case 'gl':
       return {
         img: `${hostname}/github/license/${stamp.repo}?color=${color}&labelColor=${labelColor}`,
         link: githubLink,
+        alt: 'github license',
       }
     case 'nv':
       return {
         img: `${hostname}/npm/v/${stamp.package}?color=${color}&labelColor=${labelColor}&label=npm`,
         link: npmLink,
+        alt: 'npm version',
       }
     case 'ndt':
       return {
         img: `${hostname}/npm/dt/${stamp.package}?color=${color}&labelColor=${labelColor}&label=${label || 'downloads'}`,
         link: npmLink,
+        alt: 'npm total downloads',
       }
     case 'ndd':
       return {
         img: `${hostname}/npm/dd/${stamp.package}?color=${color}&labelColor=${labelColor}&label=${label || 'downloads'}`,
         link: npmLink,
+        alt: 'npm daily downloads',
       }
     case 'ndw':
       return {
         img: `${hostname}/npm/dw/${stamp.package}?color=${color}&labelColor=${labelColor}&label=${label || 'downloads'}`,
         link: npmLink,
+        alt: 'npm weekly downloads',
       }
     case 'ndm':
       return {
         img: `${hostname}/npm/dm/${stamp.package}?color=${color}&labelColor=${labelColor}&label=${label || 'downloads'}`,
         link: npmLink,
+        alt: 'npm monthly downloads',
       }
     case 'ndy':
       return {
         img: `${hostname}/npm/dy/${stamp.package}?color=${color}&labelColor=${labelColor}&label=${label || 'downloads'}`,
         link: npmLink,
+        alt: 'npm yearly downloads',
       }
     default:
       return { img: `${hostname}/badge/unknown?color=${color}` }
