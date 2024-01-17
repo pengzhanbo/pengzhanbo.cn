@@ -6,6 +6,7 @@
     "CSSOM",
     "docsearch",
     "esbuild",
+    "flexbox",
     "frontmatter",
     "iconify",
     "instanceof",
@@ -18,6 +19,7 @@
     "shiki",
     "struct",
     "Tongji",
+    "twoslash",
     "typeof"
   ],
   "search.exclude": {
