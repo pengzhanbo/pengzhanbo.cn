@@ -4,3 +4,4 @@ node_modules
 .DS_Store
 docs
 __test__
+_draft
