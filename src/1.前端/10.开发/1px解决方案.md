@@ -6,7 +6,7 @@ author: pengzhanbo
 tags: 
   - html
   - css
-  - develop
+  - development
 ---
 
 在日常移动端前端应用开发中，经常遇到一个问题就是 1px的线在移动端 Retina屏下的渲染并未达到预期。以下总几种不同场景下的 1px解决方案。
