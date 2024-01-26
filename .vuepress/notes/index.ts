@@ -1,9 +1,9 @@
 import { definePlumeNotesConfig } from 'vuepress-theme-plume'
 import vuepressThemePlume from './vuepress-theme-plume'
-import interviewQuestion from './interview-question'
-import vuepressPlugin from './vuepress-plugin'
-import typeChallenges from './type-challenges'
-import learnRust from './learn-rust'
+import interviewQuestion from './interview-question.js'
+import vuepressPlugin from './vuepress-plugin.js'
+import typeChallenges from './type-challenges.js'
+import learnRust from './learn-rust.js'
 
 export default definePlumeNotesConfig({
   dir: 'notes',

@@ -1,6 +1,6 @@
 import { plumeTheme } from 'vuepress-theme-plume'
-import notes from './notes'
-import navbar from './navbar'
+import notes from './notes/index.js'
+import navbar from './navbar.js'
 
 export default plumeTheme({
   logo: '/images/blogger-fav.png',

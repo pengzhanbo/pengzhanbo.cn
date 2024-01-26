@@ -1,7 +1,8 @@
-import { getDirname, path } from '@vuepress/utils'
+import { getDirname, path } from 'vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import theme from './.vuepress/theme.js'
+import { viteBundler } from '@vuepress/bundler-vite'
 
 const __dirname = getDirname(import.meta.url)
 const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
@@ -31,5 +32,7 @@ export default defineUserConfig({
     googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
   ],
 
+  bundler: viteBundler(),
+  
   theme,
 })
