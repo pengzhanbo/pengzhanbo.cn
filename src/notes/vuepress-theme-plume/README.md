@@ -33,45 +33,43 @@ __基于 `vuepress 2.0` 制作的 `Blog` 主题。__
 ::: code-tabs
 @tab pnpm
 ```sh
-pnpm add vuepress-theme-plume vuepress@next @vuepress/client@next vue
+# 安装 vuepress
+pnpm add -D vuepress@next vue
+# 安装 主题和打包工具
+pnpm add -D vuepress-theme-plume @vuepress/bundler-vite@next
 ```
 @tab yarn
 ``` sh
-yarn add vuepress-theme-plume vuepress@next @vuepress/client@next
+# 安装 vuepress
+yarn add -D vuepress@next
+# 安装 主题和打包工具
+yarn add -D vuepress-theme-plume @vuepress/bundler-vite@next
 ```
 
 @tab npm
 ``` sh
-npm i vuepress-theme-plume vuepress@next @vuepress/client@next
+# 安装 vuepress
+npm i -D vuepress@next
+# 安装 主题和打包工具
+npm i -D vuepress-theme-plume @vuepress/bundler-vite@next
 ```
 :::
 
 ## 使用
 
 ::: code-tabs
-@tab ts
+@tab .vuepress/config.js
 ``` ts
-// .vuepress/config.ts
 import { defineUserConfig } from 'vuepress'
-
+import { viteBundler } from '@vuepress/bundler-vite'
 import { plumeTheme } from 'vuepress-theme-plume'
+
 export default defineUserConfig({
   theme: plumeTheme({
     // more...
-  })
+  }),
+  bundler: viteBundler(),
 })
-```
-
-@tab js
-``` js
-// .vuepress/config.js
-import { plumeTheme } from 'vuepress-theme-plume'
-
-export default {
-  theme: plumeTheme({
-    // more...
-  })
-}
 ```
 :::
 
