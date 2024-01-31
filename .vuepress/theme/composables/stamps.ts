@@ -21,6 +21,7 @@ export interface StampItem {
   labelColor?: string
   repo?: string
   subpath?: string
+  branch?: string
   package?: string
 }
 
@@ -28,6 +29,7 @@ export interface StampsProps {
   stamps: StampType | StampItem | (StampItem | StampType)[]
   repo: string
   subpath?: string
+  branch?: string
   package?: string
 }
 
@@ -47,12 +49,13 @@ export function useStamps({
   stamps,
   repo,
   subpath,
+  branch,
   package: packageName
 }: ToRefs<StampsProps>) {
   const info = computed(() => {
     const [, repoName] = repo.value.split('/')
     const npmPackage = packageName?.value ?? repoName
-    return { repo: repo.value, npmPackage, subpath: subpath?.value }
+    return { repo: repo.value, npmPackage, subpath: subpath?.value, branch: branch?.value ?? 'main' }
   })
   
   const stampList = computed(() => {
@@ -71,6 +74,7 @@ export function useStamps({
         return {
           type: item,
           repo: info.value.repo,
+          branch: info.value.branch,
           package: info.value.npmPackage,
           subpath: info.value.subpath,
         }
@@ -80,6 +84,7 @@ export function useStamps({
           repo: item.repo ?? info.value.repo,
           package: item.package ?? info.value.npmPackage,
           subpath: item.subpath ?? info.value.subpath,
+          branch: item.branch ?? info.value.branch,
         }
       }
     })
@@ -91,7 +96,8 @@ export function useStamps({
 export function resolveStamp(stamp: StampItem): StampInfo {
   const color = stamp.color ?? defaultColor
   const labelColor = stamp.labelColor ?? defaultLabelColor
-  const githubLink = `${github}/${stamp.repo}${stamp.subpath ? `/${stamp.subpath}` : ''}`
+  const branch = stamp.branch ?? 'main'
+  const githubLink = `${github}/${stamp.repo}${stamp.subpath ? `/tree/${branch}/${stamp.subpath}` : ''}`
   const label = stamp.label ?? ''
   const npmLink = `${npm}/${stamp.package}`
 

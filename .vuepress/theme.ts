@@ -45,8 +45,8 @@ export default plumeTheme({
       mapping: 'pathname',
       reactionsEnabled: true,
       inputPosition: 'top',
-      darkTheme: 'dark_protanopia' as any,
-      lightTheme: 'light_protanopia' as any,
+      darkTheme: 'dark_protanopia',
+      lightTheme: 'light_protanopia',
     },
   },
 })

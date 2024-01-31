@@ -9,7 +9,7 @@ const info = computed(() => resolveStamp(props))
 
 <template>
   <img v-if="!info.link" :src="info.img" :alt="info.alt" />
-  <a :href="info.link" target="_blank" rel="noreferrer">
-    <img v-if="info.link" :src="info.img" :alt="info.alt" />
+  <a v-else :href="info.link" target="_blank" rel="noreferrer">
+    <img :src="info.img" :alt="info.alt" />
   </a>
 </template>
