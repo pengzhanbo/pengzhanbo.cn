@@ -5,10 +5,12 @@ createTime: 2023/02/26 05:06:44
 permalink: /note/vuepress-plugin/blog-data/
 ---
 
-[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-blog-data){style="margin-right:8px"}
-[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-blog-data){style="margin-right:8px"}
-[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-blog-data?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-blog-data){style="margin-right:8px"}
-[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-blog-data)
+<Stamps
+  :stamps="['nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-plugin-blog-data' }, 'ndy', 'g']"
+  repo="pengzhanbo/vuepress-theme-plume"
+  subpath="plugins/plugin-blog-data"
+  package="@vuepress-plume/plugin-blog-data"
+/>
 
 
 
@@ -42,6 +44,7 @@ pnpm add @vuepress-plume/plugin-blog-data
 ```ts
 // .vuepress/config.ts
 import blogDataPlugin from '@vuepress-plume/plugin-blog-data'
+
 module.exports = {
   //...
   plugins: [
@@ -89,6 +92,7 @@ interface BlogDataPluginOptions {
 import { useBlogPostData } from '@vuepress-plume/plugin-blog-data/client'
 const postList = useBlogPostData()
 </script>
+
 <template>
   <div v-for="post in postList">
     <h3>{{ post.title }}</h3>

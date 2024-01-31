@@ -5,11 +5,12 @@ createTime: 2023/02/26 05:07:33
 permalink: /note/vuepress-plugin/iconify/
 ---
 
-[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-iconify?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-iconify){style="margin-right:8px"}
-[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-iconify?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-iconify){style="margin-right:8px"}
-[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-iconify?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-iconify){style="margin-right:8px"}
-[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-iconify)
-
+<Stamps
+  :stamps="['nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-plugin-iconify' }, 'ndy', 'g']"
+  repo="pengzhanbo/vuepress-theme-plume"
+  subpath="plugins/plugin-iconify"
+  package="@vuepress-plume/plugin-iconify"
+/>
 
 
 ## 指南

@@ -5,15 +5,17 @@ author: pengzhanbo
 permalink: /note/vuepress-plugin/caniuse/
 ---
 
-[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-caniuse?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-caniuse){style="margin-right:8px"}
-[![npm beta download](https://img.shields.io/npm/dy/@vuepress-plume/vuepress-plugin-caniuse?color=32A9C3&labelColor=1B3C4A&label=beta%20downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-caniuse){style="margin-right:8px"}
-[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-caniuse?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-caniuse){style="margin-right:8px"}
-[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-caniuse)
+<Stamps
+  :stamps="['nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-plugin-caniuse' }, 'ndy', 'g']"
+  repo="pengzhanbo/vuepress-theme-plume"
+  subpath="plugins/plugin-caniuse"
+  package="@vuepress-plume/plugin-caniuse"
+/>
 
 
 ## 指南
 
-为你的 vuepress 站点，在编辑 技术文章时， 提供 嵌入 [can-i-use](https://caniuse.com/) WEB feature 各平台支持说明图标 的功能。
+为你的 vuepress 站点，在编写文章时， 提供嵌入 [can-i-use](https://caniuse.com/) WEB feature 各平台支持说明 的功能。
 
 方便在描述某个 WEB feature 时，能更直观的表述 该特性的支持程度。
 
@@ -53,16 +55,6 @@ export default defineUserConfig({
     caniusePlugin()
   ]
 })
-```
-@tab .vuepress/config.js
-``` js
-const { caniusePlugin } = require('@vuepress-plume/plugin-caniuse')
-
-module.exports = {
-  plugins: [
-    caniusePlugin()
-  ]
-}
 ```
 :::
 

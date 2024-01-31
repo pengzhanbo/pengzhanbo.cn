@@ -5,9 +5,12 @@ createTime: 2023/12/30 23:22:35
 permalink: /note/vuepress-plugin/content-update/
 ---
 
-[![npm version](https://img.shields.io/npm/v/@vuepress-plume/plugin-content-update?color=32A9C3&labelColor=1B3C4A&label=npm)](https://www.npmjs.com/package/@vuepress-plume/plugin-content-update){style="margin-right:8px"}
-[![npm download](https://img.shields.io/npm/dy/@vuepress-plume/plugin-content-update?color=32A9C3&labelColor=1B3C4A&label=downloads)](https://www.npmjs.com/package/@vuepress-plume/plugin-content-update){style="margin-right:8px"}
-[![github source](https://img.shields.io/badge/source-a?logo=github&color=1B3C4A)](https://github.com/pengzhanbo/vuepress-theme-plume/tree/main/plugins/plugin-content-update)
+<Stamps
+  :stamps="['nv', 'ndy', 'g']"
+  repo="pengzhanbo/vuepress-theme-plume"
+  subpath="plugins/plugin-content-update"
+  package="@vuepress-plume/plugin-content-update"
+/>
 
 
 ## 指南
