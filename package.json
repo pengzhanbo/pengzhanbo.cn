@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.14.3",
+  "packageManager": "pnpm@8.15.1",
   "description": "",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -20,6 +20,11 @@
     "vuepress": "2.0.0-rc.2",
     "vuepress-theme-plume": "1.0.0-rc.30"
   },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "tsconfig-vuepress": "^4.5.0",
+    "typescript": "^5.3.3"
+  },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
@@ -29,11 +34,6 @@
     "patchedDependencies": {
       "@vuepress/markdown@2.0.0-rc.2": "patches/@vuepress__markdown@2.0.0-rc.2.patch"
     }
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "tsconfig-vuepress": "^4.5.0",
-    "typescript": "^5.3.3"
   },
   "engines": {
     "node": ">=18.16.0"
