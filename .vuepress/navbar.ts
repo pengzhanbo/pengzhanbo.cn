@@ -15,7 +15,7 @@ export default defineNavbarConfig([
     activeMatch: '^/note/(vuepress-theme-plume|vuepress-plugin)/',
     items: [
       {
-        text: 'Vite Plugin',
+        text: 'Vite',
         icon: 'vscode-icons:file-type-vite',
         items: [
           {
@@ -23,11 +23,16 @@ export default defineNavbarConfig([
             link: 'https://vite-plugin-mock-dev-server.netlify.app/',
             icon: 'carbon:server-proxy',
           },
+          {
+            text: 'vite-plugin-image-placeholder',
+            link: 'https://github.com/pengzhanbo/vite-plugin-image-placeholder',
+            icon: 'bi:image-fill',
+          }
         ],
       },
       {
-        text: 'Vuepress Theme',
-        icon: 'icon-park-solid:theme',
+        text: 'Vuepress',
+        icon: 'vscode-icons:file-type-vue',
         items: [
           {
             text: 'vuepress-theme-plume',
@@ -35,50 +40,44 @@ export default defineNavbarConfig([
             icon: 'mdi:paper-airplane',
             activeMatch: '^/note/vuepress-theme-plume/',
           },
-        ],
-      },
-      {
-        text: 'Vuepress Plugin',
-        icon: 'mingcute:plugin-2-fill',
-        items: [
           {
-            text: 'caniuse',
+            text: 'plugin-caniuse',
             link: '/note/vuepress-plugin/caniuse/',
             activeMatch: '/note/vuepress-plugin/caniuse/',
             icon: 'pajamas:feature-flag',
           },
           {
-            text: 'auto-frontmatter',
+            text: 'plugin-auto-frontmatter',
             link: '/note/vuepress-plugin/auto-frontmatter/',
             activeMatch: '/note/vuepress-plugin/auto-frontmatter/',
             icon: 'material-symbols:move-selection-down-rounded',
           },
           {
-            text: 'blog-data',
+            text: 'plugin-blog-data',
             link: '/note/vuepress-plugin/blog-data/',
             activeMatch: '/note/vuepress-plugin/blog-data/',
             icon: 'ic:baseline-post-add',
           },
           {
-            text: 'notes-data',
+            text: 'plugin-notes-data',
             link: '/note/vuepress-plugin/notes-data/',
             activeMatch: '/note/vuepress-plugin/notes-data/',
             icon: 'material-symbols:note-alt-rounded',
           },
           {
-            text: 'shikiji',
+            text: 'plugin-shikiji',
             link: '/note/vuepress-plugin/shikiji/',
             activeMatch: '/note/vuepress-plugin/shikiji/',
             icon: 'material-symbols-light:code-blocks-outline-rounded',
           },
           {
-            text: 'iconify',
+            text: 'plugin-iconify',
             link: '/note/vuepress-plugin/iconify/',
             activeMatch: '/note/vuepress-plugin/iconify/',
             icon: 'line-md:iconify1',
           },
           {
-            text: 'netlify-functions',
+            text: 'plugin-netlify-functions',
             link: '/note/vuepress-plugin/netlify-functions/',
             activeMatch: '/note/vuepress-plugin/netlify-functions/',
             icon: 'teenyicons:netlify-solid',
@@ -90,6 +89,30 @@ export default defineNavbarConfig([
   {
     text: '笔记',
     icon: 'icon-park-solid:bookshelf',
+    items: [
+      {
+        text: '前端面试题',
+        link: '/note/interview-question/',
+        activeMatch: '^/note/interview-question/',
+        icon: 'codicon:comment-unresolved',
+      },
+      {
+        text: 'type-challenges',
+        link: '/note/type-challenges/',
+        activeMatch: '^/note/type-challenges/',
+        icon: 'mdi:language-typescript',
+      },
+      {
+        text: 'Rust学习简记',
+        link: '/note/learn-rust/',
+        activeMatch: '^/note/learn-rust/',
+        icon: 'mdi:language-rust',
+      },
+    ],
+  },
+  {
+    text: '更多',
+    icon: 'mingcute:more-3-fill',
     items: [
       {
         text: '书籍推荐',
@@ -109,34 +132,16 @@ export default defineNavbarConfig([
         icon: 'grommet-icons:cli',
         activeMatch: '^/cli',
       },
-      {
-        text: '前端面试题',
-        link: '/note/interview-question/',
-        activeMatch: '^/note/interview-question/',
-        icon: 'codicon:comment-unresolved',
-      },
-      {
-        text: 'type-challenges',
-        link: '/note/type-challenges/',
-        activeMatch: '^/note/type-challenges/',
-        icon: 'mdi:language-typescript',
-      },
-      {
-        text: 'Rust学习简记',
-        link: '/note/learn-rust/',
-        activeMatch: '^/note/learn-rust/',
-        icon: 'mdi:language-rust',
-      },
-      {
-        text: 'You-Need-Know-Vite',
-        link: 'https://you-need-know-vite.netlify.app/',
-        icon: 'vscode-icons:file-type-vite',
-      },
-      {
-        text: '中国古典文学',
-        link: 'https://poetry.pengzhanbo.cn',
-        icon: 'icon-park-outline:chinese',
-      },
+      // {
+      //   text: 'You-Need-Know-Vite',
+      //   link: 'https://you-need-know-vite.netlify.app/',
+      //   icon: 'vscode-icons:file-type-vite',
+      // },
+      // {
+      //   text: '中国古典文学',
+      //   link: 'https://poetry.pengzhanbo.cn',
+      //   icon: 'icon-park-outline:chinese',
+      // },
     ],
-  },
+  }
 ])

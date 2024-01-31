@@ -18,7 +18,7 @@
     "anywhere": "^1.6.0",
     "vue": "^3.4.15",
     "vuepress": "2.0.0-rc.2",
-    "vuepress-theme-plume": "1.0.0-rc.29"
+    "vuepress-theme-plume": "1.0.0-rc.30"
   },
   "pnpm": {
     "peerDependencyRules": {
