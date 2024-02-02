@@ -2,8 +2,8 @@
 title: WebComponent——template
 lang: zh-CN
 tags: 
-  - WebComponent
   - javascript
+  - html
 createTime: 2018/08/02 11:15:27
 permalink: /article/5fmy4kla/
 author: pengzhanbo

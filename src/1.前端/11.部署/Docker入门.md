@@ -2,6 +2,8 @@
 title: Docker 简易入门指南
 createTime: 2021/12/28 12:51:54
 permalink: /article/0ed6asz0/
+tags: 
+  - deploy
 author: 鹏展博
 ---
 

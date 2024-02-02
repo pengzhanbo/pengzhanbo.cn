@@ -2,6 +2,9 @@
 title: vite插件推荐
 author: 鹏展博
 createTime: 2023/01/10 02:45:06
+tags: 
+  - node
+  - vite
 permalink: /article/8vac55c7/
 ---
 

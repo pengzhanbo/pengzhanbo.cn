@@ -2,6 +2,9 @@
 title: Webpack场景下的项目优化方案
 author: pengzhanbo
 createTime: 2022/10/11 09:20:02
+tags: 
+  - node
+  - webpack
 permalink: /article/fybr4lt3/
 ---
 
