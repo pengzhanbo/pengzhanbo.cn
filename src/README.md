@@ -1,8 +1,10 @@
 ---
 home: true
-banner: /images/home-banner.jpg
+# banner: /images/home-banner.jpg
+banner: http://file.mo7.cc/api/public/bz
 bannerMask: 
-  dark: 0.2
+  light: 0.1
+  dark: 0.3
 hero: 
   name: 鹏展博
   tagline: Front End Developer
