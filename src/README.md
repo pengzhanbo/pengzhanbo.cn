@@ -1,6 +1,5 @@
 ---
 home: true
-# banner: /images/home-banner.jpg
 banner: http://file.mo7.cc/api/public/bz
 bannerMask: 
   light: 0.1
