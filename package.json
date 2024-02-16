@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.15.1",
+  "packageManager": "pnpm@8.15.3",
   "description": "",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -13,12 +13,12 @@
     "preview": "anywhere -s -h localhost -d docs"
   },
   "dependencies": {
-    "@vuepress/bundler-vite": "2.0.0-rc.2",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.7",
+    "@vuepress/bundler-vite": "2.0.0-rc.7",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.12",
     "anywhere": "^1.6.0",
-    "vue": "^3.4.15",
-    "vuepress": "2.0.0-rc.2",
-    "vuepress-theme-plume": "1.0.0-rc.32"
+    "vue": "^3.4.19",
+    "vuepress": "2.0.0-rc.7",
+    "vuepress-theme-plume": "1.0.0-rc.33"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
@@ -32,7 +32,7 @@
       ]
     },
     "patchedDependencies": {
-      "@vuepress/markdown@2.0.0-rc.2": "patches/@vuepress__markdown@2.0.0-rc.2.patch"
+      "@vuepress/markdown@2.0.0-rc.7": "patches/@vuepress__markdown@2.0.0-rc.7.patch"
     }
   },
   "engines": {

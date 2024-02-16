@@ -1,5 +1,5 @@
 diff --git a/dist/index.js b/dist/index.js
-index de136bbd25d01677b7b86b6654b780765b9b7cec..6d2aa27273db337272a4e5659b161905cf61df20 100644
+index 057c2897fdb1a01960724b83707a9c9d28205988..86718db73cce638941eb5f79f8c83bac93a17401 100644
 --- a/dist/index.js
 +++ b/dist/index.js
 @@ -267,7 +267,7 @@ var codePlugin = (md, {
