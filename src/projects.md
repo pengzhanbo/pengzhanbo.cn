@@ -10,7 +10,7 @@ article: false
 
 ### vite-plugin-mock-dev-server
 
-<Stamps stamps="gs,nv,ndt,ndy,g" repo="pengzhanbo/vite-plugin-mock-dev-server" />
+<Stamps stamps="gs,nv,ndy,g" repo="pengzhanbo/vite-plugin-mock-dev-server" />
 
 
 **说明：** 
@@ -41,7 +41,7 @@ article: false
 
 ### vuepress-theme-plume
 
-<Stamps :stamps="['gs', 'nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-theme-plume' }, 'ndt', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
+<Stamps :stamps="['gs', 'nv', 'ndy', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
 
 **说明：**
 
