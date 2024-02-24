@@ -18,7 +18,7 @@
     "anywhere": "^1.6.0",
     "vue": "^3.4.19",
     "vuepress": "2.0.0-rc.8",
-    "vuepress-theme-plume": "1.0.0-rc.37"
+    "vuepress-theme-plume": "1.0.0-rc.38"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
