@@ -26,14 +26,17 @@ function foo(x: string | number) {
 
 但是，在这里通常会遇到的一个痛点是，`x` 缩窄后的类型并不总是保留函数的闭包中：
 
-```ts twoslash
-// @errors:2339
+```ts
 function getUrls(url: string | URL, names: string[]) {
   if (typeof url === 'string') {
     url = new URL(url)
   }
   return names.map(name => {
     url.searchParams.set('name', name)
+//      ^^^^^^^^^^^^
+// error:
+//   Property 'searchParams' does not exist on type 'string | URL'.
+//   Property 'searchParams' does not exist on type 'string'.
     return url.toString()
   })
 }
@@ -52,21 +55,21 @@ function getUrls(url: string | URL, names: string[]) {
 
 但是请注意，如果变量在嵌套函数中的任何位置赋值，则不会进行缩窄分析。这是因为没有办法确定以后是否会调用该函数。
 
-```ts twoslash
-// @errors: 18048
+```ts
 function printValueLater(value: string | undefined) {
     if (value === undefined) {
       value = 'missing!'
     }
 
     setTimeout(() => {
-      // Modifying 'value', even in a way that shouldn't affect
-      // its type, will invalidate type refinements in closures.
+      // 修改 `value`，即使是以不影响其类型的方式，也会使闭包中的类型收缩无效。
       value = value;
     }, 500);
 
     setTimeout(() => {
       console.log(value.toUpperCase())
+//                ^^^^^
+// error: 'value' is possibly 'undefined'.
     }, 1000);
 }
 ```
@@ -123,14 +126,17 @@ createStreetLight(["red", "yellow", "green"], "blue")
 
 目前我们通常是添加一个新的类型参数，该参数由现有的类型参数进行约束。
 
-```ts twoslash
-// @errors: 2345
+```ts
 function createStreetLight<
   C extends string,
   D extends C
 >(colors: C[], defaultColor?: D) {}
 
 createStreetLight(["red", "yellow", "green"], "blue");
+//                                            ^^^^^^
+// error:
+//   Argument of type '"blue"' is not assignable to parameter of 
+//   type '"red" | "yellow" | "green" | undefined'.
 ```
 
 这是可行的，但是有点尴尬。因为 签名 `createStreetLight` 可能不会在其他地方使用泛型参数 `D`。
@@ -147,8 +153,9 @@ function createStreetLight<C extends string>(colors: C[], defaultColor?: NoInfer
 
 createStreetLight(["red", "yellow", "green"], "blue");
 //                                            ~~~~~~
-// error!
-// Argument of type '"blue"' is not assignable to parameter of type '"red" | "yellow" | "green" | undefined'.
+// error:
+//   Argument of type '"blue"' is not assignable to parameter
+//   of type '"red" | "yellow" | "green" | undefined'.
 ```
 
 排除 `defaultColor` 类型进行推理意味着 `"blue"` 永远不会作为推理候选，并且类型检查器可以拒绝它。
