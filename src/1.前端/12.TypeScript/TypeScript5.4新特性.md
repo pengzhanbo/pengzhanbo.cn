@@ -2,7 +2,7 @@
 title: TypeScript5.4 值得关注的新特性
 author: 鹏展博
 createTime: 2024/02/23 21:13:11
-tags:
+tags: 
   - typescript
 permalink: /article/0aqe7kd8/
 ---
@@ -48,7 +48,7 @@ function getUrls(url: string | URL, names: string[]) {
 
 而在这个例子中，回调函数始终在 `url` 完成赋值后创建，并且它也是最后一次赋值，所以 `url` 的类型总是 `URL`。
 `typescript@5.4` 利用这一点，使类型收缩变得更加智能。
-在非提升函数（non-hoisted functions）中使用 **参数** 和 **通过 `let` 声明的变量** 时，`typescript` 检查器会
+在 **非提升函数（non-hoisted functions）** 中使用 **参数** 和 **通过 `let` 声明的变量** 时，`typescript` 检查器会
 查找最后一个赋值点，如果能够找到，`typescript` 就可以安全的对该变量做类型收缩。
 
 因此，在 `typescript@5.4` 中，上面的例子将不再报错。
@@ -116,6 +116,8 @@ function createStreetLight<C extends string>(
 // 这不符合预期，但还是通过了检查
 createStreetLight(["red", "yellow", "green"], "blue")
 // ^?
+        //
+        //
         //
 
 ```

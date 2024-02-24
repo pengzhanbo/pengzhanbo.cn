@@ -28,6 +28,7 @@ export default plumeTheme({
   plugins: {
     externalLinkIcon: false,
     baiduTongji: { key: '49ebcb8d1abfcde890ef6f320a101db7' },
+    shiki: { twoslash: true },
 
     docsearch: {
       appId: 'KRJOJ00KBL',
