@@ -24,6 +24,7 @@ export default definePlumeNotesItemConfig({
         '页面配置',
         '内容搜索',
         '文章评论',
+        '加密',
         '自定义样式',
         '扩展页面',
       ],
