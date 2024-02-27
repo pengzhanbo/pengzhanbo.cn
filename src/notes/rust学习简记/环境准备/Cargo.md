@@ -2,7 +2,7 @@
 title: Cargo
 author: 鹏展博
 createTime: 2022/06/02 05:14:57
-permalink: /note/learn-rust/cargo/
+permalink: /learn-rust/cargo/
 ---
 
 ## 包管理器

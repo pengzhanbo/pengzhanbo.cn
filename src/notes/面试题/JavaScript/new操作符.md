@@ -2,7 +2,7 @@
 title: new操作符
 createTime: 2022/04/22 06:57:30
 author: pengzhanbo
-permalink: /note/interview-question/chnx193c/
+permalink: /interview-question/chnx193c/
 ---
 
 ::: tip 提问

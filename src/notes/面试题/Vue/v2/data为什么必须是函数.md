@@ -2,7 +2,7 @@
 title: data为什么必须是函数
 createTime: 2022/04/23 02:53:20
 author: pengzhanbo
-permalink: /note/interview-question/rumwg3ew/
+permalink: /interview-question/rumwg3ew/
 ---
 
 [![vue@2](https://img.shields.io/badge/vue-%402-brightgreen)](https://cn.vuejs.org/)

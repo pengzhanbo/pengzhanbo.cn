@@ -2,7 +2,7 @@
 title: plugin-shikiji
 author: 鹏展博
 createTime: 2023/12/23 13:21:28
-permalink: /note/vuepress-plugin/shikiji/
+permalink: /vuepress-plugin/shikiji/
 ---
 
 <Stamps

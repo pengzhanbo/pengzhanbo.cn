@@ -2,7 +2,7 @@
 title: API
 createTime: 2022/05/13 05:49:14
 author: pengzhanbo
-permalink: /note/vuepress-plugin/netlify-functions/api/
+permalink: /vuepress-plugin/netlify-functions/api/
 ---
 
 ## netlifyFunctionsPlugin(options)

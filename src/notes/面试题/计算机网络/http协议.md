@@ -2,7 +2,7 @@
 title: http协议
 createTime: 2022/04/18 06:52:36
 author: pengzhanbo
-permalink: /note/interview-question/6pdcf9h0/
+permalink: /interview-question/6pdcf9h0/
 ---
 
 ::: tip 提问

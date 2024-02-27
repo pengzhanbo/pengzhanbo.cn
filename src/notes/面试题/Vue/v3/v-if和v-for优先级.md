@@ -2,7 +2,7 @@
 title: v-if和v-for优先级
 createTime: 2022/04/24 01:33:45
 author: pengzhanbo
-permalink: /note/interview-question/45rxs5yv/
+permalink: /interview-question/45rxs5yv/
 ---
 
 ::: tip 提问

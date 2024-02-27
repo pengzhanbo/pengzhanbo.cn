@@ -2,7 +2,7 @@
 title: v-model
 createTime: 2022/04/23 11:00:21
 author: pengzhanbo
-permalink: /note/interview-question/3y2a3ptn/
+permalink: /interview-question/3y2a3ptn/
 ---
 
 [![vue@3](https://img.shields.io/badge/vue-%403-brightgreen)](https://staging-cn.vuejs.org/)

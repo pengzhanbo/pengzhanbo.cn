@@ -2,7 +2,7 @@
 title: netlify-functions
 createTime: 2022/05/13 01:28:38
 author: pengzhanbo
-permalink: /note/vuepress-plugin/netlify-functions/
+permalink: /vuepress-plugin/netlify-functions/
 ---
 
 <Stamps

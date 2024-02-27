@@ -2,7 +2,7 @@
 title: XSS攻击
 createTime: 2022/04/20 05:31:09
 author: pengzhanbo
-permalink: /note/interview-question/mvcgg9uz/
+permalink: /interview-question/mvcgg9uz/
 ---
 
 ::: tip 提问

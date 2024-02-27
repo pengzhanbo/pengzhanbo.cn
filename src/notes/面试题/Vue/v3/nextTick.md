@@ -2,7 +2,7 @@
 title: nextTick
 author: 鹏展博
 createTime: 2022/04/25 19:28:09
-permalink: /note/interview-question/e3adhfty/
+permalink: /interview-question/e3adhfty/
 ---
 
 ::: tip 提问

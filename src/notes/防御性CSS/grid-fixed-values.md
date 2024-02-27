@@ -2,7 +2,7 @@
 title: Grid fixed values
 author: 鹏展博
 createTime: 2023/08/06 10:46:45
-permalink: /note/defensive-css/grid-fixed-values/
+permalink: /defensive-css/grid-fixed-values/
 ---
 
 ## Grid fixed values

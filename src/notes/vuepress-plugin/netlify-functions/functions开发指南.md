@@ -2,7 +2,7 @@
 title: functions开发指南
 createTime: 2022/05/13 05:45:24
 author: pengzhanbo
-permalink: /note/vuepress-plugin/netlify-functions/develop-functions/
+permalink: /vuepress-plugin/netlify-functions/develop-functions/
 ---
 
 ## 说明

@@ -2,7 +2,7 @@
 title: axios
 createTime: 2022/04/17 11:38:09
 author: pengzhanbo
-permalink: /note/interview-question/7fmfc0hi/
+permalink: /interview-question/7fmfc0hi/
 ---
 
 [axios](https://github.com/axios/axios)

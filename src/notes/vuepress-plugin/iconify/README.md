@@ -2,7 +2,7 @@
 title: plugin-iconify
 author: 鹏展博
 createTime: 2023/02/26 05:07:33
-permalink: /note/vuepress-plugin/iconify/
+permalink: /vuepress-plugin/iconify/
 ---
 
 <Stamps

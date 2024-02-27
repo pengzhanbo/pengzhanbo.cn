@@ -2,7 +2,7 @@
 title: Grouping Vendor Selector
 author: 鹏展博
 createTime: 2024/01/17 18:55:35
-permalink: /note/defensive-css/grouping-vendor-selector/
+permalink: /defensive-css/grouping-vendor-selector/
 ---
 
 ## Grouping Vendor Selector

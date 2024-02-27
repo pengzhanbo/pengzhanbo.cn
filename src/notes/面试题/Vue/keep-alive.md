@@ -2,7 +2,7 @@
 title: keep-alive
 createTime: 2022/04/23 06:06:57
 author: pengzhanbo
-permalink: /note/interview-question/1cx7kiuy/
+permalink: /interview-question/1cx7kiuy/
 ---
 
 ::: tip 提问

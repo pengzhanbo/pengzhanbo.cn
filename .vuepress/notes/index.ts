@@ -7,7 +7,7 @@ import learnRust from './learn-rust.js'
 
 export default definePlumeNotesConfig({
   dir: 'notes',
-  link: '/note',
+  link: '/',
   notes: [
     vuepressThemePlume,
     interviewQuestion,

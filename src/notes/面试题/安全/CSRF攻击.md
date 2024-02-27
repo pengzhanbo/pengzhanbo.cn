@@ -2,7 +2,7 @@
 title: CSRF攻击
 createTime: 2022/04/20 05:31:27
 author: pengzhanbo
-permalink: /note/interview-question/qm07ep25/
+permalink: /interview-question/qm07ep25/
 ---
 
 ::: tip 提问

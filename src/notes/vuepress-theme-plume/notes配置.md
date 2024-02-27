@@ -2,7 +2,7 @@
 title: notes配置
 createTime: 2022/04/09 02:48:41
 author: pengzhanbo
-permalink: /note/vuepress-theme-plume/notes-config/
+permalink: /vuepress-theme-plume/notes-config/
 ---
 
 `notes` 功能，是为了在本主题满足了 Blog的基本功能后，期望能够 以 `note` 或者 `book` 的形式聚合文章而形成的，形式上类似于 `vuepress` 默认主题的功能。同时也减少了配置的复杂度。
@@ -67,7 +67,7 @@ export default defineUserConfig({
 ### link
 
 - 类型： `string`
-- 默认值： `'/note/'`
+- 默认值： `'/'`
 - 详情： 作为notes内的文章链接的前缀。自定义是请以 `'/'` 开头
 
 ### notes
@@ -84,7 +84,7 @@ interface PlumeThemeNotesItem {
   text?: string
   /*
    * note 链接，相对于 前面配置的 link。
-   * 如 /typescript-learn/  映射到访问链接则为 /note//typescript-learn/
+   * 如 /typescript-learn/  映射到访问链接则为 //typescript-learn/
    */
   link: string
   /*
@@ -148,7 +148,7 @@ export default defineUserConfig<PlumeThemeOptions>({
   theme: plumeTheme({
     notes: {
       dir: '_notes',
-      link: '/note/',
+      link: '/',
       notes,
     }
   })

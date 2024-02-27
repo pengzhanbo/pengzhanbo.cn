@@ -2,7 +2,7 @@
 title: plugin-auto-frontmatter
 author: 鹏展博
 createTime: 2023/02/26 04:21:15
-permalink: /note/vuepress-plugin/auto-frontmatter/
+permalink: /vuepress-plugin/auto-frontmatter/
 ---
 
 <Stamps

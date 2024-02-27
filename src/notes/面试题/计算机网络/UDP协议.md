@@ -2,7 +2,7 @@
 title: UDP协议
 createTime: 2022/04/18 06:53:22
 author: pengzhanbo
-permalink: /note/interview-question/1917jrv3/
+permalink: /interview-question/1917jrv3/
 ---
 
 ::: tip 提问 

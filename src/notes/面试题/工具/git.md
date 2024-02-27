@@ -2,7 +2,7 @@
 title: git
 createTime: 2022/04/17 10:47:34
 author: pengzhanbo
-permalink: /note/interview-question/ku3jvbnj/
+permalink: /interview-question/ku3jvbnj/
 ---
 
 ::: tip 提问

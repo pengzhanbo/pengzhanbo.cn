@@ -2,7 +2,7 @@
 title: DOM节点操作
 createTime: 2022/04/16 10:51:17
 author: pengzhanbo
-permalink: /note/interview-question/y5w6l1js/
+permalink: /interview-question/y5w6l1js/
 ---
 
 ::: tip 提问

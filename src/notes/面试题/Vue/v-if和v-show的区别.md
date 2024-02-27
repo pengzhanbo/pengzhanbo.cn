@@ -2,7 +2,7 @@
 title: v-if和v-show的区别
 createTime: 2022/04/23 01:46:42
 author: pengzhanbo
-permalink: /note/interview-question/nx0xqyp5/
+permalink: /interview-question/nx0xqyp5/
 ---
 
 ::: tip 提问

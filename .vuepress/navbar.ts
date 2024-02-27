@@ -12,7 +12,7 @@ export default defineNavbarConfig([
   {
     text: '技术文档',
     icon: 'mdi:idea',
-    activeMatch: '^/note/(vuepress-theme-plume|vuepress-plugin)/',
+    activeMatch: '^/(vuepress-theme-plume|vuepress-plugin)/',
     items: [
       {
         text: 'Vite',
@@ -36,50 +36,50 @@ export default defineNavbarConfig([
         items: [
           {
             text: 'vuepress-theme-plume',
-            link: '/note/vuepress-theme-plume/',
+            link: '/vuepress-theme-plume/',
             icon: 'mdi:paper-airplane',
-            activeMatch: '^/note/vuepress-theme-plume/',
+            activeMatch: '^/vuepress-theme-plume/',
           },
           {
             text: 'plugin-caniuse',
-            link: '/note/vuepress-plugin/caniuse/',
-            activeMatch: '/note/vuepress-plugin/caniuse/',
+            link: '/vuepress-plugin/caniuse/',
+            activeMatch: '/vuepress-plugin/caniuse/',
             icon: 'pajamas:feature-flag',
           },
           {
             text: 'plugin-auto-frontmatter',
-            link: '/note/vuepress-plugin/auto-frontmatter/',
-            activeMatch: '/note/vuepress-plugin/auto-frontmatter/',
+            link: '/vuepress-plugin/auto-frontmatter/',
+            activeMatch: '/vuepress-plugin/auto-frontmatter/',
             icon: 'material-symbols:move-selection-down-rounded',
           },
           {
             text: 'plugin-blog-data',
-            link: '/note/vuepress-plugin/blog-data/',
-            activeMatch: '/note/vuepress-plugin/blog-data/',
+            link: '/vuepress-plugin/blog-data/',
+            activeMatch: '/vuepress-plugin/blog-data/',
             icon: 'ic:baseline-post-add',
           },
           {
             text: 'plugin-notes-data',
-            link: '/note/vuepress-plugin/notes-data/',
-            activeMatch: '/note/vuepress-plugin/notes-data/',
+            link: '/vuepress-plugin/notes-data/',
+            activeMatch: '/vuepress-plugin/notes-data/',
             icon: 'material-symbols:note-alt-rounded',
           },
           {
             text: 'plugin-shikiji',
-            link: '/note/vuepress-plugin/shikiji/',
-            activeMatch: '/note/vuepress-plugin/shikiji/',
+            link: '/vuepress-plugin/shikiji/',
+            activeMatch: '/vuepress-plugin/shikiji/',
             icon: 'material-symbols-light:code-blocks-outline-rounded',
           },
           {
             text: 'plugin-iconify',
-            link: '/note/vuepress-plugin/iconify/',
-            activeMatch: '/note/vuepress-plugin/iconify/',
+            link: '/vuepress-plugin/iconify/',
+            activeMatch: '/vuepress-plugin/iconify/',
             icon: 'line-md:iconify1',
           },
           {
             text: 'plugin-netlify-functions',
-            link: '/note/vuepress-plugin/netlify-functions/',
-            activeMatch: '/note/vuepress-plugin/netlify-functions/',
+            link: '/vuepress-plugin/netlify-functions/',
+            activeMatch: '/vuepress-plugin/netlify-functions/',
             icon: 'teenyicons:netlify-solid',
           },
         ],
@@ -92,19 +92,19 @@ export default defineNavbarConfig([
     items: [
       {
         text: '前端面试题',
-        link: '/note/interview-question/',
+        link: '/interview-question/',
         activeMatch: '^/note/interview-question/',
         icon: 'codicon:comment-unresolved',
       },
       {
         text: 'type-challenges',
-        link: '/note/type-challenges/',
+        link: '/type-challenges/',
         activeMatch: '^/note/type-challenges/',
         icon: 'mdi:language-typescript',
       },
       {
         text: 'Rust学习简记',
-        link: '/note/learn-rust/',
+        link: '/learn-rust/',
         activeMatch: '^/note/learn-rust/',
         icon: 'mdi:language-rust',
       },

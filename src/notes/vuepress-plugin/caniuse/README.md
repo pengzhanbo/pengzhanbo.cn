@@ -2,7 +2,7 @@
 title: plugin-caniuse
 createTime: 2022/05/13 01:02:51
 author: pengzhanbo
-permalink: /note/vuepress-plugin/caniuse/
+permalink: /vuepress-plugin/caniuse/
 ---
 
 <Stamps

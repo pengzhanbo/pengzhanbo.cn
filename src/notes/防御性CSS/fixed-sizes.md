@@ -2,7 +2,7 @@
 title: Fixed sizes
 author: 鹏展博
 createTime: 2023/08/07 09:25:43
-permalink: /note/defensive-css/fixed-sizes/
+permalink: /defensive-css/fixed-sizes/
 ---
 
 ## Fixed sizes

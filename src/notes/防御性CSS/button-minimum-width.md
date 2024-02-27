@@ -2,7 +2,7 @@
 title: Button Minimum Width
 author: 鹏展博
 createTime: 2023/08/12 10:00:16
-permalink: /note/defensive-css/button-minimum-width/
+permalink: /defensive-css/button-minimum-width/
 ---
 
 ## Button Minimum Width

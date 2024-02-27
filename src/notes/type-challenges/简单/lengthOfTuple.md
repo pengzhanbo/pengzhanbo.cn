@@ -2,7 +2,7 @@
 title: ✔️ Length of Tuple
 createTime: 2022/12/01 02:21:05
 author: pengzhanbo
-permalink: /note/type-challenges/easy/length-of-tuple/
+permalink: /type-challenges/easy/length-of-tuple/
 ---
 
 ::: info 题目

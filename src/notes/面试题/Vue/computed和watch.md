@@ -2,7 +2,7 @@
 title: computed和watch
 createTime: 2022/04/23 05:36:27
 author: pengzhanbo
-permalink: /note/interview-question/y6r9lfa3/
+permalink: /interview-question/y6r9lfa3/
 ---
 
 ::: tip 提问

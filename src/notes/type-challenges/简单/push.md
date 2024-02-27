@@ -2,7 +2,7 @@
 title: ✔️ Push
 createTime: 2022/12/01 04:18:04
 author: pengzhanbo
-permalink: /note/type-challenges/easy/push/
+permalink: /type-challenges/easy/push/
 ---
 
 ::: info 题目

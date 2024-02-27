@@ -2,7 +2,7 @@
 title: Image Distortion
 author: 鹏展博
 createTime: 2023/08/03 19:08:28
-permalink: /note/defensive-css/image-distortion/
+permalink: /defensive-css/image-distortion/
 ---
 
 ## Image Distortion

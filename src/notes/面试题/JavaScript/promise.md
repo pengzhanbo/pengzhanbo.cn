@@ -2,7 +2,7 @@
 title: promise
 createTime: 2022/04/17 05:53:48
 author: pengzhanbo
-permalink: /note/interview-question/a895fu8f/
+permalink: /interview-question/a895fu8f/
 ---
 
 ::: tip 提问

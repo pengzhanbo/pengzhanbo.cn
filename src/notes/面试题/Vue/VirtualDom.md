@@ -2,7 +2,7 @@
 title: Virtual DOM
 createTime: 2022/04/21 05:30:37
 author: pengzhanbo
-permalink: /note/interview-question/w122van2/
+permalink: /interview-question/w122van2/
 ---
 
 ::: tip 提问

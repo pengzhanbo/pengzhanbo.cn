@@ -2,7 +2,7 @@
 title: Auto-fit Vs Auto-fill
 author: 鹏展博
 createTime: 2023/08/05 14:15:29
-permalink: /note/defensive-css/auto-fit-fill/
+permalink: /defensive-css/auto-fit-fill/
 ---
 
 ## Auto-fit Vs Auto-fill

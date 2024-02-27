@@ -2,7 +2,7 @@
 title: ✔️ Pick
 createTime: 2022/11/30 12:49:20
 author: pengzhanbo
-permalink: /note/type-challenges/easy/pick/
+permalink: /type-challenges/easy/pick/
 ---
 
 ::: info 题目

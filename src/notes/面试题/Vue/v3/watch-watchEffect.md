@@ -2,7 +2,7 @@
 title: watch-watchEffect
 author: 鹏展博
 createTime: 2022/04/25 22:19:38
-permalink: /note/interview-question/6lud0xnd/
+permalink: /interview-question/6lud0xnd/
 ---
 
 ::: tip 提问

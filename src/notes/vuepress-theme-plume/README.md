@@ -1,7 +1,7 @@
 ---
 title: vuepress-theme-plume
 createTime: 2022/04/08 08:52:12
-permalink: /note/vuepress-theme-plume/
+permalink: /vuepress-theme-plume/
 author: 鹏展博
 ---
 

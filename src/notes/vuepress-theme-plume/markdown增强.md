@@ -2,7 +2,7 @@
 title: markdown增强
 createTime: 2022/04/09 06:43:32
 author: pengzhanbo
-permalink: /note/vuepress-theme-plume/markdown-enhance/
+permalink: /vuepress-theme-plume/markdown-enhance/
 ---
 
 markdown 增强 由 [vuepress-plugin-md-enhance](https://vuepress-theme-hope.github.io/v2/md-enhance/zh) 提供支持。
@@ -694,4 +694,4 @@ export default () => {
 
 ## 其他支持
 
-更多支持请参考 [主题插件配置](/note/vuepress-theme-plume/plugins-config/#markdownenhance)
+更多支持请参考 [主题插件配置](/vuepress-theme-plume/plugins-config/#markdownenhance)

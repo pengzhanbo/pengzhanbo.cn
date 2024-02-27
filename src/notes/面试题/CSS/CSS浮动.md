@@ -2,7 +2,7 @@
 title: CSS浮动
 createTime: 2022/04/12 09:11:38
 author: pengzhanbo
-permalink: /note/interview-question/5yfvcq8k/
+permalink: /interview-question/5yfvcq8k/
 ---
 
 ::: tip 提问

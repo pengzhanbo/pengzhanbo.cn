@@ -2,7 +2,7 @@
 title: ➖ PartialByKeys
 createTime: 2022/12/01 03:52:33
 author: pengzhanbo
-permalink: /note/type-challenges/medium/partial-by-keys/
+permalink: /type-challenges/medium/partial-by-keys/
 ---
 
 ::: info 题目

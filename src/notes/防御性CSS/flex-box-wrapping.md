@@ -2,7 +2,7 @@
 title: FlexBox Wrapping
 author: 鹏展博
 createTime: 2023/08/03 19:06:31
-permalink: /note/defensive-css/flex-box-wrapping/
+permalink: /defensive-css/flex-box-wrapping/
 ---
 
 ## FlexBox Wrapping

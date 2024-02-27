@@ -2,7 +2,7 @@
 title: v-if和v-for优先级
 createTime: 2022/04/23 01:58:57
 author: pengzhanbo
-permalink: /note/interview-question/w6mai9ic/
+permalink: /interview-question/w6mai9ic/
 ---
 
 [![vue@2](https://img.shields.io/badge/vue-%402-brightgreen)](https://cn.vuejs.org/)

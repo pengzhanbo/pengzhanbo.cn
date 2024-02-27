@@ -2,7 +2,7 @@
 title: 在浏览器输入URL按下回车后发生了什么？
 createTime: 2022/04/20 10:35:55
 author: pengzhanbo
-permalink: /note/interview-question/y0fs63f1/
+permalink: /interview-question/y0fs63f1/
 ---
 
 ::: tip 提问

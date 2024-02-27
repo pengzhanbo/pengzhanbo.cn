@@ -2,7 +2,7 @@
 title: IFC,GFC,FFC
 createTime: 2022/04/22 07:23:13
 author: pengzhanbo
-permalink: /note/interview-question/6tzvt9fs/
+permalink: /interview-question/6tzvt9fs/
 ---
 
 ::: tip 提问

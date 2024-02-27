@@ -2,7 +2,7 @@
 title: TCP协议
 createTime: 2022/04/18 06:53:13
 author: pengzhanbo
-permalink: /note/interview-question/a6txp0c3/
+permalink: /interview-question/a6txp0c3/
 ---
 
 ::: tip 提问

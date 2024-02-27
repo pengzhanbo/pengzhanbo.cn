@@ -2,7 +2,7 @@
 title: SQL注入攻击
 createTime: 2022/04/20 05:31:45
 author: pengzhanbo
-permalink: /note/interview-question/eftuz9uz/
+permalink: /interview-question/eftuz9uz/
 ---
 
 ::: tip 提问

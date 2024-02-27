@@ -2,7 +2,7 @@
 title: plugin-notes-data
 author: 鹏展博
 createTime: 2023/02/26 05:07:59
-permalink: /note/vuepress-plugin/notes-data/
+permalink: /vuepress-plugin/notes-data/
 ---
 
 <Stamps

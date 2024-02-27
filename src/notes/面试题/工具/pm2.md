@@ -2,7 +2,7 @@
 title: pm2
 createTime: 2022/04/23 12:49:48
 author: pengzhanbo
-permalink: /note/interview-question/73zv8wla/
+permalink: /interview-question/73zv8wla/
 ---
 
 ::: tip 提问

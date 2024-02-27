@@ -2,7 +2,7 @@
 title: UI框架
 createTime: 2022/04/18 07:06:32
 author: pengzhanbo
-permalink: /note/interview-question/leu2g17b/
+permalink: /interview-question/leu2g17b/
 ---
 
 常用的 UI框架有包括：

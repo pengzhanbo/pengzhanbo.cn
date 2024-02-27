@@ -2,7 +2,7 @@
 title: ✔️ Tuple to Object
 createTime: 2022/12/01 12:59:56
 author: pengzhanbo
-permalink: /note/type-challenges/easy/tuple-to-object/
+permalink: /type-challenges/easy/tuple-to-object/
 ---
 
 ::: info 题目

@@ -2,7 +2,7 @@
 title: Background repeat
 author: 鹏展博
 createTime: 2023/08/05 22:56:46
-permalink: /note/defensive-css/background-repeat/
+permalink: /defensive-css/background-repeat/
 ---
 
 ## Background repeat

@@ -2,7 +2,7 @@
 title: plugin-blog-data
 author: 鹏展博
 createTime: 2023/02/26 05:06:44
-permalink: /note/vuepress-plugin/blog-data/
+permalink: /vuepress-plugin/blog-data/
 ---
 
 <Stamps

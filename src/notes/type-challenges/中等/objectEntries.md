@@ -2,7 +2,7 @@
 title: ➖ ObjectEntries
 createTime: 2022/12/01 04:37:10
 author: pengzhanbo
-permalink: /note/type-challenges/medium/object-entries/
+permalink: /type-challenges/medium/object-entries/
 ---
 
 ::: info 题目

@@ -2,7 +2,7 @@
 title: NaN
 createTime: 2022/04/15 03:35:01
 author: pengzhanbo
-permalink: /note/interview-question/jilzuxpt/
+permalink: /interview-question/jilzuxpt/
 ---
 
 ::: tip 提问

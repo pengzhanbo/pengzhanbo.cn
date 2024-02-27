@@ -2,7 +2,7 @@
 title: plugin-content-update
 author: 鹏展博
 createTime: 2023/12/30 23:22:35
-permalink: /note/vuepress-plugin/content-update/
+permalink: /vuepress-plugin/content-update/
 ---
 
 <Stamps

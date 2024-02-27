@@ -2,7 +2,7 @@
 title: 前端SEO
 createTime: 2022/04/14 11:04:59
 author: pengzhanbo
-permalink: /note/interview-question/ouqcf733/
+permalink: /interview-question/ouqcf733/
 ---
 
 1. 设置合适`title`、`description`、`keywords`，搜索引擎对这三项的权重逐步减小。

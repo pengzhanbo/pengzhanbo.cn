@@ -2,7 +2,7 @@
 title: DOCTYPE
 createTime: 2022/04/13 11:26:59
 author: pengzhanbo
-permalink: /note/interview-question/2whxs493/
+permalink: /interview-question/2whxs493/
 ---
 
 ::: tip 提问

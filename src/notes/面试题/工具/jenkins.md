@@ -2,7 +2,7 @@
 title: jenkins
 createTime: 2022/04/18 07:02:27
 author: pengzhanbo
-permalink: /note/interview-question/8hujc044/
+permalink: /interview-question/8hujc044/
 ---
 
 ::: tip 提问

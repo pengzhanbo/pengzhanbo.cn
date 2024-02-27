@@ -2,7 +2,7 @@
 title: MVC/MVP/MVVM
 createTime: 2022/04/20 02:32:11
 author: pengzhanbo
-permalink: /note/interview-question/ud3m8zxg/
+permalink: /interview-question/ud3m8zxg/
 ---
 
 ::: tip 提问

@@ -2,7 +2,7 @@
 title: this对象
 createTime: 2022/04/15 04:11:13
 author: pengzhanbo
-permalink: /note/interview-question/wdcjym47/
+permalink: /interview-question/wdcjym47/
 ---
 
 ::: tip 提问
