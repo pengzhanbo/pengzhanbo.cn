@@ -5,12 +5,10 @@ permalink: /vuepress-theme-plume/
 author: 鹏展博
 ---
 
-<Stamps :stamps="['nv', { type: 'ndt', label: 'beta downloads', package: '@vuepress-plume/vuepress-theme-plume' }, 'ndy', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
+<Stamps :stamps="['nv', 'ndy', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
 
-::: tip
-基于 [vuepress-next](https://github.com/vuepress/vuepress-next), 目前处于 RC 阶段。
-
-功能和API 趋于稳定，但在未来的更新中仍有小概率出现破坏更改。
+::: caution 重要通知
+主题文档已迁移到 [这个文档](https://plume.pengzhanbo.cn/)， 当前旧文档已不再维护！
 :::
 
 
