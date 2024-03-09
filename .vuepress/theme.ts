@@ -23,12 +23,13 @@ export default plumeTheme({
   ],
 
   editLinkText: '在 GitHub 上编辑此页',
-  footer: { copyright: 'Copyright © 2022-present pengzhanbo' },
+  footer: { copyright: 'Copyright © 2021-present pengzhanbo' },
 
   plugins: {
     externalLinkIcon: false,
     baiduTongji: { key: '49ebcb8d1abfcde890ef6f320a101db7' },
     shiki: { twoslash: true },
+    markdownEnhance: { demo: true },
 
     docsearch: {
       appId: 'KRJOJ00KBL',
