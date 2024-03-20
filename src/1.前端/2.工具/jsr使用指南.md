@@ -8,7 +8,7 @@ permalink: /article/wzcjdidr/
 ---
 
 :::center
-![](/images/jsr-logo.svg){style="max-width:128px;margin-bottom:16px;"}
+![](/images/jsr-logo.svg){style="width:100%;max-width:128px;margin-bottom:16px;"}
 :::
 
 ## 介绍
@@ -224,7 +224,7 @@ scope 以 `@` 符号开头，后面紧跟名称，如 `@luca` 就是一个
 并且只能包含小写字母、数字和连字符。仅当名称未被使用，禁止使用与现有 package 非常相似的名称。
 
 ::: center
-![](/images/jsr-new.png){style="max-width: 450px;"}
+![](/images/jsr-new.png){style="width:100%;max-width: 450px;"}
 :::
 
 ### 验证 package
@@ -285,7 +285,7 @@ pnpm dlx jsr publish
 要从 Github Actions 发布包，首先必须在 JSR 的 package 页 的 `Setting` 选项卡中，将包 链接到 Github Repo。
 
 ::: center
-![](/images/jsr-github-link.png){style="max-width: 650px;"}
+![](/images/jsr-github-link.png){style="width:100%;max-width: 650px;"}
 :::
 
 然后，在 Github Repo 中，添加一个 工作流的配置文件，例如 `.github/workflows/publish.yml` 。
