@@ -32,14 +32,21 @@ permalink: /article/gq88mn6a/
 
 > 引用 [webpack官网](https://webpack.js.org/concepts/) ：
 >
-> At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph from one or more entry points and then combines every module your project needs into one or more bundles, which are static assets to serve your content from.
-> 
-> 本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。
+> At its core, webpack is a static module bundler for modern JavaScript applications.
+> When webpack processes your application, it internally builds a dependency graph from one or more
+> entry points and then combines every module your project needs into one or more bundles,
+> which are static assets to serve your content from.
+>
+> 本质上，webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。
+> 当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，
+> 其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。
 
 从作用上讲，webpack 的功能就是将不同模块的文件，打包整合到一起，并且保证它们之间引用的正确，且有序执行。
 这使得我们在做项目架构时，能够从模块的角度去做文件拆分，然后交给 webpack 打包整合。
 
-而一个项目中的文件，不仅有 html文件、CSS文件、JavaScript文件、图片资源、Vue特有的`.vue`文件，typescript的`.ts` 文件等，以及项目的中的代码还需要进行压缩混淆、浏览器兼容、等等必要的处理，启动一个本地的开发服务器、模块的热更新替换等， 可以通过`webpack` 提供的各种机制，来一一实现。
+而一个项目中的文件，不仅有 html文件、CSS文件、JavaScript文件、图片资源、Vue特有的`.vue`文件，
+typescript的`.ts` 文件等，以及项目的中的代码还需要进行压缩混淆、浏览器兼容、等等必要的处理，
+启动一个本地的开发服务器、模块的热更新替换等， 可以通过`webpack` 提供的各种机制，来一一实现。
 
 对于 `webpack` 来说， 它自身只能识别 JavaScript 文件， 而对于其他的资源，可以通过 webpack提供的 `Loader` 特性来实现
 识别。 通过 `Loader`，可以把其它类型的资源文件，转换为 webpack能够处理的有效模块。
@@ -74,7 +81,6 @@ permalink: /article/gq88mn6a/
   用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。
   插件接口功能极其强大，可以用来处理各种各样的任务。
 
-
 ### 模块（modules）
 
 在模块化编程中，开发者将程序分解成离散功能块(discrete chunks of functionality)，并称之为模块。
@@ -86,6 +92,7 @@ permalink: /article/gq88mn6a/
 在说 webpack 的 **模块打包运行原理** 之前， 先看下 我们是如何使用 webpack的，
 一般情况下， 我们通过编写一个 配置文件`webpack.config.js`， 对 webpack 进行本地化的配置，
 大致的配置如下：
+
 ``` js
 module.exports = {
   // 声明模块的入口文件
@@ -174,6 +181,7 @@ module.exports = {
     
 })();
 ```
+
 在上面的打包demo中，整个立即执行函数里边只有三个变量和一个函数方法，`__webpack_modules__`存放了编译后的各个文件模块的JS内容，`__webpack_module_cache__` 用来做模块缓存，`__webpack_require__` 是Webpack内部实现的一套依赖引入函数。最后一句则是代码运行的起点，从入口文件开始，启动整个项目。
 
 `__webpack_require__`模块引入函数，我们在模块化开发的时候，通常会使用`ES Module`或者`CommonJS`规范导出/引入依赖模块，webpack打包编译的时候，会统一替换成自己的`__webpack_require__`来实现模块的引入和导出，从而实现模块缓存机制，以及抹平不同模块规范之间的一些差异性。

@@ -7,7 +7,9 @@ tags:
 permalink: /article/hsgdhlah/
 ---
 
-在 NPM 安装 Electron, Puppeteer 等包时，他们会通过 `postinstall` 脚本下载对应的二进制文件。因为一些不得而知的原因这个过程在某些网络下可能会很慢或不可用。你可以复制以下配置至 `.bashrc` 或 `.zshrc` 中，使用 [npmmirror.com](https://npmmirror.com) 提供的二进制镜像。
+在 NPM 安装 Electron, Puppeteer 等包时，他们会通过 `postinstall` 脚本下载对应的二进制文件。
+因为一些不得而知的原因这个过程在某些网络下可能会很慢或不可用。
+你可以复制以下配置至 `.bashrc` 或 `.zshrc` 中，使用 [npmmirror.com](https://npmmirror.com) 提供的二进制镜像。
 
 <!-- more -->
 

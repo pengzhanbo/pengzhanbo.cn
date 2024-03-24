@@ -36,50 +36,27 @@ export default defineNavbarConfig([
         items: [
           {
             text: 'vuepress-theme-plume',
-            link: '/vuepress-theme-plume/',
+            link: 'https://plume.pengzhanbo.cn',
             icon: 'mdi:paper-airplane',
-            activeMatch: '^/vuepress-theme-plume/',
           },
           {
             text: 'plugin-caniuse',
-            link: '/vuepress-plugin/caniuse/',
-            activeMatch: '/vuepress-plugin/caniuse/',
+            link: 'https://plume.pengzhanbo.cn/plugins/plugin-caniuse/',
             icon: 'pajamas:feature-flag',
           },
           {
-            text: 'plugin-auto-frontmatter',
-            link: '/vuepress-plugin/auto-frontmatter/',
-            activeMatch: '/vuepress-plugin/auto-frontmatter/',
-            icon: 'material-symbols:move-selection-down-rounded',
-          },
-          {
-            text: 'plugin-blog-data',
-            link: '/vuepress-plugin/blog-data/',
-            activeMatch: '/vuepress-plugin/blog-data/',
-            icon: 'ic:baseline-post-add',
-          },
-          {
-            text: 'plugin-notes-data',
-            link: '/vuepress-plugin/notes-data/',
-            activeMatch: '/vuepress-plugin/notes-data/',
-            icon: 'material-symbols:note-alt-rounded',
-          },
-          {
             text: 'plugin-shikiji',
-            link: '/vuepress-plugin/shikiji/',
-            activeMatch: '/vuepress-plugin/shikiji/',
+            link: 'https://plume.pengzhanbo.cn/plugins/plugin-shikiji/',
             icon: 'material-symbols-light:code-blocks-outline-rounded',
           },
           {
             text: 'plugin-iconify',
-            link: '/vuepress-plugin/iconify/',
-            activeMatch: '/vuepress-plugin/iconify/',
+            link: 'https://plume.pengzhanbo.cn/plugins/plugin-iconify/',
             icon: 'line-md:iconify1',
           },
           {
             text: 'plugin-netlify-functions',
-            link: '/vuepress-plugin/netlify-functions/',
-            activeMatch: '/vuepress-plugin/netlify-functions/',
+            link: 'https://plume.pengzhanbo.cn/plugins/plugin-netlify-functions/',
             icon: 'teenyicons:netlify-solid',
           },
         ],
@@ -90,6 +67,12 @@ export default defineNavbarConfig([
     text: '笔记',
     icon: 'icon-park-solid:bookshelf',
     items: [
+      {
+        text: '防御性CSS',
+        link: '/defensive-css/',
+        activeMatch: '^/note/defensive-css/',
+        icon: 'streamline:css-three',
+      },
       {
         text: '前端面试题',
         link: '/interview-question/',

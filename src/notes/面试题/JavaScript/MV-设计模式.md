@@ -6,6 +6,7 @@ permalink: /interview-question/ud3m8zxg/
 ---
 
 ::: tip 提问
+
 1. MVC
 2. MVP
 3. MVVM
@@ -35,7 +36,7 @@ permalink: /interview-question/ud3m8zxg/
 
 `P` 是指 `Presenter`。`Presenter`会调用View层提供的接口去渲染Model。
 
-`MVP` 模式中，View 层的接口暴露给了 `Presenter`， 
+`MVP` 模式中，View 层的接口暴露给了 `Presenter`，
 因此可以在 `Presenter` 中将 `Model` 的变化和 `View` 的变化绑定在一起，以此来实现 `View` 和 Model 的同步更新。
 这样就实现了对 `View` 和 `Model` 的解耦，`Presenter` 还包含了其他的响应逻辑。
 

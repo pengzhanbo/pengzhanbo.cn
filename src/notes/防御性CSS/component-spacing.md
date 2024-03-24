@@ -11,14 +11,14 @@ permalink: /defensive-css/component-spacing/
 这意味着，我们需要将 **间距** 添加到组件中，即使它看起来不需要。
 
 :::demo-wrapper
-<div class="card-wrapper">
+<div class="card-wrapper-152">
   <h3>标题</h3>
   <Iconify name="uiw:setting" />
 </div>
 :::
 
-<style scoped>
-.card-wrapper {
+<style>
+.card-wrapper-152 {
   position: relative;
   display: flex;
   align-items: center;
@@ -30,20 +30,20 @@ permalink: /defensive-css/component-spacing/
   box-shadow: var(--vp-shadow-2);
   background: var(--vp-c-bg);
 }
-.card-wrapper h3 {
+.card-wrapper-152 h3 {
   margin: 0;
   flex: 1;
   text-wrap: nowrap;
   min-width: 0;
 }
-.card-wrapper h3.card-title {
+.card-wrapper-152 h3.card-title {
   margin-right: 1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.card-wrapper .mark {
+.card-wrapper-152 .mark {
   position: absolute;
   top: 10px;
   right: 45px;
@@ -57,7 +57,7 @@ permalink: /defensive-css/component-spacing/
 目前，它看起来还不错。但是，让我们看看当标题更长时会发生什么。
 
 :::demo-wrapper
-<div class="card-wrapper">
+<div class="card-wrapper-152">
   <h3>这是一个有长文本内容的标题</h3>
   <Iconify name="uiw:setting" />
 </div>
@@ -75,7 +75,7 @@ permalink: /defensive-css/component-spacing/
 ```
 
 :::demo-wrapper
-<div class="card-wrapper">
+<div class="card-wrapper-152">
   <h3 class="card-title">这是一个有长文本内容的标题</h3>
   <Iconify name="uiw:setting" />
   <div class="mark"></div>

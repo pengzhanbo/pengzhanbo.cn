@@ -16,7 +16,7 @@ permalink: /defensive-css/auto-fit-fill/
 - `auto-fit`： 将展开网格项以填充可用空间。
 - `auto-fill`： 将保留可用空间，而不改变网格项的宽度。
 
-![](/images/defensive-css/auto-fit-fill.png){style="border:var(--vp-c-divider) 1px solid;border-radius:5px;box-shadow:var(--vp-shadow-2)"}
+![auto fit fill](/images/defensive-css/auto-fit-fill.png){style="border:var(--vp-c-divider) 1px solid;border-radius:5px;box-shadow:var(--vp-shadow-2)"}
 
 尽管如此，使用 `auto-fit` 可能会导致网格项太宽，尤其是当它们小于预期时。请看以下示例。
 
@@ -33,23 +33,22 @@ permalink: /defensive-css/auto-fit-fill/
 :::demo-wrapper
 四个子项：
 
-<div class="grid-fit-wrapper">
+<div class="grid-fit-wrapper-191">
   <div class="grid-item" style="--auto-fit-c-bg:#8fafe7"></div>
   <div class="grid-item" style="--auto-fit-c-bg:#f6e5be"></div>
   <div class="grid-item" style="--auto-fit-c-bg:#fdbdd4"></div>
   <div class="grid-item" style="--auto-fit-c-bg:#aaf0d0"></div>
 </div>
 
-
 一个子项：
 
-<div class="grid-fit-wrapper">
+<div class="grid-fit-wrapper-191">
   <div class="grid-item" style="--auto-fit-c-bg:#8fafe7"></div>
 </div>
 :::
 
-<style scoped>
-.grid-fit-wrapper {
+<style>
+.grid-fit-wrapper-191 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
   grid-gap: 1rem;
@@ -59,22 +58,21 @@ permalink: /defensive-css/auto-fit-fill/
   box-shadow: var(--vp-shadow-2);
   background: var(--vp-c-bg);
 }
-.grid-fit-wrapper .grid-item {
+.grid-fit-wrapper-191 .grid-item {
   height: 100px;
   border-radius: 5px;
   background-color: var(--auto-fit-c-bg);
 }
 </style>
 
-
-----
+---
 
 在大多数情况下，不需要 这样的行为。所以在我看来，使用 `auto-fill` 会更好。
 
 :::demo-wrapper
 四个子项：
 
-<div class="grid-fill-wrapper">
+<div class="grid-fill-wrapper-191">
   <div class="grid-item" style="--auto-fit-c-bg:#8fafe7"></div>
   <div class="grid-item" style="--auto-fit-c-bg:#f6e5be"></div>
   <div class="grid-item" style="--auto-fit-c-bg:#fdbdd4"></div>
@@ -83,13 +81,13 @@ permalink: /defensive-css/auto-fit-fill/
 
 一个子项：
 
-<div class="grid-fill-wrapper">
+<div class="grid-fill-wrapper-191">
   <div class="grid-item" style="--auto-fit-c-bg:#8fafe7"></div>
 </div>
 :::
 
-<style scoped>
-.grid-fill-wrapper {
+<style>
+.grid-fill-wrapper-191 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(59px, 1fr));
   grid-gap: 1rem;
@@ -99,18 +97,17 @@ permalink: /defensive-css/auto-fit-fill/
   box-shadow: var(--vp-shadow-2);
   background: var(--vp-c-bg);
 }
-.grid-fill-wrapper .grid-item {
+.grid-fill-wrapper-191 .grid-item {
   height: 100px;
   border-radius: 5px;
   background-color: var(--auto-fit-c-bg);
 }
 @media (min-width: 768px) {
-  .grid-fill-wrapper {
+  .grid-fill-wrapper-191 {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
 </style>
-
 
 ## 示例
 
@@ -124,6 +121,7 @@ permalink: /defensive-css/auto-fit-fill/
 ```
 
 :::normal-demo auto-fit-fill
+
 ```html
 <p>调整容器大小查看效果：</p>
 <div class="demo-wrapper">
@@ -145,6 +143,7 @@ permalink: /defensive-css/auto-fit-fill/
   <label for="toggle">启用 auto-fill</label>
 </div>
 ```
+
 ```css
 .demo-wrapper {
   position: relative;
@@ -205,10 +204,12 @@ permalink: /defensive-css/auto-fit-fill/
 }
 
 ```
+
 ```js
 const wrapper = document.querySelector('#gridWrapper');
 document.querySelector('#toggle').addEventListener('change', (e) => {
   wrapper.classList.toggle('checked', e.target.checked);
 })
 ```
+
 :::

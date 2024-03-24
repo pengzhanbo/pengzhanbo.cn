@@ -7,7 +7,9 @@ tags:
 permalink: /article/z7btimbk/
 ---
 
-`@property` CSS at-rule是 [CSS Houdini API](https://developer.mozilla.org/zh-CN/docs/Web/Guide/Houdini) 的一部分，它允许开发者显式地定义他们的 [CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*), 允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
+`@property` CSS at-rule是 [CSS Houdini API](https://developer.mozilla.org/zh-CN/docs/Web/Guide/Houdini)
+的一部分，它允许开发者显式地定义他们的 [CSS 自定义属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/--*),
+允许进行属性类型检查、设定默认值以及定义该自定义属性是否可以被继承。
 
 `@property` 的出现，极大的增强了 CSS 的能力。
 
@@ -17,8 +19,7 @@ permalink: /article/z7btimbk/
 `CSS Houdini` 开放 CSS 的底层 API 给开发者，使得开发者可以通过这套接口自行扩展 CSS，并提供相应的工具允许开发者介入浏览器渲染引擎的样式和布局流程中，使开发人员可以编写浏览器可以解析的 CSS 代码，从而创建新的 CSS 功能。
 :::
 
-
-----
+---
 
 通常情况下，我们定义和使用一个 CSS 自定义属性是这样的：
 
@@ -55,10 +56,12 @@ p {
 }
 </style>
 ::: normal-demo 代码演示
+
 ```html
 <p class="css-vars">这是使用 css vars 定义的文字颜色</p>
 <p class="css-property">这是使用 css @property 定义的文字颜色</p>
 ```
+
 ```css
 .css-vars {
   --c-red: #f00;
@@ -73,6 +76,7 @@ p {
   color: var(--p-red);
 }
 ```
+
 :::
 
 ## @property
@@ -97,8 +101,8 @@ p {
 
 一个有效的 `@property` 规则代表一项自定义属性的注册，使用自定义属性名作为规则内代码序列的序部。
 
-`@property` 规则中 `syntax` 和 `inherits` 描述符是必需的; 
-如果其中任何一项缺失，整条规则都将失效并且会被忽略。 
+`@property` 规则中 `syntax` 和 `inherits` 描述符是必需的;
+如果其中任何一项缺失，整条规则都将失效并且会被忽略。
 `initial-value` 描述符仅在 `syntax` 描述符为通用 `syntax` 定义时是可选的，
 否则 `initial-value` 也是必需的——如果此时该描述符缺失，整条规则都将失效且被忽略。
 
@@ -128,7 +132,6 @@ p {
 - `syntax: '<length+>'` ：接受以空格分隔的长度值列表
 - `syntax: '<length | length+>'`：接受单个长度或者以空格分隔的长度值列表
 
-
 ## 示例
 
 在了解完 `@property` 规则之后，我们来看一些例子。
@@ -138,9 +141,11 @@ p {
 通常我们实现一个渐变图案的代码如下：
 
 ::: normal-demo 渐变图案
+
 ```html
 <div class="gradient"></div>
 ```
+
 ```css
 .gradient {
   width: 150px;
@@ -149,15 +154,18 @@ p {
   background: linear-gradient(45deg, #f66, #ff0);
 }
 ```
+
 :::
 
 我们改造一下代码，使用 自定义属性实现，并尝试通过修改自定义属性，实现渐变过渡效果：
 
 ::: normal-demo 自定义属性
+
 ```html
 <div class="gradient"></div>
 <p>鼠标悬停到方块中查看效果</p>
 ```
+
 ```css
 .gradient {
   --color-1: #f66;
@@ -173,6 +181,7 @@ p {
   --color-2: #606;
 }
 ```
+
 :::
 
 可以看到，虽然我们使用 `transition` 添加了 过渡动画，在 `hover` 时修改了 自定义属性。
@@ -215,10 +224,12 @@ p {
 </style>
 
 ::: normal-demo 自定义属性
+
 ```html
 <div class="gradient"></div>
 <p>鼠标悬停到方块中查看效果</p>
 ```
+
 ```css
 @property --houdini-color-1 {
   syntax: '<color>';
@@ -244,6 +255,7 @@ p {
   --houdini-color-2: #606;
 }
 ```
+
 :::
 
 可以看到， 渐变过渡动画效果成功了！
@@ -268,9 +280,11 @@ p {
 }
 </style>
 ::: normal-demo 渐变过渡动画
+
 ```html
 <div class="bg-animate"></div>
 ```
+
 ```css
 @property --an-color-1 {
   syntax: '<color>';
@@ -321,6 +335,7 @@ p {
   }
 }
 ```
+
 :::
 
 ### 复杂背景动画
@@ -328,9 +343,11 @@ p {
 我们通过代码实现一个复杂的 渐变图案背景：
 
 ::: normal-demo 复杂背景
+
 ```html
 <div class="bg"></div>
 ```
+
 ```css
 .bg {
   width: 100%;
@@ -360,6 +377,7 @@ p {
     linear-gradient(#6cc, #09c);
 }
 ```
+
 :::
 
 如果我们想让它动起来，如果不是用 `@property`，可能要废一番功夫，但是，在 `@property` 的支持下，
@@ -404,9 +422,11 @@ p {
 </style>
 
 ::: normal-demo 复杂背景动画
+
 ```html
 <div class="bg"></div>
 ```
+
 ```css
 @property --per-1 {
   syntax: '<percentage>';
@@ -483,9 +503,10 @@ p {
   }
 }
 ```
+
 :::
 
-
 ## 参考
+
 - [MDN CSS Properties and Values API](https://developer.mozilla.org/zh-CN/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Houdini API css-properties-values-api](https://drafts.css-houdini.org/css-properties-values-api/#syntax-strings)

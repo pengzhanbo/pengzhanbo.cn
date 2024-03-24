@@ -10,6 +10,7 @@ tags:
 ## 概述
 
 `Promise` 是一个构造函数，用于创建一个新的 Promise 对象。该构造函数主要用于包装还没有添加 promise 支持的函数。
+
 ``` ts
 Promise(resolver : (resolve, reject) => void)
 ```
@@ -18,6 +19,7 @@ Promise(resolver : (resolve, reject) => void)
 如果失败，则将失败原因作为参数调用`reject`方法。
 
 ### 示例
+
 ``` js
 const promise = new Promise(function (resolve, reject) {
   setTimeout(() => {
@@ -44,20 +46,23 @@ Promise 创建后，必然处于以下几种状态
 ### Promise 实例方法
 
 #### `.then(onFulfilled, onRejected)`
+
   *then()* 接收两个函数参数（也可以仅接收一个函数参数 onFulfilled）。
-  - onFulfilled 函数参数，表示当 promise的状态从 `pending` 更新为`fulfilled` 时触发，并将成功的结果 value 作为`onFulfilled`函数的参数。
-  - onRejected 函数参数，表示当promise的状态从 `pending` 更新为`rejected` 时触发，并将失败的原因 reason 作为 `onRejected`函数的参数。
+
+- onFulfilled 函数参数，表示当 promise的状态从 `pending` 更新为`fulfilled` 时触发，并将成功的结果 value 作为`onFulfilled`函数的参数。
+- onRejected 函数参数，表示当promise的状态从 `pending` 更新为`rejected` 时触发，并将失败的原因 reason 作为 `onRejected`函数的参数。
   
   *then()* 方法返回的结果会被包装为一个新的promise实例。
 
 #### `.catch(onRejected)`
+
   *catch()* 可以相当于 *.then(null, onRejected)*，即仅处理当promise的状态从 `pending` 更新为`rejected` 时触发。
 
 #### `.finally(onFinally)`
+
   表示promise的状态无论是从`pengding`更新为`fulfilled`或`rejected`，当所有的 then() 和 catch() 执行完成后，最后会执行 finally() 的回调。
 
   由于无法知道promise的最终状态，`onFinally` 回调函数不接收任何参数，它仅用于无论最终结果如何都要执行的情况。
-
 
 ``` js
 promise
@@ -93,6 +98,7 @@ promise
 ```
 
 ## Promise代码实现
+
 ```js
 const PENDING = "pending";
 const FULFILLED = "fulfilled";
@@ -248,22 +254,30 @@ LikePromise.reject = function (reason) {
 };
 ```
 
-
 ## `Promise` 静态方法
 
 ### Promise.resolve(value)
-返回一个状态由给定value决定的Promise对象。如果该值是thenable(即，带有then方法的对象)，返回的Promise对象的最终状态由then方法执行决定；否则的话(该value为空，基本类型或者不带then方法的对象),返回的Promise对象状态为fulfilled，并且将该value传递给对应的then方法。通常而言，如果您不知道一个值是否是Promise对象，使用Promise.resolve(value) 来返回一个Promise对象,这样就能将该value以Promise对象形式使用。
+
+返回一个状态由给定value决定的Promise对象。如果该值是thenable(即，带有then方法的对象)，
+返回的Promise对象的最终状态由then方法执行决定；否则的话(该value为空，基本类型或者不带then方法的对象),
+返回的Promise对象状态为fulfilled，并且将该value传递给对应的then方法。
+通常而言，如果您不知道一个值是否是Promise对象，使用Promise.resolve(value) 来返回一个Promise对象,
+这样就能将该value以Promise对象形式使用。
 
 ### Promise.reject(reason)
+
 返回一个状态为失败的Promise对象，并将给定的失败信息传递给对应的处理方法
 
-###  Promise.all(promises)
+### Promise.all(promises)
+
 `all()` 允许传入一组promise实例，并返回一个新的promise实例。
 
 promises并发执行，并且当这组promises的最终状态均更新为`fulfilled`时，才触发返回的promise实例的`onFulfilled`，
 并将这组promises的执行结果，已promises的定义顺序，以数组的形式传给`onFulfilled`。
 如果其中某个promise的最终状态更新为`rejected`，则立即触发返回的promise实例的`onRejected`。
-#### 示例：
+
+#### 示例
+
 ``` js
 const promises = [
   Promise.resolve({ a: 1}),
@@ -279,6 +293,7 @@ Promise.all(promises).then(res => {
 ```
 
 #### 手写Promise.all 实现代码
+
 ``` js
 function promiseAll(promises) {
   promises = promises || []
@@ -304,7 +319,9 @@ function promiseAll(promises) {
   })
 }
 ```
+
 ### Promise.allSettled
+
 `allSettled(promises)` 允许传入一组promise实例，并返回一个新的promise对象。
 
 当这组promises的状态从`pending` 都更新到最终状态、无论最终状态是 `fulfilled` 或`rejected`时，触发返回的promise的`onfulfilled`。
@@ -312,6 +329,7 @@ function promiseAll(promises) {
 `onfulfilled` 回调函数，根据promises定义的顺序，将执行结果以 `{ status: string, [value|reason]: any }[]` 的形式作为参数传入。
 
 #### 示例
+
 ``` js
 const promises = [
   Promise.resolve({ a: 1}),
@@ -322,8 +340,8 @@ Promise.allSettled(promises).then(res => {
 })
 ```
 
-
 #### 手写Promise.allSettled 实现代码
+
 ``` js
 function promiseAllSettled(promises) {
   promises = promises || []
@@ -366,6 +384,7 @@ function promiseAllSettled(promises) {
 作为参数调用返回的promise的`onFulfilled`或`onRejected`
 
 #### 示例
+
 ``` js
 const promises = [
   new Promise((resolve) => {
@@ -382,6 +401,7 @@ Promise.race(promises).then(res => {
 ```
 
 #### 手写Promise.race 实现代码
+
 ``` js
 function promiseRace(array) {
   array = array || []
@@ -401,7 +421,7 @@ function promiseRace(array) {
 ## 参考资料
 
 > [Promise A+ 规范](https://malcolmyu.github.io/2015/06/12/Promises-A-Plus/)
-> 
+>
 > [MDN Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 >
 > [MDN 使用Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises)

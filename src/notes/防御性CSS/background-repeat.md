@@ -15,10 +15,23 @@ permalink: /defensive-css/background-repeat/
 :::center
 小屏幕
 
-<div style="width:200px;height:134px;background:url(/images/defensive-css/ratio.png);background-size:auto 100%;margin:0 auto;box-shadow:var(--vp-shadow-2);border-radius:5px;border:1px solid var(--vp-c-divider)"></div>
+<div style="width:200px;height:134px" class="bg-repeat-1339">
+</div>
 
 大屏幕
-<div style="width:300px;height:133px;background:url(/images/defensive-css/ratio.png);background-size:auto 100%;margin:0 auto;box-shadow:var(--vp-shadow-2);border-radius:5px;border:1px solid var(--vp-c-divider)"></div>
+<div style="width:300px;height:133px;" class="bg-repeat-1339">
+</div>
+
+<style>
+.bg-repeat-1339 {
+  background:url(/images/defensive-css/ratio.png);
+  background-size:auto 100%;
+  margin:0 auto;
+  box-shadow:var(--vp-shadow-2);
+  border-radius:5px;
+  border:1px solid var(--vp-c-divider);
+}
+</style>
 :::
 ::::
 

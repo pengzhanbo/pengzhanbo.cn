@@ -12,11 +12,9 @@ permalink: /article/4ef5e74b/
 
 <!-- more -->
 
-
 :::demo-wrapper img
-![](/images/scrollbar/scrollbar-intro.jpg)
+![scrollbar intro](/images/scrollbar/scrollbar-intro.jpg)
 :::
-
 
 ## 滚动条的组成
 
@@ -25,7 +23,7 @@ permalink: /article/4ef5e74b/
 滚动条主要包含两个部分： **滚动轨道 Track** 和 **滑块 Thumb**。
 
 :::demo-wrapper img
-![](/images/scrollbar/scrollbar-parts.jpg)
+![scrollbar parts](/images/scrollbar/scrollbar-parts.jpg)
 :::
 
 **Track** 是滚动条的底部， **Thumb** 是提供用户交互的， 当用户拖动它控制页面或容器的滚动内容。
@@ -34,7 +32,7 @@ permalink: /article/4ef5e74b/
 而变化。
 
 :::demo-wrapper img
-![](/images/scrollbar/scrollbar-places-dir.jpg)
+![scrollbar places dir](/images/scrollbar/scrollbar-places-dir.jpg)
 :::
 
 ## 自定义滚动条
@@ -116,7 +114,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 你有没有想过，当内容在滚动容器中增加时，我们如何避免布局变化？让我们以以下案例为例。
 
 :::demo-wrapper img
-![](/images/scrollbar/scrollbar-gutter-1.jpg)
+![scrollbar gutter](/images/scrollbar/scrollbar-gutter-1.jpg)
 :::
 
 ```css
@@ -135,7 +133,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 当内容增长时，将显示滚动条，从而减少内容的可用空间。
 
 :::demo-wrapper img
-![](/images/scrollbar/scrollbar-gutter-2.jpg)
+![scrollbar gutter](/images/scrollbar/scrollbar-gutter-2.jpg)
 :::
 
 可以看到，当内容过长出现滚动条时，内容会发生偏移。
@@ -154,13 +152,13 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 ```
 
 :::demo-wrapper img
-![](/images/scrollbar/scrollbar-gutter-3.jpg)
+![scrollbar gutter](/images/scrollbar/scrollbar-gutter-3.jpg)
 :::
 
 当内容增加时，就不会影响布局的空间变化，因为浏览器已经为 滚动条预留了空间。
 
 :::demo-wrapper
-![](/images/scrollbar/scrollbar-gutter-4.jpg)
+![scrollbar gutter](/images/scrollbar/scrollbar-gutter-4.jpg)
 :::
 
 好消息是，`scrollbar-gutter` 的兼容性，从 `Chrome@94` 就开始得到了支持。
@@ -237,18 +235,19 @@ html {
 
 在 MacOS Safari 中， Track 两侧都有边框， 背景色为纯色，Thumb 是圆形的，左右两侧都有空间。
 :::demo-wrapper img
-![](/images/scrollbar/use-case-1.jpg)
+![scrollbar use case](/images/scrollbar/use-case-1.jpg)
 :::
 而在 MacOS Chrome 中，Track 是透明的，`Thumb` 是原型的，而且整个滚动条只在滚动时才显示，且不占据空间。
 
 在 Windows 中，Track 是 灰色背景，Thumb 是 矩形的。
 ::: demo-wrapper img
-![](/images/scrollbar/use-case-1-2.jpg)
+![scrollbar use case](/images/scrollbar/use-case-1-2.jpg)
 :::
 
 ### 示例1
 
 以下是根据上面的模型，自定义的滚动条
+
 ```css
 .container::-webkit-scrollbar {
   width: 16px;
@@ -303,7 +302,7 @@ html {
 }
 ```
 
-----
+---
 
 > [!warning]
 > 以下示例仅适用于 `webkit` 内核的浏览器。对于实际项目，你还可以同时添加新的语法支持 `Firefox`。
@@ -311,6 +310,7 @@ html {
 ### 示例2：阴影+渐变
 
 在这个示例中，我们给滚动条添加了 阴影 和 渐变。来看看效果如何：
+
 ```css
 .container::-webkit-scrollbar-thumb {
   background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
@@ -452,7 +452,7 @@ html {
 
 ## 增加 hover 效果
 
-我们可以为 滚动条添加 `hover` 效果吗? 
+我们可以为 滚动条添加 `hover` 效果吗?
 
 是的, 可以。我们可以为 新旧的语法添加 `hover` 效果。
 

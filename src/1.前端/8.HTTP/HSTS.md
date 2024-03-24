@@ -68,7 +68,6 @@ Strict-Transport-Security: max-age=<expire-time>; preload
 
 Chrome、Firefox 等浏览器里，当尝试访问该域名下的内容时，会产生一个 307 Internal Redirect（内部跳转），自动跳转到 HTTPS 请求。
 
-
 ## 预加载
 
 如果用户首次访问网站时，依然使用的是 `http` 协议，浏览器会忽略`Strict-Transport-Security`，而且中间人依然可以劫持请求内容，删除 `Strict-Transport-Security`。
@@ -81,10 +80,10 @@ Chrome、Firefox 等浏览器里，当尝试访问该域名下的内容时，会
 
 [`HSTS`预加载服务](https://hstspreload.org/)
 
-
 ## 示例
 
 当前域名，以及所有子域名，开启 `HSTS`, 过期时间为 一年。
+
 ```
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```

@@ -40,7 +40,6 @@ permalink: /interview-question/5yfvcq8k/
 
 - 没有任何margin合并
 
-
 ## 清除浮动
 
 ### clear属性
@@ -48,12 +47,15 @@ permalink: /interview-question/5yfvcq8k/
 clear 属性的官方解释是： 元素盒子的边不能和前面的浮动元素相邻。
 
 用法：
+
 ```
 clear: none | left | right | both;
 ```
+
 使用：
 
 - 在浮动元素后面插入空白块级元素，并声明 clear属性
+
   ``` html
   <style>
     .float { float: left; }
@@ -66,6 +68,7 @@ clear: none | left | right | both;
   ```
 
 - 使用伪类元素，并声明clear属性
+
   ``` html
   <style>
     .float { float: left; }

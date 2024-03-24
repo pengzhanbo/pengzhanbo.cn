@@ -25,6 +25,7 @@ author: pengzhanbo
 ## 安装
 
 lerna 可以全局安装，也可以在项目中安装（以下内容使用项目中安装的方式）
+
 ``` sh
 # npm
 npm install lerna
@@ -35,13 +36,16 @@ yarn add lerna
 ## 简单入门
 
 创建一个项目，并使用lerna进行项目环境初始化
+
 ``` sh
 mkdir lerna-demo && cd $_
 yarn init -y
 yarn add lerna
 npx lerna init
 ```
+
 你将会得到一个包含以下内容的项目文件夹：
+
 ``` sh
 lerna-demo
   packages/
@@ -51,8 +55,8 @@ lerna-demo
 
 其中，`packages/` 目录用于存放所有的软件包。`lerna.json`是lerna的配置文件。
 
-
 ## 配置说明
+
 ``` json
 // lerna.json
 {
@@ -78,46 +82,59 @@ lerna-demo
 ## 命令行说明
 
 ### lerna init
+
 初始化一个lerna项目，默认将会在目录中新建 packages/ 和 lerna.json。
 
 `--independent`: 使用分包独立版本管理模式，各个软件包使用独立的版本号。
 
-
 ### lerna create pkgName [location]
+
 在项目中新建一个子包， pkgName设置包名。 location制定包所在目录，默认是 packages配置的第一个元素。
 
 ### lerna add \<package\>[@version] [--dev] [--exact] [--peer]
+
 类似于 `yarn add` 或`npm install`，在一个lerna repo中往dependency中添加依赖包。
+
 - `--dev`: 表示将包添加到 devDependencies
 - `--exact`: 添加一个确定版本的包（如1.0.1），而不是一个版本范围的包如（^1.0.1）
 - `--peer`: 添加一个前置依赖包。
 
 ### lerna bootstrap
+
 为当前 lerna repo 中的所有包安装 依赖库，并 link所有 同域依赖。
 
 ### lerna run \<script\>
 
 在当前 lerna repo 中的所有包中执行 script 命令。
+
 ``` sh
 packages/
   package1/
   package2/
 ```
+
 ``` sh
 lerna run build # 相当于在 package1、package2 中执行 npm run build
 ```
+
 - --scope 过滤符合条件的包
+
   ``` sh
   lerna run build --scope test component
   ```
+
 - --stream 使用报名作为前缀，交叉输出所有包的控制台信息流。
+
   ``` sh
   lerna run build --stream
   ```
+
 - --parallel 类似于 stream。
+
   ``` sh
   lerna run build --parallel
   ```
 
-  ### lerna clean
+### lerna clean
+
   删除所有包的node_modules

@@ -7,14 +7,16 @@ tags:
 author: 鹏展博
 ---
 
-`Docker` 是一个开源的应用容器引擎，它可以将应用打包到一个可移植的镜像中，使得应用可以更轻便的部署在任意 Linux 或 Windows 的操作系统的机器上。同时还提供了环境隔离，很大程度上避免了不同环境不一致带来的各种问题。`Docker`可轻便移植的特性，也极大的促进了 `CI/CD` 的发展。
+`Docker` 是一个开源的应用容器引擎，它可以将应用打包到一个可移植的镜像中，
+使得应用可以更轻便的部署在任意 Linux 或 Windows 的操作系统的机器上。
+同时还提供了环境隔离，很大程度上避免了不同环境不一致带来的各种问题。
+`Docker`可轻便移植的特性，也极大的促进了 `CI/CD` 的发展。
 
 <!-- more -->
 
-
 **`Docker`架构图**
 
-![](https://docs.docker.com/engine/images/architecture.svg)
+![architecture](https://docs.docker.com/engine/images/architecture.svg)
 
 从图中可以看出， `Docker` 的组成部分包括：
 
@@ -51,18 +53,18 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 
 3. 安装 docker
 
-```sh
-# 安装 docker
-sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-```
+  ```sh
+  # 安装 docker
+  sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+  ```
 
 4. 启动服务
 
-```sh
-systemctl enable docker
+  ```sh
+  systemctl enable docker
 
-systemctl start docker
-```
+  systemctl start docker
+  ```
 
 当 `docker` 安装成功后，可以使用以下命令查看 `docker` 信息
 
@@ -112,7 +114,7 @@ systemctl restart docker
 
 `docker` 的镜像和和容器都使用了 `unionFS` 做分层存储，镜像作为只读层是共享的，容器在镜像之上附加了一层可写层，最大程度的减少了空间的浪费。
 
-![](https://docs.docker.com/storage/storagedriver/images/sharing-layers.jpg)
+![sharing layers](https://docs.docker.com/storage/storagedriver/images/sharing-layers.jpg)
 
 ::: info Union file systems
 `UnionFS` 是一种分层、轻量级并且高性能的文件系统，支持对文件系统的修改作为一次提交来一层层的叠加。`docker` 的镜像与容器就是分层存储，可用的存储引擎有 `aufs`，`overlay` 等。

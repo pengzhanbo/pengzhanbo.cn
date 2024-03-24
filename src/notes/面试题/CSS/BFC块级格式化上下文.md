@@ -12,7 +12,6 @@ permalink: /interview-question/p1gn97x5/
 - BFC有什么作用 ？
 :::
 
-
 ## 什么是 BFC
 
 BFC, Block Formatting Context。是 W3C CSS2.1规范中的一个概念。 是页面中的一块块级渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和作用。
@@ -27,7 +26,8 @@ BFC, Block Formatting Context。是 W3C CSS2.1规范中的一个概念。 是页
 4. 行内块元素， 元素的 display 为 inline-block
 5. 表格单元格， 元素的 display 为 table-cell。 （HTML表格单元格默认为该值）
 6. 表格标题， 元素的display为table-caption。 （HTML表格标题默认为该值）
-7. 匿名表格单元格元素， 元素的display为 table、table-row、table-row-group、table-header-group、table-footer-group 。 （分别是 HTML table、row、tbody、thead、tfoot的默认属性）或 inline-table。
+7. 匿名表格单元格元素， 元素的display为 table、table-row、table-row-group、
+   table-header-group、table-footer-group 。 （分别是 HTML table、row、tbody、thead、tfoot的默认属性）或 inline-table。
 8. overflow计算值不为visible的块元素
 9. display值为 flow-root的元素
 10. contain值为 layout、content、paint的元素

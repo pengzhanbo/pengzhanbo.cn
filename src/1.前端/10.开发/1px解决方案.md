@@ -15,7 +15,10 @@ tags:
 
 ## 背景及原因
 
-首先，需要明确的一个概念是， CSS的 `pixels` 并不完全等价于 设备的 `pixels`。当我们假定设备的 `pixels` 为标准的`pixels` 宽度。这些pixels决定了设备的分辨率。在默认情况下， PC设备上用户未进行缩放操作（即zoom缩放为100%时）, CSS的`pixels`与设备的`pixels`重叠，当用户进行了缩放操作时，假设用户缩放了200%，那么 124px的CSS`pixels`实际占用了248设备`pixels`。
+首先，需要明确的一个概念是， CSS的 `pixels` 并不完全等价于 设备的 `pixels`。
+当我们假定设备的 `pixels` 为标准的`pixels` 宽度。这些pixels决定了设备的分辨率。
+在默认情况下， PC设备上用户未进行缩放操作（即zoom缩放为100%时）, CSS的`pixels`与设备的`pixels`重叠，
+当用户进行了缩放操作时，假设用户缩放了200%，那么 124px的CSS`pixels`实际占用了248设备`pixels`。
 
 但我们开发时，通常设备的`pixels`对我们毫无用处，前端只需要关注CSS的`pixels`，浏览器会根据用户缩放自动处理CSS的pixels是被伸展还是收缩。
 
@@ -24,10 +27,11 @@ tags:
 为了解决这个问题，移动端设备的厂商的通常做法是，让viewport更宽（这里的viewport指的是设备的视窗，它决定了HTML标签的宽度表现，继而影响其他的元素）。
 
 移动端的 viewport 被分为了 虚拟的 viewport 和 布局的 viewport：
+
 - `visual viewport`： 虚拟viewport
 - `layout viewport`： 布局viewport
 
-![](/images/viewport.jpg)
+![viewport](/images/viewport.jpg)
 
 两者的概念， 可以想象 `layout viewport` 为一张不可改变大小和角度的图片，但它被一层蒙板挡住了， `visual viewport` 是一个蒙板上我们可以观察到 这张图片的窗口。我们可以通过这个窗口观察到 图片的部分内容。并且可以对这个窗口进行拖动或缩放，进而观察到图片的完整内容。
 
@@ -37,14 +41,17 @@ tags:
 
 但是 `layout viewport`的宽度有多宽，不同的设备，不同的浏览器各有不同。如 iPhone 的Safari 使用的是 980px。
 
-
 但是在移动端的交互中，我们并不期望 网站的内容是被缩放的，需要让用户进行缩放和拖动。 所以通常我们会在 html文件的head中，进行一个 meta声明。
+
 ``` html
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 ```
+
 即强制设置了`layout viewport` 等于 设备宽度， 设置了缩放为100%，并且用户无法进行缩放操作。这样做的好处是我们可以以一种期望的方式进行设计UI和交互。
 
-但在前面，我们介绍了， CSS的`pixels`并不等价于设备的`pixels`。通常在移动端设备，我们可以通过 `window.devicePixelRatio` 查看当前设备的CSS`pixels`和设备`pixels`的比例，如 `window.devicePixelRatio` 值为 2时， 表示 1个CSS`pixels`的宽度占用2个设备`pixels`，即实际占用了 2x2 的设备`pixels`。
+但在前面，我们介绍了， CSS的`pixels`并不等价于设备的`pixels`。
+通常在移动端设备，我们可以通过 `window.devicePixelRatio` 查看当前设备的CSS`pixels`和设备`pixels`的比例，
+如 `window.devicePixelRatio` 值为 2时， 表示 1个CSS`pixels`的宽度占用2个设备`pixels`，即实际占用了 2x2 的设备`pixels`。
 
 这也是导致了 `1px`的线，在移动设备上的渲染，看起来会比实际上的 `1px`更粗的原因。
 
@@ -59,6 +66,7 @@ tags:
 一种最简单的，且适合各种场景的方案，就是使用 `0.5px` 的值代替 `1px` 的值。 但这个方案有一个兼容问题，现代浏览器并不全都支持该值的。
 
 可以先检查是否支持 `0.5px`，然后在 根元素上添加一个 类，进行使用。
+
 ``` js
 if (window.devicePixelRatio && devicePixelRatio >= 2) {
   var testElem = document.createElement('div');
@@ -71,6 +79,7 @@ if (window.devicePixelRatio && devicePixelRatio >= 2) {
   document.body.removeChild(testElem);
 }
 ```
+
 ``` css
 div {
   border: 1px solid #bbb;
@@ -88,6 +97,7 @@ div {
 该方法是是利用 元素的伪类进行线的渲染。
 
 比如 利用 `::before` 或者 `::after`, 画一条上边框的线
+
 ``` css
 .hairlines {
     position: relative;
@@ -105,7 +115,9 @@ div {
     transform-origin: 0 0;
 }
 ```
+
 比如，利用 `::before` 或者 `::after`, 画一个线框：
+
 ``` css
 .hairlines {
     position: relative;
@@ -142,6 +154,7 @@ div {
     border-image: url(line.png) 2 0 0 0 repeat;
 }
 ```
+
 同理，处理其他方向的边框类似方法。
 
 该方法的缺点是 如果改变颜色，或者有不同颜色的线，需要准备多张图片。
@@ -215,18 +228,20 @@ div {
     borderXY()
 }
 ```
+
 如果是使用 `postcss` ，可以使用安装插件 [postcss-write-svg](https://github.com/csstools/postcss-write-svg)，配合使用
+
 ``` css
 @svg square {
-	@rect {
-		fill: var(--color, black);
-		width: var(--size);
-		height: var(--size);
-	}
+ @rect {
+  fill: var(--color, black);
+  width: var(--size);
+  height: var(--size);
+ }
 }
 
 .example {
-	background: svg(square param(--color green) param(--size 100%)) center / cover;
+ background: svg(square param(--color green) param(--size 100%)) center / cover;
 }
 ```
 

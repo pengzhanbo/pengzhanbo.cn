@@ -37,7 +37,6 @@ article: false
 | [nest.js](https://nestjs.com/)
 | [loopback](https://loopback.io/)
 
-
 ### 微前端
 
 [micro-frontends](https://swearer23.github.io/micro-frontends/)
@@ -115,7 +114,6 @@ article: false
 | [Hexo](https://hexo.io/)
 | [slidev](https://sli.dev/)
 
-
 ## 社区
 
 - [dev.to](https://dev.to/) - 技术社区，拥有庞大的开发者用户基数，适合学习技术、分享交流、提升专业能力。
@@ -138,7 +136,7 @@ article: false
 - [builder.io](https://www.builder.io/blog) - builder.io
 - [Chrome](https://developer.chrome.com/blog/) - Chrome 团队博客
 
-##  Git
+## Git
 
 - [Learn Git Branching](https://learngitbranching.js.org/?locale=zh_CN) - 学习 git 分支
 
@@ -178,7 +176,6 @@ article: false
 - [bestofjs](https://bestofjs.org/) - 前端开源项目最新热点趋势
 - [publint](https://publint.dev/) - 检查 npm package 是否正确发布
 - [Ray](https://www.ray.so/) - 代码 Demo 图片生成
-
 
 ## 服务
 

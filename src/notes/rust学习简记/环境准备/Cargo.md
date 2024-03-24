@@ -17,12 +17,14 @@ permalink: /learn-rust/cargo/
 ### package 配置
 
 package 中记录了项目的描述信息
+
 ```toml
 [package]
 name = "package_name" # 项目名称
 version = "0.1.0" # 版本号
 edition = "2021" # rust 版本
 ```
+
 ### 项目依赖
 
 在 `Cargo.toml` 中，主要通过各种依赖段落来描述该项目的各种依赖项：
@@ -46,7 +48,6 @@ geometry = { path = "crates/geometry" }
 
 [官方文档](https://doc.rust-lang.org/stable/cargo/commands/index.html)
 
-
 ### `cargo new <package-name>  [options]`
 
 创建一个新的 rust 项目。
@@ -62,7 +63,8 @@ geometry = { path = "crates/geometry" }
 - `--vcs [vcs]` 设置使用的版本管理工具，默认为 git。可选值为：git, hg, pijul, fossil
 - `--registory [registory]` 设置源
 
-**示例**
+**示例:**
+
 ```sh
 cargo new new_package
 ```
@@ -79,13 +81,12 @@ cargo new new_package
 
 `run` 命令是编译速度优先，不会对代码进行优化，牺牲了运行速度，换取 package 尽快编译完成然后启动，适合在开发时进行调试时使用。
 
-`--` ： 分隔命令行参数，`—` 后面的参数会传递给当前运行的  `package` 
+`--` ： 分隔命令行参数，`—` 后面的参数会传递给当前运行的  `package`
 
 `options` (常用):
 
 - `--release, -r` 编译为`release`版本
 - `--profile [name]` 获取调试信息
-
 
 ### `cargo build`
 

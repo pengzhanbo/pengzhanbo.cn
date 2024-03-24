@@ -6,13 +6,14 @@ permalink: /interview-question/w122van2/
 ---
 
 ::: tip 提问
+
 1. 什么是 Virtual DOM?
 2. Virtual DOM 比 原生DOM快在哪里？
 :::
 
 ## Virtual DOM
 
-本质上，`Virtual DOM` 是一个普通的javascript对象。 
+本质上，`Virtual DOM` 是一个普通的javascript对象。
 我们将需要需要插入的文档的DOM树结构进行解析，使用一个对象结构进行表述，
 比如一个元素对象，包含了 `TagName` , `props` , `attribute` ,`children` 等属性，
 然后我们将这个对象结构保存起来，最后再将DOM片段插入到文档中。

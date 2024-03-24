@@ -9,13 +9,13 @@ permalink: /article/o95q9n27/
 
 > 本文翻译自 [官方文档 JSDoc Reference](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
 
-----
+---
 
 下面的列表概述了当使用 JSDoc 注释在 JavaScript 文件中提供类型信息时，当前支持哪些结构。
 
 注意，下面没有显式列出的任何标记(例如 `@async` )都不支持。
 
-**Types**
+**Types:**
 
 - [@type](#type).
 - [@param](#param-and-returns) (or [@arg](#param-and-returns) or [@argument](#param-and-returns))
@@ -25,16 +25,16 @@ permalink: /article/o95q9n27/
 - [@template](#template)
 - [@satisfies](#satisfies)
 
-**Classes**
+**Classes:**
 
-- [Property Modifiers](#property-modifiers) [@public](#public), [@private](#private), [@protected](#protected), [@readonly](#readonly)
+- [Property Modifiers](#property-modifiers) `@public`, `@private`, `@protected`, [@readonly](#readonly)
 - [@override](#override)
-- [@extends](#extends) (or [@augments](#augments))
+- [@extends](#extends) (or `@augments`)
 - [@implements](#implements)
-- [@class](#class) (or [@constructor](#constructor))
+- `@class` (or [@constructor](#constructor))
 - [@this](#this)
 
-**Documentation**
+**Documentation:**
 
 文档标签在TypeScript和JavaScript中都有效。
 
@@ -42,14 +42,13 @@ permalink: /article/o95q9n27/
 - [@see](#see)
 - [@link](#link)
 
-**Other**
+**Other:**
 
 - [@enum](#enum)
 - [@author](#author)
 - [Other supported patterns](#other-supported-patterns)
 - [Unsupported patterns](#unsupported-patterns)
 - [Unsupported tags](#unsupported-tags)
-
 
 其含义通常与 [jsdoc.app](https://jsdoc.app) 中给出的标签含义相同，或者是超集。
 下面的代码描述了不同之处，并给出了每个标记的一些示例用法。
@@ -220,7 +219,6 @@ myPet.name;
  */
 var x = require("./accounts").userAccount;
 ```
-
 
 ### `@param` and `@returns`
 
@@ -578,7 +576,8 @@ var result = C(1);
 }
 ```
 
-> 注意：错误消息仅显示在具有 [JSConfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html) 并 [checkJs](https://www.typescriptlang.org/tsconfig#checkJs) 启用的 JS 代码库中。
+> 注意：错误消息仅显示在具有 [JSConfig](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
+> 并 [checkJs](https://www.typescriptlang.org/tsconfig#checkJs) 启用的 JS 代码库中。
 
 对于`@constructor`，`this` 是在构造函数 `C` 中检查的，所以你会得到初始化方法的建议，如果你给它传递一个数字就会出现错误。如果调用 `C` 而不是构造它，编辑器也可能显示警告。
 
@@ -597,7 +596,6 @@ function callbackForLater(e) {
   this.clientHeight = parseInt(e); // should be fine!
 }
 ```
-
 
 ## Documentation
 
@@ -683,7 +681,6 @@ MathFuncs.add1;
 ```
 
 请记住用尖括号将电子邮件地址括起来。否则，`@example` 将被解析为新标签。
-
 
 ### Other supported patterns
 

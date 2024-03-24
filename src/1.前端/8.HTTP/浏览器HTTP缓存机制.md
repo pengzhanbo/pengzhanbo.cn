@@ -17,12 +17,14 @@ permalink: /article/c3ez957l/
 那么就可以直接从浏览器缓存中提取而不是从原始服务器中获取这个资源。
 
 http缓存都是从对同一资源的第二次请求开始的。
+
 - 第一次请求时，服务器返回资源，并在`response header`中回传资源的缓存参数；
 - 第二次请求时，浏览器会根据这些缓存参数，判断是否使用浏览器缓存的资源副本还是从服务器获取资源。
 
 ## HTTP缓存分类
 
 HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大类：
+
 - 强缓存： 强制缓存，在缓存有效时间内，不再向服务器发起资源请求，直接使用浏览器缓存的资源副本
 - 协商缓存：在缓存有效时间内，需要向服务器询问资源是否需要更新，如果需要更新，则从服务器获取新的资源，
   如果不需要更新，则继续使用浏览器缓存的资源副本；
@@ -38,7 +40,6 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 - 共享缓存：只要有一个用户发起的对同一个资源的首次到达代理服务器的请求，代理服务器对该资源缓存后，其他用户请求代理服务器上的资源，
   在缓存有效时间内，代理服务器不再向原始服务器获取新的资源，返回代理服务为缓存的资源副本。
 :::
-
 
 ## 主要的HTTP Headers
 
@@ -71,8 +72,6 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
   | Expires             | http1.0时代的产物，实体主体过期时间 |
   | Last-Modified       | 资源的最后一次更新时间 |
 
-
-
 ::: warning 提醒
 `Pragma`、`Expires` 这两个header是 http1.0中的内容，在 http1.1及往后的版本中逐步被弃用。
 
@@ -91,10 +90,13 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 `Pragma` 字段仅有一个 `no-cache`的可选值，会告知客户端不要对该资源进行缓存读取，应该每次都向服务器发送资源请求。
 
 在客户端使用时，通常做法是在 HTML中加上一个 meta 标签：
+
 ``` html
 <meta http-equiv="Pragma" content="no-cache">
 ```
+
 ::: caution 警告
+
 - 这个标签声明仅有 IE才能识别含义，其他主流浏览器不兼容。
 - 在IE浏览器中，虽然能够识别含义，但并不一定会在请求Request Header中加上Pragma，但确实会让当前页面每次都发起新请求。
   （仅限页面html文件，页面内使用的其他资源不受影响。）
@@ -108,7 +110,6 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 *除了部分网站出于兼容性考虑，还会带上该字段。*
 :::
 
-
 ### Expires
 
 在 http1.0中，Pragma 用于禁用缓存，也需要有一个字段用于启用缓存和定义缓存时间。Expires 就是用于这个目的。
@@ -117,9 +118,11 @@ Expires 的值是一个 GMT时间， 如：`Thu Jun 07 2018 14:26:45 GMT`，用�
 则不发起新的资源请求。
 
 在客户端，可以使用 meta标签来告知浏览器缓存时间
+
 ``` html
 <meta http-equiv="expires" content="Thu Jun 07 2018 14:26:45 GMT">
 ```
+
 如果希望不走缓存，每次页面请求都发起新的请求，可以把 content 设置为 -1 或 0。
 
 ::: caution 提醒
@@ -152,6 +155,7 @@ Expires 字段虽然能够定义缓存有效时间，但是这个时间的设置
 `Cache-Control` 做为 `Response Headers` 属性返回时，通知浏览器对该资源的缓存方式和有效时间。
 
 Cache-Control 语法如下：
+
 ```
 Cache-Control: <cache-directive>
 ```
@@ -182,7 +186,6 @@ Cache-Control: <cache-directive>
 | must-revalidate       | 当前资源一定是向原始服务器发去验证请求的，若请求失败会返回504(而非代理服务器上的缓存) |
 | proxy-revalidate      | 和 must-revalidate类似，但仅应用于 共享缓存 |
 
-
 - 可以直接在 HTML页面的`<head>` 中通过 meta标签来给请求头加上 `Cache-Control` 字段：
 
   ``` html
@@ -190,9 +193,11 @@ Cache-Control: <cache-directive>
   ```
 
 - `Cache-Control` 允许自由组合可选值：
+
   ```
   Cache-Control: max-age=3600, must-revalidate
   ```
+
   这段声明表示，该资源必须从原始服务器获取，且其缓存有效时间为一个小时，在后续的一个小时内，用户重新访问该资源都无需发送请求。
 
 ### 缓存校验
@@ -222,17 +227,21 @@ http1.1 新增了 `Last-Modified`、`ETag`、 `If-Match`、`If-None-Match`、`If
 客户端在上报 Last-Modified 时，可以使用的 Request Headers 字段有两个：
 
 - `If-Modified-Since`: 该字段格式如下
+
   ```
   If-Modified-Since: <Last-Modified-Value>
   ```
+
   字段告诉服务端，如果客户端上报的最后修改时间和服务器上的最后修改时间一致，则直接返回304和响应报头即可。
 
   当前各浏览器默认使用该字段用来向服务端上报保存的 Last-Modified 值。
 
 - `If-Unmodified-Since`: 该字段格式如下
+
   ```
   If-Unmodified-Since: <Last-Modified-Value>
   ```
+
   字段告诉服务端，如果客户端上报的最后修改时间和服务端上的最后修改时间不一致，
   则应当返回 412（Precondition Failed）状态码给客户端。
 
@@ -245,6 +254,7 @@ Last-Modified 由于是使用的资源最后修改时间来确定资源是否有
 为了解决 `Last-Modified` 可能存在的不准确的问题，http1.1 还推出了 ETag 实体首部字段。
 
 服务器会通过某种算法，给资源计算得出一个唯一标识符，在把资源响应给客户端的时候，会在实体首部加上该字段一起返回给客户端。
+
 ```
 ETag: ETag-Value
 ```
@@ -256,17 +266,21 @@ ETag: ETag-Value
 客户端在上报 ETag 时，可以使用的 Request Headers 字段有两个：
 
 - `If-None-Match` 该字段格式如下
+
   ```
   If-None-Match: <ETag-Value>
   ```
+
   字段告诉服务端，如果ETag没有匹配上，需要重新返回新的资源实体内容，否则直接返回 304 状态码。
 
   当前各浏览器默认使用该字段用来向服务端上报保存的 ETag 值。
 
 - `If-Match` 该字段格式如下
+
   ```
   If-Match: <ETag-Value>
   ```
+
   字段告诉服务端，如果ETag没匹配到，或者收到了`"*"`值而当前没有该资源实体，
   则应当返回412（Precondition Failed）状态码给客户端。否则服务器直接忽略该字段。
 
@@ -289,15 +303,19 @@ ETag: ETag-Value
 但是如果用户请求的是代理服务器而非原始服务器，且代理服务器如果直接把缓存的IE版本资源发给了非IE的客户端，那就出问题了。
 
 而 Vary 则是用于处理这类问题的头部字段，只需要在响应报文加上：
+
 ```
 Vary: User-Agent
 ```
+
 字段告知代理服务器需要以 User-Agent 这个请求头部字段来区别缓存版本，确定传递给客户端的版本。
 
 Vary 字段也接受条件组合的形式
+
 ```
 Vary: User-Agent, Accept-Encoding
 ```
+
 字段告知代理服务器需要以 User-Agent 和 Accept-Encoding 两个请求头部字段来区别缓存版本。
 
 ### Date、Age
@@ -309,7 +327,6 @@ Date 字段表示原始服务器发送该资源的响应报文时间（GMT时间
 - 如果每次刷新页面，浏览器每次都会重新发起这条请求，那么其Date的值会不断变化，说明该资源是直接从原始服务器返回的。
 
 Age 字段表示某个文件在代理服务器中存在的时间（秒），如果文件被修改或替换，Age会重新从0开始累计。
-
 
 ## 浏览器表现
 

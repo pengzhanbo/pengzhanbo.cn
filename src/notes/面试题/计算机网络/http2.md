@@ -6,6 +6,7 @@ permalink: /interview-question/yiutzl7y/
 ---
 
 ::: tip 提问
+
 1. http/2
 2. http2有什么特性？
 :::
@@ -13,7 +14,6 @@ permalink: /interview-question/yiutzl7y/
 ## HTTP/2
 
 HTTP/2 是对HTTP/1.1的升级，对HTTP/1.1做了优化。
-
 
 ## 特性
 

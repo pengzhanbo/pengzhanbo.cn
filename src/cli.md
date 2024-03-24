@@ -13,6 +13,7 @@ article: false
 ### 拷贝一个文件
 
 将 `file.txt` 拷贝到 `documents/` 目录下
+
 ```sh
 cp file.txt documents/
 ```
@@ -20,6 +21,7 @@ cp file.txt documents/
 ### 拷贝一个目录
 
 把 `music/` 整个目录拷贝到 `media/` 目录下
+
 ```sh
 cp -a music media/
 # 或者写成
@@ -29,6 +31,7 @@ cp -a music/ media/music/
 ### 创建文件副本
 
 从 `file.txt` 创建副本 `file.bak.txt`
+
 ```sh
 cp file.txt file.bak.txt
 # 或者写成
@@ -38,6 +41,7 @@ cp file{,.bak}.txt
 ### 创建目录副本
 
 从 `music/` 创建副本
+
 ```sh
 cp -a music/ media/
 # 如果 media 目录不存在
@@ -49,6 +53,7 @@ cp -a music media/
 ### 移动文件
 
 将 `file.txt` 移动到 `documents/` 目录下
+
 ```sh
 mv file.txt documents/
 # 不要忽略 document 后面的 `/`，不然会被当成重命名文件
@@ -57,6 +62,7 @@ mv file.txt documents/
 ### 重命名文件
 
 将 `file.txt` 重命名为 `readme.md`
+
 ```sh
 mv file.txt readme.md
 ```
@@ -64,6 +70,7 @@ mv file.txt readme.md
 ### 移动目录
 
 将 目录 `music/` 移动到 `media/` 目录下
+
 ```sh
 mv music media/
 # 或者写成
@@ -73,6 +80,7 @@ mv music/ media/music
 ### 重命名目录
 
 将 目录 `music/` 重命名为 `media/`
+
 ```sh
 mv music/ media/
 ```
@@ -80,6 +88,7 @@ mv music/ media/
 ## 合并目录文件
 
 将 `images/` 目录合并到 `images2/` 目录中
+
 ```sh
 # -a 相当于 -rlptgoD , 表示归档，同名文件会被覆盖
 rsync -a images/ images2/
@@ -90,6 +99,7 @@ rsync -a images/ images2/
 ### 创建文件
 
 创建 `file.txt`
+
 ```sh
 touch file.txt # 如果文件存在，则更新它的权限和修改时间
 # 或者使用
@@ -99,6 +109,7 @@ touch file.txt # 如果文件存在，则更新它的权限和修改时间
 ### 创建目录
 
 创建 `music/` 目录
+
 ```sh
 mkdir music
 # 创建一连串的文件夹
@@ -108,11 +119,13 @@ mkdir -p media/music/rock
 ## 查看信息
 
 ### 文件和目录大小
+
 ```sh
 du -sh node_modules/
 ```
 
 ### 文件信息
+
 ```sh
 stat -x file # MacOS
 stat file    # Linux
@@ -121,6 +134,7 @@ stat file    # Linux
 ### 文件内容
 
 查看文件内容
+
 ```sh
 cat file.txt
 # 如果文件太大，可以使用 `less` 来一次查看一页内容
@@ -130,6 +144,7 @@ less file.txt
 ### 目录文件
 
 查看目录中的文件
+
 ```sh
 ls folder
 # -l: 以列表格式显示. -a: 显示包括隐藏文件的所有文件. -la 结合以上两个选项.
@@ -139,6 +154,7 @@ ls -alrth folder
 ```
 
 显示目录下所有文件和子目录的文件树
+
 ```sh
 tree folder  # Linux
 find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g' # MacOS
@@ -148,6 +164,7 @@ find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g' # MacOS
 ## 打开文件
 
 使用默认程序打开文件
+
 ```sh
 xdg-open file # Linux
 open file     # MacOS
@@ -155,6 +172,7 @@ start file    # Windows
 ```
 
 在任意程序中打开文件
+
 ```sh
 open -a appName file
 ```
@@ -164,6 +182,7 @@ open -a appName file
 ### 删除一个文件
 
 删除 `file.txt`
+
 ```sh
 rm file.txt
 ```
@@ -171,6 +190,7 @@ rm file.txt
 ### 删除一个目录
 
 删除 `music/` 目录
+
 ```sh
 rm -r music
 ```
@@ -180,6 +200,7 @@ rm -r music
 ### 压缩整个目录
 
 将 目录 `music/` 压缩到 `archive.zip`
+
 ```sh
 zip -r archive.zip music
 ```
@@ -187,6 +208,7 @@ zip -r archive.zip music
 ### 解压文件
 
 将 `archive.zip` 解压
+
 ```sh
 unzip archive.zip
 ```
@@ -194,6 +216,7 @@ unzip archive.zip
 ### 速览压缩文件
 
 速览压缩包中的文件
+
 ```sh
 zipinfo archive.zip
 # 或者
@@ -205,6 +228,7 @@ unzip -l archive.zip
 ### 找出陈旧文件
 
 找出所有最近一次修改在 5 天之前的文件
+
 ```sh
 find folder -mtime +5
 ```
@@ -228,6 +252,7 @@ grep -i "music" file.txt
 - `-a`：也对二进制文件进行检索，而不是忽略它们！
 
 ## 强制退出程序
+
 ```sh
 killall program_name
 ```
@@ -235,6 +260,7 @@ killall program_name
 ## 网络
 
 ### 服务器响应
+
 ```sh
 curl -i https://pengzhanbo.cn
 ```
@@ -242,6 +268,7 @@ curl -i https://pengzhanbo.cn
 ### 检查域名/地址连接
 
 检查域名或者地址某端口是否能够连接
+
 ```sh
 nc -vz pengzhanbo.cn 443
 nc -vz 1.1.1.1 443

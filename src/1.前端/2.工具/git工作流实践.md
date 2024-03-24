@@ -24,7 +24,7 @@ banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
 
 试想一下，在我们实际的软件开发过程中，迭代一个软件的版本，正常来说是：
 
-```
+```txt
 需求评审 -> 需求确认 -> 开发阶段 -> 
 测试环境测试 -> 预生产发布验证 -> 生产环境发布验证 -> 发布完成
 ```
@@ -62,7 +62,6 @@ banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
 在这种场景下，我们不可能把需求都集中在某个分支上进行开发，仅有的一个 develop分支也很难满足所有的
 开发合并和测试。
 
-
 ### 开发人员对于 git的掌握
 
 很多时候，对于工具能够使用到什么程度，对于项目能够有多少帮助，其实不在于 工具有多优秀，而是在于团队成员
@@ -73,7 +72,6 @@ banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
 然而，这会也给项目带来了潜在的风险：主要分支可能会被误操作污染，多个功能直接在同一个分支开发等等。
 
 而为了解决这些问题，需要建立一套足够完善，同时低复杂度的操作规范，并对人员和分支加以权限控制。
-
 
 ## 分支管理实践
 
@@ -97,7 +95,6 @@ banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
   每个分支仅针对某一个单一的业务或者功能，所有的改动都应该在 feature 分支上进行。
   仅能合并到 prerelease 分支。 master有更新后需要及时拉取合并同步。
 
-  
 流程图：
 ![git-work-flow](https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png)
 
@@ -128,7 +125,7 @@ banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
 ::: warning 说明
 该实践方案仅是我过去在我的工作实践中总结的，并在团队内部经历过超过2年的验证和调整所得出的，适合于当时团队的实践方案。
 
-是否与您的团队或所在的团队契合，还需要重新考量。 
+是否与您的团队或所在的团队契合，还需要重新考量。
 
 分支管理方案 需要从实际的情况触发考虑，包括团队人数，产品规模等等。
 

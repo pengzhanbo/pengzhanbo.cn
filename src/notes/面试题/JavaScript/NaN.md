@@ -6,11 +6,13 @@ permalink: /interview-question/jilzuxpt/
 ---
 
 ::: tip 提问
+
 1. typeof NaN的结果是什么？
 2. isNaN() 和 Number.isNaN() 有什么区别？
 :::
 
-##  typeof NaN
+## typeof NaN
+
 `NaN` 表示不是一个数字 （not a number），NaN 是一个警戒值，用于指出数字类型中的错误情况，
 即 执行数字预算没有成功，这是失败后返回的结果。
 
@@ -19,6 +21,7 @@ typeof NaN; // "number"
 ```
 
 NaN 作为一个特殊值， 它和自身是不相等的，是唯一个非自反的值，即
+
 ``` js
 NaN === NaN; // false
 ```

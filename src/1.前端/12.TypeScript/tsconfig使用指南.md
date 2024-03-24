@@ -20,13 +20,17 @@ permalink: /article/284xp17b/
 
 ::: code-tabs
 @tab tsconfig.json
+
 ```json
 {}
 ```
+
 @tab jsconfig.json
+
 ```json
 {}
 ```
+
 :::
 
 `TSConfig` 包含了默认配置。
@@ -55,9 +59,10 @@ permalink: /article/284xp17b/
 
 `extends` 不会继承 配置文件中的 `files`, `include`, `exclude` 字段，同时，不允许配置文件之间循环引用。
 
-#### example:
+### example
 
 `tsconfig.base.json`
+
 ```json
 {
   "compilerOptions": {
@@ -66,7 +71,9 @@ permalink: /article/284xp17b/
   }
 }
 ```
+
 `tsconfig.json`
+
 ```json
 {
   "extends": "./tsconfig.base",
@@ -75,6 +82,7 @@ permalink: /article/284xp17b/
 ```
 
 `tsconfig.noStrictNullChecks.json`
+
 ```json
 {
   "extends": "./tsconfig",
@@ -90,58 +98,92 @@ permalink: /article/284xp17b/
 
 `compilerOptions` 主要包含以下配置内容：
 
-**Type checking**
+**Type checking:**
 
-[`allowUnreachableCode`](#allowunreachablecode), [`allowUnusedLabels`](#allowunusedlabels), [`alwaysStrict`](#alwaysstrict), [`exactOptionalPropertyTypes`](#exactoptionalpropertytypes), [`noFallthroughCasesInSwitch`](#nofallthroughcasesinswitch), [`noImplicitAny`](#noimplicitany),[`noImplicitOverride`](#noimplicitoverride), [`noImplicitReturns`](#noimplicitreturns), [`noImplicitThis`](#noimplicitthis), [`noPropertyAccessFromIndexSignature`](#nopropertyaccessfromindexsignature), [`noUncheckedIndexedAccess`](#nouncheckedindexedaccess),[`noUnusedLocals`](#nounusedlocals), [`noUnusedParameters`](#nounusedparameters), [`strict`](#strict), [`strictBindCallApply`](#strictbindcallapply), [`strictFunctionTypes`](#strictfunctiontypes), [`strictNullChecks`](#strictfunctiontypes), [`strictPropertyInitialization`](#strictpropertyinitialization), [`useUnknownInCatchVariables`](#useunknownincatchvariables)
+[`allowUnreachableCode`](#allowunreachablecode), [`allowUnusedLabels`](#allowunusedlabels),
+[`alwaysStrict`](#alwaysstrict), [`exactOptionalPropertyTypes`](#exactoptionalpropertytypes),
+[`noFallthroughCasesInSwitch`](#nofallthroughcasesinswitch), [`noImplicitAny`](#noimplicitany),
+[`noImplicitOverride`](#noimplicitoverride), [`noImplicitReturns`](#noimplicitreturns),
+[`noImplicitThis`](#noimplicitthis),
+[`noPropertyAccessFromIndexSignature`](#nopropertyaccessfromindexsignature),
+[`noUncheckedIndexedAccess`](#nouncheckedindexedaccess),[`noUnusedLocals`](#nounusedlocals),
+[`noUnusedParameters`](#nounusedparameters), [`strict`](#strict),
+ [`strictBindCallApply`](#strictbindcallapply), [`strictFunctionTypes`](#strictfunctiontypes),
+ [`strictNullChecks`](#strictfunctiontypes),
+[`strictPropertyInitialization`](#strictpropertyinitialization),
+[`useUnknownInCatchVariables`](#useunknownincatchvariables)
 
-**Modules**
+**Modules:**
 
-[`allowUmdGlobalAccess`](#allowumdglobalaccess), [`baseUrl`](#baseurl), [`module`](#module), [`moduleResolution`](#moduleresolution), [`moduleSuffixes`](#modulesuffixes), [`noResolve`](#noresolve), [`paths`](#paths), [`resolveJsonModule`](#resolvejsonmodule), [`rootDir`](#rootdir), [`rootDirs`](#rootdirs), [`typeRoots`](#typeroots), [`types`](#types)
+[`allowUmdGlobalAccess`](#allowumdglobalaccess), [`baseUrl`](#baseurl), [`module`](#module),
+[`moduleResolution`](#moduleresolution), [`moduleSuffixes`](#modulesuffixes), [`noResolve`](#noresolve),
+[`paths`](#paths), [`resolveJsonModule`](#resolvejsonmodule), [`rootDir`](#rootdir),
+[`rootDirs`](#rootdirs), [`typeRoots`](#typeroots), [`types`](#types)
 
-**Emit**
+**Emit:**
 
-[`declaration`](#declaration), [`declarationDir`](#declarationdir), [`declarationMap`](#declarationmap), [`downlevelIteration`](#downleveliteration), [`emitBOM`](#emitbom), [`emitDeclarationOnly`](#emitdeclarationonly), [`importHelpers`](#importhelpers), [`importsNotUsedAsValues`](#importsnotusedasvalues), [`inlineSourceMap`](#inlinesourcemap), [`inlineSources`](#inlinesources), [`mapRoot`](#maproot), [`newLine`](#newline), [`noEmit`](#noemit), [`noEmitHelpers`](#noemithelpers), [`noEmitOnError`](#noemitonerror), [`outDir`](#outdir), [`outFile`](#outfile), [`preserveConstEnums`](#preserveconstenums), [`preserveValueImports`](#preservevalueimports), [`removeComments`](#removecomments), [`sourceMap`](#sourcemap), [`sourceRoot`](#sourceroot), [`stripInternal`](#stripinternal)
+[`declaration`](#declaration), [`declarationDir`](#declarationdir), [`declarationMap`](#declarationmap),
+[`downlevelIteration`](#downleveliteration), [`emitBOM`](#emitbom),
+[`emitDeclarationOnly`](#emitdeclarationonly), [`importHelpers`](#importhelpers),
+[`importsNotUsedAsValues`](#importsnotusedasvalues), [`inlineSourceMap`](#inlinesourcemap),
+[`inlineSources`](#inlinesources), [`mapRoot`](#maproot), [`newLine`](#newline), [`noEmit`](#noemit),
+[`noEmitHelpers`](#noemithelpers), [`noEmitOnError`](#noemitonerror), [`outDir`](#outdir),
+[`outFile`](#outfile), [`preserveConstEnums`](#preserveconstenums),
+[`preserveValueImports`](#preservevalueimports), [`removeComments`](#removecomments),
+[`sourceMap`](#sourcemap), [`sourceRoot`](#sourceroot), [`stripInternal`](#stripinternal)
 
-**JavaScript Support**
+**JavaScript Support:**
 
 [`allowJs`](#allowjs), [`checkJs`](#checkjs), [`maxNodeModuleJsDepth`](#maxnodemodulejsdepth)
 
-**Editor Support**
+**Editor Support:**
 
 [`disableSizeLimit`](#disablesizelimit), [`plugins`](#plugins)
 
-**Interop Constraints**
+**Interop Constraints:**
 
-[`allowSyntheticDefaultImports`](#allowsyntheticdefaultimports), [`esModuleInterop`](#esmoduleinterop), [`forceConsistentCasingInFileNames`](#forceconsistentcasinginfilenames), [`isolatedModules`](#isolatedmodules), [`preserveSymlinks`](#preservesymlinks)
+[`allowSyntheticDefaultImports`](#allowsyntheticdefaultimports), [`esModuleInterop`](#esmoduleinterop),
+ [`forceConsistentCasingInFileNames`](#forceconsistentcasinginfilenames), [`isolatedModules`](#isolatedmodules), [`preserveSymlinks`](#preservesymlinks)
 
-**Backwards Compatibility**
+**Backwards Compatibility:**
 
-[`charset`](#charset), [`keyofStringsOnly`](#keyofstringsonly), [`noImplicitUseStrict`](#noimplicitusestrict), [`noStrictGenericChecks`](#nostrictgenericchecks), [`out`](#out), [`suppressExcessPropertyErrors`](#suppressexcesspropertyerrors), [`suppressImplicitAnyIndexErrors`](#suppressimplicitanyindexerrors)
+[`charset`](#charset), [`keyofStringsOnly`](#keyofstringsonly),
+[`noImplicitUseStrict`](#noimplicitusestrict), [`noStrictGenericChecks`](#nostrictgenericchecks),
+[`out`](#out), [`suppressExcessPropertyErrors`](#suppressexcesspropertyerrors), [`suppressImplicitAnyIndexErrors`](#suppressimplicitanyindexerrors)
 
-**Language and Environment**
+**Language and Environment:**
 
-[`emitDecoratorMetadata`](#emitdecoratormetadata), [`experimentalDecorators`](#experimentaldecorators), [`jsx`](#jsx), [`jsxFactory`](#jsxfactory), [`jsxFragmentFactory`](#jsxfragmentfactory), [`jsxImportSource`](#jsximportsource), [`lib`](#lib), [`moduleDetection`](#moduledetection), [`noLib`](#nolib),[`reactNamespace`](#reactnamespace),[`target`](#target), [`useDefineForClassFields`](#usedefineforclassfields)
+[`emitDecoratorMetadata`](#emitdecoratormetadata), [`experimentalDecorators`](#experimentaldecorators),
+[`jsx`](#jsx), [`jsxFactory`](#jsxfactory), [`jsxFragmentFactory`](#jsxfragmentfactory),
+[`jsxImportSource`](#jsximportsource), [`lib`](#lib), [`moduleDetection`](#moduledetection),
+[`noLib`](#nolib),[`reactNamespace`](#reactnamespace),[`target`](#target),
+[`useDefineForClassFields`](#usedefineforclassfields)
 
-**Compiler Diagnostics**
+**Compiler Diagnostics:**
 
-[`diagnostics`](#diagnostics), [`explainFiles`](#explainfiles), [`extendedDiagnostics`](#extendeddiagnostics), [`generateCpuProfile`](#generatecpuprofile), [`generateCpuProfile`](#generatecpuprofile), [`listFiles`](#listfiles), [`traceResolution`](#traceresolution)
+[`diagnostics`](#diagnostics), [`explainFiles`](#explainfiles),
+[`extendedDiagnostics`](#extendeddiagnostics), [`generateCpuProfile`](#generatecpuprofile),
+[`generateCpuProfile`](#generatecpuprofile), [`listFiles`](#listfiles),
+[`traceResolution`](#traceresolution)
 
-**Projects**
+**Projects:**
 
-[`composite`](#composite), [`disableReferencedProjectLoad`](#disablereferencedprojectload), [`disableSolutionSearching`](#disablesolutionsearching), [`disableSourceOfProjectReferenceRedirect`](#disablesourceofprojectreferenceredirect), [`incremental`](#incremental), [`tsBuildInfoFile`](#tsbuildinfofile)
+[`composite`](#composite), [`disableReferencedProjectLoad`](#disablereferencedprojectload),
+[`disableSolutionSearching`](#disablesolutionsearching),
+[`disableSourceOfProjectReferenceRedirect`](#disablesourceofprojectreferenceredirect),
+[`incremental`](#incremental), [`tsBuildInfoFile`](#tsbuildinfofile)
 
-**Output Formatting**
+**Output Formatting:**
 
 [`noErrorTruncation`](#noerrortruncation), [`preserveWatchOutput`](#preservewatchoutput), [`pretty`](#pretty)
 
-**Completeness**
+**Completeness:**
 
 [`skipDefaultLibCheck`](#skipdefaultlibcheck),[`skipLibCheck`](#skiplibcheck)
 
-**watch options**
+**watch options:**
 
 [`assumeChangesOnlyAffectDirectDependencies`](#assumechangesonlyaffectdirectdependencies)
-
 
 ### allowUnreachableCode
 
@@ -152,6 +194,7 @@ permalink: /article/284xp17b/
 - `false` 不允许，并给出错误警告
 
 **example**  `"allowUnreachableCode": false`
+
 ```ts
 function fn(n: number) {
   if (n > 5) {
@@ -172,7 +215,7 @@ function fn(n: number) {
 - `true` 允许包含
 - `false` 不允许，并给出错误警告
 
-**example**
+**example:**
 
 ```ts
 function verifyAge(age: number) {
@@ -190,20 +233,22 @@ function verifyAge(age: number) {
 
 ### exactOptionalPropertyTypes
 
-如果启用 `exactOptionalPropertyTypes`，`typescript` 将会用更加严格的模式，对 通过 `type` 或者 `interface` 
+如果启用 `exactOptionalPropertyTypes`，`typescript` 将会用更加严格的模式，对 通过 `type` 或者 `interface`
 声明的包含 `?` 的可选属性的检查
 
-**example**
+**example:**
 
 ```ts
 interface Theme {
   colorThemeOverride?: 'dark' | 'light';
 }
 ```
+
 如果没有启用这个配置，那么 `colorThemeOverride` 的值可以是 `'dark'`, `'light'`, `undefined`。
 如果启用了这个配置，则值不能被显式的赋值为 `undefined`。
 
 `"exactOptionalPropertyTypes": true`
+
 ```ts
 const theme: Theme = {}
 
@@ -231,7 +276,6 @@ function fn(s) {
 ```
 
 ### noImplicitOverride
-
 
 ### noImplicitReturns
 
@@ -295,6 +339,7 @@ const fn1: Fn = fn // error: Types of parameters 'x' and 'ns' are incompatible.
 设置程序的模块系统。
 
 可选值包括： `CommonJS`， `UMD`，`AMD`， `System`，`ESNext`， `ES2020`， `ES6/ES2015`，`ES2022`， `Node16`， `NodeNext`， `None`
+
 ### moduleResolution
 
 指定模块解析策略。
@@ -337,6 +382,7 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 ```
 
 告诉 TypeScript 文件解析器支持一些自定义的前缀来寻找代码。 这种模式可以避免在你的代码中出现过长的相对路径:
+
 ```json
 {
   "compilerOptions": {
@@ -371,7 +417,10 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 这将会允许编译器在这些“虚拟”目录中解析相对应的模块导入，就像它们被合并到同一目录中一样。
 
 ### typeRoots
-默认情况下，所有 可见 的 `@types` 包都将包含在你的编译过程中。 在 `node_modules/@types` 中的任何包都被认为是 可见 的。 例如，这意味着包含 `./node_modules/@types/`，`../node_modules/@types/`，`../../node_modules/@types/` 中所有的包。
+
+默认情况下，所有 可见 的 `@types` 包都将包含在你的编译过程中。
+在 `node_modules/@types` 中的任何包都被认为是 可见 的。
+例如，这意味着包含 `./node_modules/@types/`，`../node_modules/@types/`，`../../node_modules/@types/` 中所有的包。
 
 当 `typeRoots` 被指定，仅有 在 `typeRoots` 下的包会被包含。例如：
 
@@ -387,7 +436,9 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 ### types
 
-默认情况下，所有 可见 的 `@types` 包都将包含在你的编译过程中。 在 `node_modules/@types` 中的任何包都被认为是 可见 的。 例如，这意味着包含 `./node_modules/@types/`，`../node_modules/@types/`，`../../node_modules/@types/` 中所有的包。。
+默认情况下，所有 可见 的 `@types` 包都将包含在你的编译过程中。
+在 `node_modules/@types` 中的任何包都被认为是 可见 的。
+例如，这意味着包含 `./node_modules/@types/`，`../node_modules/@types/`，`../../node_modules/@types/` 中所有的包。。
 
 当 types 被指定，则只有列出的包才会被包含在全局范围内。例如：
 
@@ -399,7 +450,8 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 }
 ```
 
-这个 `tsconfig.json` 文件将 只会 包含 `./node_modules/@types/node`，`./node_modules/@types/jest` 和 `./node_modules/@types/express`。 其他在 `node_modules/@types/*` 下的包将不会被包含。
+这个 `tsconfig.json` 文件将 只会 包含 `./node_modules/@types/node`，`./node_modules/@types/jest`
+和 `./node_modules/@types/express`。 其他在 `node_modules/@types/*` 下的包将不会被包含。
 
 此选项不会影响 `@types/*` 如何被包含在你的代码中。
 
@@ -412,12 +464,12 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 为你工程中的每个 `TypeScript` 或 `JavaScript` 文件生成 `.d.ts`文件。 这些 `.d.ts` 文件是描述模块外部 API 的类型定义文件。 可以通过 `.d.ts` 文件为非类型化的代码提供 `intellisense` 和精确的类型。
 
-
 ### declarationDir
 
 配置 声明文件生成的输出目录。
 
 ### declarationMap
+
 ### downlevelIteration
 
 `downlevel (降级）` 是 `TypeScript` 的术语，指用于转换到旧版本的 `JavaScript。` 这个选项是为了在旧版 `Javascript` 运行时上更准确的实现现代 `JavaScript` 迭代器的概念。
@@ -426,7 +478,6 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 如果 `Symbol.iterator` 存在的话，`--downlevelIteration` 将允许在 ES5 环境更准确的使用这些迭代原语。
 
-
 ### emitBOM
 
 ### emitDeclarationOnly
@@ -434,13 +485,17 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 只生成 `.d.ts` 文件，但不生成 `.js` 文件
 
 ### importHelpers
+
 ### importsNotUsedAsValues
+
 ### inlineSourceMap
 
 是否 内联 `sourceMap`
 
 ### inlineSources
+
 ### mapRoot
+
 ### newLine
 
 指定输出文件时使用的行尾序列:  `CRLF` (dos)或 `LF` (unix)。
@@ -457,13 +512,14 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 ### noEmitOnError
 
-如果报告了任何错误，不允许编译器输出文件，如JavaScript源代码、源映射或声明。 
+如果报告了任何错误，不允许编译器输出文件，如JavaScript源代码、源映射或声明。
 默认为false，这使得在类似监听的环境中使用TypeScript更容易，
 在这种环境中，您可能希望在确保所有错误都得到解决之前，再在另一个环境中查看代码更改的结果。
 
 ### outDir
 
-如果被指定，`.js` （以及 .d.ts, .js.map 等）将会被生成到这个目录下。 原始源文件的目录将会被保留，如果计算出的根目录不是你想要的，可以查看 [`rootDir`](#roodir)。
+如果被指定，`.js` （以及 .d.ts, .js.map 等）将会被生成到这个目录下。
+原始源文件的目录将会被保留，如果计算出的根目录不是你想要的，可以查看 [`rootDir`](#rootdir)。
 
 如果没有指定，`.js` 将被生成至于生成它们的 `.ts` 文件相同的目录中。
 
@@ -485,7 +541,8 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 ### sourceMap
 
-启用生成 `sourcemap files`。 这些文件允许调试器和其他工具在使用实际生成的 `JavaScript` 文件时，显示原始的 `TypeScript` 代码。 Source map 文件以 `.js.map` （或 `.jsx.map`）文件的形式被生成到相应的 `.js` 文件输出旁。
+启用生成 `sourcemap files`。 这些文件允许调试器和其他工具在使用实际生成的 `JavaScript` 文件时，
+显示原始的 `TypeScript` 代码。 Source map 文件以 `.js.map` （或 `.jsx.map`）文件的形式被生成到相应的 `.js` 文件输出旁。
 
 `.js` 文件将会包含一个 `sourcemap` 注释，以向外部工具表明文件在哪里。
 
@@ -516,8 +573,6 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 语言服务插件是一种基于现有 `TypeScript` 文件向用户提供额外信息的方法。它们可以改进 `TypeScript` 和编辑器之间的现有信息，或提供自己的错误信息。
 
-
-
 ### allowSyntheticDefaultImports
 
 当设置为 true， 并且模块没有显式指定默认导出时，allowSyntheticDefaultImports 可以让你这样写导入：
@@ -525,7 +580,9 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 ```ts
 import React from "react";
 ```
+
 而不是：
+
 ```ts
 import * as React from "react";
 ```
@@ -535,6 +592,7 @@ import * as React from "react";
 ### esModuleInterop
 
 默认情况下（未设置 `esModuleInterop` 或值为 `false``），TypeScript` 像 ES6 模块一样对待 `CommonJS/AMD/UMD`。这样的行为有两个被证实的缺陷：
+
 - 形如 `import * as moment from "moment"` 这样的命名空间导入等价于 `const moment = require("moment")`
 
 - 形如 `import moment from "moment"` 这样的默认导入等价于 `const moment = require("moment").default`
@@ -551,7 +609,10 @@ import * as React from "react";
 
 ### isolatedModules
 
-虽然你可以使用 `TypeScript` 来从 `TypeScript` 中生成 `JavaScript` 代码，但是使用其他转译器例如 `Babel` 也很常见。 但其他转译器一次只能在一个文件上操作，这意味着它们不能进行基于完全理解类型系统后的代码转译。 这个限制也同样适用于被一些构建工具使用的 `TypeScript` 的 `ts.transpileModule` 接口。
+虽然你可以使用 `TypeScript` 来从 `TypeScript` 中生成 `JavaScript` 代码，
+但是使用其他转译器例如 `Babel` 也很常见。 但其他转译器一次只能在一个文件上操作，
+这意味着它们不能进行基于完全理解类型系统后的代码转译。
+这个限制也同样适用于被一些构建工具使用的 `TypeScript` 的 `ts.transpileModule` 接口。
 
 这些限制可能会导致一些 `TypeScript` 特性的运行时问题，例如 `const enum` 和 `namespace`。 设置 `isolatedModules` `选项后，TypeScript` 将会在当你写的某些代码不能被单文件转译的过程正确处理时警告你。
 
@@ -575,7 +636,7 @@ import * as React from "react";
 
 已弃用。
 
-### suppressExcessPropertyErrors 
+### suppressExcessPropertyErrors
 
 ### suppressImplicitAnyIndexErrors
 
@@ -606,7 +667,9 @@ import * as React from "react";
 
 ### lib
 
-`TypeScript` 包括一组默认的内建 JS 接口（例如 Math）的类型定义，以及在浏览器环境中存在的对象的类型定义（例如 `document`）。 `TypeScript` 还包括与你指定的 `target` 选项相匹配的较新的 JS 特性的 API。例如如果`target` 为 `ES6` 或更新的环境，那么 Map 的类型定义是可用的。
+`TypeScript` 包括一组默认的内建 JS 接口（例如 Math）的类型定义，以及在浏览器环境中存在的对象的类型定义
+（例如 `document`）。 `TypeScript` 还包括与你指定的 `target` 选项相匹配的较新的 JS 特性的 API。
+例如如果`target` 为 `ES6` 或更新的环境，那么 Map 的类型定义是可用的。
 
 你可能出于某些原因改变这些：
 
@@ -614,39 +677,45 @@ import * as React from "react";
 - 你的运行时平台提供了某些 JavaScript API 对象（也许通过 polyfill），但还不支持某个 ECMAScript 版本的完整语法。
 - 你有一些 （但不是全部）对于更高级别的 ECMAScript 版本的 polyfill 或本地实现。
 
-**高阶库**
+**高阶库:**
 
-|名称 |	内容 |
-| -- | -- |
-| ES5 |	ES3 和 ES5 的核心功能定义 |
-| ES2015 | ES2015 中额外提供的 API (又被称为 ES6) —— array.find， Promise，Proxy，Symbol，Map，Set，Reflect 等。|
-| ES6 | ES2015 的别名。|
-| ES2016 | ES2016 中额外提供的 API —— array.include 等。 |
-| ES7 | ES2016 的别名。|
-| ES2017 | ES2017 中额外提供的 API —— Object.entries，Object.values，Atomics，SharedArrayBuffer，date.formatToParts，typed arrays 等。|
-| ES2018 | ES2018 中额外提供的 API —— async iterables，promise.finally，Intl.PluralRules，rexexp.groups 等。|
-| ES2019 | ES2019 中额外提供的 API —— array.flat，array.flatMap，Object.fromEntries，string.trimStart，string.trimEnd 等。|
-| ES2020 | ES2020 中额外提供的 API —— string.matchAll 等。 |
-| ESNext | ESNext 中额外提供的 API —— 随着 JavaScript 的发展，这些会发生变化。|
-| DOM | DOM 定义 —— window，document 等。|
-| WebWorker | WebWorker 上下文中存在的 API。|
+| 名称       | 内容 |
+| ---------- | ---- |
+| ES5        | ES3 和 ES5 的核心功能定义 |
+| ES2015     | ES2015 中额外提供的 API (又被称为 ES6) —— array.find， Promise，Proxy，Symbol，Map，Set，Reflect 等。|
+| ES6        | ES2015 的别名。|
+| ES2016     | ES2016 中额外提供的 API —— array.include 等。 |
+| ES7        | ES2016 的别名。|
+| ES2017     | ES2017 中额外提供的 API —— Object.entries，Object.values，Atomics，SharedArrayBuffer，date.formatToParts，typed arrays 等。|
+| ES2018     | ES2018 中额外提供的 API —— async iterables，promise.finally，Intl.PluralRules，rexexp.groups 等。|
+| ES2019     | ES2019 中额外提供的 API —— array.flat，array.flatMap，Object.fromEntries，string.trimStart，string.trimEnd 等。|
+| ES2020     | ES2020 中额外提供的 API —— string.matchAll 等。 |
+| ESNext     | ESNext 中额外提供的 API —— 随着 JavaScript 的发展，这些会发生变化。|
+| DOM        | DOM 定义 —— window，document 等。|
+| WebWorker  | WebWorker 上下文中存在的 API。|
 | ScriptHost | Windows Script Hosting System 的 API。|
 
-**库的各个组件**：
+**库的各个组件:**
 
-`DOM.Iterable`， `ES2015.Core`， `ES2015.Collection`， `ES2015.Generator`， `ES2015.Iterable`， `ES2015.Promise`， `ES2015.Proxy`， `ES2015.Reflect`， `ES2015.Symbol`， `ES2015.Symbol.WellKnown`， `ES2016.Array.Include`， `ES2017.object`， `ES2017.Intl`， `ES2017.SharedMemory`， `ES2017.String`， `ES2017.TypedArrays`， `ES2018.Intl`， `ES2018.Promise`， `ES2018.RegExp`， `ES2019.Array`， `ES2019.Full`， `ES2019.Object`， `ES2019.String`， `ES2019.Symbol`， `ES2020.Full`， `ES2020.String`， `ES2020.Symbol.wellknown`， `ESNext.AsyncIterable`， `ESNext.Array`， `ESNext.Intl`， `ESNext.Symbol`
-
+`DOM.Iterable`， `ES2015.Core`， `ES2015.Collection`， `ES2015.Generator`， `ES2015.Iterable`，
+`ES2015.Promise`， `ES2015.Proxy`， `ES2015.Reflect`， `ES2015.Symbol`，
+`ES2015.Symbol.WellKnown`， `ES2016.Array.Include`， `ES2017.object`，
+`ES2017.Intl`， `ES2017.SharedMemory`， `ES2017.String`， `ES2017.TypedArrays`，
+`ES2018.Intl`， `ES2018.Promise`， `ES2018.RegExp`， `ES2019.Array`，
+`ES2019.Full`， `ES2019.Object`， `ES2019.String`， `ES2019.Symbol`，
+`ES2020.Full`， `ES2020.String`， `ES2020.Symbol.wellknown`， `ESNext.AsyncIterable`，
+`ESNext.Array`， `ESNext.Intl`， `ESNext.Symbol`
 
 ### moduleDetection
 
 模块检查。
 
-- `auto` (default): `typescript` 会不仅检查 `import` 或 `export` 语句，还会检查 `package.json` 是否有 `type` 字段，且当 配置文件中 `module` 值是否为 `nodenext` 或 `node16`时，`type` 字段值为 `module`。以及检查
-当使用 `jsx: react-jsx` 配置时，当前文件是否是 `jsx` 文件。
+- `auto` (default): `typescript` 会不仅检查 `import` 或 `export` 语句，
+  还会检查 `package.json` 是否有 `type` 字段，且当 配置文件中 `module` 值是否为 `nodenext` 或 `node16`时，`type` 字段值为 `module`。以及检查。
+  当使用 `jsx: react-jsx` 配置时，当前文件是否是 `jsx` 文件。
 
 - `legacy`: 检查文件是否包含 检查 `import` 或 `export` 语句。
 - `force` : 确保每个非声明文件都被视为是一个模块。
-
 
 ### noLib
 
@@ -704,11 +773,9 @@ import * as React from "react";
 
 ### disableSourceOfProjectReferenceRedirect
 
-
 ### incremental
 
-使 TypeScript 将上次编译的工程图信息保存到磁盘上的文件中。这将会在您编译输出的同一文件夹中创建一系列 `.tsbuildinfo` 文件。 它们不会再运行时被您的 `JavaScript` 使用，并且可以被安全的删除。 
-
+使 TypeScript 将上次编译的工程图信息保存到磁盘上的文件中。这将会在您编译输出的同一文件夹中创建一系列 `.tsbuildinfo` 文件。 它们不会再运行时被您的 `JavaScript` 使用，并且可以被安全的删除。
 
 ### tsBuildInfoFile
 
@@ -752,7 +819,8 @@ import * as React from "react";
 
 如果列表中的文件不存在，则会发生错误。
 
-#### example:
+### example
+
 ```json
 {
   "files": [
@@ -771,13 +839,16 @@ import * as React from "react";
 指定需要编译的文件列表，可以是目录，文件，也可以是模式匹配。
 这些文件路径是相对于包含`tsconfig.json`的目录进行解析。
 
-#### example
+### example
+
 ```json
 {
   "include": ["src/**/*.ts", "test/**/*.ts"]
 }
 ```
+
 它将会匹配：
+
 ```sh
 .
 ├── scripts                ⨯
@@ -813,7 +884,8 @@ import * as React from "react";
 
 指定在解析 `include` 包含的文件时，应该跳过的文件列表，可以是目录，文件，也可以是模式匹配。
 
-#### example:
+### example
+
 ```json
 {
   "exclude": ["src/**/*.spec.ts"]
@@ -840,7 +912,12 @@ import * as React from "react";
 当使用 命令行 `--watch` 启用 编译器编译器会使用 `fs.watch` 和 `fs.watchFile` 对 文件和目录进行监听，
 但两种方式各有利弊。
 
-`fs.watch` 使用 **file system events** 通知 文件和目录的变更。但它依赖于操作系统，并且通知并不可靠，在许多操作系统上并不能正常工作。此外，它还限制了创建监听数量，在一些操作系统上如 `linux`，我们可能会因为包含很多文件的大型项目而很快耗尽它。但由于它是使用的 **file system events**，它不会消耗过多的 `CPU cycle` 。在`typescript`编译器中，使用`fs.watch`用于监听允许精度缺失的 **目录** 变更（配置文件的 `include`，或者模块解析失败的目录）。
+`fs.watch` 使用 **file system events** 通知 文件和目录的变更。
+但它依赖于操作系统，并且通知并不可靠，在许多操作系统上并不能正常工作。
+此外，它还限制了创建监听数量，在一些操作系统上如 `linux`，我们可能会因为包含很多文件的大型项目而很快耗尽它。
+但由于它是使用的 **file system events**，它不会消耗过多的 `CPU cycle` 。
+在`typescript`编译器中，使用`fs.watch`用于监听允许精度缺失的 **目录** 变更（配置文件的 `include`，
+或者模块解析失败的目录）。
 
 但只有 `Windows` 和 `OSX` 支持 递归监听，这意味着在其他系统上需要通过其它方式来支持 递归监听。
 
@@ -870,7 +947,6 @@ import * as React from "react";
 |`dynamicPriorityPolling` | 使用动态队列的方式轮询检查文件变更。对于频繁变更的文件使用较短的时间间隔检查，对于低频变更的文件使用较长的时间间隔检查 |
 | `useFsEvents` <Badge>default</Badge> | 使用 `fs.watch`(file system events) 监听文件变更（但在某些操作系统上可能不能正常监听变更）, 当超过了系统允许创建的监听数量限制时使用 `fs.watchFile`替代 |
 | `useFsEventsOnParentDirectory` |使用 `fs.watch`(file system events) 监听文件的父目录的变更，精度较低 |
-
 
 ### `watchDirectory`
 
@@ -917,7 +993,6 @@ import * as React from "react";
 
 配置不需要被 监听的 文件。此配置可以减少需要被监听的文件数量。
 
-
 ## `typeAcquisition`
 
 指向项目 类型获取 的行为。
@@ -945,7 +1020,8 @@ import * as React from "react";
 
 显式的声明需要包含的依赖类型。用于在 `javascript`项目中帮助`typescript`工具理解依赖跟踪，或者 `disableFilenameBasedTypeAcquisition` 设置为`true`时需要手动添加依赖。
 
-#### example:
+#### example
+
 ```json
   "typeAcquisition": {
     "include": ["lodash"],
@@ -957,7 +1033,8 @@ import * as React from "react";
 
 禁用某些模块的类型获取，这对于在测试基础设施中包含主应用程序不需要的其他库的项目非常有用。
 
-#### example:
+#### example
+
 ```json
   "typeAcquisition": {
     "exclude": ["jest", "mocha"],

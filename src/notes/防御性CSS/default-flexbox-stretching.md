@@ -11,7 +11,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 
 但这不容易被发现， 除非我们向 Flex 项中添加比预期更长的内容。
 
-----
+---
 
 在这个示例中，我们有一个包含 图像、标题、介绍 的组件。
 
@@ -24,14 +24,15 @@ permalink: /defensive-css/default-flexbox-stretching/
   </div>
 </div>
 ```
+
 ```css
 .food {
   display: flex;
 }
 ```
 
-<style scoped>
-.food-wrapper {
+<style>
+.food-wrapper-110 {
   display: flex;
   padding: 12px 20px;
   background: var(--vp-c-bg);
@@ -39,23 +40,23 @@ permalink: /defensive-css/default-flexbox-stretching/
   border: 1px solid var(--vp-c-divider);
   box-shadow: var(--vp-shadow-2);
 }
-.food-wrapper .food__img {
+.food-wrapper-110 .food__img {
   width: 200px;
 }
-.food-wrapper .food__img.start {
+.food-wrapper-110 .food__img.start {
   align-self: flex-start;
 }
-.food-wrapper .food__content {
+.food-wrapper-110 .food__content {
   padding: 0 20px;
 }
-.food-wrapper .food__content h3 {
+.food-wrapper-110 .food__content h3 {
   margin-top: 0;
 }
 </style>
 
 :::demo-wrapper
 <p>内容长度合适时：</p>
-<div class="food-wrapper">
+<div class="food-wrapper-110">
   <img class="food__img" src="/images/defensive-css/ratio.png" alt="" />
   <div class="food__content">
     <h3>一份美食</h3>
@@ -64,7 +65,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 </div>
 
 <p>内容长度过长时：</p>
-<div class="food-wrapper">
+<div class="food-wrapper-110">
   <img class="food__img" src="/images/defensive-css/ratio.png" alt="" />
   <div class="food__content">
     <h3>一份美食</h3>
@@ -89,7 +90,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 
 :::demo-wrapper
 <p>内容长度合适时：</p>
-<div class="food-wrapper">
+<div class="food-wrapper-110">
   <img class="food__img start" src="/images/defensive-css/ratio.png" alt="" />
   <div class="food__content">
     <h3>一份美食</h3>
@@ -98,7 +99,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 </div>
 
 <p>内容长度过长时：</p>
-<div class="food-wrapper">
+<div class="food-wrapper-110">
   <img class="food__img start" src="/images/defensive-css/ratio.png" alt="" />
   <div class="food__content">
     <h3>一份美食</h3>

@@ -16,9 +16,9 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 }
 ```
 
-<style scoped>
-.card-hover,
-.card-hover-media {
+<style>
+.card-hover-123,
+.card-hover-media-123 {
   width: 200px;
   height: 200px;
   margin: 0 auto;
@@ -28,11 +28,11 @@ permalink: /defensive-css/accidental-hover-on-mobile/
   background: var(--vp-c-bg);
   transition: background 0.3s;
 }
-.card-hover:hover {
+.card-hover-123:hover {
   background: var(--vp-c-brand-1);
 }
 @media (hover:hover) {
-  .card-hover-media:hover {
+  .card-hover-media-123:hover {
     background: var(--vp-c-brand-1);
   }
 }
@@ -43,7 +43,7 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 :::demo-wrapper
 如果是桌面端浏览器，请打开 控制台，切换为 移动设备。在下面元素上点击，会看到 `hover` 效果。
 
-<div class="card-hover"></div>
+<div class="card-hover-123"></div>
 :::
 
 这种意外的触发了 `hover` 状态，可能不是用户想看到的，毕竟在 移动设备上，并不需要 `hover` 。
@@ -62,7 +62,7 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 :::demo-wrapper
 如果是桌面端浏览器，请打开 控制台，切换为 移动设备。在下面元素上点击。
 
-<div class="card-hover-media"></div>
+<div class="card-hover-media-123"></div>
 :::
 
 可以看到，在 桌面端浏览器中，`hover` 效果被激活，在移动端浏览器中，不触发 `hover` 效果。

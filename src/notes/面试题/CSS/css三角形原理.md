@@ -6,6 +6,7 @@ permalink: /interview-question/bvx4d2u5/
 ---
 
 ::: tip 提问
+
 1. 如何用css画一个 三角形
 2. 原理是什么？
 :::

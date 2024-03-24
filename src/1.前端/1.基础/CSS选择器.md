@@ -10,7 +10,9 @@ tags:
 ## Basic Selectors 基础选择器
 
 ### Element selector
+
 根据 element type 匹配 一组元素
+
 ``` html
 ...
   <style>
@@ -22,7 +24,9 @@ tags:
 ```
 
 ### Class selector
+
 根据 element 声明的 class属性值 匹配一组元素
+
 ``` html
 ...
   <style>
@@ -34,7 +38,9 @@ tags:
 ```
 
 ### ID selector
+
 根据 element 声明的 ID属性值，匹配一个元素（一个页面中，ID具有唯一性）
+
 ``` html
 ...
   <style>
@@ -46,7 +52,9 @@ tags:
 ```
 
 ### Universal selector
+
 通配符，匹配所有 element
+
 ``` html
 ...
   <style>
@@ -61,7 +69,9 @@ tags:
 ## Attribute Selectors
 
 ### \[attribute\] selector
+
 匹配声明了该attribute的 一组 element
+
 ``` html
 ...
   <style>
@@ -73,7 +83,9 @@ tags:
 ```
 
 ### \[attribute="x"\] selector
+
 匹配声明了该attribute，且值为 x 的一组 element
+
 ``` html
 ...
   <style>
@@ -85,7 +97,9 @@ tags:
 ```
 
 ### \[attribute~="x"\] selector
+
 匹配声明了该attribute，且值包含了 单词 x 的一组 element
+
 ``` html
 ...
   <style>
@@ -98,7 +112,9 @@ tags:
 ```
 
 ### \[attribute|="x"\] selector
+
 匹配声明了该attribute，且值包含了一个 `x-` 开头的连字符拼接的词 的一组 element
+
 ``` html
 ...
   <style>
@@ -112,7 +128,9 @@ tags:
 ```
 
 ### \[attribute^="x"\] selector
+
 匹配声明了该attribute，且值是以 x 作为开头的 一组 element
+
 ``` html
 ...
   <style>
@@ -124,6 +142,7 @@ tags:
 ```
 
 ### \[attribute$="x"\] selector
+
 匹配声明了该attribute，且值是以 x 作为结尾的 一组 element
 
 ``` html
@@ -137,6 +156,7 @@ tags:
 ```
 
 ### \[attribute*="x"\] selector
+
 匹配声明了该attribute，且值包含了子串 x 的 一组 element
 
 ``` html
@@ -154,7 +174,9 @@ tags:
 关系选择器适用于 任意选择器 的组合
 
 ### selector1 selector2 后代关系选择器
+
 匹配 selector1 的元素中，所有 selector2 的 元素
+
 ``` html
 ...
   <style>
@@ -169,7 +191,9 @@ tags:
 ```
 
 ### selector1 > selector2 子代关系选择器
+
 匹配 selector1 的下一级满足 selector2 的 一组元素
+
 ``` html
 ...
   <style>
@@ -184,7 +208,9 @@ tags:
 ```
 
 ### selector1 + selector2 相邻兄弟选择器
+
 匹配selector1后同级的紧跟的selector2的一个元素
+
 ``` html
 ...
   <style>
@@ -199,7 +225,9 @@ tags:
 ```
 
 ### selector ~ selector2 一般兄弟选择器
+
 匹配selector1后同级的selector2的一组元素
+
 ``` html
 ...
   <style>
@@ -217,8 +245,10 @@ tags:
 
 ## Group Selectors 组合选择器
 
-### selector1, selector2, ...
+### selector1, selector2
+
 匹配用`,` 隔开的所有选择器
+
 ``` html
 ...
   <style>
@@ -235,7 +265,9 @@ tags:
 ## Pseudo-elements 伪元素选择器
 
 ### ::first-letter
+
 匹配 element中的首个字符（字母、中文字、符号均可）
+
 ``` html
 ...
   <style>
@@ -247,7 +279,9 @@ tags:
 ```
 
 ### ::first-line
+
 匹配 element中的首行文字
+
 ``` html
 ...
   <style>
@@ -262,6 +296,7 @@ tags:
 ```
 
 ### ::before
+
 和 `content` 属性一起使用，在匹配的元素内容之前生成的内容
 
 ``` html
@@ -277,6 +312,7 @@ tags:
 ```
 
 ### ::after
+
 和 `content` 属性一起使用，在匹配的元素内容之后生成的内容
 
 ``` html
@@ -290,11 +326,13 @@ tags:
   </p>
 ...
 ```
- 
+
 ## Pseudo-classes 伪类选择器
 
 ### :link
+
 匹配一个没有被访问过的链接
+
 ``` html
 ...
   <style>
@@ -306,7 +344,9 @@ tags:
 ```
 
 ### :visited
+
 匹配一个已访问过的链接
+
 ``` html
 ...
   <style>
@@ -316,8 +356,11 @@ tags:
   <a href="">link</a>
 ...
 ```
+
 ### :active
+
 匹配一个正在被激活的链接
+
 ``` html
 ...
   <style>
@@ -329,7 +372,9 @@ tags:
 ```
 
 ### :hover
+
 匹配一个被光标悬停的链接
+
 ``` html
 ...
   <style>
@@ -339,8 +384,11 @@ tags:
   <a href="">link</a>
 ...
 ```
+
 ### :focus
+
 匹配一个具有焦点的元素
+
 ``` html
 ...
   <style>
@@ -350,9 +398,12 @@ tags:
  <input type="text">
 ...
 ```
+
 ### :target
+
 匹配一个已被链接到的元素。
 例如通过`<a href="#heading"></a>`链接的head元素
+
 ``` html
 ...
   <style>
@@ -362,8 +413,11 @@ tags:
  <h2 id="heading">heading</h2>
 ...
 ```
+
 ### :first-child
+
 匹配在同一个父元素内的的第一个子元素
+
 ``` html
 ...
   <style>
@@ -374,8 +428,11 @@ tags:
   <p>second child</p>
 ...
 ```
+
 ### :last-child
+
 匹配在同一个父元素内的的最后一个子元素
+
 ``` html
 ...
   <style>
@@ -386,8 +443,11 @@ tags:
   <p>last child</p> <!-- match -->
 ...
 ```
+
 ### :nth-child(n)
+
 匹配在同一个父元素内的从上往下数的第N子个元素
+
 ``` html
 ...
   <style>
@@ -398,8 +458,11 @@ tags:
   <p>second child</p> <!-- match -->
 ...
 ```
+
 ### :nth-last-child(n)
+
 匹配在同一个父元素内的从下往上数的第N个子元素
+
 ``` html
 ...
   <style>
@@ -410,8 +473,11 @@ tags:
   <p>second child</p> 
 ...
 ```
+
 ### :first-of-type
+
 匹配在同一个父元素中的同类型的第一个元素
+
 ``` html
 ...
   <style>
@@ -422,8 +488,11 @@ tags:
   <p>second child</p>
 ...
 ```
+
 ### :last-of-type
+
 匹配在同一个父元素中的同类型的最后一个元素
+
 ``` html
 ...
   <style>
@@ -434,8 +503,11 @@ tags:
   <p>second child</p>
 ...
 ```
+
 ### :nth-of-type(n)
+
 匹配在同一个父元素中的同类型的从上往下数的第N个元素
+
 ``` html
 ...
   <style>
@@ -446,8 +518,11 @@ tags:
   <p>second child</p>  <!-- match -->
 ...
 ```
+
 ### :nth-last-of-type(n)
+
 匹配在同一个父元素中的同类型的从下往上数的第N个元素
+
 ``` html
 ...
   <style>
@@ -458,8 +533,11 @@ tags:
   <p>second child</p> 
 ...
 ```
+
 ### :only-child
+
 如果元素是其父元素的唯一子元素，则匹配该元素
+
 ``` html
 ...
   <style>
@@ -471,8 +549,11 @@ tags:
   </section>
 ...
 ```
+
 ### :only-type
+
 如果元素是其父元素的唯一的同类型的子元素，则匹配该元素
+
 ``` html
 ...
   <style>
@@ -485,8 +566,11 @@ tags:
   </section>
 ...
 ```
+
 ### :lang(lang)
+
 匹配给定语言的元素
+
 ``` html
 ...
   <style>
@@ -498,8 +582,11 @@ tags:
   </section>
 ...
 ```
+
 ### :empty
+
 匹配没有子元素或内容的元素
+
 ``` html
 ...
   <style>
@@ -511,15 +598,25 @@ tags:
   </section>
 ...
 ```
+
 ### :root
+
 匹配文档的根元素， （即匹配的 `<html>`元素）
+
 ### :enabled
+
 匹配未被禁用的表单控件元素
+
 ### :disabled
+
 匹配被禁用的表单控件元素
+
 ### :checked
+
 匹配选中的单选或复选框类型的输入元素。
+
 ### :not(selector)
+
 协商伪类。匹配不匹配选择器的元素。
 
 ## 实验中的 Selectors
@@ -527,8 +624,10 @@ tags:
 这些选择器在某些浏览器中尚处于开发中，功能对应的标准文档可能被修改，在未来的版本中可能发生变化，谨慎使用。
 
 ### :any-link
+
 匹配有链接锚点的元素，而不管元素是否被访问过。
 即会匹配每一个有 `href`属性的`<a>`，`<area>`，`<link>`的元素，匹配到所有的`:link`或`:visited`。
+
 ``` html
 ...
   <style>
@@ -543,10 +642,12 @@ tags:
   <a>Placeholder link (won't get styled)</a>
 ...
 ```
+
 ::: caniuse css-any-link
 :::
 
 ### :dir(dir)
+
 如果元素的内容的书写方向是 dir , 则匹配该元素
 
 *dir* : ltr | rtl
@@ -571,11 +672,14 @@ tags:
   </div>
 ...
 ```
+
 ::: caniuse css-dir-pseudo
 :::
 
 ### :has(selector)
+
 如果一个元素A恰好满足包含了selector 匹配的元素，则匹配元素A
+
 ``` html
 ...
   <style>
@@ -588,10 +692,12 @@ tags:
   <a></a>
 ...
 ```
+
 ::: caniuse css-has
 :::
 
 ### :is()  / :any()
+
 匹配一组选择器选中的元素。
 
 优先级是由它的选择器列表中优先级最高的选择器决定。
@@ -616,13 +722,16 @@ tags:
   </style>
 ...
 ```
+
 ::: caniuse css-matches-pseudo
 :::
 
 ### :where()
+
 匹配一组选择器选中的元素。
 
 :where() 的优先级总是为 0。
+
 ``` html
 ...
   <style>

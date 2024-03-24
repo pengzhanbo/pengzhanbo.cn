@@ -24,6 +24,7 @@ YAHOO.util.Event.stopPropagation(e);
 ## 基本的模块化
 
 在这个时期，出现了比较清晰的模块定义，通过闭包来做模块运行空间
+
 ``` js
 // 定义模块
 YUI.add('hello', function(Y) {
@@ -60,6 +61,7 @@ CommonJs规范和当时出现的NodeJs相得益彰，共同走入了开发者的
 ::: code-tabs
 
 @tab a.js
+
 ``` js
 var name = 'Mark';
 var age = 18;
@@ -71,6 +73,7 @@ module.exports.getAge = function () {
 ```
 
 @tab:active b.js
+
 ``` js
 var moduleA = require('./a.js')
 console.log(moduleA.a); // Mark
@@ -78,8 +81,8 @@ console.log(moduleA.a); // Mark
 console.log(moduleA.age) // undefined
 console.log(moduleA.getAge()); // 18
 ```
-:::
 
+:::
 
 在NodeJs环境中，CommonJs的模块由于在服务器环境下，可以从本地进行加载，即 同步加载。
 
@@ -88,7 +91,7 @@ console.log(moduleA.getAge()); // 18
 ::: note 注释
 在我的印象中， CommonJs规范 和 AMD规范 出现的时间点 相差不远。
 
-*AMD 早于 CommonJs*
+*AMD 早于 CommonJs。*
 
 按我个人理解，CMD 在当年算是从 AMD 衍生出来的一个方案。
 :::
@@ -97,14 +100,17 @@ CommonJs 和 CMD 是两种方案！不是一样的！
 :::
 
 ### AMD规范
+
 AMD规范，即 异步模块定义([Asynchronous Module Definition](https://github.com/amdjs/amdjs-api/wiki/AMD))。
 
 AMD 采用 __异步加载模块__ 的方式。
 
 AMD规范仅定义了一个 `define` 函数，它是一个全局变量：
+
 ```
 define(id?, dependencies?, factory);
 ```
+
 - `id` 描述的是当前模块的标识符;
 - `dependencies` 则是当前模块的依赖数组， 它们会在 factory工厂方法被调用前被加载并执行，
   并且执行的结果必须以依赖数组定义的顺序，依此顺序作为参数传入 factory工厂方法。
@@ -124,9 +130,11 @@ define(id?, dependencies?, factory);
 - `dependencies` 是当前模块的依赖数组， 他们会在 factory 工厂方法被调用前完成加载，但并不立即执行。
 - `factory`为模块初始化要执行的函数或者对象。
   - 如果是一个函数，则函数接受三个参数：
+
     ``` js
     define(function (require, exports, module))
     ```
+
     `require` 用于同步加载并执行已经定义好的其他模块；获取模块的输出值，
     `exports`是`module.exports`的别名，用于导出当前模块的输出值；`module`存储了当前模块的信息。
   - 如果是一个对象，则直接作为当前模块的输出值。
@@ -201,12 +209,15 @@ webpack 内部实现了 不同的 模块化规范，包括 匿名函数闭包`ii
 使用 Javascript 模块依赖于 `import` 和 `export` 进行导入和导出。
 
 在 `html` 导入 javascript模块脚本是，需要在 `<script>` 标签中添加 `type="module"` 的属性声明
+
 ``` html
 <script type="module" src="/moduleA.js"></script>
 ```
+
 ::: code-tabs
 
 @tab moduleA.js
+
 ``` js
 import { name, getAge } from './moduleB.js';
 
@@ -215,6 +226,7 @@ console.log(getAge());
 ```
 
 @tab moduleB.js
+
 ``` js
 export const name = 'Mark';
 
@@ -224,9 +236,8 @@ export function getAge() {
   return age;
 }
 ```
+
 :::
-
-
 
 ## Deno模块加载
 

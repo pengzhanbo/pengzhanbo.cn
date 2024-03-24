@@ -11,12 +11,10 @@ article: false
 - <Badge >推荐</Badge> **`《Head First HTML与CSS（第2版）》`** - 初学者入门
 - <Badge >推荐</Badge> **`《HTML5+JavaScript动画基础》`** - 动画基础入门
 
-
 - <Badge type="warning">过时</Badge> **`《HTML5权威指南》`** - 初学者入门
 - <Badge type="warning">过时</Badge> **`《HTML5与CSS3权威指南》`** - 初学者入门
 - <Badge type="warning">过时</Badge> **`《HTML5程序设计》`** - 初学者入门
 - <Badge type="warning">过时</Badge> **`《HTML5揭秘》`** - 入门
-
 
 ## CSS
 
@@ -37,9 +35,7 @@ article: false
 - <Badge >推荐</Badge> **`《javascript设计模式》`** - 进阶
 - <Badge >推荐</Badge> **`《JavaScript设计模式与开发实践》`** - 进阶
 
-
 - [Javascript Guidebook](https://tsejx.github.io/javascript-guidebook/) - Javascript 知识图谱
-
 
 ## Typescript
 
@@ -63,7 +59,7 @@ article: false
 - <Badge >推荐</Badge> [Rust 标准库](https://rustwiki.org/zh-CN/std/) - Rust 标准库 中文版
 - <Badge >推荐</Badge> [Rust秘典](https://doc.rust-lang.org/nomicon/index.html) - Unsafe Rust 的黑魔法指南。它有时被称作“死灵书”。
 - <Badge >推荐</Badge> [Rust秘典](https://nomicon.purewhite.io/) - Rust秘典 中文版
-- 
+-
 
 ## Go
 

@@ -15,6 +15,7 @@ permalink: /article/7jzjudus/
 ## 创建项目
 
 我们以新建一个 NodeJs 项目为例， 它有如下的结构：
+
 ```sh
 ./my-esm-package
 ├── lib
@@ -27,17 +28,20 @@ permalink: /article/7jzjudus/
 
 ::: code-tabs
 @tab lib/index.js
+
 ```js
 export * from './resolve.js'
 
 ```
 
 @tab lib/resolve.js
+
 ```js
 import path from 'path'
 
 export const resolve = (...arg) => path.resolve(...arg)
 ```
+
 :::
 
 ## package.json
@@ -53,22 +57,25 @@ export const resolve = (...arg) => path.resolve(...arg)
   该字段描述了 项目如何导出模块给到其他包使用。
 
   - 默认导出
-    
+
     ::: code-tabs
     @tab package.json
+
     ```json
     {
       "exports": "./lib/index.js"
     }
     ```
+
     :::
 
     即当使用`import { resolve } from 'my-esm-package'`时，默认引入的文件是 `lib/index.js`。
   
   - 导出多个模块
-    
+
     ::: code-tabs
     @tab package.json
+
     ```json
     {
       "exports": {
@@ -77,6 +84,7 @@ export const resolve = (...arg) => path.resolve(...arg)
       }
     }
     ```
+
     :::
 
     声明了导出了两种模块：一个是默认导出，使用`"."` 作为key；一个是具名导出。
@@ -97,6 +105,7 @@ export const resolve = (...arg) => path.resolve(...arg)
 
 ::: code-tabs
 @tab package.json
+
 ```json
 {
   "name": "my-esm-package",
@@ -111,6 +120,7 @@ export const resolve = (...arg) => path.resolve(...arg)
   }
 }
 ```
+
 :::
 
 ## 编写项目代码
@@ -121,6 +131,7 @@ export const resolve = (...arg) => path.resolve(...arg)
 2. 不需要在项目代码中 使用 `use strict`。
 
 3. 由于 `esm` 项目中，`NodeJs` 不再支持 `__dirname`/`__filename`，所以有相关场景需要使用时，需要使用其他的方式来实现相同功能：
+
   ```js
   import { dirname, basename } from 'path'
   import { fileURLToPath } from 'url'
@@ -133,6 +144,7 @@ export const resolve = (...arg) => path.resolve(...arg)
     ? __filename
     : basename(fileURLToPath(import.meta.url))
   ```
+
 ## TypeScript
 
 如果在项目中使用了 `TypeScript`，那么除了需要遵循以上的内容，还需要在 `tsconfig.json` 配置文件中补充以下配置：

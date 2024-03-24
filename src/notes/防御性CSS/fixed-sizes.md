@@ -57,7 +57,6 @@ permalink: /defensive-css/fixed-sizes/
 <div class="card-mask"></div>
 :::
 
-
 为了避免内容从 卡片 中溢出，我们需要使用 `min-height` 而不是 `height` 。
 
 ```css

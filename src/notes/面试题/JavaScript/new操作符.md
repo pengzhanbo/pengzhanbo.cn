@@ -6,6 +6,7 @@ permalink: /interview-question/chnx193c/
 ---
 
 ::: tip 提问
+
 1. `new` 操作符 具体做了什么？
 2. 如果实现 `new`？
 :::

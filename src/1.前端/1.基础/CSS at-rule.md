@@ -9,12 +9,14 @@ tags:
 
 ## @charset
 
-#### 概述
+### 概述
+
 指定样式表中使用的字符编码。 它必须位于样式表中的第一个元素，且前面不得有任何字符。
 
 不能在 `<style>` 元素内的样式属性内使用。
 
-#### 示例：
+### 示例
+
 ``` css
 @charset "UTF-8";
 @charset "utf-8"; /*大小写不敏感*/
@@ -27,14 +29,15 @@ tags:
 
 ## @font-face
 
-#### 概述
+### 概述
+
 指定一个用于显示文本的自定义字体。
 
 字体可以从远程服务器，也可以是用户本地安装的字体。
 
 `@font-face` 可以解除对用户电脑字体的依赖。
 
-#### 语法
+### 语法
 
 ``` css
 @font-face {
@@ -53,10 +56,12 @@ tags:
   [ line-gap-override: <line-gap-override>; ]
 }
 ```
+
 - `font-family`: 指定的 `<family-name>` 将会被用于 `font`或`font-family`的属性
 - `src`: 远程字体文件的位置，或者通过`local`函数通过字体名字从本地加载字体。
 
-#### 使用示例：
+### 使用示例
+
 加载远程字体文件：
 
 ``` html
@@ -72,6 +77,7 @@ tags:
   </style>
 ...
 ```
+
 加载字体文件，先尝试从用户本地加载，如果加载失败则从远程服务器下载:
 
 ``` html
@@ -88,7 +94,9 @@ tags:
   </style>
 ...
 ```
+
 加载不同文件格式的字体，根据用户环境判断使用兼容的字体文件格式：
+
 ``` html
 ...
   <style>
@@ -107,27 +115,32 @@ tags:
 
 ## @import
 
-#### 概述
+### 概述
+
 从其他样式表导入样式规则。
 
 `@import` 必须优先于其他类型的规则，即需要在文件顶部声明。`@charset` 除外。
 
-#### 语法
+### 语法
+
 ``` css
 @import url;
 @import url list-of-media-queries;
 ```
+
 - `url` 样式规则文件资源位置
 - `list-of-media-queries` [媒体查询](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)，支持用逗号分隔多个查询条件。资源仅在满足媒体查询条件时才会被加载。
 
-
 ## @keyframes
 
-#### 概述
+### 概述
+
 通过在动画序列中定义关键帧的样式来控制CSS动画序列中的中间步骤。
 
-#### 示例
+### 示例
+
 使用 `from`,`to` 定义起始和结束关键帧的样式 实现动画
+
 ``` css
 @keyframes slidein {
   from {
@@ -139,7 +152,9 @@ tags:
   }
 }
 ```
+
 使用 百分比 定义触发关键帧的时间点
+
 ``` css
 @keyframes slidein {
   0% {

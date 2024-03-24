@@ -6,6 +6,7 @@ permalink: /interview-question/6tzvt9fs/
 ---
 
 ::: tip 提问
+
 1. IFC
 2. GFC
 3. FFC

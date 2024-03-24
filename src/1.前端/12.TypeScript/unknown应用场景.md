@@ -44,6 +44,7 @@ bar.substr(1);
 如，避免使用 `any` 作为 函数参数类型，使用 `unknown` 替代。
 
 **使用 any，静态检查失效：**
+
 ```ts twoslash
 function test(input: any): number {
   if (Array.isArray(input)) {
@@ -54,6 +55,7 @@ function test(input: any): number {
 ```
 
 **使用 unknown，静态检查正确推断：**
+
 ```ts twoslash
 // @errors: 18046
 function test(input: unknown): number {

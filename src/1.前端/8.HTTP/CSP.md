@@ -28,10 +28,10 @@ XSS攻击是一种常见的、危害极大的网络攻击手段。它利用浏�
 `CSP` 通过 **有效域名**，即 **浏览器认可的可执行脚本的有效来源** ，使 服务器管理者有能力消除或减少 XSS 攻击所以来的载体。
 支持 `CSP` 的浏览器，仅会执行从白名单域名加载的脚本文件，忽略其他所有脚本，包括内联脚本和 HTML 事件处理属性。
 
-
 ## 制定策略
 
 `CSP` 通过 声明 HTTP 头部字段 `Content-Security-Policy` 来启用和配置策略：
+
 ```
 Content-Security-Policy: policy;
 Content-Security-Policy: policy; policy;
@@ -46,6 +46,7 @@ Content-Security-Policy: policy; policy;
 为其他CSP指令提供备选项，如果其他指令不存在，用户代理会查找并应用该值，如果其他指令有配置值，那么则不会应用 default-src的值。
 
 default-src 策略允许指定一个或多个值：
+
 ```
 Content-Security-Policy: default-src <source>;
 Content-Security-Policy: default-src <source> <source>;
@@ -92,11 +93,10 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
 
 - `manifest-src` 限制 manifest 资源（通过`<link>`引入的 manifest文件）
 - `worker-src` 限制 `worker`资源，包括 `Worker`、`SharedWorker` 、`ServiceWorker`
-- `child-src` 限制 `web worker`、`<frame>` 、`<iframe>` 
+- `child-src` 限制 `web worker`、`<frame>` 、`<iframe>`
 - `connect-src` 限制允许通过脚本接口加载的链接地址，包括：`<a>`、`Fetch`、`XMLHttpRequest`、`WebSocket`、`EventSource`
 - `font-src` 限制 `@font-face` 加载字体的有效源规则。
 - `object-src` 限制 `<object>`、`<embed>`、`<applet>`
-
 
 ### 指令`<source>`有效值
 
@@ -106,7 +106,7 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
   支持前置通配符（星号 '*'），可以将通配符应用于站点地址、端口中，如应用于端口，则表示允许使用该域名下的所有端口。
 
   - **example.com:443** 匹配 example.com 上 443 端口访问
-  - **https://example.com** 匹配使用了 http: 的 example.com 的访问
+  - **<https://example.com>** 匹配使用了 http: 的 example.com 的访问
   - ***.example.com** 匹配 example.com 下的所有子域名的访问
 
 - `<scheme-source>`
@@ -140,6 +140,7 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
   ```
   Content-Security-Policy: default-src sha256-abcdef;
   ```
+
 - `'strict-dynamic'`
   
   strict-dynamic 指定对于含有标记脚本 (通过附加一个随机数或散列) 的信任，应该传播到由该脚本加载的所有脚本。与此同时，任何白名单以及源表达式例如 'self' 或者 'unsafe-inline' 都会被忽略。
@@ -148,6 +149,7 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
 
 启用CSP，可以在 HTTP服务器中，新增 Header 字段：
 如，在nginx中：
+
 ``` nginx
 http {
   # ...more
@@ -163,6 +165,7 @@ http {
 ```
 
 也可以在 html 文件中 添加 `<meta>` 标签
+
 ``` html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
 ```
@@ -188,6 +191,7 @@ Content-Security-Policy: default-src 'self'; img-src *;
 ### 示例3
 
 默认只允许加载本站资源，允许 script资源、css资源、图片资源从指定cdn域名加载
+
 ```
 Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.example.com; style-src  'self' https://cdn.example.com; img-src 'self' https://cdn.example.com;
 ```
@@ -221,7 +225,9 @@ Hash 值相符的脚本才能执行：
 ```
 Content-Security-Policy: script-src 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='
 ```
+
 该hash值必须是 script 标签内容的 sha256 值，代码才能执行：
+
 ``` html
 <script>
   alert("Hello, world.");

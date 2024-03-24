@@ -12,28 +12,28 @@ permalink: /defensive-css/button-minimum-width/
 
 请看以下示例：
 
-<style scoped>
-.btn-width {
+<style>
+.btn-width-1339 {
   padding: 3px 8px;
   background-color: var(--vp-c-brand-1);
   color: var(--vp-c-white);
   font-weight: 500;
   border-radius: 4px;
 }
-.btn-width.min {
+.btn-width-1339.min {
   min-width: 90px;
 }
 </style>
 
 :::demo-wrapper
 英语：
-<button type="button" class="btn-width">Done</button>
+<button type="button" class="btn-width-1339">Done</button>
 
 中文：
-<button type="button" class="btn-width">完成</button>
+<button type="button" class="btn-width-1339">完成</button>
 
 阿拉伯语：
-<button type="button" class="btn-width">تم</button>
+<button type="button" class="btn-width-1339">تم</button>
 :::
 
 可以看到， 在 英语 和 中文 下， 按钮的宽度表现很好，因为其内容足够长。
@@ -50,11 +50,11 @@ button {
 
 :::demo-wrapper
 英语：
-<button type="button" class="btn-width min">Done</button>
+<button type="button" class="btn-width-1339 min">Done</button>
 
 中文：
-<button type="button" class="btn-width min">完成</button>
+<button type="button" class="btn-width-1339 min">完成</button>
 
 阿拉伯语：
-<button type="button" class="btn-width min">تم</button>
+<button type="button" class="btn-width-1339 min">تم</button>
 :::

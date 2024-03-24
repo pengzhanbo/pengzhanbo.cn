@@ -6,6 +6,7 @@ permalink: /interview-question/mvcgg9uz/
 ---
 
 ::: tip 提问
+
 1. 什么是XSS攻击？
 2. 如何防范 XSS攻击？
 :::
@@ -23,4 +24,4 @@ XSS 的本质是因为网站没有对恶意代码进行过滤，与正常的代�
 - 对存入数据库的数据都进行的转义处理
 - 对需要插入到 HTML 中的代码做好充分的转义
 - 使用 CSP
-- cookie 使用 http-only 
+- cookie 使用 http-only

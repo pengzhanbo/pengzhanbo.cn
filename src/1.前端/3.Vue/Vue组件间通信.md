@@ -15,22 +15,27 @@ author: pengzhanbo
 > 本文所实现的方式，是在不考虑`vuex`下所做的实现，
 > 且仅限于 `vue@2` ，在 `vue@3` 中，有其他的更好的实现方案。
 
-
 我把组件间的关系，大致分为三种：
+
 1. 父子组件
+
     ``` html
     <parent>
         <child></child>
     </parent>
     ```
+
     拥有类似结构，`parent`组件包含`child`组件，则`child`组件是`parent`的子组件，`parent`组件是`child`组件的父组件。
 2. 兄弟组件
+
     ``` html
     <item></item>
     <item></item>
     ```
+
     两个`item`组件在结构上同级，我们称之互为兄弟组件。
 3. 跨多级组件
+
     ``` html
     <list>
         <item>
@@ -41,6 +46,7 @@ author: pengzhanbo
         <content></content>
     </dialog>
     ```
+
     在这个结构中，`<list>`和`<message>`并不是直接的父子组件，中间还跨了一个级，在实际场景中，还会有跨更多层级的组件关系。`<message>` 和 `<content>` 组件两个既不是兄弟组件，又不是父子组件，而是跨了兄弟，父子的多级关系，实际场景中也会有发生交互。
 
 那么这三种关系的组件，我们应该如何进行组件通信？
@@ -48,6 +54,7 @@ author: pengzhanbo
 ### 父子组件通信
 
 要讲父子组件的通信，首先，我们需要了解 `vue` 组件的 特性。
+
 1. 单向数据流，数据自上而下。
     > Prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是反过来不会。这是为
     >了防止子组件无意间修改了父组件的状态，来避免应用的数据流变得难以理解。
@@ -61,6 +68,7 @@ author: pengzhanbo
 父组件通过`props`将状态传到子组件，子组件通过事件将状态冒泡到父组件，由父组件监听触发回调改变状态。
 
 `parent.vue`
+
 ``` html
 <template>
     <div class="parent">
@@ -91,7 +99,9 @@ export default {
 }
 </script>
 ```
+
 `child.vue`
+
 ``` html
 <template>
     <div class="child">
@@ -118,6 +128,7 @@ export default {
 }
 </script>
 ```
+
 在某些例子或个人项目中，经常有发现到在子组件中使用 `this.$parent` 直接改变父组件的状态，诚然这种方式能够简化两个深耦合的组件的数据通信，在一些简单的场景中也会比较方便，但其实并不推荐采用这种方式实现父子组件通信，这样做的后果就是导致了数据流的不明确性，牺牲了单项数据流的简洁性，数据的变化流动变得不易于理解。
 
 ### 兄弟组件通信、跨多级组件通信
@@ -136,7 +147,7 @@ export default {
 
 我所采取的方案是使用 自定义事件 完成组件通信。
 
-__实例化Vue__
+__实例化Vue：__
 
 `vue`已实现了一套事件系统，可以很方便的使用它来完成我们的组件通信。
 
@@ -144,7 +155,9 @@ __实例化Vue__
 let middleware = new Vue();
 export defualt middleware;
 ```
+
 `message.vue`
+
 ``` javascript
 export default {
     name: 'message',
@@ -160,7 +173,9 @@ export default {
     }
 };
 ```
+
 `content.vue`
+
 ``` javascript
 export default {
     name: 'content',
@@ -175,12 +190,14 @@ export default {
         });
     }
 }
-``` 
+```
+
 我们通过 `middleware`， 在`content.vue`注册了`say-hello`事件，当`message.vue`触发该事件时，`content.vue`监听到事件触发回调，从而实现了状态传导。
 
 组件数据传导不再是通过`props`传导，而是通过事件进行通信。
 
 __如果不使用实例化Vue的方式去完成，我们也可以自己实现一套自定义事件。__ 这可以做更加个性化的自定义事件，满足项目中的多样的使用场景。
+
 ``` javascript
 class Event{
     constructor() {
@@ -199,4 +216,5 @@ class Event{
 ```
 
 ### 总结
+
 复杂结构的组件通信，实现它们的通信，关键是实现中间件作为桥梁连接它们，无论是使用自定义事件，还是其他的方案。

@@ -23,11 +23,11 @@ tags:
     javascript ES6 代码规范、语法检查工具，帮助规范团队代码规范。
 
 3. [EditorConfig](https://github.com/editorconfig/editorconfig-vscode)
-    
+
     编辑器配置，代码格式规范相关，必备。
 
 4. [Prettier](https://github.com/prettier/prettier-vscode)
-    
+
     帮助格式化`javascript`、`typescript`、`CSS`代码。 <br />
     `Prettier` 会读取 `.editorconfig`，或根据提供相关配置，格式化代码为符合项目代码规范。
 
@@ -45,7 +45,6 @@ tags:
 7. [Color Highlight](https://github.com/sergiirocks/vscode-ext-color-highlight)
 
     颜色高亮插件，读取文件中的 十六进制、RGB、RGBA 等颜色，并以对应的颜色高亮显示。
-
 
 ### theme
 
@@ -69,7 +68,7 @@ tags:
     查看某一个作者的log信息等。<br/>
 
 3. [Git Project Manager](https://github.com/felipecaputo/git-project-manager)
-    
+
     该插件可以帮助你快速在VSCode新窗口打开本地git项目。<br />
     命令：`ctrl+shift+p` / `cmd+shift+p` <br/>
     或者按下 `F1`，输入 `GPM`
@@ -83,7 +82,6 @@ tags:
     这款插件十分适合在多人协作项目中使用，可以定位到当前文件每一行的最后提交作者、时间等git log，也可以查看到当前文件的所有日志等。
     如果有装这一款插件，`Git Blame`插件就没有必要装了。
 
-
 6. [git ignore](https://github.com/CodeZombieCH/vscode-gitignore)
 
 ### Markdown
@@ -93,6 +91,7 @@ tags:
     一款功能强大的 markdown 插件。让你在vscode 中拥有更好的 markdown 写作体验。
 
 ### Icon
+
 1. [vscode-icons](https://github.com/vscode-icons/vscode-icons)
     文件菜单 icons。 根据文件夹命名、文件后缀等，对文件夹、文件菜单栏添加 对应的`icon`。
     ![vscode-icons](https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/images/screenshot.gif)
@@ -124,5 +123,3 @@ tags:
 2. [minapp](https://github.com/wx-minapp/minapp-vscode)
 
     微信小程序 支持。
-
-

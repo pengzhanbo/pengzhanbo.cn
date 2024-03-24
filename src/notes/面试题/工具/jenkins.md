@@ -11,7 +11,7 @@ permalink: /interview-question/8hujc044/
 
 jenkins 是一个基于java开发的 持续集成工具。提供了大量的插件来支持软件的构建、部署、自动化等。
 
-jenkins 提供了多种方式用于 CI&CD 。 
+jenkins 提供了多种方式用于 CI&CD 。
 
 其中比较常用的是 流水线 pipeline。
 

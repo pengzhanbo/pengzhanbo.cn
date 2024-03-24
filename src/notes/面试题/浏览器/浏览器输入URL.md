@@ -6,6 +6,7 @@ permalink: /interview-question/y0fs63f1/
 ---
 
 ::: tip 提问
+
 1. 在浏览器的地址栏输入一个 网址URL，并按下回车后，发生了什么？
 :::
 

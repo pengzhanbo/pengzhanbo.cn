@@ -6,6 +6,7 @@ permalink: /interview-question/nx0xqyp5/
 ---
 
 ::: tip 提问
+
 1. `v-if` 和 `v-show` 有什么共同点？
 2. 有什么区别？
 3. 该如何选择使用哪个？
@@ -30,4 +31,3 @@ permalink: /interview-question/nx0xqyp5/
 
 - 对于不需要频繁切换状态的，选择使用 `v-if`
 - 对于频繁切换状态的，选择使用 `v-show`。
-

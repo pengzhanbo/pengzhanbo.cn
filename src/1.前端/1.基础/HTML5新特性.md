@@ -9,7 +9,8 @@ tags:
 
 ## 语义标签
 
-如 `<header>` `<footer>` `<nav>` `<section>`  `<article>` `<aside>`  `<details>`  `<summary>`  `<dialog>` ` <figure>`  `<main>`  `<mark>`  `<time>`  `<hgroup>` 等
+如 `<header>` `<footer>` `<nav>` `<section>`  `<article>` `<aside>`  `<details>`  `<summary>`  
+`<dialog>` `<figure>`  `<main>`  `<mark>`  `<time>`  `<hgroup>` 等
 
 ## 增强型表单
 
@@ -79,7 +80,7 @@ range： 数字范围输入域
 <audio controls>    
   <source src="horse.ogg" type="audio/ogg">
   <source src="horse.mp3" type="audio/mpeg">
-	您的浏览器不支持 audio 元素
+ 您的浏览器不支持 audio 元素
 </audio>
 ```
 
@@ -122,7 +123,7 @@ window.navigator.geolocation : {
 
 ## 拖放API
 
-### 拖动的源对象(source)可能触发的事件：
+### 拖动的源对象(source)可能触发的事件
 
 **dragstart**：拖动开始
 
@@ -130,7 +131,7 @@ window.navigator.geolocation : {
 
 **dragend**：拖动结束
 
-### 拖动的目标对象(target)可能触发的事件：
+### 拖动的目标对象(target)可能触发的事件
 
 **dragenter**：拖动进入
 
@@ -169,14 +170,14 @@ Chrome浏览器中发起资源请求的有6个线程；但是只有1个线程负
 var worker = new Worker('xx.js')
 worker.postMessage('message') // 发送消息到worker线程
 worker.onmessage = function (e) {
-	console.log(e.data) // 来自worker线程的信息
+ console.log(e.data) // 来自worker线程的信息
 }
 
 // worker线程
 onmessage = function (e) {
-	console.log(e.data) // 接收主线程的消息
+ console.log(e.data) // 接收主线程的消息
 
-	postMessage('message') // 发送消息到主线程
+ postMessage('message') // 发送消息到主线程
 }
 ```
 
@@ -185,7 +186,7 @@ onmessage = function (e) {
 一个共享worker可以被多个脚本使用——即使这些脚本正在被不同的window、iframe或者worker访问。
 
 > 如果共享worker可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。
-> 
+>
 
 ```jsx
 var myWorker = new SharedWorker('worker.js');
@@ -230,7 +231,7 @@ onconnect = function(e) {
 const ws = new WebSocket('wx://xx')
 ws.onopen = function () {}
 ws.onmessage = function (e) {
-	console.log(e.data)
+ console.log(e.data)
 }
 ```
 
@@ -260,7 +261,10 @@ history.replaceState({}, 'bar', 'bar.html')
 
 ### 获取当前状态
 
-页面加载时，或许会有个非null的状态对象。这是有可能发生的，举个例子，假如页面（通过pushState() 或 replaceState() 方法）设置了状态对象而后用户重启了浏览器。那么当页面重新加载时，页面会接收一个onload事件，但没有 popstate 事件。然而，假如你读取了history.state属性，你将会得到如同popstate 被触发时能得到的状态对象。
+页面加载时，或许会有个非null的状态对象。
+这是有可能发生的，举个例子，假如页面（通过pushState() 或 replaceState() 方法）设置了状态对象而后用户重启了浏览器。
+那么当页面重新加载时，页面会接收一个onload事件，但没有 popstate 事件。
+然而，假如你读取了history.state属性，你将会得到如同popstate 被触发时能得到的状态对象。
 
 ```jsx
 // 尝试通过 pushState 创建历史条目,然后再刷新页面查看state状态对象变化;

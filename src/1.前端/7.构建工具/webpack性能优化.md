@@ -17,7 +17,6 @@ permalink: /article/fybr4lt3/
 1. [编译构建时间优化](#编译构建时间优化)
 2. [构建产物优化](#构建产物优化)
 
-
 ## 编译构建时间优化
 
 编译构建时间优化，旨在加快每次构建的速度，减少构建时间。
@@ -34,6 +33,7 @@ permalink: /article/fybr4lt3/
 ### 缩小文件匹配范围
 
 在配置 webpack loader 时，通常会指定两个属性：`test` 和 `use` ，用以声明哪些文件需要被转换。
+
 ```js
 module.exports = {
   module: {
@@ -41,6 +41,7 @@ module.exports = {
   },
 };
 ```
+
 在默认情况下，匹配查找范围是相对于项目根目录的上下文进行搜索，当项目文件数量很多时，这个过程会非常耗时。
 在这种情况下，可以使用 `include` 和 `exclude` 两个属性来限制文件匹配范围。
 
@@ -74,6 +75,7 @@ module.exports = {
 
 一方面，可以通过修改 webpack 的配置 `resolve.extensions`，调整 后缀补全的规则，并通过顺序控制补全的优先级，
 将最常用的文件后缀放在最前面，并减少非必要的后缀名。
+
 ```js
 module.exports = {
   resolve: {
@@ -137,20 +139,18 @@ module.exports = {
 
 如果项目不大，文件不多，则没必要使用 thread-loader。其本身也有额外的性能开销。
 
-
 ## 构建产物优化
 
 构建产物优化，旨在 减少构建产物的体积，合理的组织构建产物，从而提高页面的加载速度，首屏加载速度等。
 
 通用的构建优化包括：
 
-1. [压缩 `js`, `css`，`html` 代码](#压缩-js-css-html-代码).
+1. [压缩 `js`, `css`，`html` 代码](#压缩-js-csshtml-代码).
 2. [压缩图片资源](#压缩图片资源).
 3. [代码分割](#代码分割).
 4. [按需加载](#按需加载).
 5. [preload, prefetch](#preload-prefetch).
 6. [tree-shaking](#tree-shaking).
-
 
 ### 压缩 js, css，html 代码
 
@@ -227,7 +227,6 @@ module.exports = {
 }
 ```
 
-
 ### 压缩图片资源
 
 压缩 图片资源的方法多种多样，需要根据实际的情况进行选择。
@@ -259,7 +258,6 @@ module.exports = {
   },
 }
 ```
-
 
 ### 代码分割
 
@@ -303,7 +301,6 @@ module.exports = {
 
 > **参考**： [代码分离](https://www.webpackjs.com/guides/code-splitting)
 
-
 ### 按需加载
 
 大多数时候，使页面达到可用，并不需要加载所有的资源。
@@ -321,7 +318,6 @@ const Detail = lazyComponent('detail', () => import(/* webpackChunkName: "detail
 进一步的，越尽快的让页面渲染，就越有利于用户体验。
 因此，还可以分析当前页面完成首屏渲染所需要的关键资源，将非关键资源拆分出去，首次只加载
 关键资源，完成后再加载非关键资源。
-
 
 ### preload, prefetch
 
@@ -344,7 +340,12 @@ import(/* webpackPrefetch: true */ './path/to/LoginModal.js');
 import(/* webpackPreload: true */ 'ChartingLibrary');
 ```
 
-在页面中使用 `ChartComponent` 时，在请求 `ChartComponent.js` 的同时，还会通过 `<link rel="preload">` 请求 `charting-library-chunk`。假定 `page-chunk` 体积比 `charting-library-chunk` 更小，也更快地被加载完成，页面此时就会显示 `LoadingIndicator` ，等到 `charting-library-chunk` 请求完成，`LoadingIndicator` 组件才消失。这将会使得加载时间能够更短一点，因为只进行单次往返，而不是两次往返，尤其是在高延迟环境下。
+在页面中使用 `ChartComponent` 时，在请求 `ChartComponent.js` 的同时，
+还会通过 `<link rel="preload">` 请求 `charting-library-chunk`。
+假定 `page-chunk` 体积比 `charting-library-chunk` 更小，也更快地被加载完成，
+页面此时就会显示 `LoadingIndicator` ，等到 `charting-library-chunk` 请求完成，
+`LoadingIndicator` 组件才消失。这将会使得加载时间能够更短一点，因为只进行单次往返，
+而不是两次往返，尤其是在高延迟环境下。
 
 > **参考**： [webpack prefetch/preload](https://www.webpackjs.com/guides/code-splitting#prefetchingpreloading-modules)
 
@@ -370,6 +371,4 @@ module.exports = {
 }
 ```
 
-
 > **参考**： [webpack tree-shaking](https://www.webpackjs.com/guides/tree-shaking/)
-

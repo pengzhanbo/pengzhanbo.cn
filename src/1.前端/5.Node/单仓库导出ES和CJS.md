@@ -43,8 +43,8 @@ permalink: /article/exports-esm-and-cjs/
 
   同时，在`NodeJs` 的 `v12.22.0`、`v14.17.0`版本，开始实验性的支持`ESM`，并在`16.0.0`版本开始正式支持`ESM`。
 
-
 ::: note
+
 - ESM - [ECMAScrip modules](https://nodejs.org/api/esm.html)
 - CJS - [CommonJs](https://nodejs.org/api/modules.html#modules-commonjs-modules)
 :::
@@ -61,10 +61,12 @@ permalink: /article/exports-esm-and-cjs/
 
 我们知道，`Nodejs` 能够很好的同时支持 `ESM` 和 `CJS` 进行工作，但是，有一个最主要的问题是，不能在一个 `CJS` 中
 导入`ESM`，这时候会抛出一个错误：
+
 ```js
 // cjs package
 const pkg = require('esm-only-package')
 ```
+
 ```
 Error [ERR_REQUIRE_ESM]: require() of ES Module esm-only-package not supported.
 ```
@@ -138,6 +140,7 @@ export default {
 ```
 
 由于`rollup` 是支持多配置打包的，所以我们可以使用多配置的方式，同时打包输出两种格式的文件：
+
 ```js
 // rollup.config.js
 export default [
@@ -158,7 +161,6 @@ export default [
 ]
 ```
 
-
 #### tsup
 
 `tsup` 是一个面向 `TypeScript` 的打包工具，基于 `esbuild`， 可以很方便的将我们的库打包成多种模式进行输出：
@@ -170,7 +172,6 @@ tsup src/index.ts --format esm,cjs
 ```
 
 执行完成后，将会得到两个文件：`cjs` 格式文件`dist/index.js` 和 `esm`格式文件`dist/index.mjs` 。
-
 
 使用构建工具构建完成后，接下来就是完善 `package.json`，
 
@@ -210,4 +211,3 @@ import pkg from 'my-package'
 
 虽然 `Nodejs` 从 `v14.18.0` 版本开始稳定支持 `esm` ，并且到 `v16` 版本，正式支持 `esm`。
 但将库升级到仅支持`esm` 还是一个比较激进的做法，建议从相对安全的 双格式支持 开始迁移，在合适的时机，过渡到仅支持`esm`。
-

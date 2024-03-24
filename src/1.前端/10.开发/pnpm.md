@@ -63,6 +63,7 @@ node_modules
                 ├── index.js
                 └── package.json
 ```
+
 这是 `node_modules` 中的唯一的“真实”文件。 一旦所有包都硬链接到 `node_modules`，
 就会创建符号链接来构建嵌套的依赖关系图结构。
 
@@ -122,6 +123,7 @@ corpack enabled
 ```sh
 corepack prepare pnpm@<version> --activate
 ```
+
 ### 使用独立脚本安装
 
 在 POSIX 系统上，即使没有安装 Node.js，也可以使用以下脚本安装 pnpm：
@@ -234,13 +236,18 @@ pnpm 内置了对单一存储库（也称为多包存储库、多项目存储库
 
 ### Workspace 协议 (workspace:)
 
-默认情况下，如果可用的 packages 与已声明的可用范围相匹配，pnpm 将从工作区链接这些 packages。 例如，如果 `bar` 中有 `"foo"："^1.0.0"` 的这个依赖项，则 `foo@1.0.0` 链接到 `bar。` 但是，如果 `bar` 的依赖项中有 `"foo": "2.0.0"`，而 `foo@2.0.0` 在工作空间中并不存在，则将从 `npm registry` 安装 `foo@2.0.0` 。 这种行为带来了一些不确定性。
+默认情况下，如果可用的 packages 与已声明的可用范围相匹配，pnpm 将从工作区链接这些 packages。
+例如，如果 `bar` 中有 `"foo"："^1.0.0"` 的这个依赖项，则 `foo@1.0.0` 链接到 `bar` 。
+但是，如果 `bar` 的依赖项中有 `"foo": "2.0.0"`，而 `foo@2.0.0` 在工作空间中并不存在，则将从 `npm registry` 安装 `foo@2.0.0` 。 这种行为带来了一些不确定性。
 
-幸运的是，pnpm 支持 workspace 协议 `workspace:` 。 当使用此协议时，pnpm 将拒绝解析除本地 workspace 包含的 package 之外的任何内容。 因此，如果设置为 `"foo": "workspace:2.0.0"` 时，安装将会失败，因为 `"foo@2.0.0"` 不存在于此 workspace 中。
+幸运的是，pnpm 支持 workspace 协议 `workspace:` 。
+当使用此协议时，pnpm 将拒绝解析除本地 workspace 包含的 package 之外的任何内容。
+因此，如果设置为 `"foo": "workspace:2.0.0"` 时，安装将会失败，因为 `"foo@2.0.0"` 不存在于此 workspace 中。
 
 使用示例：
 
 工作空间中存在以下项目：
+
 ```sh
 + packages/
   + foo/
@@ -269,6 +276,7 @@ pnpm 内置了对单一存储库（也称为多包存储库、多项目存储库
 ### 发布 Workspace
 
 当以上示例进行发布时，会被转换为
+
 ```json
 {
   "dependencies": {
@@ -279,4 +287,5 @@ pnpm 内置了对单一存储库（也称为多包存储库、多项目存储库
   }
 }
 ```
+
 这个功能允许你发布转化之后的包到远端，并且可以正常使用本地 workspace 中的 packages，而不需要其它中间步骤。包的使用者也可以像常规的包那样正常使用，且仍然可以受益于语义化版本。

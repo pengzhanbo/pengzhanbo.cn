@@ -52,6 +52,7 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码中
 对于不需要携带身份凭证的请求，服务器可以指定改字段的值为通配符(`*`)，表示允许来自所有域的请求。
 
 语法：
+
 ```
 Access-Control-Allow-Origin: <origin>
 Access-Control-Allow-Origin: *
@@ -67,13 +68,15 @@ Access-Control-Allow-Origin: *
 **示例1：**
 
 允许所有域访问
+
 ```
 Access-Control-Allow-Origin: *
 ```
 
 **示例2：**
 
-允许来自 https://pengzhanbo.cn 的请求
+允许来自 <https://pengzhanbo.cn> 的请求
+
 ```
 Access-Control-Allow-Origin: https://pengzhanbo.cn
 Vary: Origin
@@ -81,10 +84,11 @@ Vary: Origin
 
 ### Access-Control-Allow-Methods
 
-**Access-Control-Allow-Methods** 响应首部字段用于 预检请求的响应。 
+**Access-Control-Allow-Methods** 响应首部字段用于 预检请求的响应。
 **指明了实际请求所允许使用的HTTP方法或方法列表**。
 
 语法：
+
 ```
 Access-Control-Allow-Methods: <method>[, <method>]*
 ```
@@ -101,12 +105,14 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 **指明了实际请求中允许携带的首部字段**。
 
 语法：
+
 ```
 Access-Control-Allow-Headers: <header-name>[, header-name]*
 Access-Control-Allow-Headers: *
 ```
 
 以下特定的首部是一直允许的，无需特意声明他们：
+
 - Accept
 - Accept-Language
 - Content-Language
@@ -135,6 +141,7 @@ Access-Control-Allow-Headers: X-Custom-Header, X-My-Header
 返回结果是指： **Access-Control-Allow-Methods** 和 **Access-Control-Allow-Headers** 提供的信息。
 
 语法：
+
 ```
 Access-Control-Max-Age: <delta-seconds>
 ```
@@ -144,9 +151,10 @@ Access-Control-Max-Age: <delta-seconds>
 在 Chromium 中，上限是 **2小时（7200秒）**，同时 Chromium 还规定了默认值是 **5秒**。
 如果值为 **-1** ， 表示禁用缓存，则每次请求前都需要使用 OPTIONS 预检请求。
 
-**示例**
+**示例：**
 
 将预检请求缓存 10分钟：
+
 ```
 Access-Control-Max-Age: 600
 ```
@@ -170,18 +178,21 @@ Access-Control-Max-Age: 600
 如果期望让客户端可以访问到其他的首部信息，可以将它们 该字段受列出来。
 
 语法：
+
 ```
 Access-Control-Expose-Headers: <header-name>[, <header-name>]*
 ```
 
-**示例**
+**示例：**
 
 暴露一个非简单响应首部：
+
 ```
 Access-Control-Expose-Headers: X-My-Header
 ```
 
 暴露多个非简单响应首部：
+
 ```
 Access-Control-Expose-Headers: X-My-Header, X-Custom-Header
 ```
@@ -196,11 +207,12 @@ Access-Control-Expose-Headers: X-My-Header, X-Custom-Header
 Credentials 可以是 `cookies`、 `authorization headers` 或 `TLS client certificates`。
 
 语法：
+
 ```
 Access-Control-Allow-Credentials: true
 ```
 
-**Access-Control-Allow-Credentials** 需要与 `XMLHttpRequest.withCredentials` 
+**Access-Control-Allow-Credentials** 需要与 `XMLHttpRequest.withCredentials`
 或 **Fetch API** 的 `Request()` 构造函数中的 `credentials` 选项结合使用。
 Credentials 必须在前后端都被配置，才能使带 credentials 的 CORS 请求成功。
 
@@ -301,7 +313,7 @@ CORS 预检请求不能包含凭据。预检请求的响应必须指定 Access-C
 - 除了被用户代理自动设置的首部字段（Connection，User-Agent等），
   以及在 Fetch 规范中定义为 [禁用首部名称](https://fetch.spec.whatwg.org/#forbidden-header-name) 的其他首部，
   允许人为设置的字段为 Fetch 规范定义的 对 [CORS 安全的首部字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)
-- 请求中任意的 XMLHttpRequest 对象均没有注册任何监听事件， 
+- 请求中任意的 XMLHttpRequest 对象均没有注册任何监听事件，
   XMLHttpRequest 对象可以使用 XMLHttpRequest.upload 属性访问。
 - 请求中没有使用 ReadableStream 对象。
 
@@ -309,12 +321,11 @@ CORS 预检请求不能包含凭据。预检请求的响应必须指定 Access-C
 
 在响应附带身份凭证的请求时：
 
-- 服务器不能将 **Access-Control-Allow-Origin** 的值设为通配符 `*`，而应将其设置为特定的域，如：Access-Control-Allow-Origin: https://pengzhanbo.cn。
+- 服务器不能将 **Access-Control-Allow-Origin** 的值设为通配符 `*`，而应将其设置为特定的域，如：Access-Control-Allow-Origin: <https://pengzhanbo.cn。>
 
 - 服务器不能将 **Access-Control-Allow-Headers** 的值设为通配符 `*`，而应将其设置为首部名称的列表，如：Access-Control-Allow-Headers: X-Custom-Header, Content-Type
 
 - 服务器不能将 **Access-Control-Allow-Methods** 的值设为通配符 `*`，而应将其设置为特定请求方法名称的列表，如：Access-Control-Allow-Methods: POST, GET
-
 
 ## 需要CORS的场景
 
@@ -324,7 +335,6 @@ CORS 预检请求不能包含凭据。预检请求的响应必须指定 Access-C
 4. WebGL 贴图
 5. 使用 drawImage 将 Images/video 画面绘制到 canvas
 6. 来自图像的 CSS 图形
-
 
 ## 安全
 

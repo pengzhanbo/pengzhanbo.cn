@@ -6,6 +6,7 @@ permalink: /interview-question/2whxs493/
 ---
 
 ::: tip 提问
+
 1. 什么是DOCTYPE？
 2. DOCTYPE的作用是什么？
 3. 标准模式和兼容模式
@@ -31,6 +32,7 @@ permalink: /interview-question/2whxs493/
 
 HTML5的 不需要对 DTD 进行引用。但是需要 DOCTYPE 来规范浏览器的行为。
 所以HTML的DOCTYPE 声明为
+
 ``` html
 <!DOCTYPE html>
 ```
