@@ -1,6 +1,6 @@
 ---
 title: WebComponent——custom elements
-tags: 
+tags:
   - javascript
   - html
 createTime: 2018/08/01 11:15:27

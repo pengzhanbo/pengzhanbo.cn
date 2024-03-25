@@ -1,6 +1,6 @@
 ---
 title: Vue组件间通信
-tags: 
+tags:
   - vue
 createTime: 2018/07/20 11:15:27
 permalink: /article/iezlvhvg/

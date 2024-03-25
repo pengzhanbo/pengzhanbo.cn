@@ -2,7 +2,7 @@
 title: 单仓库实现同时导出esm、cjs
 createTime: 2022/04/06 08:33:04
 author: pengzhanbo
-tags: 
+tags:
   - node
 permalink: /article/exports-esm-and-cjs/
 ---

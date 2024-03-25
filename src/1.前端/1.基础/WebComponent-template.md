@@ -1,7 +1,7 @@
 ---
 title: WebComponent——template
 lang: zh-CN
-tags: 
+tags:
   - javascript
   - html
 createTime: 2018/08/02 11:15:27
