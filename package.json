@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.9",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.15",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.21",
     "anywhere": "^1.6.0",
     "vue": "^3.4.21",
     "vuepress": "2.0.0-rc.9",
-    "vuepress-theme-plume": "1.0.0-rc.46"
+    "vuepress-theme-plume": "1.0.0-rc.47"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
