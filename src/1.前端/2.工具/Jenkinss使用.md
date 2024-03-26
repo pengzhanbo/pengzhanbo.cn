@@ -22,21 +22,21 @@ _以下基于 `CentOS` 系统。_
 
 CentOS 下安装：
 
-``` bash
+```bash
 sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
 yum install jenkins
 ```
 
-- __默认安装目录__ : `/var/lib/jenkins`
-- __默认日志目录__ ：`/var/log/jenkins`
-- __默认缓存目录__ : `/var/cache/jenkins`
-- __默认admin密码文件__ : `/var/lib/jenkins/secrets/initialAdminPassword`
-- __配置文件__ : `/etc/sysconfig/jenkins`
+- **默认安装目录** : `/var/lib/jenkins`
+- **默认日志目录** ：`/var/log/jenkins`
+- **默认缓存目录** : `/var/cache/jenkins`
+- **默认admin密码文件** : `/var/lib/jenkins/secrets/initialAdminPassword`
+- **配置文件** : `/etc/sysconfig/jenkins`
 
 ### 运行
 
-``` bash
+```bash
 # 启动 Jenkins
 service jenkins start
 # 重启 Jenkins
@@ -49,7 +49,7 @@ service jenkins stop
 
 ### 卸载
 
-``` bash
+```bash
 service jenkiins stop
 yum clean all
 yum remove jenkins
@@ -62,49 +62,49 @@ rm -rf /var/log/jenkins
 
 1. 打开`Jenkins` 配置文件
 
-  ``` bash
-  vim /etc/sysconfig/jenkins
-  ```
+```bash
+vim /etc/sysconfig/jenkins
+```
 
 1. 修改 `$HTTP_PORT`
 
-  ``` bash
-  $HTTP_PORT="8080"
-  ```
+```bash
+$HTTP_PORT="8080"
+```
 
 ### 获取root用户权限
 
 1. 打开`Jenkins` 配置文件
 
-  ``` bash
-  vim /etc/sysconfig/jenkins
-  ```
+```bash
+vim /etc/sysconfig/jenkins
+```
 
 1. 修改 `HTTP_PORT`
 
-  ``` bash
-  $JENKINS_USER="root"
-  ```
+```bash
+$JENKINS_USER="root"
+```
 
 1. 修改`Jenkins` 相关目录权限
 
-  ``` bash
-  chown -R root:root /var/lib/jenkins
-  chown -R root:root /var/log/jenkins
-  chown -R root:root /var/cache/jenkins
-  ```
+```bash
+chown -R root:root /var/lib/jenkins
+chown -R root:root /var/log/jenkins
+chown -R root:root /var/cache/jenkins
+```
 
 1. 重启`Jenkins`并验证
 
-  ``` bash
-  service jenkins restart
-  ps -ef|grep jenkins
-  # 若显示为root用户，则表示修改完成
-  ```
+```bash
+service jenkins restart
+ps -ef|grep jenkins
+# 若显示为root用户，则表示修改完成
+```
 
 ### 开机自启
 
-``` bash
+```bash
 chkconfig jenkins on
 ```
 
@@ -121,8 +121,8 @@ chkconfig jenkins on
 ### 用户管理以及用户权限
 
 - 使用`admin`权限的账号，进入`系统管理 > 用户管理`, 可以添加/修改/删除 用户。
-- 进入`系统管理 > 全局安全配置` 中，勾选 __启用安全__。访问控制选择 __Jenkins专有用户数据库__，使用 __项目矩阵授权策略__, 可以为每个用户分配全局权限。
-- 进入项目配置中，权限 __启用项目安全__ 可以单独为该项目分配用户权限。 从而确保每个项目的安全性。
+- 进入`系统管理 > 全局安全配置` 中，勾选 **启用安全**。访问控制选择 **Jenkins专有用户数据库**，使用 **项目矩阵授权策略**, 可以为每个用户分配全局权限。
+- 进入项目配置中，权限 **启用项目安全** 可以单独为该项目分配用户权限。 从而确保每个项目的安全性。
 
 ### Git Parameter
 
@@ -136,8 +136,8 @@ chkconfig jenkins on
 
 基础`pipeline`配置：
 
-``` groovy
-// Using git without checkout 
+```groovy
+// Using git without checkout
 pipeline {
   agent any
   parameters {

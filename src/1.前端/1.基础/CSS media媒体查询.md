@@ -21,26 +21,25 @@ tags:
 
 ### 在 `<link>` 元素引入CSS资源时，声明 `media` 属性
 
-``` html
-<link rel="stylesheet" type="text/css" href="media/custom.css" media="screen and (min-width: 400px)">
+```html
+<link rel="stylesheet" type="text/css" href="media/custom.css" media="screen and (min-width: 400px)" />
 ```
 
 ### 在`<style>` 上 声明 `media` 属性
 
-``` html
-<style media="screen and (min-width: 400px)">
-</style>
+```html
+<style media="screen and (min-width: 400px)"></style>
 ```
 
 ### 在`@import` 后 声明 媒体查询条件
 
-``` css
+```css
 @import url('custom.css') screen and (min-width: 400px);
 ```
 
 ### 在样式表中使用 At-Rule `@media` 使用媒体查询规则
 
-``` css
+```css
 @media screen and (min-width: 400px) {
   .example {
     color: red;
@@ -50,18 +49,17 @@ tags:
 
 ## 语法
 
-``` html
-<link rel="stylesheet" type="text/css" href="media/custom.css" media="[media-queries-list]">
+```html
+<link rel="stylesheet" type="text/css" href="media/custom.css" media="[media-queries-list]" />
 
-<style media="[media-queries-list]">
-</style>
+<style media="[media-queries-list]"></style>
 
 <style>
-  @import url [media-queries-list];
+    @import url [media-queries-list];
 
-  @media [media-queries-list] {
-    <style-sheet-group>
-}
+    @media [media-queries-list] {
+      <style-sheet-group>
+  }
 </style>
 ```
 
@@ -81,7 +79,7 @@ tags:
 - `print`: 表示 适用于在屏幕上以打印预览的模式查看页面和文档。
 - `screen`: 表示 适用于屏幕 。
 
-> 在 *css2.1* 和 *Media Queries 3* 中还支持 `tty`，`tv`，`projection`，`handheld`，`braille`，`embossed`，`aural`，但这些值都已经在*Media Queries 4* 中被弃用。
+> 在 _css2.1_ 和 _Media Queries 3_ 中还支持 `tty`，`tv`，`projection`，`handheld`，`braille`，`embossed`，`aural`，但这些值都已经在*Media Queries 4* 中被弃用。
 
 ### Media features
 
@@ -89,46 +87,47 @@ tags:
 
 媒体特性表达式是完全是可选的，并且负责测试这些特性是否存在，值为多少。 且每个媒体特性表达式都必须使用括号括起来。
 
-*以下仅列出比较常用到的媒体特性：*
+_以下仅列出比较常用到的媒体特性：_
 
 - `width`: 视窗（viewport）的宽度，包括纵向滚动条的宽度。
-  
+
   值的类型为 number，单位可以是 `px`、`em` 等。
 
-  ``` css
-  with: 400px
+  ```css
+  with: 400px;
   ```
 
 - `height`: 视窗（viewport）的高度。
-  
+
   值的类型为 number，单位可以是 `px`、`em` 等。
 
-  ``` css
-  height: 600px
+  ```css
+  height: 600px;
   ```
 
 - `aspect-ratio`： 视窗（viewport）的宽高比。
-  
+
   值的类型为 number/number。
 
-  ``` css
-  aspect-ratio: 3/2
+  ```css
+  aspect-ratio: 3/2;
   ```
 
 - `orientation`： 视窗（viewport） 的旋转方向。
+
   - portrait： 设备竖屏
   - landscape： 设备横屏
 
-  ``` css
-  orientation: landscape
+  ```css
+  orientation: landscape;
   ```
 
 - `resolution`: 输出设备的分辨率
-  
+
   值的类型为 number，单位为 `dpi`。
 
-  ``` css
-  resolution: 320dpi
+  ```css
+  resolution: 320dpi;
   ```
 
 - `scan`：输出设备的扫描过程（适用于电视机等）。
@@ -139,16 +138,16 @@ tags:
 
 - `max-[media feature]`： 小于指定的最大值时，返回*true*
 - `min-[media feature]`: 大于指定的最小值时，返回*true*
-  
-*个人认为使用前缀时其表述稍显拗口，建议使用取值范围的方式声明表达式：*
+
+_个人认为使用前缀时其表述稍显拗口，建议使用取值范围的方式声明表达式：_
 
 #### 媒体特性语法
 
 - 以键值对的形式，表述取固定的值
 
-  ````
+  ```
   ([media-feature-name]: [media-feature-value])
-  ````
+  ```
 
 - 直接书写name， 表示值的结果为 boolean
 
@@ -157,9 +156,9 @@ tags:
   ```
 
 - 表述 特性的取值范围
-  
-  *声明 range 为描述数学符号 :  '<' | '>' | '<=' | '>='*
-  
+
+  _声明 range 为描述数学符号 : '<' | '>' | '<=' | '>='_
+
   ```
   ([media-feature-name] [range] [media-feature-value])
   ([media-feature-name] [range] [media-feature-value] [range] [media-feature-value])
@@ -169,11 +168,11 @@ tags:
 
 逻辑操作符用于组成复合的 media queries。
 
-- `and`: 用于合并多条`media query`, 且 每条 `media query` 均返回 *true* 时，
+- `and`: 用于合并多条`media query`, 且 每条 `media query` 均返回 _true_ 时，
   媒体查询表达式的结果返回*true*。
-- `not`: 取反操作，使用`not [media query]`，当`media query` 返回 *false* 时，
+- `not`: 取反操作，使用`not [media query]`，当`media query` 返回 _false_ 时，
   媒体查询表达式的结果返回*true*。
-- `,`: or操作符，组合多个 `media query`，任意一个`media query` 返回 *true*,
+- `,`: or操作符，组合多个 `media query`，任意一个`media query` 返回 _true_,
   媒体查询表达式的结果返回*true*。
 - `only`: 不支持更加高级的媒体类型的浏览器检测到only修饰的时候就会抛弃这个规则
 
@@ -181,24 +180,27 @@ tags:
 
 ### 示例1
 
-``` css
-@media screen and (width > 414px) {}
+```css
+@media screen and (width > 414px) {
+}
 ```
 
 当设备的屏幕视窗宽度大于414px时，应用CSS块中的样式规则。
 
 ### 示例2
 
-``` css
-@media (width > 800px), screen and (orientation: landscape) {}
+```css
+@media (width > 800px), screen and (orientation: landscape) {
+}
 ```
 
 当前设备 视窗宽度大于 800px， 或者设备方向为横向时，应用css块中的样式规则。
 
 ### 示例3
 
-``` css
-@media screen and (414px < width  < 800px) {}
+```css
+@media screen and (414px < width < 800px) {
+}
 ```
 
 当前设备屏幕视窗宽度 大于 414px 且 小于 800px 时， 应用css块中的样式规则。

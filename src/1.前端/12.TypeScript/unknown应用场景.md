@@ -15,12 +15,9 @@ permalink: /article/lasuemgv/
 ## 类型转换
 
 ```ts twoslash
-const num: number = 10;
-(num as unknown as string).split('')
+const num: number = 10
+;(num as unknown as string).split('')
 //                           ^?
-
-
-
 
 // @log: 这里可以和 any 一样通过静态检查
 ```
@@ -31,9 +28,9 @@ const num: number = 10;
 ```ts twoslash
 // @errors: 18046
 const foo: unknown = 'string'
-foo.substr(1);           // 静态检查不通过报错
+foo.substr(1) // 静态检查不通过报错
 const bar: any = 10
-bar.substr(1);
+bar.substr(1)
 ```
 
 ## 替代 `any`

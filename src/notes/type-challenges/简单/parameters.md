@@ -15,6 +15,7 @@ const foo = (arg1: string, arg2: number): void => {}
 
 type FunctionParamsType = MyParameters<typeof foo> // [arg1: string, arg2: number]
 ```
+
 :::
 
 ### 解题思路
@@ -24,8 +25,7 @@ type FunctionParamsType = MyParameters<typeof foo> // [arg1: string, arg2: numbe
 ### 答案
 
 ```ts
-type MyParameters<T> = T extends (...args: infer R) => any
-  ? R : never
+type MyParameters<T> = T extends (...args: infer R) => any ? R : never
 ```
 
 ### 参考

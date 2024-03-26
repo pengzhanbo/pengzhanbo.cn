@@ -59,11 +59,11 @@ Google 认为核心 Web 指标对一切网络体验都至关重要。因此，Go
 也能同时为 [PageSpeed Insights 网页速度测量工具](https://pagespeed.web.dev/) 和
 搜索控制台的 [核心 Web 指标报告](https://support.google.com/webmasters/answer/9205520) 等工具提供支持。
 
-|                                                                           | LCP | FID | CLS|
-| ------------------------------------------------------------------------- | --- | --- | -- |
-| [Chrome 用户体验报告](https://developer.chrome.com/docs/crux/)            | ✔   | ✔   | ✔  |
-| [PageSpeed Insights 网页速度测量工具](https://pagespeed.web.dev/)         | ✔   | ✔   | ✔  |
-| [核心 Web 指标报告](https://support.google.com/webmasters/answer/9205520) | ✔   | ✔   | ✔  |
+|                                                                           | LCP | FID | CLS |
+| ------------------------------------------------------------------------- | --- | --- | --- |
+| [Chrome 用户体验报告](https://developer.chrome.com/docs/crux/)            | ✔  | ✔  | ✔  |
+| [PageSpeed Insights 网页速度测量工具](https://pagespeed.web.dev/)         | ✔  | ✔  | ✔  |
+| [核心 Web 指标报告](https://support.google.com/webmasters/answer/9205520) | ✔  | ✔  | ✔  |
 
 ::: info
 关于这些工具的使用方法以及适合您用例的工具选择指南，请参阅：[测量 Web 指标入门指南](https://web.dev/vitals-measurement-getting-started/)
@@ -81,19 +81,19 @@ JavaScript 库，这是一个围绕底层网页 API 的小型的、生产就绪�
 
 通过使用 [web-vitals](https://github.com/GoogleChrome/web-vitals) 库，测量每项指标就像调用单个函数一样简单（有关完整[用法](https://github.com/GoogleChrome/web-vitals#usage)和[API](https://github.com/GoogleChrome/web-vitals#api)详情，请参阅文档）：
 
-``` js
-import {onCLS, onFID, onLCP} from 'web-vitals';
+```js
+import { onCLS, onFID, onLCP } from 'web-vitals'
 
 function sendToAnalytics(metric) {
-  const body = JSON.stringify(metric);
+  const body = JSON.stringify(metric)
   // Use `navigator.sendBeacon()` if available, falling back to `fetch()`.
-  (navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
-      fetch('/analytics', {body, method: 'POST', keepalive: true});
+  ;(navigator.sendBeacon && navigator.sendBeacon('/analytics', body)) ||
+    fetch('/analytics', { body, method: 'POST', keepalive: true })
 }
 
-onCLS(sendToAnalytics);
-onFID(sendToAnalytics);
-onLCP(sendToAnalytics);
+onCLS(sendToAnalytics)
+onFID(sendToAnalytics)
+onLCP(sendToAnalytics)
 ```
 
 当您将网站配置为使用 [web-vitals](https://github.com/GoogleChrome/web-vitals) 库来测量您的核心 Web 指标数据并将其发送到分析端后，下一步是对数据进行汇总和报告，从而查看您的页面是否在至少 75% 的页面访问中都满足建议阈值。
@@ -110,10 +110,10 @@ onLCP(sendToAnalytics);
 
 此扩展程序有助于您了解自己的网站、竞争对手的网站和整个网络的性能。
 
-|| LCP | FID | CLS|
-| -- | -- | -- | -- |
-| [Web 指标报告](https://github.com/GoogleChromeLabs/web-vitals-report) | ✔ | ✔ | ✔ |
-| [Web 指标 Chrome 扩展程序](https://github.com/GoogleChrome/web-vitals-extension) | ✔ | ✔ | ✔ |
+|                                                                                  | LCP | FID | CLS |
+| -------------------------------------------------------------------------------- | --- | --- | --- |
+| [Web 指标报告](https://github.com/GoogleChromeLabs/web-vitals-report)            | ✔  | ✔  | ✔  |
+| [Web 指标 Chrome 扩展程序](https://github.com/GoogleChrome/web-vitals-extension) | ✔  | ✔  | ✔  |
 
 此外，倾向于直接通过底层网页 API 来测量这些指标的开发者可以参考这些指标指南，从而了解执行详情：
 
@@ -133,10 +133,10 @@ onLCP(sendToAnalytics);
 
 以下工具可用于在实验室环境中测量核心 Web 指标：
 
-|| LCP | FID | CLS|
-| -- | -- | -- | -- |
-| [Chrome 开发者工具](https://developer.chrome.com/docs/devtools/) | ✔ | ✘（使用 [TBT](https://web.dev/tbt/) 代替） | ✔ |
-| [灯塔](https://developer.chrome.com/docs/lighthouse/overview/) | ✔ | ✘（使用 [TBT](https://web.dev/tbt/) 代替）| ✔ |
+|                                                                  | LCP | FID                                        | CLS |
+| ---------------------------------------------------------------- | --- | ------------------------------------------ | --- |
+| [Chrome 开发者工具](https://developer.chrome.com/docs/devtools/) | ✔  | ✘（使用 [TBT](https://web.dev/tbt/) 代替） | ✔  |
+| [灯塔](https://developer.chrome.com/docs/lighthouse/overview/)   | ✔  | ✘（使用 [TBT](https://web.dev/tbt/) 代替） | ✔  |
 
 ::: info
 灯塔这类在没有用户的模拟环境中加载页面的工具无法测量 FID（没有用户输入）。但是，Total Blocking Time 总阻塞时间 (TBT) 指标不仅可以进行实验室测量，而且还是 FID 的出色代理。在实验室中改进 TBT 的性能优化应该能够改进实际的 FID（请参阅下方的性能建议）。

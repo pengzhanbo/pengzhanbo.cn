@@ -50,14 +50,14 @@ HMR有几个特性：
 ## HMR基本流程
 
 - **Step 1:**
-  
+
   webpack watch 模式下，监听文件系统中的某个文件是否发生修改。当监听到文件发生变更时，
   根据配置文件**对模块进行重新编译打包**，并将打包后的代码 通过 JavaScript 对象保存在内存中。
 
 - **Step 2:**
-  
+
   webpack-dev-middleware 调用 webpack 的API 对代码的变化进行监控，并通知webpack，将代码打包到内存中。
-  
+
 - **Step 3:**
 
   webpack-dev-server 监听文件变化，不同于第一步的是，这一步不监听代码变化进行重新编译打包。

@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/two-sum/
 Github: []()
 
 ```ts
+
 ```
+
 :::

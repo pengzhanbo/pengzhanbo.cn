@@ -10,14 +10,14 @@ permalink: /defensive-css/scrollbar-on-demand/
 按需使用滚动条。当下，我们可以控制是否显示滚动条，或者仅在内容较长的时候显示滚动条。
 但强烈建议在不确定内容的情况下使用 `auto` 作为 `overflow` 属性值。
 
-<style scoped>
-.body-wrapper {
+<style>
+.body-wrapper-112 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
 }
-.body-scroll {
+.body-scroll-112 {
   width: 190px;
   height: 270px;
   margin: 0 auto;
@@ -29,32 +29,33 @@ permalink: /defensive-css/scrollbar-on-demand/
   box-shadow: var(--vp-shadow-2);
   overflow-y: scroll;
 }
-.body-scroll.auto {
+.body-scroll-112.auto {
   overflow-y: auto;
 }
-.body-scroll::-webkit-scrollbar {
+.body-scroll-112::-webkit-scrollbar {
   width: 7px;
 }
-.body-scroll::-webkit-scrollbar-thumb {
+.body-scroll-112::-webkit-scrollbar-thumb {
   background-color: var(--vp-c-gray-1);
 }
-.body-scroll::-webkit-scrollbar-track {
+.body-scroll-112::-webkit-scrollbar-track {
   background-color: var(--vp-c-gray-soft);
 }
-.body-scroll p {
+.body-scroll-112 p {
   margin: 8px 0;
 }
 </style>
 
 :::demo-wrapper
+
 <p align="center">overflow-y: scroll</p>
 
-<div class="body-wrapper">
-<div class="body-scroll" :class="{ show }">
+<div class="body-wrapper-112">
+<div class="body-scroll-112" :class="{ show }">
   <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
   <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
 </div>
-<div class="body-scroll" :class="{ show }">
+<div class="body-scroll-112" :class="{ show }">
   <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
   <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
   <p>求之不得，寤寐思服。<br/>悠哉悠哉，輾轉反側。</p>
@@ -71,14 +72,15 @@ permalink: /defensive-css/scrollbar-on-demand/
 这是更好的 视觉交互体验。
 
 :::demo-wrapper
+
 <p align="center">overflow-y: auto</p>
 
-<div class="body-wrapper">
-<div class="body-scroll auto" :class="{ show }">
+<div class="body-wrapper-112">
+<div class="body-scroll-112 auto" :class="{ show }">
   <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
   <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
 </div>
-<div class="body-scroll auto" :class="{ show }">
+<div class="body-scroll-112 auto" :class="{ show }">
   <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
   <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
   <p>求之不得，寤寐思服。<br/>悠哉悠哉，輾轉反側。</p>

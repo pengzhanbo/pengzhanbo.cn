@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/union-to-intersection/
 Github: []()
 
 ```ts
+
 ```
+
 :::

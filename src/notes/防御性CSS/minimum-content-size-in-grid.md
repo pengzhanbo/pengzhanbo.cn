@@ -11,8 +11,8 @@ permalink: /defensive-css/minimum-content-size-in-grid/
 CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
 这意味着，如果存在大于网格项的元素，它将溢出。
 
-<style scoped>
-.grid-box {
+<style>
+.grid-box-110 {
   width: 250px;
   display: grid;
   grid-template-columns: 1fr 100px;
@@ -25,22 +25,22 @@ CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
   padding: 20px;
 }
 
-.grid-box > div {
+.grid-box-110 > div {
   padding: 20px;
   border-radius: 5px;
 }
 
-.grid-box .min {
+.grid-box-110 .min {
   min-width: 0;
   overflow-wrap: break-word;
 }
 
-.grid-box__main {
+.grid-box-110__main {
   height: 100px;
   background-color: var(--vp-c-brand-3);
 }
 
-.grid-box__aside {
+.grid-box-110__aside {
   background-color: var(--vp-c-gray-2);
 }
 
@@ -56,11 +56,12 @@ CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
 ```
 
 :::demo-wrapper
-<div class="grid-box">
-  <div class="grid-box__main">
+
+<div class="grid-box-110">
+  <div class="grid-box-110__main">
     gridboxgridbox
   </div>
-  <div class="grid-box__aside"></div>
+  <div class="grid-box-110__aside"></div>
 </div>
 :::
 
@@ -77,10 +78,11 @@ CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
 在这里，我们选择 `min-width: 0`
 
 :::demo-wrapper
-<div class="grid-box">
-  <div class="grid-box__main min">
+
+<div class="grid-box-110">
+  <div class="grid-box-110__main min">
     gridboxgridbox
   </div>
-  <div class="grid-box__aside"></div>
+  <div class="grid-box-110__aside"></div>
 </div>
 :::

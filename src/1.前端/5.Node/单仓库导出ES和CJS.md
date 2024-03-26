@@ -47,9 +47,10 @@ permalink: /article/exports-esm-and-cjs/
 
 - ESM - [ECMAScrip modules](https://nodejs.org/api/esm.html)
 - CJS - [CommonJs](https://nodejs.org/api/modules.html#modules-commonjs-modules)
+
 :::
 
-目前有很多包仅支持 `CJS` 或者 `ESM`  格式。 但同时，也有越来越多的包推荐并仅支持导出 `ESM` 格式。
+目前有很多包仅支持 `CJS` 或者 `ESM` 格式。 但同时，也有越来越多的包推荐并仅支持导出 `ESM` 格式。
 
 但是相对来说，就目前而言，作为一个库，仅支持`ESM` 格式还是过于激进了。即使在 `NodeJs v16`已开始正式支持`ESM`，
 但是整个社区的迁移还是需要大量的时间成本和人力成本的，如果某个版本破坏性的从`CJS`支持迁移到`ESM`，
@@ -77,7 +78,7 @@ Error [ERR_REQUIRE_ESM]: require() of ES Module esm-only-package not supported.
 
 ```js
 // CJS
-const { default: pkg } = await import ('esm-only-package')
+const { default: pkg } = await import('esm-only-package')
 ```
 
 但是，这并不是一个令人满意的解决方案，它与我们日常使用的模块导入方式来说，显得有点笨拙，不符合一般使用习惯，
@@ -86,7 +87,7 @@ const { default: pkg } = await import ('esm-only-package')
 ```js
 // ESM
 import { named } from 'esm-package'
-import cjs from 'cjs-package' 
+import cjs from 'cjs-package'
 ```
 
 ## 如何做？
@@ -96,7 +97,7 @@ import cjs from 'cjs-package'
 在现在的稳定版本的`NodeJs` 中，已经支持同时在一个包中导出两种不同的格式。
 在`package.json` 文件中，有一个`exports` 字段，提供给我们有条件的导出不同格式。
 
-``` js
+```js
 {
   "name": "package",
   "exports": {
@@ -105,7 +106,7 @@ import cjs from 'cjs-package'
       "import": "./index.mjs"
     }
   }
-} 
+}
 ```
 
 这一段声明描述了， 当进行导入包的默认模块时，如果是通过 `require('package')` 进行导入，那么引入的是 `./index.js` 文件，如果是通过`import pkg from 'package'`进行导入，那么引入的是 `./index.mjs` 文件。
@@ -135,7 +136,7 @@ export default {
   input: 'src/index.js',
   output: {
     file: './dist/index.js',
-  }
+  },
 }
 ```
 
@@ -149,15 +150,15 @@ export default [
     output: {
       file: './dist/index.js',
       format: 'cjs',
-    }
+    },
   },
   {
     input: 'src/index.js',
     output: {
       file: './dist/index.mjs',
       format: 'es',
-    }
-  }
+    },
+  },
 ]
 ```
 
@@ -167,7 +168,7 @@ export default [
 
 `tsup` 可以支持零配置，直接使用命令行即可输出两种格式
 
-``` sh
+```sh
 tsup src/index.ts --format esm,cjs
 ```
 

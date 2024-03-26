@@ -25,8 +25,8 @@ const toggle2 = () => {
 以前面的 [例子](/defensive-css/scroll-chaining/) 为例，当内容变长时，添加滚动条将导致布局偏移。
 发生布局偏移的原因是为滚动条保留空间。
 
-<style scoped>
-.body-scroll {
+<style>
+.body-scroll-120 {
   width: 168px;
   height: 270px;
   margin: 0 auto;
@@ -37,32 +37,32 @@ const toggle2 = () => {
   padding: 10px;
   box-shadow: var(--vp-shadow-2);
 }
-.body-scroll::-webkit-scrollbar {
+.body-scroll-120::-webkit-scrollbar {
   width: 7px;
 }
-.body-scroll::-webkit-scrollbar-thumb {
+.body-scroll-120::-webkit-scrollbar-thumb {
   background-color: var(--vp-c-gray-1);
 }
-.body-scroll::-webkit-scrollbar-track {
+.body-scroll-120::-webkit-scrollbar-track {
   background-color: var(--vp-c-gray-soft);
 }
 
-.body-scroll.stable {
+.body-scroll-120.stable {
   scrollbar-gutter: stable;
   padding-right: 8px;
 }
 
-.body-scroll p {
+.body-scroll-120 p {
   margin: 8px 0;
 }
 
-.body-scroll p:nth-child(n+3) {
+.body-scroll-120 p:nth-child(n+3) {
   display: none;
 }
-.body-scroll.show p:nth-child(n+3) {
+.body-scroll-120.show p:nth-child(n+3) {
   display: block;
 }
-.add-btn {
+.add-btn-120 {
   background: var(--vp-c-brand-1);
   color: var(--vp-c-bg);
   padding: 0 10px;
@@ -72,11 +72,11 @@ const toggle2 = () => {
 </style>
 
 :::demo-wrapper
-<button type="button" class="add-btn" @click="toggle">
-  {{ show ? '重置内容' : '添加内容' }}
+<button type="button" class="add-btn-120" @click="toggle">
+{{ show ? '重置内容' : '添加内容' }}
 </button>
 
-<div class="body-scroll" :class="{ show }">
+<div class="body-scroll-120" :class="{ show }">
   <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
   <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
   <p>求之不得，寤寐思服。<br/>悠哉悠哉，輾轉反側。</p>
@@ -95,11 +95,11 @@ const toggle2 = () => {
 ```
 
 :::demo-wrapper
-<button type="button" class="add-btn" @click="toggle2">
-  {{ show2 ? '重置内容' : '添加内容' }}
+<button type="button" class="add-btn-120" @click="toggle2">
+{{ show2 ? '重置内容' : '添加内容' }}
 </button>
 
-<div class="body-scroll stable" :class="{ show: show2 }">
+<div class="body-scroll-120 stable" :class="{ show: show2 }">
   <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
   <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
   <p>求之不得，寤寐思服。<br/>悠哉悠哉，輾轉反側。</p>
@@ -108,5 +108,5 @@ const toggle2 = () => {
 </div>
 :::
 
-`scrollbar-gutter: stable` 将会预先为 滚动条保留空间。 
+`scrollbar-gutter: stable` 将会预先为 滚动条保留空间。
 因此，在计算 内填充 `padding` 时，应考虑滚动条的宽度，从而适配 UI 效果。

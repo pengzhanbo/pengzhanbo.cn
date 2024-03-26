@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/omit-by-type/
 Github: []()
 
 ```ts
+
 ```
+
 :::

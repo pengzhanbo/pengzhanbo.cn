@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/json-parser/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -12,9 +12,10 @@ permalink: /defensive-css/image-distortion/
 在下面的示例中，我们有一个带有照片的卡片组件。看起来不错。
 
 :::demo-wrapper
+
 <div style="width:200px;margin:20px auto;padding-bottom:10px;border-radius:5px;overflow:hidden;box-shadow:var(--vp-shadow-2)">
   <div style="width: 200px;height:133px;overflow:hidden">
-    <img src="/images/defensive-css/ratio.png">
+    <img src="/images/defensive-css/ratio.png" alt="">
   </div>
   <h4 style="margin:5px 10px 0">美食</h4>
   <p style="margin:0 10px;font-size:14px">一份美味的食物</p>
@@ -24,9 +25,10 @@ permalink: /defensive-css/image-distortion/
 当时，如果使用的图片的尺寸横纵比不一致，图片会被拉伸：
 
 :::demo-wrapper
+
 <div style="width:200px;margin:20px auto;padding-bottom:10px;border-radius:5px;overflow:hidden;box-shadow:var(--vp-shadow-2)">
   <div style="width: 200px;height:133px;overflow:hidden">
-    <img style="height:195px;position:relative;top:-33px;" src="/images/defensive-css/ratio.png">
+    <img style="height:195px;position:relative;top:-33px;" src="/images/defensive-css/ratio.png" alt="">
   </div>
   <h4 style="margin:5px 10px 0">美食</h4>
   <p style="margin:0 10px;font-size:14px">一份美味的食物</p>
@@ -44,16 +46,18 @@ permalink: /defensive-css/image-distortion/
 ## 示例
 
 :::normal-demo object-fit:cover
+
 ```html
 <p>调整容器大小查看效果：</p>
 <div class="wrapper">
-  <img id="image" src="/images/defensive-css/ratio.png">
+  <img id="image" src="/images/defensive-css/ratio.png" />
 </div>
 <div class="actions">
-  <input type="checkbox" id="toggle">
+  <input type="checkbox" id="toggle" />
   <label for="toggle">启用 object-fit</label>
 </div>
 ```
+
 ```css
 .wrapper {
   position: relative;
@@ -72,7 +76,7 @@ permalink: /defensive-css/image-distortion/
   background: var(--vp-c-bg-alt, #f0f0f0);
 }
 .wrapper::after {
-  content: "Resize me";
+  content: 'Resize me';
   position: absolute;
   right: 0;
   top: 50%;
@@ -87,10 +91,12 @@ permalink: /defensive-css/image-distortion/
   height: 140px;
 }
 ```
+
 ```js
-const image = document.querySelector('#image');
+const image = document.querySelector('#image')
 document.querySelector('#toggle').addEventListener('change', (e) => {
-  image.style.objectFit = e.target.checked ? 'cover' : 'initial';
+  image.style.objectFit = e.target.checked ? 'cover' : 'initial'
 })
 ```
+
 :::

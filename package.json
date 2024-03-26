@@ -10,7 +10,8 @@
   "scripts": {
     "dev": "vuepress dev src",
     "build": "vuepress build src --clean-cache --clean-temp",
-    "preview": "anywhere -s -h localhost -d docs"
+    "preview": "anywhere -s -h localhost -d docs",
+    "lint:fix": "prettier . --write"
   },
   "dependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.9",
@@ -21,9 +22,11 @@
     "vuepress-theme-plume": "1.0.0-rc.47"
   },
   "devDependencies": {
+    "@pengzhanbo/prettier-config": "^1.7.0",
     "@types/express": "^4.17.21",
+    "prettier": "^3.2.5",
     "tsconfig-vuepress": "^4.5.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.4.3"
   },
   "engines": {
     "node": ">=18.16.0",

@@ -9,9 +9,7 @@ export default definePlumeNotesItemConfig({
       dir: '热身',
       text: '热身(1)',
       collapsed: false,
-      items: [
-        'HelloWorld',
-      ],
+      items: ['HelloWorld'],
     },
     {
       dir: '简单',

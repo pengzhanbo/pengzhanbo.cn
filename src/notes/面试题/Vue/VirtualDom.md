@@ -9,6 +9,7 @@ permalink: /interview-question/w122van2/
 
 1. 什么是 Virtual DOM?
 2. Virtual DOM 比 原生DOM快在哪里？
+
 :::
 
 ## Virtual DOM

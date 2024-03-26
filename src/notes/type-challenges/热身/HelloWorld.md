@@ -12,14 +12,16 @@ Github: [Hello World](https://github.com/type-challenges/type-challenges/tree/ma
 
 在这个挑战中，你需要修改下方的代码使得测试通过（使其没有类型错误）。
 
-``` ts
+```ts
 // 期望是一个 string 类型
 type HelloWorld = any
 ```
+
 ```ts
 // 你需要使得如下这行不会抛出异常
 type test = Expect<Equal<HelloWorld, string>>
 ```
+
 :::
 
 ### 解题思路
@@ -32,4 +34,3 @@ type test = Expect<Equal<HelloWorld, string>>
 ```ts
 type HelloWorld = string
 ```
-

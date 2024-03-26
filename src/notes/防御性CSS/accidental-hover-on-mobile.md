@@ -54,7 +54,7 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 ```css
 @media (hover: hover) {
   .card:hover {
-      /* Add hover styles.. */
+    /* Add hover styles.. */
   }
 }
 ```

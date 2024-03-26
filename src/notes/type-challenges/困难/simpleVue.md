@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/simple-vue/
 Github: []()
 
 ```ts
+
 ```
+
 :::

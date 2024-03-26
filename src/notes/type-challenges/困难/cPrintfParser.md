@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/c-print-parser/
 Github: []()
 
 ```ts
+
 ```
+
 :::

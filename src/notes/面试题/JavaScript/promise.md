@@ -9,6 +9,7 @@ permalink: /interview-question/a895fu8f/
 
 1. 简单介绍一下 promise
 2. 说一下 Promise A+ 规范
+
 :::
 
 参阅 [详解promise](/article/q40nq4hv)

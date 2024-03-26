@@ -73,16 +73,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: '计算机网络',
-      items: [
-        'http协议',
-        'http缓存',
-        'http2',
-        'TCP协议',
-        'UDP协议',
-        'CDN',
-        '代理',
-        '负载均衡',
-      ],
+      items: ['http协议', 'http缓存', 'http2', 'TCP协议', 'UDP协议', 'CDN', '代理', '负载均衡'],
     },
     {
       dir: 'Vue',
@@ -133,15 +124,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: '工具',
-      items: [
-        'git',
-        'git-hook',
-        'jenkins',
-        '代码检查工具',
-        '模块打包器',
-        'webpack',
-        'pm2',
-      ],
+      items: ['git', 'git-hook', 'jenkins', '代码检查工具', '模块打包器', 'webpack', 'pm2'],
     },
     {
       dir: '常用库',
@@ -157,15 +140,7 @@ export default definePlumeNotesItemConfig({
         {
           text: '排序算法',
           dir: '排序',
-          items: [
-            '冒泡排序',
-            '选择排序',
-            '插入排序',
-            '希尔排序',
-            '归并排序',
-            '快速排序',
-            '排序算法总结',
-          ],
+          items: ['冒泡排序', '选择排序', '插入排序', '希尔排序', '归并排序', '快速排序', '排序算法总结'],
         },
       ],
     },

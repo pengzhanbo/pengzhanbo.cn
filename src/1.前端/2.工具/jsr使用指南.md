@@ -41,7 +41,7 @@ pnpm dlx jsr add @luca/cases
 bunx jsr add @luca/cases
 ```
 
-如果是使用 Deno,  `deno add` 命令将在 `deno.json` 文件中生成指定的 JSR 模块添加导入映射条目：
+如果是使用 Deno, `deno add` 命令将在 `deno.json` 文件中生成指定的 JSR 模块添加导入映射条目：
 ::: code-tabs
 @tab deno.json
 
@@ -313,7 +313,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      id-token: write # The OIDC ID token is used for authentication with JSR.    
+      id-token: write # The OIDC ID token is used for authentication with JSR.
     steps:
       - uses: actions/checkout@v4
       - run: npx jsr publish
@@ -343,11 +343,7 @@ jobs:
   "exports": "./src/mod.ts",
   // note: this will be collapsed down to just include in the future
   "publish": {
-    "include": [
-      "LICENSE",
-      "README.md",
-      "src/**/*.ts"
-    ]
+    "include": ["LICENSE", "README.md", "src/**/*.ts"]
   }
 }
 ```
@@ -365,14 +361,8 @@ jobs:
   "version": "1.0.0",
   "exports": "./src/mod.ts",
   "publish": {
-    "include": [
-      "LICENSE",
-      "README.md",
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "src/tests"
-    ]
+    "include": ["LICENSE", "README.md", "src/**/*.ts"],
+    "exclude": ["src/tests"]
   }
 }
 ```
@@ -501,9 +491,9 @@ version 字段是包的版本，它必须是有效的 [SemVer](https://semver.or
 /**  // [!code ++]
  * This function takes two numbers as input, and then adds these numbers using // [!code ++]
  * floating point math.  // [!code ++]
- */  // [!code ++]
+ */ // [!code ++]
 export function add(a: number, b: number): number {
-  return a + b;
+  return a + b
 }
 ```
 
@@ -517,12 +507,12 @@ export function add(a: number, b: number): number {
  * @param limit The number of items to return. If unspecified, defaults to 20. // [!code ++]
  * @returns The array of matched items. // [!code ++]
  */
-export function search(query: string, limit: number = 20): string[];
+export function search(query: string, limit: number = 20): string[]
 ```
 
 对于更复杂的，通常最好包含一个演示如何使用该函数的示例：
 
-```ts
+````ts
 /**
  * Search the database with the given query.
  *
@@ -530,8 +520,8 @@ export function search(query: string, limit: number = 20): string[];
  * search("Alan") // ["Alan Turing", "Alan Kay", ...] // [!code ++]
  * ``` // [!code ++]
  */
-export function search(query: string, limit: number = 20): string[];
-```
+export function search(query: string, limit: number = 20): string[]
+````
 
 interfaces 也可以使用 JSDoc 进行注释。它们的属性和方法也可以被注释：
 
@@ -540,14 +530,14 @@ interfaces 也可以使用 JSDoc 进行注释。它们的属性和方法也可�
 export interface SearchOptions {
   /** The maximum number of items to return from the search. Defaults to 50 if
    * unspecified. */
-  limit?: number;
+  limit?: number
   /** Skip the given number of items. This is helpful to implement pagination.
    * Defaults to 0 (do not skip) if not specified. */
-  skip?: number;
+  skip?: number
 
   /** The function to call if the {@link search} function needs to show warnings
    * to the user. If not specified, warnings will be silently swallowed. */
-  reportWarning?(message: string): void;
+  reportWarning?(message: string): void
 }
 ```
 
@@ -559,9 +549,9 @@ export interface SearchOptions {
  */
 export class Person {
   /** The name of the person. */
-  name: string;
+  name: string
   /** The age of the person. */
-  age: number;
+  age: number
 
   /**
    * Create a new person with the given name and age.
@@ -570,17 +560,15 @@ export class Person {
    */
   constructor(name: string, age: number) {
     if (age < 0) {
-      throw new Error("Age cannot be negative");
+      throw new Error('Age cannot be negative')
     }
-    this.name = name;
-    this.age = age;
+    this.name = name
+    this.age = age
   }
 
   /** Print a greeting to the console. */
   greet() {
-    console.log(
-      `Hello, my name is ${this.name} and I am ${this.age} years old.`,
-    );
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`)
   }
 }
 ```
@@ -596,7 +584,7 @@ export class Person {
  * This module contains functions to search the database.
  * @module
  */
-  
+
 /** The options bag to pass to the {@link search} method. */
 export interface SearchOptions {}
 
@@ -606,7 +594,7 @@ export function search(query: string, options?: SearchOptions): string[];
 
 您还可以在模块文档中包含示例：
 
-```ts{6-10}
+````ts{6-10}
 /**
  * @module
  *
@@ -618,7 +606,7 @@ export function search(query: string, options?: SearchOptions): string[];
  * search("Alan") // ["Alan Turing", "Alan Kay", ...]
  * ```
  */
-```
+````
 
 ## Slow Types
 
@@ -636,6 +624,7 @@ JSR 的许多功能都分析源代码，特别是源代码中的 TypeScript 类�
 - 对包的使用者进行类型检查会更慢。对于大多数软件包来说，速度至少会降低 1.5-2 倍。它可能会高得多。
 - 该包将无法为 npm 兼容层生成类型声明，或者在生成的类型声明中“Slow Types”将被省略或替换为 any 。
 - 该包将无法生成该包的文档，或者生成的文档中将省略“Slow Types”或丢失详细信息。
+
 :::
 
 ### 什么是 "Slow Types"?
@@ -647,16 +636,16 @@ JSR 的许多功能都分析源代码，特别是源代码中的 TypeScript 类�
 ```ts
 // 这个函数有问题，因为没有显式地编写返回类型，因此必须从函数体中推断。
 export function foo() {
-  return Math.random().toString();
+  return Math.random().toString()
 }
 ```
 
 ```ts
-const foo = "foo";
-const bar = "bar";
+const foo = 'foo'
+const bar = 'bar'
 export class MyClass {
   // 这个属性是有问题的，因为没有显式地编写类型，因此必须从初始化项推断出它。
-  prop = foo + " " + bar;
+  prop = foo + ' ' + bar
 }
 ```
 
@@ -690,13 +679,13 @@ export function add(a: number, b: number): number {  // [!code ++]
 
 ```ts
 export class Person {
-  name; // [!code --]
-  age;  // [!code --]
-  name: string;  // [!code ++]
-  age: number;   // [!code ++]
+  name // [!code --]
+  age // [!code --]
+  name: string // [!code ++]
+  age: number // [!code ++]
   constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
+    this.name = name
+    this.age = age
   }
 }
 ```
@@ -710,13 +699,13 @@ export class Person {
 
 ```ts
 declare global {
-  const globalVariable: string;
+  const globalVariable: string
 }
 ```
 
 ```ts
-declare module "some-module" {
-  const someModuleVariable: string;
+declare module 'some-module' {
+  const someModuleVariable: string
 }
 ```
 
@@ -727,13 +716,13 @@ declare module "some-module" {
 使用 ESM 语法代替：
 
 ```ts
-export = 5; // [!code --]
-export default 5; // [!code ++]
+export = 5 // [!code --]
+export default 5 // [!code ++]
 ```
 
 ```ts
-import foo = require("foo"); // [!code --]
-import foo from "foo";  // [!code ++]
+import foo = require('foo') // [!code --]
+import foo from 'foo' // [!code ++]
 ```
 
 #### 类型必须是简单推断或显式的
@@ -746,21 +735,23 @@ import foo from "foo";  // [!code ++]
 ```ts
 class Class {}
 
-export default {  // [!code --]
-  test: new Class(),  // [!code --]
-};  // [!code --]
-const obj: { test: Class } = {  // [!code ++]
-  test: new Class(),  // [!code ++]
-};  // [!code ++]
+export default {
+  // [!code --]
+  test: new Class(), // [!code --]
+} // [!code --]
+const obj: { test: Class } = {
+  // [!code ++]
+  test: new Class(), // [!code ++]
+} // [!code ++]
 // [!code ++]
-export default obj; // [!code ++]
+export default obj // [!code ++]
 ```
 
 或者使用 as 断言：
 
 ```ts
 class Class {}
-  
+
   export default {
     test: new Class(),
 };  // [!code --]
@@ -773,12 +764,12 @@ class Class {}
 interface ISuperClass {}
 
 function getSuperClass() {
-  return class SuperClass implements ISuperClass {};
+  return class SuperClass implements ISuperClass {}
 }
 
 export class MyClass extends getSuperClass() {} // [!code --]
-const SuperClass: ISuperClass = getSuperClass();  // [!code ++]
-export class MyClass extends SuperClass {}       // [!code ++]
+const SuperClass: ISuperClass = getSuperClass() // [!code ++]
+export class MyClass extends SuperClass {} // [!code ++]
 ```
 
 #### 导出没有解构
@@ -786,10 +777,10 @@ export class MyClass extends SuperClass {}       // [!code ++]
 不支持导出中的解构。不要使用解构，而是单独导出每个符号：
 
 ```ts
-export const { foo, bar } = { foo: 5, bar: "world" }; // [!code --]
-const obj = { foo: 5, bar: "world" };               // [!code ++]
-export const foo: number = obj.foo;  // [!code ++]
-export const bar: string = obj.bar;  // [!code ++]
+export const { foo, bar } = { foo: 5, bar: 'world' } // [!code --]
+const obj = { foo: 5, bar: 'world' } // [!code ++]
+export const foo: number = obj.foo // [!code ++]
+export const bar: string = obj.bar // [!code ++]
 ```
 
 #### 类型不得引用类的私有字段
@@ -800,13 +791,13 @@ export const bar: string = obj.bar;  // [!code ++]
 
 ```ts
 export class MyClass {
-  prop!: typeof MyClass.prototype.myPrivateMember;  // [!code --]
-  private myPrivateMember!: string;                  // [!code --]
-  prop!: MyPrivateMember;                            // [!code ++]
-  private myPrivateMember!: MyPrivateMember;         // [!code ++]
+  prop!: typeof MyClass.prototype.myPrivateMember // [!code --]
+  private myPrivateMember!: string // [!code --]
+  prop!: MyPrivateMember // [!code ++]
+  private myPrivateMember!: MyPrivateMember // [!code ++]
 }
 
-type MyPrivateMember = string;  // [!code ++]
+type MyPrivateMember = string // [!code ++]
 ```
 
 ## package 分数

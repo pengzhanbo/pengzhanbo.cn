@@ -12,17 +12,14 @@ modal 框的外部容器 `body` 元素还会继续滚动。
 
 这被称之为 **滚动关联(scroll chaining)** 。
 
-<style scoped>
-.body-scroll {
+<style>
+.body-scroll-110 {
   overflow-y: scroll;
   height: 260px;
   background: var(--vp-c-bg);
-  border-radius: 5px;
-  border: solid 1px var(--vp-c-divider);
-  box-shadow: var(--vp-shadow-2);
   padding: 20px;
 }
-.body-scroll .modal {
+.body-scroll-110 .modal {
   overflow-y: scroll;
   height: 150px;
   width: 200px;
@@ -32,13 +29,14 @@ modal 框的外部容器 `body` 元素还会继续滚动。
   border: solid 1px var(--vp-c-divider);
   background-color: var(--vp-c-bg-alt);
 }
-.body-scroll .modal.overscroll {
+.body-scroll-110 .modal.overscroll {
   overscroll-behavior-y: contain;
 }
 </style>
 
-:::demo-wrapper
-<div class="body-scroll">
+:::demo-wrapper no-padding
+
+<div class="body-scroll-110">
   <div class="modal">
     <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
     <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>
@@ -55,13 +53,14 @@ modal 框的外部容器 `body` 元素还会继续滚动。
 
 ```css
 .modal {
-  overscroll-behavior-y: contain;  /* [!code highlight] */
+  overscroll-behavior-y: contain; /* [!code highlight] */
   overflow-y: auto;
 }
 ```
 
-:::demo-wrapper
-<div class="body-scroll">
+:::demo-wrapper no-padding
+
+<div class="body-scroll-110">
   <div class="modal overscroll">
     <p>關關雎鳩，在河之洲。<br/>窈窕淑女，君子好逑。</p>
     <p>參差荇菜，左右流之。<br/>窈窕淑女，寤寐求之。</p>

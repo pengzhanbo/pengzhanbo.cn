@@ -9,6 +9,7 @@ permalink: /interview-question/chnx193c/
 
 1. `new` 操作符 具体做了什么？
 2. 如果实现 `new`？
+
 :::
 
 ## new 操作符
@@ -20,19 +21,19 @@ permalink: /interview-question/chnx193c/
 
 ## 实现
 
-``` js
+```js
 function newFactory(constructor, ...args) {
   if (typeof constructor !== 'function') {
-    throw new Error('constructor must be a function');
+    throw new Error('constructor must be a function')
   }
 
-  const object = Object.create(constructor.prototype);
-  const result = constructor.apply(object, args);
+  const object = Object.create(constructor.prototype)
+  const result = constructor.apply(object, args)
 
   if (result && (typeof result === 'object' || typeof result === 'function')) {
-    return result;
+    return result
   } else {
-    return object;
+    return object
   }
 }
 ```

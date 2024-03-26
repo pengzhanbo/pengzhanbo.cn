@@ -17,8 +17,9 @@ permalink: /defensive-css/grouping-vendor-selector/
 ```css
 /* 请不要这样做 */
 input::-webkit-input-placeholder,  /* [!code warning] */
-input:-moz-placeholder {           /* [!code warning] */
-    color: #222;
+input:-moz-placeholder {
+  /* [!code warning] */
+  color: #222;
 }
 ```
 
@@ -26,10 +27,10 @@ input:-moz-placeholder {           /* [!code warning] */
 
 ```css
 input::-webkit-input-placeholder {
-    color: #222;
+  color: #222;
 }
 
 input:-moz-placeholder {
-    color: #222;
+  color: #222;
 }
 ```

@@ -10,8 +10,8 @@ permalink: /defensive-css/minimum-content-size-in-flex-box/
 CSS FlexBox 的 最小内容大小：
 如果 flex 项的文本元素或图像大于项本身，则浏览器不会收缩它们。这是 flexbox 的默认行为。
 
-<style scoped>
-.demo-wrapper .card {
+<style>
+.card-120 {
   display: flex;
   align-items: center;
   width: 250px;
@@ -22,7 +22,7 @@ CSS FlexBox 的 最小内容大小：
   background-color: var(--vp-c-bg);
   box-shadow: var(--vp-shadow-2);
 }
-.demo-wrapper .card__thumb {
+.card-120__thumb {
   width: 50px;
   height: 50px;
   min-width: 50px;
@@ -30,21 +30,22 @@ CSS FlexBox 的 最小内容大小：
   background-color: var(--vp-c-gray-soft);
   margin-right: 20px;
 }
-.demo-wrapper .break-word {
+.break-word-120 {
   overflow-wrap: break-word;
 }
-.demo-wrapper .min-width {
+.min-width-120 {
   min-width: 0;
 }
 </style>
 
 :::demo-wrapper
-<div class="card">
-  <div class="card__thumb"></div>
+
+<div class="card-120">
+  <div class="card-120__thumb"></div>
   <p>I am a card</p>
 </div>
-<div class="card" style="margin-top:20px;">
-  <div class="card__thumb"></div>
+<div class="card-120" style="margin-top:20px;">
+  <div class="card-120__thumb"></div>
   <p>cardcardcardcardcardcard</p>
 </div>
 :::
@@ -67,13 +68,13 @@ CSS FlexBox 的 最小内容大小：
 ```
 
 :::demo-wrapper
-<div class="card">
-  <div class="card__thumb"></div>
-  <p class="break-word min-width">cardcardcardcardcardcard</p>
+
+<div class="card-120">
+  <div class="card-120__thumb"></div>
+  <p class="break-word-120 min-width-120">cardcardcardcardcardcard</p>
 </div>
 :::
 
-
-----
+---
 
 同样的， 在 列方向上，也可以使用 `min-height` 来改变 FlexBox 的默认行为。

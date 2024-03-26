@@ -13,6 +13,7 @@ Github: [Concat](https://github.com/type-challenges/type-challenges/blob/main/qu
 ```ts
 type Result = Concat<[1], [2]> // expected to be [1, 2]
 ```
+
 :::
 
 ### 解题思路

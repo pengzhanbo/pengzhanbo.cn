@@ -17,7 +17,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 
 ```html
 <div class="food">
-  <img class="food__img" src="image/food.jpg" alt="">
+  <img class="food__img" src="image/food.jpg" alt="" />
   <div class="food__content">
     <h3>一份美食</h3>
     <p><!-- Description goes here.. --></p>
@@ -55,6 +55,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 </style>
 
 :::demo-wrapper
+
 <p>内容长度合适时：</p>
 <div class="food-wrapper-110">
   <img class="food__img" src="/images/defensive-css/ratio.png" alt="" />
@@ -89,6 +90,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 ```
 
 :::demo-wrapper
+
 <p>内容长度合适时：</p>
 <div class="food-wrapper-110">
   <img class="food__img start" src="/images/defensive-css/ratio.png" alt="" />

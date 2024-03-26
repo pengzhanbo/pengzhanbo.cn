@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/partial-by-keys/
 Github: []()
 
 ```ts
+
 ```
+
 :::

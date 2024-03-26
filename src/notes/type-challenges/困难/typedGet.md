@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/typed-get/
 Github: []()
 
 ```ts
+
 ```
+
 :::

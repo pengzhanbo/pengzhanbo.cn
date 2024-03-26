@@ -17,14 +17,14 @@ tags:
 
 ### 示例
 
-``` css
+```css
 @charset "UTF-8";
 @charset "utf-8"; /*大小写不敏感*/
 /* 设置css的编码格式为Unicode UTF-8 */
-@charset 'UTF-8';       /* 无效的, 使用了错误的引号 */
-@charset  "UTF-8";      /* 无效的, 多于一个空格 */
- @charset "UTF-8";      /* 无效的, 在at-rule之前多了一个空格 */
-@charset UTF-8;         /* Invalid, without ' or ", the charset is not a CSS <string> */
+@charset 'UTF-8'; /* 无效的, 使用了错误的引号 */
+@charset "UTF-8"; /* 无效的, 多于一个空格 */
+@charset "UTF-8"; /* 无效的, 在at-rule之前多了一个空格 */
+@charset UTF-8; /* Invalid, without ' or ", the charset is not a CSS <string> */
 ```
 
 ## @font-face
@@ -39,7 +39,7 @@ tags:
 
 ### 语法
 
-``` css
+```css
 @font-face {
   [ font-family: <family-name>; ] ||
   [ src: <src>; ] ||
@@ -64,52 +64,52 @@ tags:
 
 加载远程字体文件：
 
-``` html
+```html
 ...
-  <style>
-    @font-face {
-      font-family: custom-font;
-      src: url("http://example.com/custom-font.ttf")
-    }
-    body {
-      font-family: custom-font;
-    }
-  </style>
+<style>
+  @font-face {
+    font-family: custom-font;
+    src: url('http://example.com/custom-font.ttf');
+  }
+  body {
+    font-family: custom-font;
+  }
+</style>
 ...
 ```
 
 加载字体文件，先尝试从用户本地加载，如果加载失败则从远程服务器下载:
 
-``` html
+```html
 ...
-  <style>
-    @font-face {
-      font-family: MgOpenModernaBold;
-      src: local("Helvetica Neue Bold"),
-        url(MgOpenModernaBold.ttf);
-    }
-    body {
-      font-family: MgOpenModernaBold;
-    }
-  </style>
+<style>
+  @font-face {
+    font-family: MgOpenModernaBold;
+    src: local('Helvetica Neue Bold'), url(MgOpenModernaBold.ttf);
+  }
+  body {
+    font-family: MgOpenModernaBold;
+  }
+</style>
 ...
 ```
 
 加载不同文件格式的字体，根据用户环境判断使用兼容的字体文件格式：
 
-``` html
+```html
 ...
-  <style>
-    @font-face {
-      font-family: custom;
-      src: url("custom.ttf") format("tff"),
-        url("custom.woff") format("woff"),
-        url("custom.woff2") format("woff2");
-    }
-    body {
-      font-family: custom;
-    }
-  </style>
+<style>
+  @font-face {
+    font-family: custom;
+    src:
+      url('custom.ttf') format('tff'),
+      url('custom.woff') format('woff'),
+      url('custom.woff2') format('woff2');
+  }
+  body {
+    font-family: custom;
+  }
+</style>
 ...
 ```
 
@@ -123,7 +123,7 @@ tags:
 
 ### 语法
 
-``` css
+```css
 @import url;
 @import url list-of-media-queries;
 ```
@@ -141,10 +141,10 @@ tags:
 
 使用 `from`,`to` 定义起始和结束关键帧的样式 实现动画
 
-``` css
+```css
 @keyframes slidein {
   from {
-    transform: translateX(0%); 
+    transform: translateX(0%);
   }
 
   to {
@@ -155,14 +155,14 @@ tags:
 
 使用 百分比 定义触发关键帧的时间点
 
-``` css
+```css
 @keyframes slidein {
   0% {
-    transform: translateX(0%); 
+    transform: translateX(0%);
   }
 
   50% {
-    transform: translateX(50%); 
+    transform: translateX(50%);
   }
 
   100% {

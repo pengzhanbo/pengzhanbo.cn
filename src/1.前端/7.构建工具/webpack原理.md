@@ -63,23 +63,23 @@ typescript的`.ts` 文件等，以及项目的中的代码还需要进行压缩�
 - **插件（Plugin）**
 
 ### 入口（entry）
-  
-  指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。
+
+指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。
 
 ### 输出(output)
-  
-  告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件
+
+告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件
 
 ### 加载器（Loader）
-  
-  webpack 自身只能理解 JavaScript 文件 和 json 文件， loader 可以将其他类型的资源文件转换为 webpack能够处理的有效模块。
 
-  本质上，webpack loader 将所有类型的文件，转换为应用程序的依赖图（和最终的 bundle）可以直接引用的模块。
+webpack 自身只能理解 JavaScript 文件 和 json 文件， loader 可以将其他类型的资源文件转换为 webpack能够处理的有效模块。
+
+本质上，webpack loader 将所有类型的文件，转换为应用程序的依赖图（和最终的 bundle）可以直接引用的模块。
 
 ### 插件（Plugin）
 
-  用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。
-  插件接口功能极其强大，可以用来处理各种各样的任务。
+用于执行范围更广的任务。插件的范围包括，从打包优化和压缩，一直到重新定义环境中的变量。
+插件接口功能极其强大，可以用来处理各种各样的任务。
 
 ### 模块（modules）
 
@@ -93,7 +93,7 @@ typescript的`.ts` 文件等，以及项目的中的代码还需要进行压缩�
 一般情况下， 我们通过编写一个 配置文件`webpack.config.js`， 对 webpack 进行本地化的配置，
 大致的配置如下：
 
-``` js
+```js
 module.exports = {
   // 声明模块的入口文件
   entry: './src/entry.js',
@@ -143,43 +143,46 @@ module.exports = {
 
 ```js
 // webpack5下进行的最小化打包输出文件
-(() => { 
+;(() => {
   // webpack 模块文件内容
-  var __webpack_modules__ = ({
-    "entry.js": ((modules) => { /* ... */ }),
-    "other.js": ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => { /* ... */ })
-  });
+  var __webpack_modules__ = {
+    'entry.js': (modules) => {
+      /* ... */
+    },
+    'other.js': (__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
+      /* ... */
+    },
+  }
 
   // 模块缓存
-  var __webpack_module_cache__ = {};
+  var __webpack_module_cache__ = {}
 
   // The require function
   function __webpack_require__(moduleId) {
     // Check if module is in cache
-    var cachedModule = __webpack_module_cache__[moduleId];
+    var cachedModule = __webpack_module_cache__[moduleId]
     if (cachedModule !== undefined) {
-      return cachedModule.exports;
+      return cachedModule.exports
     }
     // Create a new module (and put it into the cache)
-    var module = __webpack_module_cache__[moduleId] = {
+    var module = (__webpack_module_cache__[moduleId] = {
       // no module.id needed
       // no module.loaded needed
-      exports: {}
-    };
+      exports: {},
+    })
 
     // Execute the module function
-    __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+    __webpack_modules__[moduleId](module, module.exports, __webpack_require__)
 
     // Return the exports of the module
-    return module.exports;
+    return module.exports
   }
 
   // startup
   // Load entry module and return exports
   // This entry module can't be inlined because the eval devtool is used.
-  var __webpack_exports__ = __webpack_require__("entry.js");
-    
-})();
+  var __webpack_exports__ = __webpack_require__('entry.js')
+})()
 ```
 
 在上面的打包demo中，整个立即执行函数里边只有三个变量和一个函数方法，`__webpack_modules__`存放了编译后的各个文件模块的JS内容，`__webpack_module_cache__` 用来做模块缓存，`__webpack_require__` 是Webpack内部实现的一套依赖引入函数。最后一句则是代码运行的起点，从入口文件开始，启动整个项目。

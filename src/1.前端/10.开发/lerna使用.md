@@ -26,7 +26,7 @@ author: pengzhanbo
 
 lerna 可以全局安装，也可以在项目中安装（以下内容使用项目中安装的方式）
 
-``` sh
+```sh
 # npm
 npm install lerna
 # yarn
@@ -37,7 +37,7 @@ yarn add lerna
 
 创建一个项目，并使用lerna进行项目环境初始化
 
-``` sh
+```sh
 mkdir lerna-demo && cd $_
 yarn init -y
 yarn add lerna
@@ -46,7 +46,7 @@ npx lerna init
 
 你将会得到一个包含以下内容的项目文件夹：
 
-``` sh
+```sh
 lerna-demo
   packages/
   lerna.json
@@ -57,7 +57,7 @@ lerna-demo
 
 ## 配置说明
 
-``` json
+```json
 // lerna.json
 {
   "useWorkspaces": true,
@@ -67,7 +67,7 @@ lerna-demo
   "command": {
     "bootstrap": {
       // more...
-    },
+    }
     // more
   }
 }
@@ -107,34 +107,34 @@ lerna-demo
 
 在当前 lerna repo 中的所有包中执行 script 命令。
 
-``` sh
+```sh
 packages/
   package1/
   package2/
 ```
 
-``` sh
+```sh
 lerna run build # 相当于在 package1、package2 中执行 npm run build
 ```
 
 - --scope 过滤符合条件的包
 
-  ``` sh
+  ```sh
   lerna run build --scope test component
   ```
 
 - --stream 使用报名作为前缀，交叉输出所有包的控制台信息流。
 
-  ``` sh
+  ```sh
   lerna run build --stream
   ```
 
 - --parallel 类似于 stream。
 
-  ``` sh
+  ```sh
   lerna run build --parallel
   ```
 
 ### lerna clean
 
-  删除所有包的node_modules
+删除所有包的node_modules

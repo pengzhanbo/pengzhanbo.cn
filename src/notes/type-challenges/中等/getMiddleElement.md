@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/get-middle-element/
 Github: []()
 
 ```ts
+
 ```
+
 :::

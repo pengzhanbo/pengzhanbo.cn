@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/multiply/
 Github: []()
 
 ```ts
+
 ```
+
 :::

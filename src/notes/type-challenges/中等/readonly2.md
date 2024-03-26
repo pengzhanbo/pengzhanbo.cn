@@ -20,15 +20,16 @@ interface Todo {
 }
 
 const todo: MyReadonly2<Todo, 'title' | 'description'> = {
-  title: "Hey",
-  description: "foobar",
+  title: 'Hey',
+  description: 'foobar',
   completed: false,
 }
 
-todo.title = "Hello" // Error: cannot reassign a readonly property
-todo.description = "barFoo" // Error: cannot reassign a readonly property
+todo.title = 'Hello' // Error: cannot reassign a readonly property
+todo.description = 'barFoo' // Error: cannot reassign a readonly property
 todo.completed = true // OK
 ```
+
 :::
 
 ### 解题思路
@@ -49,8 +50,6 @@ todo.completed = true // OK
 
 合并两个对象类型即可实现 `MyReadonly<T, K>`
 
-
-
 ```ts
 type MyReadonly2<T, K extends keyof T = keyof T> = {
   readonly [P in K]: T[P]
@@ -58,4 +57,3 @@ type MyReadonly2<T, K extends keyof T = keyof T> = {
   [P in Exclude<keyof T, K>]: T[P]
 }
 ```
-

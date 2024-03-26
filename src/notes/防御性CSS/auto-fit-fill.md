@@ -139,7 +139,7 @@ permalink: /defensive-css/auto-fit-fill/
   </div>
 </div>
 <div class="actions">
-  <input type="checkbox" id="toggle">
+  <input type="checkbox" id="toggle" />
   <label for="toggle">启用 auto-fill</label>
 </div>
 ```
@@ -159,7 +159,7 @@ permalink: /defensive-css/auto-fit-fill/
   background: var(--vp-c-bg-alt, #f0f0f0);
 }
 .demo-wrapper::after {
-  content: "Resize me";
+  content: 'Resize me';
   position: absolute;
   right: 0;
   top: 50%;
@@ -202,13 +202,12 @@ permalink: /defensive-css/auto-fit-fill/
 .wrapper.checked .card-outline {
   display: block;
 }
-
 ```
 
 ```js
-const wrapper = document.querySelector('#gridWrapper');
+const wrapper = document.querySelector('#gridWrapper')
 document.querySelector('#toggle').addEventListener('change', (e) => {
-  wrapper.classList.toggle('checked', e.target.checked);
+  wrapper.classList.toggle('checked', e.target.checked)
 })
 ```
 

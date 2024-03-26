@@ -13,6 +13,7 @@ Github: [Unshift](https://github.com/type-challenges/type-challenges/blob/main/q
 ```ts
 type Result = Unshift<[1, 2], 0> // [0, 1, 2,]
 ```
+
 :::
 
 ### 解题思路

@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/last-index-of/
 Github: []()
 
 ```ts
+
 ```
+
 :::

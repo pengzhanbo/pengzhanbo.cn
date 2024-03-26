@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/assign/
 Github: []()
 
 ```ts
+
 ```
+
 :::

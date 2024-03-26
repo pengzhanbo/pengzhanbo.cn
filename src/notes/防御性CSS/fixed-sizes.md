@@ -15,8 +15,8 @@ permalink: /defensive-css/fixed-sizes/
 一种常见的情况是， 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度，
 导致了布局被破坏。
 
-<style scoped>
-.card-1 {
+<style>
+.card-1-110 {
   height: 100px;
   width: 250px;
   margin: 0 auto;
@@ -27,7 +27,7 @@ permalink: /defensive-css/fixed-sizes/
   box-shadow: var(--vp-shadow-2);
 }
 
-.card-2 {
+.card-2-110 {
   min-height: 100px;
   width: 250px;
   margin: 0 auto ;
@@ -38,7 +38,7 @@ permalink: /defensive-css/fixed-sizes/
   box-shadow: var(--vp-shadow-2);
 }
 
-.card-mask {
+.card-mask-110 {
   height: 50px;
 }
 </style>
@@ -50,11 +50,12 @@ permalink: /defensive-css/fixed-sizes/
 ```
 
 :::demo-wrapper
-<div class="card-1">
+
+<div class="card-1-110">
 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。
 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。
 </div>
-<div class="card-mask"></div>
+<div class="card-mask-110"></div>
 :::
 
 为了避免内容从 卡片 中溢出，我们需要使用 `min-height` 而不是 `height` 。
@@ -66,7 +67,8 @@ permalink: /defensive-css/fixed-sizes/
 ```
 
 :::demo-wrapper
-<div class="card-2">
+
+<div class="card-2-110">
 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。
 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。
 </div>
@@ -85,8 +87,8 @@ permalink: /defensive-css/fixed-sizes/
 }
 ```
 
-<style scoped>
-.tag {
+<style>
+.tag-110 {
   display: inline-block;
   width: 100px;
   text-align: center;
@@ -98,18 +100,19 @@ permalink: /defensive-css/fixed-sizes/
   text-wrap: nowrap;
   background: var(--vp-c-bg);
 }
-.tag:last-of-type {
+.tag-110:last-of-type {
   margin-right: 0;
 }
-.tag-min {
+.tag-110.tag-min {
   width: unset;
   min-width: 100px;
 }
 </style>
 
 :::demo-wrapper
-  <div class="tag">标签内容</div>
-  <div class="tag">标签内容比较长</div>
+
+  <div class="tag-110">标签内容</div>
+  <div class="tag-110">标签内容比较长</div>
 :::
 
 要解决这个问题，我们可以使用 `min-width` 替代 `width`
@@ -121,6 +124,7 @@ permalink: /defensive-css/fixed-sizes/
 ```
 
 :::demo-wrapper
-  <div class="tag tag-min">标签内容</div>
-  <div class="tag tag-min">标签内容比较长</div>
+
+  <div class="tag-110 tag-min">标签内容</div>
+  <div class="tag-110 tag-min">标签内容比较长</div>
 :::

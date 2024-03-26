@@ -46,7 +46,7 @@ permalink: /article/284xp17b/
   "exclude": [],
   "references": [],
   "watchOptions": {},
-  "typeAcquisition": {},
+  "typeAcquisition": {}
 }
 ```
 
@@ -108,8 +108,8 @@ permalink: /article/284xp17b/
 [`noPropertyAccessFromIndexSignature`](#nopropertyaccessfromindexsignature),
 [`noUncheckedIndexedAccess`](#nouncheckedindexedaccess),[`noUnusedLocals`](#nounusedlocals),
 [`noUnusedParameters`](#nounusedparameters), [`strict`](#strict),
- [`strictBindCallApply`](#strictbindcallapply), [`strictFunctionTypes`](#strictfunctiontypes),
- [`strictNullChecks`](#strictfunctiontypes),
+[`strictBindCallApply`](#strictbindcallapply), [`strictFunctionTypes`](#strictfunctiontypes),
+[`strictNullChecks`](#strictfunctiontypes),
 [`strictPropertyInitialization`](#strictpropertyinitialization),
 [`useUnknownInCatchVariables`](#useunknownincatchvariables)
 
@@ -143,7 +143,7 @@ permalink: /article/284xp17b/
 **Interop Constraints:**
 
 [`allowSyntheticDefaultImports`](#allowsyntheticdefaultimports), [`esModuleInterop`](#esmoduleinterop),
- [`forceConsistentCasingInFileNames`](#forceconsistentcasinginfilenames), [`isolatedModules`](#isolatedmodules), [`preserveSymlinks`](#preservesymlinks)
+[`forceConsistentCasingInFileNames`](#forceconsistentcasinginfilenames), [`isolatedModules`](#isolatedmodules), [`preserveSymlinks`](#preservesymlinks)
 
 **Backwards Compatibility:**
 
@@ -193,17 +193,17 @@ permalink: /article/284xp17b/
 - `true` 允许包含
 - `false` 不允许，并给出错误警告
 
-**example**  `"allowUnreachableCode": false`
+**example** `"allowUnreachableCode": false`
 
 ```ts
 function fn(n: number) {
   if (n > 5) {
-    return true;
+    return true
   } else {
-    return false;
+    return false
   }
-  return true;
-// error: Unreachable code detected.
+  return true
+  // error: Unreachable code detected.
 }
 ```
 
@@ -221,7 +221,7 @@ function fn(n: number) {
 function verifyAge(age: number) {
   // Forgot 'return' statement
   if (age > 18) {
-    verified: true;
+    verified: true
     // error: Unused label.
   }
 }
@@ -240,7 +240,7 @@ function verifyAge(age: number) {
 
 ```ts
 interface Theme {
-  colorThemeOverride?: 'dark' | 'light';
+  colorThemeOverride?: 'dark' | 'light'
 }
 ```
 
@@ -255,7 +255,7 @@ const theme: Theme = {}
 theme.colorThemeOverride = 'dark'
 theme.colorThemeOverride = 'light'
 
-theme.colorThemeOverride = undefined // error 
+theme.colorThemeOverride = undefined // error
 ```
 
 ### noFallthroughCasesInSwitch
@@ -271,7 +271,7 @@ theme.colorThemeOverride = undefined // error
 ```ts
 function fn(s) {
   // Parameter 's' implicitly has an 'any' type.
-  console.log(s.subtr(3));
+  console.log(s.subtr(3))
 }
 ```
 
@@ -498,7 +498,7 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 
 ### newLine
 
-指定输出文件时使用的行尾序列:  `CRLF` (dos)或 `LF` (unix)。
+指定输出文件时使用的行尾序列: `CRLF` (dos)或 `LF` (unix)。
 
 ### noEmit
 
@@ -578,13 +578,13 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
 当设置为 true， 并且模块没有显式指定默认导出时，allowSyntheticDefaultImports 可以让你这样写导入：
 
 ```ts
-import React from "react";
+import React from 'react'
 ```
 
 而不是：
 
 ```ts
-import * as React from "react";
+import * as React from 'react'
 ```
 
 本选项不会影响 `TypeScript` 生成的 `JavaScript`，它仅对类型检查起作用。当你使用 `Babel` 生成额外的默认导出，从而使模块的默认导出更易用时，本选项可以让 `TypeScript` 的行为与 `Babel` 一致。
@@ -679,21 +679,21 @@ import * as React from "react";
 
 **高阶库:**
 
-| 名称       | 内容 |
-| ---------- | ---- |
-| ES5        | ES3 和 ES5 的核心功能定义 |
-| ES2015     | ES2015 中额外提供的 API (又被称为 ES6) —— array.find， Promise，Proxy，Symbol，Map，Set，Reflect 等。|
-| ES6        | ES2015 的别名。|
-| ES2016     | ES2016 中额外提供的 API —— array.include 等。 |
-| ES7        | ES2016 的别名。|
-| ES2017     | ES2017 中额外提供的 API —— Object.entries，Object.values，Atomics，SharedArrayBuffer，date.formatToParts，typed arrays 等。|
-| ES2018     | ES2018 中额外提供的 API —— async iterables，promise.finally，Intl.PluralRules，rexexp.groups 等。|
-| ES2019     | ES2019 中额外提供的 API —— array.flat，array.flatMap，Object.fromEntries，string.trimStart，string.trimEnd 等。|
-| ES2020     | ES2020 中额外提供的 API —— string.matchAll 等。 |
-| ESNext     | ESNext 中额外提供的 API —— 随着 JavaScript 的发展，这些会发生变化。|
-| DOM        | DOM 定义 —— window，document 等。|
-| WebWorker  | WebWorker 上下文中存在的 API。|
-| ScriptHost | Windows Script Hosting System 的 API。|
+| 名称       | 内容                                                                                                                        |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------- |
+| ES5        | ES3 和 ES5 的核心功能定义                                                                                                   |
+| ES2015     | ES2015 中额外提供的 API (又被称为 ES6) —— array.find， Promise，Proxy，Symbol，Map，Set，Reflect 等。                       |
+| ES6        | ES2015 的别名。                                                                                                             |
+| ES2016     | ES2016 中额外提供的 API —— array.include 等。                                                                               |
+| ES7        | ES2016 的别名。                                                                                                             |
+| ES2017     | ES2017 中额外提供的 API —— Object.entries，Object.values，Atomics，SharedArrayBuffer，date.formatToParts，typed arrays 等。 |
+| ES2018     | ES2018 中额外提供的 API —— async iterables，promise.finally，Intl.PluralRules，rexexp.groups 等。                           |
+| ES2019     | ES2019 中额外提供的 API —— array.flat，array.flatMap，Object.fromEntries，string.trimStart，string.trimEnd 等。             |
+| ES2020     | ES2020 中额外提供的 API —— string.matchAll 等。                                                                             |
+| ESNext     | ESNext 中额外提供的 API —— 随着 JavaScript 的发展，这些会发生变化。                                                         |
+| DOM        | DOM 定义 —— window，document 等。                                                                                           |
+| WebWorker  | WebWorker 上下文中存在的 API。                                                                                              |
+| ScriptHost | Windows Script Hosting System 的 API。                                                                                      |
 
 **库的各个组件:**
 
@@ -823,12 +823,7 @@ import * as React from "react";
 
 ```json
 {
-  "files": [
-    "main.ts",
-    "core.ts",
-    "shared.ts",
-    "utils.ts"
-  ]
+  "files": ["main.ts", "core.ts", "shared.ts", "utils.ts"]
 }
 ```
 
@@ -940,33 +935,33 @@ import * as React from "react";
 
 配置监听单个文件的策略。支持以下可选值：
 
-| | 描述|
-|--|--|
-| `fixedPollingInterval` | 每秒钟以固定时间间隔多次检查文件变更 |
-| `priorityPollingInterval` | 使用 `fs.watchFile` 轮询检查文件变更。但对 源文件、配置文件、和缺失文件使用不同的时间间隔 |
-|`dynamicPriorityPolling` | 使用动态队列的方式轮询检查文件变更。对于频繁变更的文件使用较短的时间间隔检查，对于低频变更的文件使用较长的时间间隔检查 |
+|                                      | 描述                                                                                                                                                    |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fixedPollingInterval`               | 每秒钟以固定时间间隔多次检查文件变更                                                                                                                    |
+| `priorityPollingInterval`            | 使用 `fs.watchFile` 轮询检查文件变更。但对 源文件、配置文件、和缺失文件使用不同的时间间隔                                                               |
+| `dynamicPriorityPolling`             | 使用动态队列的方式轮询检查文件变更。对于频繁变更的文件使用较短的时间间隔检查，对于低频变更的文件使用较长的时间间隔检查                                  |
 | `useFsEvents` <Badge>default</Badge> | 使用 `fs.watch`(file system events) 监听文件变更（但在某些操作系统上可能不能正常监听变更）, 当超过了系统允许创建的监听数量限制时使用 `fs.watchFile`替代 |
-| `useFsEventsOnParentDirectory` |使用 `fs.watch`(file system events) 监听文件的父目录的变更，精度较低 |
+| `useFsEventsOnParentDirectory`       | 使用 `fs.watch`(file system events) 监听文件的父目录的变更，精度较低                                                                                    |
 
 ### `watchDirectory`
 
 配置在缺失递归文件监听功能的系统上，监听整个目录的策略。 支持以下可选值：
 
-| | 描述|
-|--|--|
-| `fixedPollingInterval` | 每秒钟以固定时间间隔多次检查所有目录变更 |
-| `dynamicPriorityPolling` | 使用动态队列的方式轮询检查目录变更。对于频繁变更的目录使用较短的时间间隔检查，对于低频变更的目录使用较长的时间间隔检查 |
-| `useFsEvents` <Badge>default</Badge> | 使用 `fs.watch`(file system events) 监听目录变更（但在某些操作系统上可能不能正常监听变更）|
+|                                      | 描述                                                                                                                   |
+| ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `fixedPollingInterval`               | 每秒钟以固定时间间隔多次检查所有目录变更                                                                               |
+| `dynamicPriorityPolling`             | 使用动态队列的方式轮询检查目录变更。对于频繁变更的目录使用较短的时间间隔检查，对于低频变更的目录使用较长的时间间隔检查 |
+| `useFsEvents` <Badge>default</Badge> | 使用 `fs.watch`(file system events) 监听目录变更（但在某些操作系统上可能不能正常监听变更）                             |
 
 ### `fallbackPolling`
 
 在使用文件系统事件时，此选项指定在系统耗尽本机文件监视器和/或不支持本机文件监视器时使用的轮询策略。
 
-| | 描述|
-|--|--|
-| `fixedPollingInterval` | 每秒钟以固定时间间隔多次检查文件变更  |
-| `priorityPollingInterval` | 使用 `fs.watchFile` 轮询检查文件变更。但对 源文件、配置文件、和缺失文件使用不同的时间间隔 |
-| `dynamicPriorityPolling` | 使用动态队列的方式轮询检查文件变更。对于频繁变更的文件使用较短的时间间隔检查，对于低频变更的文件使用较长的时间间隔检查 |
+|                             | 描述                                                                                                                                                                    |
+| --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `fixedPollingInterval`      | 每秒钟以固定时间间隔多次检查文件变更                                                                                                                                    |
+| `priorityPollingInterval`   | 使用 `fs.watchFile` 轮询检查文件变更。但对 源文件、配置文件、和缺失文件使用不同的时间间隔                                                                               |
+| `dynamicPriorityPolling`    | 使用动态队列的方式轮询检查文件变更。对于频繁变更的文件使用较短的时间间隔检查，对于低频变更的文件使用较长的时间间隔检查                                                  |
 | `synchronousWatchDirectory` | 禁用目录的延迟监视。当大量文件更改可能同时发生时(例如，运行npm install导致node_modules发生更改)，延迟监视是有用的，但在一些不太常见的设置中，你可能想用这个标志禁用它。 |
 
 ### `synchronousWatchDirectory`

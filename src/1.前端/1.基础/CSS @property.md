@@ -25,11 +25,11 @@ permalink: /article/z7btimbk/
 
 ```css
 :root {
-    --c-red: #fff;
+  --c-red: #fff;
 }
 
 p {
-    color: (--c-red);
+  color: (--c-red);
 }
 ```
 
@@ -48,6 +48,7 @@ p {
 ```
 
 效果：
+
 <style>
   @property --p-red {
   syntax: '<color>';
@@ -55,6 +56,7 @@ p {
   initial-value: #f00;
 }
 </style>
+
 ::: normal-demo 代码演示
 
 ```html
@@ -187,7 +189,7 @@ p {
 可以看到，虽然我们使用 `transition` 添加了 过渡动画，在 `hover` 时修改了 自定义属性。
 当我们把鼠标移动到 `.gradient` 上时，并没有渐变过渡动画效果，我们只是得到了 两侦之间的变化。
 
-**使用 @property 进行改造****
+**使用 @property 进行改造\*\***
 
 现在，我们把使用 `@property` 替换 CSS 自定义属性：
 
@@ -248,7 +250,9 @@ p {
   height: 150px;
   margin: auto;
   background: linear-gradient(45deg, var(--houdini-color-1), var(--houdini-color-2));
-  transition: --houdini-color-1 1s, --houdini-color-2 1s;
+  transition:
+    --houdini-color-1 1s,
+    --houdini-color-2 1s;
 }
 .gradient:hover {
   --houdini-color-1: #fcc;
@@ -279,6 +283,7 @@ p {
   initial-value: red;
 }
 </style>
+
 ::: normal-demo 渐变过渡动画
 
 ```html
@@ -306,10 +311,7 @@ p {
   width: 150px;
   height: 150px;
   margin: auto;
-  background: linear-gradient(45deg,
-    var(--an-color-1),
-    var(--an-color-2),
-    var(--an-color-3));
+  background: linear-gradient(45deg, var(--an-color-1), var(--an-color-2), var(--an-color-3));
   animation: change 10s infinite linear;
 }
 @keyframes change {
@@ -352,29 +354,25 @@ p {
 .bg {
   width: 100%;
   height: 350px;
-  background-image:
-    radial-gradient(
+  background-image: radial-gradient(
       circle at 86% 7%,
       rgba(40, 40, 40, 0.04) 0%,
       rgba(40, 40, 40, 0.04) 50%,
       rgba(200, 200, 200, 0.04) 50%,
       rgba(200, 200, 200, 0.04) 100%
-    ),
-    radial-gradient(
+    ), radial-gradient(
       circle at 15% 16%,
       rgba(99, 99, 99, 0.04) 0%,
       rgba(99, 99, 99, 0.04) 50%,
       rgba(45, 45, 45, 0.04) 50%,
       rgba(45, 45, 45, 0.04) 100%
-    ),
-    radial-gradient(
+    ), radial-gradient(
       circle at 75% 99%,
       rgba(243, 243, 243, 0.04) 0%,
       rgba(243, 243, 243, 0.04) 50%,
       rgba(37, 37, 37, 0.04) 50%,
       rgba(37, 37, 37, 0.04) 100%
-    ),
-    linear-gradient(#6cc, #09c);
+    ), linear-gradient(#6cc, #09c);
 }
 ```
 
@@ -467,30 +465,26 @@ p {
 .bg {
   width: 100%;
   height: 350px;
-  background-image:
-    radial-gradient(
+  background-image: radial-gradient(
       circle at var(--per-5) 7%,
       rgba(40, 40, 40, 0.04) 0%,
       rgba(40, 40, 40, 0.04) 50%,
       rgba(200, 200, 200, 0.04) 50%,
       rgba(200, 200, 200, 0.04) 100%
-    ),
-    radial-gradient(
+    ), radial-gradient(
       circle at var(--per-3) var(--per-4),
       rgba(99, 99, 99, 0.04) 0%,
       rgba(99, 99, 99, 0.04) 50%,
       rgba(45, 45, 45, 0.04) 50%,
       rgba(45, 45, 45, 0.04) 100%
-    ),
-    radial-gradient(
+    ), radial-gradient(
       circle at var(--per-1) var(--per-2),
       rgba(243, 243, 243, 0.04) 0%,
       rgba(243, 243, 243, 0.04) 50%,
       rgba(37, 37, 37, 0.04) 50%,
       rgba(37, 37, 37, 0.04) 100%
-    ),
-    linear-gradient(#6cc, #09c);
-    animation: move 30s infinite alternate linear;
+    ), linear-gradient(#6cc, #09c);
+  animation: move 30s infinite alternate linear;
 }
 @keyframes move {
   100% {

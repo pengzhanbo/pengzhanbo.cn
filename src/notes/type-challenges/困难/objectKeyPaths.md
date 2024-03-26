@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/object-key-paths/
 Github: []()
 
 ```ts
+
 ```
+
 :::

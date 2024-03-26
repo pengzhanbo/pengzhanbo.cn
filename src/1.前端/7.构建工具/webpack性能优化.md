@@ -39,7 +39,7 @@ module.exports = {
   module: {
     rules: [{ test: /\.txt$/, use: 'raw-loader' }],
   },
-};
+}
 ```
 
 在默认情况下，匹配查找范围是相对于项目根目录的上下文进行搜索，当项目文件数量很多时，这个过程会非常耗时。
@@ -49,14 +49,16 @@ module.exports = {
 const path = require('node:path')
 module.exports = {
   module: {
-    rules: [{ 
-      test: /\.txt$/,
-      use: 'raw-loader',
-      include: path.resolve(__dirname, 'src'),
-      exclude: /node_modules/,
-    }],
+    rules: [
+      {
+        test: /\.txt$/,
+        use: 'raw-loader',
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+      },
+    ],
   },
-};
+}
 ```
 
 - `exclude` : 排除所有符合条件的文件
@@ -82,7 +84,7 @@ module.exports = {
     // .md, .json 等非必要的，则不要写入配置
     extensions: ['.tsx', '.ts', '.js'],
   },
-};
+}
 ```
 
 另一方面，在导入模块时，尽量不要忽略文件后缀名。
@@ -100,7 +102,7 @@ module.exports = {
 module.exports = {
   cache: {
     type: 'filesystem',
-  }
+  },
 }
 ```
 
@@ -119,18 +121,18 @@ module.exports = {
       {
         test: /.jsx?$/,
         use: [
-          // 开启多进程打包。 
+          // 开启多进程打包。
           {
-            loader: 'thread-loader', 
+            loader: 'thread-loader',
             options: {
-              workers: 3 // 开启 3个 进程
-            }
+              workers: 3, // 开启 3个 进程
+            },
           },
-          { loader: 'babel-loader' }
-        ]
-      }
-    ]
-  }
+          { loader: 'babel-loader' },
+        ],
+      },
+    ],
+  },
 }
 ```
 
@@ -159,12 +161,12 @@ module.exports = {
 使用 `terser-webpack-plugin` 来压缩 js 代码:
 
 ```js
-const TerserPlugin = require('terser-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
 module.exports = {
   optimization: {
     minimize: true,
-    minimizer: [ new TerserPlugin() ]
-  }
+    minimizer: [new TerserPlugin()],
+  },
 }
 ```
 
@@ -182,18 +184,18 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-           // 提取成单独的文件
-           MiniCssExtractPlugin.loader,
-           'css-loader',
+          // 提取成单独的文件
+          MiniCssExtractPlugin.loader,
+          'css-loader',
         ],
       },
-    ]
+    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       // 定义输出文件名和目录
       filename: 'asset/css/style.css',
-    })
+    }),
   ],
   optimization: {
     minimize: true,
@@ -220,10 +222,10 @@ module.exports = {
         // 压缩HTML
         removeComments: true, // 移除HTML中的注释
         collapseWhitespace: true, // 删除空⽩符与换⾏符
-        minifyCSS: true // 压缩内联css
+        minifyCSS: true, // 压缩内联css
       },
-    })
-  ]
+    }),
+  ],
 }
 ```
 
@@ -254,7 +256,7 @@ module.exports = {
         ],
         exclude: /node_modules/,
       },
-    ]
+    ],
   },
 }
 ```
@@ -282,12 +284,12 @@ module.exports = {
       maxInitialRequests: 30, // 入口点的最大并行请求数。
       enforceSizeThreshold: 50000,
       cacheGroups: {
-        'defaultVendors': {
-          test: /[\/]node_modules[\/]/,  //第三方模块拆出来
+        defaultVendors: {
+          test: /[\/]node_modules[\/]/, //第三方模块拆出来
           priority: -10,
           reuseExistingChunk: true,
         },
-        'utilVendors': {
+        utilVendors: {
           test: /[\/]utils[\/]/, //公共模块拆出来
           minChunks: 2,
           priority: -20,
@@ -311,8 +313,8 @@ module.exports = {
 因为，将 路由页面的资源拆分为不同的文件，使用时才加载这些资源，可以减少当前页面的加载时间。
 
 ```js
-const List = lazyComponent('list', () => import(/* webpackChunkName: "list" */ '@/pages/list'));
-const Detail = lazyComponent('detail', () => import(/* webpackChunkName: "detail" */ '@/pages/detail'));
+const List = lazyComponent('list', () => import(/* webpackChunkName: "list" */ '@/pages/list'))
+const Detail = lazyComponent('detail', () => import(/* webpackChunkName: "detail" */ '@/pages/detail'))
 ```
 
 进一步的，越尽快的让页面渲染，就越有利于用户体验。
@@ -328,7 +330,7 @@ const Detail = lazyComponent('detail', () => import(/* webpackChunkName: "detail
 
 ```js
 // ...
-import(/* webpackPrefetch: true */ './path/to/LoginModal.js');
+import(/* webpackPrefetch: true */ './path/to/LoginModal.js')
 ```
 
 这会生成 `<link rel="prefetch" href="login-modal-chunk.js">` 并追加到页面头部，指示浏览器在闲置时间预取 login-modal-chunk.js 文件。
@@ -337,7 +339,7 @@ import(/* webpackPrefetch: true */ './path/to/LoginModal.js');
 
 ```ts
 //...
-import(/* webpackPreload: true */ 'ChartingLibrary');
+import(/* webpackPreload: true */ 'ChartingLibrary')
 ```
 
 在页面中使用 `ChartComponent` 时，在请求 `ChartComponent.js` 的同时，
@@ -363,11 +365,13 @@ import(/* webpackPreload: true */ 'ChartingLibrary');
 对于 CSS资源， 可以使用 `purgecss-webpack-plugin` 插件对 CSS 进行 tree-shaking。
 
 ```js
-const PurgecssPlugin = require('purgecss-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin')
 module.exports = {
-  plugins: [new PurgeCSSPlugin({
+  plugins: [
+    new PurgeCSSPlugin({
       paths: glob.sync('src/**/*', { nodir: true }),
-    })],
+    }),
+  ],
 }
 ```
 

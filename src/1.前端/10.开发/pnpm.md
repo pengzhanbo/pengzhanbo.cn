@@ -26,25 +26,25 @@ permalink: /article/84nu27cz/
 
 ### pnpm/yarn/npm
 
-| 功能                  | pnpm | yarn | npm |
-| --                   | :--:  | :--:  | :--: |
-| 工作空间支持（monorepo）| ✔️ | ✔️ | ✔️ |
-| 隔离的`node_modules`  | ✔️ - 默认 | ✔️ | ❌ |
-| 提升的`node_modules`  | ✔️ | ✔️ | ✔️ -默认 |
-| 自动安装peers         | ✔️ - `auto-install-peers=true` | ❌ | ✔️ |
-| Plug'n'Play          | ✔️ | ✔️ - 默认 | ❌ |
-| 零安装                | ❌ | ✔️ | ❌ |
-| 修复依赖项             | ✔️ | ✔️ | ❌ |
-| 管理nodejs版本         | ✔️ | ❌ | ❌ |
-| 有锁文件               | ✔️ - `pnpm-lock.yaml` | ✔️ - `yarn.lock` | ✔️ - `package-lock.json` |
-| 支持覆盖               | ✔️ | ✔️ - `resolutions` | ✔️ |
-| 内容可寻址存储          | ✔️ | ❌ | ❌ |
-| 动态包执行             | ✔️ - `pnpm dlx` | ✔️ - `yarn dlx` | ✔️ - `npx` |
-| Side-effects cache   | ✔️ | ❌ | ❌ |
+| 功能                     |              pnpm              |        yarn        |           npm            |
+| ------------------------ | :----------------------------: | :----------------: | :----------------------: |
+| 工作空间支持（monorepo） |               ✔️               |         ✔️         |            ✔️            |
+| 隔离的`node_modules`     |           ✔️ - 默认            |         ✔️         |            ❌            |
+| 提升的`node_modules`     |               ✔️               |         ✔️         |         ✔️ -默认         |
+| 自动安装peers            | ✔️ - `auto-install-peers=true` |         ❌         |            ✔️            |
+| Plug'n'Play              |               ✔️               |     ✔️ - 默认      |            ❌            |
+| 零安装                   |               ❌               |         ✔️         |            ❌            |
+| 修复依赖项               |               ✔️               |         ✔️         |            ❌            |
+| 管理nodejs版本           |               ✔️               |         ❌         |            ❌            |
+| 有锁文件                 |     ✔️ - `pnpm-lock.yaml`      |  ✔️ - `yarn.lock`  | ✔️ - `package-lock.json` |
+| 支持覆盖                 |               ✔️               | ✔️ - `resolutions` |            ✔️            |
+| 内容可寻址存储           |               ✔️               |         ❌         |            ❌            |
+| 动态包执行               |        ✔️ - `pnpm dlx`         |  ✔️ - `yarn dlx`   |        ✔️ - `npx`        |
+| Side-effects cache       |               ✔️               |         ❌         |            ❌            |
 
 ### 区别
 
-与 `yarn/npm` 不同的是，`pnpm` 并非采用 *扁平的`node_modules`* 来管理依赖项，
+与 `yarn/npm` 不同的是，`pnpm` 并非采用 _扁平的`node_modules`_ 来管理依赖项，
 而是基于符号链接的`node_modules` 结构。
 
 `node_modules` 中每个包的每个文件都是来自内容可寻址存储的硬链接。 假设安装了依赖于 `bar@1.0.0` 的 `foo@1.0.0`。 `pnpm` 会将两个包硬链接到 `node_modules` 如下所示：
@@ -88,17 +88,17 @@ node_modules
 ### 优势
 
 - 节约磁盘空间
-  
+
   包存储在全局存储中，pnpm 创建从全局存储到项目下 `node_modules` 文件夹的 硬链接，硬链接指向磁盘上原始文件所在的同一位置。不同软件包可以共享相同依赖项所占用的空间。
 
   如果是单个依赖的不同版本，如版本更新，`pnpm` 仅安装版本更新的文件，而不是全量安装整个新版本的包。
 
 - 安装速度快
-  
+
   软件包中安装依赖时，如果检索到在本地的全局存储中已安装过该依赖，那么不会从网络下重新安装，而是直接创建硬链接到软件包中。
 
 - 内置支持 monorepo
-  
+
   支持 单仓库多包，通过 `pnpm-workspace.yaml` 配置工作空间，通过 `workspace:*` 协议引用工作空间的依赖包。
 
 ## 安装
@@ -218,7 +218,7 @@ scoop install nodejs-lts pnpm
 
 `pnpm-workspace.yaml` 定义了 工作空间 的根目录，并能够使工作空间中包含 / 排除目录 。 默认情况下，包含所有子目录。
 
-``` yaml
+```yaml
 packages:
   # 定义 packages 目录下的所有子目录都为一个 package
   - 'packages/*'
@@ -258,7 +258,7 @@ pnpm 内置了对单一存储库（也称为多包存储库、多项目存储库
 
 如果各个项目以其目录名作为其 package name，那么可以在其他项目中如下引入依赖：
 
-``` json
+```json
 {
   "dependencies": {
     "foo": "workspace:*",

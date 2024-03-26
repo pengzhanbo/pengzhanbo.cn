@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/length-of-string-2/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -43,7 +43,7 @@ tags:
 
 但是在移动端的交互中，我们并不期望 网站的内容是被缩放的，需要让用户进行缩放和拖动。 所以通常我们会在 html文件的head中，进行一个 meta声明。
 
-``` html
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 ```
 
@@ -67,20 +67,19 @@ tags:
 
 可以先检查是否支持 `0.5px`，然后在 根元素上添加一个 类，进行使用。
 
-``` js
+```js
 if (window.devicePixelRatio && devicePixelRatio >= 2) {
-  var testElem = document.createElement('div');
-  testElem.style.border = '.5px solid transparent';
-  document.body.appendChild(testElem);
-  if (testElem.offsetHeight == 1)
-  {
-    document.querySelector('html').classList.add('hairlines');
+  var testElem = document.createElement('div')
+  testElem.style.border = '.5px solid transparent'
+  document.body.appendChild(testElem)
+  if (testElem.offsetHeight == 1) {
+    document.querySelector('html').classList.add('hairlines')
   }
-  document.body.removeChild(testElem);
+  document.body.removeChild(testElem)
 }
 ```
 
-``` css
+```css
 div {
   border: 1px solid #bbb;
 }
@@ -98,42 +97,42 @@ div {
 
 比如 利用 `::before` 或者 `::after`, 画一条上边框的线
 
-``` css
+```css
 .hairlines {
-    position: relative;
+  position: relative;
 }
 .hairlines::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-    transform: scaleY(0.5);
-    transform-origin: 0 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  transform: scaleY(0.5);
+  transform-origin: 0 0;
 }
 ```
 
 比如，利用 `::before` 或者 `::after`, 画一个线框：
 
-``` css
+```css
 .hairlines {
-    position: relative;
+  position: relative;
 }
 .hairlines::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    box-sizing: border-box;
-    display: block;
-    width: 200%;
-    height: 200%;
-    border: 1px solid #000;
-    transform: scale(0.5);
-    transform-origin: 0 0;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  display: block;
+  width: 200%;
+  height: 200%;
+  border: 1px solid #000;
+  transform: scale(0.5);
+  transform-origin: 0 0;
 }
 ```
 
@@ -148,10 +147,10 @@ div {
 
 _line.png_ ![1px-lines.png](/images/1px-lines.png)
 
-``` css
+```css
 div {
-    border-top: 1px transparent;
-    border-image: url(line.png) 2 0 0 0 repeat;
+  border-top: 1px transparent;
+  border-image: url(line.png) 2 0 0 0 repeat;
 }
 ```
 
@@ -170,7 +169,7 @@ div {
 
 如在 stylus中：
 
-``` stylus
+```stylus
 // 画一个元素的线框
 borderXY(color = #eee, radius = 8px) {
     $r = unit(radius/ 2, '');
@@ -184,23 +183,23 @@ borderXY(color = #eee, radius = 8px) {
 // 画一个元素的 上下边框
 borderX(color = #eee) {
     border 0
-    border-top: 1px solid color; /*no*/ 
+    border-top: 1px solid color; /*no*/
     border-bottom: 1px solid color; /*no*/
     border-image: url(s("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' height='200' width='100'><line x1='0' y1='25' x2='100' y2='25' stroke='%s' style='stroke-width:50'/><line x1='0' y1='75' x2='100' y2='75' style='stroke:transparent;stroke-width:50'/><line x1='0' y1='125' x2='100' y2='125' style='stroke:transparent;stroke-width:50'/><line x1='0' y1='175' x2='100' y2='175' stroke='%s' style='stroke-width:50'/></svg>", color, color)) 100 0 100 0 stretch;
 }
 
 // 画一个元素的 左右边框
 borderY(color = #eee) {
-    border 0 
-    border-left: 1px solid color; /*no*/ 
-    border-right: 1px solid color; /*no*/ 
+    border 0
+    border-left: 1px solid color; /*no*/
+    border-right: 1px solid color; /*no*/
     border-image: url(s("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' height='100' width='200'><line x1='25' y1='0' x2='25' y2='100' stroke='%s' style='stroke-width:50'/><line x1='75' y1='0' x2='75' y2='100' style='stroke:transparent;stroke-width:50'/><line x1='125' y1='0' x2='125' y2='100' style='stroke:transparent;stroke-width:50'/><line x1='175' y1='0' x2='175' y2='100' stroke='%s' style='stroke-width:50'/></svg>", color, color)) 0 100 0 100 stretch;
 }
 
 // 画一个元素的上边框
 borderTop(color = #eee) {
-    border 0 
-    border-top: 1px solid color; /*no*/ 
+    border 0
+    border-top: 1px solid color; /*no*/
     border-image: url(s("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' height='100' width='100'><line x1='0' y1='25' x2='100' y2='25' stroke='%s' style='stroke-width:50'/><line x1='0' y1='75' x2='100' y2='75' style='stroke:transparent;stroke-width:50'/></svg>", color)) 100 0 0 0 stretch;
 }
 
@@ -219,8 +218,8 @@ borderLeft(color = #eee) {
 }
 // 画一个元素的右边框
 borderRight(color = #eee) {
-    border 0 
-    border-right: 1px solid color; /*no*/ 
+    border 0
+    border-right: 1px solid color; /*no*/
     border-image: url(s("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' height='100' width='100'><line x1='25' y1='0' x2='25' y2='100' style='stroke:transparent;stroke-width:50'/><line x1='75' y1='0' x2='75' y2='100' stroke='%s' style='stroke-width:50'/></svg>", color)) 0 100 0 0 stretch;
 }
 
@@ -231,17 +230,17 @@ div {
 
 如果是使用 `postcss` ，可以使用安装插件 [postcss-write-svg](https://github.com/csstools/postcss-write-svg)，配合使用
 
-``` css
+```css
 @svg square {
- @rect {
-  fill: var(--color, black);
-  width: var(--size);
-  height: var(--size);
- }
+  @rect {
+    fill: var(--color, black);
+    width: var(--size);
+    height: var(--size);
+  }
 }
 
 .example {
- background: svg(square param(--color green) param(--size 100%)) center / cover;
+  background: svg(square param(--color green) param(--size 100%)) center / cover;
 }
 ```
 

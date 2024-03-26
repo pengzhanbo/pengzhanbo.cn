@@ -10,6 +10,7 @@ permalink: /interview-question/5yfvcq8k/
 - 什么是 CSS 浮动？
 - 浮动元素会带来哪些影响？
 - 如何清除浮动？ 各自的优点？
+
 :::
 
 ## 什么是 CSS 浮动（float）
@@ -23,19 +24,19 @@ permalink: /interview-question/5yfvcq8k/
 ## 浮动元素带来哪些影响？
 
 - 包裹性，自适应性；
-  
+
   - 如果浮动元素父元素宽度为300px，浮动元素不声明宽度，浮动元素子元素是一个200px的图片，则此时浮动元素的宽度表现为包裹，
     宽度就是子元素图片的宽度200px；
 
   - 如果浮动元素子元素还包括大串文本内容，父元素不足以一行放下所有文本内容，则此时浮动元素则自适应父元素的宽度，宽度为父元素宽度。
 
 - 块级化并格式化上下文
-  
+
   - 当一个元素的float属性值不为node，则其display计算值就是block或者table。
   - 同时，该浮动元素也会产生一个格式化上下文
-  
+
 - 破坏文档
-  
+
   浮动元素会让其父元素的高度塌陷。在大多数场景下，这个特性会影响到 正常的布局。
 
 - 没有任何margin合并
@@ -56,22 +57,28 @@ clear: none | left | right | both;
 
 - 在浮动元素后面插入空白块级元素，并声明 clear属性
 
-  ``` html
+  ```html
   <style>
-    .float { float: left; }
-    .clear { clear: both; }
+    .float {
+      float: left;
+    }
+    .clear {
+      clear: both;
+    }
   </style>
   <div>
-    <div class="float"> float </div>
+    <div class="float">float</div>
     <div class="clear"></div>
   </div>
   ```
 
 - 使用伪类元素，并声明clear属性
 
-  ``` html
+  ```html
   <style>
-    .float { float: left; }
+    .float {
+      float: left;
+    }
     .clear::after {
       content: '';
       display: block;
@@ -79,7 +86,7 @@ clear: none | left | right | both;
     }
   </style>
   <div class="clear">
-    <div class="float"> float </div>
+    <div class="float">float</div>
   </div>
   ```
 

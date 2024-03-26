@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/get-readonly-keys/
 Github: []()
 
 ```ts
+
 ```
+
 :::

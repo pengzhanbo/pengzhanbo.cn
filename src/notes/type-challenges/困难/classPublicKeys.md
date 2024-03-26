@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/class-public-keys/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -13,6 +13,7 @@ Github: [Push](https://github.com/type-challenges/type-challenges/blob/main/ques
 ```ts
 type Result = Push<[1, 2], '3'> // [1, 2, '3']
 ```
+
 :::
 
 ### 解题思路

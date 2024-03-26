@@ -70,18 +70,18 @@ permalink: /article/o95q9n27/
 /**
  * @type {string}
  */
-var s;
- 
+var s
+
 /** @type {Window} */
-var win;
- 
+var win
+
 /** @type {PromiseLike<string>} */
-var promisedString;
- 
+var promisedString
+
 // 你可以用DOM属性指定一个HTML元素
 /** @type {HTMLElement} */
-var myElement = document.querySelector(selector);
-element.dataset.myData = '';
+var myElement = document.querySelector(selector)
+element.dataset.myData = ''
 ```
 
 `@type` 可以指定联合类型 - 例如，某些内容可以是字符串或布尔值。
@@ -90,25 +90,25 @@ element.dataset.myData = '';
 /**
  * @type {string | boolean}
  */
-var sOrB;
+var sOrB
 ```
 
 可以使用多种语法指定数组类型：
 
 ```js
 /** @type {number[]} */
-var ns;
+var ns
 /** @type {Array.<number>} */
-var jsdoc;
+var jsdoc
 /** @type {Array<number>} */
-var nas;
+var nas
 ```
 
 还可以指定对象文字类型。例如，具有属性“a”（字符串）和“b”（数字）的对象使用以下语法：
 
 ```js
 /** @type {{ a: string, b: number }} */
-var var9;
+var var9
 ```
 
 可以使用标准 JSDoc 语法或 TypeScript 语法，使用字符串和数字索引签名来指定类 Map 和类 Array 对象。
@@ -119,10 +119,10 @@ var var9;
  *
  * @type {Object.<string, number>}
  */
-var stringToNumber;
- 
+var stringToNumber
+
 /** @type {Object.<number, object>} */
-var arrayLike;
+var arrayLike
 ```
 
 前面两种类型相当于 TypeScript 类型 `{ [x: string]: number }` 和 `{ [x: number]: any }` 。
@@ -132,18 +132,18 @@ var arrayLike;
 
 ```js
 /** @type {function(string, boolean): number} Closure syntax */
-var sbn;
+var sbn
 /** @type {(s: string, b: boolean) => number} TypeScript syntax */
-var sbn2;
+var sbn2
 ```
 
 或者可以只使用未指定的Function类型：
 
 ```js
 /** @type {Function} */
-var fn7;
+var fn7
 /** @type {function} */
-var fn6;
+var fn6
 ```
 
 Closure 中的其他类型也适用：
@@ -152,11 +152,11 @@ Closure 中的其他类型也适用：
 /**
  * @type {*} - can be 'any' type
  */
-var star;
+var star
 /**
  * @type {?} - unknown type (same as 'any')
  */
-var question;
+var question
 ```
 
 #### Casts
@@ -168,14 +168,14 @@ TypeScript 借用了 Google Closure 的强制转换语法。
 /**
  * @type {number | string}
  */
-var numberOrString = Math.random() < 0.5 ? "hello" : 100;
-var typeAssertedNumber = /** @type {number} */ (numberOrString);
+var numberOrString = Math.random() < 0.5 ? 'hello' : 100
+var typeAssertedNumber = /** @type {number} */ (numberOrString)
 ```
 
 `const` 甚至可以像 TypeScript 一样进行转换：
 
 ```js
-let one = /** @type {const} */(1);
+let one = /** @type {const} */ (1)
 ```
 
 #### Import types
@@ -187,7 +187,7 @@ let one = /** @type {const} */(1);
 export type Pet = {
   name: string,
 };
- 
+
 // @filename: main.js
 /**
  * @param {import("./types").Pet} p
@@ -203,12 +203,12 @@ function walk(p) {
 /**
  * @typedef {import("./types").Pet} Pet
  */
- 
+
 /**
  * @type {Pet}
  */
-var myPet;
-myPet.name;
+var myPet
+myPet.name
 ```
 
 如果不知道模块中值的类型，或者模块中的类型较大且难以获取，则可使用导入类型从模块中获取值的类型：
@@ -217,7 +217,7 @@ myPet.name;
 /**
  * @type {typeof import("./accounts").userAccount}
  */
-var x = require("./accounts").userAccount;
+var x = require('./accounts').userAccount
 ```
 
 ### `@param` and `@returns`
@@ -246,7 +246,7 @@ function stringsStringStrings(p1, p2, p3, p4) {
  * @return {PromiseLike<string>}
  */
 function ps() {}
- 
+
 /**
  * @returns {{ a: string, b: number }} - 可以使用 '@returns' 或 '@return'
  */
@@ -266,10 +266,10 @@ function ab() {}
  * @prop {number} [prop4] - SpecialType 上的 一个可选的 number 类型属性
  * @prop {number} [prop5=42] - SpecialType 上的 一个可选的 number 类型属性，默认值为 42
  */
- 
+
 /** @type {SpecialType} */
-var specialTypeObject;
-specialTypeObject.prop3;
+var specialTypeObject
+specialTypeObject.prop3
 ```
 
 可以在第一行使用 `Object` 或 `object` 。
@@ -281,9 +281,9 @@ specialTypeObject.prop3;
  * @property {number} prop2 - a number property of SpecialType1
  * @property {number=} prop3 - an optional number property of SpecialType1
  */
- 
+
 /** @type {SpecialType1} */
-var specialTypeObject1;
+var specialTypeObject1
 ```
 
 `@param` 允许对一次性类型规范使用类似的语法。
@@ -299,7 +299,7 @@ var specialTypeObject1;
  * @param {number} [options.prop5=42]
  */
 function special(options) {
-  return (options.prop4 || 1001) + options.prop5;
+  return (options.prop4 || 1001) + options.prop5
 }
 ```
 
@@ -312,9 +312,9 @@ function special(options) {
  * @param {number} [index]
  * @returns {boolean}
  */
- 
+
 /** @type {Predicate} */
-const ok = (s) => !(s.length % 2);
+const ok = (s) => !(s.length % 2)
 ```
 
 当然，任何这些类型都可以使用 TypeScript 语法在单行中声明 `@typedef`：
@@ -335,12 +335,12 @@ const ok = (s) => !(s.length % 2);
  * @returns {T}
  */
 function id(x) {
-  return x;
+  return x
 }
- 
-const a = id("string");
-const b = id(123);
-const c = id({});
+
+const a = id('string')
+const b = id(123)
+const c = id({})
 ```
 
 使用逗号或多个标签来声明多个类型参数：
@@ -371,9 +371,8 @@ function seriousalize(key, object) {
 ```js
 /** @template [T=object] */
 class Cache {
-    /** @param {T} initial */
-    constructor(initial) {
-    }
+  /** @param {T} initial */
+  constructor(initial) {}
 }
 let c = new Cache()
 ```
@@ -388,16 +387,16 @@ Satisfies 用于声明某个值实现了某种类型，但不影响该值的类�
 /**
  * @typedef {"hello world" | "Hello, world"} WelcomeMessage
  */
- 
-/** @satisfies {WelcomeMessage} */
-const message = "hello world" // const message: "hello world"
 
 /** @satisfies {WelcomeMessage} */
-const failingMessage = "Hello world!"
+const message = 'hello world' // const message: "hello world"
+
+/** @satisfies {WelcomeMessage} */
+const failingMessage = 'Hello world!'
 // Type '"Hello world!"' does not satisfy the expected type 'WelcomeMessage'.
 
 /** @type {WelcomeMessage} */
-const messageUsingType = "hello world" // const messageUsingType: WelcomeMessage
+const messageUsingType = 'hello world' // const messageUsingType: WelcomeMessage
 ```
 
 ## Classes
@@ -411,35 +410,35 @@ class C {
    */
   constructor(data) {
     // property types can be inferred
-    this.name = "foo";
- 
+    this.name = 'foo'
+
     // or set explicitly
     /** @type {string | null} */
-    this.title = null;
- 
+    this.title = null
+
     // or simply annotated, if they're set elsewhere
     /** @type {number} */
-    this.size;
- 
-    this.initialize(data); // Should error, initializer expects a string
+    this.size
+
+    this.initialize(data) // Should error, initializer expects a string
   }
   /**
    * @param {string} s
    */
   initialize = function (s) {
-    this.size = s.length;
-  };
+    this.size = s.length
+  }
 }
- 
-var c = new C(0);
- 
+
+var c = new C(0)
+
 // C should only be called with new, but
 // because it is JavaScript, this is allowed and
 // considered an 'any'.
-var result = C(1);
+var result = C(1)
 ```
 
-它们也可以声明为构造函数; 需要与 `@constructor` 和 `@this`  一起使用。
+它们也可以声明为构造函数; 需要与 `@constructor` 和 `@this` 一起使用。
 
 ### Property Modifiers
 
@@ -447,20 +446,20 @@ var result = C(1);
 
 ```js
 // @ts-check
- 
+
 class Car {
   constructor() {
     /** @private */
-    this.identifier = 100;
+    this.identifier = 100
   }
- 
+
   printIdentifier() {
-    console.log(this.identifier);
+    console.log(this.identifier)
   }
 }
- 
-const c = new Car();
-console.log(c.identifier);
+
+const c = new Car()
+console.log(c.identifier)
 // Property 'identifier' is private and only accessible within class 'Car'.
 ```
 
@@ -476,20 +475,20 @@ console.log(c.identifier);
 
 ```js
 // @ts-check
- 
+
 class Car {
   constructor() {
     /** @readonly */
-    this.identifier = 100;
+    this.identifier = 100
   }
- 
+
   printIdentifier() {
-    console.log(this.identifier);
+    console.log(this.identifier)
   }
 }
- 
-const c = new Car();
-console.log(c.identifier);
+
+const c = new Car()
+console.log(c.identifier)
 ```
 
 ### `@override`
@@ -498,11 +497,11 @@ console.log(c.identifier);
 
 ```js
 export class C {
-  m() { }
+  m() {}
 }
 class D extends C {
   /** @override */
-  m() { }
+  m() {}
 }
 ```
 
@@ -549,30 +548,30 @@ class TextBook {
  */
 function C(data) {
   // property types can be inferred
-  this.name = "foo";
- 
+  this.name = 'foo'
+
   // or set explicitly
   /** @type {string | null} */
-  this.title = null;
- 
+  this.title = null
+
   // or simply annotated, if they're set elsewhere
   /** @type {number} */
-  this.size;
- 
-  this.initialize(data);
-// Argument of type 'number' is not assignable to parameter of type 'string'.
-/**
- * @param {string} s
- */
-C.prototype.initialize = function (s) {
-  this.size = s.length;
-};
- 
-var c = new C(0);
-c.size;
- 
-var result = C(1);
-// Value of type 'typeof C' is not callable. Did you mean to include 'new'?
+  this.size
+
+  this.initialize(data)
+  // Argument of type 'number' is not assignable to parameter of type 'string'.
+  /**
+   * @param {string} s
+   */
+  C.prototype.initialize = function (s) {
+    this.size = s.length
+  }
+
+  var c = new C(0)
+  c.size
+
+  var result = C(1)
+  // Value of type 'typeof C' is not callable. Did you mean to include 'new'?
 }
 ```
 
@@ -593,7 +592,7 @@ var result = C(1);
  * @param {*} e
  */
 function callbackForLater(e) {
-  this.clientHeight = parseInt(e); // should be fine!
+  this.clientHeight = parseInt(e) // should be fine!
 }
 ```
 
@@ -607,9 +606,8 @@ function callbackForLater(e) {
 
 ```js
 /** @deprecated */
-const apiV1 = {};
-const apiV2 = {};
-
+const apiV1 = {}
+const apiV2 = {}
 ```
 
 ### `@see`
@@ -619,7 +617,7 @@ const apiV2 = {};
 ```ts
 type Box<T> = { t: T }
 /** @see Box for implementation details */
-type Boxify<T> = { [K in keyof T]: Box<T> };
+type Boxify<T> = { [K in keyof T]: Box<T> }
 ```
 
 有些编辑器会变成 Box 链接，以便轻松跳转。
@@ -632,7 +630,7 @@ type Boxify<T> = { [K in keyof T]: Box<T> };
 type Box<T> = { t: T }
 /** @returns A {@link Box} containing the parameter. */
 function box<U>(u: U): Box<U> {
-  return { t: u };
+  return { t: u }
 }
 ```
 
@@ -650,9 +648,9 @@ const JSDocState = {
   BeginningOfLine: 0,
   SawAsterisk: 1,
   SavingComments: 2,
-};
- 
-JSDocState.SawAsterisk;
+}
+
+JSDocState.SawAsterisk
 ```
 
 注意 `@enum` 与TypeScript的 `enum` 完全不同，而且比它简单得多。
@@ -664,9 +662,9 @@ const MathFuncs = {
   add1: (n) => n + 1,
   id: (n) => -n,
   sub1: (n) => n - 1,
-};
- 
-MathFuncs.add1;
+}
+
+MathFuncs.add1
 ```
 
 ### `@author`
@@ -690,49 +688,49 @@ var someObj = {
    * @param {string} param1 - JSDocs on property assignments work
    */
   x: function (param1) {},
-};
- 
+}
+
 /**
  * As do jsdocs on variable assignments
  * @return {Window}
  */
-let someFunc = function () {};
- 
+let someFunc = function () {}
+
 /**
  * And class methods
  * @param {string} greeting The greeting to use
  */
-Foo.prototype.sayHi = (greeting) => console.log("Hi!");
- 
+Foo.prototype.sayHi = (greeting) => console.log('Hi!')
+
 /**
  * And arrow function expressions
  * @param {number} x - A multiplier
  */
-let myArrow = (x) => x * x;
- 
+let myArrow = (x) => x * x
+
 /**
  * Which means it works for function components in JSX too
  * @param {{a: string, b: number}} props - Some param
  */
-var fc = (props) => <div>{props.a.charAt(0)}</div>;
- 
+var fc = (props) => <div>{props.a.charAt(0)}</div>
+
 /**
  * A parameter can be a class constructor, using Google Closure syntax.
  *
  * @param {{new(...args: any[]): object}} C - The class to register
  */
 function registerClass(C) {}
- 
+
 /**
  * @param {...string} p1 - A 'rest' arg (array) of strings. (treated as 'any')
  */
 function fn10(p1) {}
- 
+
 /**
  * @param {...string} p1 - A 'rest' arg (array) of strings. (treated as 'any')
  */
 function fn9(p1) {
-  return p1.join();
+  return p1.join()
 }
 ```
 
@@ -744,12 +742,12 @@ function fn9(p1) {
 /**
  * @type {{ a: string, b: number= }}
  */
-var wrong;
+var wrong
 /**
  * Use postfix question on the property name instead:
  * @type {{ a: string, b?: number }}
  */
-var right;
+var right
 ```
 
 [strictNullChecks](https://www.typescriptlang.org/tsconfig#strictNullChecks) 可空类型仅在打开时才有意义：
@@ -760,7 +758,7 @@ var right;
  * With strictNullChecks: true  -- number | null
  * With strictNullChecks: false -- number
  */
-var nullable;
+var nullable
 ```
 
 TypeScript 原生语法是联合类型：
@@ -771,7 +769,7 @@ TypeScript 原生语法是联合类型：
  * With strictNullChecks: true  -- number | null
  * With strictNullChecks: false -- number
  */
-var unionNullable;
+var unionNullable
 ```
 
 不可为 null 的类型没有任何意义，并且被视为其原始类型：
@@ -781,7 +779,7 @@ var unionNullable;
  * @type {!number}
  * Just has type number
  */
-var normal;
+var normal
 ```
 
 与 JSDoc 的类型系统不同，TypeScript 只允许将类型标记为包含 null 或不包含 null。

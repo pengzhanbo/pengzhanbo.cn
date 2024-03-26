@@ -22,10 +22,11 @@ interface Todo {
 type TodoPreview = MyPick<Todo, 'title' | 'completed'>
 
 const todo: TodoPreview = {
-    title: 'Clean room',
-    completed: false,
+  title: 'Clean room',
+  completed: false,
 }
 ```
+
 :::
 
 ### 解题思路

@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/distribute-unions/
 Github: []()
 
 ```ts
+
 ```
+
 :::

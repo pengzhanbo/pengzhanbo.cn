@@ -11,7 +11,7 @@ tags:
 
 `Promise` 是一个构造函数，用于创建一个新的 Promise 对象。该构造函数主要用于包装还没有添加 promise 支持的函数。
 
-``` ts
+```ts
 Promise(resolver : (resolve, reject) => void)
 ```
 
@@ -20,7 +20,7 @@ Promise(resolver : (resolve, reject) => void)
 
 ### 示例
 
-``` js
+```js
 const promise = new Promise(function (resolve, reject) {
   setTimeout(() => {
     // do something
@@ -47,24 +47,24 @@ Promise 创建后，必然处于以下几种状态
 
 #### `.then(onFulfilled, onRejected)`
 
-  *then()* 接收两个函数参数（也可以仅接收一个函数参数 onFulfilled）。
+_then()_ 接收两个函数参数（也可以仅接收一个函数参数 onFulfilled）。
 
 - onFulfilled 函数参数，表示当 promise的状态从 `pending` 更新为`fulfilled` 时触发，并将成功的结果 value 作为`onFulfilled`函数的参数。
 - onRejected 函数参数，表示当promise的状态从 `pending` 更新为`rejected` 时触发，并将失败的原因 reason 作为 `onRejected`函数的参数。
-  
-  *then()* 方法返回的结果会被包装为一个新的promise实例。
+
+  _then()_ 方法返回的结果会被包装为一个新的promise实例。
 
 #### `.catch(onRejected)`
 
-  *catch()* 可以相当于 *.then(null, onRejected)*，即仅处理当promise的状态从 `pending` 更新为`rejected` 时触发。
+_catch()_ 可以相当于 _.then(null, onRejected)_，即仅处理当promise的状态从 `pending` 更新为`rejected` 时触发。
 
 #### `.finally(onFinally)`
 
-  表示promise的状态无论是从`pengding`更新为`fulfilled`或`rejected`，当所有的 then() 和 catch() 执行完成后，最后会执行 finally() 的回调。
+表示promise的状态无论是从`pengding`更新为`fulfilled`或`rejected`，当所有的 then() 和 catch() 执行完成后，最后会执行 finally() 的回调。
 
-  由于无法知道promise的最终状态，`onFinally` 回调函数不接收任何参数，它仅用于无论最终结果如何都要执行的情况。
+由于无法知道promise的最终状态，`onFinally` 回调函数不接收任何参数，它仅用于无论最终结果如何都要执行的情况。
 
-``` js
+```js
 promise
   .then(function (res) {
     console.log(res) // { status: 'success', data: '' }
@@ -82,17 +82,17 @@ promise
 使用Promise的一个优势是，可以链式调用的方式，执行多个`then()`/`catch()`方法。
 且回调函数允许我们返回任何值，返回的值将会被包装为一个 promise实例，将值传给下一个`then()`/`catch()`方法。
 
-``` js
+```js
 promise
-  .then(res => {
+  .then((res) => {
     res.data = { a: 2 }
     return res
   })
-  .then(res => {
+  .then((res) => {
     console.log(res) // { status: 'success', data: { a: 2 } }
     throw new Error('cath error')
   })
-  .catch(reason => {
+  .catch((reason) => {
     console.log(reason) // error: cath error
   })
 ```
@@ -100,158 +100,157 @@ promise
 ## Promise代码实现
 
 ```js
-const PENDING = "pending";
-const FULFILLED = "fulfilled";
-const REJECTED = "rejected";
-const microtask = globalThis.queueMicrotask || ((cb) => setTimeout(cb, 0));
+const PENDING = 'pending'
+const FULFILLED = 'fulfilled'
+const REJECTED = 'rejected'
+const microtask = globalThis.queueMicrotask || ((cb) => setTimeout(cb, 0))
 
 function LikePromise(resolver) {
-  if (typeof resolver !== "function") {
-    throw new TypeError(`Promise resolver ${resolver} is not a function`);
+  if (typeof resolver !== 'function') {
+    throw new TypeError(`Promise resolver ${resolver} is not a function`)
   }
-  this.state = PENDING;
-  this.value = undefined;
-  this.reason = undefined;
-  this.fulfillQueue = [];
-  this.rejectQueue = [];
+  this.state = PENDING
+  this.value = undefined
+  this.reason = undefined
+  this.fulfillQueue = []
+  this.rejectQueue = []
 
-  const that = this;
+  const that = this
 
   function reject(reason) {
     if (that.state === PENDING) {
-      that.state = REJECTED;
-      that.reason = reason;
-      that.rejectQueue.forEach((cb) => cb(reason));
+      that.state = REJECTED
+      that.reason = reason
+      that.rejectQueue.forEach((cb) => cb(reason))
     }
   }
 
   function resolve(value) {
     if (that.state === PENDING) {
-      that.state = FULFILLED;
-      that.value = value;
-      that.fulfillQueue.forEach((cb) => cb(value));
+      that.state = FULFILLED
+      that.value = value
+      that.fulfillQueue.forEach((cb) => cb(value))
     }
   }
 
   try {
-    resolver(resolve, reject);
+    resolver(resolve, reject)
   } catch (e) {
-    reject(e);
+    reject(e)
   }
 }
 
 function resolvePromise(promise, x, resolve, reject) {
   if (promise === x) {
-    reject(new TypeError("chaining cycle"));
-  } else if (x !== null && (typeof x === "object" || typeof x === "function")) {
-    let used = false;
+    reject(new TypeError('chaining cycle'))
+  } else if (x !== null && (typeof x === 'object' || typeof x === 'function')) {
+    let used = false
     try {
-      const then = x.then;
-      if (typeof then === "function") {
+      const then = x.then
+      if (typeof then === 'function') {
         then.call(
           x,
           (y) => {
-            if (used) return;
-            used = true;
-            resolvePromise(promise, y, resolve, reject);
+            if (used) return
+            used = true
+            resolvePromise(promise, y, resolve, reject)
           },
           (r) => {
-            if (used) return;
-            used = true;
-            reject(r);
-          }
-        );
+            if (used) return
+            used = true
+            reject(r)
+          },
+        )
       } else {
-        if (used) return;
-        used = true;
-        resolve(x);
+        if (used) return
+        used = true
+        resolve(x)
       }
     } catch (e) {
-      if (used) return;
-      used = true;
-      reject(e);
+      if (used) return
+      used = true
+      reject(e)
     }
   } else {
-    resolve(x);
+    resolve(x)
   }
 }
 
 LikePromise.prototype.then = function (onFulfilled, onRejected) {
-  onFulfilled =
-    typeof onFulfilled === "function" ? onFulfilled : (value) => value;
+  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : (value) => value
   onRejected =
-    typeof onRejected === "function"
+    typeof onRejected === 'function'
       ? onRejected
       : (reason) => {
-          throw reason;
-        };
-  const that = this;
+          throw reason
+        }
+  const that = this
   const promise = new LikePromise((resolve, reject) => {
     if (that.state === FULFILLED) {
       microtask(() => {
         try {
-          const x = onFulfilled(that.value);
-          resolvePromise(promise, x, resolve, reject);
+          const x = onFulfilled(that.value)
+          resolvePromise(promise, x, resolve, reject)
         } catch (e) {
-          reject(e);
+          reject(e)
         }
-      });
+      })
     } else if (that.state === REJECTED) {
       microtask(() => {
         try {
-          const x = onRejected(that.reason);
-          resolvePromise(promise, x, resolve, reject);
+          const x = onRejected(that.reason)
+          resolvePromise(promise, x, resolve, reject)
         } catch (e) {
-          reject(e);
+          reject(e)
         }
-      });
+      })
     } else {
       that.fulfillQueue.push(() => {
         microtask(() => {
           try {
-            const x = onFulfilled(that.value);
-            resolvePromise(promise, x, resolve, reject);
+            const x = onFulfilled(that.value)
+            resolvePromise(promise, x, resolve, reject)
           } catch (e) {
-            reject(e);
+            reject(e)
           }
-        });
-      });
+        })
+      })
       that.rejectQueue.push(() => {
         microtask(() => {
           try {
-            const x = onRejected(that.reason);
-            resolvePromise(promise, x, resolve, reject);
+            const x = onRejected(that.reason)
+            resolvePromise(promise, x, resolve, reject)
           } catch (e) {
-            reject(e);
+            reject(e)
           }
-        });
-      });
+        })
+      })
     }
-  });
-  return promise;
-};
+  })
+  return promise
+}
 
 LikePromise.prototype.catch = function (onRejected) {
-  return this.then(null, onRejected);
-};
+  return this.then(null, onRejected)
+}
 
 LikePromise.prototype.finally = function (onFinally) {
   return this.then(
     (value) => LikePromise.resolve(onFinally()).then(() => value),
     (reason) =>
       LikePromise.resolve(onFinally()).then(() => {
-        throw reason;
-      })
-  );
-};
+        throw reason
+      }),
+  )
+}
 
 LikePromise.resolve = function (value) {
-  return new LikePromise((resolve) => resolve(value));
-};
+  return new LikePromise((resolve) => resolve(value))
+}
 
 LikePromise.reject = function (reason) {
-  return new LikePromise((_, reject) => reject(reason));
-};
+  return new LikePromise((_, reject) => reject(reason))
+}
 ```
 
 ## `Promise` 静态方法
@@ -278,23 +277,23 @@ promises并发执行，并且当这组promises的最终状态均更新为`fulfil
 
 #### 示例
 
-``` js
+```js
 const promises = [
-  Promise.resolve({ a: 1}),
+  Promise.resolve({ a: 1 }),
   new Promise((resolve) => {
     setTimeout(() => {
       resolve({ b: 1 })
     }, 0)
-  })
+  }),
 ]
-Promise.all(promises).then(res => {
+Promise.all(promises).then((res) => {
   console.log(res) // [ { a: 1}, { b: 1 } ]
 })
 ```
 
 #### 手写Promise.all 实现代码
 
-``` js
+```js
 function promiseAll(promises) {
   promises = promises || []
   let length = promises.length
@@ -304,14 +303,14 @@ function promiseAll(promises) {
   return new Promise((resolve, reject) => {
     const resolveFn = (res, index) => {
       list[index] = res
-      count ++
+      count++
       if (count >= length) {
         resolve(list)
       }
     }
     promises.forEach((item, i) => {
       if (item instanceof Promise) {
-        item.then(res => resolveFn(res, i), reject)
+        item.then((res) => resolveFn(res, i), reject)
       } else {
         resolveFn(item, i)
       }
@@ -330,19 +329,16 @@ function promiseAll(promises) {
 
 #### 示例
 
-``` js
-const promises = [
-  Promise.resolve({ a: 1}),
-  Promise.reject('reason')
-]
-Promise.allSettled(promises).then(res => {
+```js
+const promises = [Promise.resolve({ a: 1 }), Promise.reject('reason')]
+Promise.allSettled(promises).then((res) => {
   console.log(res) // [ { status: 'fulfilled’, value: { a: 1 } }, { status: 'rejected', reason: 'reason' }  ]
 })
 ```
 
 #### 手写Promise.allSettled 实现代码
 
-``` js
+```js
 function promiseAllSettled(promises) {
   promises = promises || []
   let length = promises.length
@@ -350,14 +346,14 @@ function promiseAllSettled(promises) {
   let count = 0
   const list = []
   return new Promise((resolve) => {
-    const resolveFn =  (res, index, status) => {
+    const resolveFn = (res, index, status) => {
       list[index] = { status }
       if (status === 'fulfilled') {
         list[index].value = res
       } else {
         list[index].reason = res
       }
-      count ++
+      count++
       if (count >= length) {
         resolve(list)
       }
@@ -365,8 +361,8 @@ function promiseAllSettled(promises) {
     promises.forEach((item, i) => {
       if (item instanceof Promise) {
         item.then(
-          res => resolveFn(res, i, 'fulfilled'),
-          reason => resolveFn(reason, i, 'rejected')
+          (res) => resolveFn(res, i, 'fulfilled'),
+          (reason) => resolveFn(reason, i, 'rejected'),
         )
       } else {
         resolveFn(item, i, 'fulfilled')
@@ -385,28 +381,28 @@ function promiseAllSettled(promises) {
 
 #### 示例
 
-``` js
+```js
 const promises = [
   new Promise((resolve) => {
     setTimeout(() => {
       resolve('timeout')
     }, 500)
   }),
-  Promise.resolve('resolve')
+  Promise.resolve('resolve'),
 ]
 
-Promise.race(promises).then(res => {
+Promise.race(promises).then((res) => {
   console.log(res) // resolve
 })
 ```
 
 #### 手写Promise.race 实现代码
 
-``` js
+```js
 function promiseRace(array) {
   array = array || []
   return new Promise((resolve, reject) => {
-    array.forEach(item => {
+    array.forEach((item) => {
       if (item instanceof Promise) {
         item.then(resolve, reject)
       } else {
@@ -415,7 +411,6 @@ function promiseRace(array) {
     })
   })
 }
-
 ```
 
 ## 参考资料

@@ -38,7 +38,7 @@ permalink: /article/4ef5e74b/
 ## 自定义滚动条
 
 在过去，能够进行 自定义滚动条的， 只有 基于 `webkit` 内核的浏览器 得到了支持，而像 `Firefox` 和 `IE`
-浏览器则不具备 自定义滚动条 的能力。但是，对于 `Firebox`，  CSS 有了新的语法帮助我们完成滚动条的自定义。
+浏览器则不具备 自定义滚动条 的能力。但是，对于 `Firebox`， CSS 有了新的语法帮助我们完成滚动条的自定义。
 
 我将分别介绍 `webkit` 下的旧的语法，然后是 新的语法。
 
@@ -78,7 +78,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 
 #### 旧语法浏览器兼容
 
-::: caniuse mdn-css__selectors__-webkit-scrollbar
+::: caniuse mdn-css**selectors**-webkit-scrollbar
 :::
 
 至此，我们已经介绍了 CSS 中设置 自定义滚动条的旧语法以及兼容性。
@@ -165,7 +165,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 
 #### 新语法浏览器兼容
 
-::: caniuse mdn-css__properties__scrollbar-width
+::: caniuse mdn-css**properties**scrollbar-width
 :::
 
 ## 自定义滚动条的使用范围
@@ -268,6 +268,7 @@ html {
 上生效。
 
 :::demo-wrapper no-padding
+
 <style scoped>
 .container-demo-1 {
   height: 400px;
@@ -320,6 +321,7 @@ html {
 ```
 
 :::demo-wrapper no-padding title="渐变"
+
 <style scoped>
 .container-demo-2 {
   height: 400px;
@@ -360,6 +362,7 @@ html {
 ```
 
 :::demo-wrapper no-padding
+
 <style scoped>
 .container-demo-3 {
   height: 400px;
@@ -404,6 +407,7 @@ html {
 ```
 
 :::demo-wrapper no-padding
+
 <div class="container-demo-3 border"><div class="content"></div></div>
 :::
 
@@ -422,6 +426,7 @@ html {
 ```
 
 :::demo-wrapper no-padding title="Thumb 带间隔"
+
 <style scoped>
 .container-demo-4 {
   height: 400px;
@@ -476,6 +481,7 @@ html {
 同时，在使用新语法上，我们还可以添加 过渡效果，但是在 旧语法 上则不支持。
 
 :::demo-wrapper no-padding title="hover 效果"
+
 <style scoped>
 .container-demo-5 {
   height: 400px;

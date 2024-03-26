@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/vue-basic-props/
 Github: []()
 
 ```ts
+
 ```
+
 :::

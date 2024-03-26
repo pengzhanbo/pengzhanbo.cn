@@ -1,4 +1,4 @@
-import  { defineNavbarConfig } from 'vuepress-theme-plume'
+import { defineNavbarConfig } from 'vuepress-theme-plume'
 
 export default defineNavbarConfig([
   { text: '首页', link: '/', icon: 'material-symbols:home' },
@@ -27,7 +27,7 @@ export default defineNavbarConfig([
             text: 'vite-plugin-image-placeholder',
             link: 'https://github.com/pengzhanbo/vite-plugin-image-placeholder',
             icon: 'bi:image-fill',
-          }
+          },
         ],
       },
       {
@@ -126,5 +126,5 @@ export default defineNavbarConfig([
       //   icon: 'icon-park-outline:chinese',
       // },
     ],
-  }
+  },
 ])

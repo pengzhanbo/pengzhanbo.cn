@@ -7,7 +7,6 @@ import { useStamps } from '../composables/stamps.js'
 const props = defineProps<StampsProps>()
 
 const stampList = useStamps(toRefs(props))
-
 </script>
 
 <template>

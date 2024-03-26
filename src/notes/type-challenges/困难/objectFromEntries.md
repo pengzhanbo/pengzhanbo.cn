@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/object-from-entries/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/remove-index-signature/
 Github: []()
 
 ```ts
+
 ```
+
 :::

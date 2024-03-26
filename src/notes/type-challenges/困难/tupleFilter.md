@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/tuple-filter/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -31,12 +31,12 @@ function getUrls(url: string | URL, names: string[]) {
   if (typeof url === 'string') {
     url = new URL(url)
   }
-  return names.map(name => {
+  return names.map((name) => {
     url.searchParams.set('name', name)
-//      ^^^^^^^^^^^^
-// error:
-//   Property 'searchParams' does not exist on type 'string | URL'.
-//   Property 'searchParams' does not exist on type 'string'.
+    //      ^^^^^^^^^^^^
+    // error:
+    //   Property 'searchParams' does not exist on type 'string | URL'.
+    //   Property 'searchParams' does not exist on type 'string'.
     return url.toString()
   })
 }
@@ -57,20 +57,20 @@ function getUrls(url: string | URL, names: string[]) {
 
 ```ts
 function printValueLater(value: string | undefined) {
-    if (value === undefined) {
-      value = 'missing!'
-    }
+  if (value === undefined) {
+    value = 'missing!'
+  }
 
-    setTimeout(() => {
-      // 修改 `value`，即使是以不影响其类型的方式，也会使闭包中的类型收缩无效。
-      value = value;
-    }, 500);
+  setTimeout(() => {
+    // 修改 `value`，即使是以不影响其类型的方式，也会使闭包中的类型收缩无效。
+    value = value
+  }, 500)
 
-    setTimeout(() => {
-      console.log(value.toUpperCase())
-//                ^^^^^
-// error: 'value' is possibly 'undefined'.
-    }, 1000);
+  setTimeout(() => {
+    console.log(value.toUpperCase())
+    //                ^^^^^
+    // error: 'value' is possibly 'undefined'.
+  }, 1000)
 }
 ```
 
@@ -94,32 +94,25 @@ foo('bar')
 例如，我们实现一个 `createStreetLight` 函数，它传入 颜色名称列表以及可选的默认颜色。
 
 ```ts
-function createStreetLight<C extends string>(
-  colors: C[],
-  defaultColor?: C
-) {
-    // ...
+function createStreetLight<C extends string>(colors: C[], defaultColor?: C) {
+  // ...
 }
 
-createStreetLight(["red", "yellow", "green"], "red")
+createStreetLight(['red', 'yellow', 'green'], 'red')
 ```
 
 当我们传入的 `defaultColor` 不在 `colors` 列表中时，会发生什么？
 
 ```ts twoslash
-function createStreetLight<C extends string>(
-  colors: C[],
-  defaultColor?: C
-) {
-    // ...
+function createStreetLight<C extends string>(colors: C[], defaultColor?: C) {
+  // ...
 }
 // 这不符合预期，但还是通过了检查
-createStreetLight(["red", "yellow", "green"], "blue")
+createStreetLight(['red', 'yellow', 'green'], 'blue')
 // ^?
-        //
-        //
-        //
-
+//
+//
+//
 ```
 
 在这个调用中，类型推断会认为 `"blue"` 与 `"red"`、`"yellow"` 和 `"green"` 都是 有效的，
@@ -129,15 +122,12 @@ createStreetLight(["red", "yellow", "green"], "blue")
 目前我们通常是添加一个新的类型参数，该参数由现有的类型参数进行约束。
 
 ```ts
-function createStreetLight<
-  C extends string,
-  D extends C
->(colors: C[], defaultColor?: D) {}
+function createStreetLight<C extends string, D extends C>(colors: C[], defaultColor?: D) {}
 
-createStreetLight(["red", "yellow", "green"], "blue");
+createStreetLight(['red', 'yellow', 'green'], 'blue')
 //                                            ^^^^^^
 // error:
-//   Argument of type '"blue"' is not assignable to parameter of 
+//   Argument of type '"blue"' is not assignable to parameter of
 //   type '"red" | "yellow" | "green" | undefined'.
 ```
 
@@ -150,10 +140,10 @@ createStreetLight(["red", "yellow", "green"], "blue");
 
 ```ts
 function createStreetLight<C extends string>(colors: C[], defaultColor?: NoInfer<C>) {
-    // ...
+  // ...
 }
 
-createStreetLight(["red", "yellow", "green"], "blue");
+createStreetLight(['red', 'yellow', 'green'], 'blue')
 //                                            ~~~~~~
 // error:
 //   Argument of type '"blue"' is not assignable to parameter

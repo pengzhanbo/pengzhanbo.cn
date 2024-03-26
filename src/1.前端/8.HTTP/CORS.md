@@ -226,18 +226,18 @@ Access-Control-Allow-Credentials: true
 
 使用带 credentials 的 XHR:
 
-``` js
+```js
 const xhr = new XMLHttpRequest()
 xhr.open('GET', 'https://pengzhanbo.cn', true)
 xhr.withCredentials = true
 xhr.send(null)
 ```
 
-使用带  credentials 的 Fetch:
+使用带 credentials 的 Fetch:
 
-``` js
+```js
 fetch('https://pengzhanbo.cn', {
-  credentials: 'include'
+  credentials: 'include',
 })
 ```
 
@@ -251,7 +251,7 @@ fetch('https://pengzhanbo.cn', {
 
 这些首部字段无需手动设置。
 
-当开发者使用  XMLHttpRequest 发起跨域请求时，它们已经被设置就绪。
+当开发者使用 XMLHttpRequest 发起跨域请求时，它们已经被设置就绪。
 
 ### Origin
 

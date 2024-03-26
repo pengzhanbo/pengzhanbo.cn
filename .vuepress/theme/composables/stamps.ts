@@ -1,7 +1,7 @@
-import { computed } from "vue"
+import { computed } from 'vue'
 import type { ToRefs } from 'vue'
 
-export type StampType = 
+export type StampType =
   // github stamps
   | 'g' // github source
   | 'gs' // github stars
@@ -45,19 +45,13 @@ const npm = 'https://www.npmjs.com/package'
 const defaultLabelColor = '1B3C4A'
 const defaultColor = '32A9C3'
 
-export function useStamps({
-  stamps,
-  repo,
-  subpath,
-  branch,
-  package: packageName
-}: ToRefs<StampsProps>) {
+export function useStamps({ stamps, repo, subpath, branch, package: packageName }: ToRefs<StampsProps>) {
   const info = computed(() => {
     const [, repoName] = repo.value.split('/')
     const npmPackage = packageName?.value ?? repoName
     return { repo: repo.value, npmPackage, subpath: subpath?.value, branch: branch?.value ?? 'main' }
   })
-  
+
   const stampList = computed(() => {
     if (!stamps.value) {
       return []
@@ -66,10 +60,10 @@ export function useStamps({
     const list = Array.isArray(stamps.value)
       ? stamps.value
       : typeof stamps.value === 'string' && stamps.value.includes(',')
-        ? stamps.value.split(',').map(item => item.trim()) as StampType[]
+        ? (stamps.value.split(',').map((item) => item.trim()) as StampType[])
         : [stamps.value]
-  
-    return list.map(item => {
+
+    return list.map((item) => {
       if (typeof item === 'string') {
         return {
           type: item,
@@ -101,7 +95,7 @@ export function resolveStamp(stamp: StampItem): StampInfo {
   const label = stamp.label ?? ''
   const npmLink = `${npm}/${stamp.package}`
 
-  switch(stamp.type) {
+  switch (stamp.type) {
     case 'g':
       return {
         img: `${hostname}/badge/source-a?logo=github&color=${labelColor}`,

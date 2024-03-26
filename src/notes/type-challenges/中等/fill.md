@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/fill/
 Github: []()
 
 ```ts
+
 ```
+
 :::

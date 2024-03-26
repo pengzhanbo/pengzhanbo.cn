@@ -16,6 +16,7 @@ permalink: /type-challenges/
 
 根据 [type-challenges](https://github.com/type-challenges/type-challenges) 的题目难度，
 分为了五个难度：
+
 - `热身`
 - `简单`
 - `中等`

@@ -11,6 +11,7 @@ permalink: /interview-question/7fmfc0hi/
 
 1. 简单介绍一下 axios
 2. axios拦截器是如何实现的？
+
 :::
 
 ## axios
@@ -43,7 +44,7 @@ axios的拦截器分为 请求体拦截器 和 响应体拦截器，
 `use()` 方法接受两个参数： `fulfilled` 和 `rejected` 函数，
 参数以 `{ fulfilled, rejected }` 的形式推送到 `handlers` 的尾部。
 
-``` js
+```js
 class Interceptor {
   constructor() {
     this.handlers = []
@@ -58,7 +59,7 @@ class Interceptor {
 在发起请求前，初始化一个 promise, 并直接返回 请求体数据`requestConfig`,
 同时以 请求对象实例，初始化一个 promise 队列 `[dispatchRequest, undefined]`
 
-``` js
+```js
 let promise = Promise.resolve(requestConfig)
 // dispatchRequest，即一个 实例化后封装的 XMLHttpRequests，返回一个 promise.resolve(response)
 const chain = [dispatchRequest, undefined]
@@ -69,7 +70,7 @@ const chain = [dispatchRequest, undefined]
 
 最后将得到 chain 数组，作为参数，循环传入 promise.then 的链式调用中,
 
-``` js
+```js
 while (chain.length) {
   promise = promise.then(chain.shift(), chain.shift())
 }

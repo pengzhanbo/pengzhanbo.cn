@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/camel-case/
 Github: []()
 
 ```ts
+
 ```
+
 :::

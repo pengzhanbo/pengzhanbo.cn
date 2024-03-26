@@ -10,6 +10,7 @@ permalink: /defensive-css/long-content/
 这是常见的联系人列表，现在看起来很完美。
 
 :::demo-wrapper
+
 <div class="demo1-user-list">
   <div class="demo1-user-list__item"><span></span><p>老王</p></div>
   <div class="demo1-user-list__item"><span></span><p>老张</p></div>
@@ -18,7 +19,7 @@ permalink: /defensive-css/long-content/
 </div>
 :::
 
-<style scoped>
+<style>
 .demo1-user-list {
   margin:20px auto;
   padding:10px;
@@ -59,6 +60,7 @@ permalink: /defensive-css/long-content/
 如：
 
 :::demo-wrapper
+
 <div class="demo1-user-list">
   <div class="demo1-user-list__item"><span></span><p>隔壁家的老王</p></div>
   <div class="demo1-user-list__item"><span></span><p>东大街的老张</p></div>
@@ -78,6 +80,7 @@ permalink: /defensive-css/long-content/
 ```
 
 :::demo-wrapper
+
 <div class="demo1-user-list">
   <div class="demo1-user-list__item"><span></span><p class="username">隔壁家的老王</p></div>
   <div class="demo1-user-list__item"><span></span><p class="username">东大街的老张</p></div>
@@ -91,6 +94,7 @@ permalink: /defensive-css/long-content/
 在某些情况下，我们可能需要截断对用户不重要或不影响用户体验的文本。在这种情况下，截断文本是个好主意。
 
 :::normal-demo text-overflow: ellipsis
+
 ```html
 <p>调整容器大小查看效果：</p>
 <div class="wrapper">
@@ -100,10 +104,11 @@ permalink: /defensive-css/long-content/
   </div>
 </div>
 <div class="actions">
-  <input type="checkbox" id="toggle">
+  <input type="checkbox" id="toggle" />
   <label for="toggle">启用 text-overflow</label>
 </div>
 ```
+
 ```css
 .wrapper {
   position: relative;
@@ -122,7 +127,7 @@ permalink: /defensive-css/long-content/
   background: var(--vp-c-bg-alt, #f0f0f0);
 }
 .wrapper::after {
-  content: "Resize me";
+  content: 'Resize me';
   position: absolute;
   right: 0;
   top: 50%;
@@ -147,11 +152,12 @@ permalink: /defensive-css/long-content/
   text-overflow: ellipsis;
 }
 ```
+
 ```js
-const til = document.querySelector('#title');
+const til = document.querySelector('#title')
 document.querySelector('#toggle').addEventListener('change', (e) => {
-  til.classList.toggle('ellipsis', e.target.checked);
+  til.classList.toggle('ellipsis', e.target.checked)
 })
 ```
-:::
 
+:::

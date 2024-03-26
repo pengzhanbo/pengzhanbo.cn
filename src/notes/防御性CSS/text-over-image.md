@@ -11,31 +11,30 @@ permalink: /defensive-css/text-over-image/
 
 看下面的示例：
 
-<style scoped>
-.demo-wrapper .demo-container {
-  background: var(--vp-c-bg);
+<style>
+.image-wrapper-113 {
+  background-color: var(--vp-c-bg);
+  padding: 20px;
 }
-.image-cover {
+.image-cover-113 {
   position: relative;
   width: 200px;
   height: 133px;
   overflow: hidden;
-  border: 1px solid var(--vp-c-divider);
   border-radius: 5px;
-  box-shadow: var(--vp-shadow-2);
   margin: 20px auto;
 }
-.image-cover img {
+.image-cover-113 img {
   width: 200px;
   height: 133px;
   object-fit: cover;
 }
 
-.image-cover img.bg {
+.image-cover-113 img.bg {
   background-color: var(--vp-c-gray-1);
 }
 
-.image-cover p {
+.image-cover-113 p {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -48,33 +47,42 @@ permalink: /defensive-css/text-over-image/
 }
 </style>
 
-:::demo-wrapper
-<div class="image-cover">
-  <img src="/images/defensive-css/ratio.png">
+:::demo-wrapper no-padding
+
+<div class="image-wrapper-113">
+<div class="image-cover-113">
+  <img src="/images/defensive-css/ratio.png" alt="">
   <p>美食</p>
+</div>
 </div>
 :::
 
 但是，当图片加载失败时, 文本几乎看不见。
 
-:::demo-wrapper
-<div class="image-cover">
-  <img src="">
+:::demo-wrapper no-padding
+
+<div class="image-wrapper-113">
+<div class="image-cover-113">
+  <img src="" alt="">
   <p>美食</p>
+</div>
 </div>
 :::
 
 我们可以通过为 `<img>` 元素添加背景颜色来解决这个问题。
 仅当图像加载失败时，此背景才可见。
 
-:::demo-wrapper
-<div class="image-cover">
-  <img src="/images/defensive-css/ratio.png">
+:::demo-wrapper no-padding
+
+<div class="image-wrapper-113">
+<div class="image-cover-113">
+  <img src="/images/defensive-css/ratio.png" alt="">
   <p>美食</p>
 </div>
 
-<div class="image-cover">
-  <img src="" class="bg">
+<div class="image-cover-113">
+  <img src="" class="bg" alt="">
   <p>美食</p>
+</div>
 </div>
 :::

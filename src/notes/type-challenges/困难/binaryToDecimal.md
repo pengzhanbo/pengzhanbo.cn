@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/binary-to-decimal/
 Github: []()
 
 ```ts
+
 ```
+
 :::

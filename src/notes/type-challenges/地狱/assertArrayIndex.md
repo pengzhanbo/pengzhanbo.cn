@@ -9,6 +9,7 @@ permalink: /type-challenges/extreme/assert-array-index/
 Github: []()
 
 ```ts
+
 ```
 
 :::

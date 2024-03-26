@@ -9,5 +9,7 @@ permalink: /type-challenges/sum/
 Github: []()
 
 ```ts
+
 ```
+
 :::

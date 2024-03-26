@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/number-range/
 Github: []()
 
 ```ts
+
 ```
+
 :::

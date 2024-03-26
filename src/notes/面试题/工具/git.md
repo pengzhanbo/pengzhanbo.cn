@@ -12,6 +12,7 @@ permalink: /interview-question/ku3jvbnj/
 3. git pull 和 git fetch有什么区别？
 4. git merge 和 git rebase 有什么区别？
 5. git-flow 是什么？
+
 :::
 
 ## 什么是 git
@@ -55,7 +56,7 @@ git-flow 分支规范：
 
 - master ：主分支，存储项目正式发布历史。
 - develop: 开发分支，用作 feature 分支的 集合分支。
-- feature/*: 从开发分支拉取的 功能分支，开发完成后推送到 开发分支，不跟 主分支产生交互
+- feature/\*: 从开发分支拉取的 功能分支，开发完成后推送到 开发分支，不跟 主分支产生交互
 - release： 发布分支，当开发分支累计了一定量的发布功能，就从开发分支分离一条 release分支，
   此时 develop分支不再添加新的功能，仅能做一些修复、文档相关的面向发布的任务。
 - hotfix： 紧急修复分支，用于发布产品的补丁，从master分支分离，发布完成后应该马上合并回master分支，

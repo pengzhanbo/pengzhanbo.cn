@@ -16,4 +16,3 @@ img {
   object-fit: cover;
 }
 ```
-

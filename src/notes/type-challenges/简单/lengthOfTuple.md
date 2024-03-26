@@ -17,6 +17,7 @@ type spaceX = ['FALCON 9', 'FALCON HEAVY', 'DRAGON', 'STARSHIP', 'HUMAN SPACEFLI
 type teslaLength = Length<tesla> // expected 4
 type spaceXLength = Length<spaceX> // expected 5
 ```
+
 :::
 
 ### 解题思路
@@ -26,7 +27,7 @@ type spaceXLength = Length<spaceX> // expected 5
 
 ### 答案
 
-``` ts
+```ts
 type Length<T extends readonly any[]> = T['length']
 ```
 

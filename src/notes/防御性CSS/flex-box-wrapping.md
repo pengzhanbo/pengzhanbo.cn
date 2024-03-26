@@ -15,8 +15,8 @@ permalink: /defensive-css/flex-box-wrapping/
 
 下面是一个 典型例子，我们有一组选项，应该彼此相邻：
 
-<style scoped>
-.flexbox {
+<style>
+.flexbox-110 {
   display: flex;
   width: 230px;
   margin: auto;
@@ -28,13 +28,13 @@ permalink: /defensive-css/flex-box-wrapping/
   box-shadow: var(--vp-shadow-2);
 
 }
-.flexbox.small {
+.flexbox-110.small {
   width: 140px;
 }
-.flexbox.wrap {
+.flexbox-110.wrap {
   flex-wrap: wrap;
 }
-.flexbox .item {
+.flexbox-110 .item {
   width: 50px;
   height: 50px;
   text-align: center;
@@ -44,9 +44,10 @@ permalink: /defensive-css/flex-box-wrapping/
 </style>
 
 :::demo-wrapper
+
 <p align="center">容器空间足够</p>
 
-<div class="flexbox">
+<div class="flexbox-110">
   <div class="item">opts1</div>
   <div class="item">opts2</div>
   <div class="item">opts3</div>
@@ -57,8 +58,9 @@ permalink: /defensive-css/flex-box-wrapping/
 当容器空间较小时，容器内的子项将被挤压，甚至溢出容器。这应该是意料之中的，实际上并不是一个“问题”。
 
 :::demo-wrapper
+
 <p align="center">容器空间不足</p>
-<div class="flexbox small">
+<div class="flexbox-110 small">
   <div class="item">opts1</div>
   <div class="item">opts2</div>
   <div class="item">opts3</div>
@@ -69,7 +71,8 @@ permalink: /defensive-css/flex-box-wrapping/
 请注意，这些子项仍然彼此相邻。为了解决这个问题，我们需要使用 `flex-wrap: wrap`：
 
 :::demo-wrapper
-<div class="flexbox small wrap">
+
+<div class="flexbox-110 small wrap">
   <div class="item">opts1</div>
   <div class="item">opts2</div>
   <div class="item">opts3</div>
@@ -80,6 +83,7 @@ permalink: /defensive-css/flex-box-wrapping/
 ## 示例：面包屑导航
 
 :::normal-demo 面包屑导航
+
 ```html
 <p>调整容器大小查看效果：</p>
 <div class="wrapper">
@@ -90,10 +94,11 @@ permalink: /defensive-css/flex-box-wrapping/
   </ul>
 </div>
 <div class="actions">
-  <input type="checkbox" id="toggle">
+  <input type="checkbox" id="toggle" />
   <label for="toggle">启用 Flex Wrap</label>
 </div>
 ```
+
 ```css
 .wrapper {
   position: relative;
@@ -112,7 +117,7 @@ permalink: /defensive-css/flex-box-wrapping/
   background: var(--vp-c-bg-alt, #f0f0f0);
 }
 .wrapper::after {
-  content: "Resize me";
+  content: 'Resize me';
   position: absolute;
   right: 0;
   top: 50%;
@@ -127,20 +132,20 @@ permalink: /defensive-css/flex-box-wrapping/
   padding-left: 0;
 }
 .item:not(:last-child):after {
-    content: ">";
-    margin-left: 0.5rem;
-    margin-right: 1rem;
+  content: '>';
+  margin-left: 0.5rem;
+  margin-right: 1rem;
 }
 .item a {
   color: var(--vp-c-brand, #5086a1);
 }
 ```
+
 ```js
-const breadcrumbs = document.querySelector('#breadcrumbs');
+const breadcrumbs = document.querySelector('#breadcrumbs')
 document.querySelector('#toggle').addEventListener('change', (e) => {
-  breadcrumbs.style.flexWrap = e.target.checked ? 'wrap' : 'nowrap';
+  breadcrumbs.style.flexWrap = e.target.checked ? 'wrap' : 'nowrap'
 })
 ```
+
 :::
-
-

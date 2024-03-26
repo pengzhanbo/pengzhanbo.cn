@@ -9,8 +9,8 @@ tags:
 
 ## 语义标签
 
-如 `<header>` `<footer>` `<nav>` `<section>`  `<article>` `<aside>`  `<details>`  `<summary>`  
-`<dialog>` `<figure>`  `<main>`  `<mark>`  `<time>`  `<hgroup>` 等
+如 `<header>` `<footer>` `<nav>` `<section>` `<article>` `<aside>` `<details>` `<summary>`  
+`<dialog>` `<figure>` `<main>` `<mark>` `<time>` `<hgroup>` 等
 
 ## 增强型表单
 
@@ -62,7 +62,7 @@ time： 选择时间
 
 email： 包含 email的地址输入域
 
-number:  数值选择
+number: 数值选择
 
 url： url输入域
 
@@ -74,23 +74,23 @@ range： 数字范围输入域
 
 ## 视频和音频
 
-`<audio>`  音频元素
+`<audio>` 音频元素
 
 ```html
-<audio controls>    
-  <source src="horse.ogg" type="audio/ogg">
-  <source src="horse.mp3" type="audio/mpeg">
- 您的浏览器不支持 audio 元素
+<audio controls>
+  <source src="horse.ogg" type="audio/ogg" />
+  <source src="horse.mp3" type="audio/mpeg" />
+  您的浏览器不支持 audio 元素
 </audio>
 ```
 
-`<video>`  视频元素
+`<video>` 视频元素
 
 ```html
 <video width="320" height="240" controls>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-您的浏览器不支持Video标签。
+  <source src="movie.mp4" type="video/mp4" />
+  <source src="movie.ogg" type="video/ogg" />
+  您的浏览器不支持Video标签。
 </video>
 ```
 
@@ -170,14 +170,14 @@ Chrome浏览器中发起资源请求的有6个线程；但是只有1个线程负
 var worker = new Worker('xx.js')
 worker.postMessage('message') // 发送消息到worker线程
 worker.onmessage = function (e) {
- console.log(e.data) // 来自worker线程的信息
+  console.log(e.data) // 来自worker线程的信息
 }
 
 // worker线程
 onmessage = function (e) {
- console.log(e.data) // 接收主线程的消息
+  console.log(e.data) // 接收主线程的消息
 
- postMessage('message') // 发送消息到主线程
+  postMessage('message') // 发送消息到主线程
 }
 ```
 
@@ -186,29 +186,28 @@ onmessage = function (e) {
 一个共享worker可以被多个脚本使用——即使这些脚本正在被不同的window、iframe或者worker访问。
 
 > 如果共享worker可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。
->
 
 ```jsx
-var myWorker = new SharedWorker('worker.js');
+var myWorker = new SharedWorker('worker.js')
 
 // 主线程中调用
 myWorker.port.start()
 
-myWorker.port.postMessage('message');
+myWorker.port.postMessage('message')
 
-myWorker.port.onmessage = function(e) {
-  console.log('Message received from worker');
+myWorker.port.onmessage = function (e) {
+  console.log('Message received from worker')
 }
 
 // worker 线程调用
-port.start();
+port.start()
 // worker 需要在 onconnect事件处理函数来执行代码
-onconnect = function(e) {
-  var port = e.ports[0];
+onconnect = function (e) {
+  var port = e.ports[0]
 
-  port.onmessage = function(e) {
-    var workerResult = 'Result: ' + (e.data);
-    port.postMessage(workerResult);
+  port.onmessage = function (e) {
+    var workerResult = 'Result: ' + e.data
+    port.postMessage(workerResult)
   }
 }
 ```
@@ -231,7 +230,7 @@ onconnect = function(e) {
 const ws = new WebSocket('wx://xx')
 ws.onopen = function () {}
 ws.onmessage = function (e) {
- console.log(e.data)
+  console.log(e.data)
 }
 ```
 
@@ -268,10 +267,10 @@ history.replaceState({}, 'bar', 'bar.html')
 
 ```jsx
 // 尝试通过 pushState 创建历史条目,然后再刷新页面查看state状态对象变化;
-  window.addEventListener('load',() => {
-    let currentState = history.state;
-    console.log('currentState',currentState);
-  })
+window.addEventListener('load', () => {
+  let currentState = history.state
+  console.log('currentState', currentState)
+})
 ```
 
 [History API - Web API 接口参考 | MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API)

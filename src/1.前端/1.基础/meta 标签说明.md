@@ -21,12 +21,12 @@ tags:
 
 ## 属性
 
-| 属性 | 是否可选 | 描述 |
-| :----: | :----:     | :----  |
-| content | 必选  | 定义与 http-equiv 或 name 属性相关的元信息。  |
-| http-equiv | 可选 | 把 content 属性关联到 HTTP 头部。 |
-| name | 可选 | 把 content 属性关联到一个名称。 |
-| charset | 可选 | 定义编码格式 |
+|    属性    | 是否可选 | 描述                                         |
+| :--------: | :------: | :------------------------------------------- |
+|  content   |   必选   | 定义与 http-equiv 或 name 属性相关的元信息。 |
+| http-equiv |   可选   | 把 content 属性关联到 HTTP 头部。            |
+|    name    |   可选   | 把 content 属性关联到一个名称。              |
+|  charset   |   可选   | 定义编码格式                                 |
 
 ## 常用meta标签说明
 
@@ -37,8 +37,7 @@ charset是声明文档使用的字符编码，主要用于解决编码问题导�
 两种charset的写法
 
 ```html
-<meta charset="utf-8">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8" /> <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 ```
 
 ## viewport
@@ -46,7 +45,7 @@ charset是声明文档使用的字符编码，主要用于解决编码问题导�
 viewport主要是影响移动端页面布局
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
 
 **content 参数：**
@@ -64,14 +63,14 @@ viewport主要是影响移动端页面布局
 <!-- 页面标题<title>标签(head 头部必须) -->
 <title>your title</title>
 <!-- 页面关键词 keywords -->
-<meta name="keywords" content="your keywords">
+<meta name="keywords" content="your keywords" />
 <!-- 页面描述内容 description -->
-<meta name="description" content="your description">
+<meta name="description" content="your description" />
 <!-- 定义网页作者 author -->
-<meta name="author" content="author,email address">
+<meta name="author" content="author,email address" />
 <!-- 定义网页搜索引擎索引方式，robotterms 是一组使用英文逗号「,」分割的值，
 通常有如下几种取值：none，noindex，nofollow，all，index和follow。 -->
-<meta name="robots" content="index,follow">
+<meta name="robots" content="index,follow" />
 ```
 
 **robots具体参数如下：**
@@ -93,29 +92,29 @@ viewport主要是影响移动端页面布局
 <!-- 设置苹果工具栏颜色 -->
 <meta name="format-detection" content="telphone=no, email=no" />
 <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
- 
+
 <!-- 启用360浏览器的极速模式(webkit) -->
-<meta name="renderer" content="webkit">
+<meta name="renderer" content="webkit" />
 <!-- 避免IE使用兼容模式 -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-<meta name="HandheldFriendly" content="true">
+<meta name="HandheldFriendly" content="true" />
 <!-- 微软的老式浏览器 -->
-<meta name="MobileOptimized" content="320">
+<meta name="MobileOptimized" content="320" />
 <!-- uc强制竖屏 -->
-<meta name="screen-orientation" content="portrait">
+<meta name="screen-orientation" content="portrait" />
 <!-- QQ强制竖屏 -->
-<meta name="x5-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait" />
 <!-- UC强制全屏 -->
-<meta name="full-screen" content="yes">
+<meta name="full-screen" content="yes" />
 <!-- QQ强制全屏 -->
-<meta name="x5-fullscreen" content="true">
+<meta name="x5-fullscreen" content="true" />
 <!-- UC应用模式 -->
-<meta name="browsermode" content="application">
+<meta name="browsermode" content="application" />
 <!-- QQ应用模式 -->
-<meta name="x5-page-mode" content="app">
+<meta name="x5-page-mode" content="app" />
 <!-- windows phone 点击无高光 -->
-<meta name="msapplication-tap-highlight" content="no">
+<meta name="msapplication-tap-highlight" content="no" />
 ```
 
 ### 百度禁止转码
@@ -130,17 +129,17 @@ viewport主要是影响移动端页面布局
 
 ```html
 <!-- 优先使用最新的ie版本 -->
-<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
 <!-- 是否开启cleartype显示效果 -->
-<meta http-equiv="cleartype" content="on">
-<meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
- 
+<meta http-equiv="cleartype" content="on" />
+<meta name="skype_toolbar" content="skype_toolbar_parser_compatible" />
+
 <!-- Pinned Site -->
 <!-- IE 10 / Windows 8 -->
-<meta name="msapplication-TileImage" content="pinned-tile-144.png">
-<meta name="msapplication-TileColor" content="#009900">
+<meta name="msapplication-TileImage" content="pinned-tile-144.png" />
+<meta name="msapplication-TileColor" content="#009900" />
 <!-- IE 11 / Windows 9.1 -->
-<meta name="msapplication-config" content="ieconfig.xml">
+<meta name="msapplication-config" content="ieconfig.xml" />
 ```
 
 ### Google Chrome
@@ -149,69 +148,68 @@ viewport主要是影响移动端页面布局
 <!-- 优先使用最新的chrome版本 -->
 <meta http-equiv="X-UA-Compatible" content="chrome=1" />
 <!-- 禁止自动翻译 -->
-<meta name="google" value="notranslate">
+<meta name="google" value="notranslate" />
 ```
 
 ### 360浏览器
 
 ```html
 <!-- 选择使用的浏览器解析内核 -->
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta name="renderer" content="webkit|ie-comp|ie-stand" />
 ```
 
 ### UC手机浏览器
 
 ```html
 <!-- 将屏幕锁定在特定的方向 -->
-<meta name="screen-orientation" content="landscape/portrait">
+<meta name="screen-orientation" content="landscape/portrait" />
 <!-- 全屏显示页面 -->
-<meta name="full-screen" content="yes">
+<meta name="full-screen" content="yes" />
 <!-- 强制图片显示，即使是"text mode" -->
-<meta name="imagemode" content="force">
+<meta name="imagemode" content="force" />
 <!-- 应用模式，默认将全屏，禁止长按菜单，禁止手势，标准排版，强制图片显示。 -->
-<meta name="browsermode" content="application">
+<meta name="browsermode" content="application" />
 <!-- 禁止夜间模式显示 -->
-<meta name="nightmode" content="disable">
+<meta name="nightmode" content="disable" />
 <!-- 使用适屏模式显示 -->
-<meta name="layoutmode" content="fitscreen">
+<meta name="layoutmode" content="fitscreen" />
 <!-- 当页面有太多文字时禁止缩放 -->
-<meta name="wap-font-scale" content="no">
+<meta name="wap-font-scale" content="no" />
 ```
 
 ### QQ手机浏览器
 
 ```html
 <!-- 锁定屏幕在特定方向 -->
-<meta name="x5-orientation" content="landscape/portrait">
+<meta name="x5-orientation" content="landscape/portrait" />
 <!-- 全屏显示 -->
-<meta name="x5-fullscreen" content="true">
+<meta name="x5-fullscreen" content="true" />
 <!-- 页面将以应用模式显示 -->
-<meta name="x5-page-mode" content="app">
+<meta name="x5-page-mode" content="app" />
 ```
 
 ### Apple iOS
 
 ```html
 <!-- Smart App Banner -->
-<meta name="apple-itunes-app" 
-content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT">
- 
+<meta name="apple-itunes-app" content="app-id=APP_ID,affiliate-data=AFFILIATE_ID,app-argument=SOME_TEXT" />
+
 <!-- 禁止自动探测并格式化手机号码 -->
-<meta name="format-detection" content="telephone=no">
- 
+<meta name="format-detection" content="telephone=no" />
+
 <!-- Add to Home Screen添加到主屏 -->
 <!-- 是否启用 WebApp 全屏模式 -->
-<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes" />
 <!-- 设置状态栏的背景颜色,只有在 “apple-mobile-web-app-capable” content=”yes” 时生效 -->
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <!-- 添加到主屏后的标题 -->
-<meta name="apple-mobile-web-app-title" content="App Title">
+<meta name="apple-mobile-web-app-title" content="App Title" />
 ```
 
 ### Google Android
 
 ```html
-<meta name="theme-color" content="#E64545">
+<meta name="theme-color" content="#E64545" />
 <!-- 添加到主屏 -->
-<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes" />
 ```

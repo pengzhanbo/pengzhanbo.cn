@@ -15,8 +15,8 @@ type Arr = ['1', '2', '3']
 
 type Test = TupleToUnion<Arr> // expected to be '1' | '2' | '3'
 ```
-:::
 
+:::
 
 ### 解题思路
 
@@ -29,7 +29,9 @@ type Test = TupleToUnion<Arr> // expected to be '1' | '2' | '3'
 在访问元组的成员时，可以通过 `[number]` 索引，访问一个 由元组所有成员构成的联合类型。
 
 ::: details Answer
+
 ```ts
 type TupleToUnion<T extends any[]> = T[number]
 ```
+
 :::

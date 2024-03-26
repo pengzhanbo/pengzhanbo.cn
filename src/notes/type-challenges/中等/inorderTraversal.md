@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/in-order-traversal/
 Github: []()
 
 ```ts
+
 ```
+
 :::

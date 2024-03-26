@@ -9,5 +9,7 @@ permalink: /type-challenges/medium/replace-all/
 Github: []()
 
 ```ts
+
 ```
+
 :::

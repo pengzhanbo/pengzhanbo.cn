@@ -49,7 +49,7 @@ permalink: /article/hdx2maf6/
    :::
 
 2. 如果你还未设置过 本地替换项，则开发者工具会在顶部的的操作栏中，提示你 选择一个 本地文件夹，
-用于将 替换的文件保存到 本地的文件夹中作为副本。
+   用于将 替换的文件保存到 本地的文件夹中作为副本。
 
    ::: center
    ![select folder](/images/chrome-override/select-folder.png)

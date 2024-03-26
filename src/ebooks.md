@@ -69,4 +69,4 @@ article: false
 ## 计算机网络
 
 - <Badge >推荐</Badge> **`《HTTP权威指南》`** - 工具书
-- <Badge >推荐</Badge> **`《图解HTTP》`**  - 入门
+- <Badge >推荐</Badge> **`《图解HTTP》`** - 入门

@@ -10,14 +10,14 @@ Github: [First of array](https://github.com/type-challenges/type-challenges/blob
 
 实现一个通用`First<T>`，它接受一个数组T并返回它的第一个元素的类型。
 
-
-``` ts
+```ts
 type arr1 = ['a', 'b', 'c']
 type arr2 = [3, 2, 1]
 
 type head1 = First<arr1> // expected to be 'a'
 type head2 = First<arr2> // expected to be 3
 ```
+
 :::
 
 ### 解题思路
@@ -38,4 +38,3 @@ type First<T extends any[]> = T extends [] ? never : T[0]
 
 > - [索引访问类型 Indexed Types](https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html)
 > - [条件类型 Conditional Types](https://www.typescriptlang.org/docs/handbook/2/conditional-types.html)
-

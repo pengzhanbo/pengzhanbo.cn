@@ -15,14 +15,14 @@ Github: [Exclude](https://github.com/type-challenges/type-challenges/blob/main/q
 ```ts
 type Result = MyExclude<'a' | 'b' | 'c', 'a'> // 'b' | 'c'
 ```
+
 :::
 
 ### 解题思路
 
 在 typescript 中， 条件类型是 可分配的。 在 `T extends U` 且 `T` 是联合类型时，实际上发生的是 typescript 遍历联合类型 `T` 中的每一个元素，并将条件判断应用到每一个元素上。
 
-所以可以通过这一特性，检查 `T` 的元素是否满足 `U` 的约束，如果是，则跳过 
-
+所以可以通过这一特性，检查 `T` 的元素是否满足 `U` 的约束，如果是，则跳过
 
 ```ts
 type MyExclude<T, U> = T extends U ? never : T

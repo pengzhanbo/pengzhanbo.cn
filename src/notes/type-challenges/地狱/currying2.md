@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/currying-2/
 Github: []()
 
 ```ts
+
 ```
+
 :::

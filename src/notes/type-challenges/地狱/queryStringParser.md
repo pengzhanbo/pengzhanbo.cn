@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/query-string-parser/
 Github: []()
 
 ```ts
+
 ```
+
 :::

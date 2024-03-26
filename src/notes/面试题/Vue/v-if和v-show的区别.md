@@ -10,6 +10,7 @@ permalink: /interview-question/nx0xqyp5/
 1. `v-if` 和 `v-show` 有什么共同点？
 2. 有什么区别？
 3. 该如何选择使用哪个？
+
 :::
 
 ## 共同点

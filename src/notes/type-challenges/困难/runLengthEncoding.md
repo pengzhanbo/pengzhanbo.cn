@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/run-length-encoding/
 Github: []()
 
 ```ts
+
 ```
+
 :::

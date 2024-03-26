@@ -12,7 +12,6 @@ Github: [Type lookup](https://github.com/type-challenges/type-challenges/blob/ma
 
 在此挑战中，我们想通过在联合类型`Cat | Dog`中搜索公共type字段来获取相应的类型。换句话说，在以下示例中，我们期望`LookUp<Dog | Cat, 'dog'>`获得`Dog`，`LookUp<Dog | Cat, 'cat'>`获得`Cat`。
 
-
 ```ts
 interface Cat {
   type: 'cat'
@@ -27,11 +26,13 @@ interface Dog {
 
 type MyDog = LookUp<Cat | Dog, 'dog'> // expected to be `Dog`
 ```
+
 :::
 
-
 ::: details Answer
+
 ```ts
 type LookUp<U, T> = U extends { type: T } ? U : never
 ```
+
 :::

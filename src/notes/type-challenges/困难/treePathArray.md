@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/tree-path-array/
 Github: []()
 
 ```ts
+
 ```
+
 :::

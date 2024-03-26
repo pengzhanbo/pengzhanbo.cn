@@ -81,7 +81,7 @@ cargo new new_package
 
 `run` 命令是编译速度优先，不会对代码进行优化，牺牲了运行速度，换取 package 尽快编译完成然后启动，适合在开发时进行调试时使用。
 
-`--` ： 分隔命令行参数，`—` 后面的参数会传递给当前运行的  `package`
+`--` ： 分隔命令行参数，`—` 后面的参数会传递给当前运行的 `package`
 
 `options` (常用):
 
@@ -101,6 +101,6 @@ cargo new new_package
 添加新的 依赖库 到 `Cargo.toml manifest file`
 
 - `cargo add [options] crate...` 从 [crate.io](https://crate.io) 安装指定的依赖库
-- `crate@version`  添加指定版本的 依赖库
+- `crate@version` 添加指定版本的 依赖库
 - `cargo add [options] --path path` 从指定的 `path` 安装依赖库
 - `cargo add [options] --git git` 从 指定的 `git` 地址 安装依赖库

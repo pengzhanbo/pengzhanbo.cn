@@ -39,38 +39,39 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 
 - 共享缓存：只要有一个用户发起的对同一个资源的首次到达代理服务器的请求，代理服务器对该资源缓存后，其他用户请求代理服务器上的资源，
   在缓存有效时间内，代理服务器不再向原始服务器获取新的资源，返回代理服务为缓存的资源副本。
+
 :::
 
 ## 主要的HTTP Headers
 
 - 通用首部字段
 
-  |   字段               |    说明      |
-  |   --                |     --      |
-  | Cache-Control       | 控制缓存行为  |
-  | Pragma              | http1.0时代的产物，值为 no-cache 时禁用缓存 |
+  | 字段          | 说明                                        |
+  | ------------- | ------------------------------------------- |
+  | Cache-Control | 控制缓存行为                                |
+  | Pragma        | http1.0时代的产物，值为 no-cache 时禁用缓存 |
 
 - 请求头部字段 Request Headers
-  
-  |   字段               |    说明      |
-  |   --                |     --      |
-  | If-Match            | 比较 ETag 是否一致   |
-  | If-None-Match       | 比较 ETag 是否不一致  |
-  | If-Modified-Since   | 比较资源最后更新时间是否一致 |
+
+  | 字段                | 说明                           |
+  | ------------------- | ------------------------------ |
+  | If-Match            | 比较 ETag 是否一致             |
+  | If-None-Match       | 比较 ETag 是否不一致           |
+  | If-Modified-Since   | 比较资源最后更新时间是否一致   |
   | If-Unmodified-Since | 比较资源最后更新时间是否不一致 |
 
 - 响应头部字段 Response Headers
-  
-  |   字段               |    说明      |
-  |   --                |     --      |
-  | ETag                | 资源匹配信息  |
+
+  | 字段 | 说明         |
+  | ---- | ------------ |
+  | ETag | 资源匹配信息 |
 
 - 实体头部字段
-  
-  |   字段               |    说明      |
-  |   --                |     --      |
-  | Expires             | http1.0时代的产物，实体主体过期时间 |
-  | Last-Modified       | 资源的最后一次更新时间 |
+
+  | 字段          | 说明                                |
+  | ------------- | ----------------------------------- |
+  | Expires       | http1.0时代的产物，实体主体过期时间 |
+  | Last-Modified | 资源的最后一次更新时间              |
 
 ::: warning 提醒
 `Pragma`、`Expires` 这两个header是 http1.0中的内容，在 http1.1及往后的版本中逐步被弃用。
@@ -91,8 +92,8 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 
 在客户端使用时，通常做法是在 HTML中加上一个 meta 标签：
 
-``` html
-<meta http-equiv="Pragma" content="no-cache">
+```html
+<meta http-equiv="Pragma" content="no-cache" />
 ```
 
 ::: caution 警告
@@ -100,6 +101,7 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 - 这个标签声明仅有 IE才能识别含义，其他主流浏览器不兼容。
 - 在IE浏览器中，虽然能够识别含义，但并不一定会在请求Request Header中加上Pragma，但确实会让当前页面每次都发起新请求。
   （仅限页面html文件，页面内使用的其他资源不受影响。）
+
 :::
 
 在服务端配置为 Response Header 时，浏览器读取到该字段，会禁用缓存行为，后续的对同一资源的请求会重新发起请求而不使用缓存。
@@ -107,7 +109,7 @@ HTTP缓存，根据是否需要重新向服务器发起请求，可分为两大�
 ::: warning 提醒
 由于`Pragma` 在浏览器端的兼容问题，在服务器端又有其他字段能更好的控制缓存行为，Pragma 字段基本已经被抛弃，不再使用，
 
-*除了部分网站出于兼容性考虑，还会带上该字段。*
+_除了部分网站出于兼容性考虑，还会带上该字段。_
 :::
 
 ### Expires
@@ -119,8 +121,8 @@ Expires 的值是一个 GMT时间， 如：`Thu Jun 07 2018 14:26:45 GMT`，用�
 
 在客户端，可以使用 meta标签来告知浏览器缓存时间
 
-``` html
-<meta http-equiv="expires" content="Thu Jun 07 2018 14:26:45 GMT">
+```html
+<meta http-equiv="expires" content="Thu Jun 07 2018 14:26:45 GMT" />
 ```
 
 如果希望不走缓存，每次页面请求都发起新的请求，可以把 content 设置为 -1 或 0。
@@ -162,34 +164,34 @@ Cache-Control: <cache-directive>
 
 - 作为 `Request Headers` 时， `cache-directive` 支持以下可选值
 
-|  字段名称               |  说明      |
-| --                    | --         |
-| no-cache              | 告知(代理)服务器不直接使用缓存，要求从原始服务器发起请求 |
-| no-store              | 所有内容都不会被保存到缓存或 Internet临时文件中 |
-| max-age=delta-seconds | 告知服务器 客户端希望接收一个存在时间（age）不大于 delta-seconds 秒的资源|
-| max-stale\[=delta-seconds] | 告知(代理)服务器 客户端愿意接收一个超过缓存时间的资源，若有定义delta-seconds，则为delta-seconds秒，若没有则为超过任意时间   |
-| min-fresh=delta-seconds | 告知(代理)服务器 客户端希望接收一个在delta-seconds秒内被更新过的资源 |
-| no-transform          | 告知(代理)服务器 客户端希望获取一个实体数据没有被转换(如压缩)过的资源  |
-| only-if-cached        | 告知(代理)服务器 客户端希望获取缓存的资源（若有）,而不用向原服务器发起请求 |
+| 字段名称                   | 说明                                                                                                                      |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| no-cache                   | 告知(代理)服务器不直接使用缓存，要求从原始服务器发起请求                                                                  |
+| no-store                   | 所有内容都不会被保存到缓存或 Internet临时文件中                                                                           |
+| max-age=delta-seconds      | 告知服务器 客户端希望接收一个存在时间（age）不大于 delta-seconds 秒的资源                                                 |
+| max-stale\[=delta-seconds] | 告知(代理)服务器 客户端愿意接收一个超过缓存时间的资源，若有定义delta-seconds，则为delta-seconds秒，若没有则为超过任意时间 |
+| min-fresh=delta-seconds    | 告知(代理)服务器 客户端希望接收一个在delta-seconds秒内被更新过的资源                                                      |
+| no-transform               | 告知(代理)服务器 客户端希望获取一个实体数据没有被转换(如压缩)过的资源                                                     |
+| only-if-cached             | 告知(代理)服务器 客户端希望获取缓存的资源（若有）,而不用向原服务器发起请求                                                |
 
 - 作为 `Response Headers`时，`cache-directive` 支持以下可选值
 
-|  字段名称               |  说明      |
-| --                    | --         |
-| public                | 表明任何情况下都需要缓存该资源 |
-| private[="file-name"] | 表明返回报文中全部或部分(若指定了*file-name*的字段数据)仅开放给某些用户(服务器指定的*share-use*)做缓存使用，其他用户则不能缓存这些数据 |
-| no-cache              | 不直接使用缓存，要求向服务器发起（新鲜度校验）请求 |
-| no-store              | 所有内容都不会被保存到缓存或 Internet临时文件中 |
-| max-age=delta-seconds | 告知客户端该资源在*delta-seconds*秒内是新鲜的，无需向服务器发起请求 |
-| s-max-age=delta-seconds| 同 max-age，但仅应用于 共享缓存 |
-| no-transform          | 告知客户端缓存文件时不得对实体数据做任何改变 |
-| must-revalidate       | 当前资源一定是向原始服务器发去验证请求的，若请求失败会返回504(而非代理服务器上的缓存) |
-| proxy-revalidate      | 和 must-revalidate类似，但仅应用于 共享缓存 |
+| 字段名称                | 说明                                                                                                                                   |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| public                  | 表明任何情况下都需要缓存该资源                                                                                                         |
+| private[="file-name"]   | 表明返回报文中全部或部分(若指定了*file-name*的字段数据)仅开放给某些用户(服务器指定的*share-use*)做缓存使用，其他用户则不能缓存这些数据 |
+| no-cache                | 不直接使用缓存，要求向服务器发起（新鲜度校验）请求                                                                                     |
+| no-store                | 所有内容都不会被保存到缓存或 Internet临时文件中                                                                                        |
+| max-age=delta-seconds   | 告知客户端该资源在*delta-seconds*秒内是新鲜的，无需向服务器发起请求                                                                    |
+| s-max-age=delta-seconds | 同 max-age，但仅应用于 共享缓存                                                                                                        |
+| no-transform            | 告知客户端缓存文件时不得对实体数据做任何改变                                                                                           |
+| must-revalidate         | 当前资源一定是向原始服务器发去验证请求的，若请求失败会返回504(而非代理服务器上的缓存)                                                  |
+| proxy-revalidate        | 和 must-revalidate类似，但仅应用于 共享缓存                                                                                            |
 
 - 可以直接在 HTML页面的`<head>` 中通过 meta标签来给请求头加上 `Cache-Control` 字段：
 
-  ``` html
-  <meta http-equiv="Cache-Control" content="no-cache">
+  ```html
+  <meta http-equiv="Cache-Control" content="no-cache" />
   ```
 
 - `Cache-Control` 允许自由组合可选值：

@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/tuple-to-enum-object/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -8,7 +8,6 @@ tags:
 permalink: /article/snkdmwsz/
 ---
 
-
 内容安全策略（`Content-Security-Policy`），简称 `CSP`。是一种 计算机安全标准。
 
 主要目标是 减少和报告XSS攻击、数据注入攻击等。这些攻击手段的主要目的是盗取网站数据、网站内容污染、散发恶意软件等。
@@ -101,24 +100,24 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
 ### 指令`<source>`有效值
 
 - `<host-source>`
-  
+
   以域名或者 IP 地址表示的主机名，外加可选的 URL 协议名（URL scheme）以及端口号。
-  支持前置通配符（星号 '*'），可以将通配符应用于站点地址、端口中，如应用于端口，则表示允许使用该域名下的所有端口。
+  支持前置通配符（星号 '\*'），可以将通配符应用于站点地址、端口中，如应用于端口，则表示允许使用该域名下的所有端口。
 
   - **example.com:443** 匹配 example.com 上 443 端口访问
   - **<https://example.com>** 匹配使用了 http: 的 example.com 的访问
-  - ***.example.com** 匹配 example.com 下的所有子域名的访问
+  - **\*.example.com** 匹配 example.com 下的所有子域名的访问
 
 - `<scheme-source>`
-  
+
   协议名如'http:' 或者 'https:'。必须带有冒号，不要有单引号。
 
 - `'self'`
-  
+
   指向与要保护的文件所在的源，包括相同的 URL scheme 与端口号。必须有单引号。
 
 - `'unsafe-inline'`
-  
+
   允许使用内联资源，例如内联 `<script>` 元素（javascript: URL）、内联事件处理器以及内联 `<style>` 元素。必须有单引号。
 
 - `'unsafe-eval'`
@@ -128,9 +127,9 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
 - `'none'`
 
   不允许任何内容。 必须有单引号。
-  
+
 - `'nonce-<base64 值>'`
-  
+
   特定使用一次性加密内联脚本的白名单。服务器必须在每一次传输政策时生成唯一的一次性值。否则将存在绕过资源政策的可能。
 
 - `<hash-source>`
@@ -142,7 +141,7 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
   ```
 
 - `'strict-dynamic'`
-  
+
   strict-dynamic 指定对于含有标记脚本 (通过附加一个随机数或散列) 的信任，应该传播到由该脚本加载的所有脚本。与此同时，任何白名单以及源表达式例如 'self' 或者 'unsafe-inline' 都会被忽略。
 
 ## 启用CSP
@@ -150,7 +149,7 @@ iframe内容安全策略指令，限制`<iframe>` 加载的页面资源
 启用CSP，可以在 HTTP服务器中，新增 Header 字段：
 如，在nginx中：
 
-``` nginx
+```nginx
 http {
   # ...more
   server {
@@ -166,7 +165,7 @@ http {
 
 也可以在 html 文件中 添加 `<meta>` 标签
 
-``` html
+```html
 <meta http-equiv="Content-Security-Policy" content="default-src 'self';" />
 ```
 
@@ -214,7 +213,7 @@ Content-Security-Policy: script-src 'nonce-abcdef' 'self';
 
 只有在`<script>`标签内带有特定 `nonce` 值的脚本才允许执行：
 
-``` html
+```html
 <script nonce="abcdef" src="example.js"></script>
 ```
 
@@ -228,9 +227,9 @@ Content-Security-Policy: script-src 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZ
 
 该hash值必须是 script 标签内容的 sha256 值，代码才能执行：
 
-``` html
+```html
 <script>
-  alert("Hello, world.");
+  alert('Hello, world.')
 </script>
 ```
 
@@ -246,7 +245,7 @@ Content-Security-Policy: default-src 'self'; report-uri http://report.example.co
 
 违例报告将以 JSON 对象的数据结构进行递交：
 
-``` json
+```json
 {
   "csp-report": {
     "document-uri": "http://example.com/index.html", // 发生违规的文档的 URI

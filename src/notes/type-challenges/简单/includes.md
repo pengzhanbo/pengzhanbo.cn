@@ -13,11 +13,13 @@ Github: [Includes](https://github.com/type-challenges/type-challenges/blob/main/
 ```ts
 type isPillarMen = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Dio'> // expected to be `false`
 ```
+
 :::
 
 ### 解题思路
 
 知识点：
+
 - 类型约束
 - 数组展开
 - 条件类型判断 `infer` 关键词
@@ -28,13 +30,12 @@ type isPillarMen = Includes<['Kars', 'Esidisi', 'Wamuu', 'Santana'], 'Dio'> // e
 
 在 `TS` 类型系统中，实现 **全等判断**，需要通过 `extends` 关键词，以及 函数的返回值类型，才能正确的判断两个类型是否完全一致。
 
-假设需要对比泛型参数 `<X, Y>`  是否全等，需要通过构造函数类型 `<T>() => T extends X ? 1 : 2`， 以及函数类型
+假设需要对比泛型参数 `<X, Y>` 是否全等，需要通过构造函数类型 `<T>() => T extends X ? 1 : 2`， 以及函数类型
 `<T>() => T extends Y ? 1 : 2`，再通过 `extends` 关键词做条件类型，判断两个函数类型是否具有继承关系，即可间接推断
-出类型 `X`  是否全等于类型`Y`。
+出类型 `X` 是否全等于类型`Y`。
 
 ```ts
-type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends (<T>() => T extends Y ? 1 : 2)
-  ? true : false
+type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false
 ```
 
 有了 `Equal<X, Y>` 类型工具，继续进一步的通过类型递归的方式，遍历数组类型`T`中的每一个成员，是否全等于类型`U`，
@@ -46,8 +47,7 @@ type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends (<T>() => T extends Y 
 ### 答案
 
 ```ts
-type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2
-  ? true : false
+type Equal<X, Y> = (<T>() => T extends X ? 1 : 2) extends <T>() => T extends Y ? 1 : 2 ? true : false
 type Includes<T extends readonly any[], U> = T extends [infer F, ...infer O]
   ? Equal<F, U> extends true
     ? true

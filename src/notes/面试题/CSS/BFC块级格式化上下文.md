@@ -10,6 +10,7 @@ permalink: /interview-question/p1gn97x5/
 - 什么是 BFC ?
 - 如何创建BFC ?
 - BFC有什么作用 ？
+
 :::
 
 ## 什么是 BFC
@@ -22,7 +23,7 @@ BFC, Block Formatting Context。是 W3C CSS2.1规范中的一个概念。 是页
 
 1. 根元素（html）
 2. 浮动元素，即 float值不为 none。
-3. 绝对定位元素， 元素的 position  为 absolute 或者 fixed
+3. 绝对定位元素， 元素的 position 为 absolute 或者 fixed
 4. 行内块元素， 元素的 display 为 inline-block
 5. 表格单元格， 元素的 display 为 table-cell。 （HTML表格单元格默认为该值）
 6. 表格标题， 元素的display为table-caption。 （HTML表格标题默认为该值）

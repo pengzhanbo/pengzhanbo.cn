@@ -13,13 +13,15 @@ tags:
 
 根据 element type 匹配 一组元素
 
-``` html
+```html
 ...
-  <style>
-    p { color: red; }
-  </style>
+<style>
+  p {
+    color: red;
+  }
+</style>
 ...
-  <p>content</p>
+<p>content</p>
 ...
 ```
 
@@ -27,13 +29,15 @@ tags:
 
 根据 element 声明的 class属性值 匹配一组元素
 
-``` html
+```html
 ...
-  <style>
-    .red { color: red; }
-  </style>
+<style>
+  .red {
+    color: red;
+  }
+</style>
 ...
-  <p class="red">content</p>
+<p class="red">content</p>
 ...
 ```
 
@@ -41,13 +45,15 @@ tags:
 
 根据 element 声明的 ID属性值，匹配一个元素（一个页面中，ID具有唯一性）
 
-``` html
+```html
 ...
-  <style>
-    #red { color: red; }
-  </style>
+<style>
+  #red {
+    color: red;
+  }
+</style>
 ...
-  <p id="red">content</p>
+<p id="red">content</p>
 ...
 ```
 
@@ -55,14 +61,16 @@ tags:
 
 通配符，匹配所有 element
 
-``` html
+```html
 ...
-  <style>
-    * { color: red; }
-  </style>
+<style>
+  * {
+    color: red;
+  }
+</style>
 ...
-  <p>content</p>
-  <span>span</span>
+<p>content</p>
+<span>span</span>
 ...
 ```
 
@@ -72,13 +80,15 @@ tags:
 
 匹配声明了该attribute的 一组 element
 
-``` html
+```html
 ...
-  <style>
-    [href] { color: red; }
-  </style>
+<style>
+  [href] {
+    color: red;
+  }
+</style>
 ...
-  <a href="">content</a>
+<a href="">content</a>
 ...
 ```
 
@@ -86,13 +96,15 @@ tags:
 
 匹配声明了该attribute，且值为 x 的一组 element
 
-``` html
+```html
 ...
-  <style>
-    [title="a"] { color: red; }
-  </style>
+<style>
+  [title='a'] {
+    color: red;
+  }
+</style>
 ...
-  <abbr title="a">abbr</abbr>
+<abbr title="a">abbr</abbr>
 ...
 ```
 
@@ -100,14 +112,17 @@ tags:
 
 匹配声明了该attribute，且值包含了 单词 x 的一组 element
 
-``` html
+```html
 ...
-  <style>
-    [title~="style"] { color: red; } /* 匹配包含了 独立单词  style 的 element， */
-  </style>
+<style>
+  [title~='style'] {
+    color: red;
+  } /* 匹配包含了 独立单词  style 的 element， */
+</style>
 ...
-  <abbr title="sheet style">abbr</abbr>
-  <abbr title="sheetstyle"></abbr> <!-- no match -->
+<abbr title="sheet style">abbr</abbr>
+<abbr title="sheetstyle"></abbr>
+<!-- no match -->
 ...
 ```
 
@@ -115,15 +130,17 @@ tags:
 
 匹配声明了该attribute，且值包含了一个 `x-` 开头的连字符拼接的词 的一组 element
 
-``` html
+```html
 ...
-  <style>
-    /* lang的值必须 包含 en 通过连接符 - 连接另一个单词的 词 */
-    [lang|="en"] { color: red; }
-  </style>
+<style>
+  /* lang的值必须 包含 en 通过连接符 - 连接另一个单词的 词 */
+  [lang|='en'] {
+    color: red;
+  }
+</style>
 ...
-  <abbr lang="en-US">abbr</abbr>
-  <!-- no match  lang="en" lang="enUS" -->
+<abbr lang="en-US">abbr</abbr>
+<!-- no match  lang="en" lang="enUS" -->
 ...
 ```
 
@@ -131,13 +148,16 @@ tags:
 
 匹配声明了该attribute，且值是以 x 作为开头的 一组 element
 
-``` html
+```html
 ...
-  <style>
-    [href^="https://"] { color: red; }
-  </style>
+<style>
+  [href^="https://"]
+  {
+    color: red;
+  }
+</style>
 ...
-  <a href="https://example.com">content</a>
+<a href="https://example.com">content</a>
 ...
 ```
 
@@ -145,27 +165,31 @@ tags:
 
 匹配声明了该attribute，且值是以 x 作为结尾的 一组 element
 
-``` html
+```html
 ...
-  <style>
-    [href$=".pdf"] { color: red; }
-  </style>
+<style>
+  [href$='.pdf'] {
+    color: red;
+  }
+</style>
 ...
-  <a href="https://example.com/a.pdf">content</a>
+<a href="https://example.com/a.pdf">content</a>
 ...
 ```
 
-### \[attribute*="x"\] selector
+### \[attribute\*="x"\] selector
 
 匹配声明了该attribute，且值包含了子串 x 的 一组 element
 
-``` html
+```html
 ...
-  <style>
-    [href*="example"] { color: red; }
-  </style>
+<style>
+  [href*='example'] {
+    color: red;
+  }
+</style>
 ...
-  <a href="https://example.com">content</a>
+<a href="https://example.com">content</a>
 ...
 ```
 
@@ -177,16 +201,20 @@ tags:
 
 匹配 selector1 的元素中，所有 selector2 的 元素
 
-``` html
+```html
 ...
-  <style>
-    section span { color: red; }
-  </style>
+<style>
+  section span {
+    color: red;
+  }
+</style>
 ...
-  <section>
-    <span></span> <!-- match -->
-    <p><span></span></p>  <!-- match -->
-  </section>
+<section>
+  <span></span>
+  <!-- match -->
+  <p><span></span></p>
+  <!-- match -->
+</section>
 ...
 ```
 
@@ -194,16 +222,20 @@ tags:
 
 匹配 selector1 的下一级满足 selector2 的 一组元素
 
-``` html
+```html
 ...
-  <style>
-    section > span { color: red; }
-  </style>
+<style>
+  section > span {
+    color: red;
+  }
+</style>
 ...
-  <section>
-    <span></span> <!-- match -->
-    <p><span></span></p>  <!--  no match -->
-  </section>
+<section>
+  <span></span>
+  <!-- match -->
+  <p><span></span></p>
+  <!--  no match -->
+</section>
 ...
 ```
 
@@ -211,16 +243,21 @@ tags:
 
 匹配selector1后同级的紧跟的selector2的一个元素
 
-``` html
+```html
 ...
-  <style>
-    h2 + p { color: red; }
-  </style>
+<style>
+  h2 + p {
+    color: red;
+  }
+</style>
 ...
-  <p></p> <!--  no match -->
-  <h2></h2>
-  <p></p> <!-- match -->
-  <p></p> <!--  no match -->
+<p></p>
+<!--  no match -->
+<h2></h2>
+<p></p>
+<!-- match -->
+<p></p>
+<!--  no match -->
 ...
 ```
 
@@ -228,18 +265,24 @@ tags:
 
 匹配selector1后同级的selector2的一组元素
 
-``` html
+```html
 ...
-  <style>
-    h2 ~ p { color: red; }
-  </style>
+<style>
+  h2 ~ p {
+    color: red;
+  }
+</style>
 ...
-  <p></p> <!--  no match -->
-  <h2></h2>
-  <p></p> <!-- match -->
-  <p></p> <!-- match -->
-  <span></span>
-  <p></p> <!-- match -->
+<p></p>
+<!--  no match -->
+<h2></h2>
+<p></p>
+<!-- match -->
+<p></p>
+<!-- match -->
+<span></span>
+<p></p>
+<!-- match -->
 ...
 ```
 
@@ -249,16 +292,19 @@ tags:
 
 匹配用`,` 隔开的所有选择器
 
-``` html
+```html
 ...
-  <style>
-    p, span { color: red; }
-  </style>
+<style>
+  p,
+  span {
+    color: red;
+  }
+</style>
 ...
-  <section>
-    <span></span>
-    <p><span></span></p>  
-  </section>
+<section>
+  <span></span>
+  <p><span></span></p>
+</section>
 ...
 ```
 
@@ -268,13 +314,16 @@ tags:
 
 匹配 element中的首个字符（字母、中文字、符号均可）
 
-``` html
+```html
 ...
-  <style>
-    p::first-letter { color: red; }
-  </style>
+<style>
+  p::first-letter {
+    color: red;
+  }
+</style>
 ...
-  <p>One</p>  <!-- match: O -->
+<p>One</p>
+<!-- match: O -->
 ...
 ```
 
@@ -282,16 +331,19 @@ tags:
 
 匹配 element中的首行文字
 
-``` html
+```html
 ...
-  <style>
-    p::first-line { color: red; }
-  </style>
+<style>
+  p::first-line {
+    color: red;
+  }
+</style>
 ...
-  <p>
-    One Two  <br> <!-- match -->
-    Three
-  </p>
+<p>
+  One Two <br />
+  <!-- match -->
+  Three
+</p>
 ...
 ```
 
@@ -299,15 +351,18 @@ tags:
 
 和 `content` 属性一起使用，在匹配的元素内容之前生成的内容
 
-``` html
+```html
 ...
-  <style>
-    p::before { content: 'before ' }
-  </style>
+<style>
+  p::before {
+    content: 'before ';
+  }
+</style>
 ...
-  <p>
-    One Two   <!-- render: before One Two -->
-  </p>
+<p>
+  One Two
+  <!-- render: before One Two -->
+</p>
 ...
 ```
 
@@ -315,15 +370,18 @@ tags:
 
 和 `content` 属性一起使用，在匹配的元素内容之后生成的内容
 
-``` html
+```html
 ...
-  <style>
-    p::after { content: ' after' }
-  </style>
+<style>
+  p::after {
+    content: ' after';
+  }
+</style>
 ...
-  <p>
-    One Two   <!-- render: One Two after -->
-  </p>
+<p>
+  One Two
+  <!-- render: One Two after -->
+</p>
 ...
 ```
 
@@ -333,13 +391,15 @@ tags:
 
 匹配一个没有被访问过的链接
 
-``` html
+```html
 ...
-  <style>
-    a:link { color: red }
-  </style>
+<style>
+  a:link {
+    color: red;
+  }
+</style>
 ...
-  <a href="">link</a>
+<a href="">link</a>
 ...
 ```
 
@@ -347,13 +407,15 @@ tags:
 
 匹配一个已访问过的链接
 
-``` html
+```html
 ...
-  <style>
-    a:visited { color: red }
-  </style>
+<style>
+  a:visited {
+    color: red;
+  }
+</style>
 ...
-  <a href="">link</a>
+<a href="">link</a>
 ...
 ```
 
@@ -361,13 +423,15 @@ tags:
 
 匹配一个正在被激活的链接
 
-``` html
+```html
 ...
-  <style>
-    a:active { color: red }
-  </style>
+<style>
+  a:active {
+    color: red;
+  }
+</style>
 ...
-  <a href="">link</a>
+<a href="">link</a>
 ...
 ```
 
@@ -375,13 +439,15 @@ tags:
 
 匹配一个被光标悬停的链接
 
-``` html
+```html
 ...
-  <style>
-    a:hover { color: red }
-  </style>
+<style>
+  a:hover {
+    color: red;
+  }
+</style>
 ...
-  <a href="">link</a>
+<a href="">link</a>
 ...
 ```
 
@@ -389,13 +455,15 @@ tags:
 
 匹配一个具有焦点的元素
 
-``` html
+```html
 ...
-  <style>
-    input:focus { color: red }
-  </style>
+<style>
+  input:focus {
+    color: red;
+  }
+</style>
 ...
- <input type="text">
+<input type="text" />
 ...
 ```
 
@@ -404,13 +472,15 @@ tags:
 匹配一个已被链接到的元素。
 例如通过`<a href="#heading"></a>`链接的head元素
 
-``` html
+```html
 ...
-  <style>
-    h2:target { color: red }
-  </style>
+<style>
+  h2:target {
+    color: red;
+  }
+</style>
 ...
- <h2 id="heading">heading</h2>
+<h2 id="heading">heading</h2>
 ...
 ```
 
@@ -418,14 +488,17 @@ tags:
 
 匹配在同一个父元素内的的第一个子元素
 
-``` html
+```html
 ...
-  <style>
-    p:first-child { color: red }
-  </style>
+<style>
+  p:first-child {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p> <!-- match -->
-  <p>second child</p>
+<p>first child</p>
+<!-- match -->
+<p>second child</p>
 ...
 ```
 
@@ -433,14 +506,17 @@ tags:
 
 匹配在同一个父元素内的的最后一个子元素
 
-``` html
+```html
 ...
-  <style>
-    p:last-child { color: red }
-  </style>
+<style>
+  p:last-child {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p>
-  <p>last child</p> <!-- match -->
+<p>first child</p>
+<p>last child</p>
+<!-- match -->
 ...
 ```
 
@@ -448,14 +524,17 @@ tags:
 
 匹配在同一个父元素内的从上往下数的第N子个元素
 
-``` html
+```html
 ...
-  <style>
-    p:nth-child(2) { color: red }
-  </style>
+<style>
+  p:nth-child(2) {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p>
-  <p>second child</p> <!-- match -->
+<p>first child</p>
+<p>second child</p>
+<!-- match -->
 ...
 ```
 
@@ -463,14 +542,17 @@ tags:
 
 匹配在同一个父元素内的从下往上数的第N个子元素
 
-``` html
+```html
 ...
-  <style>
-    p:nth-last-child(2) { color: red }
-  </style>
+<style>
+  p:nth-last-child(2) {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p> <!-- match -->
-  <p>second child</p> 
+<p>first child</p>
+<!-- match -->
+<p>second child</p>
 ...
 ```
 
@@ -478,14 +560,17 @@ tags:
 
 匹配在同一个父元素中的同类型的第一个元素
 
-``` html
+```html
 ...
-  <style>
-    p:first-of-type { color: red }
-  </style>
+<style>
+  p:first-of-type {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p> <!-- match -->
-  <p>second child</p>
+<p>first child</p>
+<!-- match -->
+<p>second child</p>
 ...
 ```
 
@@ -493,14 +578,17 @@ tags:
 
 匹配在同一个父元素中的同类型的最后一个元素
 
-``` html
+```html
 ...
-  <style>
-    p:last-of-type { color: red }
-  </style>
+<style>
+  p:last-of-type {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p> <!-- match -->
-  <p>second child</p>
+<p>first child</p>
+<!-- match -->
+<p>second child</p>
 ...
 ```
 
@@ -508,14 +596,17 @@ tags:
 
 匹配在同一个父元素中的同类型的从上往下数的第N个元素
 
-``` html
+```html
 ...
-  <style>
-    p:nth-of-type(2) { color: red }
-  </style>
+<style>
+  p:nth-of-type(2) {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p>
-  <p>second child</p>  <!-- match -->
+<p>first child</p>
+<p>second child</p>
+<!-- match -->
 ...
 ```
 
@@ -523,14 +614,17 @@ tags:
 
 匹配在同一个父元素中的同类型的从下往上数的第N个元素
 
-``` html
+```html
 ...
-  <style>
-    p:nth-last-of-type(2) { color: red }
-  </style>
+<style>
+  p:nth-last-of-type(2) {
+    color: red;
+  }
+</style>
 ...
-  <p>first child</p> <!-- match -->
-  <p>second child</p> 
+<p>first child</p>
+<!-- match -->
+<p>second child</p>
 ...
 ```
 
@@ -538,15 +632,17 @@ tags:
 
 如果元素是其父元素的唯一子元素，则匹配该元素
 
-``` html
+```html
 ...
-  <style>
-    section p:only-child { color: red }
-  </style>
+<style>
+  section p:only-child {
+    color: red;
+  }
+</style>
 ...
-  <section>
-    <p> only child </p>
-  </section>
+<section>
+  <p>only child</p>
+</section>
 ...
 ```
 
@@ -554,16 +650,19 @@ tags:
 
 如果元素是其父元素的唯一的同类型的子元素，则匹配该元素
 
-``` html
+```html
 ...
-  <style>
-    section p:only-of-type { color: red }
-  </style>
+<style>
+  section p:only-of-type {
+    color: red;
+  }
+</style>
 ...
-  <section>
-    <p> only </p> <!-- match -->
-    <span></span>
-  </section>
+<section>
+  <p>only</p>
+  <!-- match -->
+  <span></span>
+</section>
 ...
 ```
 
@@ -571,15 +670,19 @@ tags:
 
 匹配给定语言的元素
 
-``` html
+```html
 ...
-  <style>
-    div:lang(fr) { color: red }
-  </style>
+<style>
+  div:lang(fr) {
+    color: red;
+  }
+</style>
 ...
-  <section>
-    <div lang="fr"><q>This French quote has a <q>nested</q> quote inside.</q></div>
-  </section>
+<section>
+  <div lang="fr">
+    <q>This French quote has a <q>nested</q> quote inside.</q>
+  </div>
+</section>
 ...
 ```
 
@@ -587,15 +690,17 @@ tags:
 
 匹配没有子元素或内容的元素
 
-``` html
+```html
 ...
-  <style>
-    div:empty { background-color: red }
-  </style>
+<style>
+  div:empty {
+    background-color: red;
+  }
+</style>
 ...
-  <section>
-    <div></div>
-  </section>
+<section>
+  <div></div>
+</section>
 ...
 ```
 
@@ -628,18 +733,18 @@ tags:
 匹配有链接锚点的元素，而不管元素是否被访问过。
 即会匹配每一个有 `href`属性的`<a>`，`<area>`，`<link>`的元素，匹配到所有的`:link`或`:visited`。
 
-``` html
+```html
 ...
-  <style>
-    a:any-link {
-      border: 1px solid blue;
-      color: orange;
-    }
-  </style>
+<style>
+  a:any-link {
+    border: 1px solid blue;
+    color: orange;
+  }
+</style>
 ...
-  <a href="https://example.com">External link</a><br>
-  <a href="#">Internal target link</a><br>
-  <a>Placeholder link (won't get styled)</a>
+<a href="https://example.com">External link</a><br />
+<a href="#">Internal target link</a><br />
+<a>Placeholder link (won't get styled)</a>
 ...
 ```
 
@@ -650,26 +755,27 @@ tags:
 
 如果元素的内容的书写方向是 dir , 则匹配该元素
 
-*dir* : ltr | rtl
+_dir_ : ltr | rtl
 
-``` html
+```html
 ...
-  <style>
-    :dir(ltr) {
-      background-color: yellow;
-    }
+<style>
+  :dir(ltr) {
+    background-color: yellow;
+  }
 
-    :dir(rtl) {
-      background-color: powderblue;
-    }
-  </style>
+  :dir(rtl) {
+    background-color: powderblue;
+  }
+</style>
 ...
-  <div dir="rtl">
-    <span>test1</span>
-    <div dir="ltr">test2
-      <div dir="auto">עִבְרִית</div>
-    </div>
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">
+    test2
+    <div dir="auto">עִבְרִית</div>
   </div>
+</div>
 ...
 ```
 
@@ -680,46 +786,47 @@ tags:
 
 如果一个元素A恰好满足包含了selector 匹配的元素，则匹配元素A
 
-``` html
+```html
 ...
-  <style>
-    a:has(> img) {
-      background-color: yellow;
-    }
-  </style>
+<style>
+  a:has(> img) {
+    background-color: yellow;
+  }
+</style>
 ...
-  <a><img src="example.jpg"></a> <!-- match -->
-  <a></a>
+<a><img src="example.jpg" /></a>
+<!-- match -->
+<a></a>
 ...
 ```
 
 ::: caniuse css-has
 :::
 
-### :is()  / :any()
+### :is() / :any()
 
 匹配一组选择器选中的元素。
 
 优先级是由它的选择器列表中优先级最高的选择器决定。
 
-``` html
+```html
 ...
-  <style>
-    :is(header, main, footer) p:hover {
-      color: red;
-      cursor: pointer;
-    }
-  </style>
+<style>
+  :is(header, main, footer) p:hover {
+    color: red;
+    cursor: pointer;
+  }
+</style>
 ...
-  <!-- 等价于 -->
-  <style>
-    header p:hover,
-    main p:hover,
-    footer p:hover {
-      color: red;
-      cursor: pointer;
-    }
-  </style>
+<!-- 等价于 -->
+<style>
+  header p:hover,
+  main p:hover,
+  footer p:hover {
+    color: red;
+    cursor: pointer;
+  }
+</style>
 ...
 ```
 
@@ -732,23 +839,23 @@ tags:
 
 :where() 的优先级总是为 0。
 
-``` html
+```html
 ...
-  <style>
-    :where(header, main, footer) p:hover {
-      color: red;
-      cursor: pointer;
-    }
-  </style>
+<style>
+  :where(header, main, footer) p:hover {
+    color: red;
+    cursor: pointer;
+  }
+</style>
 ...
-  <!-- 等价于, 但优先级不同 -->
-  <style>
-    header p:hover,
-    main p:hover,
-    footer p:hover {
-      color: red;
-      cursor: pointer;
-    }
-  </style>
+<!-- 等价于, 但优先级不同 -->
+<style>
+  header p:hover,
+  main p:hover,
+  footer p:hover {
+    color: red;
+    cursor: pointer;
+  }
+</style>
 ...
 ```

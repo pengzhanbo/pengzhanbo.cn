@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/deep-pick/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/capitalize-nest-object-keys/
 Github: []()
 
 ```ts
+
 ```
+
 :::

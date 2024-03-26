@@ -45,6 +45,7 @@ permalink: /defensive-css/using-space-between/
 ```
 
 :::demo-wrapper
+
 <p align="center">justify-content: space-between</p>
 
 项目为 4 个时，看起来还不错。
@@ -57,6 +58,7 @@ permalink: /defensive-css/using-space-between/
 </div>
 
 项目为 3 个时，间隔就过大了。
+
 <div class="flex-box">
   <div></div>
   <div></div>
@@ -71,7 +73,6 @@ permalink: /defensive-css/using-space-between/
 - 在父元素上使用 `padding` 作为 子元素 间隔
 - 添加空白元素作为间隔
 
-
 比如，我们使用 `gap` 设置 间隔
 
 ```css
@@ -82,8 +83,8 @@ permalink: /defensive-css/using-space-between/
 ```
 
 :::demo-wrapper
-<p align="center">gap: 1rem</p>
 
+<p align="center">gap: 1rem</p>
 
 <div class="flex-box gap">
   <div></div>

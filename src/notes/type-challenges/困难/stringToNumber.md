@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/string-to-number/
 Github: []()
 
 ```ts
+
 ```
+
 :::

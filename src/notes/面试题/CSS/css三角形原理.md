@@ -9,6 +9,7 @@ permalink: /interview-question/bvx4d2u5/
 
 1. 如何用css画一个 三角形
 2. 原理是什么？
+
 :::
 
 ## 原理
@@ -21,7 +22,7 @@ permalink: /interview-question/bvx4d2u5/
 - 设置border-width为大于 1px 的值，border-style为 solid；
 - 设置 border-color， 仅保留一条边的颜色，其他边的颜色为透明
 
-``` css
+```css
 .demo {
   display: block;
   width: 0;

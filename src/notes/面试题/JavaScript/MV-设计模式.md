@@ -11,6 +11,7 @@ permalink: /interview-question/ud3m8zxg/
 2. MVP
 3. MVVM
 4. 区别
+
 :::
 
 ::: info 说明
@@ -45,5 +46,5 @@ permalink: /interview-question/ud3m8zxg/
 `VM` 是指 `ViewModel`。
 
 `MVVM` 在`VM`中构建一组状态数据（state data），作为`View`状态的抽象。
-然后通过 __双向数据绑定（data binding）__ 使`VM`中的 __状态数据（state data）__ 与`View`中的 __显示状态（screen state）__ 保持一致。
+然后通过 **双向数据绑定（data binding）** 使`VM`中的 **状态数据（state data）** 与`View`中的 **显示状态（screen state）** 保持一致。
 这样，`VM`中的展示逻辑只需要修改对应的状态数据，就可以控制`View`的状态，从而避免在`View`上开发大量的接口。

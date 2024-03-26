@@ -31,7 +31,6 @@ permalink: /article/7jzjudus/
 
 ```js
 export * from './resolve.js'
-
 ```
 
 @tab lib/resolve.js
@@ -49,11 +48,11 @@ export const resolve = (...arg) => path.resolve(...arg)
 在 `package.json` 中，我们需要进行以下声明：
 
 - 声明 `type` 字段值为 `module`
-  
+
   这个字段声明了你的包将作为一个 `ECMAScript module` 被`NodeJs` 加载并解析，并允许使用`.mjs`格式的文件。
 
 - 声明 `exports` 字段
-  
+
   该字段描述了 项目如何导出模块给到其他包使用。
 
   - 默认导出
@@ -70,7 +69,7 @@ export const resolve = (...arg) => path.resolve(...arg)
     :::
 
     即当使用`import { resolve } from 'my-esm-package'`时，默认引入的文件是 `lib/index.js`。
-  
+
   - 导出多个模块
 
     ::: code-tabs
@@ -96,7 +95,7 @@ export const resolve = (...arg) => path.resolve(...arg)
   - `exports` 还支持其他形式的值，这里暂不赘述。
 
 - 声明 `engines` 字段
-  
+
   由于 `Nodejs` 并不是全版本支持`esm`的，而是从`v14.16.0`版本开始试验性的支持，并到了`v16`版本才作为正式支持，
   且当前`v16`版本作为目前的长期稳定支持的版本。这个项目运行环境的`NodeJs` 版本，最低应该推荐使用 `v16` 以上的版本。
   即它的值应该为 `{ "node": ">=16" }`
@@ -126,24 +125,20 @@ export const resolve = (...arg) => path.resolve(...arg)
 ## 编写项目代码
 
 1. 由于是一个 `esm` 项目，所以理所当然的不能项目中使用 `require()`/`module.exports` 来导入导出模块。
-而是应该全部使用`import`/`export` 的方式来导入导出模块。
+   而是应该全部使用`import`/`export` 的方式来导入导出模块。
 
 2. 不需要在项目代码中 使用 `use strict`。
 
 3. 由于 `esm` 项目中，`NodeJs` 不再支持 `__dirname`/`__filename`，所以有相关场景需要使用时，需要使用其他的方式来实现相同功能：
 
-  ```js
-  import { dirname, basename } from 'path'
-  import { fileURLToPath } from 'url'
+```js
+import { dirname, basename } from 'path'
+import { fileURLToPath } from 'url'
 
-  const _dirname = typeof __dirname !== 'undefined'
-    ? __dirname
-    : dirname(fileURLToPath(import.meta.url))
-  
-  const _filename = typeof __filename !== 'undefined'
-    ? __filename
-    : basename(fileURLToPath(import.meta.url))
-  ```
+const _dirname = typeof __dirname !== 'undefined' ? __dirname : dirname(fileURLToPath(import.meta.url))
+
+const _filename = typeof __filename !== 'undefined' ? __filename : basename(fileURLToPath(import.meta.url))
+```
 
 ## TypeScript
 

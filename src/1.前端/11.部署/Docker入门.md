@@ -37,7 +37,7 @@ author: 鹏展博
 
 1. 安装依赖
 
-``` sh
+```sh
 yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
@@ -53,18 +53,18 @@ yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/d
 
 3. 安装 docker
 
-  ```sh
-  # 安装 docker
-  sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-  ```
+```sh
+# 安装 docker
+sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
 
 4. 启动服务
 
-  ```sh
-  systemctl enable docker
+```sh
+systemctl enable docker
 
-  systemctl start docker
-  ```
+systemctl start docker
+```
 
 当 `docker` 安装成功后，可以使用以下命令查看 `docker` 信息
 
@@ -85,7 +85,7 @@ docker info
 
 日志引擎为 `json-file`，对日志结构化，结合合适的日志系统，方便定位日志。 存储引擎为 `overrlay2`。
 
-``` sh
+```sh
 mkdir /etc/docker
 
 # 设置 docker daemon
@@ -206,7 +206,7 @@ RUN <command>
 
 ```dockerfile
 # exec form, this is the preferred form
-CMD ["executable","param1","param2"] 
+CMD ["executable","param1","param2"]
 
 # as default parameters to ENTRYPOINT
 CMD ["param1","param2"]

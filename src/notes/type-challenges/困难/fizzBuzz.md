@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/fizz-buzz/
 Github: []()
 
 ```ts
+
 ```
+
 :::

@@ -10,6 +10,7 @@ permalink: /interview-question/6tzvt9fs/
 1. IFC
 2. GFC
 3. FFC
+
 :::
 
 ::: details 不用看

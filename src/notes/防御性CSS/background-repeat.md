@@ -19,6 +19,7 @@ permalink: /defensive-css/background-repeat/
 </div>
 
 大屏幕
+
 <div style="width:300px;height:133px;" class="bg-repeat-1339">
 </div>
 
@@ -32,6 +33,7 @@ permalink: /defensive-css/background-repeat/
   border:1px solid var(--vp-c-divider);
 }
 </style>
+
 :::
 ::::
 
@@ -39,7 +41,7 @@ permalink: /defensive-css/background-repeat/
 
 ```css
 .hero {
-    background-image: url('..');
-    background-repeat: no-repeat;
+  background-image: url('..');
+  background-repeat: no-repeat;
 }
 ```

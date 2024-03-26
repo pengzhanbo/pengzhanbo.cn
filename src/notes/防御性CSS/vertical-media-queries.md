@@ -15,12 +15,12 @@ permalink: /defensive-css/vertical-media-queries/
 请看以下示例，辅助导航链接 通过 `position:sticky` 粘在 aside 的底部。在高度足够的情况下，看起来
 还不错。
 
-<style scoped>
-.flex-box {
+<style>
+.flex-box-140 {
   display: flex;
   width: 100%;
 }
-.flex-box aside {
+.flex-box-140 aside {
   position: relative;
   width: 130px;
   height: 400px;
@@ -32,23 +32,23 @@ permalink: /defensive-css/vertical-media-queries/
   flex-direction: column;
   justify-content: space-between;
 }
-.flex-box main {
+.flex-box-140 main {
   flex: 1;
   height: 400px;
   background: var(--vp-c-gray-3);
   border-radius: 5px;
   padding: 10px;
 }
-.flex-box.min main,
-.flex-box.min aside {
+.flex-box-140.min main,
+.flex-box-140.min aside {
   height: 250px;
 }
-.flex-box .user-list > div {
+.flex-box-140 .user-list > div {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-.flex-box .user-list > div > span {
+.flex-box-140 .user-list > div > span {
   display: block;
   width: 32px;
   height: 32px;
@@ -56,25 +56,26 @@ permalink: /defensive-css/vertical-media-queries/
   margin-right: 10px;
   background: var(--vp-c-gray-1);
 }
-.flex-box .user-list > div > p {
+.flex-box-140 .user-list > div > p {
   margin: 0;
   height: 16px;
   flex: 1;
   border-radius: 3px;
   background: var(--vp-c-gray-3);
 }
-.flex-box .aside-nav {
+.flex-box-140 .aside-nav {
   position: absolute;
   bottom: 10px;
 }
-.flex-box .aside-nav div {
+.flex-box-140 .aside-nav div {
   font-size: 14px;
   font-weight: 500;
 }
 </style>
 
 :::demo-wrapper
-<div class="flex-box">
+
+<div class="flex-box-140">
   <aside>
     <div class="user-list">
       <div><span></span><p></p></div>
@@ -96,7 +97,8 @@ permalink: /defensive-css/vertical-media-queries/
 但是，如果浏览器窗口的高度较小，辅助导航链接会被挤压，与其他内容发生重叠。
 
 :::demo-wrapper
-<div class="flex-box min">
+
+<div class="flex-box-140 min">
   <aside>
     <div class="user-list">
       <div><span></span><p></p></div>

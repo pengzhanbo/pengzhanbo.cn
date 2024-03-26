@@ -12,20 +12,18 @@ Github: [Get return type](https://github.com/type-challenges/type-challenges/blo
 
 ```ts
 const fn = (v: boolean) => {
-  if (v)
-    return 1
-  else
-    return 2
+  if (v) return 1
+  else return 2
 }
 
 type a = MyReturnType<typeof fn> // 应推导出 "1 | 2"
 ```
+
 :::
 
 ### 解题思路
 
 通过使用条件类型中的类型推断，泛型参数 `T` 是否可以分配给 `() => void`，通过类型参数从条件类型推断为真时，获取函数返回类型， `() => infer R` 。同时，我们并不关心函数是否带参数，所以还需要添加 `...args: any[]` 表示可以接受任何参数。
-
 
 ### 答案
 

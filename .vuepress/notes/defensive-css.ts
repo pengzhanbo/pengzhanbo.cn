@@ -1,6 +1,5 @@
 import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
 
-
 export default definePlumeNotesItemConfig({
   link: '/defensive-css/',
   dir: '防御性CSS',
@@ -34,7 +33,7 @@ export default definePlumeNotesItemConfig({
         'default-flexbox-stretching',
         'input-zoom-on-ios-safari',
         'button-minimum-width',
-      ]
-    }
-  ]
+      ],
+    },
+  ],
 })

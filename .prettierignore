@@ -1,0 +1,8 @@
+node_modules
+_draft
+.vuepress/.cache
+.vuepress/.temp
+docs
+patches
+public
+pnpm-lock.yaml

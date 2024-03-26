@@ -12,7 +12,7 @@ permalink: /interview-question/y5w6l1js/
 ## 创建节点
 
 - `document.createDocumentFragment(node)` 创建一个虚拟节点对象
-- `document.createElement(node)`  创建一个新的元素
+- `document.createElement(node)` 创建一个新的元素
 - `document.createTextNode(text)` 创建一个文本节点
 
 ## 添加、移除、替换、插入

@@ -7,11 +7,7 @@ export default definePlumeNotesItemConfig({
     '',
     {
       text: '指南',
-      items: [
-        '快速开始',
-        '编写文章',
-        '效果预览',
-      ],
+      items: ['快速开始', '编写文章', '效果预览'],
     },
     {
       text: '配置',
@@ -31,14 +27,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       text: '功能',
-      items: [
-        '基础功能',
-        '内置插件',
-        '全局组件',
-        '代码块高亮',
-        'markdown增强',
-        '实验性功能',
-      ],
+      items: ['基础功能', '内置插件', '全局组件', '代码块高亮', 'markdown增强', '实验性功能'],
     },
   ],
 })

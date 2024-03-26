@@ -11,6 +11,7 @@ permalink: /interview-question/e2tpl1sq/
 2. webpack的工作原理
 3. loader和plugin？ 有什么区别？
 4. 做过哪些webpack优化？
+
 :::
 
 ::: info 说明
@@ -59,7 +60,7 @@ plugin是对webpack的扩展，可以访问到webpack整个生命周期。
 在进行优化前，首先要搞清楚有哪些地方出现了痛点，需要进行优化。
 
 - 编译速度分析
-  
+
   借助 `speed-measure-webpack-plugin` 插件，可以帮助我们获取插件、loader的耗时。
   消耗时间比较长的，认为可以优化的，则放到优化计划中。
 

@@ -12,13 +12,13 @@ Github: [Awaited](https://github.com/type-challenges/type-challenges/blob/main/q
 
 例如：`Promise<ExampleType>`，请你返回 ExampleType 类型。
 
-``` ts
+```ts
 type ExampleType = Promise<string>
 
 type Result = MyAwaited<ExampleType> // string
 ```
-:::
 
+:::
 
 ### 解题思路
 
@@ -29,13 +29,10 @@ type Result = MyAwaited<ExampleType> // string
 在题目的示例中，`Promise<string>` 展开类型为 `string` ，但我们需要处理 `T` 的任意情况，包括 `<Promise<Promise<string>>`。这时候还需要运用到 typescript 的 **类型递归**，直到不能展开为止，这个过程是调用
 `MyAwaited`自身实现的。
 
-
 ### 答案
 
 ```ts
-type MyAwaited<T> = T extends PromiseLike<infer R>
-  ? MyAwaited<R>
-  : T
+type MyAwaited<T> = T extends PromiseLike<infer R> ? MyAwaited<R> : T
 ```
 
 ### 参考

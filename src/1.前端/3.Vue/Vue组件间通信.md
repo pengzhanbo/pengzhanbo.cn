@@ -6,12 +6,13 @@ createTime: 2018/07/20 11:15:27
 permalink: /article/iezlvhvg/
 author: pengzhanbo
 ---
+
 在我们在进行基于[Vue](https://cn.vuejs.org/)的项目开发时，组件间的数据通信，是我们必须考虑的。
 
 <!-- more -->
 
-> __注：__
->  
+> **注：**
+>
 > 本文所实现的方式，是在不考虑`vuex`下所做的实现，
 > 且仅限于 `vue@2` ，在 `vue@3` 中，有其他的更好的实现方案。
 
@@ -19,35 +20,36 @@ author: pengzhanbo
 
 1. 父子组件
 
-    ``` html
-    <parent>
-        <child></child>
-    </parent>
-    ```
+   ```html
+   <parent>
+     <child></child>
+   </parent>
+   ```
 
-    拥有类似结构，`parent`组件包含`child`组件，则`child`组件是`parent`的子组件，`parent`组件是`child`组件的父组件。
+   拥有类似结构，`parent`组件包含`child`组件，则`child`组件是`parent`的子组件，`parent`组件是`child`组件的父组件。
+
 2. 兄弟组件
 
-    ``` html
-    <item></item>
-    <item></item>
-    ```
+   ```html
+   <item></item> <item></item>
+   ```
 
-    两个`item`组件在结构上同级，我们称之互为兄弟组件。
+   两个`item`组件在结构上同级，我们称之互为兄弟组件。
+
 3. 跨多级组件
 
-    ``` html
-    <list>
-        <item>
-            <message><message>
-        </item>
-    </list>
-    <dialog>
-        <content></content>
-    </dialog>
-    ```
+   ```html
+   <list>
+       <item>
+           <message><message>
+       </item>
+   </list>
+   <dialog>
+       <content></content>
+   </dialog>
+   ```
 
-    在这个结构中，`<list>`和`<message>`并不是直接的父子组件，中间还跨了一个级，在实际场景中，还会有跨更多层级的组件关系。`<message>` 和 `<content>` 组件两个既不是兄弟组件，又不是父子组件，而是跨了兄弟，父子的多级关系，实际场景中也会有发生交互。
+   在这个结构中，`<list>`和`<message>`并不是直接的父子组件，中间还跨了一个级，在实际场景中，还会有跨更多层级的组件关系。`<message>` 和 `<content>` 组件两个既不是兄弟组件，又不是父子组件，而是跨了兄弟，父子的多级关系，实际场景中也会有发生交互。
 
 那么这三种关系的组件，我们应该如何进行组件通信？
 
@@ -56,12 +58,13 @@ author: pengzhanbo
 要讲父子组件的通信，首先，我们需要了解 `vue` 组件的 特性。
 
 1. 单向数据流，数据自上而下。
-    > Prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是反过来不会。这是为
-    >了防止子组件无意间修改了父组件的状态，来避免应用的数据流变得难以理解。
+
+   > Prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是反过来不会。这是为
+   > 了防止子组件无意间修改了父组件的状态，来避免应用的数据流变得难以理解。
 
 2. 事件自下而上。
 
-    组件内部状态的变化，通过事件往上冒泡，通知上一级组件，由上一级组件监听事件，并触发相应回调。
+   组件内部状态的变化，通过事件往上冒泡，通知上一级组件，由上一级组件监听事件，并触发相应回调。
 
 基于以上，父子组件通信推荐的方式是：
 
@@ -69,63 +72,59 @@ author: pengzhanbo
 
 `parent.vue`
 
-``` html
+```html
 <template>
-    <div class="parent">
-        <child
-            :name="name"
-            @name-change="nameChange"
-        >
-        </child>
-    </div>
+  <div class="parent">
+    <child :name="name" @name-change="nameChange"> </child>
+  </div>
 </template>
 <script>
-import Child from './child';
-export default {
-    name: 'parent',
-    data () {
-        return {
-            name: 'Jack'
-        };
-    }
-    methods: {
-        nameChange(name) {
-            this.name = name;
-        }
-    },
-    components: {
-        Child
-    }
-}
+  import Child from './child';
+  export default {
+      name: 'parent',
+      data () {
+          return {
+              name: 'Jack'
+          };
+      }
+      methods: {
+          nameChange(name) {
+              this.name = name;
+          }
+      },
+      components: {
+          Child
+      }
+  }
 </script>
 ```
 
 `child.vue`
 
-``` html
+```html
 <template>
-    <div class="child">
-        <span>{{name}}</span>
-        <button @click="onClick">change name</button>
-    </div>
+  <div class="child">
+    <span>{{name}}</span>
+    <button @click="onClick">change name</button>
+  </div>
 </template>
 <script>
-export default {
+  export default {
     name: 'child',
     props: {
-        name: {
-            type: String,
-            defualt() {
-                return '';
-            }
-        }
+      name: {
+        type: String,
+        defualt() {
+          return ''
+        },
+      },
     },
     methods: {
-        onClick() {
-            this.$emit('name-change', 'John');
-        }
-    }
-}
+      onClick() {
+        this.$emit('name-change', 'John')
+      },
+    },
+  }
 </script>
 ```
 
@@ -147,36 +146,36 @@ export default {
 
 我所采取的方案是使用 自定义事件 完成组件通信。
 
-__实例化Vue：__
+**实例化Vue：**
 
 `vue`已实现了一套事件系统，可以很方便的使用它来完成我们的组件通信。
 
-``` javascript
+```javascript
 let middleware = new Vue();
 export defualt middleware;
 ```
 
 `message.vue`
 
-``` javascript
+```javascript
 export default {
-    name: 'message',
-    data () {
-        return {
-            info: 'hello'
-        };
-    },
-    methods: {
-        sayHello() {
-            middleware.$emit('say-hello', this.info);
-        }
+  name: 'message',
+  data() {
+    return {
+      info: 'hello',
     }
-};
+  },
+  methods: {
+    sayHello() {
+      middleware.$emit('say-hello', this.info)
+    },
+  },
+}
 ```
 
 `content.vue`
 
-``` javascript
+```javascript
 export default {
     name: 'content',
     data() {
@@ -196,22 +195,22 @@ export default {
 
 组件数据传导不再是通过`props`传导，而是通过事件进行通信。
 
-__如果不使用实例化Vue的方式去完成，我们也可以自己实现一套自定义事件。__ 这可以做更加个性化的自定义事件，满足项目中的多样的使用场景。
+**如果不使用实例化Vue的方式去完成，我们也可以自己实现一套自定义事件。** 这可以做更加个性化的自定义事件，满足项目中的多样的使用场景。
 
-``` javascript
-class Event{
-    constructor() {
-        // some props
-    }
-    on() {
-        // do something
-    }
-    emit() {
-        // do something
-    }
-    off() {
-        // do somethig
-    }
+```javascript
+class Event {
+  constructor() {
+    // some props
+  }
+  on() {
+    // do something
+  }
+  emit() {
+    // do something
+  }
+  off() {
+    // do somethig
+  }
 }
 ```
 

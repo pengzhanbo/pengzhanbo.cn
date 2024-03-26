@@ -23,17 +23,13 @@ v-model 的原理
 - `checkbox` 和 `radio` 元素 使用 check 属性 和 change 事件
 - `select` 元素 使用 value 属性 和 change 事件
 
-``` vue
+```vue
 <template>
   <input type="text" v-model="value" />
 </template>
 <!-- 等价于 -->
 <template>
-  <input
-    type="text"
-    :value="modelValue"
-    @input="$emit('update:modelValue', $event.target.value)"
-  />
+  <input type="text" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
 </template>
 <script>
 export default {

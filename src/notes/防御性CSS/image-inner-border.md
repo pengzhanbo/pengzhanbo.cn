@@ -11,23 +11,22 @@ permalink: /defensive-css/image-inner-border/
 因为有些 头像的亮度很高，有些头像的亮度很低，又有可能有些是 jpg 格式，有些是 png 格式，
 对透明度的支持不一，就很可能与背景色 混合 在一起。
 
-<style scoped>
-
-.avatar {
+<style>
+.avatar-110 {
   width: 64px;
   height: 64px;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
 }
-.avatar img {
+.avatar-110 img {
   object-fit: cover;
   width: 100%;
 }
-.avatar.inner {
+.avatar-110.inner {
   position: relative;
 }
-.avatar.inner::after {
+.avatar-110.inner::after {
   position: absolute;
   content: "";
   top: 0;
@@ -42,12 +41,12 @@ permalink: /defensive-css/image-inner-border/
 }
 </style>
 
-
 ::::demo-wrapper
 :::center
-<div class="avatar"><img src="/images/blogger-fav.png"></div>
+
+<div class="avatar-110"><img src="/images/blogger-fav.png" alt=""></div>
 <p>avatar.png</p>
-<div class="avatar"><img src="/images/blogger-fav.png" style="background-color: #fff"></div>
+<div class="avatar-110"><img src="/images/blogger-fav.png" style="background-color: #fff" alt=""></div>
 <p>avatar.jpg</p>
 :::
 ::::
@@ -62,7 +61,7 @@ permalink: /defensive-css/image-inner-border/
 }
 .avatar::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   display: block;
@@ -77,10 +76,10 @@ permalink: /defensive-css/image-inner-border/
 
 ::::demo-wrapper
 :::center
-<div class="avatar inner"><img src="/images/blogger-fav.png"></div>
+
+<div class="avatar-110 inner"><img src="/images/blogger-fav.png" alt=""></div>
 <p>avatar.png</p>
-<div class="avatar inner"><img src="/images/blogger-fav.png" style="background-color: #fff"></div>
+<div class="avatar-110 inner"><img src="/images/blogger-fav.png" style="background-color: #fff" alt=""></div>
 <p>avatar.jpg</p>
 :::
 ::::
-

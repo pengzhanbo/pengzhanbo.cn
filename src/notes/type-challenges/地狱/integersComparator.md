@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/integer-comparator/
 Github: []()
 
 ```ts
+
 ```
+
 :::

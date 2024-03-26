@@ -9,5 +9,7 @@ permalink: /type-challenges/extreme/subtract/
 Github: []()
 
 ```ts
+
 ```
+
 :::

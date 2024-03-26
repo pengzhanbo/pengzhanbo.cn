@@ -9,5 +9,7 @@ permalink: /type-challenges/hard/optional-keys/
 Github: []()
 
 ```ts
+
 ```
+
 :::
