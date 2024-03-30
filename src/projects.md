@@ -10,7 +10,7 @@ article: false
 
 ### vite-plugin-mock-dev-server
 
-<Stamps stamps="gs,nv,ndm,gl,g" repo="pengzhanbo/vite-plugin-mock-dev-server" />
+<Stamps stamps="gs,nv,ndm,ndt,gl,g" repo="pengzhanbo/vite-plugin-mock-dev-server" />
 
 **说明：**
 
