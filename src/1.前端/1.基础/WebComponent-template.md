@@ -94,8 +94,7 @@ if (supportsTemplate()) {
 
 从目前来看，IE13+开始支持，低于此版本的IE均无法使用，如果有项目只需要考虑 webkit内核的浏览器，template标签还是可以一用。
 
-::: caniuse mdn-html**elements**template
-:::
+@[caniuse](mdn-html__elements__template)
 
 如果浏览器不支持template标签，那么就会认为是一个普通的自定义元素，内部的标签会被作为一般的标签被渲染。
 

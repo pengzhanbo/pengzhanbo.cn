@@ -78,8 +78,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 
 #### 旧语法浏览器兼容
 
-::: caniuse mdn-css**selectors**-webkit-scrollbar
-:::
+@[caniuse](mdn-css__selectors__-webkit-scrollbar)
 
 至此，我们已经介绍了 CSS 中设置 自定义滚动条的旧语法以及兼容性。
 接下来，我们将介绍 CSS 中设置 自定义滚动条的新语法。
@@ -165,8 +164,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 
 #### 新语法浏览器兼容
 
-::: caniuse mdn-css**properties**scrollbar-width
-:::
+@[caniuse](mdn-css__properties__scrollbar-width)
 
 ## 自定义滚动条的使用范围
 

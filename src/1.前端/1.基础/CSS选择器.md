@@ -748,8 +748,7 @@ tags:
 ...
 ```
 
-::: caniuse css-any-link
-:::
+@[caniuse](css-any-link)
 
 ### :dir(dir)
 
@@ -779,8 +778,7 @@ _dir_ : ltr | rtl
 ...
 ```
 
-::: caniuse css-dir-pseudo
-:::
+@[caniuse](css-dir-pseudo)
 
 ### :has(selector)
 
@@ -800,8 +798,7 @@ _dir_ : ltr | rtl
 ...
 ```
 
-::: caniuse css-has
-:::
+@[caniuse](css-has)
 
 ### :is() / :any()
 
@@ -830,8 +827,7 @@ _dir_ : ltr | rtl
 ...
 ```
 
-::: caniuse css-matches-pseudo
-:::
+@[caniuse](css-matches-pseudo)
 
 ### :where()
 
