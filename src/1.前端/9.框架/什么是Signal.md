@@ -2,6 +2,9 @@
 title: 什么是 Signals ？
 author: pengzhanbo
 createTime: 2024/03/25 20:05:46
+tags:
+  - javascript
+  - ESNext
 permalink: /article/otymkumz/
 ---
 

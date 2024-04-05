@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@8.15.6",
   "description": "My personal blog site",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -19,14 +19,14 @@
     "anywhere": "^1.6.0",
     "vue": "^3.4.21",
     "vuepress": "2.0.0-rc.9",
-    "vuepress-theme-plume": "1.0.0-rc.48"
+    "vuepress-theme-plume": "1.0.0-rc.49"
   },
   "devDependencies": {
     "@pengzhanbo/prettier-config": "^1.7.0",
     "@types/express": "^4.17.21",
     "prettier": "^3.2.5",
     "tsconfig-vuepress": "^4.5.0",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.4"
   },
   "engines": {
     "node": ">=18.16.0",
