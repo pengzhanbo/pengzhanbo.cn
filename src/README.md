@@ -1,6 +1,6 @@
 ---
 home: true
-banner: https://file.mo7.cc/api/public/bz
+banner: https://api.pengzhanbo.cn/wallpaper/bing
 bannerMask:
   light: 0.1
   dark: 0.3
