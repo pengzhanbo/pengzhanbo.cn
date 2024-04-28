@@ -40,8 +40,8 @@ export default defineNavbarConfig([
             icon: 'mdi:paper-airplane',
           },
           {
-            text: 'plugin-caniuse',
-            link: 'https://plume.pengzhanbo.cn/plugins/plugin-caniuse/',
+            text: 'plugin-md-power',
+            link: 'https://plume.pengzhanbo.cn/plugins/plugin-md-power/',
             icon: 'pajamas:feature-flag',
           },
           {
@@ -61,6 +61,11 @@ export default defineNavbarConfig([
           },
         ],
       },
+      {
+        text: 'CanIUse Embed',
+        link: 'https://caniuse.pengzhanbo.cn',
+        icon: 'https://caniuse.pengzhanbo.cn/favicon-128.png'
+      }
     ],
   },
   {
