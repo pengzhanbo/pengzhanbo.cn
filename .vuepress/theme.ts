@@ -5,7 +5,7 @@ import navbar from './navbar.js'
 export default plumeTheme({
   logo: '/logo.png',
   hostname: 'https://pengzhanbo.cn/',
-  repo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
+  docsRepo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
   docsDir: 'src',
   contributors: false,
 
@@ -24,9 +24,9 @@ export default plumeTheme({
 
   editLinkText: '在 GitHub 上编辑此页',
   footer: { copyright: 'Copyright © 2021-present pengzhanbo' },
+  externalLinkIcon: false as any,
 
   plugins: {
-    externalLinkIcon: false,
     baiduTongji: { key: '49ebcb8d1abfcde890ef6f320a101db7' },
     shiki: { twoslash: true },
     markdownEnhance: { demo: true },
