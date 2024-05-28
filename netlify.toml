@@ -1,12 +1,7 @@
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "20"
   NPM_FLAGS = "--version" # prevent Netlify npm install
 
 [build]
   publish = "docs"
-  command = "pnpm install && pnpm build"
-
-[[headers]]
-  for = "/service-worker.js"
-  [headerr.values]
-    cache-control = "no-cache,max-age=100"
+  command = "pnpm build"
