@@ -32,16 +32,7 @@ export default defineUserConfig({
     googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
   ],
 
-  bundler: viteBundler({
-    viteOptions: {
-      server: {
-        // https://github.com/vuepress/core/issues/1526
-        // 此设置用于修复 每次新建 md文件后修改 permalink 会导致报错的问题
-        // vuepress 不确定是否将此设置内置到 vuepress 中，因此目前在此设置
-        fs: { cachedChecks: false },
-      }
-    }
-  }),
+  bundler: viteBundler(),
 
   theme,
 })
