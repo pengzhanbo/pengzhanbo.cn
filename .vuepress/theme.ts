@@ -12,9 +12,9 @@ export default plumeTheme({
   navbar,
   notes,
 
-  avatar: {
+  profile: {
     name: '鹏展博',
-    url: '/images/blogger-fav.png',
+    avatar: '/images/blogger-fav.png',
     description: '世间的美好总是不期而遇',
   },
   social: [
