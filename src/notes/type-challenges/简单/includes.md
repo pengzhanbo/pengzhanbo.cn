@@ -1,5 +1,6 @@
 ---
-title: ✔️ Includes
+title: Includes
+icon: ph:check-bold
 createTime: 2022/12/01 04:17:48
 author: pengzhanbo
 permalink: /type-challenges/easy/includes/

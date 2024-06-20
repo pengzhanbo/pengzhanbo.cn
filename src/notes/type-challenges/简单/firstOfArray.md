@@ -1,5 +1,6 @@
 ---
-title: ✔️ First of Array
+title: First of Array
+icon: ph:check-bold
 createTime: 2022/12/01 02:19:27
 author: pengzhanbo
 permalink: /type-challenges/easy/first-of-array/

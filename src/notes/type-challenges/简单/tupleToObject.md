@@ -1,5 +1,6 @@
 ---
-title: ✔️ Tuple to Object
+title: Tuple to Object
+icon: ph:check-bold
 createTime: 2022/12/01 12:59:56
 author: pengzhanbo
 permalink: /type-challenges/easy/tuple-to-object/

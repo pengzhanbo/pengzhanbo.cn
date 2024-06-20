@@ -1,5 +1,6 @@
 ---
-title: ➖ Filter
+title: Filter
+icon: ph:minus-bold
 createTime: 2022/12/01 07:27:41
 author: pengzhanbo
 permalink: /type-challenges/medium/filter/

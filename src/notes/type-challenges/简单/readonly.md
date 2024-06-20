@@ -1,5 +1,6 @@
 ---
-title: ✔️ Readonly
+title: Readonly
+icon: ph:check-bold
 createTime: 2022/11/30 03:06:24
 author: pengzhanbo
 permalink: /type-challenges/easy/readonly/

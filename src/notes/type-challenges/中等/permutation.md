@@ -1,5 +1,6 @@
 ---
-title: ➖ Permutation
+title: Permutation
+icon: ph:minus-bold
 createTime: 2022/12/01 03:53:00
 author: pengzhanbo
 permalink: /type-challenges/medium/permutation/

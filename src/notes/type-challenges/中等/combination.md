@@ -1,5 +1,6 @@
 ---
-title: ➖ Combination
+title: Combination
+icon: ph:minus-bold
 createTime: 2022/12/01 07:26:46
 author: pengzhanbo
 permalink: /type-challenges/medium/combination/

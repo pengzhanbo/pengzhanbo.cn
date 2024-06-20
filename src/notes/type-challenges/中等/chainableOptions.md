@@ -1,5 +1,6 @@
 ---
-title: ➖ ChainableOptions
+title: ChainableOptions
+icon: ph:minus-bold
 createTime: 2022/12/01 04:28:55
 author: pengzhanbo
 permalink: /type-challenges/medium/chainable-options/

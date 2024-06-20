@@ -1,5 +1,6 @@
 ---
-title: ➖ LastOfArray
+title: LastOfArray
+icon: ph:minus-bold
 createTime: 2022/12/01 04:29:16
 author: pengzhanbo
 permalink: /type-challenges/medium/last-of-array/

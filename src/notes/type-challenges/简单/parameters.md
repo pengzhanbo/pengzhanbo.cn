@@ -1,5 +1,6 @@
 ---
-title: ✔️ Parameters
+title: Parameters
+icon: ph:check-bold
 createTime: 2022/12/01 04:18:33
 author: pengzhanbo
 permalink: /type-challenges/easy/parameters/

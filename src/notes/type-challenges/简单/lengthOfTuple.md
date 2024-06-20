@@ -1,5 +1,6 @@
 ---
-title: ✔️ Length of Tuple
+title: Length of Tuple
+icon: ph:check-bold
 createTime: 2022/12/01 02:21:05
 author: pengzhanbo
 permalink: /type-challenges/easy/length-of-tuple/

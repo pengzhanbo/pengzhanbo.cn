@@ -1,5 +1,6 @@
 ---
-title: ➖ IsUnion
+title: IsUnion
+icon: ph:minus-bold
 createTime: 2022/12/01 03:50:19
 author: pengzhanbo
 permalink: /type-challenges/medium/is-union/

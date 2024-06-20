@@ -1,5 +1,6 @@
 ---
-title: ✔️ Awaited
+title: Awaited
+icon: ph:check-bold
 createTime: 2022/12/01 04:16:56
 author: pengzhanbo
 permalink: /type-challenges/easy/awaited/

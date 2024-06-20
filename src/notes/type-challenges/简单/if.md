@@ -1,5 +1,6 @@
 ---
-title: ✔️ If
+title: If
+icon: ph:check-bold
 createTime: 2022/12/01 04:17:15
 author: pengzhanbo
 permalink: /type-challenges/easy/if/

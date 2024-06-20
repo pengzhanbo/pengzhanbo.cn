@@ -1,5 +1,6 @@
 ---
-title: ➖ Trim
+title: Trim
+icon: ph:minus-bold
 createTime: 2022/12/01 03:55:31
 author: pengzhanbo
 permalink: /type-challenges/medium/trim/

@@ -1,5 +1,6 @@
 ---
-title: ✔️ Omit
+title: Omit
+icon: ph:check-bold
 createTime: 2022/12/01 04:26:50
 author: pengzhanbo
 permalink: /type-challenges/medium/omit/

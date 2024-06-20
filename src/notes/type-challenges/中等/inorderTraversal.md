@@ -1,5 +1,6 @@
 ---
-title: ➖ InorderTraversal
+title: InorderTraversal
+icon: ph:minus-bold
 createTime: 2022/12/01 07:24:21
 author: pengzhanbo
 permalink: /type-challenges/medium/in-order-traversal/

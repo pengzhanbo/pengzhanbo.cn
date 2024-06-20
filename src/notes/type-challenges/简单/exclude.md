@@ -1,5 +1,6 @@
 ---
-title: ✔️ Exclude
+title: Exclude
+icon: ph:check-bold
 createTime: 2022/12/01 04:16:32
 author: pengzhanbo
 permalink: /type-challenges/easy/exclude/

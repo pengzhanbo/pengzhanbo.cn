@@ -1,5 +1,6 @@
 ---
-title: ➖ BemStyleString
+title: BemStyleString
+icon: ph:minus-bold
 createTime: 2022/12/01 07:24:11
 author: pengzhanbo
 permalink: /type-challenges/medium/bem-style-string/

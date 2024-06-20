@@ -1,5 +1,6 @@
 ---
-title: ➖ EndsWith
+title: EndsWith
+icon: ph:minus-bold
 createTime: 2022/12/01 03:44:33
 author: pengzhanbo
 permalink: /type-challenges/medium/ends-with/

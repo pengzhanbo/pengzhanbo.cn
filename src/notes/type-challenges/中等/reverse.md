@@ -1,5 +1,6 @@
 ---
-title: ➖ Reverse
+title: Reverse
+icon: ph:minus-bold
 createTime: 2022/12/01 03:54:41
 author: pengzhanbo
 permalink: /type-challenges/medium/reverse/

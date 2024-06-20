@@ -1,5 +1,6 @@
 ---
-title: ➖ Shift
+title: Shift
+icon: ph:minus-bold
 createTime: 2022/12/01 03:54:53
 author: pengzhanbo
 permalink: /type-challenges/medium/shift/

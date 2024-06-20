@@ -1,5 +1,6 @@
 ---
-title: ✔️ TupleToUnion
+title: TupleToUnion
+icon: ph:check-bold
 createTime: 2022/12/01 04:28:11
 author: pengzhanbo
 permalink: /type-challenges/medium/tuple-to-union/

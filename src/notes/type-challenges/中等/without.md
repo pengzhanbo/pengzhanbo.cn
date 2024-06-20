@@ -1,5 +1,6 @@
 ---
-title: ➖ Without
+title: Without
+icon: ph:minus-bold
 createTime: 2022/12/01 07:25:47
 author: pengzhanbo
 permalink: /type-challenges/medium/without/

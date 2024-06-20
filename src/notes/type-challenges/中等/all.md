@@ -1,5 +1,6 @@
 ---
-title: ➖ All
+title: All
+icon: ph:minus-bold
 createTime: 2022/12/01 07:27:37
 author: pengzhanbo
 permalink: /type-challenges/medium/all/

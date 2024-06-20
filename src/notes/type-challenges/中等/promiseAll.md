@@ -1,5 +1,6 @@
 ---
-title: ➖ Promise.all
+title: Promise.all
+icon: ph:minus-bold
 createTime: 2022/12/01 04:29:56
 author: pengzhanbo
 permalink: /type-challenges/medium/promise-all/

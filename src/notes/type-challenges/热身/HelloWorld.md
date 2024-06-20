@@ -1,5 +1,6 @@
 ---
-title: ✔️ Hello World
+title: Hello World
+icon: ph:check-bold
 createTime: 2022/11/30 02:14:31
 author: pengzhanbo
 permalink: /type-challenges/warm-up/hello-world/

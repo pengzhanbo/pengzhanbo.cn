@@ -1,5 +1,6 @@
 ---
-title: ✔️ Pick
+title: Pick
+icon: ph:check-bold
 createTime: 2022/11/30 12:49:20
 author: pengzhanbo
 permalink: /type-challenges/easy/pick/

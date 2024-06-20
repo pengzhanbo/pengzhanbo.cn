@@ -1,5 +1,6 @@
 ---
-title: ➖ ToPrimitive
+title: ToPrimitive
+icon: ph:minus-bold
 createTime: 2022/12/01 07:27:26
 author: pengzhanbo
 permalink: /type-challenges/medium/to-primitive/

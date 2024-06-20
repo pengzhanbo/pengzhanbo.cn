@@ -1,5 +1,6 @@
 ---
-title: ✔️ Concat
+title: Concat
+icon: ph:check-bold
 createTime: 2022/12/01 04:17:30
 author: pengzhanbo
 permalink: /type-challenges/easy/concat/
