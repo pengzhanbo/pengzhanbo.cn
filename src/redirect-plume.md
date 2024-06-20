@@ -7,6 +7,6 @@ article: false
 ---
 
 ::: tip
-主题说明文档已迁移至 [plume.pengzhanbo.cn](https://plume.pengzhanbo.cn)。
+主题说明文档已迁移至 [https://theme-plume.vuejs.press/](https://theme-plume.vuejs.press/)。
 
 :::
