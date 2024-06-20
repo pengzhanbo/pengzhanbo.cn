@@ -18,7 +18,7 @@
     "@vuepress/plugin-google-analytics": "2.0.0-rc.34",
     "vue": "^3.4.29",
     "vuepress": "2.0.0-rc.13",
-    "vuepress-theme-plume": "1.0.0-rc.67"
+    "vuepress-theme-plume": "1.0.0-rc.68"
   },
   "devDependencies": {
     "@pengzhanbo/prettier-config": "^1.11.0",
