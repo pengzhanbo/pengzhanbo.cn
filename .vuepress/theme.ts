@@ -28,7 +28,10 @@ export default plumeTheme({
 
   plugins: {
     baiduTongji: { key: '49ebcb8d1abfcde890ef6f320a101db7' },
-    shiki: { twoslash: true },
+    shiki: {
+      twoslash: true,
+      languages: ['shell', 'bash', 'json', 'txt', 'markdown', 'html', 'css', 'javascript', 'scss', 'typescript', 'vue', 'rust', 'jsx', 'tsx', 'stylus', 'dockerfile', 'yaml', 'nginx', 'toml', 'groovy'] as any,
+    },
     markdownEnhance: { demo: true },
     markdownPower: { caniuse: true, jsfiddle: true, },
 

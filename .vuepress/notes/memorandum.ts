@@ -5,7 +5,10 @@ export default definePlumeNotesItemConfig({
   link: '/memorandum/',
   sidebar: [
     '',
-    'pm2',
+    'ssh',
+    'grep',
     'git',
+    'pm2',
+    'cargo',
   ]
 })

@@ -435,9 +435,3 @@ article: false
   <LinkCard title="unpkg" icon="https://unpkg.com/favicon.ico" href="https://unpkg.com/" />
   <LinkCard title="Bootcdn" icon="https://www.bootcdn.cn/favicon.ico" href="https://www.bootcdn.cn/"/>
 </CardGrid>
-
-<style>
-.vp-link-card .vp__img {
-  margin: 0;
-}
-</style>
