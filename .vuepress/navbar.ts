@@ -73,27 +73,33 @@ export default defineNavbarConfig([
     icon: 'icon-park-solid:bookshelf',
     items: [
       {
+        text: '备忘录',
+        link: '/memorandum/',
+        activeMatch: '^/memorandum/',
+        icon: 'emojione:memo',
+      },
+      {
         text: '防御性CSS',
         link: '/defensive-css/',
-        activeMatch: '^/note/defensive-css/',
+        activeMatch: '^/defensive-css/',
         icon: 'streamline:css-three',
       },
       {
         text: '前端面试题',
         link: '/interview-question/',
-        activeMatch: '^/note/interview-question/',
+        activeMatch: '^/interview-question/',
         icon: 'codicon:comment-unresolved',
       },
       {
         text: 'type-challenges',
         link: '/type-challenges/',
-        activeMatch: '^/note/type-challenges/',
+        activeMatch: '^/type-challenges/',
         icon: 'mdi:language-typescript',
       },
       {
         text: 'Rust学习简记',
         link: '/learn-rust/',
-        activeMatch: '^/note/learn-rust/',
+        activeMatch: '^/learn-rust/',
         icon: 'mdi:language-rust',
       },
     ],
