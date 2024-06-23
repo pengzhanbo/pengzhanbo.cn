@@ -9,6 +9,7 @@ export default definePlumeNotesItemConfig({
     'grep',
     'git',
     'pm2',
+    'nginx',
     'cargo',
   ]
 })

@@ -1,5 +1,5 @@
 ---
-home: true
+pageLayout: home
 banner: https://api.pengzhanbo.cn/wallpaper/bing
 bannerMask:
   light: 0.1
