@@ -8,3 +8,16 @@
 [https://pengzhanbo.cn](https://pengzhanbo.cn)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2d58513b-ff0d-45b2-ad45-21f7eb21eb27/deploy-status)](https://app.netlify.com/sites/pengzhanbo-blog/deploys)
+
+---
+
+如果你正在参考 这个仓库 搭建个人博客，需要注意以下几点：
+
+- `package.json` 中，`devDependencies` 中，除了 `http-server` 之外均不是必须的，可以忽略。
+  `http-server` 仅提供了站点构建完成后在本地启动一个服务进行浏览，使用 `pnpm preview` 命令进行预览，`http-server` 也是可选的。
+
+- `docsearch` 配置 和 `comments` 配置需要修改为 你的个人站点对应的配置，尽量不要使用我的配置进行测试，
+  这会对我造成一些困扰。
+
+- 请尽量避免直接复制 src 目录中的 markdown 文章到你的博客中，本仓库所有文章遵循 [GPL-3.0](/LICENSE) 协议。
+  如果您复制了这些内容，请声明为 转载并注明来源。您可以随意参考部分内容，但尽量避免直接复制。
