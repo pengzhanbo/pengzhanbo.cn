@@ -7,11 +7,13 @@ export default definePlumeNotesItemConfig({
     '',
     {
       dir: '环境准备',
+      text: '环境准备',
       collapsed: false,
       items: ['安装', '编辑器扩展', 'Cargo'],
     },
     {
       dir: '基础入门',
+      text: '基础入门',
       collapsed: false,
       items: [
         '变量',

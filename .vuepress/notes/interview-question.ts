@@ -6,10 +6,12 @@ export default definePlumeNotesItemConfig({
   sidebar: [
     {
       dir: 'HTML',
+      text: 'HTML',
       items: ['DOCTYPE', '元素的分类', 'HTML5新特性', '语义化理解'],
     },
     {
       dir: 'CSS',
+      text: 'CSS',
       items: [
         '盒模型',
         '外边距合并',
@@ -24,6 +26,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: 'JavaScript',
+      text: 'JavaScript',
       items: [
         '变量',
         '数据类型',
@@ -57,6 +60,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: '浏览器',
+      text: '浏览器',
       items: [
         '对浏览器的理解',
         '浏览器内核',
@@ -73,10 +77,12 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: '计算机网络',
+      text: '计算机网络',
       items: ['http协议', 'http缓存', 'http2', 'TCP协议', 'UDP协议', 'CDN', '代理', '负载均衡'],
     },
     {
       dir: 'Vue',
+      text: 'Vue',
       items: [
         'VirtualDom',
         'v-if和v-show的区别',
@@ -116,26 +122,32 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: 'React',
+      text: 'React',
       items: [],
     },
     {
       dir: 'NodeJs',
+      text: 'NodeJs',
       items: [],
     },
     {
       dir: '工具',
+      text: '工具',
       items: ['git', 'git-hook', 'jenkins', '代码检查工具', '模块打包器', 'webpack', 'pm2'],
     },
     {
       dir: '常用库',
+      text: '常用库',
       items: ['axios', 'lodash', 'UI框架'],
     },
     {
       dir: '安全',
+      text: '安全',
       items: ['XSS攻击', 'CSRF攻击', 'SQL注入攻击', 'CSP内容安全', '点击劫持'],
     },
     {
       dir: '算法',
+      text: '算法',
       items: [
         {
           text: '排序算法',
@@ -146,6 +158,7 @@ export default definePlumeNotesItemConfig({
     },
     {
       dir: '其他',
+      text: '其他',
       items: ['前端SEO', '前端性能优化'],
     },
   ],
