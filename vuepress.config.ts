@@ -1,11 +1,14 @@
 import { getDirname, path } from 'vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 import theme from './.vuepress/theme.js'
 import { viteBundler } from '@vuepress/bundler-vite'
 
 const __dirname = getDirname(import.meta.url)
 const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
+
+const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -29,8 +32,9 @@ export default defineUserConfig({
     ['meta', { name: 'google-site-verification', content: 'X5YSaTDn-pKqQBUKD_05_dQcxVItzEq7Rlbg2ZEU7AM' }],
   ],
   plugins: [
-    googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }),
-  ],
+    isProd ? googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }): [],
+    isProd ? baiduAnalyticsPlugin({ id: '49ebcb8d1abfcde890ef6f320a101db7' }) : []
+  ].flat(),
 
   bundler: viteBundler(),
 

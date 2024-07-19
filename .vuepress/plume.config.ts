@@ -24,4 +24,4 @@ export default defineThemeConfig({
   editLinkText: '在 GitHub 上编辑此页',
   footer: { copyright: 'Copyright © 2021-present pengzhanbo' },
   externalLinkIcon: false as any,
-}) as any
+})
