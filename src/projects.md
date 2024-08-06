@@ -10,7 +10,14 @@ article: false
 
 ### vite-plugin-mock-dev-server
 
-<Stamps stamps="gs,nv,ndm,ndt,gl,g" repo="pengzhanbo/vite-plugin-mock-dev-server" />
+<NpmBadgeGroup repo="pengzhanbo/vite-plugin-mock-dev-server">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dm" />
+  <NpmBadge type="dt" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -28,29 +35,15 @@ article: false
 
 ---
 
-### vite-plugin-image-placeholder
-
-<Stamps stamps="gs,nv,ndt,gl,g" repo="pengzhanbo/vite-plugin-image-placeholder" />
-
-**说明：**
-
-在项目开发过程中，为未准备好图片资源的内容区域，生成占位图片。
-
----
-
-### vulcan
-
-<Stamps stamps="gs,gl,g" repo="pengzhanbo/vulcan" />
-
-**说明：**
-
-基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。
-
----
-
 ### vuepress-theme-plume
 
-<Stamps :stamps="['gs', 'nv', 'ndy', 'gl', 'g']" repo="pengzhanbo/vuepress-theme-plume"  />
+<NpmBadgeGroup repo="pengzhanbo/vuepress-theme-plume">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dy" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -68,9 +61,64 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ---
 
+### vite-plugin-image-placeholder
+
+<NpmBadgeGroup repo="pengzhanbo/vite-plugin-image-placeholder">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dt" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+在项目开发过程中，为未准备好图片资源的内容区域，生成占位图片。
+
+---
+
+### rspack-plugin-mock
+
+<NpmBadgeGroup repo="pengzhanbo/rspack-plugin-mock">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dm" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+`vite-plugin-mock-dev-server` 对标 `vite-plugin-mock-dev-server` 在 `rspack/rsbuild` 上的实现， 专注于在 `rspack / rsbuild` 开发环境下 提供 Mock 服务。
+
+[使用文档](https://github.com/pengzhanbo/rspack-plugin-mock)
+
+---
+
+### vulcan
+
+<NpmBadgeGroup repo="pengzhanbo/vulcan">
+  <NpmBadge type="stars" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+<Stamps stamps="gs,gl,g" repo="pengzhanbo/vulcan" />
+
+**说明：**
+
+基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。
+
+---
+
 ### @any-hooks/solid
 
-<Stamps stamps="gs,nv,ndt,gl,g" repo="any-hooks/solid-hooks" package="@any-hooks/solid" />
+<NpmBadgeGroup repo="any-hooks/solid-hooks" name="@any-hooks/solid">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -82,7 +130,13 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ### stylelint-define-config
 
-<Stamps stamps="gs,nv,ndt,gl,g" repo="stylelint-types/stylelint-define-config" />
+<NpmBadgeGroup repo="stylelint-types/stylelint-define-config">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dt" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -92,7 +146,13 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ### @pengzhanbo/utils
 
-<Stamps stamps="gs,nv,ndm,gl,g" repo="pengzhanbo/utils" package="@pengzhanbo/utils" />
+<NpmBadgeGroup repo="pengzhanbo/utils" name="@pengzhanbo/utils">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dm" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -104,7 +164,12 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ### geo-pattern-ts
 
-<Stamps stamps="gs,nv,ndt,gl,g" repo="pengzhanbo/geo-pattern-ts" />
+<NpmBadgeGroup repo="pengzhanbo/geo-pattern-ts">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -116,7 +181,13 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ### chinese-simple2traditional
 
-<Stamps stamps="gs,nv,ndt,gl,g" repo="pengzhanbo/chinese-simple2traditional" />
+<NpmBadgeGroup repo="pengzhanbo/chinese-simple2traditional">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dt" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
@@ -131,9 +202,33 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ---
 
+### caniuse-embed
+
+<NpmBadgeGroup repo="pengzhanbo/caniuse-embed">
+  <NpmBadge type="stars" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+基于 `Astro` 开发的 `caniuse-embed` 组件。
+
+从 [caniuse.com](https://caniuse.com/) 和 [mozilla's browser compat data](https://github.com/mdn/browser-compat-data) 嵌入最新数据。
+
+显示10个主要浏览器多个版本的功能支持数据。可配置、可靠且完全响应。
+
+[使用文档](https://caniuse-embed.vercel.app/zh-CN)
+
+---
+
 ### spearjs
 
-<Stamps stamps="gs,gl,g" repo="pengzhanbo/spearjs" />
+<NpmBadgeGroup repo="pengzhanbo/spearjs">
+  <NpmBadge type="stars" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
 
 **说明：**
 
