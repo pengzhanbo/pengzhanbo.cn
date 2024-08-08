@@ -36,30 +36,26 @@ export default defineNavbarConfig([
         items: [
           {
             text: 'vuepress-theme-plume',
-            link: 'https://plume.pengzhanbo.cn',
+            link: 'https://theme-plume.vuejs.press',
             icon: 'mdi:paper-airplane',
           },
           {
-            text: 'plugin-md-power',
-            link: 'https://plume.pengzhanbo.cn/plugins/plugin-md-power/',
-            icon: 'pajamas:feature-flag',
-          },
-          {
-            text: 'plugin-shikiji',
-            link: 'https://plume.pengzhanbo.cn/plugins/plugin-shikiji/',
-            icon: 'material-symbols-light:code-blocks-outline-rounded',
-          },
-          {
-            text: 'plugin-iconify',
-            link: 'https://plume.pengzhanbo.cn/plugins/plugin-iconify/',
-            icon: 'line-md:iconify1',
-          },
-          {
-            text: 'plugin-netlify-functions',
-            link: 'https://plume.pengzhanbo.cn/plugins/plugin-netlify-functions/',
-            icon: 'teenyicons:netlify-solid',
-          },
+            text: 'vuepress/ecosystem',
+            link: 'https://github.com/vuepress/ecosystem',
+            icon: 'vscode-icons:file-type-vue'
+          }
         ],
+      },
+      {
+        text: 'Rspack / Rsbuild',
+        icon: 'https://assets.rspack.dev/rspack/rspack-logo.svg',
+        items: [
+          { 
+            text: 'rspack-plugin-mock',
+            link: 'https://github.com/pengzhanbo/rspack-plugin-mock',
+            icon: 'ant-design:api-outlined'
+          },
+        ]
       },
       {
         text: 'CanIUse Embed',

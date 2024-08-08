@@ -18,9 +18,9 @@
     "@vuepress/bundler-vite": "2.0.0-rc.14",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.40",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.37",
-    "vue": "^3.4.35",
+    "vue": "^3.4.37",
     "vuepress": "2.0.0-rc.14",
-    "vuepress-theme-plume": "1.0.0-rc.84"
+    "vuepress-theme-plume": "1.0.0-rc.85"
   },
   "devDependencies": {
     "@pengzhanbo/prettier-config": "^1.12.0",
