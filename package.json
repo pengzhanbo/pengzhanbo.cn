@@ -14,16 +14,16 @@
     "lint:fix": "prettier . --write"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.242",
+    "@iconify/json": "^2.2.244",
     "@vuepress/bundler-vite": "2.0.0-rc.15",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.42",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.42",
-    "vue": "^3.4.38",
+    "vue": "^3.5.2",
     "vuepress": "2.0.0-rc.15",
-    "vuepress-theme-plume": "1.0.0-rc.92"
+    "vuepress-theme-plume": "1.0.0-rc.96"
   },
   "devDependencies": {
-    "@pengzhanbo/prettier-config": "^1.14.0",
+    "@pengzhanbo/prettier-config": "^1.15.0",
     "@types/express": "^4.17.21",
     "http-server": "^14.1.1",
     "prettier": "^3.3.3",
