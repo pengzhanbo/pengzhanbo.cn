@@ -1,12 +1,12 @@
-import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
+import { defineNoteConfig } from 'vuepress-theme-plume'
 
-export default definePlumeNotesItemConfig({
+export default defineNoteConfig({
   link: '/defensive-css/',
   dir: '防御性CSS',
   sidebar: [
-    '',
     {
-      text: '技巧',
+      text: '防御性 CSS',
+      link:'/defensive-css/',
       items: [
         'flex-box-wrapping',
         'image-distortion',

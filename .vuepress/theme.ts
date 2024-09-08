@@ -6,7 +6,7 @@ export default plumeTheme({
   plugins: {
     shiki: {
       twoslash: true,
-      languages: ['shell', 'bash', 'json', 'txt', 'markdown', 'html', 'css', 'javascript', 'scss', 'typescript', 'vue', 'rust', 'jsx', 'tsx', 'stylus', 'dockerfile', 'yaml', 'nginx', 'toml', 'groovy'],
+      lineNumbers: 10,
     },
     markdownEnhance: { demo: true },
     markdownPower: { caniuse: true, jsfiddle: true, },

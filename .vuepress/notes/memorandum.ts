@@ -1,6 +1,6 @@
-import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
+import { defineNoteConfig } from 'vuepress-theme-plume'
 
-export default definePlumeNotesItemConfig({
+export default defineNoteConfig({
   dir: '备忘录',
   link: '/memorandum/',
   sidebar: [

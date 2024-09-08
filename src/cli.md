@@ -1,6 +1,5 @@
 ---
 title: Command-Line Interface
-author: 鹏展博
 createTime: 2019/08/14 11:27:06
 permalink: /cli/
 article: false

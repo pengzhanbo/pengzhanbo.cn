@@ -1,6 +1,5 @@
 ---
 title: Projects
-author: 鹏展博
 createTime: 2023/02/15 04:07:11
 permalink: /projects/
 article: false
@@ -158,7 +157,7 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 一个常用的工具类库, 无依赖， 任何运行时。
 
-[使用文档](jsr.io/@pengzhanbo/utils)
+[使用文档](http://jsr.io/@pengzhanbo/utils)
 
 ---
 

@@ -1,6 +1,6 @@
-import { definePlumeNotesItemConfig } from 'vuepress-theme-plume'
+import { defineNoteConfig } from 'vuepress-theme-plume'
 
-export default definePlumeNotesItemConfig({
+export default defineNoteConfig({
   link: '/interview-question/',
   dir: '面试题',
   sidebar: [

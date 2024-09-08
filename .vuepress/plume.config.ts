@@ -6,7 +6,6 @@ export default defineThemeConfig({
   logo: '/logo.png',
   docsRepo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
   docsDir: 'src',
-  contributors: false,
 
   navbar,
   notes,
@@ -23,5 +22,5 @@ export default defineThemeConfig({
 
   editLinkText: '在 GitHub 上编辑此页',
   footer: { copyright: 'Copyright © 2021-present pengzhanbo' },
-  externalLinkIcon: false as any,
+  externalLinkIcon: false
 })
