@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.2",
   "description": "My personal blog site",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -14,22 +14,22 @@
     "lint:fix": "prettier . --write"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.258",
-    "@vuepress/bundler-vite": "2.0.0-rc.17",
-    "@vuepress/plugin-baidu-analytics": "2.0.0-rc.52",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.52",
+    "@iconify/json": "^2.2.264",
+    "@vuepress/bundler-vite": "2.0.0-rc.18",
+    "@vuepress/plugin-baidu-analytics": "2.0.0-rc.54",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.54",
     "katex": "^0.16.11",
-    "sass-embedded": "^1.79.4",
-    "vue": "^3.5.11",
-    "vuepress": "2.0.0-rc.17",
-    "vuepress-theme-plume": "1.0.0-rc.107"
+    "sass-embedded": "^1.80.4",
+    "vue": "^3.5.12",
+    "vuepress": "2.0.0-rc.18",
+    "vuepress-theme-plume": "1.0.0-rc.113"
   },
   "devDependencies": {
-    "@pengzhanbo/prettier-config": "^1.18.1",
+    "@pengzhanbo/prettier-config": "^1.18.2",
     "@types/express": "^5.0.0",
     "http-server": "^14.1.1",
     "prettier": "^3.3.3",
-    "tsconfig-vuepress": "^5.2.0",
+    "tsconfig-vuepress": "^5.2.1",
     "typescript": "^5.6.3"
   }
 }
