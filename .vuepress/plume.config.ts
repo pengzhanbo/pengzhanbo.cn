@@ -4,8 +4,6 @@ import navbar from './navbar.js'
 
 export default defineThemeConfig({
   logo: '/logo.png',
-  docsRepo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
-  docsDir: 'src',
 
   navbar,
   notes,

@@ -2,6 +2,8 @@ import { plumeTheme } from 'vuepress-theme-plume'
 
 export default plumeTheme({
   hostname: 'https://pengzhanbo.cn/',
+  docsRepo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
+  docsDir: 'src',
 
   plugins: {
     shiki: {
