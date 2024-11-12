@@ -10,7 +10,8 @@
     "skipLibCheck": true,
     "target": "ES2022",
     "paths": {
-      "@internal/*": ["./.vuepress/.temp/internal/*"],
+      "~/typings/*": ["./.vuepress/typings/*"],
+      "~/tc-utils": ["./.vuepress/typings/type-challenges-utils.ts"]
     }
   },
   "include": ["**/.vuepress/**/*", "vuepress.client.ts", "vuepress.config.ts"],

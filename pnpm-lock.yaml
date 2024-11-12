@@ -33,8 +33,8 @@ importers:
         specifier: 2.0.0-rc.18
         version: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
       vuepress-theme-plume:
-        specifier: 1.0.0-rc.115
-        version: 1.0.0-rc.115(@algolia/client-search@5.13.0)(@iconify/json@2.2.270)(markdown-it@14.1.0)(sass-embedded@1.80.6)(search-insights@2.17.2)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+        specifier: 1.0.0-rc.116
+        version: 1.0.0-rc.116(@algolia/client-search@5.13.0)(@iconify/json@2.2.270)(markdown-it@14.1.0)(sass-embedded@1.80.6)(search-insights@2.17.2)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
     devDependencies:
       '@pengzhanbo/prettier-config':
         specifier: ^1.18.2
@@ -1013,23 +1013,23 @@ packages:
   '@vue/shared@3.5.12':
     resolution: {integrity: sha512-L2RPSAwUFbgZH20etwrXyVyCBu9OxRSi8T/38QsvnkJyvq2LufW2lDCOzm7t/U9C1mkhJGWYfCuFBCmIuNivrg==}
 
-  '@vuepress-plume/plugin-content-update@1.0.0-rc.115':
-    resolution: {integrity: sha512-4oAaomzUA1RmTfKFk0m9GwnRysOS4KBnpEh0Hmfv9HTgThXz/VlxpYXRo37a4/OJA006aF/I6D2O9o2W5OGJ8Q==}
+  '@vuepress-plume/plugin-content-update@1.0.0-rc.116':
+    resolution: {integrity: sha512-22xDzKmQq8Y7SSDt6BwgqCYMbg12u6Ok7jRNlIx6cOUnCta/bFSh1s/is5hr3Av2aDwEhuQh173GJZymrG5zvQ==}
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
-  '@vuepress-plume/plugin-fonts@1.0.0-rc.115':
-    resolution: {integrity: sha512-RVhrQ3KpJJXHD0IqrWHi6rnWtjuLMUJxyJncFKb5m0LlEFI2WB6YBJeGU5VJeDiD/lMl6wUvduq/zOM6ZMj/ng==}
+  '@vuepress-plume/plugin-fonts@1.0.0-rc.116':
+    resolution: {integrity: sha512-P0eDOnFdaT8b3/WCd6R28iAQhts+hYEsae8ymFWP66ZKFjXLbNStHkZDCNBcchyS68h653Ol5AT6orHg6lJWKQ==}
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
-  '@vuepress-plume/plugin-search@1.0.0-rc.115':
-    resolution: {integrity: sha512-Ux3epoQghMDfLk+AOgOscH6slyIML/DX4XSdISFx3J7yRRd+64Ur6srQxXvW0HDEE5bqbEE11wy7PsqFJdXhsg==}
+  '@vuepress-plume/plugin-search@1.0.0-rc.116':
+    resolution: {integrity: sha512-ZUS3PaSeqcgsrK+VqnPIgLNTjuvtBLbN0YoQTBSBBSX0DvFU+AEaPHAJOPXASqKNxuUnAj4ubU9YjOjbyB+pXA==}
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
-  '@vuepress-plume/plugin-shikiji@1.0.0-rc.115':
-    resolution: {integrity: sha512-QOed1pWTcjK+pERspqRRqX+XjBnrrW3lZRKDWWNQaWFVE2RfjQPGus97F1jC/kDtTLP3gvIfZJ9fjEFc6KDxRA==}
+  '@vuepress-plume/plugin-shikiji@1.0.0-rc.116':
+    resolution: {integrity: sha512-JA/LMbyyMMPOr85HgzlS/8jUuAdg8g8ESc1l7x7ly+K5HNUd1gDM8G3btUhIB5vsKdfip4zER8DLzPcBgARtCA==}
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
@@ -2618,8 +2618,8 @@ packages:
       sass-loader:
         optional: true
 
-  vuepress-plugin-md-power@1.0.0-rc.115:
-    resolution: {integrity: sha512-C/7+cCfnyD1bsSXV0cgB5n1th3IVB+dxmbiHcNibK4FgE9GuaVQ0smxttutfQE6laPGm88H1yidDBIGhF+q3rQ==}
+  vuepress-plugin-md-power@1.0.0-rc.116:
+    resolution: {integrity: sha512-moYMUSS6r+4EcglP9XWo2vdbj1k+18yP/3SQKrfYkkODUaxCFZ723M1mYWrdbOAwRN3zBS4Dr0y4df6FcaHLGw==}
     peerDependencies:
       markdown-it: ^14.0.0
       vuepress: 2.0.0-rc.18
@@ -2633,8 +2633,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.18
 
-  vuepress-theme-plume@1.0.0-rc.115:
-    resolution: {integrity: sha512-/KHGQ9s9bWROHrytCsTW0LjRt7wO5f5bF3ITD1Ijgnqj83YCCuSOQ7oxs1tbldzXf/179olfKVWXwOK3Jl7Xqg==}
+  vuepress-theme-plume@1.0.0-rc.116:
+    resolution: {integrity: sha512-tJj3zI7g12cBx1qv4BVA6clh/A2wJ5/oa+VtMXGXOHXiM79hccSFT2RhL7qgA4X42NP1nrDZ5vut7PBZ0zHBXw==}
     peerDependencies:
       '@iconify/json': ^2
       mathjax-full: ^3.2.2
@@ -3552,18 +3552,18 @@ snapshots:
 
   '@vue/shared@3.5.12': {}
 
-  '@vuepress-plume/plugin-content-update@1.0.0-rc.115(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
+  '@vuepress-plume/plugin-content-update@1.0.0-rc.116(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
       vue: 3.5.12(typescript@5.6.3)
       vuepress: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
     transitivePeerDependencies:
       - typescript
 
-  '@vuepress-plume/plugin-fonts@1.0.0-rc.115(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
+  '@vuepress-plume/plugin-fonts@1.0.0-rc.116(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
       vuepress: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
 
-  '@vuepress-plume/plugin-search@1.0.0-rc.115(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
+  '@vuepress-plume/plugin-search@1.0.0-rc.116(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
       '@vuepress/helper': 2.0.0-rc.60(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       '@vueuse/core': 11.2.0(vue@3.5.12(typescript@5.6.3))
@@ -3590,7 +3590,7 @@ snapshots:
       - typescript
       - universal-cookie
 
-  '@vuepress-plume/plugin-shikiji@1.0.0-rc.115(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
+  '@vuepress-plume/plugin-shikiji@1.0.0-rc.116(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))':
     dependencies:
       '@shikijs/transformers': 1.22.2
       '@shikijs/twoslash': 1.22.2(typescript@5.6.3)
@@ -5433,7 +5433,7 @@ snapshots:
       - markdown-it
       - typescript
 
-  vuepress-plugin-md-power@1.0.0-rc.115(markdown-it@14.1.0)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))):
+  vuepress-plugin-md-power@1.0.0-rc.116(markdown-it@14.1.0)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))):
     dependencies:
       '@mdit/plugin-attrs': 0.13.1(markdown-it@14.1.0)
       '@mdit/plugin-footnote': 0.13.1(markdown-it@14.1.0)
@@ -5470,15 +5470,15 @@ snapshots:
       - '@vue/composition-api'
       - typescript
 
-  vuepress-theme-plume@1.0.0-rc.115(@algolia/client-search@5.13.0)(@iconify/json@2.2.270)(markdown-it@14.1.0)(sass-embedded@1.80.6)(search-insights@2.17.2)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))):
+  vuepress-theme-plume@1.0.0-rc.116(@algolia/client-search@5.13.0)(@iconify/json@2.2.270)(markdown-it@14.1.0)(sass-embedded@1.80.6)(search-insights@2.17.2)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))):
     dependencies:
       '@iconify/utils': 2.1.33
       '@iconify/vue': 4.1.2(vue@3.5.12(typescript@5.6.3))
       '@pengzhanbo/utils': 1.1.2
-      '@vuepress-plume/plugin-content-update': 1.0.0-rc.115(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
-      '@vuepress-plume/plugin-fonts': 1.0.0-rc.115(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
-      '@vuepress-plume/plugin-search': 1.0.0-rc.115(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
-      '@vuepress-plume/plugin-shikiji': 1.0.0-rc.115(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+      '@vuepress-plume/plugin-content-update': 1.0.0-rc.116(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+      '@vuepress-plume/plugin-fonts': 1.0.0-rc.116(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+      '@vuepress-plume/plugin-search': 1.0.0-rc.116(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+      '@vuepress-plume/plugin-shikiji': 1.0.0-rc.116(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       '@vuepress/helper': 2.0.0-rc.60(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       '@vuepress/plugin-cache': 2.0.0-rc.54(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
       '@vuepress/plugin-comment': 2.0.0-rc.60(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
@@ -5508,7 +5508,7 @@ snapshots:
       vue: 3.5.12(typescript@5.6.3)
       vuepress: 2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3))
       vuepress-plugin-md-enhance: 2.0.0-rc.59(markdown-it@14.1.0)(sass-embedded@1.80.6)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
-      vuepress-plugin-md-power: 1.0.0-rc.115(markdown-it@14.1.0)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
+      vuepress-plugin-md-power: 1.0.0-rc.116(markdown-it@14.1.0)(typescript@5.6.3)(vuepress@2.0.0-rc.18(@vuepress/bundler-vite@2.0.0-rc.18(@types/node@22.7.2)(sass-embedded@1.80.6)(typescript@5.6.3))(typescript@5.6.3)(vue@3.5.12(typescript@5.6.3)))
     optionalDependencies:
       '@iconify/json': 2.2.270
       sass-embedded: 1.80.6
