@@ -9,6 +9,7 @@
     "noImplicitAny": false,
     "skipLibCheck": true,
     "target": "ES2022",
+    "types": ["vuepress/client-types"],
     "paths": {
       "~/typings/*": ["./.vuepress/typings/*"],
       "~/tc-utils": ["./.vuepress/typings/type-challenges-utils.ts"]
