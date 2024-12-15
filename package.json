@@ -14,15 +14,15 @@
     "lint:fix": "prettier . --write"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.280",
-    "@vuepress/bundler-vite": "2.0.0-rc.18",
-    "@vuepress/plugin-baidu-analytics": "2.0.0-rc.63",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.63",
-    "katex": "^0.16.11",
-    "sass-embedded": "^1.82.0",
+    "@iconify/json": "^2.2.282",
+    "@vuepress/bundler-vite": "2.0.0-rc.19",
+    "@vuepress/plugin-baidu-analytics": "2.0.0-rc.66",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.66",
+    "katex": "^0.16.15",
+    "sass-embedded": "^1.83.0",
     "vue": "^3.5.13",
-    "vuepress": "2.0.0-rc.18",
-    "vuepress-theme-plume": "1.0.0-rc.120"
+    "vuepress": "2.0.0-rc.19",
+    "vuepress-theme-plume": "1.0.0-rc.121"
   },
   "devDependencies": {
     "@pengzhanbo/prettier-config": "^1.21.0",
