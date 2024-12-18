@@ -11,7 +11,7 @@ export default plumeTheme({
       lineNumbers: 10,
       languages: ['sh','css','html','jsx','javascript','js','ts','stylus','json','yaml','tsx','dockerfile','bash','groovy','yml','md','nginx','toml','rust','vue'],
     },
-    markdownEnhance: { demo: true },
+    markdownEnhance: { demo: true, mermaid: true },
     markdownPower: { caniuse: true, jsfiddle: true, },
 
     docsearch: {

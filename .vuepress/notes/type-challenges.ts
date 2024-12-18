@@ -19,7 +19,7 @@ export default defineNoteConfig({
     },
     {
       dir: '中等',
-      text: '中等(75)',
+      text: '中等(103)',
       collapsed: false,
       items: 'auto',
     },
