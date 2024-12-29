@@ -102,8 +102,6 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
   <NpmBadge type="source" />
 </NpmBadgeGroup>
 
-<Stamps stamps="gs,gl,g" repo="pengzhanbo/vulcan" />
-
 **说明：**
 
 基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。

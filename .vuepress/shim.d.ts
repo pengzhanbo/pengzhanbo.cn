@@ -4,3 +4,8 @@ declare module '*.vue' {
   const comp: ComponentOptions
   export default comp
 }
+
+declare module '*.css' {
+  const css: string
+  export default css
+}
