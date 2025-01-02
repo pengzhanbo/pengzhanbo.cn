@@ -5,12 +5,12 @@ export default defineNoteConfig({
   dir: '面试题',
   sidebar: [
     {
-      dir: 'HTML',
+      prefix: 'HTML',
       text: 'HTML',
       items: ['DOCTYPE', '元素的分类', 'HTML5新特性', '语义化理解'],
     },
     {
-      dir: 'CSS',
+      prefix: 'CSS',
       text: 'CSS',
       items: [
         '盒模型',
@@ -25,7 +25,7 @@ export default defineNoteConfig({
       ],
     },
     {
-      dir: 'JavaScript',
+      prefix: 'JavaScript',
       text: 'JavaScript',
       items: [
         '变量',
@@ -59,7 +59,7 @@ export default defineNoteConfig({
       ],
     },
     {
-      dir: '浏览器',
+      prefix: '浏览器',
       text: '浏览器',
       items: [
         '对浏览器的理解',
@@ -76,12 +76,12 @@ export default defineNoteConfig({
       ],
     },
     {
-      dir: '计算机网络',
+      prefix: '计算机网络',
       text: '计算机网络',
       items: ['http协议', 'http缓存', 'http2', 'TCP协议', 'UDP协议', 'CDN', '代理', '负载均衡'],
     },
     {
-      dir: 'Vue',
+      prefix: 'Vue',
       text: 'Vue',
       items: [
         'VirtualDom',
@@ -92,7 +92,7 @@ export default defineNoteConfig({
         '对vuex的理解',
         {
           text: 'vue@3',
-          dir: 'v3',
+          prefix: 'v3',
           items: [
             '响应式原理',
             '组件通信方式',
@@ -107,7 +107,7 @@ export default defineNoteConfig({
         },
         {
           text: 'vue@2',
-          dir: 'v2',
+          prefix: 'v2',
           items: [
             '响应式原理',
             'data为什么必须是函数',
@@ -121,43 +121,43 @@ export default defineNoteConfig({
       ],
     },
     {
-      dir: 'React',
+      prefix: 'React',
       text: 'React',
       items: [],
     },
     {
-      dir: 'NodeJs',
+      prefix: 'NodeJs',
       text: 'NodeJs',
       items: [],
     },
     {
-      dir: '工具',
+      prefix: '工具',
       text: '工具',
       items: ['git', 'git-hook', 'jenkins', '代码检查工具', '模块打包器', 'webpack', 'pm2'],
     },
     {
-      dir: '常用库',
+      prefix: '常用库',
       text: '常用库',
       items: ['axios', 'lodash', 'UI框架'],
     },
     {
-      dir: '安全',
+      prefix: '安全',
       text: '安全',
       items: ['XSS攻击', 'CSRF攻击', 'SQL注入攻击', 'CSP内容安全', '点击劫持'],
     },
     {
-      dir: '算法',
+      prefix: '算法',
       text: '算法',
       items: [
         {
           text: '排序算法',
-          dir: '排序',
+          prefix: '排序',
           items: ['冒泡排序', '选择排序', '插入排序', '希尔排序', '归并排序', '快速排序', '排序算法总结'],
         },
       ],
     },
     {
-      dir: '其他',
+      prefix: '其他',
       text: '其他',
       items: ['前端SEO', '前端性能优化'],
     },
