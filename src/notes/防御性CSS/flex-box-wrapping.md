@@ -82,10 +82,12 @@ permalink: /defensive-css/flex-box-wrapping/
 
 ## 示例：面包屑导航
 
-:::normal-demo 面包屑导航
+::::demo title="面包屑导航" desc="调整容器大小查看效果"
+::: code-tabs
+
+@tab HTML
 
 ```html
-<p>调整容器大小查看效果：</p>
 <div class="wrapper">
   <ul class="breadcrumbs" id="breadcrumbs">
     <li class="item"><a href="#">Home</a></li>
@@ -98,6 +100,8 @@ permalink: /defensive-css/flex-box-wrapping/
   <label for="toggle">启用 Flex Wrap</label>
 </div>
 ```
+
+@tab CSS
 
 ```css
 .wrapper {
@@ -141,6 +145,8 @@ permalink: /defensive-css/flex-box-wrapping/
 }
 ```
 
+@tab Javascript
+
 ```js
 const breadcrumbs = document.querySelector('#breadcrumbs')
 document.querySelector('#toggle').addEventListener('change', (e) => {
@@ -149,3 +155,4 @@ document.querySelector('#toggle').addEventListener('change', (e) => {
 ```
 
 :::
+::::

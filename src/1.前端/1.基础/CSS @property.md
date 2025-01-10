@@ -57,12 +57,17 @@ p {
 }
 </style>
 
-::: normal-demo 代码演示
+:::: demo 代码演示
+
+::: code-tabs
+@tab HTML
 
 ```html
 <p class="css-vars">这是使用 css vars 定义的文字颜色</p>
 <p class="css-property">这是使用 css @property 定义的文字颜色</p>
 ```
+
+@tab CSS
 
 ```css
 .css-vars {
@@ -80,6 +85,7 @@ p {
 ```
 
 :::
+::::
 
 ## @property
 
@@ -142,11 +148,16 @@ p {
 
 通常我们实现一个渐变图案的代码如下：
 
-::: normal-demo 渐变图案
+::::demo title="渐变图案"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="gradient"></div>
 ```
+
+@tab CSS
 
 ```css
 .gradient {
@@ -158,15 +169,21 @@ p {
 ```
 
 :::
+::::
 
 我们改造一下代码，使用 自定义属性实现，并尝试通过修改自定义属性，实现渐变过渡效果：
 
-::: normal-demo 自定义属性
+:::: demo title="自定义属性"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="gradient"></div>
 <p>鼠标悬停到方块中查看效果</p>
 ```
+
+@tab CSS
 
 ```css
 .gradient {
@@ -184,7 +201,7 @@ p {
 }
 ```
 
-:::
+::::
 
 可以看到，虽然我们使用 `transition` 添加了 过渡动画，在 `hover` 时修改了 自定义属性。
 当我们把鼠标移动到 `.gradient` 上时，并没有渐变过渡动画效果，我们只是得到了 两侦之间的变化。
@@ -225,12 +242,16 @@ p {
 }
 </style>
 
-::: normal-demo 自定义属性
+:::: demo title="自定义属性" desc="鼠标悬停到方块中查看效果"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="gradient"></div>
-<p>鼠标悬停到方块中查看效果</p>
 ```
+
+@tab CSS
 
 ```css
 @property --houdini-color-1 {
@@ -261,6 +282,7 @@ p {
 ```
 
 :::
+::::
 
 可以看到， 渐变过渡动画效果成功了！
 
@@ -284,11 +306,16 @@ p {
 }
 </style>
 
-::: normal-demo 渐变过渡动画
+:::: demo title="渐变过渡动画"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="bg-animate"></div>
 ```
+
+@tab CSS
 
 ```css
 @property --an-color-1 {
@@ -339,16 +366,22 @@ p {
 ```
 
 :::
+::::
 
 ### 复杂背景动画
 
 我们通过代码实现一个复杂的 渐变图案背景：
 
-::: normal-demo 复杂背景
+:::: demo title="复杂背景"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="bg"></div>
 ```
+
+@tab CSS
 
 ```css
 .bg {
@@ -377,6 +410,7 @@ p {
 ```
 
 :::
+::::
 
 如果我们想让它动起来，如果不是用 `@property`，可能要废一番功夫，但是，在 `@property` 的支持下，
 我们可以实现不错的动画效果：
@@ -419,11 +453,16 @@ p {
 }
 </style>
 
-::: normal-demo 复杂背景动画
+:::: demo title="复杂背景动画"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="bg"></div>
 ```
+
+@tab CSS
 
 ```css
 @property --per-1 {
@@ -499,6 +538,7 @@ p {
 ```
 
 :::
+::::
 
 ## 参考
 

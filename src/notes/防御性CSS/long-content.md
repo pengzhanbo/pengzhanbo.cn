@@ -93,7 +93,10 @@ permalink: /defensive-css/long-content/
 
 在某些情况下，我们可能需要截断对用户不重要或不影响用户体验的文本。在这种情况下，截断文本是个好主意。
 
-:::normal-demo text-overflow: ellipsis
+:::: demo title="text-overflow: ellipsis" desc="调整容器大小查看效果"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <p>调整容器大小查看效果：</p>
@@ -108,6 +111,8 @@ permalink: /defensive-css/long-content/
   <label for="toggle">启用 text-overflow</label>
 </div>
 ```
+
+@tab CSS
 
 ```css
 .wrapper {
@@ -153,6 +158,8 @@ permalink: /defensive-css/long-content/
 }
 ```
 
+@tab Javascript
+
 ```js
 const til = document.querySelector('#title')
 document.querySelector('#toggle').addEventListener('change', (e) => {
@@ -161,3 +168,4 @@ document.querySelector('#toggle').addEventListener('change', (e) => {
 ```
 
 :::
+::::

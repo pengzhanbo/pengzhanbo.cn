@@ -45,10 +45,12 @@ permalink: /defensive-css/image-distortion/
 
 ## 示例
 
-:::normal-demo object-fit:cover
+:::: demo title="object-fit: cover" desc="调整容器大小查看效果"
+::: code-tabs
+
+@tab HTML
 
 ```html
-<p>调整容器大小查看效果：</p>
 <div class="wrapper">
   <img id="image" src="/images/defensive-css/ratio.png" />
 </div>
@@ -57,6 +59,8 @@ permalink: /defensive-css/image-distortion/
   <label for="toggle">启用 object-fit</label>
 </div>
 ```
+
+@tab CSS
 
 ```css
 .wrapper {
@@ -92,6 +96,8 @@ permalink: /defensive-css/image-distortion/
 }
 ```
 
+@tab Javascript
+
 ```js
 const image = document.querySelector('#image')
 document.querySelector('#toggle').addEventListener('change', (e) => {
@@ -100,3 +106,4 @@ document.querySelector('#toggle').addEventListener('change', (e) => {
 ```
 
 :::
+::::

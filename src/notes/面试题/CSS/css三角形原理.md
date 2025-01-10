@@ -33,11 +33,16 @@ permalink: /interview-question/bvx4d2u5/
 }
 ```
 
-::: normal-demo CSS三角形
+:::: demo title="CSS三角形"
+::: code-tabs
+
+@tab HTML
 
 ```html
 <div class="triangle-demo"></div>
 ```
+
+@tab CSS
 
 ```css
 .triangle-demo {
@@ -51,3 +56,4 @@ permalink: /interview-question/bvx4d2u5/
 ```
 
 :::
+::::

@@ -120,10 +120,12 @@ permalink: /defensive-css/auto-fit-fill/
 }
 ```
 
-:::normal-demo auto-fit-fill
+:::: demo title="auto-fit-fill" desc="调整容器大小查看效果"
+::: code-tabs
+
+@tab HTML
 
 ```html
-<p>调整容器大小查看效果：</p>
 <div class="demo-wrapper">
   <div class="wrapper" id="gridWrapper">
     <div class="card">
@@ -143,6 +145,8 @@ permalink: /defensive-css/auto-fit-fill/
   <label for="toggle">启用 auto-fill</label>
 </div>
 ```
+
+@tab CSS
 
 ```css
 .demo-wrapper {
@@ -204,6 +208,8 @@ permalink: /defensive-css/auto-fit-fill/
 }
 ```
 
+@tab Javascript
+
 ```js
 const wrapper = document.querySelector('#gridWrapper')
 document.querySelector('#toggle').addEventListener('change', (e) => {
@@ -212,3 +218,4 @@ document.querySelector('#toggle').addEventListener('change', (e) => {
 ```
 
 :::
+::::
