@@ -11,6 +11,7 @@
   "first-line-h1": false,
   "first-line-heading": false,
   "no-blanks-blockquote": false,
+  "no-bare-urls": false,
   "line-length": {
     "line_length": 140,
     "tables": false,

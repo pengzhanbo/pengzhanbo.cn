@@ -117,6 +117,12 @@ export default defineNavbarConfig([
         activeMatch: '^/sites-collect',
       },
       {
+        text: 'AI 模型导航',
+        link: '/ai/',
+        icon: 'eos-icons:ai',
+        activeMatch: '^/ai/',
+      },
+      {
         text: 'Command-Line Interface',
         link: '/cli/',
         icon: 'grommet-icons:cli',
