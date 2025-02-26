@@ -17,11 +17,40 @@ permalink: /type-challenges/
 根据 [type-challenges](https://github.com/type-challenges/type-challenges) 的题目难度，
 分为了五个难度：
 
-- `热身`
-- `简单`
-- `中等`
-- `困难`
-- `地狱`
+- `热身` <span class="tc-p"><span style="width:100%" /></span> <span>1 / 1</span>
+- `简单` <span class="tc-p"><span style="width:100%" /></span> <span>13 / 13</span>
+- `中等` <span class="tc-p"><span style="width:calc((57/103)*100%)" /></span> <span>57 / 103</span>
+- `困难` <span class="tc-p"><span style="width:0%" /></span> <span>0 / 43</span>
+- `地狱` <span class="tc-p"><span style="width:0%" /></span> <span>0 / 14</span>
+
+<style>
+.tc-p {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--vp-c-default-soft);
+  margin-left: 1em;
+  vertical-align: middle;
+}
+
+.tc-p > span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--vp-c-green-3);
+}
+
+.tc-p + span {
+  font-size: 0.8em;
+  color: var(--vp-c-text-3);
+  margin-left: 1em;
+}
+</style>
 
 请从上到下依次阅读本笔记，以便更好的了解 `type-challenges` 的挑战。
 
