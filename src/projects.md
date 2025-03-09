@@ -56,7 +56,7 @@ vuepress-theme-plume 是一个基于 VuePress 的主题。适用于 博客、文
 
 plume 主题尽可能的内置你可能需要的功能，以及搭建站点所需要的一般性配置，您无需关注这些细节。 目的是，让您更专注于 内容的创作，更好的表达你的想法，享受 Markdown 增强语法带来的便利。
 
-[使用文档](https://plume.pengzhanbo.cn/)
+[使用文档](https://theme-plume.vuejs.press/)
 
 ---
 

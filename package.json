@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.5.2",
+  "packageManager": "pnpm@10.6.1",
   "description": "My personal blog site",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -14,7 +14,7 @@
     "lint:fix": "prettier . --write"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.311",
+    "@iconify/json": "^2.2.314",
     "@vuepress/bundler-vite": "2.0.0-rc.20",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.79",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.79",
@@ -26,10 +26,10 @@
     "vuepress-theme-plume": "1.0.0-rc.135"
   },
   "devDependencies": {
-    "@pengzhanbo/prettier-config": "^1.26.0",
+    "@pengzhanbo/prettier-config": "^1.27.0",
     "@types/express": "^5.0.0",
     "http-server": "^14.1.1",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "tsconfig-vuepress": "^5.2.1",
     "typescript": "^5.8.2"
   },
