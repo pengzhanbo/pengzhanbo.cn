@@ -180,8 +180,21 @@ article: false
 ## 图标
 
 <CardGrid>
-  <LinkCard title="xicons" icon="https://www.xicons.org/favicon.svg" href="https://www.xicons.org/" />
-  <LinkCard title="iconify" icon="https://icon-sets.iconify.design/favicon.svg" href="https://icon-sets.iconify.design/" />
+  <LinkCard title="XIcons" icon="https://www.xicons.org/favicon.svg" href="https://www.xicons.org/" />
+  <LinkCard title="Iconify" icon="https://icon-sets.iconify.design/favicon.svg" href="https://icon-sets.iconify.design/" />
+  <LinkCard
+    title="IconPark"
+    icon="https://lf1-cdn2-tos.bytegoofy.com/bydesign/iconparksite/logo.svg"
+    href="https://iconpark.oceanengine.com/"
+  />
+  <LinkCard title="Lucide Icon" icon="https://lucide.dev/logo.light.svg" href="https://lucide.dev/" />
+  <LinkCard title="Simple Icons" icon="https://simpleicons.org/logo-fc26614b48c3f1fd.svg" href="https://simpleicons.org/" />
+  <LinkCard title="Font Awesome" icon="https://fontawesome.com/images/favicon/icon.svg" href="https://fontawesome.com/" />
+  <LinkCard
+    title="Bootstrap Icons"
+    icon="https://icons.getbootstrap.com/assets/img/favicons/favicon-32x32.png"
+    href="https://icons.getbootstrap.com/"
+  />
 </CardGrid>
 
 ## 桌面应用开发

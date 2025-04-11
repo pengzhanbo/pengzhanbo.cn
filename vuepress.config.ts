@@ -37,6 +37,10 @@ export default defineUserConfig({
     isProd ? baiduAnalyticsPlugin({ id: '49ebcb8d1abfcde890ef6f320a101db7' }) : []
   ],
 
+  alias: {
+    '~theme': resolve('./.vuepress/theme'),
+  },
+
   bundler: viteBundler(),
 
   theme,

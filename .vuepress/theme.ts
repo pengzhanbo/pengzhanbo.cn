@@ -5,33 +5,45 @@ export default plumeTheme({
   docsRepo: 'https://github.com/pengzhanbo/pengzhanbo.cn',
   docsDir: 'src',
 
-  plugins: {
-    shiki: {
-      twoslash: true,
-      lineNumbers: 10,
-      languages: ['sh','css','html','jsx','javascript','js','ts','stylus','json','yaml','tsx','dockerfile','bash','groovy','yml','md','nginx','toml','rust','vue'],
+  codeHighlighter: {
+    twoslash: {
+      twoslashOptions: {
+        compilerOptions: {
+          paths: {
+            "~/typings/*": [".vuepress/typings/*"],
+            '~/tc-utils': ['.vuepress/typings/type-challenges-utils.ts'],
+          }
+        }
+      }
     },
-    markdownEnhance: { demo: false, mermaid: true },
-    markdownPower: { caniuse: true, jsfiddle: true, demo: true },
+    lineNumbers: 10,
+  },
 
-    docsearch: {
-      appId: 'KRJOJ00KBL',
-      apiKey: '3f3b13613235873fbcbc9d304de18126',
-      indexName: 'pengzhanbo',
-    },
+  markdown: {
+    mermaid: true,
+    caniuse: true,
+    jsfiddle: true,
+    demo: true,
+  },
 
-    comment: {
-      provider: 'Giscus',
-      comment: true,
-      repo: 'pengzhanbo/pengzhanbo.cn',
-      repoId: 'MDEwOlJlcG9zaXRvcnkxNDgwMzY4MDc=',
-      category: 'Blog-Comment',
-      categoryId: 'DIC_kwDOCNLcx84CUulO',
-      mapping: 'pathname',
-      reactionsEnabled: true,
-      inputPosition: 'top',
-      darkTheme: 'dark_protanopia',
-      lightTheme: 'light_protanopia',
-    },
+  search: {
+    provider: 'algolia',
+    appId: 'KRJOJ00KBL',
+    apiKey: '3f3b13613235873fbcbc9d304de18126',
+    indexName: 'pengzhanbo',
+  },
+
+  comment: {
+    provider: 'Giscus',
+    comment: true,
+    repo: 'pengzhanbo/pengzhanbo.cn',
+    repoId: 'MDEwOlJlcG9zaXRvcnkxNDgwMzY4MDc=',
+    category: 'Blog-Comment',
+    categoryId: 'DIC_kwDOCNLcx84CUulO',
+    mapping: 'pathname',
+    reactionsEnabled: true,
+    inputPosition: 'top',
+    darkTheme: 'dark_protanopia',
+    lightTheme: 'light_protanopia',
   },
 })

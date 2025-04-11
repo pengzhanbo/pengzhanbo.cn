@@ -1,5 +1,8 @@
+@import url(./Ma-Shan-Zheng.css);
+@import url(./Pacifico.css);
+
 .vp-doc-container {
-  --vp-doc-blog-bg: rgba(100, 190, 190, 0.15);
+  --vp-doc-blog-bg: rgba(100, 190, 190, 0.12);
 
   background-image:
     linear-gradient(90deg, var(--vp-doc-blog-bg) 3%, transparent 0),
@@ -10,4 +13,18 @@
 
 [data-theme="dark"] .vp-doc-container {
   --vp-doc-blog-bg: rgba(30, 120, 120, 0.15);
+}
+
+.vp-home-banner .content .hero-name,
+.vp-home-banner .content .hero-text {
+  font-family: 'Ma Shan Zheng', sans-serif;
+  font-weight: 400 !important;
+}
+
+.vp-home-banner .content .hero-text {
+  font-size: 18px !important;
+}
+
+.vp-home-banner .content .hero-tagline {
+  font-family: 'Pacifico', sans-serif;
 }

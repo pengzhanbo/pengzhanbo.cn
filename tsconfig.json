@@ -11,6 +11,7 @@
     "target": "ES2022",
     "types": ["vuepress/client-types"],
     "paths": {
+      "~theme/*": ["./.vuepress/theme/*"],
       "~/typings/*": ["./.vuepress/typings/*"],
       "~/tc-utils": ["./.vuepress/typings/type-challenges-utils.ts"]
     }

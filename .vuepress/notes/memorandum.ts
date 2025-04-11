@@ -11,5 +11,6 @@ export default defineNoteConfig({
     'pm2',
     'nginx',
     'cargo',
+    'gitmoji',
   ]
 })
