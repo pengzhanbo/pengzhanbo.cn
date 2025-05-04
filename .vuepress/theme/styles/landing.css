@@ -1,0 +1,88 @@
+/*
+  ------------------------------------------------------------------------------
+  Home Landing
+  ------------------------------------------------------------------------------
+ */
+:root {
+  --landing-c-text: rgba(255, 255, 255, 0.95);
+  --landing-c-text-hover: rgba(235, 245, 245, 1);
+  --landing-card-bg: rgba(0,0, 0, 0.3);
+  --landing-card-bg-hover: rgba(0, 0, 0, 0.4);
+  --landing-card-backdrop: blur(5px);
+  --landing-card-conic: conic-gradient(transparent, rgba(255, 255, 255, 0.2), transparent 30%);
+}
+
+[data-theme="dark"] {
+  --landing-card-bg: rgba(0, 0, 0, 0.4);
+  --landing-card-bg-hover: rgba(0, 0, 0, 0.5);
+  --landing-card-backdrop: blur(5px);
+  --landing-card-conic: conic-gradient(transparent, rgba(255, 255, 255, 0.2), transparent 30%)
+}
+
+.layout-landing .vp-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--landing-card-bg);
+  backdrop-filter: var(--landing-card-backdrop);
+  border-top: none;
+  padding: 8px 0;
+}
+
+.layout-landing .vp-footer .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0 24px;
+}
+
+.layout-landing .vp-footer .container .message {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .layout-landing .vp-footer .container .message {
+    display: block;
+    position: relative;
+  }
+  .layout-landing .vp-footer .container .message::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 16px;
+    background-color: var(--vp-c-gray-3);
+    opacity: 0.5;
+    transition: background-color var(--vp-t-color);
+  }
+}
+
+.layout-landing .vp-footer p,
+.layout-landing .vp-footer a {
+  color: var(--landing-c-text);
+}
+
+.layout-landing .vp-footer a:hover {
+  color: var(--landing-c-text-hover);
+}
+
+.landing-card {
+  position: relative;
+  padding: 16px;
+  border-radius: 6px;
+  background-color: var(--landing-card-bg);
+  backdrop-filter: var(--landing-card-backdrop);
+  color: var(--landing-c-text);
+  transform: scale(1);
+  transition: background-color var(--vp-t-color), transform var(--vp-t-color);
+}
+
+.landing-card:hover {
+  background-color: var(--landing-card-bg-hover);
+  transform: scale(1.01);
+}

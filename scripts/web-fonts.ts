@@ -11,16 +11,6 @@ import fs from 'node:fs'
 import { Buffer } from 'node:buffer'
 import { isString, objectEntries, slash, toArray, uniq } from '@pengzhanbo/utils'
 
-downloadWebFontCss({
-  family: 'Ma Shan Zheng',
-  text: ['鹏展博', '即使慢，驰而不息，纵会落后，纵会失败，但必须能够到达他所向的目标']
-})
-
-downloadWebFontCss({
-  family: 'Pacifico',
-  text: 'Front End Developer'
-})
-
 export interface Params {
   family: string
   text?: string | string[]
@@ -117,3 +107,18 @@ function getUrl(params: Params) {
 
   return url
 }
+
+downloadWebFontCss({
+  family: 'Ma Shan Zheng',
+  text: ['鹏展博', '即使慢，驰而不息，纵会落后，纵会失败，但必须能够到达他所向的目标']
+})
+
+downloadWebFontCss({
+  family: 'Pacifico',
+  text: 'Front End Developer'
+})
+
+downloadWebFontCss({
+  family: 'Londrina Sketch',
+  text: ['1234567890:']
+})

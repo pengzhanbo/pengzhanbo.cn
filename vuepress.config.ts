@@ -1,3 +1,5 @@
+import dotenv from 'dotenv'
+import isCI from 'is-ci'
 import { getDirname, path } from 'vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
@@ -9,6 +11,10 @@ const __dirname = getDirname(import.meta.url)
 const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
 
 const isProd = process.env.NODE_ENV === 'production'
+
+if (!isCI) {
+  dotenv.config({ path: '.env.local' })
+}
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -39,6 +45,10 @@ export default defineUserConfig({
 
   alias: {
     '~theme': resolve('./.vuepress/theme'),
+  },
+
+  define: {
+    __VUEPRESS_GAODE_MAP_KEY__: process.env.VUEPRESS_GAODE_MAP_KEY,
   },
 
   bundler: viteBundler(),

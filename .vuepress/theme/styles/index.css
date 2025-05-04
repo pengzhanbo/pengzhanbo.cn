@@ -1,6 +1,13 @@
 @import url(./Ma-Shan-Zheng.css);
 @import url(./Pacifico.css);
+@import url(./Londrina-Sketch.css);
+@import url(./landing.css);
 
+/*
+  ------------------------------------------------------------------------------
+  Doc Container Background
+  ------------------------------------------------------------------------------
+ */
 .vp-doc-container {
   --vp-doc-blog-bg: rgba(100, 190, 190, 0.12);
 
@@ -15,6 +22,14 @@
   --vp-doc-blog-bg: rgba(30, 120, 120, 0.15);
 }
 
+/*
+  ------------------------------------------------------------------------------
+  Home Banner
+  ------------------------------------------------------------------------------
+ */
+/* :root {
+  --vp-c-text-hero-tagline: rgba(235, 245, 245, 0.75);
+}
 .vp-home-banner .content .hero-name,
 .vp-home-banner .content .hero-text {
   font-family: 'Ma Shan Zheng', sans-serif;
@@ -27,4 +42,4 @@
 
 .vp-home-banner .content .hero-tagline {
   font-family: 'Pacifico', sans-serif;
-}
+} */

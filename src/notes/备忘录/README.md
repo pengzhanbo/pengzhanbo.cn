@@ -1,6 +1,7 @@
 ---
 pageLayout: home
 title: 备忘录
+icon: /images/memorandum.svg
 pageClass: page-memorandum
 config:
   -
