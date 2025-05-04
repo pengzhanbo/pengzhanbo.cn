@@ -55,17 +55,22 @@ defineProps<{
   padding: 24px 16px;
 }
 
+.landing-card .nav-item-link :deep(.vp-icon) {
+  margin: 0;
+  width: 1.5em;
+  height: 1.5em;
+}
+
 @media (max-width: 767px) {
   .landing-card .nav-item-link {
     gap: 8px;
     font-size: 14px;
     padding: 16px 8px;
   }
-}
 
-.landing-card .nav-item-link :deep(.vp-icon) {
-  margin: 0;
-  width: 1.5em;
-  height: 1.5em;
+  .landing-card .nav-item-link :deep(.vp-icon) {
+  width: 1.25em;
+  height: 1.25em;
+}
 }
 </style>

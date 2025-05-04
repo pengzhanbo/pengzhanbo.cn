@@ -5,6 +5,7 @@ import LandingTagline from './LandingTagline.vue'
 import LandingHitokoto from './LandingHitokoto.vue'
 import LandingToday from './LandingToday.vue'
 import LandingNav from './LandingNav.vue'
+import LandingBg from './LandingBg.vue'
 
 interface LandingNavItem {
   text: string
@@ -29,7 +30,7 @@ const active = ref(false)
 
 <template>
   <div class="landing-wrapper">
-    <div class="landing-bg" />
+    <LandingBg />
 
     <div class="landing-container" :class="{ active }">
       <div class="landing-container-inner">
@@ -60,22 +61,12 @@ const active = ref(false)
 
 <style scoped>
 .landing-wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.landing-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background-image: url(https://api.pengzhanbo.cn/wallpaper/bing);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .landing-bg::before {

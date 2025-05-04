@@ -52,5 +52,6 @@ const { hitokoto, updateHitokoto } = useHitokoto()
 .landing-card.landing-hitokoto .from {
   margin-top: 8px;
   text-align: right;
+  font-size: 14px;
 }
 </style>

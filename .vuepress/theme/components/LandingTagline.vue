@@ -24,6 +24,7 @@ defineProps<{ tagline?: string }>()
   display: inline-block;
   width: 20px;
   height: 20px;
+  opacity: 0.5;
   mask: var(--icon);
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
