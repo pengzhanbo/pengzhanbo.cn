@@ -64,7 +64,7 @@ export default defineUserConfig({
     const fonts = assets.filter(asset => names.some(name => asset.includes(name)))
     let links = ''
     fonts.forEach((font) => {
-      links += `<link rel="preload" href="/assets/${font}" as="font" type="font/ttf">`
+      links += `<link rel="preload" href="/assets/${font}" as="font" type="font/ttf" crossorigin="anonymous">`
     })
     const content = fs.readFileSync(indexPath, 'utf-8')
     fs.writeFileSync(indexPath, content.replace('<head>', `<head>${links}`))
