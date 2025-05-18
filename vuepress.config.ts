@@ -1,11 +1,12 @@
 import dotenv from 'dotenv'
 import isCI from 'is-ci'
-import { getDirname, path } from 'vuepress/utils'
+import { getDirname, path, fs } from 'vuepress/utils'
 import { defineUserConfig } from 'vuepress'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 import theme from './.vuepress/theme.js'
 import { viteBundler } from '@vuepress/bundler-vite'
+import { globSync } from 'tinyglobby'
 
 const __dirname = getDirname(import.meta.url)
 const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
@@ -54,4 +55,18 @@ export default defineUserConfig({
   bundler: viteBundler(),
 
   theme,
+
+  onGenerated: async (app) => {
+    const names = ['Ma-Shan-Zheng', 'Londrina-Sketch']
+    const dest = app.dir.dest('assets')
+    const indexPath = app.dir.dest('index.html')
+    const assets = globSync('*.ttf', {  cwd: dest }) || []
+    const fonts = assets.filter(asset => names.some(name => asset.includes(name)))
+    let links = ''
+    fonts.forEach((font) => {
+      links += `<link rel="preload" href="/assets/${font}" as="font" type="font/ttf">`
+    })
+    const content = fs.readFileSync(indexPath, 'utf-8')
+    fs.writeFileSync(indexPath, content.replace('<head>', `<head>${links}`))
+  }
 })
