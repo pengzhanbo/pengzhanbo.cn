@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, ref } from 'vue'
 import { useSessionStorage } from '@vueuse/core'
+import { onMounted, onUnmounted, ref } from 'vue'
 
 const list = ref<string[]>([])
 const cache = useSessionStorage<string[]>('__VUEPRESS_HOME_BACKGROUND_LIST', [])
@@ -13,12 +13,13 @@ async function fetchBingList() {
     return
   }
   const res = await fetch('https://api.pengzhanbo.cn/wallpaper/bing/short')
-    .then((res) => res.json()) as string[]
-  
+    .then(res => res.json()) as string[]
+
   if (res?.length) {
     list.value = res
     cache.value = res
-  } else {
+  }
+  else {
     list.value = ['https://api.pengzhanbo.cn/wallpaper/bing']
   }
 }
@@ -46,8 +47,8 @@ onUnmounted(() => {
       v-for="(item, index) in list"
       :key="item"
       class="landing-bg-inner"
-      :class="{ active: active === index, 'animation': active === index || asyncActive === index }"
-      :style="{  backgroundImage: `url(${item})`, zIndex: list.length - index }"
+      :class="{ active: active === index, animation: active === index || asyncActive === index }"
+      :style="{ backgroundImage: `url(${item})`, zIndex: list.length - index }"
     />
   </div>
 </template>

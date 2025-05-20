@@ -1,7 +1,9 @@
-[build.environment]
-  NODE_VERSION = "22"
-  NPM_FLAGS = "--version" # prevent Netlify npm install
+# prevent Netlify npm install
 
 [build]
-  publish = "docs"
-  command = "pnpm build"
+publish = "docs"
+command = "pnpm build"
+
+[build.environment]
+NODE_VERSION = "22"
+NPM_FLAGS = "--version"

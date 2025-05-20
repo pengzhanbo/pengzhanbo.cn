@@ -176,8 +176,8 @@ module.exports = {
 同时使用 `mini-css-extract-plugin` 将 css 提取到单独的文件中。
 
 ```js
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   module: {
     rules: [
@@ -273,7 +273,7 @@ module.exports = {
 
 ```js
 module.exports = {
-  //...
+  // ...
   optimization: {
     splitChunks: {
       chunks: 'async', // 值有 `all`，`async` 和 `initial`
@@ -285,12 +285,12 @@ module.exports = {
       enforceSizeThreshold: 50000,
       cacheGroups: {
         defaultVendors: {
-          test: /[\/]node_modules[\/]/, //第三方模块拆出来
+          test: /[\/]node_modules[\/]/, // 第三方模块拆出来
           priority: -10,
           reuseExistingChunk: true,
         },
         utilVendors: {
-          test: /[\/]utils[\/]/, //公共模块拆出来
+          test: /[\/]utils[\/]/, // 公共模块拆出来
           minChunks: 2,
           priority: -20,
           reuseExistingChunk: true,
@@ -338,7 +338,7 @@ import(/* webpackPrefetch: true */ './path/to/LoginModal.js')
 在webpack中使用 `preload` 实现预加载：
 
 ```ts
-//...
+// ...
 import(/* webpackPreload: true */ 'ChartingLibrary')
 ```
 

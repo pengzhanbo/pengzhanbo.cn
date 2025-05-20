@@ -24,7 +24,7 @@ permalink: /interview-question/chnx193c/
 ```js
 function newFactory(constructor, ...args) {
   if (typeof constructor !== 'function') {
-    throw new Error('constructor must be a function')
+    throw new TypeError('constructor must be a function')
   }
 
   const object = Object.create(constructor.prototype)
@@ -32,7 +32,8 @@ function newFactory(constructor, ...args) {
 
   if (result && (typeof result === 'object' || typeof result === 'function')) {
     return result
-  } else {
+  }
+  else {
     return object
   }
 }

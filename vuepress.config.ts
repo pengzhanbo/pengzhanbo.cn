@@ -1,12 +1,13 @@
+import process from 'node:process'
+import { viteBundler } from '@vuepress/bundler-vite'
+import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import dotenv from 'dotenv'
 import isCI from 'is-ci'
-import { getDirname, path, fs } from 'vuepress/utils'
-import { defineUserConfig } from 'vuepress'
-import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
-import theme from './.vuepress/theme.js'
-import { viteBundler } from '@vuepress/bundler-vite'
 import { globSync } from 'tinyglobby'
+import { defineUserConfig } from 'vuepress'
+import { fs, getDirname, path } from 'vuepress/utils'
+import theme from './.vuepress/theme.js'
 
 const __dirname = getDirname(import.meta.url)
 const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
@@ -40,8 +41,8 @@ export default defineUserConfig({
     ['meta', { name: 'google-site-verification', content: 'X5YSaTDn-pKqQBUKD_05_dQcxVItzEq7Rlbg2ZEU7AM' }],
   ],
   plugins: [
-    isProd ? googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }): [],
-    isProd ? baiduAnalyticsPlugin({ id: '49ebcb8d1abfcde890ef6f320a101db7' }) : []
+    isProd ? googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }) : [],
+    isProd ? baiduAnalyticsPlugin({ id: '49ebcb8d1abfcde890ef6f320a101db7' }) : [],
   ],
 
   alias: {
@@ -60,7 +61,7 @@ export default defineUserConfig({
     const names = ['Ma-Shan-Zheng', 'Londrina-Sketch']
     const dest = app.dir.dest('assets')
     const indexPath = app.dir.dest('index.html')
-    const assets = globSync('*.ttf', {  cwd: dest }) || []
+    const assets = globSync('*.ttf', { cwd: dest }) || []
     const fonts = assets.filter(asset => names.some(name => asset.includes(name)))
     let links = ''
     fonts.forEach((font) => {
@@ -68,5 +69,5 @@ export default defineUserConfig({
     })
     const content = fs.readFileSync(indexPath, 'utf-8')
     fs.writeFileSync(indexPath, content.replace('<head>', `<head>${links}`))
-  }
+  },
 })

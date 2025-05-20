@@ -63,7 +63,7 @@ function printValueLater(value: string | undefined) {
 
   setTimeout(() => {
     // 修改 `value`，即使是以不影响其类型的方式，也会使闭包中的类型收缩无效。
-    value = value
+    value = 'changed!'
   }, 500)
 
   setTimeout(() => {

@@ -27,17 +27,16 @@ YAHOO.util.Event.stopPropagation(e)
 
 ```js
 // 定义模块
-YUI.add('hello', function(Y) {
-    Y.sayHello = function() {
-        Y.DOM.set(el, 'innerHTML', 'hello!');
-    }
-}, '1.0.0',
-    requires: ['dom']);
+YUI.add('hello', (Y) => {
+  Y.sayHello = function () {
+    Y.DOM.set(el, 'innerHTML', 'hello!')
+  }
+}, '1.0.0', { requires: ['dom'] })
 
-...
+// ...
 // 使用模块
-YUI().use('hello', function(Y) {
-  Y.sayHello('entry'); // <div id="entry">hello!</div>
+YUI().use('hello', (Y) => {
+  Y.sayHello('entry') // <div id="entry">hello!</div>
 })
 ```
 
@@ -63,8 +62,8 @@ CommonJs规范和当时出现的NodeJs相得益彰，共同走入了开发者的
 @tab a.js
 
 ```js
-var name = 'Mark'
-var age = 18
+let name = 'Mark'
+let age = 18
 
 module.exports.name = name
 module.exports.getAge = function () {
@@ -75,7 +74,7 @@ module.exports.getAge = function () {
 @tab:active b.js
 
 ```js
-var moduleA = require('./a.js')
+let moduleA = require('./a.js')
 console.log(moduleA.a) // Mark
 // 使用了未导出的变量，获取不到值
 console.log(moduleA.age) // undefined
@@ -133,7 +132,9 @@ define(id?, dependencies?, factory);
   - 如果是一个函数，则函数接受三个参数：
 
     ```js
-    define(function (require, exports, module))
+    define((require, exports, module) => {
+
+    })
     ```
 
     `require` 用于同步加载并执行已经定义好的其他模块；获取模块的输出值，
@@ -222,7 +223,7 @@ webpack 内部实现了 不同的 模块化规范，包括 匿名函数闭包`ii
 @tab moduleA.js
 
 ```js
-import { name, getAge } from './moduleB.js'
+import { getAge, name } from './moduleB.js'
 
 console.log(name)
 console.log(getAge())

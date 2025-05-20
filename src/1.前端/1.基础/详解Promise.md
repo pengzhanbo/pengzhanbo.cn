@@ -11,7 +11,7 @@ tags:
 
 `Promise` 是一个构造函数，用于创建一个新的 Promise 对象。该构造函数主要用于包装还没有添加 promise 支持的函数。
 
-```ts
+```txt
 Promise(resolver : (resolve, reject) => void)
 ```
 
@@ -21,12 +21,13 @@ Promise(resolver : (resolve, reject) => void)
 ### 示例
 
 ```js
-const promise = new Promise(function (resolve, reject) {
+const promise = new Promise((resolve, reject) => {
   setTimeout(() => {
     // do something
     if (Math.random() * 10 > 5) {
       resolve({ status: 'success', data: '' })
-    } else {
+    }
+    else {
       reject(new Error('error'))
     }
   }, 500)
@@ -66,10 +67,10 @@ _catch()_ 可以相当于 _.then(null, onRejected)_，即仅处理当promise的�
 
 ```js
 promise
-  .then(function (res) {
+  .then((res) => {
     console.log(res) // { status: 'success', data: '' }
   })
-  .catch(function (reason) {
+  .catch((reason) => {
     console.log(reason) // error: error
   })
   .finally(() => {
@@ -103,7 +104,7 @@ promise
 const PENDING = 'pending'
 const FULFILLED = 'fulfilled'
 const REJECTED = 'rejected'
-const microtask = globalThis.queueMicrotask || ((cb) => setTimeout(cb, 0))
+const microtask = globalThis.queueMicrotask || (cb => setTimeout(cb, 0))
 
 function LikePromise(resolver) {
   if (typeof resolver !== 'function') {
@@ -121,7 +122,7 @@ function LikePromise(resolver) {
     if (that.state === PENDING) {
       that.state = REJECTED
       that.reason = reason
-      that.rejectQueue.forEach((cb) => cb(reason))
+      that.rejectQueue.forEach(cb => cb(reason))
     }
   }
 
@@ -129,13 +130,14 @@ function LikePromise(resolver) {
     if (that.state === PENDING) {
       that.state = FULFILLED
       that.value = value
-      that.fulfillQueue.forEach((cb) => cb(value))
+      that.fulfillQueue.forEach(cb => cb(value))
     }
   }
 
   try {
     resolver(resolve, reject)
-  } catch (e) {
+  }
+  catch (e) {
     reject(e)
   }
 }
@@ -143,7 +145,8 @@ function LikePromise(resolver) {
 function resolvePromise(promise, x, resolve, reject) {
   if (promise === x) {
     reject(new TypeError('chaining cycle'))
-  } else if (x !== null && (typeof x === 'object' || typeof x === 'function')) {
+  }
+  else if (x !== null && (typeof x === 'object' || typeof x === 'function')) {
     let used = false
     try {
       const then = x.then
@@ -151,35 +154,42 @@ function resolvePromise(promise, x, resolve, reject) {
         then.call(
           x,
           (y) => {
-            if (used) return
+            if (used)
+              return
             used = true
             resolvePromise(promise, y, resolve, reject)
           },
           (r) => {
-            if (used) return
+            if (used)
+              return
             used = true
             reject(r)
           },
         )
-      } else {
-        if (used) return
+      }
+      else {
+        if (used)
+          return
         used = true
         resolve(x)
       }
-    } catch (e) {
-      if (used) return
+    }
+    catch (e) {
+      if (used)
+        return
       used = true
       reject(e)
     }
-  } else {
+  }
+  else {
     resolve(x)
   }
 }
 
 LikePromise.prototype.then = function (onFulfilled, onRejected) {
-  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : (value) => value
-  onRejected =
-    typeof onRejected === 'function'
+  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value
+  onRejected
+    = typeof onRejected === 'function'
       ? onRejected
       : (reason) => {
           throw reason
@@ -191,26 +201,31 @@ LikePromise.prototype.then = function (onFulfilled, onRejected) {
         try {
           const x = onFulfilled(that.value)
           resolvePromise(promise, x, resolve, reject)
-        } catch (e) {
+        }
+        catch (e) {
           reject(e)
         }
       })
-    } else if (that.state === REJECTED) {
+    }
+    else if (that.state === REJECTED) {
       microtask(() => {
         try {
           const x = onRejected(that.reason)
           resolvePromise(promise, x, resolve, reject)
-        } catch (e) {
+        }
+        catch (e) {
           reject(e)
         }
       })
-    } else {
+    }
+    else {
       that.fulfillQueue.push(() => {
         microtask(() => {
           try {
             const x = onFulfilled(that.value)
             resolvePromise(promise, x, resolve, reject)
-          } catch (e) {
+          }
+          catch (e) {
             reject(e)
           }
         })
@@ -220,7 +235,8 @@ LikePromise.prototype.then = function (onFulfilled, onRejected) {
           try {
             const x = onRejected(that.reason)
             resolvePromise(promise, x, resolve, reject)
-          } catch (e) {
+          }
+          catch (e) {
             reject(e)
           }
         })
@@ -236,8 +252,8 @@ LikePromise.prototype.catch = function (onRejected) {
 
 LikePromise.prototype.finally = function (onFinally) {
   return this.then(
-    (value) => LikePromise.resolve(onFinally()).then(() => value),
-    (reason) =>
+    value => LikePromise.resolve(onFinally()).then(() => value),
+    reason =>
       LikePromise.resolve(onFinally()).then(() => {
         throw reason
       }),
@@ -245,7 +261,7 @@ LikePromise.prototype.finally = function (onFinally) {
 }
 
 LikePromise.resolve = function (value) {
-  return new LikePromise((resolve) => resolve(value))
+  return new LikePromise(resolve => resolve(value))
 }
 
 LikePromise.reject = function (reason) {
@@ -297,7 +313,8 @@ Promise.all(promises).then((res) => {
 function promiseAll(promises) {
   promises = promises || []
   let length = promises.length
-  if (length === 0) return Promise.resolve([])
+  if (length === 0)
+    return Promise.resolve([])
   let count = 0
   const list = []
   return new Promise((resolve, reject) => {
@@ -310,8 +327,9 @@ function promiseAll(promises) {
     }
     promises.forEach((item, i) => {
       if (item instanceof Promise) {
-        item.then((res) => resolveFn(res, i), reject)
-      } else {
+        item.then(res => resolveFn(res, i), reject)
+      }
+      else {
         resolveFn(item, i)
       }
     })
@@ -330,7 +348,7 @@ function promiseAll(promises) {
 #### 示例
 
 ```js
-const promises = [Promise.resolve({ a: 1 }), Promise.reject('reason')]
+const promises = [Promise.resolve({ a: 1 }), Promise.reject(new Error('reason'))]
 Promise.allSettled(promises).then((res) => {
   console.log(res) // [ { status: 'fulfilled’, value: { a: 1 } }, { status: 'rejected', reason: 'reason' }  ]
 })
@@ -342,7 +360,8 @@ Promise.allSettled(promises).then((res) => {
 function promiseAllSettled(promises) {
   promises = promises || []
   let length = promises.length
-  if (length === 0) return Promise.resolve([])
+  if (length === 0)
+    return Promise.resolve([])
   let count = 0
   const list = []
   return new Promise((resolve) => {
@@ -350,7 +369,8 @@ function promiseAllSettled(promises) {
       list[index] = { status }
       if (status === 'fulfilled') {
         list[index].value = res
-      } else {
+      }
+      else {
         list[index].reason = res
       }
       count++
@@ -361,10 +381,11 @@ function promiseAllSettled(promises) {
     promises.forEach((item, i) => {
       if (item instanceof Promise) {
         item.then(
-          (res) => resolveFn(res, i, 'fulfilled'),
-          (reason) => resolveFn(reason, i, 'rejected'),
+          res => resolveFn(res, i, 'fulfilled'),
+          reason => resolveFn(reason, i, 'rejected'),
         )
-      } else {
+      }
+      else {
         resolveFn(item, i, 'fulfilled')
       }
     })
@@ -405,7 +426,8 @@ function promiseRace(array) {
     array.forEach((item) => {
       if (item instanceof Promise) {
         item.then(resolve, reject)
-      } else {
+      }
+      else {
         resolve(item)
       }
     })

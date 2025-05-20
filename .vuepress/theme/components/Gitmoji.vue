@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { useClipboard } from '@vueuse/core'
 import { gitmojis } from 'gitmojis'
-import {  useClipboard } from '@vueuse/core'
+import { computed } from 'vue'
 
-const list = computed(() => gitmojis.map((item) => ({
+const list = computed(() => gitmojis.map(item => ({
   name: item.name,
   desc: item.description,
   code: item.code,
@@ -15,12 +15,12 @@ const { copy, copied } = useClipboard()
 
 <template>
   <div class="gitmoji-wrapper">
-    <div class="gitmoji-item" v-for="item in list" :key="item.code">
+    <div v-for="item in list" :key="item.code" class="gitmoji-item">
       <div class="emoji">
         <span>{{ item.emoji }}</span>
       </div>
       <div class="info">
-        <p>{{  item.code }}</p>
+        <p>{{ item.code }}</p>
         <p>{{ item.desc }}</p>
       </div>
       <button
@@ -31,7 +31,7 @@ const { copy, copied } = useClipboard()
         :title="copied ? 'Copied' : 'Copy'"
         @click="copy(item.code)"
       >
-        <span class="vpi-gitmoji-copy"></span>
+        <span class="vpi-gitmoji-copy" />
         <span class="visually-hidden">Copy</span>
       </button>
     </div>

@@ -36,7 +36,7 @@ export * from './resolve.js'
 @tab lib/resolve.js
 
 ```js
-import path from 'path'
+import path from 'node:path'
 
 export const resolve = (...arg) => path.resolve(...arg)
 ```
@@ -132,8 +132,8 @@ export const resolve = (...arg) => path.resolve(...arg)
 3. 由于 `esm` 项目中，`NodeJs` 不再支持 `__dirname`/`__filename`，所以有相关场景需要使用时，需要使用其他的方式来实现相同功能：
 
 ```js
-import { dirname, basename } from 'path'
-import { fileURLToPath } from 'url'
+import { basename, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 
 const _dirname = typeof __dirname !== 'undefined' ? __dirname : dirname(fileURLToPath(import.meta.url))
 

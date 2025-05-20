@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import VPSocialLinks from '@theme/VPSocialLinks.vue'
 import { computed } from 'vue'
 import { useData } from 'vuepress-theme-plume/client'
-import VPSocialLinks from '@theme/VPSocialLinks.vue'
 
 defineProps<{
   name?: string
@@ -15,19 +15,20 @@ const social = computed(() => theme.value.social)
 </script>
 
 <template>
-  <div class="landing-profile" v-if="profile || (name && avatar)">
+  <div v-if="profile || (name && avatar)" class="landing-profile">
     <div class="landing-card profile-avatar">
       <img :src="avatar || profile?.avatar" alt="Avatar">
     </div>
     <div>
-      <h2 class="profile-name">{{ name || profile?.name }}</h2>
+      <h2 class="profile-name">
+        {{ name || profile?.name }}
+      </h2>
       <VPSocialLinks :links="social" />
     </div>
   </div>
 </template>
 
 <style scoped>
-
 @media (min-width: 768px) {
   .landing-profile {
     display: flex;

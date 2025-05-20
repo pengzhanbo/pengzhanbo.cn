@@ -12,7 +12,7 @@ config:
       - text: 博客
         link: /blog/
         icon: material-symbols:menu-book
-      
+
       - text: 备忘录
         link: /memorandum/
         icon: emojione-monotone:memo
@@ -20,11 +20,11 @@ config:
       - text: 站点导航
         link: /sites-collect/
         icon: mdi:roadmap
-      
+
       - text: 开源
         link: /projects/
         icon: material-symbols:code
-      
+
       - text: AI
         link: /ai/
         icon: eos-icons:ai
@@ -32,11 +32,11 @@ config:
       - text: CLI
         link: /cli/
         icon: grommet-icons:cli
-      
+
       - text: 书籍推荐
         link: /ebooks/
         icon: material-symbols:recommend
-      
+
       - text: 防御性 CSS
         link: /defensive-css/
         icon: streamline:css-three
@@ -60,7 +60,7 @@ config:
 
   - type: custom
 -->
-<!-- 
+<!--
 <h2 style="text-align: center;margin: 32px 0 32px">开源项目</h2>
 
 <CardGrid>

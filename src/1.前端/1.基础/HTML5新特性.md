@@ -9,7 +9,7 @@ tags:
 
 ## 语义标签
 
-如 `<header>` `<footer>` `<nav>` `<section>` `<article>` `<aside>` `<details>` `<summary>`  
+如 `<header>` `<footer>` `<nav>` `<section>` `<article>` `<aside>` `<details>` `<summary>`
 `<dialog>` `<figure>` `<main>` `<mark>` `<time>` `<hgroup>` 等
 
 ## 增强型表单
@@ -104,21 +104,22 @@ range： 数字范围输入域
 
 使用getCurrentPosition()方法来获取用户的位置。以实现“LBS服务”
 
-```jsx
-window.navigator.geolocation : {
-  watchPosition(){},
-  clearWatch(){},
-  getCurrentPosition(function(pos){
-    // '定位成功'
-    // 定位时间：pos.timestamp
-    // 维度：pos.coords.latitude
-    // 经度：pos.coords.longitude
-    // 海拔：pos.coords.altitude
-    // 速度：pos.coods.speed
-  }, function(err){
-    // '定位失败'
-  }){},
-}
+```js
+// 监听地理位置变化
+window.navigator.geolocation.watchPosition((pos) => {})
+// 清除地理位置变化监听
+window.navigator.geolocation.clearWatch()
+window.navigator.geolocation.getCurrentPosition((pos) => {
+  // '定位成功'
+  // 定位时间：pos.timestamp
+  // 维度：pos.coords.latitude
+  // 经度：pos.coords.longitude
+  // 海拔：pos.coords.altitude
+  // 速度：pos.coods.speed
+}, (err) => {
+  // '定位失败'
+  console.error(err)
+})
 ```
 
 ## 拖放API
@@ -167,7 +168,7 @@ Chrome浏览器中发起资源请求的有6个线程；但是只有1个线程负
 
 ```jsx
 // 主线程
-var worker = new Worker('xx.js')
+let worker = new Worker('xx.js')
 worker.postMessage('message') // 发送消息到worker线程
 worker.onmessage = function (e) {
   console.log(e.data) // 来自worker线程的信息
@@ -187,8 +188,8 @@ onmessage = function (e) {
 
 > 如果共享worker可以被多个浏览上下文调用，所有这些浏览上下文必须属于同源（相同的协议，主机和端口号）。
 
-```jsx
-var myWorker = new SharedWorker('worker.js')
+```js
+let myWorker = new SharedWorker('worker.js')
 
 // 主线程中调用
 myWorker.port.start()
@@ -203,10 +204,10 @@ myWorker.port.onmessage = function (e) {
 port.start()
 // worker 需要在 onconnect事件处理函数来执行代码
 onconnect = function (e) {
-  var port = e.ports[0]
+  let port = e.ports[0]
 
   port.onmessage = function (e) {
-    var workerResult = 'Result: ' + e.data
+    let workerResult = `Result: ${e.data}`
     port.postMessage(workerResult)
   }
 }
@@ -226,7 +227,7 @@ onconnect = function (e) {
 
 在用户的浏览器和服务器之间打开交互式通信会话。
 
-```jsx
+```js
 const ws = new WebSocket('wx://xx')
 ws.onopen = function () {}
 ws.onmessage = function (e) {
@@ -240,7 +241,7 @@ ws.onmessage = function (e) {
 
 ### pushState(stateObj, title, url)
 
-```jsx
+```js
 history.pushState({}, 'foo', 'foo.html')
 ```
 
@@ -248,7 +249,7 @@ history.pushState({}, 'foo', 'foo.html')
 
 ### replaceState(stateObj, title, url)
 
-```jsx
+```js
 history.replaceState({}, 'bar', 'bar.html')
 ```
 
@@ -265,7 +266,7 @@ history.replaceState({}, 'bar', 'bar.html')
 那么当页面重新加载时，页面会接收一个onload事件，但没有 popstate 事件。
 然而，假如你读取了history.state属性，你将会得到如同popstate 被触发时能得到的状态对象。
 
-```jsx
+```js
 // 尝试通过 pushState 创建历史条目,然后再刷新页面查看state状态对象变化;
 window.addEventListener('load', () => {
   let currentState = history.state

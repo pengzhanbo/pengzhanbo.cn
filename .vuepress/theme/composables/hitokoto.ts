@@ -4,15 +4,14 @@
  * https://developer.hitokoto.cn/
  */
 
+import { useSessionStorage, useThrottleFn } from '@vueuse/core'
 import { onMounted, onUnmounted, ref } from 'vue'
-import { useThrottleFn, useSessionStorage } from '@vueuse/core'
 
 interface HitokotoData {
   content: string
   author: string
   from: string
 }
-
 
 const API = 'https://v1.hitokoto.cn/'
 
@@ -24,7 +23,7 @@ export function useHitokoto() {
   async function fetchHitokoto({
     min_length,
     max_length,
-    c
+    c,
   }: HitokotoParams = {}) {
     if (cache.value.updatedAt && Date.now() - cache.value.updatedAt < 6000 && cache.value.data) {
       hitokoto.value = cache.value.data
@@ -41,22 +40,21 @@ export function useHitokoto() {
     const type = c || ['i', 'k']
     const list = Array.from(new Set(Array.isArray(type) ? type : [type]))
     list.forEach(c => url.searchParams.append('c', c))
-    
 
     try {
       loaded.value = false
-      const res = (await fetch(url).then((res) => res.json())) as HitokotoResponse
+      const res = (await fetch(url).then(res => res.json())) as HitokotoResponse
 
       loaded.value = true
       hitokoto.value = {
         content: res.hitokoto,
         author: res.from_who,
-        from: res.from
+        from: res.from,
       }
 
       cache.value = { data: hitokoto.value, updatedAt: Date.now() }
-
-    } catch {}
+    }
+    catch {}
   }
 
   /**
@@ -81,7 +79,7 @@ export function useHitokoto() {
   }
 }
 
-type HitokotoType = 
+type HitokotoType =
   | 'a' // 动画
   | 'b' // 漫画
   | 'c' // 游戏
@@ -94,7 +92,6 @@ type HitokotoType =
   | 'j' // 网易云
   | 'k' // 哲学
   | 'l' // 抖机灵
-
 
 interface HitokotoParams {
   /**
@@ -134,5 +131,5 @@ interface HitokotoResponse {
   /**
    * 一言的长度
    */
-  length	: string
+  length: string
 }

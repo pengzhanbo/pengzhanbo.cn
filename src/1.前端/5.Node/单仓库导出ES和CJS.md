@@ -25,7 +25,7 @@ permalink: /article/exports-esm-and-cjs/
   ```js
   // in cjs
   const _ = require('lodash')
-  console.log(`assignIn: ` _.assignIn({ b: '2'}, { a: '1' }))
+  console.log(`assignIn: `, _.assignIn({ b: '2' }, { a: '1' }))
   // { a: '1', b: '2' }
   ```
 
@@ -34,7 +34,7 @@ permalink: /article/exports-esm-and-cjs/
 
   ```js
   import { assignIn } from 'lodash'
-  console.log(`assignIn: ` assignIn({ b: '2'}, { a: '1' }))
+  console.log(`assignIn: `, assignIn({ b: '2' }, { a: '1' }))
   // { a: '1', b: '2' }
   ```
 
@@ -85,9 +85,9 @@ const { default: pkg } = await import('esm-only-package')
 我们还是更期望能够符合一般习惯的导入方式：
 
 ```js
+import cjs from 'cjs-package'
 // ESM
 import { named } from 'esm-package'
-import cjs from 'cjs-package'
 ```
 
 ## 如何做？
@@ -97,7 +97,7 @@ import cjs from 'cjs-package'
 在现在的稳定版本的`NodeJs` 中，已经支持同时在一个包中导出两种不同的格式。
 在`package.json` 文件中，有一个`exports` 字段，提供给我们有条件的导出不同格式。
 
-```js
+```json
 {
   "name": "package",
   "exports": {

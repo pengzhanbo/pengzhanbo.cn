@@ -459,9 +459,9 @@ version 字段是包的版本，它必须是有效的 [SemVer](https://semver.or
 {
   "name": "@luca/greet",
   "version": "1.0.0",
-  "exports": {  // [!code --]
+  "exports": { // [!code --]
     ".": "./mod.ts" // [!code --]
-  } // [!code --]
+  }, // [!code --]
   "exports": "./mod.ts" // [!code ++]
 }
 ```
@@ -488,7 +488,8 @@ version 字段是包的版本，它必须是有效的 [SemVer](https://semver.or
 为每个导出的 函数、接口、常量或类 添加 JSDoc 注释。
 
 ```ts
-/**  // [!code ++]
+/**
+ *  // [!code ++]
  * This function takes two numbers as input, and then adds these numbers using // [!code ++]
  * floating point math.  // [!code ++]
  */ // [!code ++]
@@ -528,16 +529,22 @@ interfaces 也可以使用 JSDoc 进行注释。它们的属性和方法也可�
 ```ts
 /** The options bag to pass to the {@link search} method. */
 export interface SearchOptions {
-  /** The maximum number of items to return from the search. Defaults to 50 if
-   * unspecified. */
+  /**
+   * The maximum number of items to return from the search. Defaults to 50 if
+   * unspecified.
+   */
   limit?: number
-  /** Skip the given number of items. This is helpful to implement pagination.
-   * Defaults to 0 (do not skip) if not specified. */
+  /**
+   * Skip the given number of items. This is helpful to implement pagination.
+   * Defaults to 0 (do not skip) if not specified.
+   */
   skip?: number
 
-  /** The function to call if the {@link search} function needs to show warnings
-   * to the user. If not specified, warnings will be silently swallowed. */
-  reportWarning?(message: string): void
+  /**
+   * The function to call if the {@link search} function needs to show warnings
+   * to the user. If not specified, warnings will be silently swallowed.
+   */
+  reportWarning?: (message: string) => void
 }
 ```
 
@@ -645,7 +652,7 @@ const foo = 'foo'
 const bar = 'bar'
 export class MyClass {
   // 这个属性是有问题的，因为没有显式地编写类型，因此必须从初始化项推断出它。
-  prop = foo + ' ' + bar
+  prop = `${foo} ${bar}`
 }
 ```
 

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import VPLink from 'vuepress-theme-plume/components/VPLink.vue'
 import VPIcon from 'vuepress-theme-plume/components/VPIcon.vue'
+import VPLink from 'vuepress-theme-plume/components/VPLink.vue'
 
 interface LandingNavItem {
   text: string
@@ -16,12 +16,12 @@ defineProps<{
 <template>
   <div class="landing-nav">
     <div
-      class="landing-card nav-item"
       v-for="(item, index) in nav"
       :key="item.text + index"
+      class="landing-card nav-item"
     >
       <VPLink :href="item.link" no-icon class="nav-item-link">
-        <VPIcon :name="item.icon" v-if="item.icon" />
+        <VPIcon v-if="item.icon" :name="item.icon" />
         <span>{{ item.text }}</span>
       </VPLink>
     </div>

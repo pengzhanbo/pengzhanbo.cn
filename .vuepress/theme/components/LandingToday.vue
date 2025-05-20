@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { useWeather} from '../composables/weather'
 import { useDate } from '../composables/date'
+import { useWeather } from '../composables/weather'
 
 const { city, weather } = useWeather()
 const { date, time } = useDate()

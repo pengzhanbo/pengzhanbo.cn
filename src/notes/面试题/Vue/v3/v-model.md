@@ -24,17 +24,19 @@ v-model 的原理
 - `select` 元素 使用 value 属性 和 change 事件
 
 ```vue
-<template>
-  <input type="text" v-model="value" />
-</template>
-<!-- 等价于 -->
-<template>
-  <input type="text" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
-</template>
 <script>
 export default {
   props: ['modelValue'],
   emits: ['update:modelValue'],
 }
 </script>
+
+<!-- 等价于 -->
+<template>
+  <input v-model="value" type="text">
+</template>
+
+<template>
+  <input type="text" :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" />
+</template>
 ```

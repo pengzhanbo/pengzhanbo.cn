@@ -199,7 +199,8 @@ permalink: /article/284xp17b/
 function fn(n: number) {
   if (n > 5) {
     return true
-  } else {
+  }
+  else {
     return false
   }
   return true
@@ -388,15 +389,15 @@ paths 可以允许你声明 TypeScript 应该如何解析你的 require/import�
   "compilerOptions": {
     "baseUrl": "src",
     "paths": {
-        "app/*": ["app/*"],
-        "config/*": ["app/_config/*"],
-        "environment/*": ["environments/*"],
-        "shared/*": ["app/_shared/*"],
-        "helpers/*": ["helpers/*"],
-        "tests/*": ["tests/*"]
-    },
+      "app/*": ["app/*"],
+      "config/*": ["app/_config/*"],
+      "environment/*": ["environments/*"],
+      "shared/*": ["app/_shared/*"],
+      "helpers/*": ["helpers/*"],
+      "tests/*": ["tests/*"]
+    }
+  }
 }
-
 ```
 
 ### resolveJsonModule
@@ -1018,8 +1019,9 @@ import * as React from 'react'
 #### example
 
 ```json
+{
   "typeAcquisition": {
-    "include": ["lodash"],
+    "include": ["lodash"]
   }
 }
 ```
@@ -1031,8 +1033,9 @@ import * as React from 'react'
 #### example
 
 ```json
+{
   "typeAcquisition": {
-    "exclude": ["jest", "mocha"],
+    "exclude": ["jest", "mocha"]
   }
 }
 ```

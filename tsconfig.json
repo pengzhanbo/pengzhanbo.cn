@@ -1,20 +1,20 @@
 {
   "extends": "tsconfig-vuepress/base.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
+    "target": "ES2022",
     "lib": ["DOM", "ES2022"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
-    "skipLibCheck": true,
-    "target": "ES2022",
-    "types": ["vuepress/client-types"],
     "paths": {
       "~theme/*": ["./.vuepress/theme/*"],
       "~/typings/*": ["./.vuepress/typings/*"],
       "~/tc-utils": ["./.vuepress/typings/type-challenges-utils.ts"]
-    }
+    },
+    "types": ["vuepress/client-types"],
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
   },
   "include": ["**/.vuepress/**/*", "vuepress.client.ts", "vuepress.config.ts"],
   "exclude": ["node_modules", ".cache", ".temp", "dist"]

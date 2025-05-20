@@ -3,7 +3,9 @@ defineProps<{ tagline?: string }>()
 </script>
 
 <template>
-  <div v-if="tagline" class="landing-card tagline">{{ tagline }}</div>
+  <div v-if="tagline" class="landing-card tagline">
+    {{ tagline }}
+  </div>
 </template>
 
 <style scoped>

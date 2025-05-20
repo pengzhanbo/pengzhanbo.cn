@@ -10,11 +10,11 @@ export default plumeTheme({
       twoslashOptions: {
         compilerOptions: {
           paths: {
-            "~/typings/*": [".vuepress/typings/*"],
+            '~/typings/*': ['.vuepress/typings/*'],
             '~/tc-utils': ['.vuepress/typings/type-challenges-utils.ts'],
-          }
-        }
-      }
+          },
+        },
+      },
     },
     lineNumbers: 10,
   },

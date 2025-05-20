@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import LandingBg from './LandingBg.vue'
+import LandingHitokoto from './LandingHitokoto.vue'
+import LandingNav from './LandingNav.vue'
 import LandingProfile from './LandingProfile.vue'
 import LandingTagline from './LandingTagline.vue'
-import LandingHitokoto from './LandingHitokoto.vue'
 import LandingToday from './LandingToday.vue'
-import LandingNav from './LandingNav.vue'
-import LandingBg from './LandingBg.vue'
 
 interface LandingNavItem {
   text: string
@@ -22,7 +22,7 @@ withDefaults(defineProps<{
   nav?: (LandingNavItem)[]
 }>(), {
   hitokoto: true,
-  today: true
+  today: true,
 })
 
 const active = ref(false)
@@ -34,14 +34,13 @@ const active = ref(false)
 
     <div class="landing-container" :class="{ active }">
       <div class="landing-container-inner">
-
         <div class="landing-left">
           <LandingProfile :name="name" :avatar="avatar" />
           <LandingTagline :tagline="tagline" />
         </div>
 
         <div class="landing-right">
-          <div class="landing-extra" v-if="hitokoto || today">
+          <div v-if="hitokoto || today" class="landing-extra">
             <LandingHitokoto v-if="hitokoto" />
             <LandingToday v-if="today" />
           </div>
@@ -123,7 +122,6 @@ const active = ref(false)
   flex-direction: column;
   flex: 1 2;
 }
-
 
 .landing-extra {
   display: grid;

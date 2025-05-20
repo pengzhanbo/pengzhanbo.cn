@@ -18,13 +18,14 @@ permalink: /interview-question/jilzuxpt/
 即 执行数字预算没有成功，这是失败后返回的结果。
 
 ```js
-typeof NaN // "number"
+typeof Number.NaN // "number"
 ```
 
 NaN 作为一个特殊值， 它和自身是不相等的，是唯一个非自反的值，即
 
 ```js
-NaN === NaN // false
+// eslint-disable-next-line no-self-compare, use-isnan
+Number.NaN === Number.NaN // false
 ```
 
 ## isNaN() 和 Number.isNaN()

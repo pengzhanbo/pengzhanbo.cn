@@ -35,7 +35,7 @@ edition = "2021" # rust 版本
 ```toml
 [dependencies]
 rand = "0.3"
-hammer = { version = "0.5.0"}
+hammer = { version = "0.5.0" }
 color = { git = "https://github.com/bjz/color-rs" }
 geometry = { path = "crates/geometry" }
 ```

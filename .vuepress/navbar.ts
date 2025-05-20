@@ -42,26 +42,26 @@ export default defineNavbarConfig([
           {
             text: 'vuepress/ecosystem',
             link: 'https://github.com/vuepress/ecosystem',
-            icon: 'vscode-icons:file-type-vue'
-          }
+            icon: 'vscode-icons:file-type-vue',
+          },
         ],
       },
       {
         text: 'Rspack / Rsbuild',
         icon: 'https://assets.rspack.dev/rspack/rspack-logo.svg',
         items: [
-          { 
+          {
             text: 'rspack-plugin-mock',
             link: 'https://github.com/pengzhanbo/rspack-plugin-mock',
-            icon: 'ant-design:api-outlined'
+            icon: 'ant-design:api-outlined',
           },
-        ]
+        ],
       },
       {
         text: 'CanIUse Embed',
         link: 'https://caniuse.pengzhanbo.cn',
-        icon: 'https://caniuse.pengzhanbo.cn/favicon-128.png'
-      }
+        icon: 'https://caniuse.pengzhanbo.cn/favicon-128.png',
+      },
     ],
   },
   {

@@ -6,7 +6,7 @@ export default defineNoteConfig({
   sidebar: [
     {
       text: '防御性 CSS',
-      link:'/defensive-css/',
+      link: '/defensive-css/',
       items: [
         'flex-box-wrapping',
         'image-distortion',

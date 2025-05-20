@@ -79,7 +79,7 @@ scp user@server:/dir/* .
 ## keygen
 
 ```sh :no-line-numbers
-ssh-keygen -t rsa -b 4096 -C "your@mail.com" 
+ssh-keygen -t rsa -b 4096 -C "your@mail.com"
 ```
 
 - `-t` 指定密钥类型, `rsa | ed25519 | dsa | ecdsa`

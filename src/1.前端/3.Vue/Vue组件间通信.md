@@ -151,8 +151,8 @@ author: pengzhanbo
 `vue`已实现了一套事件系统，可以很方便的使用它来完成我们的组件通信。
 
 ```javascript
-let middleware = new Vue();
-export defualt middleware;
+const middleware = new Vue()
+export default middleware
 ```
 
 `message.vue`
@@ -177,17 +177,17 @@ export default {
 
 ```javascript
 export default {
-    name: 'content',
-    data() {
-        return {
-            info: '';
-        }
-    },
-    created() {
-        middleware.$on('say-hello', info => {
-            this.info = info;
-        });
+  name: 'content',
+  data() {
+    return {
+      info: ''
     }
+  },
+  created() {
+    middleware.$on('say-hello', (info) => {
+      this.info = info
+    })
+  }
 }
 ```
 
@@ -199,15 +199,19 @@ export default {
 
 ```javascript
 class Event {
-  constructor() {
+  constructor(options) {
     // some props
+    this.options = options
   }
+
   on() {
     // do something
   }
+
   emit() {
     // do something
   }
+
   off() {
     // do somethig
   }

@@ -12,5 +12,5 @@ export default defineNoteConfig({
     'nginx',
     'cargo',
     'gitmoji',
-  ]
+  ],
 })

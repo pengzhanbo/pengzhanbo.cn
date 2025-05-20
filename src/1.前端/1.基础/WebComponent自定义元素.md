@@ -54,7 +54,7 @@ _创建自定义元素有两种方式，这里只讨论 **DOM LEVEL 3** 提供�
 
 ```javascript
 class MyTag extends HTMLElement {
-  constructor() {
+  constructor(options) {
     super()
   }
 }
@@ -75,17 +75,20 @@ class MyCustom extends HTMLElement {
   // 自定义元素开始提升时调用
   // 元素提升并不说明元素已插入到文档中
   // 在此阶段尽量避免进行DOM操作
-  constructor() {
+  constructor(options) {
     super()
   }
+
   // 元素插入到文档时回调
   connectedCallback() {
     // do something...
   }
+
   // 元素从文档中删除时回调
   discannectedCallback() {
     // do something...
   }
+
   /*
    * 元素属性变化回调
    * @param name {string} 变化的属性名
@@ -95,6 +98,7 @@ class MyCustom extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     // do something...
   }
+
   // 元素被移动到新的文档中时调用
   // （When it is adopted into a new document, its adoptedCallback is run.）
   // 具体场景示例：通过document.adoptNode方法修改元素ownerDocument属性时可以触发
@@ -106,9 +110,11 @@ class MyCustom extends HTMLElement {
 
 如果需要在元素属性发生变化后触发 `attributeChangedCallback`，就必须监听这些属性。 我们可以通过定义静态属性`observedAttributed`的 get函数来添加需要监听的属性：
 
-```javascript
-static get observedAttributed() {
-    return ['name'];
+```js
+class MyCustom extends HTMLElement {
+  static get observedAttributed() {
+    return ['name']
+  }
 }
 ```
 
@@ -124,25 +130,25 @@ static get observedAttributed() {
 
 ```js
 class MyTag extends HTMLElement {
-  constructor() {
+  constructor(options) {
     super()
   }
 }
 customElements.define('my-tag', MyTag)
 
 // 方式一：
-var tag = document.createElement('my-tag')
-document.appendChild(tag)
+let tag1 = document.createElement('my-tag')
+document.appendChild(tag1)
 // 方式二：
-var tag = new MyTag()
-document.appendChild(tag)
+let tag2 = new MyTag()
+document.appendChild(tag2)
 ```
 
 ### 元素提升
 
 浏览器是如何解析非标准的标签的？为什么对非标准的标签，浏览器不会报错？
 
-> HTML规范：  
+> HTML规范：
 > 非规范定义的元素必须使用 _HTMLUnknownElement_ 接口。
 
 我们在页面中声明一个 `<myTag>`标签，由于它是非标准标签，所以会继承 `HTMLUnknownElement`。
@@ -156,7 +162,7 @@ document.appendChild(tag)
 
 ```js
 class CustomButton extends HTMLButtonElement {
-  constructor() {
+  constructor(options) {
     super()
   }
 }
@@ -196,18 +202,18 @@ custom-button:unresolved {
 使用`document.registerElement()` 创建自定义元素
 
 ```javascript
-var MyTag = document.registerElement('my-tag')
+let MyTag = document.registerElement('my-tag')
 ```
 
 添加自定义元素特性：
 
 ```javascript
-var proto = Object.create(HTMLElement.prototype)
+let proto = Object.create(HTMLElement.prototype)
 proto.hello = 'hello'
 proto.sayHello = function () {
   alert(this.hello)
 }
-var MyTag = document.registerElement('my-tag', {
+let MyTag = document.registerElement('my-tag', {
   prototype: proto,
 })
 ```
@@ -217,7 +223,7 @@ var MyTag = document.registerElement('my-tag', {
 `document.registerElement()` 的第二个参数还允许我们为扩展原生素的特性。
 
 ```javascript
-var MyButton = document.registerElement('my-button', {
+let MyButton = document.registerElement('my-button', {
   extend: 'button',
   prototpye: Object.create(HTMLButtonElement.prototype),
 })
@@ -235,14 +241,14 @@ var MyButton = document.registerElement('my-button', {
 4. attributeChangedCallback(): 元素任意属性变化后调用。
 
 ```javascript
-var myTagProto = Object.create(HTMLElement.prototype)
+let myTagProto = Object.create(HTMLElement.prototype)
 
 myTagProto.createdCallback = function () {
   // 元素创建后回调。
   this.textContent = '我被创建了'
 }
 
-var MyTag = document.registerElement('my-tag', {
+let MyTag = document.registerElement('my-tag', {
   prototype: myTagProto,
 })
 ```

@@ -6,12 +6,12 @@ const { hitokoto, updateHitokoto } = useHitokoto()
 
 <template>
   <div
-    class="landing-card landing-hitokoto"
     v-if="hitokoto"
+    class="landing-card landing-hitokoto"
     @click="() => updateHitokoto()"
   >
     <p>{{ hitokoto.content }}</p>
-    <p class="from" v-if="hitokoto.from || hitokoto.author">
+    <p v-if="hitokoto.from || hitokoto.author" class="from">
       「 {{ hitokoto.from }}
       {{ hitokoto.from && hitokoto.author ? ' | ' : '' }}
       {{ hitokoto.author }} 」

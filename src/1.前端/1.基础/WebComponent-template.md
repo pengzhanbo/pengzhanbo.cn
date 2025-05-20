@@ -68,10 +68,10 @@ author: pengzhanbo
 ```
 
 ```javascript
-var tmp = document.querySelector('#template1')
+let tmp = document.querySelector('#template1')
 // 可以在获取模板的时候，对内容进行填充
 tmp.content.querySelector('img').scr = 'logo.png'
-var clone = document.importNode(tmp.content, true)
+let clone = document.importNode(tmp.content, true)
 document.body.appendChild(clone)
 ```
 
@@ -87,7 +87,8 @@ function supportTemplate() {
 }
 if (supportsTemplate()) {
   // 浏览器支持 template 元素
-} else {
+}
+else {
   // 浏览器不支持template元素
 }
 ```

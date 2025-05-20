@@ -11,7 +11,7 @@
     "dev": "vuepress dev src",
     "build": "vuepress build src --clean-cache --clean-temp",
     "preview": "http-server docs -d 0",
-    "lint:fix": "prettier . --write",
+    "lint": "eslint .",
     "gen:font": "tsx ./scripts/web-fonts.ts"
   },
   "dependencies": {
@@ -31,12 +31,12 @@
     "vuepress-theme-plume": "1.0.0-rc.151"
   },
   "devDependencies": {
-    "@pengzhanbo/prettier-config": "^1.32.0",
+    "@pengzhanbo/eslint-config-vue": "^1.32.0",
     "@types/express": "^5.0.2",
     "dotenv": "^16.5.0",
+    "eslint": "^9.27.0",
     "http-server": "^14.1.1",
     "is-ci": "^4.1.0",
-    "prettier": "^3.5.3",
     "tsconfig-vuepress": "^7.0.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
@@ -44,7 +44,8 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",
-      "esbuild"
+      "esbuild",
+      "unrs-resolver"
     ]
   }
 }

@@ -15,7 +15,7 @@ permalink: /article/otymkumz/
 
 <!-- more -->
 
-事实上，`Signals` 的提出比 `SolidJS`  还要早的多，早在 [2010年](https://blog.stevensanderson.com/2010/07/05/introducing-knockout-a-ui-library-for-javascript/)，
+事实上，`Signals` 的提出比 `SolidJS` 还要早的多，早在 [2010年](https://blog.stevensanderson.com/2010/07/05/introducing-knockout-a-ui-library-for-javascript/)，
 [Knockout](https://knockoutjs.com/) 便有了类似的实现。
 
 因此，`Signals` 并不是 “新兴的、前沿的” 前端技术方案。相反，关于它的论证、实践和应用，都已经相当的成熟，
@@ -45,14 +45,15 @@ permalink: /article/otymkumz/
 
 ```js
 let counter = 0
-const setCounter = (value) => {
+
+const isEven = () => (counter & 1) === 0
+const parity = () => (isEven() ? 'even' : 'odd')
+const render = () => (element.textContent = parity())
+
+function setCounter(value) {
   counter = value
   render()
 }
-
-const isEven = () => (counter & 1) == 0
-const parity = () => isEven() ? 'even' : 'odd'
-const render = () => element.innerText = parity()
 // 模拟对计数器的外部更新...
 setInterval(() => setCounter(counter + 1), 1000)
 ```
@@ -89,16 +90,16 @@ setInterval(() => setCounter(counter + 1), 1000)
 - `[getter, setter] = createSignal(initial)`: 创建信号，返回一个包含 getter 和 setter 的数组。
 - `createMemo(getter)`: 创建一个与给定函数的返回值相等的只读响应值。
 - `createEffect(effect)`: 创建一个在其依赖关系发生变化时执行的副作用。
-:::
+  :::
 
 为了理解 `Signals` ，让我们首先对上面的例子进行一些改造：
 
 ```ts
 const [counter, setCounter] = createSignal(0)
-const isEven = createMemo(() => counter() & 1 == 0)
-const parity = createMemo(() => isEven() ? 'even' : 'odd')
+const isEven = createMemo(() => counter() & (1 == 0))
+const parity = createMemo(() => (isEven() ? 'even' : 'odd'))
 
-createEffect(() => element.innerText = parity())
+createEffect(() => (element.textContent = parity()))
 
 setInterval(() => setCounter(counter() + 1), 1000)
 ```
@@ -121,7 +122,7 @@ setInterval(() => setCounter(counter() + 1), 1000)
 
 `Signals`，即 信号，信号表示可能随时间变化的数据单元。
 信号可以是“State”（只是一个手动设置的值）或“Computed”（基于其他信号的公式）。
-它 通常被称为 `Signals`，也可以被称为  Observables，Atoms，Subjects 和 Refs 。
+它 通常被称为 `Signals`，也可以被称为 Observables，Atoms，Subjects 和 Refs 。
 
 `Signals` 通常由 `getter`，`setter`，`value` 组成：
 
@@ -135,8 +136,8 @@ const [count, setCount] = createSignal(0)
 console.log(count()) // 0
 
 // 设置 value
-setCount(5);
-console.log(count()) //5
+setCount(5)
+console.log(count()) // 5
 ```
 
 :::
@@ -156,7 +157,7 @@ const count = ref(0)
 console.log(count.value) // 0
 
 // 设置 value
-count.value = 5;
+count.value = 5
 console.log(count.value) // 5
 ```
 

@@ -229,12 +229,12 @@ var x = require('./accounts').userAccount
 /**
  * @import {Pet} from "./types"
  */
- 
+
 /**
  * @type {Pet}
  */
-var myPet;
-myPet.name;
+var myPet
+myPet.name
 ```
 
 这些标签实际上并不会在运行时导入文件，它们引入的作用域符号仅能用于JSDoc注释中进行类型检查。
@@ -243,14 +243,14 @@ myPet.name;
 // @filename: dog.js
 export class Dog {
   woof() {
-    console.log("Woof!");
+    console.log('Woof!')
   }
 }
- 
+
 // @filename: main.js
 /** @import { Dog } from "./dog.js" */
- 
-const d = new Dog(); // error!
+
+const d = new Dog() // error!
 ```
 
 ### `@param` and `@returns`

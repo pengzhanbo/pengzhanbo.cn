@@ -1,14 +1,14 @@
+import { Buffer } from 'node:buffer'
+import fs from 'node:fs'
 /**
  * @module web-fonts
  * @description Web 字体下载
  * 从 https://fonts.google.com/ 下载 Web 字体
- * 
+ *
  * 1. 本地化字体文件
  * 2. 根据使用的字符，下载裁剪后的最小字体文件
  */
 import path from 'node:path'
-import fs from 'node:fs'
-import { Buffer } from 'node:buffer'
 import { isString, objectEntries, slash, toArray, uniq } from '@pengzhanbo/utils'
 
 export interface Params {
@@ -25,7 +25,7 @@ const EXT = {
   'font/ttf': 'ttf',
   'font/otf': 'otf',
   'font/eot': 'eot',
-  'font/collection': 'ttc'
+  'font/collection': 'ttc',
 }
 
 const stylesDir = path.join(import.meta.dirname, '../.vuepress/theme/styles/')
@@ -49,18 +49,19 @@ async function downloadWebFontCss(params: Params | string, output?: string): Pro
   fs.mkdirSync(path.dirname(outputPath), { recursive: true })
   fs.mkdirSync(fontDir, { recursive: true })
 
-  let css = await fetch(url).then((res) => res.text())
+  let css = await fetch(url).then(res => res.text())
 
   let matched: RegExpExecArray | null
   const fontsUrl = new Set<string>()
 
+  // eslint-disable-next-line no-cond-assign
   while (matched = RE_FONT_URL.exec(css)) {
     fontsUrl.add(matched[1])
   }
 
   const basename = path.basename(outputPath, '.css')
   let uuid = 1
-  let cache: Record<string, string> = {}
+  const cache: Record<string, string> = {}
   for (const url of fontsUrl) {
     const res = await fetch(url)
     const buffer = Buffer.from(await res.arrayBuffer())
@@ -86,15 +87,16 @@ function getUrl(params: Params) {
   params.ital && spec.push('ital')
   params.wght && spec.push('wght')
 
-  if (spec.length > 0){
+  if (spec.length > 0) {
     family += `:${spec.join(',')}@`
     const ital = params.ital?.split('')
     const wght = params.wght
     if (ital) {
       ital.forEach((v, i) => {
-        family += `${v}` + (wght ? `,${wght}` : '') + (i < ital.length - 1 ? ';' : '')
+        family += `${v}${wght ? `,${wght}` : ''}${i < ital.length - 1 ? ';' : ''}`
       })
-    } else if (wght) {
+    }
+    else if (wght) {
       family += `${wght}`
     }
   }
@@ -110,15 +112,15 @@ function getUrl(params: Params) {
 
 downloadWebFontCss({
   family: 'Ma Shan Zheng',
-  text: ['鹏展博', '即使慢，驰而不息，纵会落后，纵会失败，但必须能够到达他所向的目标']
+  text: ['鹏展博', '即使慢，驰而不息，纵会落后，纵会失败，但必须能够到达他所向的目标'],
 })
 
 downloadWebFontCss({
   family: 'Pacifico',
-  text: 'Front End Developer'
+  text: 'Front End Developer',
 })
 
 downloadWebFontCss({
   family: 'Londrina Sketch',
-  text: ['1234567890:']
+  text: ['1234567890:'],
 })
