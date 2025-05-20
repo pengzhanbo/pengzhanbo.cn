@@ -28,7 +28,7 @@
     "tinyglobby": "^0.2.13",
     "vue": "^3.5.14",
     "vuepress": "2.0.0-rc.23",
-    "vuepress-theme-plume": "1.0.0-rc.149"
+    "vuepress-theme-plume": "1.0.0-rc.151"
   },
   "devDependencies": {
     "@pengzhanbo/prettier-config": "^1.32.0",

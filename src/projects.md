@@ -30,7 +30,7 @@ article: false
 
 插件还支持模拟 `WebSocket`，可以轻松的实现在本地开发环境调试 `WebSocket` 服务。
 
-[使用文档](https://vite-plugin-mock-dev-server.netlify.app/)
+[查看 **vite-plugin-mock-dev-server** 使用文档](https://vite-plugin-mock-dev-server.netlify.app/){.read-more}
 
 ---
 
@@ -56,7 +56,7 @@ vuepress-theme-plume 是一个基于 VuePress 的主题。适用于 博客、文
 
 plume 主题尽可能的内置你可能需要的功能，以及搭建站点所需要的一般性配置，您无需关注这些细节。 目的是，让您更专注于 内容的创作，更好的表达你的想法，享受 Markdown 增强语法带来的便利。
 
-[使用文档](https://theme-plume.vuejs.press/)
+[查看 **vuepress-theme-plume** 使用文档](https://theme-plume.vuejs.press/){.read-more}
 
 ---
 
@@ -90,7 +90,7 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 `vite-plugin-mock-dev-server` 对标 `vite-plugin-mock-dev-server` 在 `rspack/rsbuild` 上的实现， 专注于在 `rspack / rsbuild` 开发环境下 提供 Mock 服务。
 
-[使用文档](https://github.com/pengzhanbo/rspack-plugin-mock)
+[查看 **rspack-plugin-mock** 使用文档](https://github.com/pengzhanbo/rspack-plugin-mock){.read-more}
 
 ---
 

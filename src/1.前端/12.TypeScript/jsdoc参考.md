@@ -7,7 +7,7 @@ tags:
 permalink: /article/o95q9n27/
 ---
 
-> 本文翻译自 [官方文档 JSDoc Reference](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html)
+[本文翻译自 **官方文档 JSDoc Reference**](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html){.read-more}
 
 ---
 
@@ -17,7 +17,8 @@ permalink: /article/o95q9n27/
 
 **Types:**
 
-- [@type](#type).
+- [@type](#type)
+- [@import](#import)
 - [@param](#param-and-returns) (or [@arg](#param-and-returns) or [@argument](#param-and-returns))
 - [@returns](#param-and-returns) (or [@return](#param-and-returns))
 - [@typedef](#typedef-callback-and-param)
@@ -218,6 +219,38 @@ myPet.name
  * @type {typeof import("./accounts").userAccount}
  */
 var x = require('./accounts').userAccount
+```
+
+### `@import`
+
+`@import` 标签允许我们引用其他文件中的导出内容。
+
+```ts
+/**
+ * @import {Pet} from "./types"
+ */
+ 
+/**
+ * @type {Pet}
+ */
+var myPet;
+myPet.name;
+```
+
+这些标签实际上并不会在运行时导入文件，它们引入的作用域符号仅能用于JSDoc注释中进行类型检查。
+
+```ts
+// @filename: dog.js
+export class Dog {
+  woof() {
+    console.log("Woof!");
+  }
+}
+ 
+// @filename: main.js
+/** @import { Dog } from "./dog.js" */
+ 
+const d = new Dog(); // error!
 ```
 
 ### `@param` and `@returns`
@@ -795,3 +828,27 @@ TypeScript 会忽略任何不支持的 JSDoc 标签。
 - `@inheritdoc`（[问题＃23215](https://github.com/Microsoft/TypeScript/issues/23215)）
 - `@memberof`（[问题＃7237](https://github.com/Microsoft/TypeScript/issues/7237)）
 - `@yields`（[问题＃23857](https://github.com/Microsoft/TypeScript/issues/23857)）
+
+### Legacy type synonyms
+
+为兼容旧版JavaScript代码，部分常见类型被赋予了别名。尽管多数别名类型现已罕用，但其中部分与现有类型名称相同。
+例如 `String` 被视为 `string` 的别名——虽然在 TypeScript 中 `String` 本身是独立类型，
+但旧版JSDoc常将其作为 `string` 使用。此外需注意：TypeScript 中首字母大写的原始类型实为包装器类型
+（使用它们几乎总是错误的）。因此编译器会根据旧版JSDoc的使用惯例将这些类型视为同义词：
+
+- `String` -> `string`
+- `Number` -> `number`
+- `Boolean` -> `boolean`
+- `Void` -> `void`
+- `Undefined` -> `undefined`
+- `Null` -> `null`
+- `function` -> `Function`
+- `array` -> `Array<any>`
+- `promise` -> `Promise<any>`
+- `Object` -> `any`
+- `object` -> `any`
+
+当`noImplicitAny: true` 时，最后四个别名将被禁用：
+
+- `object` 和 `Object` 是内置类型，不过 `Object` 很少被使用。
+- `array` 和 `promise` 并非内置类型，但可能在程序中的某处被声明。
