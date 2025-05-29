@@ -46,6 +46,9 @@
       "@parcel/watcher",
       "esbuild",
       "unrs-resolver"
-    ]
+    ],
+    "patchedDependencies": {
+      "floating-vue@5.2.2": "patches/floating-vue@5.2.2.patch"
+    }
   }
 }

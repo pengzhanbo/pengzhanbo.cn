@@ -8,16 +8,16 @@ const { date, time } = useDate()
 
 <template>
   <div class="landing-card landing-today">
-    <p class="today-date">
+    <p class="today-date" data-allow-mismatch>
       <span>{{ date.year }}</span><span>年</span>
       <span>{{ date.month }}</span><span>月</span>
       <span>{{ date.day }}</span><span>日</span>
       <span>星期{{ date.week }}</span>
     </p>
     <p class="today-time">
-      <span>{{ time }}</span>
+      <span data-allow-mismatch>{{ time }}</span>
     </p>
-    <p v-if="city && weather" class="today-weather">
+    <p v-if="city && weather" class="today-weather" data-allow-mismatch>
       <span>{{ city.name }}</span>
       <span>{{ weather.weather }}</span>
       <span>{{ weather.temperature }}°C</span>

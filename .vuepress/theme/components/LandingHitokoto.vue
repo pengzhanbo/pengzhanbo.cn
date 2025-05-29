@@ -10,8 +10,10 @@ const { hitokoto, updateHitokoto } = useHitokoto()
     class="landing-card landing-hitokoto"
     @click="() => updateHitokoto()"
   >
-    <p>{{ hitokoto.content }}</p>
-    <p v-if="hitokoto.from || hitokoto.author" class="from">
+    <p data-allow-mismatch>
+      {{ hitokoto.content }}
+    </p>
+    <p v-if="hitokoto.from || hitokoto.author" class="from" data-allow-mismatch>
       「 {{ hitokoto.from }}
       {{ hitokoto.from && hitokoto.author ? ' | ' : '' }}
       {{ hitokoto.author }} 」
