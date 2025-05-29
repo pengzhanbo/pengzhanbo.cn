@@ -59,6 +59,7 @@ defineMermaidConfig({
   class: {
     hideEmptyMembersBox: true,
   },
+  look: 'handDrawn',
 })
 
 export default defineClientConfig({

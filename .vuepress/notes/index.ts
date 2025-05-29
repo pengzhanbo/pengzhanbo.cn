@@ -14,5 +14,6 @@ export default defineNotesConfig({
     learnRust,
     defensiveCss,
     memorandum,
+    { dir: '设计模式', link: '/design-pattern/', sidebar: 'auto' },
   ],
 })

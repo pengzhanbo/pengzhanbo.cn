@@ -78,7 +78,13 @@ export default defineNavbarConfig([
         text: '防御性CSS',
         link: '/defensive-css/',
         activeMatch: '^/defensive-css/',
-        icon: 'streamline:css-three',
+        icon: 'devicon:css3',
+      },
+      {
+        text: '设计模式',
+        link: '/design-pattern/',
+        activeMatch: '^/design-pattern/',
+        icon: 'emojione:bookmark-tabs',
       },
       {
         text: '前端面试题',

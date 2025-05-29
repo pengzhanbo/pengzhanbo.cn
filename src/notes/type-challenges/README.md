@@ -5,7 +5,8 @@ author: pengzhanbo
 permalink: /type-challenges/
 ---
 
-> 施工中...
+:::warning 施工中...
+:::
 
 ## 简介
 
@@ -59,7 +60,7 @@ permalink: /type-challenges/
 
 ## VSCode 插件
 
-[vsCode插件 type-challenges](https://marketplace.visualstudio.com/items?itemName=YRM.type-challenges)
+[VS Code 插件 __Type-Challenges__](https://marketplace.visualstudio.com/items?itemName=YRM.type-challenges){.read-more}
 
 插件提供了开源项目的所有题目，以及测试用例，可以通过在 `VSCode` 中安装该插件，在 `VSCode` 中进行答题，
 以获得良好的 编辑器类型检查帮助。
