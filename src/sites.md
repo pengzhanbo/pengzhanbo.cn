@@ -60,6 +60,7 @@ article: false
   <LinkCard title="fastify" icon="logos:fastify-icon" href="https://fastify.dev/" />
   <LinkCard  title="Tiny Http" icon="https://tinyhttp.v1rtl.site/favicon.png" href="https://tinyhttp.v1rtl.site/" />
   <LinkCard title="h3" icon="https://h3.unjs.io/icon.svg" href="https://h3.unjs.io/" />
+  <LinkCard title="Nitro" icon="https://nitro.build/icon.svg" href="https://nitro.build/" />
 </CardGrid>
 
 ---
@@ -195,6 +196,20 @@ article: false
     icon="https://icons.getbootstrap.com/assets/img/favicons/favicon-32x32.png"
     href="https://icons.getbootstrap.com/"
   />
+  <LinkCard title="Iconfont" icon="https://www.iconfont.cn/favicon.ico" href="https://www.iconfont.cn/" />
+</CardGrid>
+
+## 素材
+
+<CardGrid>
+  <LinkCard href="https://unsplash.com/" title="Unsplash" icon="https://unsplash.com/favicon-32x32.png" />
+  <LinkCard
+    title="Many Pixels"
+    icon="https://cdn.prod.website-files.com/63a9cb71c629474d4ae334b9/64a5f701714b5fe13a08253f_favicons%201%20(2).png"
+    href="https://www.manypixels.co/gallery"
+  />
+  <LinkCard title="Undraw" icon="https://undraw.co/favicon.ico" href="https://undraw.co/illustrations"  />
+  <LinkCard title="搜图导航" icon="https://www.91sotu.com/favicon.ico"  href="https://www.91sotu.com/" />
 </CardGrid>
 
 ## 桌面应用开发
@@ -347,11 +362,15 @@ article: false
 
 <CardGrid>
   <LinkCard title="Web 安全色" href="https://www.bootcss.com/p/websafecolors/" />
+  <LinkCard title="渐变色" icon="https://color.oulu.me/favicon.ico" href="https://color.oulu.me/" />
   <LinkCard title="SVG background" href="https://www.svgbackgrounds.com/" />
   <LinkCard title="SVG 波浪背景生成" href="https://svgwave.in/" />
   <LinkCard title="贝塞尔生成" href="https://easings.co/" />
   <LinkCard title="CSS 动画" href="https://animista.net/" />
   <LinkCard title="CSS Timing Function" href="https://easings.net/zh-cn" />
+  <LinkCard title="Color Hunt" icon="https://colorhunt.co/img/colorhunt-favicon.svg?2" href="https://colorhunt.co/" />
+  <LinkCard title="Colordrop" icon="https://colordrop.io/favicon.ico" href="https://colordrop.io/" />
+  <LinkCard title="Picular" icon="https://picular.co/favicon.ico" href="https://picular.co/" />
 </CardGrid>
 
 ### 正则
@@ -371,6 +390,14 @@ article: false
   <LinkCard title="bestofjs" icon="https://bestofjs.org/favicon.ico" href="https://bestofjs.org/" description="前端开源项目最新热点趋势" />
   <LinkCard title="publint" icon="https://publint.dev/favicon.ico" href="https://publint.dev/" description="检查 npm package 是否正确发布" />
   <LinkCard title="Ray" icon="https://www.ray.so/favicon.ico" href="https://www.ray.so/" description="代码 Demo 图片生成" />
+  <LinkCard title="Carbon" icon="https://carbon.now.sh/favicon.ico" href="https://carbon.now.sh/" description="代码 Demo 图片生成" />
+  <LinkCard
+    title="屏幕截图设备模型生成器"
+    icon="https://mockuphone.com/images/favicon.png"
+    href="https://mockuphone.com/"
+    description="将屏幕截图适配到不同的设备模型中"
+  />
+  <LinkCard title="在线画板" icon="https://excalidraw.com/favicon-32x32.png" href="https://excalidraw.com/" description="在线画板" />
 </CardGrid>
 
 ## 服务
