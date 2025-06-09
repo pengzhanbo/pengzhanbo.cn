@@ -10,7 +10,7 @@ export function useStatistics() {
   watch(() => route.path, () => {
     let img: HTMLImageElement | null = new Image()
     const { hostname, pathname, protocol } = window.location
-    img.src = `https://api.pengzhanbo.cn/statistics/collect?url=${encodeURIComponent(`${protocol}//${hostname}${pathname}`)}`
+    img.src = `https://api.pengzhanbo.cn/statistics/collect?url=${encodeURIComponent(`${protocol}//${hostname}${pathname}`)}&t=${Date.now()}`
     img.onload = () => {
       img?.remove()
       img = null
