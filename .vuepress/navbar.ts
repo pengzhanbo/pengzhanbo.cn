@@ -87,6 +87,12 @@ export default defineNavbarConfig([
         icon: 'emojione:bookmark-tabs',
       },
       {
+        text: '数据结构与算法',
+        link: '/algorithm/',
+        activeMatch: '^/algorithm/',
+        icon: 'hugeicons:algorithm',
+      },
+      {
         text: '前端面试题',
         link: '/interview-question/',
         activeMatch: '^/interview-question/',

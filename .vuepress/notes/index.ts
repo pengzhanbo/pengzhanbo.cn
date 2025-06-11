@@ -15,5 +15,6 @@ export default defineNotesConfig({
     defensiveCss,
     memorandum,
     { dir: '设计模式', link: '/design-pattern/', sidebar: 'auto' },
+    { dir: '算法', link: '/algorithm/', sidebar: 'auto' },
   ],
 })
