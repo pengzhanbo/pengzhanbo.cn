@@ -9,7 +9,7 @@
   "license": "GPL-3.0",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src --clean-cache --clean-temp",
+    "build": "vuepress build src",
     "preview": "http-server docs -d 0",
     "lint": "eslint .",
     "gen:font": "tsx ./scripts/web-fonts.ts"
@@ -20,6 +20,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.23",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.106",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.103",
+    "@vuepress/plugin-llms": "2.0.0-rc.108",
     "@vuepress/shiki-twoslash": "2.0.0-rc.108",
     "gitmojis": "^3.15.0",
     "katex": "^0.16.22",

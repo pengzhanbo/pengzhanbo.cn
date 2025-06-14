@@ -2,11 +2,13 @@ import process from 'node:process'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
+import { llmsPlugin } from '@vuepress/plugin-llms'
 import dotenv from 'dotenv'
 import isCI from 'is-ci'
 import { globSync } from 'tinyglobby'
 import { defineUserConfig } from 'vuepress'
 import { fs, getDirname, path } from 'vuepress/utils'
+import { tocGetter } from './.vuepress/llmstxtTOC.js'
 import theme from './.vuepress/theme.js'
 
 const __dirname = getDirname(import.meta.url)
@@ -43,6 +45,13 @@ export default defineUserConfig({
   plugins: [
     isProd ? googleAnalyticsPlugin({ id: 'G-TMXNCJR2K7' }) : [],
     isProd ? baiduAnalyticsPlugin({ id: '49ebcb8d1abfcde890ef6f320a101db7' }) : [],
+    llmsPlugin({
+      llmsTxtTemplateGetter: {
+        toc: tocGetter,
+        details: '',
+        description: '鹏展博的个人博客，知识库',
+      },
+    }),
   ],
 
   alias: {

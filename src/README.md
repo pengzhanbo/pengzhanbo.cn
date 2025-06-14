@@ -1,6 +1,7 @@
 ---
 pageLayout: home
 pageClass: layout-landing
+title: 鹏展博
 navbar: false
 config:
   - type: Landing
