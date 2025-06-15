@@ -1,7 +1,6 @@
 ---
 title: v-model
 createTime: 2022/04/23 11:00:21
-author: pengzhanbo
 permalink: /interview-question/3y2a3ptn/
 ---
 

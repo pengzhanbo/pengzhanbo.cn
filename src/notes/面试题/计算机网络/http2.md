@@ -1,7 +1,6 @@
 ---
 title: http2
 createTime: 2022/04/18 06:53:05
-author: pengzhanbo
 permalink: /interview-question/yiutzl7y/
 ---
 

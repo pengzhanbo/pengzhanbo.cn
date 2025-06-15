@@ -1,7 +1,6 @@
 ---
 title: keep-alive
 createTime: 2022/04/23 06:06:57
-author: pengzhanbo
 permalink: /interview-question/1cx7kiuy/
 ---
 

@@ -1,6 +1,5 @@
 ---
 title: 玩转 CSS @property
-author: pengzhanbo
 createTime: 2023/11/17 02:20:24
 tags:
   - css

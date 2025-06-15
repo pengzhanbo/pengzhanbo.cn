@@ -1,6 +1,5 @@
 ---
 title: Minimum Content Size In CSS Grid
-author: 鹏展博
 createTime: 2023/08/07 11:32:57
 permalink: /defensive-css/minimum-content-size-in-grid/
 ---

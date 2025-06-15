@@ -1,7 +1,6 @@
 ---
 title: jenkins
 createTime: 2022/04/18 07:02:27
-author: pengzhanbo
 permalink: /interview-question/8hujc044/
 ---
 

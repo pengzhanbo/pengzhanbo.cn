@@ -1,7 +1,6 @@
 ---
 title: grep
 icon: cil:find-in-page
-author: 鹏展博
 createTime: 2021/05/21 21:51:49
 permalink: /memorandum/grep/
 ---

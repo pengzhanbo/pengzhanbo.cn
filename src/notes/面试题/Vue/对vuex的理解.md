@@ -1,6 +1,5 @@
 ---
 title: 对vuex的理解
-author: 鹏展博
 createTime: 2022/04/25 15:09:23
 permalink: /interview-question/k8vcpo28/
 ---

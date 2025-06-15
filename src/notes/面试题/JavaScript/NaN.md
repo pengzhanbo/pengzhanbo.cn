@@ -1,7 +1,6 @@
 ---
 title: NaN
 createTime: 2022/04/15 03:35:01
-author: pengzhanbo
 permalink: /interview-question/jilzuxpt/
 ---
 

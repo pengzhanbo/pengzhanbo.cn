@@ -1,7 +1,6 @@
 ---
 title: 面试题解析
 createTime: 2022/04/12 10:16:26
-author: pengzhanbo
 permalink: /interview-question/
 ---
 

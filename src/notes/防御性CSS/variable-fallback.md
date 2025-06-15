@@ -1,6 +1,5 @@
 ---
 title: CSS Variable Fallback
-author: 鹏展博
 createTime: 2023/08/06 16:10:58
 permalink: /defensive-css/variable-fallback/
 ---

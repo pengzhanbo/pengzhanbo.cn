@@ -1,7 +1,6 @@
 ---
 title: new操作符
 createTime: 2022/04/22 06:57:30
-author: pengzhanbo
 permalink: /interview-question/chnx193c/
 ---
 

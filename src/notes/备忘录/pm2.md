@@ -1,7 +1,6 @@
 ---
 title: pm2
 icon: logos:pm2-icon
-author: 鹏展博
 createTime: 2021/09/20 22:02:09
 permalink: /memorandum/pm2/
 ---

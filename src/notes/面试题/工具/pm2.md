@@ -1,7 +1,6 @@
 ---
 title: pm2
 createTime: 2022/04/23 12:49:48
-author: pengzhanbo
 permalink: /interview-question/73zv8wla/
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: v-if和v-for优先级
 createTime: 2022/04/23 01:58:57
-author: pengzhanbo
 permalink: /interview-question/w6mai9ic/
 ---
 

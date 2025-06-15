@@ -1,7 +1,6 @@
 ---
 title: Type Challenges
 createTime: 2022/11/29 11:53:46
-author: pengzhanbo
 permalink: /type-challenges/
 ---
 

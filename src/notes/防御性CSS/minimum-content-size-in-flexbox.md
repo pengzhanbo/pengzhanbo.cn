@@ -1,6 +1,5 @@
 ---
 title: Minimum Content Size In CSS FlexBox
-author: 鹏展博
 createTime: 2023/08/06 23:20:23
 permalink: /defensive-css/minimum-content-size-in-flex-box/
 ---

@@ -1,6 +1,5 @@
 ---
 title: Vertical Media Queries
-author: 鹏展博
 createTime: 2023/08/10 10:23:42
 permalink: /defensive-css/vertical-media-queries/
 ---

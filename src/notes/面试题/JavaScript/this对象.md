@@ -1,7 +1,6 @@
 ---
 title: this对象
 createTime: 2022/04/15 04:11:13
-author: pengzhanbo
 permalink: /interview-question/wdcjym47/
 ---
 

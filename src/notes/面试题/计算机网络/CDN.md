@@ -1,7 +1,6 @@
 ---
 title: CDN
 createTime: 2022/04/18 06:53:40
-author: pengzhanbo
 permalink: /interview-question/os6hn2b8/
 ---
 

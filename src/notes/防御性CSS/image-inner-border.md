@@ -1,6 +1,5 @@
 ---
 title: Image Inner Border
-author: 鹏展博
 createTime: 2023/08/10 17:16:05
 permalink: /defensive-css/image-inner-border/
 ---

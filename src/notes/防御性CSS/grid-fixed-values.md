@@ -1,6 +1,5 @@
 ---
 title: Grid fixed values
-author: 鹏展博
 createTime: 2023/08/06 10:46:45
 permalink: /defensive-css/grid-fixed-values/
 ---

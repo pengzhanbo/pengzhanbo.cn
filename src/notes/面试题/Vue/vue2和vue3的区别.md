@@ -1,7 +1,6 @@
 ---
 title: vue2和vue3的区别
 createTime: 2022/04/24 02:44:44
-author: pengzhanbo
 permalink: /interview-question/2o905emj/
 ---
 

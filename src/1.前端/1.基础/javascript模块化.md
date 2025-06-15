@@ -1,7 +1,6 @@
 ---
 title: javascript模块化 发展历程
 createTime: 2022/04/10 03:00:41
-author: pengzhanbo
 tags:
   - javascript
 permalink: /article/javascript-modules/

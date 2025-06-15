@@ -1,7 +1,6 @@
 ---
 title: ssh
 icon: mdi:ssh
-author: 鹏展博
 createTime: 2019/04/13 18:58:37
 permalink: /memorandum/ssh/
 ---

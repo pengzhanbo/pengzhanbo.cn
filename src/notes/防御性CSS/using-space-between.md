@@ -1,6 +1,5 @@
 ---
 title: Using Space Between
-author: 鹏展博
 createTime: 2023/08/09 13:25:55
 permalink: /defensive-css/using-space-between/
 ---

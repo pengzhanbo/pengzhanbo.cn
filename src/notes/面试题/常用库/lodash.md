@@ -1,7 +1,6 @@
 ---
 title: lodash
 createTime: 2022/04/18 07:07:00
-author: pengzhanbo
 permalink: /interview-question/rh7yy89s/
 ---
 

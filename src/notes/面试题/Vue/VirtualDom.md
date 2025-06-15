@@ -1,7 +1,6 @@
 ---
 title: Virtual DOM
 createTime: 2022/04/21 05:30:37
-author: pengzhanbo
 permalink: /interview-question/w122van2/
 ---
 

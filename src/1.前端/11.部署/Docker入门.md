@@ -4,7 +4,6 @@ createTime: 2021/12/28 12:51:54
 permalink: /article/0ed6asz0/
 tags:
   - deploy
-author: 鹏展博
 ---
 
 `Docker` 是一个开源的应用容器引擎，它可以将应用打包到一个可移植的镜像中，

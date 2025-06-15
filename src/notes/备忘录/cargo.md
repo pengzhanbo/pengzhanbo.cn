@@ -1,7 +1,6 @@
 ---
 title: cargo
 icon: logos:rust
-author: 鹏展博
 createTime: 2022/06/21 17:40:42
 permalink: /memorandum/cargo/
 ---

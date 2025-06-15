@@ -1,7 +1,6 @@
 ---
 title: CSRF攻击
 createTime: 2022/04/20 05:31:27
-author: pengzhanbo
 permalink: /interview-question/qm07ep25/
 ---
 

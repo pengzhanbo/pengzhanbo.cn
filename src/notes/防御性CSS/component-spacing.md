@@ -1,6 +1,5 @@
 ---
 title: Component Spacing
-author: 鹏展博
 createTime: 2023/08/04 20:14:57
 permalink: /defensive-css/component-spacing/
 ---

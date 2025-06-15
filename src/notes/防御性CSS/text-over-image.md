@@ -1,6 +1,5 @@
 ---
 title: Text Over Image
-author: 鹏展博
 createTime: 2023/08/09 17:59:42
 permalink: /defensive-css/text-over-image/
 ---

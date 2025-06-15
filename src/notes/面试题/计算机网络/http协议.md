@@ -1,7 +1,6 @@
 ---
 title: http协议
 createTime: 2022/04/18 06:52:36
-author: pengzhanbo
 permalink: /interview-question/6pdcf9h0/
 ---
 

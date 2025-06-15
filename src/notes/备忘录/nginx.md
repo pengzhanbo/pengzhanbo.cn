@@ -1,7 +1,6 @@
 ---
 title: nginx
 icon: logos:nginx
-author: 鹏展博
 createTime: 2019/07/02 11:15:28
 permalink: /memorandum/nginx/
 ---

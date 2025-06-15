@@ -2,7 +2,6 @@
 title: BFC 块级格式化上下文
 createTime: 2018/05/17 12:28:33
 permalink: /article/o5g7ggvf/
-author: pengzhanbo
 tags:
   - html
 ---

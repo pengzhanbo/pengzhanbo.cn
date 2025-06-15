@@ -6,7 +6,6 @@ tags:
   - html
 createTime: 2018/08/02 11:15:27
 permalink: /article/5fmy4kla/
-author: pengzhanbo
 ---
 
 在web开发领域中，模板并不少见。从服务器端的模板语言，如`Django`、`jsp`等，应用十分广泛，存在了很长时间。又如前端，早期例如`art(artTemplate)`，以及近年来，大多数的MV\*框架涌现，绝大多数在展现层使用了同样的渲染机制：模板。

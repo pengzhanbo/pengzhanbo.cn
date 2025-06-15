@@ -1,6 +1,5 @@
 ---
 title: Image Maximum Width
-author: 鹏展博
 createTime: 2023/08/7 19:16:30
 permalink: /defensive-css/image-maximum-width/
 ---

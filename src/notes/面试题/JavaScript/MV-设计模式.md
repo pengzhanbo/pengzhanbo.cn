@@ -1,7 +1,6 @@
 ---
 title: MVC/MVP/MVVM
 createTime: 2022/04/20 02:32:11
-author: pengzhanbo
 permalink: /interview-question/ud3m8zxg/
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: git
 icon: logos:git-icon
-author: 鹏展博
 createTime: 2021/09/21 00:34:10
 permalink: /memorandum/git/
 ---

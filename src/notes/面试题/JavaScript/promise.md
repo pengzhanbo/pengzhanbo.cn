@@ -1,7 +1,6 @@
 ---
 title: promise
 createTime: 2022/04/17 05:53:48
-author: pengzhanbo
 permalink: /interview-question/a895fu8f/
 ---
 

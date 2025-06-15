@@ -1,6 +1,5 @@
 ---
 title: Position Sticky With CSS Grid
-author: 鹏展博
 createTime: 2023/08/08 09:38:52
 permalink: /defensive-css/sticky-with-grid/
 ---

@@ -2,7 +2,6 @@
 title: 1px解决方案
 createTime: 2019/05/15 10:41:32
 permalink: /article/tz7ncicn/
-author: pengzhanbo
 tags:
   - html
   - css

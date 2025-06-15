@@ -1,6 +1,5 @@
 ---
 title: Input Zoom On iOS Safari
-author: 鹏展博
 createTime: 2023/08/11 17:18:20
 permalink: /defensive-css/input-zoom-on-ios-safari/
 ---

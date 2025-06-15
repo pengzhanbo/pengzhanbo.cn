@@ -1,6 +1,5 @@
 ---
 title: tsconfig.json 完全使用指南
-author: 鹏展博
 createTime: 2022/04/28 02:50:00
 tags:
   - typescript

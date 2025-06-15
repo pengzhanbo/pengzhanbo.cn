@@ -1,6 +1,5 @@
 ---
 title: rust学习简记
-author: 鹏展博
 createTime: 2022/06/02 03:40:46
 permalink: /learn-rust/
 ---

@@ -1,7 +1,6 @@
 ---
 title: DOM节点操作
 createTime: 2022/04/16 10:51:17
-author: pengzhanbo
 permalink: /interview-question/y5w6l1js/
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: git-hook
 createTime: 2022/04/18 09:17:44
-author: pengzhanbo
 permalink: /interview-question/3hdch7z2/
 ---
 

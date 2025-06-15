@@ -5,7 +5,6 @@ tags:
   - html
 createTime: 2018/08/01 11:15:27
 permalink: /article/m63fd7lf/
-author: pengzhanbo
 ---
 
 在我们的web应用开发中，HTML标签为我们提供了基础的应用和交互，我们使用HTML标签构建了各种各样丰富的web应用。
