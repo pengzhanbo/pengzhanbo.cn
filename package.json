@@ -49,7 +49,8 @@
       "unrs-resolver"
     ],
     "patchedDependencies": {
-      "floating-vue@5.2.2": "patches/floating-vue@5.2.2.patch"
+      "floating-vue@5.2.2": "patches/floating-vue@5.2.2.patch",
+      "vuepress-plugin-md-enhance@2.0.0-rc.90": "patches/vuepress-plugin-md-enhance@2.0.0-rc.90.patch"
     }
   }
 }
