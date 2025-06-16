@@ -1,7 +1,9 @@
 ---
 title: React 原理解析：Diff 算法机制与优化策略
-createTime: 2025/04/3 16:27:00
+createTime: 2025/04/03 16:27:00
 permalink: /article/ur80anlr/
+tags:
+  - react
 ---
 
 ::: info React 的 Diff 算法是其高性能渲染的核心保障，本文将从原理到实现剖析这一关键机制。
