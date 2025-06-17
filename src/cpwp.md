@@ -3,6 +3,7 @@ title: 中国程序员容易发音错误的单词
 createTime: 2025/06/17 18:46:25
 permalink: /cpwp/
 draft: true
+aside: false
 ---
 
 ::: tip 数据来源 [chinese-programmer-wrong-pronunciation](https://github.com/shimohq/chinese-programmer-wrong-pronunciation)
