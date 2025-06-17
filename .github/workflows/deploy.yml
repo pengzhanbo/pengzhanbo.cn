@@ -28,7 +28,7 @@ jobs:
       - name: Docs build
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-          VUEPRESS_GAODE_MAP_KEY: ${{ vars.VUEPRESS_GAODE_MAP_KEY }}
+          VUEPRESS_GAODE_MAP_KEY: ${{ secrets.VUEPRESS_GAODE_MAP_KEY }}
         run: pnpm build
 
       - name: Deploy docs
