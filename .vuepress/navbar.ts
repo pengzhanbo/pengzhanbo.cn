@@ -110,6 +110,17 @@ export default defineNavbarConfig([
         activeMatch: '^/learn-rust/',
         icon: 'mdi:language-rust',
       },
+      // {
+      //   text: '构建工具指南',
+      //   icon: 'unjs:unbuild',
+      //   items: [
+      //     {
+      //       text: 'webpack 指南',
+      //       link: '/build-tools/webpack/',
+      //       icon: 'devicon:webpack',
+      //     },
+      //   ]
+      // }
     ],
   },
   {
@@ -139,6 +150,11 @@ export default defineNavbarConfig([
         link: '/cli/',
         icon: 'grommet-icons:cli',
         activeMatch: '^/cli',
+      },
+      {
+        text: '程序员容易发音错误的单词',
+        link: '/cpwp/',
+        icon: 'tdesign:user-talk-1',
       },
       // {
       //   text: 'You-Need-Know-Vite',

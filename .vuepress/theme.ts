@@ -1,3 +1,4 @@
+import type { Theme } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
 export default plumeTheme({
@@ -24,6 +25,8 @@ export default plumeTheme({
     caniuse: true,
     jsfiddle: true,
     demo: true,
+    npmTo: true,
+    audioReader: true,
   },
 
   search: {
@@ -46,4 +49,4 @@ export default plumeTheme({
     darkTheme: 'dark_protanopia',
     lightTheme: 'light_protanopia',
   },
-})
+}) as Theme
