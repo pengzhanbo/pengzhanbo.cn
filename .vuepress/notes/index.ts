@@ -1,5 +1,6 @@
 import { defineNotesConfig } from 'vuepress-theme-plume'
 import defensiveCss from './defensive-css.js'
+import frontendOpenSources from './fe-oss.js'
 import interviewQuestion from './interview-question.js'
 import learnRust from './learn-rust.js'
 import memorandum from './memorandum.js'
@@ -16,6 +17,7 @@ export default defineNotesConfig({
     defensiveCss,
     memorandum,
     webpack,
+    frontendOpenSources,
     { dir: '设计模式', link: '/design-pattern/', sidebar: 'auto' },
     { dir: '算法', link: '/algorithm/', sidebar: 'auto' },
   ],

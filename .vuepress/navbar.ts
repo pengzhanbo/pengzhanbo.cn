@@ -93,6 +93,12 @@ export default defineNavbarConfig([
         icon: 'hugeicons:algorithm',
       },
       {
+        text: '前端开源库指南',
+        link: '/fe-oss/',
+        activeMatch: '^/fe-oss/',
+        icon: 'streamline-freehand:programming-code-idea',
+      },
+      {
         text: '前端面试题',
         link: '/interview-question/',
         activeMatch: '^/interview-question/',
