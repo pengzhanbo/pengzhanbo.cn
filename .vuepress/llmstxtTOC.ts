@@ -12,6 +12,8 @@ const noteNames = {
   '/memorandum/': '备忘录',
   '/design-pattern/': '设计模式',
   '/algorithm/': '数据结构与算法',
+  '/fe-oss/': '前端开源库指南',
+  '/build-tools/webpack/': 'webpack 指南',
 }
 
 function normalizePath(prefix: string, path = ''): string {

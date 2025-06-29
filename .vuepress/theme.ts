@@ -7,16 +7,7 @@ export default plumeTheme({
   docsDir: 'src',
 
   codeHighlighter: {
-    twoslash: {
-      twoslashOptions: {
-        compilerOptions: {
-          paths: {
-            '~/typings/*': ['.vuepress/typings/*'],
-            '~/tc-utils': ['.vuepress/typings/type-challenges-utils.ts'],
-          },
-        },
-      },
-    },
+    twoslash: true,
     lineNumbers: 10,
   },
 
