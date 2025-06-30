@@ -1,5 +1,3 @@
-import { Buffer } from 'node:buffer'
-import fs from 'node:fs'
 /**
  * @module web-fonts
  * @description Web 字体下载
@@ -8,6 +6,9 @@ import fs from 'node:fs'
  * 1. 本地化字体文件
  * 2. 根据使用的字符，下载裁剪后的最小字体文件
  */
+
+import { Buffer } from 'node:buffer'
+import fs from 'node:fs'
 import path from 'node:path'
 import { isString, objectEntries, slash, toArray, uniq } from '@pengzhanbo/utils'
 

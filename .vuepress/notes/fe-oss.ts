@@ -87,5 +87,11 @@ export default defineNoteConfig({
         { text: '交互式解析', items: ['inquirer', 'clack-prompts'] },
       ],
     },
+    {
+      prefix: '网络请求',
+      text: '网络请求',
+      collapsed: true,
+      items: ['axios', 'ky', 'undici', 'ofetch', 'got', 'superagent'],
+    },
   ],
 })
