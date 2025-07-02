@@ -169,7 +169,7 @@ const watcher = chokidar.watch(['./foo', './bar'], {
 
 ```ts
 const watcher = chokidar.watch([
-  '{foo,bar}/**/{baz,qux}/*.{js,ts,css}', 
+  '{foo,bar}/**/{baz,qux}/*.{js,ts,css}',
   'biz/**/*.{js,ts,css,less}',
   'buzz/**{pizz,puz}/*.{js,ts,css}'
 ])
@@ -182,15 +182,15 @@ const watcher = chokidar.watch([
 对于 `ignored` ，我们所要做的，就是对结果取反：
 
 ```ts
-import process from 'node:process'
 import path from 'node:path'
-import picomatch from 'picomatch'
+import process from 'node:process'
 import chokidar from 'chokidar'
+import picomatch from 'picomatch'
 
 const cwd = process.cwd()
 
 const matcher = picomatch([
-  '{foo,bar}/**/{baz,qux}/*.{js,ts,css}', 
+  '{foo,bar}/**/{baz,qux}/*.{js,ts,css}',
   'biz/**/*.{js,ts,css,less}',
   'buzz/**{pizz,puz}/*.{js,ts,css}'
 ])

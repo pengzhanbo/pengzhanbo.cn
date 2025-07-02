@@ -18,6 +18,7 @@ export default plumeTheme({
     demo: true,
     npmTo: true,
     audioReader: true,
+    chat: true,
   },
 
   search: {
