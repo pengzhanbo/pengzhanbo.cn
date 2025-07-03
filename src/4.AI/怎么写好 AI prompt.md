@@ -1,9 +1,10 @@
 ---
-title: 怎么写好 AI prompt ？
+title: 怎么写前端开发的 AI prompt ？
 createTime: 2025/05/05 18:18:06
 permalink: /article/or9sfaj3/
 tags:
   - AI
+  - 工具
 ---
 
 ## 前言
@@ -398,37 +399,37 @@ function validatePassword() {
 
 **Prompt 设计原则**:
 
-1. **明确技术栈**  
+1. **明确技术栈**
    指定框架（React/Vue/Angular）、语言（TS/JS）、UI 库（Tailwind/MUI/AntD）。
-   > ❌ 模糊：_"生成一个按钮"_  
+   > ❌ 模糊：_"生成一个按钮"_
    > ✅ 明确：_"用 React + TypeScript + Tailwind CSS 创建一个带悬停动画的蓝色按钮"_
 
-2. **描述功能细节**  
+2. **描述功能细节**
    包含交互逻辑、状态处理、API 集成等关键行为。
-   > ✅ 示例：  
-   > _"创建一个计数器组件：  
-   > - 显示当前数字，初始值为 0  
-   > - 有 '+' 和 '-' 按钮，点击后数字增减  
+   > ✅ 示例：
+   > _"创建一个计数器组件：
+   > - 显示当前数字，初始值为 0
+   > - 有 '+' 和 '-' 按钮，点击后数字增减
    > - 当数字为 0 时，'-' 按钮禁用（灰色）"_
 
-3. **定义样式要求**  
+3. **定义样式要求**
    指定布局、响应式规则、动效等。
-   > ✅ 示例：  
-   > _"使用 Flexbox 实现响应式导航栏：  
-   > - 移动端：汉堡菜单（点击展开）  
-   > - 桌面端：水平排列  
+   > ✅ 示例：
+   > _"使用 Flexbox 实现响应式导航栏：
+   > - 移动端：汉堡菜单（点击展开）
+   > - 桌面端：水平排列
    > - 悬停时链接变蓝色，带 300ms 过渡效果"_
 
-4. **提供输入/输出示例（可选但推荐）**  
+4. **提供输入/输出示例（可选但推荐）**
    帮助 AI 理解数据结构。
-   > ✅ 示例：  
-   > _"根据以下数据生成商品卡片组件：  
-   > 输入数据格式：{ id: number, name: string, price: number }  
+   > ✅ 示例：
+   > _"根据以下数据生成商品卡片组件：
+   > 输入数据格式：{ id: number, name: string, price: number }
    > 输出：卡片包含商品名、价格，并添加 '加入购物车' 按钮"_
 
-5. **约束条件**  
+5. **约束条件**
    明确禁止或限制项（如性能要求、兼容性）。
-   > ✅ 示例：  
+   > ✅ 示例：
    > _"避免使用任何第三方库，仅用原生 JavaScript 实现轮播图，支持触摸滑动"_
 
 ---
@@ -506,37 +507,37 @@ Vue 3 + CSS Modules
 
 **四、优化技巧**:
 
-1. **迭代优化**：  
-   首先生成基础代码，再通过追加 prompt 改进：  
+1. **迭代优化**：
+   首先生成基础代码，再通过追加 prompt 改进：
    > _"为上述表格添加排序功能（点击表头按字母排序）"_
 
-2. **错误处理**：  
-   若 AI 输出不符合预期，明确指出问题：  
-   > ❌ _"代码有错"_  
+2. **错误处理**：
+   若 AI 输出不符合预期，明确指出问题：
+   > ❌ _"代码有错"_
    > ✅ _"提交按钮未做表单验证，请添加邮箱格式校验（正则表达式）"_
 
-3. **要求伪代码**：  
-   复杂逻辑可先要求设计思路：  
+3. **要求伪代码**：
+   复杂逻辑可先要求设计思路：
    > _"请先提供伪代码：如何用 Redux 管理购物车状态？"_
 
-4. **拆分任务**：  
-   大型功能拆解为子组件：  
+4. **拆分任务**：
+   大型功能拆解为子组件：
    > 先生成 _"Header 组件"_ → 再生成 _"侧边栏组件"_ → 最后集成
 
 ---
 
 **五、避免的常见错误**:
 
-1. **过于宽泛**  
-   ❌ _"做一个电商网站"_  
+1. **过于宽泛**
+   ❌ _"做一个电商网站"_
    ✅ _"生成商品详情页的图片轮播组件"_
 
-2. **忽略边界条件**  
-   ❌ _"实现登录表单"_  
+2. **忽略边界条件**
+   ❌ _"实现登录表单"_
    ✅ _"登录表单需包含：邮箱验证、密码强度提示、错误处理（API 返回 401 时显示错误信息）"_
 
-3. **技术栈冲突**  
-   ❌ _"用 jQuery 和 React 一起实现..."_  
+3. **技术栈冲突**
+   ❌ _"用 jQuery 和 React 一起实现..."_
    ✅ 明确技术组合是否合理
 
 ---
@@ -608,9 +609,9 @@ filePath: /src/main.ts
 ...
 
 让我们打开预览页面查看登录界面效果。
-          
+
 预览
-          
+
 已完成登录页面的开发，主要实现了以下功能：
 
 1. 页面布局
@@ -669,9 +670,9 @@ filePath: /src/main.ts
 
 ```vue :collapsed-lines
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
+import { computed, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
@@ -689,7 +690,8 @@ const rules = {
         const phoneRegex = /^1[3-9]\d{9}$/
         if (!emailRegex.test(value) && !phoneRegex.test(value)) {
           callback(new Error('请输入正确的邮箱或手机号码'))
-        } else {
+        }
+        else {
           callback()
         }
       },
@@ -712,10 +714,14 @@ const rules = {
         }
 
         let strength = 0
-        if (hasUpperCase) strength++
-        if (hasLowerCase) strength++
-        if (hasNumber) strength++
-        if (hasSpecial) strength++
+        if (hasUpperCase)
+          strength++
+        if (hasLowerCase)
+          strength++
+        if (hasNumber)
+          strength++
+        if (hasSpecial)
+          strength++
 
         passwordStrength.value = strength
         callback()
@@ -744,8 +750,9 @@ const strengthText = computed(() => {
 
 const loading = ref(false)
 
-const handleLogin = async () => {
-  if (!formRef.value) return
+async function handleLogin() {
+  if (!formRef.value)
+    return
 
   try {
     await formRef.value.validate()
@@ -753,7 +760,7 @@ const handleLogin = async () => {
 
     // 模拟登录请求
     await new Promise(resolve => setTimeout(resolve, 1000))
-    
+
     // 实际项目中这里应该调用真实的登录接口
     // const res = await fetch('/api/login', {
     //   method: 'POST',
@@ -761,12 +768,14 @@ const handleLogin = async () => {
     //   body: JSON.stringify(form.value)
     // })
     // const data = await res.json()
-    
+
     ElMessage.success('登录成功')
     router.push('/')
-  } catch (error) {
+  }
+  catch (error) {
     console.error('登录失败:', error)
-  } finally {
+  }
+  finally {
     loading.value = false
   }
 }
@@ -776,7 +785,7 @@ const handleLogin = async () => {
   <div class="login-container">
     <div class="login-content">
       <div class="login-banner">
-        <img src="@/assets/vue.svg" alt="banner" />
+        <img src="@/assets/vue.svg" alt="banner">
       </div>
       <div class="login-form">
         <h2>欢迎登录</h2>
@@ -1018,16 +1027,16 @@ AI 会根据这些需求改进，然后再次生成代码：
 现在可以通过访问以下路径使用相关功能：
 - 登录页面：`/login`
 - 忘记密码：`/forget-password`
-        
+
 ```
 
 @tab Login.vue
 
 ```vue :collapsed-lines
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
-import { useRouter } from 'vue-router'
 import { ElMessage } from 'element-plus'
+import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 const router = useRouter()
 
@@ -1041,29 +1050,34 @@ const form = ref({
 const captchaCode = ref('')
 const captchaImage = ref('')
 
-const refreshCaptcha = async () => {
+async function refreshCaptcha() {
   try {
     const res = await fetch('/api/captcha')
     const data = await res.json()
     captchaCode.value = data.code
     captchaImage.value = data.image
-  } catch (error) {
+  }
+  catch (error) {
     console.error('获取验证码失败:', error)
   }
 }
 
 // 监听密码变化实时更新强度
-const updatePasswordStrength = (value: string) => {
+function updatePasswordStrength(value: string) {
   const hasUpperCase = /[A-Z]/.test(value)
   const hasLowerCase = /[a-z]/.test(value)
   const hasNumber = /\d/.test(value)
   const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(value)
 
   let strength = 0
-  if (hasUpperCase) strength++
-  if (hasLowerCase) strength++
-  if (hasNumber) strength++
-  if (hasSpecial) strength++
+  if (hasUpperCase)
+    strength++
+  if (hasLowerCase)
+    strength++
+  if (hasNumber)
+    strength++
+  if (hasSpecial)
+    strength++
 
   passwordStrength.value = strength
 }
@@ -1082,7 +1096,8 @@ const rules = {
         const phoneRegex = /^1[3-9]\d{9}$/
         if (!emailRegex.test(value) && !phoneRegex.test(value)) {
           callback(new Error('请输入正确的邮箱或手机号码'))
-        } else {
+        }
+        else {
           callback()
         }
       },
@@ -1105,10 +1120,14 @@ const rules = {
         }
 
         let strength = 0
-        if (hasUpperCase) strength++
-        if (hasLowerCase) strength++
-        if (hasNumber) strength++
-        if (hasSpecial) strength++
+        if (hasUpperCase)
+          strength++
+        if (hasLowerCase)
+          strength++
+        if (hasNumber)
+          strength++
+        if (hasSpecial)
+          strength++
 
         passwordStrength.value = strength
         callback()
@@ -1141,8 +1160,9 @@ const strengthText = computed(() => {
 
 const loading = ref(false)
 
-const handleLogin = async () => {
-  if (!formRef.value) return
+async function handleLogin() {
+  if (!formRef.value)
+    return
 
   try {
     await formRef.value.validate()
@@ -1157,19 +1177,22 @@ const handleLogin = async () => {
       })
     })
     const data = await res.json()
-    
+
     if (data.code === 0) {
       ElMessage.success('登录成功')
       localStorage.setItem('isLoggedIn', 'true')
       router.push('/')
-    } else {
+    }
+    else {
       ElMessage.error(data.message)
       refreshCaptcha()
     }
     router.push('/')
-  } catch (error) {
+  }
+  catch (error) {
     console.error('登录失败:', error)
-  } finally {
+  }
+  finally {
     loading.value = false
   }
 }
@@ -1179,7 +1202,7 @@ const handleLogin = async () => {
   <div class="login-container">
     <div class="login-content">
       <div class="login-banner">
-        <img src="@/assets/vue.svg" alt="banner" />
+        <img src="@/assets/vue.svg" alt="banner">
       </div>
       <div class="login-form">
         <h2>欢迎登录</h2>
@@ -1218,7 +1241,7 @@ const handleLogin = async () => {
                   active: passwordStrength >= n,
                   weak: passwordStrength === 1 && n === 1,
                   medium: passwordStrength === 2 && n <= 2,
-                  strong: passwordStrength >= 3 && n <= 3
+                  strong: passwordStrength >= 3 && n <= 3,
                 }"
               />
               <span v-if="strengthText.text" :style="{ color: strengthText.color }">
@@ -1240,7 +1263,7 @@ const handleLogin = async () => {
                 class="captcha-image"
                 alt="验证码"
                 @click="refreshCaptcha"
-              />
+              >
             </div>
           </el-form-item>
 
@@ -1428,11 +1451,11 @@ AI：
 
 ```vue :collapsed-lines
 <script setup lang="ts">
+import { ElMessage } from 'element-plus'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { ElMessage } from 'element-plus'
-import PasswordStrength from '@/components/PasswordStrength.vue'
 import CaptchaInput from '@/components/CaptchaInput.vue'
+import PasswordStrength from '@/components/PasswordStrength.vue'
 import { calculatePasswordStrength, loginRules } from '@/utils/validation'
 
 const router = useRouter()
@@ -1448,16 +1471,17 @@ const loading = ref(false)
 const passwordStrength = ref(0)
 const captchaCode = ref('')
 
-const updatePasswordStrength = (value: string) => {
+function updatePasswordStrength(value: string) {
   passwordStrength.value = calculatePasswordStrength(value)
 }
 
-const handleCaptchaRefresh = (code: string) => {
+function handleCaptchaRefresh(code: string) {
   captchaCode.value = code
 }
 
-const handleLogin = async () => {
-  if (!formRef.value) return
+async function handleLogin() {
+  if (!formRef.value)
+    return
 
   try {
     await formRef.value.validate()
@@ -1472,17 +1496,20 @@ const handleLogin = async () => {
       })
     })
     const data = await res.json()
-    
+
     if (data.code === 0) {
       ElMessage.success('登录成功')
       localStorage.setItem('isLoggedIn', 'true')
       router.push('/')
-    } else {
+    }
+    else {
       ElMessage.error(data.message)
     }
-  } catch (error) {
+  }
+  catch (error) {
     console.error('登录失败:', error)
-  } finally {
+  }
+  finally {
     loading.value = false
   }
 }
@@ -1492,7 +1519,7 @@ const handleLogin = async () => {
   <div class="login-container">
     <div class="login-content">
       <div class="login-banner">
-        <img src="@/assets/vue.svg" alt="banner" />
+        <img src="@/assets/vue.svg" alt="banner">
       </div>
       <div class="login-form">
         <h2>欢迎登录</h2>
@@ -1605,8 +1632,6 @@ const handleLogin = async () => {
   margin-top: 16px;
 }
 
-
-
 .form-footer {
   margin-top: 16px;
   text-align: right;
@@ -1650,7 +1675,7 @@ const handleLogin = async () => {
 
 ```vue :collapsed-lines
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
 
 defineProps<{
   modelValue: string
@@ -1665,14 +1690,15 @@ const emit = defineEmits<{
 const captchaCode = ref('')
 const captchaImage = ref('')
 
-const refreshCaptcha = async () => {
+async function refreshCaptcha() {
   try {
     const res = await fetch('/api/captcha')
     const data = await res.json()
     captchaCode.value = data.code
     captchaImage.value = data.image
     emit('refresh', data.code)
-  } catch (error) {
+  }
+  catch (error) {
     console.error('获取验证码失败:', error)
   }
 }
@@ -1687,7 +1713,7 @@ onMounted(() => {
     <el-input
       :model-value="modelValue"
       placeholder="请输入验证码"
-      @update:modelValue="(newValue: string) => emit('update:modelValue', newValue)"
+      @update:model-value="(newValue: string) => emit('update:modelValue', newValue)"
       @keyup.enter="$emit('enter')"
     />
     <img
@@ -1696,7 +1722,7 @@ onMounted(() => {
       class="captcha-image"
       alt="验证码"
       @click="refreshCaptcha"
-    />
+    >
   </div>
 </template>
 
@@ -1752,7 +1778,7 @@ const strengthText = computed(() => {
         active: strength >= n,
         weak: strength === 1 && n === 1,
         medium: strength === 2 && n <= 2,
-        strong: strength >= 3 && n <= 3
+        strong: strength >= 3 && n <= 3,
       }"
     />
     <span v-if="strengthText.text" :style="{ color: strengthText.color }">
@@ -1800,17 +1826,21 @@ const strengthText = computed(() => {
 
 ```ts :collapsed-lines
 // 密码强度计算
-export const calculatePasswordStrength = (password: string): number => {
+export function calculatePasswordStrength(password: string): number {
   const hasUpperCase = /[A-Z]/.test(password)
   const hasLowerCase = /[a-z]/.test(password)
   const hasNumber = /\d/.test(password)
   const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password)
 
   let strength = 0
-  if (hasUpperCase) strength++
-  if (hasLowerCase) strength++
-  if (hasNumber) strength++
-  if (hasSpecial) strength++
+  if (hasUpperCase)
+    strength++
+  if (hasLowerCase)
+    strength++
+  if (hasNumber)
+    strength++
+  if (hasSpecial)
+    strength++
 
   return strength
 }
@@ -1825,7 +1855,8 @@ export const loginRules = {
         const phoneRegex = /^1[3-9]\d{9}$/
         if (!emailRegex.test(value) && !phoneRegex.test(value)) {
           callback(new Error('请输入正确的邮箱或手机号码'))
-        } else {
+        }
+        else {
           callback()
         }
       },
