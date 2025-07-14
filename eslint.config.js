@@ -21,4 +21,10 @@ export default config({
     'ts/ban-ts-comment': 'off',
     '@typescript-eslint/prefer-literal-enum-member': 'off',
   },
+}, {
+  files: ['src/1.前端/3.Vue/Vue 原理解析—diff 算法.md/**/*.ts'],
+  rules: {
+    'unicorn/no-new-array': 'off',
+    'no-unmodified-loop-condition': 'off',
+  },
 })
