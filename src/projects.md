@@ -172,7 +172,7 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 生成漂亮的SVG图案。
 
-[使用文档](https://github.com/pengzhanbo/geo-pattern-ts) | [在线演示](geo-pattern.netlify.app)
+[使用文档](https://github.com/pengzhanbo/geo-pattern-ts) | [在线演示](https://geo-pattern.netlify.app)
 
 ---
 

@@ -811,7 +811,7 @@ function FunctionalComp(props, { slots }) {
 
 - [`pathBlockChildren`](#patchblockchildren) 函数，处理 “区块” 内的子节点
 - [`patchChildren`](#patchchildren) 函数，处理子节点
-- [`patchProps`](#patchprops) 函数，处理属性
+- `patchProps` 函数，处理属性
 
 ```ts
 function patchElement(n1: VNode, n2: VNode, parentComponent: ComponentInternalInstance | null) {
