@@ -2,7 +2,7 @@
 title: 中国程序员容易发音错误的单词
 createTime: 2025/06/17 18:46:25
 permalink: /cpwp/
-draft: true
+article: false
 aside: false
 ---
 

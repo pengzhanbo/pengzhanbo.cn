@@ -2,7 +2,7 @@
 title: AI 模型导航
 createTime: 2025/02/10 09:10:26
 permalink: /ai/
-draft: true
+article: false
 ---
 
 ## 国产大模型
