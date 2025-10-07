@@ -1,7 +1,9 @@
-import { defineNoteConfig } from 'vuepress-theme-plume'
+import { defineCollection } from 'vuepress-theme-plume'
 
-export default defineNoteConfig({
-  link: '/interview-question/',
+export default defineCollection({
+  type: 'doc',
+  title: '面试题',
+  linkPrefix: '/interview-question/',
   dir: '面试题',
   sidebar: [
     {

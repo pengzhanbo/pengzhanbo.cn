@@ -1,7 +1,9 @@
-import { defineNoteConfig } from 'vuepress-theme-plume'
+import { defineCollection } from 'vuepress-theme-plume'
 
-export default defineNoteConfig({
-  link: '/type-challenges/',
+export default defineCollection({
+  type: 'doc',
+  title: 'Type Challenges',
+  linkPrefix: '/type-challenges/',
   dir: 'type-challenges',
   sidebar: [
     '',

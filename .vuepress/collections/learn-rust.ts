@@ -1,7 +1,9 @@
-import { defineNoteConfig } from 'vuepress-theme-plume'
+import { defineCollection } from 'vuepress-theme-plume'
 
-export default defineNoteConfig({
-  link: '/learn-rust/',
+export default defineCollection({
+  type: 'doc',
+  title: 'rust学习简记',
+  linkPrefix: '/learn-rust/',
   dir: 'rust学习简记',
   sidebar: [
     '',

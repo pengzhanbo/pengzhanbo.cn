@@ -1,12 +1,12 @@
 import { defineThemeConfig } from 'vuepress-theme-plume'
+import collections from './collections/index.js'
 import navbar from './navbar.js'
-import notes from './notes/index.js'
 
 export default defineThemeConfig({
   logo: '/logo.png',
 
   navbar,
-  notes,
+  collections,
 
   profile: {
     name: '鹏展博',

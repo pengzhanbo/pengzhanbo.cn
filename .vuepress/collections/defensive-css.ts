@@ -1,7 +1,9 @@
-import { defineNoteConfig } from 'vuepress-theme-plume'
+import { defineCollection } from 'vuepress-theme-plume'
 
-export default defineNoteConfig({
-  link: '/defensive-css/',
+export default defineCollection({
+  type: 'doc',
+  title: '防御性CSS',
+  linkPrefix: '/defensive-css/',
   dir: '防御性CSS',
   sidebar: [
     {

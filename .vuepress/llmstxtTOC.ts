@@ -2,19 +2,7 @@ import type { LLMPage, LLMState } from '@vuepress/plugin-llms'
 import type { ThemeSidebarItem } from 'vuepress-theme-plume'
 import { generateTOCLink as rawGenerateTOCLink } from '@vuepress/plugin-llms'
 import { ensureEndingSlash, ensureLeadingSlash } from 'vuepress/shared'
-import notes from './notes/index.js'
-
-const noteNames = {
-  '/interview-question/': '前端面试题',
-  '/type-challenges/': 'Type Challenges',
-  '/learn-rust/': 'Rust学习简记',
-  '/defensive-css/': '防御性CSS',
-  '/memorandum/': '备忘录',
-  '/design-pattern/': '设计模式',
-  '/algorithm/': '数据结构与算法',
-  '/fe-oss/': '前端开源库指南',
-  '/build-tools/webpack/': 'webpack 指南',
-}
+import collections from './collections/index.js'
 
 function normalizePath(prefix: string, path = ''): string {
   if (path.startsWith('/'))
@@ -85,21 +73,23 @@ export function tocGetter(llmPages: LLMPage[], llmState: LLMState): string {
   }
 
   // Notes
-  notes.notes.forEach(({ dir, link, sidebar = [] }) => {
-    tableOfContent += `### ${noteNames[link]}\n\n`
-    const prefix = normalizePath('/notes/', dir)
-    if (sidebar === 'auto') {
-      tableOfContent += `${processAutoSidebar(prefix).join('')}\n`
-    }
-    else if (sidebar.length) {
-      const home = generateTOCLink(ensureEndingSlash(prefix))
-      const list = processSidebar(sidebar, prefix)
-      if (home && !list.includes(home)) {
-        list.unshift(home)
+  collections
+    .filter(collection => collection.type === 'doc')
+    .forEach(({ dir, title, sidebar = [] }) => {
+      tableOfContent += `### ${title}\n\n`
+      const prefix = normalizePath(ensureLeadingSlash(dir))
+      if (sidebar === 'auto') {
+        tableOfContent += `${processAutoSidebar(prefix).join('')}\n`
       }
-      tableOfContent += `${list.join('')}\n`
-    }
-  })
+      else if (sidebar.length) {
+        const home = generateTOCLink(ensureEndingSlash(prefix))
+        const list = processSidebar(sidebar, prefix)
+        if (home && !list.includes(home)) {
+          list.unshift(home)
+        }
+        tableOfContent += `${list.join('')}\n`
+      }
+    })
 
   // Others
   const unUsagePages = llmPages.filter(page => !usagePages.includes(page))

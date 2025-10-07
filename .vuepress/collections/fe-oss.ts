@@ -1,8 +1,10 @@
-import { defineNoteConfig } from 'vuepress-theme-plume'
+import { defineCollection } from 'vuepress-theme-plume'
 
-export default defineNoteConfig({
+export default defineCollection({
+  type: 'doc',
+  title: '开源库指南',
   dir: '开源库指南',
-  link: '/fe-oss/',
+  linkPrefix: '/fe-oss/',
   sidebar: [
     'intro',
     {
