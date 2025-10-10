@@ -80,5 +80,12 @@ export default defineUserConfig({
     })
     const content = fs.readFileSync(indexPath, 'utf-8')
     fs.writeFileSync(indexPath, content.replace('<head>', `<head>${links}`))
+
+    await fs.writeFile(app.dir.dest('robots.txt'), `# Algolia-Crawler-Verif: A1A1F2E6307A7403
+
+User-agent: *
+Allow: /
+Sitemap: https://pengzhanbo.cn/sitemap.xml
+`)
   },
 })
