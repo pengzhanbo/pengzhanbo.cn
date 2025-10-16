@@ -25,7 +25,7 @@ export default plumeTheme({
     provider: 'algolia',
     appId: 'KRJOJ00KBL',
     apiKey: '3f3b13613235873fbcbc9d304de18126',
-    indexName: 'pengzhanbo',
+    indices: ['pengzhanbo'],
   },
 
   comment: {
