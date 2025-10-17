@@ -1,0 +1,89 @@
+---
+url: /learn-rust/struct/index.md
+---
+## 定义
+
+* 通过关键词 `struct` 定义
+* 一个清晰明确的结构体 **名称**
+* 几个有名字的结构体 **字段**
+
+```rust
+struct User {
+  name: String,
+  age: u8,
+  email: String,
+}
+```
+
+## 创建实例
+
+```rust
+let user1 = User {
+  name: String::from("zhangsan"),
+  age: 20,
+  email: String::from("zhangsan@email.com"),
+};
+```
+
+* 初始化实例时，每个字段都需要进行初始化
+* 初始化实例时，字段顺序不需要和结构体定义时保持一致
+
+## 访问结构体实例
+
+通过 `.` 操作符访问实例：
+
+```rust
+let mut user1 = User {
+  name: String::from("zhangsan"),
+  age: 20,
+  email: String::from("zhangsan@email.com"),
+};
+user1.name = String::from("lisi");
+```
+
+* 必须要将结构体实例声明为可变的，才能修改实例的字段
+* 不支持将结构体实例的某个字段单独声明为可变的
+
+## 更新结构体实例
+
+可以通过 **结构体更新语法** 进行更新
+
+```rust
+let user2 = User {
+  name: String::from("wangwu"),
+  ..user1  // 注意末尾不需要加 逗号
+};
+```
+
+`..` 语法表明了 当前实例未被显式声明的字段，都从 `user1` 中获取。
+
+`..` 语法必须放在 结构体的尾部
+
+## 元组结构体
+
+结构体必须要有名称，但是结构体的字段可以没有名称，这种结构体长得很像元组，因此被称为元组结构体
+
+```rust
+struct Point(i32, i32, i32);
+struct Color(i32, i32, i32);
+
+fn main() {
+  let point = Ponit(0, 0, 0);
+  let color = Color(0, 0, 0);
+}
+```
+
+## 单元结构体
+
+类似于 **单元类型** 。定义一个类型，但是不关心该类型的内容, 只关心它的行为时，就可以使用 `单元结构体`
+
+```rust
+struct AlwaysEqual;
+
+let subject = AlwaysEqual;
+
+// 我们不关心 AlwaysEqual 的字段数据，只关心它的行为，因此将它声明为单元结构体，然后再为它实现某个特征
+impl SomeTrait for AlwaysEqual {
+
+}
+```
