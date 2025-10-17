@@ -157,7 +157,7 @@ localStorage.setItem('jwt_token', 'your_token')
 const token = localStorage.getItem('jwt_token')
 ```
 
-:::{warning} 安全风险
+:::warning 安全风险
 LocalStorage 容易受到 XSS 攻击，攻击者可以通过注入的脚本直接读取 token。
 :::
 
@@ -424,7 +424,7 @@ export function useAuth() {
 
 ## 安全最佳实践
 
-:::{important} JWT 安全要点
+:::important JWT 安全要点
 
 - ==始终使用 HTTPS=={.success} 传输 JWT
 - ==设置合理的过期时间=={.info}（通常 15-30 分钟）
@@ -459,7 +459,7 @@ app.use('/api/auth/login', authLimiter)
 
 ### 1. Token 被盗用
 
-:::{caution} 解决方案
+:::caution 解决方案
 
 - 实现 token 撤销列表
 - 使用短期 token 配合刷新机制
