@@ -1,7 +1,19 @@
 @import url(./Ma-Shan-Zheng.css);
 @import url(./Londrina-Sketch.css);
 @import url(./landing.css);
-/* @import url(./Pacifico.css); */
+
+/*
+  ------------------------------------------------------------------------------
+  Custom CSS
+  ------------------------------------------------------------------------------
+
+*/
+
+/* @supports (text-autospace: normal) {
+  :root {
+    text-autospace: normal;
+  }
+} */
 
 /*
   ------------------------------------------------------------------------------

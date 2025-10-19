@@ -264,7 +264,7 @@ ${requirements}
 
 - **OpenAI 提示工程指南**：官方最佳实践
 - **Prompt Engineering Institute**：专业课程和案例
-- **Awesome Prompt Engineering**：GitHub 上的资源集合
+- **[Awesome Prompt Engineering](https://github.com/promptslab/Awesome-Prompt-Engineering)**：GitHub 上的资源集合
 
 ### 3. 实践平台
 
