@@ -6,7 +6,7 @@ export default config({
     'src/blog/1.前端/12.TypeScript/jsdoc参考.md',
     'src/面试题/JavaScript/变量.md',
     'src/blog/1.前端/2.工具/jsr使用指南.md',
-    'src/blog/1.前端/6.JavaScript/2.进阶/执行上下文栈.md',
+    'src/blog/1.前端/6.JavaScript/2.进阶/4.执行上下文栈.md',
   ],
 }, {
   files: ['**/*.md/**/*.{ts,js,vue,jsx,tsx}'],
