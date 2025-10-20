@@ -2,6 +2,8 @@
 title: CSS @function：原生 CSS 函数定义
 createTime: 2025/10/19 13:07:39
 permalink: /article/gu55hnjs/
+tags:
+  - css
 ---
 
 :::info 重要提示
