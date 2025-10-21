@@ -11,7 +11,8 @@ permalink: /interview-question/2whxs493/
 3. 标准模式和兼容模式
 4. HTML5 `<!DOCTYPE HTML>`
 5. 什么是 DTD？
-   :::
+
+:::
 
 ## 什么是DOCTYPE
 

@@ -4,7 +4,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 
 const list = ref<string[]>([])
 const cache = useSessionStorage<string[]>('__VUEPRESS_HOME_BACKGROUND_LIST', [])
-const active = ref(0)
+const active = ref(-1)
 const asyncActive = ref(0)
 
 async function fetchBingList() {
@@ -24,16 +24,28 @@ async function fetchBingList() {
   }
 }
 let interval: ReturnType<typeof setInterval> | null = null
+const waiting = fetchBingList()
+
 onMounted(async () => {
-  await fetchBingList()
-  if (list.value.length > 1) {
-    interval = setInterval(() => {
-      active.value = (active.value + 1) % list.value.length
-      setTimeout(() => {
-        asyncActive.value = active.value
-      }, 1000)
-    }, 10000)
+  await waiting
+
+  const firstImg = list.value[0]
+  if (firstImg) {
+    let img: HTMLImageElement | null = new Image()
+    img.src = firstImg
+    img.onload = () => {
+      active.value = 0
+      img = null
+    }
   }
+  if (list.value.length <= 1)
+    return
+  interval = setInterval(() => {
+    active.value = (active.value + 1) % list.value.length
+    setTimeout(() => {
+      asyncActive.value = active.value
+    }, 1000)
+  }, 10000)
 })
 
 onUnmounted(() => {
