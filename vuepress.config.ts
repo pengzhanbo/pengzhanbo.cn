@@ -5,9 +5,8 @@ import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 import { llmsPlugin } from '@vuepress/plugin-llms'
 import dotenv from 'dotenv'
 import isCI from 'is-ci'
-import { globSync } from 'tinyglobby'
 import { defineUserConfig } from 'vuepress'
-import { fs, getDirname, path } from 'vuepress/utils'
+import { fs, getDirname, path, tinyglobby } from 'vuepress/utils'
 import { tocGetter } from './.vuepress/llmstxtTOC.js'
 import theme from './.vuepress/theme.js'
 
@@ -72,7 +71,7 @@ export default defineUserConfig({
     const names = ['Ma-Shan-Zheng', 'Londrina-Sketch']
     const dest = app.dir.dest('assets')
     const indexPath = app.dir.dest('index.html')
-    const assets = globSync('*.ttf', { cwd: dest }) || []
+    const assets = tinyglobby.globSync('*.ttf', { cwd: dest }) || []
     const fonts = assets.filter(asset => names.some(name => asset.includes(name)))
     let links = ''
     fonts.forEach((font) => {
