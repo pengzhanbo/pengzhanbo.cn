@@ -82,7 +82,7 @@ Webpack 凭借其 **无与伦比的成熟度、稳定性、灵活性和极其丰
 - [create-react-app](https://github.com/facebook/create-react-app) - <Badge type="danger" text="Deprecated" />
 
   Create React App 是官方支持的创建单页 React 应用程序的方式。它提供了无需配置的现代化构建环境。
-  
+
   目前已经不再维护，不推荐使用。
 
 - [awesome-webpack](https://webpack.docschina.org/awesome-webpack/)

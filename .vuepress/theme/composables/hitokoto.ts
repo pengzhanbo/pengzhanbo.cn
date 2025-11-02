@@ -79,19 +79,19 @@ export function useHitokoto() {
   }
 }
 
-type HitokotoType =
-  | 'a' // 动画
-  | 'b' // 漫画
-  | 'c' // 游戏
-  | 'd' // 文字
-  | 'e' // 原创
-  | 'f' // 网络
-  | 'g' // 其它
-  | 'h' // 影视
-  | 'i' // 诗词
-  | 'j' // 网易云
-  | 'k' // 哲学
-  | 'l' // 抖机灵
+type HitokotoType
+  = | 'a' // 动画
+    | 'b' // 漫画
+    | 'c' // 游戏
+    | 'd' // 文字
+    | 'e' // 原创
+    | 'f' // 网络
+    | 'g' // 其它
+    | 'h' // 影视
+    | 'i' // 诗词
+    | 'j' // 网易云
+    | 'k' // 哲学
+    | 'l' // 抖机灵
 
 interface HitokotoParams {
   /**

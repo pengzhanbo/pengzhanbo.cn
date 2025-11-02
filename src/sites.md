@@ -118,8 +118,10 @@ article: false
   <LinkCard title="Naive UI" icon="logos:naiveui" href="https://www.naiveui.com/" />
   <LinkCard title="Vant UI" icon="https://fastly.jsdelivr.net/npm/@vant/assets/logo.png" href="https://vant-ui.github.io/vant/" />
   <LinkCard title="vuetify" icon="logos:vuetifyjs" href="https://vuetifyjs.com/" />
-  <LinkCard title="Radix Vue" icon="https://www.radix-vue.com/logo.svg" href="https://www.radix-vue.com/" />
   <LinkCard title="Shadcn Vue" href="https://www.shadcn-vue.com/" />
+  <LinkCard title="Radix Vue" icon="https://www.radix-vue.com/logo.svg" href="https://www.radix-vue.com/" />
+  <LinkCard title="Reka Vue" icon="https://reka-ui.com/logo.svg" href="https://reka-ui.com/" />
+  <LinkCard title="Inspira UI" icon="https://cdn.inspira-ui.com/logo.svg" href="https://github.com/unovue/inspira-ui" />
 </CardGrid>
 
 ---

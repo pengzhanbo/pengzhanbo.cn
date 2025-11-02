@@ -1333,7 +1333,8 @@ let maxNewIndexSoFar = 0
 // 注意：旧索引会加1，因为索引0是一个特殊值
 // 表示新节点在旧节点中没有对应的节点
 // 这个数组用于确定最长稳定子序列
-const newIndexToOldIndexMap = new Array(toBePatched)
+const newIndexToOldIndexMap = Array.from({ length: toBePatched })
+// eslint-disable-next-line no-unmodified-loop-condition
 for (i = 0; i < toBePatched; i++) newIndexToOldIndexMap[i] = 0
 
 // 遍历剩余的旧子节点

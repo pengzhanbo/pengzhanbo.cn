@@ -38,20 +38,22 @@ import { isEmail, /* ... */ } from 'validator'
 
 ```ts
 // 验证邮箱
-isEmail('test@example.com'); // true
+isEmail('test@example.com') // true
 
 // 清理邮箱格式
-normalizeEmail('TEST@GMAIL.COM'); // 输出：'test@gmail.com'
+normalizeEmail('TEST@GMAIL.COM') // 输出：'test@gmail.com'
 ```
 
 ## 表单验证
 
 ```ts
 function validateUser(data) {
-  const errors = [];
-  if (isEmpty(data.username)) errors.push('用户名不能为空');
-  if (!isEmail(data.email)) errors.push('邮箱无效');
-  return errors.length ? { errors } : data;
+  const errors = []
+  if (isEmpty(data.username))
+    errors.push('用户名不能为空')
+  if (!isEmail(data.email))
+    errors.push('邮箱无效')
+  return errors.length ? { errors } : data
 }
 ```
 
