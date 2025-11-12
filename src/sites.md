@@ -37,6 +37,7 @@ article: false
   <LinkCard title="Alpine" icon="logos:alpinejs-icon" href="https://alpinejs.dev/" />
   <LinkCard title="Qwik" icon="logos:qwik-icon" href="https://qwik.dev/" />
   <LinkCard title="Cycle.js" icon="logos:cyclejs" href="https://cycle.js.org/" />
+  <LinkCard title="Ripplejs" icon="https://www.ripplejs.com/favicon.svg" href="https://www.ripplejs.com/" />
   <LinkCard title="Marko" icon="logos:marko" href="https://markojs.com/" />
   <LinkCard title="Nuejs" icon="https://nuejs.org/favicon.ico" href="https://nuejs.org/" />
   <LinkCard title="Htmx" icon="ph:code-bold" href="https://htmx.org/" />
@@ -132,6 +133,14 @@ article: false
   <LinkCard title="Vue Router" icon="logos:vue" href="https://router.vuejs.org/" />
 </CardGrid>
 
+---
+
+<LinkCard
+  title="Vue Testing Library"
+  icon="https://testing-library.com/img/octopus-64x64.png"
+  href="https://testing-library.com/docs/vue-testing-library/intro/"
+/>
+
 ### React
 
 <CardGrid>
@@ -148,6 +157,7 @@ article: false
   <LinkCard title="Recoil" icon="logos:recoil-icon" href="https://recoiljs.org/" />
   <LinkCard title="MobX" icon="logos:mobx" href="https://mobx.js.org/" />
   <LinkCard title="Zustand" href="https://zustand-demo.pmnd.rs/" />
+  <LinkCard title="Jotai" icon="https://jotai.org/favicon.svg" href="https://jotai.org/" />
 </CardGrid>
 
 ---
@@ -160,6 +170,14 @@ article: false
   <LinkCard title="umijs" href="https://umijs.org/" />
   <LinkCard title="formily" href="https://formilyjs.org/" />
   <LinkCard title="React Dnd" href="https://react-dnd.github.io/" />
+  <LinkCard title="Tanstack Query" icon="https://tanstack.com/favicon-32x32.png"  href="https://tanstack.com/query/" />
+</CardGrid>
+
+---
+
+<CardGrid>
+  <LinkCard title="React Router" icon="logos:react-router" href="https://reactrouter.com/" />
+  <LinkCard title="Tanstack Router" icon="https://tanstack.com/favicon-32x32.png" href="https://tanstack.com/router/" />
 </CardGrid>
 
 ---
@@ -168,6 +186,14 @@ article: false
   <LinkCard title="styled-components" icon="https://styled-components.com/favicon.png" href="https://styled-components.com/" />
   <LinkCard title="emotion" icon="https://emotion.sh/logo-96x96.png" href="https://emotion.sh/docs/introduction" />
 </CardGrid>
+
+---
+
+<LinkCard
+  title="React Testing Library"
+  icon="https://testing-library.com/img/octopus-64x64.png"
+  href="https://testing-library.com/docs/react-testing-library/intro/"
+/>
 
 ---
 
@@ -415,6 +441,8 @@ article: false
   <LinkCard title="storybook" icon="logos:storybook-icon" href="https://storybook.js.org/" />
   <LinkCard title="vitest" icon="logos:vitest" href="https://vitest.dev/" />
   <LinkCard title="cypress" icon="logos:cypress-icon" href="https://cypress.io/" />
+  <LinkCard title="puppeteer" icon="logos:puppeteer" href="https://pptr.dev"/>
+  <LinkCard title="playwright" icon="logos:playwright" href="https://playwright.dev/" />
   <LinkCard title="jest" icon="logos:jest" href="https://jestjs.io/" />
   <LinkCard title="mocha" icon="logos:mocha" href="https://mochajs.org/" />
   <LinkCard title="ava" icon="logos:ava" href="https://avajs.dev/" />
