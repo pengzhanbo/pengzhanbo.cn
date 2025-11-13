@@ -3,326 +3,793 @@ title: AI 模型导航
 createTime: 2025/02/10 09:10:26
 permalink: /ai/
 article: false
+
+apps:
+  - name: DeepSeek
+    logo: /images/ai/providers/deepseek.png
+    url: https://chat.deepseek.com/
+  - name: ChatGPT
+    logo: /images/ai/providers/openai.png
+    url: https://chat.openai.com/
+  - name: Gemini
+    logo: /images/ai/apps/gemini.png
+    url: https://gemini.google.com/
+  - name: 万知
+    logo: /images/ai/apps/wanzhi.jpg
+    url: https://www.wanzhi.com/
+  - name: 智普
+    logo: /images/ai/providers/zhipu.png
+    url: https://chatglm.cn/main/alltoolsdetail
+    border: true
+  - name: Kimi
+    logo: /images/ai/apps/kimi.webp
+    url: https://kimi.moonshot.cn/
+  - name: 百小应
+    logo: /images/ai/apps/baixiaoying.webp
+    url: https://ying.baichuan-ai.com/chat
+  - name: 通义千问
+    logo: /images/ai/models/qwen.png
+    url: https://www.tongyi.com/
+  - name: 阶跃 AI
+    logo: /images/ai/apps/stepfun.png
+    url: https://stepfun.com
+    border: true
+  - name: 豆包
+    logo: /images/ai/apps/doubao.png
+    url: https://www.doubao.com/chat/
+  - name: Cici
+    logo: /images/ai/apps/cici.webp
+    url: https://www.cici.com/chat/
+  - name: 海螺
+    logo: /images/ai/models/hailuo.png
+    url: https://chat.minimaxi.com/
+    border: true
+  - name: Groq
+    logo: /images/ai/providers/grok.png
+    url: https://chat.groq.com/
+  - name: Claude
+    logo: /images/ai/models/claude.png
+    url: https://claude.ai/
+  - name: 文心一言
+    logo: /images/ai/apps/baidu-ai.png
+    url: https://yiyan.baidu.com/
+  - name: 腾讯元宝
+    logo: /images/ai/apps/yuanbao.webp
+    url: https://yuanbao.tencent.com/chat
+    border: true
+  - name: 商量
+    logo: /images/ai/apps/sensetime.png
+    url: https://chat.sensetime.com/wb/chat
+    border: true
+  - name: SparkDesk
+    logo: /images/ai/apps/sparkdesk.webp
+    url: https://xinghuo.xfyun.cn/desk
+    border: true
+  - name: Poe
+    logo: /images/ai/apps/poe.webp
+    url: https://poe.com
+  - name: Perplexity
+    logo: /images/ai/apps/perplexity.webp
+    url: https://www.perplexity.ai/
+  - name: DEVV_
+    logo: /images/ai/apps/devv.png
+    url: https://devv.ai/
+  - name: 天工
+    logo: /images/ai/apps/tiangong.png
+    url: https://www.tiangong.cn
+    border: true
+  - name: Felo
+    logo: /images/ai/apps/felo.png
+    url: https://felo.ai/
+    border: true
+  - name: DuckDuckGo
+    logo: /images/ai/apps/duckduckgo.webp
+    url: https://duck.ai
+  - name: bolt
+    logo: /images/ai/apps/bolt.svg
+    url: https://bolt.new
+  - name: ThinkAny
+    logo: /images/ai/apps/thinkany.webp
+    url: https://thinkany.ai
+    border: true
+    padding: 5
+  - name: GitHub Copilot
+    logo: /images/ai/apps/github-copilot.webp
+    url: https://github.com/copilot
+  - name: Genspark
+    logo: /images/ai/apps/genspark.jpg
+    url: https://www.genspark.ai
+  - name: Grok
+    logo: /images/ai/apps/grok.png
+    url: https://grok.com
+    border: true
+  - name: Grok / X
+    logo: /images/ai/apps/grok-x.png
+    url: https://x.com/i/grok
+  - name: QwenLM
+    logo: /images/ai/apps/qwenlm.webp
+    url: https://qwenlm.ai
+  - name: Flowith
+    logo: /images/ai/apps/flowith.svg
+    url: https://www.flowith.io/
+    border: true
+  - name: 3MinTop
+    logo: /images/ai/apps/3mintop.png
+    url: https://3min.top
+  - name: AI Studio
+    logo: /images/ai/apps/aistudio.svg
+    url: https://aistudio.google.com
+  - name: 小艺
+    logo: /images/ai/apps/xiaoyi.webp
+    url: https://xiaoyi.huawei.com/chat/
+    border: true
+  - name: NotebookLM
+    logo: /images/ai/apps/notebooklm.svg
+    url: https://notebooklm.google.com
+  - name: WPS 灵犀
+    logo: /images/ai/apps/wpslingxi.webp
+    url: https://copilot.wps.cn/
+  - name: LeChat
+    logo: /images/ai/apps/lechat.png
+    url: https://chat.mistral.ai/chat
+    border: true
+  - name: Abacus
+    logo: /images/ai/apps/abacus.webp
+    url: https://apps.abacus.ai/chatllm
+  - name: Lambda Chat
+    logo: /images/ai/apps/lambdachat.webp
+    url: https://lambda.chat
+    border: true
+  - name: Monica
+    logo: /images/ai/apps/monica.webp
+    url: https://monica.im/home/
+  - name: You
+    logo: /images/ai/apps/you.jpg
+    url: https://you.com/
+  - name: 知乎直答
+    logo: /images/ai/apps/zhihu.png
+    url: https://zhida.zhihu.com/
+    border: true
+  - name: 当贝 AI
+    logo: /images/ai/apps/dangbei.jpg
+    url: https://ai.dangbei.com/
+    border: true
+  - name: Z.ai
+    logo: /images/ai/apps/zai.png
+    url: https://chat.z.ai/
+    border: true
+    padding: 5
+  - name: LongCat
+    logo: /images/ai/apps/longcat.svg
+    url: https://longcat.chat
+    border: true
+  - name: 百灵
+    logo: /images/ai/apps/ling.png
+    url: https://ling.tbox.cn/chat
+    border: true
+    padding: 5
+  - name: HuggingChat
+    logo: /images/ai/apps/huggingchat.svg
+    url: https://huggingface.co/chat/
+    border: true
+
+providers:
+  - name: 深度求索
+    logo: /images/ai/providers/deepseek.png
+    url: https://www.deepseek.com/
+  - name: OpenAI
+    logo: /images/ai/providers/openai.jpeg
+    url: https://openai.com/
+    border: true
+  - name: Gemini
+    logo: /images/ai/providers/google.png
+    url: https://gemini.google.com/app
+    border: true
+  - name: Anthropic
+    logo: /images/ai/providers/anthropic.png
+    url: https://www.anthropic.com/
+    border: true
+  - name: 月之暗面
+    logo: /images/ai/providers/moonshot.png
+    url: https://www.moonshot.cn/
+  - name: 阶跃星辰
+    logo: /images/ai/providers/step.png
+    url: https://platform.stepfun.com/
+  - name: 360 智脑
+    logo: /images/ai/models/360.png
+    url: https://ai.360.cn/ai
+  - name: 腾讯混元
+    logo: /images/ai/models/hunyuan.png
+    url: https://cloud.tencent.com/product/tclm
+  - name: 英伟达
+    logo: /images/ai/providers/nvidia.png
+    url: https://build.nvidia.com/explore/discover
+  - name: Grok
+    logo: /images/ai/providers/grok.png
+    url: https://x.ai/
+  - name: Mistral
+    logo: /images/ai/providers/mistral.png
+    url: https://mistral.ai/
+    border: true
+  - name: Jina
+    logo: /images/ai/providers/jina.png
+    url: https://jina.ai/
+    border: true
+  - name: Perplexity
+    logo: /images/ai/providers/perplexity.png
+    url: https://www.perplexity.ai/
+  - name: Voyage AI
+    logo: /images/ai/providers/voyageai.png
+    url: https://www.voyageai.com/
+    border: true
+    padding: 5
+  - name: Google Vertex
+    logo: /images/ai/providers/vertexai.svg
+    url: https://cloud.google.com/vertex-ai?hl=zh_cn
+    border: true
+    padding: 5
+  - name: LongCat
+    logo: /images/ai/providers/longcat.png
+    url: https://longcat.chat/
+    border: true
+    padding: 5
+
+marketplace:
+  - name: 硅基流动
+    logo: /images/ai/providers/silicon.png
+    url: https://cloud.siliconflow.cn/playground/chat
+    border: true
+  - name: Open Router
+    logo: /images/ai/providers/openrouter.png
+    url: https://openrouter.ai/
+    border: true
+  - name: O3
+    logo: /images/ai/providers/o3.png
+    url: https://o3.fan/
+    border: true
+  - name: 推理时代
+    logo: /images/ai/providers/aihubmix.png
+    url: https://aihubmix.com/
+    border: true
+    padding: 5
+  - name: ocool AI
+    logo: /images/ai/providers/ocoolai.png
+    url: https://one.ocoolai.com/
+    border: true
+  - name: 百度云千帆
+    logo: /images/ai/providers/baidu-cloud.svg
+    url: https://cloud.baidu.com/
+    border: true
+    padding: 5
+  - name: 唯一 AI
+    logo: /images/ai/providers/aiOnly.webp
+    url: https://www.aiionly.com/
+    border: true
+    padding: 5
+  - name: 七牛云 AI
+    logo: /images/ai/providers/qiniu.webp
+    url: https://www.qiniu.com/ai/chat
+    border: true
+  - name: Burn Cloud
+    logo: /images/ai/providers/burncloud.png
+    url: https://ai.burncloud.com/
+    border: true
+    padding: 5
+  - name: PPIO 派欧云
+    logo: /images/ai/providers/ppio.png
+    url: https://ppio.com/
+    border: true
+  - name: Cephalon
+    logo: /images/ai/providers/cephalon.jpeg
+    url: https://cephalon.cloud/share/register-landing
+  - name: SophNet
+    logo: /images/ai/providers/sophnet.svg
+    url: https://sophnet.com/
+    border: true
+    padding: 5
+  - name: PH8
+    logo: /images/ai/providers/ph8.png
+    url: https://ph8.co/home
+    border: true
+  - name: 302.ai
+    logo: /images/ai/providers/302ai.webp
+    url: https://302.ai/
+    border: true
+    padding: 5
+  - name: New API
+    logo: /images/ai/providers/newapi.png
+    url: https://docs.newapi.pro/
+    border: true
+  - name: 蓝耘科技
+    logo: /images/ai/providers/lanyun.png
+    url: https://maas.lanyun.net/#/maasMarket
+    border: true
+  - name: Alaya NeW
+    logo: /images/ai/providers/alayanew.webp
+    url: https://www.alayanew.com/
+    border: true
+    padding: 5
+  - name: TokenFlux
+    logo: /images/ai/providers/tokenflux.png
+    url: https://tokenflux.ai/
+    border: true
+  - name: 无问芯穹
+    logo: /images/ai/providers/infini.png
+    url: https://cloud.infini-ai.com/platform/ai
+    border: true
+  - name: Azure OpenAI
+    logo: /images/ai/models/microsoft.png
+    url: https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/
+  - name: Github Models
+    logo: /images/ai/providers/github.png
+    url: https://azure.microsoft.com/en-us/products/ai-foundry/models/openai/
+    border: true
+  - name: DMX API
+    logo: /images/ai/providers/DMXAPI.png
+    url: https://www.dmxapi.cn/
+    border: true
+  - name: 零一万物
+    logo: /images/ai/providers/zero-one.png
+    url: https://platform.lingyiwanwu.com/
+  - name: 智谱
+    logo: /images/ai/providers/zhipu.png
+    url: https://open.bigmodel.cn/
+    border: true
+  - name: 百川
+    logo: /images/ai/providers/baichuan.png
+    url: https://www.baichuan-ai.com/home
+  - name: 阿里云百炼
+    logo: /images/ai/providers/bailian.png
+    url: https://www.aliyun.com/product/bailian
+    border: true
+  - name: 火山引擎
+    logo: /images/ai/providers/volcengine.png
+    url: https://www.volcengine.com/
+    border: true
+  - name: MiniMax
+    logo: /images/ai/providers/minimax.png
+    url: https://platform.minimaxi.com/
+  - name: Groq
+    logo: /images/ai/providers/groq.png
+    url: https://groq.com/
+  - name: Together
+    logo: /images/ai/providers/together.png
+    url: https://www.together.ai/
+    border: true
+  - name: Fireworks
+    logo: /images/ai/providers/fireworks.png
+    url: https://fireworks.ai/
+  - name: Hyperbolic
+    logo: /images/ai/providers/hyperbolic.png
+    url: https://app.hyperbolic.ai/
+  - name: gitee AI
+    logo: /images/ai/providers/gitee-ai.png
+    url: https://ai.gitee.com/
+    border: true
+  - name: 魔搭
+    logo: /images/ai/providers/modelscope.png
+    url: https://modelscope.cn/home
+  - name: 天翼云息壤
+    logo: /images/ai/providers/xirang.png
+    url: https://ctxirang.ctyun.cn/maasMarket/market
+    border: true
+  - name: 腾讯云 TI
+    logo: /images/ai/providers/tencent-cloud-ti.png
+    url: https://cloud.tencent.com/product/ti
+    border: true
+  - name: Github
+    logo: /images/ai/providers/github.png
+    url: https://github.com/marketplace?type=models
+    border: true
+  - name: Poe
+    logo: /images/ai/apps/poe.webp
+    url: https://poe.com/
+  - name: AWS Bedrock
+    logo: /images/ai/providers/aws-bedrock.webp
+    url: https://aws.amazon.com/cn/bedrock/
+
+searches:
+  - name: 百度 AI 搜索
+    logo: /images/ai/apps/baidu-ai-search.webp
+    url: https://chat.baidu.com/
+    border: true
+    padding: 5
+  - name: 秘塔 AI 搜索
+    logo: /images/ai/apps/metaso.webp
+    url: https://metaso.cn/
+  - name: 纳米 AI 搜索
+    logo: /images/ai/apps/nm.png
+    url: https://bot.n.cn/
+    border: true
+
+developmentPlatforms:
+  - name: Coze
+    logo: /images/ai/apps/coze.webp
+    url: https://www.coze.com/space
+  - name: Dify
+    logo: /images/ai/apps/dify.svg
+    url: https://cloud.dify.ai/apps
+    border: true
+    padding: 5
+  - name: n8n
+    logo: /images/ai/apps/n8n.svg
+    url: https://app.n8n.cloud/
+    border: true
+    padding: 5
+  - name: Comfy UI
+    logo: https://framerusercontent.com/images/3cNQMWKzIhIrQ5KErBm7dSmbd2w.png
+    url: https://www.comfy.org/zh-cn/
+  - name: AutoGPT
+    logo: https://framerusercontent.com/images/xLua1HTBhc2ktuF5x3hJafStVWg.png
+    url: https://agpt.co/
+    border: true
+    padding: 5
+  - name: FastGPT
+    logo: https://fastgpt.io/logo.svg
+    url: https://fastgpt.io/
+    border: true
+    padding: 5
+  - name: Hugging Face
+    logo: https://huggingface.co/front/assets/huggingface_logo-noborder.svg
+    url: https://huggingface.co/
+    border: true
+    padding: 5
+
+audios:
+  - name: 星火认知
+    logo: https://xinghuo.xfyun.cn/spark-icon.ico
+    url: https://xinghuo.xfyun.cn/
+    border: true
+    padding: 5
+  - name: ElevenLabs
+    logo: https://elevenlabs.io/favicon.ico
+    url: https://elevenlabs.io/
+    border: true
+  - name: 讯飞智作
+    logo: /images/ai/apps/xunfei.png
+    url: https://peiyin.xunfei.cn/
+    border: true
+    padding: 5
+  - name: 字节火山语音
+    logo: https://portal.volccdn.com/obj/volcfe/misc/favicon.png
+    url: https://www.volcengine.com/product/tts
+    border: true
+    padding: 5
+  - name: Azure AI 语音
+    logo: /images/ai/models/microsoft.png
+    url: https://azure.microsoft.com/zh-cn/products/ai-services/ai-speech/
+  - name: 大饼 AI 变声
+    logo: https://dubbing.tech/favicon.ico
+    url: https://dubbing.tech/
+    border: true
+    padding: 5
+
+musics:
+  - name: Udio
+    logo: https://www.udio.com/favicon.ico
+    url: https://www.udio.com/
+    border: true
+    padding: 5
+  - name: Suno
+    logo: https://cdn-o.suno.com/favicon-192x192.png
+    url: https://suno.com/home
+    border: true
+    padding: 5
+  - name: StableAudio
+    logo: https://stableaudio.com/favicon.ico
+    url: https://stableaudio.com/
+    border: true
+    padding: 5
+  - name: Mubert
+    logo: https://mubert.com/apple-icon-76x76.png
+    url: https://mubert.com/
+    border: true
+    padding: 5
+  - name: 和弦派
+    logo: https://www.lazycomposer.com/favicon.ico
+    url: https://www.lazycomposer.com/introduce
+    border: true
+    padding: 10
+  - name: 网易 X Studio
+    logo: https://xstudio.music.163.com/icon.png
+    url: https://xstudio.music.163.com/
+  - name: Ace Studio
+    logo: https://acestudio.cn/favicon.ico
+    url: https://acestudio.cn/
+  - name: 网易天音
+    logo: https://s7.music.126.net/6369f9ec78c25c1818ccfc08/img/favicon_021f7155.ico
+    url: https://tianyin.music.163.com/#/
+    border: true
+    padding: 5
+  - name: AIVA
+    logo: https://www.aiva.ai/assets/img/aiva_logo_2.png
+    url: https://www.aiva.ai/
+    border: true
+    padding: 5
+
+visionImages:
+  - name: Diffusion
+    logo: https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/cfbf5bc5-47d4-4f4a-b133-23bd12a7d7c2/favicon.ico?format=100w
+    url: https://stability.ai/
+    border: true
+    padding: 5
+  - name: Midjourney
+    logo: https://www.midjourney.com/public/apple-touch-icon.png
+    url: https://www.midjourney.com/
+    border: true
+  - name: DreamStudio
+    logo: https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/804f0e8b-0028-4262-a8b0-b9f1c5de72c0/favicon.ico?format=100w
+    url: https://dreamstudio.ai/
+    border: true
+    padding: 5
+  - name: ClipDrop
+    logo: https://clipdrop.co/favicon.ico
+    url: https://clipdrop.co/
+    border: true
+    padding: 10
+  - name: Krea AI
+    logo: https://www.krea.ai/favicon/favicon-192.png
+    url: https://www.krea.ai/realtime
+    border: true
+  - name: Freepik
+    logo: https://fps.cdnpk.net/favicons/favicon-96x96.png
+    url: https://freepik.com/pikaso
+  - name: Fal.ai
+    logo: https://fal.ai/apple-touch-icon.png
+    url: https://fal.ai/dynamic
+  - name: Deep Dream
+    logo: https://deepdreamgenerator.com/logo.svg
+    url: https://deepdreamgenerator.com/
+    border: true
+    padding: 5
+  - name: Mangific
+    logo: https://magnific.ai/logomagnific2.png
+    url: https://magnific.ai/
+    border: true
+    padding: 5
+  - name: Civit AI
+    logo: https://civitai.com/favicon-blue.ico
+    url: https://civitai.com/
+    border: true
+    padding: 10
+  - name: OpenArt
+    logo: https://cdn.prod.website-files.com/6600e1eab90de089c2d9c972/660736422d6d72ba4a9ad9e9_logo_webclip_256x256.png
+    url: https://openart.ai/
+    border: true
+  - name: LibLib AI
+    logo: https://www.liblib.art/favicon.ico
+    url: https://www.liblib.art/
+  - name: 无界 AI
+    logo: https://www.wujieai.com/favicon.ico
+    url: https://www.wujieai.com/
+    border: true
+    padding: 5
+  - name: 即梦 AI
+    logo: https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/common/images/dreamina-v5.ico
+    url: https://jimeng.jianying.com/ai-tool/home
+  - name: Adobe Firelfy
+    logo: https://www.adobe.com/favicon.ico
+    url: https://www.adobe.com/products/firefly.html
+    border: true
+    padding: 5
+  - name: Diffus
+    logo: /images/ai/apps/diffus.jpg
+    url: https://www.diffus.me/
+  - name: Lexica
+    logo: https://lexica.art/favicon.ico
+    url: https://lexica.art/
+    border: true
+  - name: Code Former
+    logo: https://huggingface.co/front/assets/huggingface_logo-noborder.svg
+    url: https://huggingface.co/spaces/sczhou/CodeFormer
+    border: true
+    padding: 5
+  - name: Leonardo
+    logo: https://leonardo.ai/wp-content/uploads/2024/07/cropped-favicon-180x180.png
+    url: https://leonardo.ai/
+    border: true
+    padding: 5
+
+visionVideos:
+  - name: Synthesia
+    logo: https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png
+    url: https://www.synthesia.io/
+  - name: Sora
+    logo: /images/ai/providers/openai.png
+    url: https://openai.com/sora/
+  - name: Runway
+    logo: https://app.runwayml.com/apple-touch-icon.png
+    url: https://app.runwayml.com/
+  - name: Morph Studio
+    logo: https://www.morphstudio.com/icon.svg
+    url: https://www.morphstudio.com/
+    border: true
+  - name: Mootion
+    logo: https://www.mootion.com/favicon.ico
+    url: https://mootion.com/
+    border: true
+    padding: 10
+  - name: Domo AI
+    logo: https://www.domoai.app/apple-touch-icon.png
+    url: https://www.domoai.app/zh-Hant
+    border: true
+  - name: Animate Diff
+    logo: https://d31rfu1d3w8e4q.cloudfront.net/static/apple-touch-icon.39c0aa0659e3.png
+    url: https://replicate.com/lucataco/animate-diff
+  - name: Kaiber
+    logo: https://www.kaiber.ai/wp-content/uploads/kiko-favicon-120x120.avif
+    url: https://www.kaiber.ai/
+    border: true
+    padding: 5
+  - name: 即梦 AI
+    logo: https://lf3-lv-buz.vlabstatic.com/obj/image-lvweb-buz/common/images/dreamina-v5.ico
+    url: https://jimeng.jianying.com/ai-tool/home
+  - name: 度加
+    logo: https://aigc.baidu.com/assets/favicon.ico
+    url: https://aigc.baidu.com/welcome
+    border: true
+    padding: 10
+  - name: Viggle
+    logo: https://viggle.ai/favicon.ico
+    url: https://viggle.ai/
+
+threeDModels:
+  - name: Tripo3D AI
+    logo: https://www.tripo3d.ai/favicon.ico
+    url: https://www.tripo3d.ai/zh
+  - name: Meshy AI
+    logo: https://www.meshy.ai/apple-icon.png
+    url: https://www.meshy.ai/
+  - name: Artefacts
+    logo: https://artefacts.ai/favicon.ico
+    url: https://artefacts.ai/
+    border: true
+    padding: 5
+  - name: CSM AI
+    logo: /images/ai/apps/csm.png
+    url: https://www.csm.ai/
+    border: true
+    padding: 5
+  - name: Luma AI
+    logo: https://lumalabs.ai/favicons/favicon-black.ico
+    url: https://lumalabs.ai/genie?view=create
+    border: true
+    padding: 5
+  - name: Spline AI
+    logo: https://spline.design/images/icon_favicon32x32.png
+    url: https://spline.design/ai-generate
+    border: true
+    padding: 5
+
+digitalHumans:
+  - name: Heygen
+    logo: https://www.heygen.com/favicon.ico
+    url: https://www.heygen.com/
+    border: true
+    padding: 5
+  - name: Rask AI
+    logo: /images/ai/apps/rask-webclip.png
+    url: https://zh.rask.ai/
+    border: true
+    padding: 5
+  - name: D-ID
+    logo: https://d-id-sso-assets.d-id.com/Logo_new.png
+    url: https://studio.d-id.com/
+    border: true
+    padding: 5
+  - name: 讯飞智作
+    logo: /images/ai/apps/xunfei.png
+    url: https://peiyin.xunfei.cn/
+    border: true
+    padding: 5
+  - name: 商汤如影
+    logo: https://senseavatar.sensetime.com/upload/2023-05/168491896825964200.png
+    url: https://senseavatar.sensetime.com/
+    border: true
+    padding: 5
+  - name: Synthesia
+    logo: https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png
+    url: https://www.synthesia.io/
+  - name: Kalido Face
+    logo: https://yeemachine.github.io/k2021/favicon/kalidoface3d/icon-circle.svg
+    url: https://3d.kalidoface.com/
+    border: true
+    padding: 5
+
+designs:
+  - name: Gamma AI
+    logo: https://static.gamma.app/favicons/favicon_light.svg
+    url: https://gamma.app/zh-cn
+    border: true
+    padding: 5
+  - name: Beautiful AI
+    logo: /images/ai/apps/beautiful-ai.png
+    url: https://www.beautiful.ai/
+    border: true
+    padding: 5
+  - name: Canvas
+    logo: https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg
+    url: https://www.canva.com/zh_cn/
+    border: true
+    padding: 5
+  - name: 歌者 PPT
+    logo: https://gezhe.com/images/favicon.svg
+    url: https://gezhe.com/
+    border: true
+    padding: 5
+
+industry:
+  - name: 盘古
+    logo: https://res-static.hc-cdn.cn/cloudbu-site/public/new-product-icon/AI/pangu.png
+    url: https://www.huaweicloud.com/product/pangu.html
 ---
 
-## 国产大模型
+<script setup>
+import AIModels from '~theme/components/AIModels.vue'
+</script>
 
-<LinkCard
-  title="深度求索 DeepSeek"
-  icon="https://chat.deepseek.com/favicon.svg"
-  href="https://www.deepseek.com/"
->
+## 大模型应用
 
-**模型名称**：DeepSeek-V3、DeepSeek-R1<br>
-**开发机构**：深度求索（DeepSeek）<br>
-**特点**：
+AI 模型网页版对话应用，通常免费使用
 
-- **开源模式**：与国外闭源模式不同，采用开源策略，引发国内外复现热潮，成本仅为600万美元，远低于国际巨头。
-- **高性能**：在数学、代码、自然语言推理任务中与 OpenAI o1 相当，文科任务表现突出（总分68.3，文科78.2）。
-- **算法创新**：通过优化训练策略提升推理能力，减少对昂贵标注数据的依赖。
+<AIModels :list="$frontmatter.apps" />
 
-</LinkCard>
+## 模型服务商
 
-<LinkCard
-  title="通义千问 Qwen"
-  icon="https://img.alicdn.com/imgextra/i1/O1CN01asLYeX1WhbsyEZn5u_!!6000000002820-55-tps-56-56.svg"
-  href="https://tongyi.aliyun.com"
->
+通过 AI 服务商提供的 **访问接口** 和 **API_KEY**，获得模型的访问权限
 
-**模型名称**：Qwen2-72B、Qwen-max-latest 等<br>
-**开发机构**：阿里巴巴<br>
-**特点**：
+### API 直供
 
-- **国际竞争力**：Qwen2-72B 在 OpenCompass 评测中超越 Meta 的 Llama3-70B ，成为全球下载量最大的中文开源模型。
-- **多模态能力**：Qwen-VL 在多模态评测中表现优异，支持图像与文本交互。
-- **高性价比**：通过优化架构降低成本，价格降至0.5元/百万 Tokens 以下
+由模型开发商直接提供的 API 接口
 
-</LinkCard>
+<AIModels :list="$frontmatter.providers" />
 
-<LinkCard
-  title="商汤 SenseChat"
-  icon="https://sensechat-ml.aoss.cn-sh-01.sensecoreapi-oss.cn/chat/prod/wb/favicon_ml.png"
-  href="https://chat.sensetime.com/"
->
+### API 聚合平台
 
-**模型名称**：SenseChat 5.5-latest<br>
-**开发机构**：商汤科技<br>
-**特点**：
+聚合多个不同的模型，提供统一的 API 接口
 
-- **文科优势**：文科得分81.8，超越多数国际模型，擅长自然语言生成与理解。
-- **行业应用**：广泛应用于智慧城市、医疗等领域，支持复杂场景的语义分析。
+<AIModels :list="$frontmatter.marketplace" />
 
-</LinkCard>
+## AI 搜索
 
-<LinkCard
-  title="文心一言 ERNIE"
-  icon="https://nlp-eb.cdn.bcebos.com/logo/favicon.ico"
-  href="https://yiyan.baidu.com"
->
+<AIModels :list="$frontmatter.searches" />
 
-**模型名称**：ERNIE-4.0-Turbo、文心一言<br>
-**开发机构**：百度<br>
-**特点**：
+## AI 开发平台
 
-- **中文理解**：在中文语义处理上表现突出，集成于百度搜索、地图等产品中。
-- **垂直领域优化**：针对医疗、教育等场景推出专用版本，支持本地化部署。
+<AIModels :list="$frontmatter.developmentPlatforms" />
 
-</LinkCard>
+## 音频模型
 
-<LinkCard
-  title="星火认知大模型"
-  icon="https://xinghuo.xfyun.cn/spark-icon.ico"
-  href="https://xinghuo.xfyun.cn/"
->
+### 语音
 
-**开发机构**：科大讯飞<br>
-**特点**：
+<AIModels :list="$frontmatter.audios" />
 
-- **语音交互**：结合讯飞语音技术，在实时翻译、语音助手场景中表现优异。
-- **教育领域**：应用于智能教学、个性化学习方案生成。
+### 音乐
 
-</LinkCard>
+<AIModels :list="$frontmatter.musics" />
 
-<LinkCard
-  title="混元大模型"
-  icon="https://xj-psd-1258344703.cos.ap-guangzhou.myqcloud.com/image/hunyuan/brand2024/logo64@3x.png"
-  href="https://hunyuan.tencent.com/"
->
+## 视觉模型
 
-**开发机构**：腾讯<br>
-**特点**：
+### 图像
 
-- **多场景覆盖**：嵌入微信、QQ等社交平台，支持内容生成、智能客服等功能。
-- **合成数据应用**：通过生成合成数据降低标注成本，加速模型迭代。
+<AIModels :list="$frontmatter.visionImages" />
 
-</LinkCard>
+### 视频
 
-<LinkCard
-  title="盘古大模型"
-  icon="https://www.huaweicloud.com/favicon.ico"
-  href="https://www.huaweicloud.com/product/pangu.html"
->
+<AIModels :list="$frontmatter.visionVideos" />
 
-**开发机构**：华为<br>
-**特点**：
+### 3D
 
-- **工业级应用**：聚焦智能制造、能源等领域，支持复杂工业场景的预测与优化。
-- **全栈技术**：结合华为昇腾芯片与AI框架，提供端到端解决方案。
+<AIModels :list="$frontmatter.threeDModels" />
 
-</LinkCard>
+### 数字人
 
-<LinkCard
-  title="智谱 GLM"
-  icon="https://www.zhipuai.cn/assets/images/logo_icon.jpeg"
-  href="https://www.zhipuai.cn/"
->
+<AIModels :list="$frontmatter.digitalHumans" />
 
-**模型名称**：GLM-4-Plus、GLM-4-9B<br>
-**开发机构**：智谱AI<br>
-**特点**：
+### 设计
 
-- **高效训练**：通过分布式训练技术降低算力需求，适合中小型企业部署。
-- **学术合作**：与高校合作推动开源生态，支持科研场景的模型定制。
+<AIModels :list="$frontmatter.designs" />
 
-</LinkCard>
+## 工业级模型
 
-<LinkCard
-  title="360智脑"
-  icon="https://p4.ssl.qhimg.com/t110b9a9301d4da7a687593034a.png"
-  href="https://ai.360.cn/"
->
-
-**模型名称**：360zhinao2-o1<br>
-**开发机构**：360公司<br>
-**特点**：
-
-- **安全导向**：专注于网络安全领域的威胁检测与防御，支持实时数据分析。
-- **低成本API**：提供高性价比的API服务，适合中小企业集成。
-
-</LinkCard>
-
-<LinkCard
-  title="豆包 Doubao"
-  icon="https://lf-flow-web-cdn.doubao.com/obj/flow-doubao/doubao/web/logo-icon.png"
-  href="https://www.doubao.com/chat/"
->
-
-**模型名称**：Doubao-pro-32k-241215<br>
-**开发机构**：字节跳动<br>
-**特点**：
-
-- **短视频与推荐**：优化视频内容理解与推荐算法，提升抖音等平台的个性化体验。
-- **多语言支持**：支持东南亚、欧洲等多语言场景，助力国际化业务。
-
-</LinkCard>
-
-<LinkCard
-  title="Kimi AI"
-  icon="https://statics.moonshot.cn/kimi-chat/favicon.ico"
-  href="https://kimi.moonshot.cn/"
->
-
-**模型名称**：moonshot-v1-vision-preview、k1.5<br>
-**开发机构**：月之暗面科技有限公司<br>
-**特点**：
-
-- **超长文本处理**：支持20万汉字输入，长文本处理能力达到国际顶尖水平的10倍，在学术论文解析、法律文件分析、API文档理解等场景中表现突出。
-- **工具集成与成本优化**：支持 API Tool Calling 功能，上下文缓存技术降低 90% 的长文本处理成本。
-
-</LinkCard>
-
-## 海外大模型
-
-<LinkCard
-  title="OpenAI"
-  icon="https://cdn.oaistatic.com/assets/favicon-miwirzcw.ico"
-  href="https://chatgpt.com/"
->
-
-**模型名称**：GPT-3.5 Turbo、GPT-4、GPT-4o 等<br>
-**开发机构**：OpenAI（美国）<br>
-**特点**：
-
-- **多模态能力**：从 GPT-3.5 到 GPT-4，逐步支持文本、图像、语音等多模态输入与生成。
-- **行业标杆**：GPT-4 在复杂推理、数学和编程任务中表现卓越，总分为80.4（SuperCLUE榜单），尤其在理科任务（87.3分）中领先全球。
-- **广泛应用**：集成于 ChatGPT、Microsoft Copilot 等产品，覆盖内容生成、代码编写、教育辅助等领域。
-
-</LinkCard>
-
-<LinkCard
-  title="Claude"
-  icon="https://claude.ai/images/claude_app_icon.png"
-  href="https://www.anthropic.com/claude"
->
-
-**模型名称**：Claude 3.5 Haiku、Claude 3.5 Sonnet<br>
-**开发机构**：Anthropic（美国）<br>
-**特点**：
-
-- **安全与可控性**：采用“宪法AI”理念，通过预设规则减少有害内容生成，提升用户控制力。
-- **复杂推理优势**：Claude 3.5 Sonnet 在数学、代码等 Hard 任务中得分 54.6，与 OpenAI 模型接近。
-- **长上下文支持**：支持超长文本输入，适用于法律文档分析、学术研究等场景。
-
-</LinkCard>
-
-<LinkCard
-  title="Gemini"
-  icon="https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg"
-  href="https://gemini.google.com/app"
->
-
-**模型名称**：Gemini 2.0 Flash<br>
-**开发机构**：Google DeepMind（美国）<br>
-**特点**：
-
-- **多模态融合**：支持文本、图像、音频、视频的全模态处理，在跨模态推理中表现突出。
-- **多语言适配**：覆盖全球主要语言，优化国际化场景应用，如实时翻译和多语言内容生成。
-- **模型分层**：提供Ultra（超大模型）、Pro（通用模型）、Nano（轻量化）三种版本，适配不同设备需求。
-
-</LinkCard>
-
-<LinkCard
-  title="LLaMA（Meta AI）"
-  icon="https://static.xx.fbcdn.net/rsrc.php/ye/r/5SevCzTxl_y.ico"
-  href="https://www.meta.ai/"
->
-
-**模型名称**：LLaMA-3.3<br>
-**开发机构**：Meta（美国）<br>
-**特点**：
-
-- **开源生态**：LLaMA-3.3-70B 等模型开源，吸引全球开发者参与改进，广泛应用于智能客服和文本生成。
-- **技术创新**：采用旋转位置编码（RoPE）和 SwiGLU 激活函数，提升模型性能和训练稳定性。
-- **垂直领域优化**：在金融、医疗等场景中表现优异，支持本地化部署。
-
-</LinkCard>
-
-<LinkCard
-  title="Copilot"
-  icon="https://github.githubassets.com/favicons/favicon.svg"
-  href="https://github.com/copilot"
->
-
-**模型名称**：GPT-4<br>
-**开发机构**：GitHub、微软、OpenAI（合作）<br>
-**特点**：
-
-- **编程辅助**：基于 GPT-4 Turbo，提供代码自动补全、错误修复和项目适配建议，提升开发效率。
-- **跨平台集成**：嵌入 Microsoft 365（Word、Excel等），支持文档生成、数据分析等办公场景。
-- **用户个性化**：通过学习用户习惯，生成定制化代码和文档模板。
-
-</LinkCard>
-
-<LinkCard
-  title="Mistral"
-  icon="https://chat.mistral.ai/favicon.ico"
-  href="https://chat.mistral.ai/chat"
->
-
-**模型名称**：Codestral、Mistral、Pixtral<br>
-**开发机构**：Hugging Face（法国）<br>
-**特点**：
-
-- **生成式任务优化**：专注于文本和图像生成，擅长创意内容生产（如广告文案、艺术设计）。
-- **轻量化部署**：模型参数规模适中，适合中小企业和开发者快速集成。
-
-</LinkCard>
-
-<LinkCard
-  title="Grok"
-  icon="https://grok.com/favicon.ico"
-  href="https://grok.com/"
->
-
-**模型名称**：grok-2-1212、grok-2-vision-1212<br>
-**开发机构**：Grok公司（美国）<br>
-**特点**：
-
-- **行业深度适配**：在金融风控和医疗诊断中表现突出，支持高频数据分析和模式识别。
-- **实时交互**：优化低延迟响应，适用于实时决策场景（如股票交易、急诊诊断）。
-
-</LinkCard>
-
-<LinkCard
-  title="Stable Diffusion"
-  icon="https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/cfbf5bc5-47d4-4f4a-b133-23bd12a7d7c2/favicon.ico?format=100w"
-  href="https://stability.ai/"
->
-
-**模型名称**：Stable Diffusion 3.5<br>
-**开发机构**：Stability AI（英国）<br>
-**特点**：
-
-- **图像生成标杆**：基于扩散模型，生成高质量图像和视频，广泛应用于艺术创作和影视制作。
-- **开源社区驱动**：通过社区协作不断迭代模型，支持用户自定义训练和微调。
-
-</LinkCard>
-
-<LinkCard
-  title="Synthesia"
-  icon="https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png"
-  href="https://www.synthesia.io/"
->
-
-**开发机构**：Synthesia（英国）<br>
-**特点**：
-
-- **虚拟数字人**：生成逼真虚拟形象视频，支持多语言配音，应用于教育、广告和虚拟客服。
-- **无代码操作**：用户可通过文本输入快速生成视频内容，降低制作门槛。
-
-</LinkCard>
-
-<LinkCard
-  title="ElevenLabs语音引擎"
-  icon="https://elevenlabs.io/favicon.ico"
-  href="https://elevenlabs.io/"
->
-
-**模型名称**：Multilingual v2、Flash v2.5<br>
-**开发机构**：ElevenLabs（美国）<br>
-**特点**：
-
-- **语音克隆与合成**：通过15秒音频样本克隆用户音色，支持多语言情感化语音生成。
-- **跨场景应用**：集成于有声书制作、虚拟助手和游戏配音等领域。
-
-</LinkCard>
+<AIModels :list="$frontmatter.industry" />
