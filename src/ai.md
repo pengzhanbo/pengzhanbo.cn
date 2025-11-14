@@ -4,7 +4,7 @@ createTime: 2025/02/10 09:10:26
 permalink: /ai/
 article: false
 
-apps:
+apps: # AI 应用，模型在线对话
   - name: DeepSeek
     logo: /images/ai/providers/deepseek.png
     url: https://chat.deepseek.com/
@@ -173,7 +173,7 @@ apps:
     url: https://huggingface.co/chat/
     border: true
 
-providers:
+providers: # AI 服务商 （直供）
   - name: 深度求索
     logo: /images/ai/providers/deepseek.png
     url: https://www.deepseek.com/
@@ -234,7 +234,7 @@ providers:
     border: true
     padding: 5
 
-marketplace:
+marketplace:  # 模型市场、聚合平台
   - name: 硅基流动
     logo: /images/ai/providers/silicon.png
     url: https://cloud.siliconflow.cn/playground/chat
@@ -388,7 +388,7 @@ marketplace:
     logo: /images/ai/providers/aws-bedrock.webp
     url: https://aws.amazon.com/cn/bedrock/
 
-searches:
+searches: # AI 搜索
   - name: 百度 AI 搜索
     logo: /images/ai/apps/baidu-ai-search.webp
     url: https://chat.baidu.com/
@@ -402,7 +402,7 @@ searches:
     url: https://bot.n.cn/
     border: true
 
-developmentPlatforms:
+developmentPlatforms: # 开发平台
   - name: Coze
     logo: /images/ai/apps/coze.webp
     url: https://www.coze.com/space
@@ -435,7 +435,7 @@ developmentPlatforms:
     border: true
     padding: 5
 
-audios:
+audios: # 语音模型
   - name: 星火认知
     logo: https://xinghuo.xfyun.cn/spark-icon.ico
     url: https://xinghuo.xfyun.cn/
@@ -464,7 +464,7 @@ audios:
     border: true
     padding: 5
 
-musics:
+musics: # 音乐模型
   - name: Udio
     logo: https://www.udio.com/favicon.ico
     url: https://www.udio.com/
@@ -507,7 +507,7 @@ musics:
     border: true
     padding: 5
 
-visionImages:
+visionImages:  # 视觉——图像模型
   - name: Diffusion
     logo: https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/cfbf5bc5-47d4-4f4a-b133-23bd12a7d7c2/favicon.ico?format=100w
     url: https://stability.ai/
@@ -590,7 +590,7 @@ visionImages:
     border: true
     padding: 5
 
-visionVideos:
+visionVideos: # 视觉——视频模型
   - name: Synthesia
     logo: https://cdn.prod.website-files.com/65e89895c5a4b8d764c0d710/664f0f482fa5a4d527d892bc_Favicon-Web-Security%201.png
     url: https://www.synthesia.io/
@@ -633,7 +633,7 @@ visionVideos:
     logo: https://viggle.ai/favicon.ico
     url: https://viggle.ai/
 
-threeDModels:
+threeDModels: # 视觉—— 3D 模型
   - name: Tripo3D AI
     logo: https://www.tripo3d.ai/favicon.ico
     url: https://www.tripo3d.ai/zh
@@ -661,7 +661,7 @@ threeDModels:
     border: true
     padding: 5
 
-digitalHumans:
+digitalHumans: # 视觉——数字人
   - name: Heygen
     logo: https://www.heygen.com/favicon.ico
     url: https://www.heygen.com/
@@ -696,7 +696,7 @@ digitalHumans:
     border: true
     padding: 5
 
-designs:
+designs: # 视觉 —— 设计
   - name: Gamma AI
     logo: https://static.gamma.app/favicons/favicon_light.svg
     url: https://gamma.app/zh-cn
@@ -715,10 +715,8 @@ designs:
   - name: 歌者 PPT
     logo: https://gezhe.com/images/favicon.svg
     url: https://gezhe.com/
-    border: true
-    padding: 5
 
-industry:
+industry: # 工业级
   - name: 盘古
     logo: https://res-static.hc-cdn.cn/cloudbu-site/public/new-product-icon/AI/pangu.png
     url: https://www.huaweicloud.com/product/pangu.html
@@ -728,7 +726,7 @@ industry:
 import AIModels from '~theme/components/AIModels.vue'
 </script>
 
-## 大模型应用
+## 大模型在线应用
 
 AI 模型网页版对话应用，通常免费使用
 

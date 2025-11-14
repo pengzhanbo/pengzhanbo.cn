@@ -32,17 +32,26 @@ const { list } = defineProps<{
 <style scoped>
 .ai-models {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 24px 20px;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 24px 14px;
   list-style: none;
   padding: 0;
   margin-top: 48px;
 }
 
 .ai-model {
-  width: 100px;
+  width: 90px;
   text-align: center;
   margin: auto;
+}
+
+@media (min-width: 640px) {
+  .ai-models {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+  .ai-model {
+    width: 100px;
+  }
 }
 
 .ai-model-link {
