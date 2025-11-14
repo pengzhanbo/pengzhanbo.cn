@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.20.0",
+  "packageManager": "pnpm@10.22.0",
   "description": "My personal blog site",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -15,7 +15,7 @@
     "gen:font": "tsx ./scripts/web-fonts.ts"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.402",
+    "@iconify/json": "^2.2.407",
     "@pengzhanbo/utils": "^2.1.0",
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.118",
@@ -25,15 +25,15 @@
     "gitmojis": "^3.15.0",
     "katex": "^0.16.25",
     "mermaid": "^11.12.1",
-    "vue": "^3.5.22",
+    "vue": "^3.5.24",
     "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-plume": "1.0.0-rc.175"
+    "vuepress-theme-plume": "1.0.0-rc.177"
   },
   "devDependencies": {
-    "@pengzhanbo/eslint-config-vue": "^1.39.0",
+    "@pengzhanbo/eslint-config-vue": "^1.40.0",
     "@types/express": "^5.0.5",
     "dotenv": "^17.2.3",
-    "eslint": "^9.39.0",
+    "eslint": "^9.39.1",
     "http-server": "^14.1.1",
     "is-ci": "^4.1.0",
     "tsconfig-vuepress": "^7.0.0",
