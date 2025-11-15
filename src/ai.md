@@ -401,6 +401,9 @@ searches: # AI 搜索
     logo: /images/ai/apps/nm.png
     url: https://bot.n.cn/
     border: true
+  - name: Perplexity
+    logo: /images/ai/apps/perplexity.webp
+    url: https://www.perplexity.ai/
 
 developmentPlatforms: # 开发平台
   - name: Coze
@@ -791,3 +794,130 @@ AI 模型网页版对话应用，通常免费使用
 ## 工业级模型
 
 <AIModels :list="$frontmatter.industry" />
+
+## 实用集成
+
+### 应用程序
+
+<CardGrid>
+  <LinkCard
+    title="Cherry Studio"
+    icon="https://www.cherry-ai.com/assets/cherry-logo-CtmH594q.svg"
+    href="https://www.cherry-ai.com/"
+    description="集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。"
+  />
+  <LinkCard
+    title="ChatGPT Next Web"
+    icon="https://github.com/ChatGPTNextWeb/NextChat/blob/main/public/apple-touch-icon.png?raw=true"
+    href="https://github.com/ChatGPTNextWeb/NextChat"
+    description="一键免费部署你的私人 ChatGPT 网页应用，支持 Claude, GPT4 & Gemini Pro 模型。"
+  />
+  <LinkCard
+    title="DeepChat"
+    icon="https://deepchat.thinkinai.xyz/logo.png"
+    href="https://deepchat.thinkinai.xyz/"
+    description="功能丰富的开源AI聊天平台，支持多种云端和本地大语言模型，提供强大的搜索增强和工具调用能力。"
+  />
+  <LinkCard
+    title="Chat box"
+    icon="https://chatboxai.app/icon.png"
+    href="https://chatboxai.app/"
+    description="AI 客户端应用和智能助手，支持众多先进的 AI 模型和 API，可在 Windows、MacOS、Android、iOS、Linux 和网页版上使用。"
+  />
+  <LinkCard
+    title="Tiger AI"
+    icon="https://www.laohu8.com/favicon.ico"
+    href="https://www.laohu8.com/gpt"
+    description="金融 AI 投资助理，为投资者提供智能化的投资决策支持。"
+  />
+  <LinkCard
+    title="AlphaBot"
+    icon="https://alphabot.x-pai.com/favicon-32x32.png"
+    href="https://alphabot.x-pai.com/"
+    description="智能股票分析助手，整合多源数据与AI分析技术，提供技术分析、预测和风险评估功能，帮助投资者做出数据驱动的交易决策"
+  />
+  <LinkCard
+    title="律己 AI"
+    icon="https://www.tensorbounce.com/logo.png"
+    href="https://www.tensorbounce.com/"
+    description="基于人工智能的法务大模型工具。"
+  />
+  <LinkCard
+    title="妙幕"
+    icon="https://smartsub.lxd.one/img/icon.png"
+    href="https://smartsub.lxd.one/"
+    description="音视频字幕生成与多语言翻译工具，支持多种格式，本地化处理，并提供丰富的自定义选项。"
+  />
+</CardGrid>
+
+### RAG 框架
+
+<CardGrid>
+  <LinkCard
+    title="RAG Flow"
+    icon="https://ragflow.io/img/logo.svg"
+    href="https://ragflow.io/"
+    description="基于深度文档理解构建的开源 RAG 引擎。可以为各种规模的企业及个人提供一套精简的 RAG 工作流程，结合大语言模型（LLM）针对用户各类不同的复杂格式数据提供可靠的问答以及有理有据的引用。"
+  />
+  <LinkCard
+    title="Auto Flow"
+    icon="https://raw.githubusercontent.com/pingcap/autoflow/refs/heads/main/docs/public/icon-dark.svg"
+    href="https://github.com/pingcap/autoflow"
+    description="开源的基于 GraphRAG 的知识库工具，提供类 Perplexity 的搜索页面。"
+  />
+  <LinkCard
+    title="Deep Reacher"
+    icon="https://zilliztech.github.io/deep-searcher/assets/pic/logo-badge.png"
+    href="https://zilliztech.github.io/deep-searcher/"
+    description="DeepSearcher 结合强大的 LLM（DeepSeek、OpenAI 等）和向量数据库（Milvus 等），根据私有数据进行搜索、评估和推理，提供高度准确的答案和全面的报告。"
+  />
+  <LinkCard
+    title="KAG"
+    icon="https://mdn.alipayobjects.com/huamei_ukv101/afts/img/z4srRIWNIzoAAAAAAAAAAAAADisxAQFr/original"
+    href="https://spg.openkg.cn/"
+    description="基于 OpenSPG 引擎和大型语言模型的逻辑推理问答框架，用于构建垂直领域知识库的逻辑推理问答解决方案。KAG 可以有效克服传统 RAG 向量相似度计算的歧义性和 OpenIE 引入的 GraphRAG 的噪声问题。"
+  />
+  <LinkCard
+    title="Youtu-GraphRAG"
+    icon="https://youtu-graphrag.vercel.app/images/youtu-logo.svg"
+    href="https://youtu-graphrag.vercel.app/docs/zh"
+    description="基于图 Schema 实现垂直统一的图增强推理范式，将 GraphRAG 框架精巧地集成为一个以智能体为核心的有机整体。"
+  />
+</CardGrid>
+
+### Office 插件
+
+<CardGrid>
+  <LinkCard
+    title="Chat PPT"
+    icon="https://www.chatppt.cn/favicon.ico"
+    href="https://www.chatppt.cn/"
+    description="输入PPT主题或要求，即可免费生成演示文稿"
+  />
+  <LinkCard
+    title="不坑盒子"
+    icon="https://www.bukenghezi.com/logo.png"
+    href="https://www.bukenghezi.com/"
+    description="免费的支持Word、Excel、PPT和WPS三件套的全能Office效率插件"
+  />
+  <LinkCard
+    title="AI PPT"
+    icon="https://www.aippt.cn/favicon.ico"
+    href="https://www.aippt.cn/"
+    description="AI 一键生成演示文稿"
+  />
+  <LinkCard
+    title="OfficeAI助手"
+    icon="https://www.office-ai.cn/static/images/officeai/logo.png"
+    href="https://www.office-ai.cn/"
+    description="免费的办公插件，在Office中提供AI问答、AI校对、AI排版、AI创作、AI数据处理等功能。"
+  />
+</CardGrid>
+
+### 代码编辑器
+
+<AIModels :list="[
+  { name: 'Cursor', logo: 'https://cursor.com/marketing-static/icon-192x192.png', url: 'https://cursor.com/cn' },
+  { name: 'Windsurf', logo: 'https://windsurf.com/favicon.svg', url: 'https://windsurf.com/editor', border: true },
+  { name: 'Trae', logo: 'https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png', href: 'https://www.trae.cn/' }
+]" />

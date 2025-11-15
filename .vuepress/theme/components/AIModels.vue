@@ -41,6 +41,7 @@ const { list } = defineProps<{
 
 .ai-model {
   width: 90px;
+  height: 100%;
   text-align: center;
   margin: auto;
 }
