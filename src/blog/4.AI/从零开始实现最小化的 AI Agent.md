@@ -227,7 +227,7 @@ class MiniAIAgent:
 
     def add_message(self, role: str, content: str):
         """将消息添加到对话历史中"""
-        self.conversation_history.append({"role": role, "content": content})
+        self.conversation_history.append(message)
         # 保持对话历史在一个合理长度，防止超出LLM上下文窗口
         if len(self.conversation_history) > 10:
             self.conversation_history = self.conversation_history[-10:]
@@ -236,7 +236,7 @@ class MiniAIAgent:
         """
         Agent 的主运行逻辑，感知、规划、行动循环
         """
-        self.add_message("user", user_query)
+        self.add_message({ 'role': 'user', 'content': user_query })
         print(f"用户: {user_query}")
 
         while True:
@@ -249,7 +249,7 @@ class MiniAIAgent:
             )
 
             response_message = response.choices[0].message
-            self.add_message(response_message.role, response_message.content if response_message.content else "")
+            self.add_message(response_message)
 
             # 2. 检查 LLM 是否决定调用工具
             tool_calls = response_message.tool_calls
@@ -265,26 +265,18 @@ class MiniAIAgent:
                         print(f"工具 {function_name} 返回: {tool_output}")
 
                         # 将工具输出添加到对话历史，作为 LLM 的新的"观察"
-                        self.add_message(
-                            "tool",
-                            json.dumps(
-                                {
-                                    "tool_call_id": tool_call.id,
-                                    "output": tool_output
-                                }
-                            )
-                        )
+                        self.add_message({
+                            'role': 'tool',
+                            'content': tool_output,
+                            'tool_call_id': tool_call.id,
+                        })
                     else:
                         print(f"Agent 尝试调用未知工具: {function_name}")
-                        self.add_message(
-                            "tool",
-                            json.dumps(
-                                {
-                                    "tool_call_id": tool_call.id,
-                                    "output": f"错误: 未知工具 {function_name}"
-                                }
-                            )
-                        )
+                        self.add_message({
+                            'role': 'tool',
+                            'content': f"错误: 未知工具 {function_name}",
+                            'tool_call_id': tool_call.id,
+                        } )
                 # LLM 在获取工具结果后，会再次思考，因此继续循环
                 continue
             else:
@@ -346,10 +338,7 @@ python chat_agent.py
 
 你将看到类似以下的交互：
 
-::: code-tabs
-@tab 终端输出 (Sample)
-
-```bash
+```bash title="终端输出 (Sample)"
 --- Mini AI Agent 启动！输入'exit'或'退出'结束对话 ---
 你: 今天深圳的天气怎么样？
 Agent: 我无法直接获取实时天气信息。但我可以帮你查找。
@@ -368,103 +357,6 @@ Agent: 一个程序员去算命，算命的说：“你会在35岁遇到一个�
 你: 退出
 Agent 停止。
 ```
-
-@tab Python (chat_agent.py)
-
-```python
-# （与上方代码块相同，省略重复内容）
-import os
-import json
-from openai import OpenAI
-from dotenv import load_dotenv
-from tools import AVAILABLE_TOOLS, TOOL_SCHEMA
-
-load_dotenv()
-
-class MiniAIAgent:
-    def __init__(self, api_key: str):
-        self.client = OpenAI(api_key=api_key)
-        self.conversation_history = []
-
-    def add_message(self, role: str, content: str):
-        self.conversation_history.append({"role": role, "content": content})
-        if len(self.conversation_history) > 10:
-            self.conversation_history = self.conversation_history[-10:]
-
-    def run(self, user_query: str):
-        self.add_message("user", user_query)
-        print(f"用户: {user_query}")
-
-        while True:
-            response = self.client.chat.completions.create(
-                model="gpt-3.5-turbo",
-                messages=self.conversation_history,
-                tools=TOOL_SCHEMA,
-                tool_choice="auto",
-            )
-
-            response_message = response.choices[0].message
-            self.add_message(response_message.role, response_message.content if response_message.content else "")
-
-            tool_calls = response_message.tool_calls
-            if tool_calls:
-                for tool_call in tool_calls:
-                    function_name = tool_call.function.name
-                    function_args = json.loads(tool_call.function.arguments)
-
-                    if function_name in AVAILABLE_TOOLS:
-                        print(f"Agent 调用工具: {function_name}，参数: {function_args}")
-                        tool_output = AVAILABLE_TOOLS[function_name](**function_args)
-                        print(f"工具 {function_name} 返回: {tool_output}")
-
-                        self.add_message(
-                            "tool",
-                            json.dumps(
-                                {
-                                    "tool_call_id": tool_call.id,
-                                    "output": tool_output
-                                }
-                            )
-                        )
-                    else:
-                        print(f"Agent 尝试调用未知工具: {function_name}")
-                        self.add_message(
-                            "tool",
-                            json.dumps(
-                                {
-                                    "tool_call_id": tool_call.id,
-                                    "output": f"错误: 未知工具 {function_name}"
-                                }
-                            )
-                        )
-                continue
-            else:
-                print(f"Agent: {response_message.content}")
-                break
-
-if __name__ == "__main__":
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("请在 .env 文件中设置 OPENAI_API_KEY。")
-        exit(1)
-
-    agent = MiniAIAgent(api_key=api_key)
-
-    print("--- Mini AI Agent 启动！输入'exit'或'退出'结束对话 ---")
-    while True:
-        try:
-            user_input = input("你: ")
-            if user_input.lower() in ["exit", "退出"]:
-                print("Agent 停止。")
-                break
-            agent.run(user_input)
-            print("-" * 30)
-        except Exception as e:
-            print(f"运行出错: {e}")
-            break
-```
-
-:::
 
 通过上述交互，你可以观察到 Agent 是如何“思考”并决定调用工具的。
 当它收到“计算 123 * 45”时，它能识别出这是一个计算任务，并调用 `calculator` 工具。
