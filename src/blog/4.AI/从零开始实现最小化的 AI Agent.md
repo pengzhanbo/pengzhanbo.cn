@@ -18,7 +18,7 @@ tags:
 最小化 Agent 旨在通过最精简的代码和最核心的组件，让你快速理解 AI Agent 的基本工作原理和构建逻辑，避免一开始就被复杂的框架和概念劝退。当我们掌握了其核心，再扩展到更复杂的应用场景就会得心应手。
 :::
 
-## 1. AI Agent 到底是什么？
+## AI Agent 到底是什么？
 
 要实现一个最小化的 AI Agent，我们首先需要理解它的核心要素。简单来说，一个 ==AI Agent=={.info} 是一个能够：
 
@@ -32,17 +32,17 @@ tags:
 
 而我们今天要构建的“最小化” Agent，将主要聚焦于 **感知、规划、行动** 这三大核心能力，并辅以简单的**记忆**机制。
 
-## 2. 最小化 Agent 的核心组件
+## 最小化 Agent 的核心组件
 
 要构建一个最小化的 AI Agent，我们离不开以下核心组件：
 
-### 2.1. 大语言模型 (LLM) — Agent 的“大脑”
+### 大语言模型 (LLM) — Agent 的“大脑”
 
 LLM 是 AI Agent 的核心计算引擎，扮演着“大脑”的角色。 它们经过海量数据训练，能够理解和生成文本，并从中进行推理。 就像我们人类思考问题一样，LLM 负责理解我们的指令、分析问题、并生成解决问题的步骤。
 
 LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解码器 (Decoder-only) 和编码器-解码器 (Encoder-Decoder)，它们大多基于 ==Transformer 架构=={.info}。
 
-### 2.2. 工具 (Tools) — Agent 的“双手”
+### 工具 (Tools) — Agent 的“双手”
 
 大语言模型虽然强大，但它们的知识通常截止于训练数据，并且无法直接与外部世界互动，比如查询实时信息、执行代码或者调用 API。 这时候就需要“工具”登场了！
 
@@ -53,7 +53,7 @@ LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解�
 - **代码解释器**：执行代码并获取结果。
 - **API 调用**：与各种外部服务（如天气预报、数据库等）进行交互。
 
-### 2.3. 记忆 (Memory) — Agent 的“经验”
+### 记忆 (Memory) — Agent 的“经验”
 
 没有记忆的 Agent 将是“健忘”的，每次交互都像是第一次，无法从过去的经验中学习。记忆机制允许 Agent 存储和回忆信息，从而在不同会话中变得更加个性化和智能。
 
@@ -64,7 +64,7 @@ LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解�
 
 在最小化实现中，我们可以从简单的短期记忆开始，例如维护一个固定长度的对话历史。
 
-### 2.4. 规划 (Planning) — Agent 的“思维过程”
+### 规划 (Planning) — Agent 的“思维过程”
 
 规划是 Agent 决定下一步行动的关键，它涉及将复杂任务分解为更小的步骤，并按计划执行。
 
@@ -73,7 +73,7 @@ LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解�
 - **子目标分解 (Sub-goal Decomposition)**：将复杂任务拆解成一系列可管理、可执行的子任务。
 - **反思与改进 (Reflection & Refinement)**：Agent 审视自身输出，并根据反馈进行修正。
 
-## 3. 架构设计与技术选型
+## 架构设计与技术选型
 
 为了实现最小化的 Agent，我们将采用如下架构并选择相应的技术栈：
 
@@ -87,14 +87,14 @@ LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解�
 
 :::
 
-### 3.1. 技术选型
+### 技术选型
 
 - **核心语言**：Python (易学易用，生态丰富)
 - **LLM 交互**：OpenAI API (或其他兼容 OpenAI 接口的 LLM, 如 Google Gemini / 千帆大模型)
 - **Agent 框架**：本次我们将“手搓”核心逻辑，不依赖大型框架，以便深入理解原理。但实际开发中，LangChain 等框架能极大简化开发。
 - **记忆**：一个简单的列表来存储对话历史。
 
-### 3.2. 工作原理流程
+### 工作原理流程
 
 我们的最小 Agent 将遵循一个基于 ==ReAct (Reasoning and Acting)=={.info} 模式的简化 Agentic Workflow：
 
@@ -104,11 +104,11 @@ LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解�
 4. **观察 (Observation)**：Agent 获取工具返回的结果。
 5. **循环**：将观察结果再次输入 LLM，重复“思考-行动-观察”循环，直到任务完成或 LLM 认为可以直接回答。
 
-## 4. 动手实现最小 Agent
+## 动手实现最小 Agent
 
 接下来，我们开始编码实现。
 
-### 4.1. 环境准备
+### 环境准备
 
 :::steps
 
@@ -139,7 +139,7 @@ LLM 的主流架构主要有三种类型：仅编码器 (Encoder-only)、仅解�
 
 :::
 
-### 4.2. 定义工具 (tools.py)
+### 定义工具 (tools.py)
 
 首先，我们需要定义 Agent 可以使用的工具。这里我们简单实现一个“计算器”和一个“获取当前时间”的工具。
 
@@ -208,7 +208,7 @@ TOOL_SCHEMA = [
 在 `calculator` 工具中使用了 `eval()` 函数，这在生产环境中是非常危险的，因为它允许执行任意代码。本例仅为教学目的而简化。在实际项目中，应使用更安全的数学表达式解析库或沙箱环境。
 :::
 
-### 4.3. 实现 Agent 核心逻辑 (chat_agent.py)
+### 实现 Agent 核心逻辑 (chat_agent.py)
 
 ```python title="chat_agent.py"
 import os
@@ -307,7 +307,7 @@ if __name__ == "__main__":
             break
 ```
 
-### 4.4. 代码解释
+### 代码解释
 
 :::steps
 
@@ -328,7 +328,7 @@ if __name__ == "__main__":
 
 :::
 
-### 4.5. 运行 Agent
+### 运行 Agent
 
 在项目根目录运行 `chat_agent.py`：
 
@@ -363,7 +363,7 @@ Agent 停止。
 当它处理“今天深圳的天气怎么样？”时，由于**只提供了获取当前时间的工具，而没有提供天气查询工具**，LLM 可能会尝试调用 `get_current_time`，但最终也会发现无法直接满足用户需求而进行解释。
 这体现了 Agent 在 **感知局限性** 后，依然尝试运用已有工具或解释自身能力的“智能”行为。
 
-## 5. 进阶的方向
+## 进阶的方向
 
 现在你已经成功实现了一个最小化的 AI Agent，但这只是冰山一角。要构建更强大、更实用的 Agent，可以从以下几个方向继续深入：
 
@@ -380,7 +380,7 @@ Agent 停止。
 - **多智能体协作 (Multi-Agent Collaboration)**：构建多个 Agent，每个 Agent 承担不同的角色，协同完成复杂任务。
 - **Prompt Engineering**：优化给 LLM 的指令和提示词，以获得更准确、更符合预期的输出。 ==Prompt Engineering=={.info} 是一门艺术和科学，通过精心设计提示词，可以显著提升 LLM 的性能。
 
-## 6. 总结
+## 总结
 
 通过本文，我们从零开始，==“手搓”了一个最小化的 AI Agent=={.success}。
 我们理解了 AI Agent 的核心组成部分：LLM 作为大脑，工具作为手，以及简单的记忆和规划机制。
@@ -388,9 +388,9 @@ Agent 停止。
 
 希望这个最小化的实现能为你打开 AI Agent 世界的大门，激励你进一步探索这个充满无限可能的前沿领域！
 
-## 7. 延伸学习资源
+## 参考
 
-- **LangChain 官方文档**：一个流行的 Agent 构建框架，提供了丰富的工具和组件。
-- **OpenAI Function Calling 文档**：了解 LLM 如何有效调用外部函数。
-- **Prompt Engineering Guide**：学习如何更好地设计提示词以提升 LLM 表现。
-- **《LLM Powered Autonomous Agents》 by Lilian Weng (OpenAI)**：深入理解 LLM 驱动的自主 Agent 设计框架。
+[**LangChain 官方文档** - 一个流行的 Agent 构建框架，提供了丰富的工具和组件。](https://docs.langchain.com/){.read-more}
+[**OpenAI Function Calling 文档** - 了解 LLM 如何有效调用外部函数](https://platform.openai.com/docs/guides/function-calling){.read-more}
+[**Prompt Engineering Guide** - 学习如何更好地设计提示词以提升 LLM 表现](https://www.promptingguide.ai/zh){.read-more}
+[**《LLM Powered Autonomous Agents》 by Lilian Weng (OpenAI)** - 深入理解 LLM 驱动的自主 Agent 设计框架](https://lilianweng.github.io/posts/2023-06-23-agent/){.read-more}
