@@ -261,7 +261,7 @@ class MiniAIAgent:
 
                     if function_name in AVAILABLE_TOOLS:
                         print(f"Agent 调用工具: {function_name}，参数: {function_args}")
-                        tool_output = AVAILABLE_TOOLSfunction_name [<sup>1</sup>](**function_args)
+                        tool_output = AVAILABLE_TOOLS[function_name](**function_args)
                         print(f"工具 {function_name} 返回: {tool_output}")
 
                         # 将工具输出添加到对话历史，作为 LLM 的新的"观察"
@@ -414,7 +414,7 @@ class MiniAIAgent:
 
                     if function_name in AVAILABLE_TOOLS:
                         print(f"Agent 调用工具: {function_name}，参数: {function_args}")
-                        tool_output = AVAILABLE_TOOLSfunction_name [<sup>1</sup>](**function_args)
+                        tool_output = AVAILABLE_TOOLS[function_name](**function_args)
                         print(f"工具 {function_name} 返回: {tool_output}")
 
                         self.add_message(
