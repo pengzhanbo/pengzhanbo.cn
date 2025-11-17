@@ -1,5 +1,5 @@
 ---
-title: AI 模型导航
+title: AI 导航
 createTime: 2025/02/10 09:10:26
 permalink: /ai/
 article: false
@@ -921,3 +921,21 @@ AI 模型网页版对话应用，通常免费使用
   { name: 'Windsurf', logo: 'https://windsurf.com/favicon.svg', url: 'https://windsurf.com/editor', border: true },
   { name: 'Trae', logo: 'https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png', href: 'https://www.trae.cn/' }
 ]" />
+
+## 优质开源项目
+
+<CardGrid>
+  <RepoCard repo="langchain-ai/langchain" />
+  <RepoCard repo="jlowin/fastmcp" />
+  <RepoCard repo="openai/tiktoken"/>
+  <RepoCard repo="x1xhlol/system-prompts-and-models-of-ai-tools" />
+  <RepoCard repo="google-gemini/gemini-cli" />
+  <RepoCard repo="firecrawl/firecrawl"/>
+  <RepoCard repo="transitive-bullshit/agentic" />
+  <RepoCard repo="cloudwego/eino" />
+</CardGrid>
+
+## 相关优质文章
+
+- [**《LLM Powered Autonomous Agents》 by Lilian Weng (OpenAI)** - 深入理解 LLM 驱动的自主 Agent 设计框架](https://lilianweng.github.io/posts/2023-06-23-agent/)
+- [**Prompt Engineering Guide** - 学习如何更好地设计提示词以提升 LLM 表现](https://www.promptingguide.ai/zh)
