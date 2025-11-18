@@ -939,3 +939,5 @@ AI 模型网页版对话应用，通常免费使用
 
 - [**《LLM Powered Autonomous Agents》 by Lilian Weng (OpenAI)** - 深入理解 LLM 驱动的自主 Agent 设计框架](https://lilianweng.github.io/posts/2023-06-23-agent/)
 - [**Prompt Engineering Guide** - 学习如何更好地设计提示词以提升 LLM 表现](https://www.promptingguide.ai/zh)
+- [Best 100+ Stable Diffusion Prompts - 100+ 最美的 Stable Diffusion 提示词](https://mpost.io/best-100-stable-diffusion-prompts-the-most-beautiful-ai-text-to-image-prompts)
+- [awesome-chatgpt-prompts - 优质的 ChatGPT 提示词](https://github.com/f/awesome-chatgpt-prompts)
