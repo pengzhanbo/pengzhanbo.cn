@@ -866,7 +866,7 @@ AI 模型网页版对话应用，通常免费使用
     description="开源的基于 GraphRAG 的知识库工具，提供类 Perplexity 的搜索页面。"
   />
   <LinkCard
-    title="Deep Reacher"
+    title="Deep Searcher"
     icon="https://zilliztech.github.io/deep-searcher/assets/pic/logo-badge.png"
     href="https://zilliztech.github.io/deep-searcher/"
     description="DeepSearcher 结合强大的 LLM（DeepSeek、OpenAI 等）和向量数据库（Milvus 等），根据私有数据进行搜索、评估和推理，提供高度准确的答案和全面的报告。"
