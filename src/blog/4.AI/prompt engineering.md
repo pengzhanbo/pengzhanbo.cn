@@ -257,7 +257,7 @@ ${requirements}
 ### 1. 提示优化工具
 
 - **OpenAI Playground**：实验和优化提示
-- **PromptPerfect**：自动提示优化
+- **[PromptPerfect](https://promptperfect.jina.ai/)**：自动提示优化
 - **AI Prompt Generator**：生成专业提示
 
 ### 2. 学习资源
