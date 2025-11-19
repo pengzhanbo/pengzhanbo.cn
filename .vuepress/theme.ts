@@ -41,4 +41,11 @@ export default plumeTheme({
     darkTheme: 'dark_protanopia',
     lightTheme: 'light_protanopia',
   },
+
+  llmstxt: {
+    llmsTxtTemplateGetter: {
+      details: '',
+      description: '鹏展博的个人博客，知识库',
+    },
+  },
 }) as Theme

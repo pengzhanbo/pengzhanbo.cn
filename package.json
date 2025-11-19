@@ -15,19 +15,18 @@
     "gen:font": "tsx ./scripts/web-fonts.ts"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.407",
+    "@iconify/json": "^2.2.408",
     "@pengzhanbo/utils": "^2.1.0",
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.118",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.118",
-    "@vuepress/plugin-llms": "2.0.0-rc.118",
     "@vuepress/shiki-twoslash": "2.0.0-rc.118",
     "gitmojis": "^3.15.0",
     "katex": "^0.16.25",
     "mermaid": "^11.12.1",
     "vue": "^3.5.24",
     "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-plume": "1.0.0-rc.177"
+    "vuepress-theme-plume": "1.0.0-rc.178"
   },
   "devDependencies": {
     "@pengzhanbo/eslint-config-vue": "^1.40.0",
