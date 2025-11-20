@@ -1,0 +1,329 @@
+---
+url: /article/hx3h2vvj/index.md
+---
+## 引言
+
+在JavaScript的世界里，原型（Prototype）和原型链（Prototype Chain）是理解这门语言面向对象特性的核心基石。无论你是初学者还是有一定经验的开发者，深入理解原型机制都能让你写出更优雅、更高效的代码。本文将带你从基础概念出发，逐步深入原型链的运作机制，并探讨其在现代JavaScript开发中的实际应用。
+
+:::info 为什么需要理解原型？
+JavaScript的继承机制与其他面向对象语言（如Java、C++）不同，它基于原型而非类。理解原型链能帮助你：
+
+* 更好地理解JavaScript的继承机制
+* 避免常见的陷阱和错误
+* 写出更高效的代码
+* 深入理解现代框架的底层原理
+  :::
+
+## 一、基础概念：理解原型三要素
+
+### 1.1 构造函数（Constructor）
+
+构造函数是用来创建对象的函数，通过`new`关键字调用：
+
+```javascript title="构造函数示例"
+function Person(name) {
+  this.name = name
+}
+
+const person1 = new Person('Alice')
+const person2 = new Person('Bob')
+```
+
+### 1.2 原型对象（Prototype）
+
+每个函数都有一个`prototype`属性，指向一个原型对象：
+
+```javascript title="原型对象示例"
+Person.prototype.sayHello = function () {
+  console.log(`Hello, I'm ${this.name}`)
+}
+
+person1.sayHello() // "Hello, I'm Alice"
+person2.sayHello() // "Hello, I'm Bob"
+```
+
+### 1.3 实例对象（Instance）
+
+通过`new`关键字创建的对象称为实例：
+
+```javascript
+console.log(person1 instanceof Person) // true
+console.log(person2 instanceof Person) // true
+```
+
+## 二、原型链的核心机制
+
+### 2.1 `__proto__`与原型链
+
+每个对象都有一个`__proto__`属性（在现代JavaScript中建议使用`Object.getPrototypeOf()`），指向其原型对象：
+
+```javascript title="原型链示例"
+function Animal(type) {
+  this.type = type
+}
+
+Animal.prototype.speak = function () {
+  console.log(`This ${this.type} makes a sound`)
+}
+
+function Dog(name) {
+  Animal.call(this, 'dog')
+  this.name = name
+}
+
+// 设置原型链
+Dog.prototype = Object.create(Animal.prototype)
+Dog.prototype.constructor = Dog
+
+Dog.prototype.bark = function () {
+  console.log(`${this.name} barks`)
+}
+
+const buddy = new Dog('Buddy')
+```
+
+:::warning 注意
+虽然`__proto__`被广泛使用，但在生产环境中建议使用`Object.getPrototypeOf()`和`Object.setPrototypeOf()`来操作原型链。
+:::
+
+### 2.2 属性查找机制
+
+当访问一个对象的属性时，JavaScript引擎会按照以下顺序查找：
+
+:::steps
+
+* 在对象自身属性中查找
+* 如果未找到，沿着`__proto__`在原型对象中查找
+* 继续沿着原型链向上查找，直到找到属性或到达`null`
+* 如果最终未找到，返回`undefined`
+
+:::
+
+```javascript title="属性查找示例"
+function hasOwnProperty(target, key) {
+  return Object.prototype.hasOwnProperty.call(target, key)
+}
+
+console.log(hasOwnProperty(buddy, 'name')) // true
+console.log(hasOwnProperty(buddy, 'bark')) // false
+console.log(hasOwnProperty(buddy, 'speak')) // false
+
+buddy.bark() // 在Dog.prototype中找到
+buddy.speak() // 在Animal.prototype中找到
+buddy.toString() // 在Object.prototype中找到
+```
+
+## 三、原型链的完整图谱
+
+让我们通过代码来构建完整的原型链图谱：
+
+```javascript title="完整原型链分析"
+function Foo() {}
+
+const f = new Foo()
+
+// 原型链关系
+console.log(f.__proto__ === Foo.prototype) // true
+console.log(Foo.prototype.__proto__ === Object.prototype) // true
+console.log(Object.prototype.__proto__ === null) // true
+
+// 构造函数关系
+console.log(Foo.__proto__ === Function.prototype) // true
+console.log(Function.prototype.__proto__ === Object.prototype) // true
+console.log(Function.__proto__ === Function.prototype) // true (特殊!)
+```
+
+:::info 原型链终点
+所有原型链的最终终点都是`null`，这是JavaScript设计中的一个重要特性。
+:::
+
+## 四、基于原型链的继承实现
+
+### 4.1 组合继承（最常用）
+
+```javascript title="组合继承实现"
+function Parent(name) {
+  this.name = name
+  this.colors = ['red', 'blue', 'green']
+}
+
+Parent.prototype.sayName = function () {
+  console.log(this.name)
+}
+
+function Child(name, age) {
+  Parent.call(this, name) // 继承实例属性
+  this.age = age
+}
+
+// 继承原型方法
+Child.prototype = Object.create(Parent.prototype)
+Child.prototype.constructor = Child
+
+Child.prototype.sayAge = function () {
+  console.log(this.age)
+}
+
+const child1 = new Child('Alice', 10)
+const child2 = new Child('Bob', 20)
+
+child1.colors.push('yellow')
+console.log(child1.colors) // ['red', 'blue', 'green', 'yellow']
+console.log(child2.colors) // ['red', 'blue', 'green'] (独立!)
+```
+
+### 4.2 寄生组合式继承（最佳实践）
+
+```javascript title="寄生组合式继承"
+function inheritPrototype(child, parent) {
+  const prototype = Object.create(parent.prototype)
+  prototype.constructor = child
+  child.prototype = prototype
+}
+
+function Parent(name) {
+  this.name = name
+}
+
+Parent.prototype.sayName = function () {
+  console.log(this.name)
+}
+
+function Child(name, age) {
+  Parent.call(this, name)
+  this.age = age
+}
+
+inheritPrototype(Child, Parent)
+
+Child.prototype.sayAge = function () {
+  console.log(this.age)
+}
+```
+
+## 五、ES6 Class与原型链
+
+ES6的`class`语法是原型继承的语法糖，底层仍然基于原型链：
+
+```javascript title="ES6 Class继承"
+class Animal {
+  constructor(type) {
+    this.type = type
+  }
+
+  speak() {
+    console.log(`This ${this.type} makes a sound`)
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super('dog')
+    this.name = name
+  }
+
+  bark() {
+    console.log(`${this.name} barks`)
+  }
+}
+
+const buddy = new Dog('Buddy')
+
+// 原型链关系仍然存在
+console.log(buddy instanceof Dog) // true
+console.log(buddy instanceof Animal) // true
+console.log(buddy instanceof Object) // true
+```
+
+:::tip 现代开发建议
+在现代JavaScript开发中，推荐使用`class`语法，它更清晰、更符合直觉，同时底层仍然基于健壮的原型继承机制。
+:::
+
+## 六、实际应用场景
+
+### 6.1 方法复用与性能优化
+
+```javascript title="方法复用示例"
+function User(name) {
+  this.name = name
+  this.id = Math.random()
+}
+
+// 方法定义在原型上，所有实例共享
+User.prototype.getInfo = function () {
+  return `User: ${this.name}, ID: ${this.id}`
+}
+
+// 对比：方法定义在构造函数内（不推荐）
+function BadUser(name) {
+  this.name = name
+  this.id = Math.random()
+  this.getInfo = function () { // 每个实例都会创建新函数
+    return `User: ${this.name}, ID: ${this.id}`
+  }
+}
+```
+
+### 6.2 扩展内置对象
+
+```javascript title="扩展内置对象（谨慎使用）"
+// 为数组添加自定义方法
+// eslint-disable-next-line no-extend-native
+Array.prototype.last = function () {
+  return this[this.length - 1]
+}
+
+const arr = [1, 2, 3]
+console.log(arr.last()) // 3
+```
+
+:::caution 扩展内置对象
+扩展内置对象的原型可能会引发兼容性问题，在生产环境中需要谨慎使用。
+:::
+
+## 七、常见陷阱与最佳实践
+
+### 7.1 避免的原型陷阱
+
+```javascript title="常见陷阱示例"
+function MyArray() {}
+MyArray.prototype = []
+
+const arr1 = new MyArray()
+arr1.push(1)
+console.log(arr1.length) // 1
+
+const arr2 = new MyArray()
+console.log(arr2.length) // 1 (!) 引用类型共享问题
+```
+
+### 7.2 最佳实践总结
+
+:::important 原型使用最佳实践
+
+* 使用`Object.create()`而不是直接修改`__proto__`
+* 在修改原型后记得修复`constructor`指向
+* 优先使用ES6 `class`语法
+* 避免扩展内置对象的原型
+* 使用方法时注意`this`的指向
+  :::
+
+## 八、总结
+
+通过本文的学习，我们深入理解了JavaScript原型到原型链的完整机制：
+
+1. **原型是JavaScript实现继承的核心机制**，所有对象都通过原型链连接
+2. **`prototype`是函数属性**，用于定义由该函数创建的对象所继承的属性和方法
+3. **`__proto__`是对象属性**，指向该对象的原型
+4. **属性查找遵循原型链**，从自身属性开始，沿着原型链向上查找
+5. **现代JavaScript开发**中，`class`语法提供了更清晰的继承方式
+
+理解原型链不仅有助于写出更好的JavaScript代码，更是深入理解现代前端框架（如React、Vue）的基础。希望本文能帮助你在JavaScript进阶之路上迈出坚实的一步！
+
+***
+
+## 参考
+
+* [MDN: 继承与原型链](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+* [JavaScript高级程序设计（第4版）](https://book.douban.com/subject/35175321/)
+* [ECMAScript规范](https://tc39.es/ecma262/)
