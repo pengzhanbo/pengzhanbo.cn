@@ -26,11 +26,7 @@ export default plumeTheme({
     appId: 'KRJOJ00KBL',
     apiKey: '9217486bf6a0a9048a44b826a1549b0c',
     indices: ['pengzhanbo'],
-    askAi: {
-      indexName: 'pengzhanbo-markdown',
-      assistantId: 'LkVhmvMjn8rl',
-    },
-  } as any,
+  },
 
   comment: {
     provider: 'Giscus',
