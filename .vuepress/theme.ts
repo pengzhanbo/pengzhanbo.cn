@@ -24,9 +24,12 @@ export default plumeTheme({
   search: {
     provider: 'algolia',
     appId: 'KRJOJ00KBL',
-    apiKey: '3f3b13613235873fbcbc9d304de18126',
+    apiKey: '9217486bf6a0a9048a44b826a1549b0c',
     indices: ['pengzhanbo'],
-    askAI: 'LkVhmvMjn8rl',
+    askAi: {
+      indexName: 'pengzhanbo-markdown',
+      assistantId: 'LkVhmvMjn8rl',
+    },
   } as any,
 
   comment: {
