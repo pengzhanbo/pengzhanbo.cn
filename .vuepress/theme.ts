@@ -26,7 +26,8 @@ export default plumeTheme({
     appId: 'KRJOJ00KBL',
     apiKey: '3f3b13613235873fbcbc9d304de18126',
     indices: ['pengzhanbo'],
-  },
+    askAI: 'LkVhmvMjn8rl',
+  } as any,
 
   comment: {
     provider: 'Giscus',
