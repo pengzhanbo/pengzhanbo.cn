@@ -217,7 +217,9 @@ article: false
     href="https://iconpark.oceanengine.com/"
   />
   <LinkCard title="Lucide Icon" icon="https://lucide.dev/logo.light.svg" href="https://lucide.dev/" />
+  <LinkCard title="Lucide Animated" icon="https://lucide-animated.com/icon" href="https://lucide-animated.com/" />
   <LinkCard title="Simple Icons" icon="https://simpleicons.org/logo-fc26614b48c3f1fd.svg" href="https://simpleicons.org/" />
+  <LinkCard title="MingCute Icon" icon="https://www.mingcute.com/favicon.ico" href="https://www.mingcute.com/" />
   <LinkCard title="Font Awesome" icon="https://fontawesome.com/images/favicon/icon.svg" href="https://fontawesome.com/" />
   <LinkCard
     title="Bootstrap Icons"
