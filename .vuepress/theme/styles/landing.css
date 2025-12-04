@@ -62,7 +62,7 @@
   }
 }
 
-.layout-landing .vp-footer p,
+.layout-landing .vp-footer .container > div,
 .layout-landing .vp-footer a {
   color: var(--landing-c-text);
 }
