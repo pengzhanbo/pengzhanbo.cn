@@ -20,7 +20,7 @@ export interface Params {
   wght?: `${number}` | `${number}..${number}`
 }
 
-const EXT = {
+const EXT: Record<string, string> = {
   'font/woff2': 'woff2',
   'font/woff': 'woff',
   'font/ttf': 'ttf',
@@ -66,7 +66,7 @@ async function downloadWebFontCss(params: Params | string, output?: string): Pro
   for (const url of fontsUrl) {
     const res = await fetch(url)
     const buffer = Buffer.from(await res.arrayBuffer())
-    const ext = EXT[res.headers.get('content-type') ?? '']
+    const ext = EXT[(res.headers.get('content-type') ?? '') as string] as string
     cache[url] = `${basename}-${(uuid++) * 100}.${ext}`
     await fs.promises.writeFile(path.join(fontDir, cache[url]), buffer)
   }

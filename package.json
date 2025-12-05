@@ -26,7 +26,7 @@
     "mermaid": "^11.12.2",
     "vue": "^3.5.25",
     "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-plume": "1.0.0-rc.180"
+    "vuepress-theme-plume": "1.0.0-rc.181"
   },
   "devDependencies": {
     "@pengzhanbo/eslint-config-vue": "^1.43.0",
@@ -49,8 +49,7 @@
       "floating-vue@5.2.2": "patches/floating-vue@5.2.2.patch"
     },
     "overrides": {
-      "@vueuse/core": "^14.1.0",
-      "vite": "8.0.0-beta.0"
+      "@vueuse/core": "^14.1.0"
     }
   }
 }
