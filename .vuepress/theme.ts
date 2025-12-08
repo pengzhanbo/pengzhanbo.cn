@@ -19,6 +19,9 @@ export default plumeTheme({
     npmTo: true,
     audioReader: true,
     chat: true,
+    repl: {
+      go: true,
+    },
   },
 
   search: {
