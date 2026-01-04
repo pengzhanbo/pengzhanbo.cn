@@ -18,8 +18,8 @@ Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发�
 ## 为什么选择 Agent Skills ? {#why-agent-skills}
 
 智能体能力日益增强，但常常缺乏可靠执行实际工作所需的上下文信息。
-技能机制通过为智能体提供程序性知识及公司、团队和用户特定上下文（可按需加载），有效解决了这一问题。
-配备技能集的智能体能够根据当前处理的任务动态扩展其能力。
+Skills 机制通过为智能体提供程序性知识及公司、团队和用户特定上下文（可按需加载），有效解决了这一问题。
+配备 Skills 集的智能体能够根据当前处理的任务动态扩展其能力。
 
 **面向技能开发者**：一次构建能力，即可部署到多个智能体产品中。
 
@@ -43,7 +43,7 @@ Agent Skills 受到领先的 AI 开发工具支持。
 
 ## 开放开发 {#open-development}
 
-Agent Skills格式最初由 [Anthropic](https://www.anthropic.com/) 开发，作为开放标准发布，
+Agent Skills 格式最初由 [Anthropic](https://www.anthropic.com/) 开发，作为开放标准发布，
 并已被越来越多的智能体产品采用。该标准欢迎更广泛的生态系统参与者贡献内容。
 
 [在 **github** 上查看](https://github.com/agentskills/agentskills){.readmore}
