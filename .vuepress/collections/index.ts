@@ -1,4 +1,5 @@
 import { defineCollections } from 'vuepress-theme-plume'
+import aiAgentSkills from './ai-agent-skills.js'
 import defensiveCss from './defensive-css.js'
 import frontendOpenSources from './fe-oss.js'
 import interviewQuestion from './interview-question.js'
@@ -16,6 +17,7 @@ export default defineCollections([
   memorandum,
   webpack,
   frontendOpenSources,
+  aiAgentSkills,
   { type: 'doc', dir: '设计模式', title: '设计模式', linkPrefix: '/design-pattern/', sidebar: 'auto' },
   { type: 'doc', dir: '算法', title: '算法', linkPrefix: '/algorithm/', sidebar: 'auto' },
 ])

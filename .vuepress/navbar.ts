@@ -116,6 +116,18 @@ export default defineNavbarConfig([
         activeMatch: '^/learn-rust/',
         icon: 'mdi:language-rust',
       },
+      {
+        text: 'AI',
+        icon: 'eos-icons:ai',
+        items: [
+          {
+            text: 'Agent Skills',
+            link: '/ai-agent-skills/',
+            activeMatch: '^/ai-agent-skills/',
+            icon: 'hugeicons:language-skill',
+          },
+        ],
+      },
       // {
       //   text: '构建工具指南',
       //   icon: 'unjs:unbuild',

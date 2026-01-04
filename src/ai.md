@@ -941,3 +941,5 @@ AI 模型网页版对话应用，通常免费使用
 - [**Prompt Engineering Guide** - 学习如何更好地设计提示词以提升 LLM 表现](https://www.promptingguide.ai/zh)
 - [Best 100+ Stable Diffusion Prompts - 100+ 最美的 Stable Diffusion 提示词](https://mpost.io/best-100-stable-diffusion-prompts-the-most-beautiful-ai-text-to-image-prompts)
 - [awesome-chatgpt-prompts - 优质的 ChatGPT 提示词](https://github.com/f/awesome-chatgpt-prompts)
+
+<!-- 检测 AI 率：https://www.zerogpt.com/ -->
