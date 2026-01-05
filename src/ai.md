@@ -172,6 +172,10 @@ apps: # AI 应用，模型在线对话
     logo: /images/ai/apps/huggingchat.svg
     url: https://huggingface.co/chat/
     border: true
+  - name: 小米 MIMO
+    logo: https://aistudio.xiaomimimo.com/favicon.0619b0d2.png
+    url: https://aistudio.xiaomimimo.com/
+    border: true
 
 providers: # AI 服务商 （直供）
   - name: 深度求索
@@ -849,6 +853,73 @@ AI 模型网页版对话应用，通常免费使用
     description="音视频字幕生成与多语言翻译工具，支持多种格式，本地化处理，并提供丰富的自定义选项。"
   />
 </CardGrid>
+
+### MCP 市场
+
+<CardGrid>
+  <LinkCard
+    title="魔塔 MCP" href="https://www.modelscope.cn/mcp"
+    icon="/images/ai/providers/modelscope.png"
+    description="聚合优质MCP资源，拓展模型智能边界"
+  />
+  <LinkCard
+    title="阿里云百炼" href="https://bailian.console.aliyun.com/?tab=mcp"
+    icon="/images/ai/providers/bailian.png"
+    description="阿里云相关产品的 MCP 服务"
+  />
+  <LinkCard
+    title="TokenFlux" href="https://tokenflux.ai/mcps"
+    icon="/images/ai/providers/tokenflux.png"
+    description="TokenFlux 的 MCP 市场"
+  />
+  <LinkCard
+    title="蓝耘科技" href="https://mcp.lanyun.net/#/home"
+    icon="/images/ai/providers/lanyun.png"
+    description="蓝耘元生代 MCP 广场"
+  />
+  <LinkCard
+    title="MCP Router" href="https://mcprouter.co/"
+    icon="https://mcprouter.co/_next/image?url=%2Flogo.png&w=96&q=75"
+    description="MCP 路由器，为你的 AI 赋能"
+  />
+  <LinkCard
+    title="Higress" href="https://mcp.higress.ai/"
+    icon="https://framerusercontent.com/images/FD5yBobiBj4Evn0qf11X7iQ9csk.png"
+    description="借助 Higress，瞬间即可将现有 API 转化为 Remote MCP Server，铺设 AI 与现实世界最短的连接路径"
+  />
+  <LinkCard
+    title="MCP.so" href="https://mcp.so/zh"
+    icon="https://mcp.so/_next/image?url=%2Flogo.png&w=64&q=75"
+    description="MCP.so 是一个第三方 MCP 市场，收录了 17000+ 个 MCP 服务器。"
+  />
+  <LinkCard
+    title="Smithery.ai" href="https://smithery.ai/"
+    icon="https://smithery.ai/icon.svg?icon.2e4c651c.svg"
+    description="连接至拥有 3000+ 款 MCP 应用的市场。"
+  />
+  <LinkCard
+    title="Glama.ai" href="https://glama.ai/"
+    icon="https://glama.ai/favicon.ico"
+    description="生产就绪的MCP服务器，通过文件访问、数据库连接、API和上下文服务扩展人工智能能力。"
+  />
+  <LinkCard
+    title="Pulse MCP" href="https://www.pulsemcp.com/"
+    icon="https://storage.googleapis.com/pulse_public/static/pulse-drawing.png"
+    description="服务器, 客户端, 使用案例, 工具和每周新闻通讯"
+  />
+  <LinkCard
+    title="Composio MCP" href="https://mcp.composio.dev/"
+    icon="https://mcp.composio.dev/_next/image?url=%2Fimages%2FComposioTransparent.png&w=640&q=75&dpl=dpl_5TDD5bsVTWD3ABFJTcPj1TMSyC3k"
+    description="Composio的MCP让您能够即时连接至100多个托管MCP服务器，内置认证功能"
+  />
+  <LinkCard
+    title="Model Context Protocol Servers" href="https://github.com/modelcontextprotocol/servers"
+    icon="https://modelcontextprotocol.io/mintlify-assets/_mintlify/favicons/mcp/nMRF3-ucbVB_YX-J/_generated/favicon/apple-touch-icon.png"
+    description="MCP 开源社区的服务器集合"
+  />
+</CardGrid>
+
+<LinkCard title="MCP awesome" href="https://github.com/punkpeye/awesome-mcp-servers" icon="logos:awesome" />
 
 ### RAG 框架
 

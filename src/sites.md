@@ -5,6 +5,15 @@ permalink: /sites-collect/
 article: false
 ---
 
+## 代码搜索
+
+<iframe
+  src="https://grep.app" width="100%" height="400px" frameborder="0"
+  style="border:1px solid var(--vp-c-divider); border-radius: 5px; box-shadow: var(--vp-shadow-2);"
+/>
+
+[**Grep.app**](https://grep.app/){.readmore}
+
 ## Runtime
 
 <CardGrid>
