@@ -11,5 +11,12 @@ export default defineCollection({
     'what-are-skills',
     'specification',
     'integrate',
+    {
+      text: '相关文章',
+      prefix: 'about',
+      items: [
+        'equipping-agents-for-the-real-world-with-agent-skills',
+      ],
+    },
   ],
 })

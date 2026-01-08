@@ -18,3 +18,9 @@ Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发�
 ## 仓库地址
 
 <RepoCard repo="agentskills/agentskills" />
+
+## 相关文章
+
+[使用 **Agent Skills** 为真实世界装备代理 —— Anthropic 官方博客](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills){.readmore}
+
+[**Agent Skills** ——Claude Docs](https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/overview){.readmore}
