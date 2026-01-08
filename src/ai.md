@@ -727,6 +727,16 @@ industry: # 工业级
   - name: 盘古
     logo: https://res-static.hc-cdn.cn/cloudbu-site/public/new-product-icon/AI/pangu.png
     url: https://www.huaweicloud.com/product/pangu.html
+
+datasets:
+  - name: 魔塔数据集
+    logo: /images/ai/providers/modelscope.png
+    url: https://www.modelscope.cn/datasets
+
+  - name: gitee 数据集
+    logo: /images/ai/providers/gitee-ai.png
+    url: https://ai.gitee.com/datasets
+    border: true
 ---
 
 <script setup>
@@ -798,6 +808,10 @@ AI 模型网页版对话应用，通常免费使用
 ## 工业级模型
 
 <AIModels :list="$frontmatter.industry" />
+
+## 数据集
+
+<AIModels :list="$frontmatter.datasets" />
 
 ## 实用集成
 
@@ -993,6 +1007,14 @@ AI 模型网页版对话应用，通常免费使用
   { name: 'Trae', logo: 'https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png', href: 'https://www.trae.cn/' }
 ]" />
 
+### CLI AI 工具
+
+<CardGrid>
+  <RepoCard repo="google-gemini/gemini-cli" />
+  <RepoCard repo="anthropics/claude-code" />
+  <RepoCard repo="code-yeongyu/oh-my-opencode" />
+</CardGrid>
+
 ## 优质开源项目
 
 <CardGrid>
@@ -1000,10 +1022,14 @@ AI 模型网页版对话应用，通常免费使用
   <RepoCard repo="jlowin/fastmcp" />
   <RepoCard repo="openai/tiktoken"/>
   <RepoCard repo="x1xhlol/system-prompts-and-models-of-ai-tools" />
-  <RepoCard repo="google-gemini/gemini-cli" />
   <RepoCard repo="firecrawl/firecrawl"/>
   <RepoCard repo="transitive-bullshit/agentic" />
   <RepoCard repo="cloudwego/eino" />
+  <RepoCard repo="jingyaogong/minimind"/>
+  <RepoCard repo="anthropics/skills" />
+  <RepoCard repo="QuantumNous/new-api" />
+  <RepoCard repo="666ghj/BettaFish"/>
+  <RepoCard repo="shareAI-lab/share-best-prompt"/>
 </CardGrid>
 
 ## 相关优质文章
