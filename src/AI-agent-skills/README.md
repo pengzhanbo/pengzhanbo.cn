@@ -19,6 +19,18 @@ Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发�
 
 <RepoCard repo="agentskills/agentskills" />
 
+## Skills 搜索
+
+<LinkCard title="Skills.sh" href="https://skills.sh/" icon="skill-icons:vercel-dark" />
+
+<LinkCard title="SkillKit" href="https://www.agenstskills.com/" icon="skill-icons:vercel-dark" />
+
+## CLI 工具
+
+<RepoCard repo="vercel-labs/skills" />
+
+<RepoCard repo="rohitg00/skillkit"/>
+
 ## 相关文章
 
 [使用 **Agent Skills** 为真实世界装备代理 —— Anthropic 官方博客](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills){.readmore}
