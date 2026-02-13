@@ -1,0 +1,5 @@
+# Algolia-Crawler-Verif: A1A1F2E6307A7403
+
+User-agent: *
+Allow: /
+Sitemap: https://pengzhanbo.cn/sitemap.xml
