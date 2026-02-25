@@ -20,7 +20,7 @@ CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
   border: solid 1px var(--vp-c-divider);
   box-shadow: var(--vp-shadow-2);
   border-radius: 5px;
-  margin: 0 auto;
+  margin: 16px auto;
   padding: 20px;
 }
 
@@ -54,7 +54,7 @@ CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="grid-box-110">
   <div class="grid-box-110__main">
@@ -76,7 +76,7 @@ CSS 网格的子项具有默认的最小内容大小，即 `auto` 。
 
 在这里，我们选择 `min-width: 0`
 
-:::demo-wrapper
+:::window
 
 <div class="grid-box-110">
   <div class="grid-box-110__main min">

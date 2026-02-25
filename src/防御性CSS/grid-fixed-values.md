@@ -17,7 +17,7 @@ CSS 如下所示：
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="demo1-wrapper-110">
   <aside>aside</aside>
@@ -30,6 +30,7 @@ CSS 如下所示：
   display: grid;
   grid-template-columns: 250px 1fr;
   gap: 1rem;
+  margin: 16px auto;
 }
 
 .demo1-wrapper-110 aside,
@@ -62,7 +63,7 @@ CSS 如下所示：
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="demo2-wrapper-110">
   <aside>aside</aside>
@@ -71,6 +72,9 @@ CSS 如下所示：
 :::
 
 <style>
+.demo2-wrapper-110 {
+  margin: 16px auto;
+}
 @media (min-width: 600px) {
   .demo2-wrapper-110 {
     display: grid;

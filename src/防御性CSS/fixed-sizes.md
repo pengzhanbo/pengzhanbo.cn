@@ -18,7 +18,7 @@ permalink: /defensive-css/fixed-sizes/
 .card-1-110 {
   height: 100px;
   width: 250px;
-  margin: 0 auto;
+  margin: 16px auto;
   padding: 10px;
   background: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider-light);
@@ -29,7 +29,7 @@ permalink: /defensive-css/fixed-sizes/
 .card-2-110 {
   min-height: 100px;
   width: 250px;
-  margin: 0 auto ;
+  margin: 16px auto ;
   padding: 10px;
   background: var(--vp-c-bg);
   border: 1px solid var(--vp-c-divider-light);
@@ -48,7 +48,7 @@ permalink: /defensive-css/fixed-sizes/
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="card-1-110">
 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。
@@ -65,7 +65,7 @@ permalink: /defensive-css/fixed-sizes/
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="card-2-110">
 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。
@@ -92,6 +92,7 @@ permalink: /defensive-css/fixed-sizes/
   width: 100px;
   text-align: center;
   padding: 4px 10px;
+  margin: 16px auto;
   margin-right: 10px;
   color: var(--vp-c-brand-1);
   border: solid 1px var(--vp-c-brand-1);
@@ -108,7 +109,7 @@ permalink: /defensive-css/fixed-sizes/
 }
 </style>
 
-:::demo-wrapper
+:::window
 
   <div class="tag-110">标签内容</div>
   <div class="tag-110">标签内容比较长</div>
@@ -122,7 +123,7 @@ permalink: /defensive-css/fixed-sizes/
 }
 ```
 
-:::demo-wrapper
+:::window
 
   <div class="tag-110 tag-min">标签内容</div>
   <div class="tag-110 tag-min">标签内容比较长</div>

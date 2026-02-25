@@ -20,7 +20,7 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 .card-hover-media-123 {
   width: 200px;
   height: 200px;
-  margin: 0 auto;
+  margin: 20px auto;
   border: 1px solid var(--vp-c-divider);
   border-radius: 5px;
   box-shadow: var(--vp-shadow-2);
@@ -39,7 +39,7 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 
 在页面中滚动时，手指可能会意外地轻点半下，这将触发特定元素的 `hover` 状态。
 
-:::demo-wrapper
+:::window
 如果是桌面端浏览器，请打开 控制台，切换为 移动设备。在下面元素上点击，会看到 `hover` 效果。
 
 <div class="card-hover-123"></div>
@@ -58,7 +58,7 @@ permalink: /defensive-css/accidental-hover-on-mobile/
 }
 ```
 
-:::demo-wrapper
+:::window
 如果是桌面端浏览器，请打开 控制台，切换为 移动设备。在下面元素上点击。
 
 <div class="card-hover-media-123"></div>

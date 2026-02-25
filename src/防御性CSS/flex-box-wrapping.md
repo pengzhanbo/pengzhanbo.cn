@@ -18,7 +18,7 @@ permalink: /defensive-css/flex-box-wrapping/
 .flexbox-110 {
   display: flex;
   width: 230px;
-  margin: auto;
+  margin: 16px auto;
   padding: 10px;
   gap: 10px;
   background: var(--vp-c-bg);
@@ -42,7 +42,7 @@ permalink: /defensive-css/flex-box-wrapping/
 }
 </style>
 
-:::demo-wrapper
+:::window
 
 <p align="center">容器空间足够</p>
 
@@ -56,7 +56,7 @@ permalink: /defensive-css/flex-box-wrapping/
 
 当容器空间较小时，容器内的子项将被挤压，甚至溢出容器。这应该是意料之中的，实际上并不是一个“问题”。
 
-:::demo-wrapper
+:::window
 
 <p align="center">容器空间不足</p>
 <div class="flexbox-110 small">
@@ -69,7 +69,7 @@ permalink: /defensive-css/flex-box-wrapping/
 
 请注意，这些子项仍然彼此相邻。为了解决这个问题，我们需要使用 `flex-wrap: wrap`：
 
-:::demo-wrapper
+:::window
 
 <div class="flexbox-110 small wrap">
   <div class="item">opts1</div>

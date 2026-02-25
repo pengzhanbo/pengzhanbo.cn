@@ -38,6 +38,7 @@ permalink: /defensive-css/default-flexbox-stretching/
   border-radius: 5px;
   border: 1px solid var(--vp-c-divider);
   box-shadow: var(--vp-shadow-2);
+  margin: 16px auto;
 }
 .food-wrapper-110 .food__img {
   width: 200px;
@@ -53,7 +54,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 }
 </style>
 
-:::demo-wrapper
+:::window
 
 <p>内容长度合适时：</p>
 <div class="food-wrapper-110">
@@ -88,7 +89,7 @@ permalink: /defensive-css/default-flexbox-stretching/
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <p>内容长度合适时：</p>
 <div class="food-wrapper-110">

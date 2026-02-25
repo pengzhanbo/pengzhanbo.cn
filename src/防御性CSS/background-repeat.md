@@ -10,7 +10,7 @@ permalink: /defensive-css/background-repeat/
 默认情况下，该背景将重复。
 
 这在笔记本电脑屏幕上大多不可见，但在较大的屏幕上可以清楚地看到。
-::::demo-wrapper
+::::window
 :::center
 小屏幕
 
@@ -26,7 +26,7 @@ permalink: /defensive-css/background-repeat/
 .bg-repeat-1339 {
   background:url(/images/defensive-css/ratio.png);
   background-size:auto 100%;
-  margin:0 auto;
+  margin: 16px auto;
   box-shadow:var(--vp-shadow-2);
   border-radius:5px;
   border:1px solid var(--vp-c-divider);

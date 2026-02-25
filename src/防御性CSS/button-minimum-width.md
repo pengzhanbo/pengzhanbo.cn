@@ -24,7 +24,7 @@ permalink: /defensive-css/button-minimum-width/
 }
 </style>
 
-:::demo-wrapper
+:::window
 英语：
 <button type="button" class="btn-width-1339">Done</button>
 
@@ -47,7 +47,7 @@ button {
 }
 ```
 
-:::demo-wrapper
+:::window
 英语：
 <button type="button" class="btn-width-1339 min">Done</button>
 

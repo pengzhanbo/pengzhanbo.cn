@@ -19,7 +19,7 @@ permalink: /defensive-css/scrollbar-on-demand/
 .body-scroll-112 {
   width: 190px;
   height: 270px;
-  margin: 0 auto;
+  margin: 16px auto;
   overflow-y: auto;
   background: var(--vp-c-bg);
   border-radius: 5px;
@@ -45,7 +45,7 @@ permalink: /defensive-css/scrollbar-on-demand/
 }
 </style>
 
-:::demo-wrapper
+:::window
 
 <p align="center">overflow-y: scroll</p>
 
@@ -70,7 +70,7 @@ permalink: /defensive-css/scrollbar-on-demand/
 使用 `overflow-y: auto` 时，滚动条只有在内容较长时才可见。
 这是更好的 视觉交互体验。
 
-:::demo-wrapper
+:::window
 
 <p align="center">overflow-y: auto</p>
 

@@ -29,7 +29,7 @@ permalink: /defensive-css/auto-fit-fill/
 
 如果只有一个网格项并且使用 `auto-fit` ，则该项目将展开以填充容器宽度。
 
-:::demo-wrapper
+:::window
 四个子项：
 
 <div class="grid-fit-wrapper-191">
@@ -56,6 +56,7 @@ permalink: /defensive-css/auto-fit-fill/
   border-radius: 5px;
   box-shadow: var(--vp-shadow-2);
   background: var(--vp-c-bg);
+  margin: 16px auto;
 }
 .grid-fit-wrapper-191 .grid-item {
   height: 100px;
@@ -68,7 +69,7 @@ permalink: /defensive-css/auto-fit-fill/
 
 在大多数情况下，不需要 这样的行为。所以在我看来，使用 `auto-fill` 会更好。
 
-:::demo-wrapper
+:::window
 四个子项：
 
 <div class="grid-fill-wrapper-191">
@@ -95,6 +96,7 @@ permalink: /defensive-css/auto-fit-fill/
   border-radius: 5px;
   box-shadow: var(--vp-shadow-2);
   background: var(--vp-c-bg);
+  margin: 16px auto;
 }
 .grid-fill-wrapper-191 .grid-item {
   height: 100px;
@@ -125,7 +127,7 @@ permalink: /defensive-css/auto-fit-fill/
 @tab HTML
 
 ```html
-<div class="demo-wrapper">
+<div class="window">
   <div class="wrapper" id="gridWrapper">
     <div class="card">
       <div class="card__thumb"></div>
@@ -148,7 +150,7 @@ permalink: /defensive-css/auto-fit-fill/
 @tab CSS
 
 ```css
-.demo-wrapper {
+.window {
   position: relative;
   width: 300px;
   max-width: 100%;
@@ -161,7 +163,7 @@ permalink: /defensive-css/auto-fit-fill/
   padding-bottom: 1.5rem;
   background: var(--vp-c-bg-alt, #f0f0f0);
 }
-.demo-wrapper::after {
+.window::after {
   content: 'Resize me';
   position: absolute;
   right: 0;

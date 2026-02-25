@@ -46,7 +46,7 @@ permalink: /defensive-css/text-over-image/
 }
 </style>
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <div class="image-wrapper-113">
 <div class="image-cover-113">
@@ -58,7 +58,7 @@ permalink: /defensive-css/text-over-image/
 
 但是，当图片加载失败时, 文本几乎看不见。
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <div class="image-wrapper-113">
 <div class="image-cover-113">
@@ -71,7 +71,7 @@ permalink: /defensive-css/text-over-image/
 我们可以通过为 `<img>` 元素添加背景颜色来解决这个问题。
 仅当图像加载失败时，此背景才可见。
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <div class="image-wrapper-113">
 <div class="image-cover-113">

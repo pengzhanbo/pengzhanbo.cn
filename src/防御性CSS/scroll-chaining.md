@@ -33,7 +33,7 @@ modal 框的外部容器 `body` 元素还会继续滚动。
 }
 </style>
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <div class="body-scroll-110">
   <div class="modal">
@@ -57,7 +57,7 @@ modal 框的外部容器 `body` 元素还会继续滚动。
 }
 ```
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <div class="body-scroll-110">
   <div class="modal overscroll">

@@ -28,7 +28,7 @@ const toggle2 = () => {
 .body-scroll-120 {
   width: 168px;
   height: 270px;
-  margin: 0 auto;
+  margin: 16px auto;
   overflow-y: auto;
   background: var(--vp-c-bg);
   border-radius: 5px;
@@ -66,11 +66,11 @@ const toggle2 = () => {
   color: var(--vp-c-bg);
   padding: 0 10px;
   border-radius: 5px;
-  margin-bottom: 20px;
+  margin: 16px 0;
 }
 </style>
 
-:::demo-wrapper
+:::window
 <button type="button" class="add-btn-120" @click="toggle">
 {{ show ? '重置内容' : '添加内容' }}
 </button>
@@ -93,7 +93,7 @@ const toggle2 = () => {
 }
 ```
 
-:::demo-wrapper
+:::window
 <button type="button" class="add-btn-120" @click="toggle2">
 {{ show2 ? '重置内容' : '添加内容' }}
 </button>

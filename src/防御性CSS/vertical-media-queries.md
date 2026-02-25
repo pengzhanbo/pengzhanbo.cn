@@ -18,6 +18,7 @@ permalink: /defensive-css/vertical-media-queries/
 .flex-box-140 {
   display: flex;
   width: 100%;
+  margin: 16px auto;
 }
 .flex-box-140 aside {
   position: relative;
@@ -72,7 +73,7 @@ permalink: /defensive-css/vertical-media-queries/
 }
 </style>
 
-:::demo-wrapper
+:::window
 
 <div class="flex-box-140">
   <aside>
@@ -95,7 +96,7 @@ permalink: /defensive-css/vertical-media-queries/
 
 但是，如果浏览器窗口的高度较小，辅助导航链接会被挤压，与其他内容发生重叠。
 
-:::demo-wrapper
+:::window
 
 <div class="flex-box-140 min">
   <aside>

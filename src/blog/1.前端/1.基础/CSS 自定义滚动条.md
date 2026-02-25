@@ -11,7 +11,7 @@ permalink: /article/4ef5e74b/
 
 <!-- more -->
 
-:::demo-wrapper img
+:::window
 ![scrollbar intro](/images/scrollbar/scrollbar-intro.jpg)
 :::
 
@@ -21,7 +21,7 @@ permalink: /article/4ef5e74b/
 
 滚动条主要包含两个部分： **滚动轨道 Track** 和 **滑块 Thumb**。
 
-:::demo-wrapper img
+:::window
 ![scrollbar parts](/images/scrollbar/scrollbar-parts.jpg)
 :::
 
@@ -30,7 +30,7 @@ permalink: /article/4ef5e74b/
 滚动条可以出现在 **水平** 或者 **垂直** 方向，而且在 多语言环境下，也会随着 从左到右 `LTR` 和 从右到左 `RTL`
 而变化。
 
-:::demo-wrapper img
+:::window
 ![scrollbar places dir](/images/scrollbar/scrollbar-places-dir.jpg)
 :::
 
@@ -111,7 +111,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 
 你有没有想过，当内容在滚动容器中增加时，我们如何避免布局变化？让我们以以下案例为例。
 
-:::demo-wrapper img
+:::window
 ![scrollbar gutter](/images/scrollbar/scrollbar-gutter-1.jpg)
 :::
 
@@ -130,7 +130,7 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 
 当内容增长时，将显示滚动条，从而减少内容的可用空间。
 
-:::demo-wrapper img
+:::window
 ![scrollbar gutter](/images/scrollbar/scrollbar-gutter-2.jpg)
 :::
 
@@ -149,13 +149,13 @@ Track 表示滚动条的底部，我们可以通过添加 `background-color`、`
 }
 ```
 
-:::demo-wrapper img
+:::window
 ![scrollbar gutter](/images/scrollbar/scrollbar-gutter-3.jpg)
 :::
 
 当内容增加时，就不会影响布局的空间变化，因为浏览器已经为 滚动条预留了空间。
 
-:::demo-wrapper
+:::window
 ![scrollbar gutter](/images/scrollbar/scrollbar-gutter-4.jpg)
 :::
 
@@ -231,13 +231,13 @@ html {
 默认的滚动条在 不同的操作系统之中是不同的。
 
 在 MacOS Safari 中， Track 两侧都有边框， 背景色为纯色，Thumb 是圆形的，左右两侧都有空间。
-:::demo-wrapper img
+:::window
 ![scrollbar use case](/images/scrollbar/use-case-1.jpg)
 :::
 而在 MacOS Chrome 中，Track 是透明的，`Thumb` 是原型的，而且整个滚动条只在滚动时才显示，且不占据空间。
 
 在 Windows 中，Track 是 灰色背景，Thumb 是 矩形的。
-::: demo-wrapper img
+::: window
 ![scrollbar use case](/images/scrollbar/use-case-1-2.jpg)
 :::
 
@@ -264,7 +264,7 @@ html {
 为 `Track` 和 `Thumb` 添加 `border-radius` 是必要的，因为 `border-radius` 无法在 `::-webkit-scrollbar`
 上生效。
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <style scoped>
 .container-demo-1 {
@@ -317,7 +317,7 @@ html {
 }
 ```
 
-:::demo-wrapper no-padding title="渐变"
+:::window gap=0 title="渐变"
 
 <style scoped>
 .container-demo-2 {
@@ -358,7 +358,7 @@ html {
 }
 ```
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <style scoped>
 .container-demo-3 {
@@ -403,7 +403,7 @@ html {
 }
 ```
 
-:::demo-wrapper no-padding
+:::window gap=0
 
 <div class="container-demo-3 border"><div class="content"></div></div>
 :::
@@ -422,7 +422,7 @@ html {
 }
 ```
 
-:::demo-wrapper no-padding title="Thumb 带间隔"
+:::window gap=0 title="Thumb 带间隔"
 
 <style scoped>
 .container-demo-4 {
@@ -477,7 +477,7 @@ html {
 
 同时，在使用新语法上，我们还可以添加 过渡效果，但是在 旧语法 上则不支持。
 
-:::demo-wrapper no-padding title="hover 效果"
+:::window gap=0 title="hover 效果"
 
 <style scoped>
 .container-demo-5 {

@@ -10,7 +10,7 @@ permalink: /defensive-css/image-distortion/
 
 在下面的示例中，我们有一个带有照片的卡片组件。看起来不错。
 
-:::demo-wrapper
+:::window
 
 <div style="width:200px;margin:20px auto;padding-bottom:10px;border-radius:5px;overflow:hidden;box-shadow:var(--vp-shadow-2)">
   <div style="width: 200px;height:133px;overflow:hidden">
@@ -23,7 +23,7 @@ permalink: /defensive-css/image-distortion/
 
 当时，如果使用的图片的尺寸横纵比不一致，图片会被拉伸：
 
-:::demo-wrapper
+:::window
 
 <div style="width:200px;margin:20px auto;padding-bottom:10px;border-radius:5px;overflow:hidden;box-shadow:var(--vp-shadow-2)">
   <div style="width: 200px;height:133px;overflow:hidden">

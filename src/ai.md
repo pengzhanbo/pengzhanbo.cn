@@ -1040,3 +1040,7 @@ AI 模型网页版对话应用，通常免费使用
 - [awesome-chatgpt-prompts - 优质的 ChatGPT 提示词](https://github.com/f/awesome-chatgpt-prompts)
 
 <!-- 检测 AI 率：https://www.zerogpt.com/ -->
+
+## 其它
+
+[https://ai-bot.cn/](https://ai-bot.cn/){.readmore}

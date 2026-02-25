@@ -15,7 +15,7 @@ CSS FlexBox 的 最小内容大小：
   align-items: center;
   width: 250px;
   padding: 10px;
-  margin: 0 auto;
+  margin: 16px auto;
   border-radius: 5px;
   border: solid 1px var(--vp-c-divider);
   background-color: var(--vp-c-bg);
@@ -37,7 +37,7 @@ CSS FlexBox 的 最小内容大小：
 }
 </style>
 
-:::demo-wrapper
+:::window
 
 <div class="card-120">
   <div class="card-120__thumb"></div>
@@ -66,7 +66,7 @@ CSS FlexBox 的 最小内容大小：
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="card-120">
   <div class="card-120__thumb"></div>

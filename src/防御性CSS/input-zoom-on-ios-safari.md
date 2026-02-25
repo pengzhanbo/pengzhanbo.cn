@@ -10,7 +10,7 @@ permalink: /defensive-css/input-zoom-on-ios-safari/
 这是 Safari 的默认行为。虽然在输入时方法 `input` 输入框，可以让用户看到 更大的文字，
 但是，不再聚焦 `input` 元素，离开输入框后，整个网页并不会缩小复原，这就很让人恼了。
 
-:::demo-wrapper img no-padding
+:::window
 <img src="/images/defensive-css/input-zoom-ios.png" alt="input-zoom-on-ios-safari" />
 :::
 
@@ -22,6 +22,6 @@ input {
 }
 ```
 
-:::demo-wrapper img no-padding
+:::window
 <img src="/images/defensive-css/input-zoom-ios-fix.png" alt="input-zoom-on-ios-safari" />
 :::

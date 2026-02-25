@@ -43,7 +43,7 @@ permalink: /defensive-css/using-space-between/
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <p align="center">justify-content: space-between</p>
 
@@ -81,7 +81,7 @@ permalink: /defensive-css/using-space-between/
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <p align="center">gap: 1rem</p>
 

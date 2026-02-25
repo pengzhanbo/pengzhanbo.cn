@@ -15,12 +15,13 @@ permalink: /defensive-css/sticky-with-grid/
   grid-template-columns: 140px 1fr;
   grid-gap: 20px;
   height: 400px;
+  margin: 16px 0;
 }
 .grid-box-112 aside {
   position: sticky;
   top: calc(var(--vp-nav-height) + 20px);
   height: 250px;
-  background: var(--vp-c-bg);
+  background: var(--vp-c-bg-soft);
   border-radius: 5px;
   padding: 20px 0;
   text-align: center;
@@ -38,7 +39,7 @@ permalink: /defensive-css/sticky-with-grid/
 }
 </style>
 
-:::demo-wrapper
+:::window
 
 <div class="grid-box-112">
   <aside>aside</aside>
@@ -55,7 +56,7 @@ aside {
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="grid-box-112">
   <aside class="start">aside</aside>

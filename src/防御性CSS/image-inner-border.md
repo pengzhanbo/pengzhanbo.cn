@@ -16,7 +16,7 @@ permalink: /defensive-css/image-inner-border/
   height: 64px;
   border-radius: 50%;
   overflow: hidden;
-  margin: auto;
+  margin: 16px auto;
 }
 .avatar-110 img {
   object-fit: cover;
@@ -40,7 +40,7 @@ permalink: /defensive-css/image-inner-border/
 }
 </style>
 
-::::demo-wrapper
+::::window
 :::center
 
 <div class="avatar-110"><img src="/images/blogger-fav.png" alt=""></div>
@@ -73,7 +73,7 @@ permalink: /defensive-css/image-inner-border/
 }
 ```
 
-::::demo-wrapper
+::::window
 :::center
 
 <div class="avatar-110 inner"><img src="/images/blogger-fav.png" alt=""></div>

@@ -8,7 +8,7 @@ permalink: /defensive-css/long-content/
 
 这是常见的联系人列表，现在看起来很完美。
 
-:::demo-wrapper
+:::window
 
 <div class="demo1-user-list">
   <div class="demo1-user-list__item"><span></span><p>老王</p></div>
@@ -58,7 +58,7 @@ permalink: /defensive-css/long-content/
 
 如：
 
-:::demo-wrapper
+:::window
 
 <div class="demo1-user-list">
   <div class="demo1-user-list__item"><span></span><p>隔壁家的老王</p></div>
@@ -78,7 +78,7 @@ permalink: /defensive-css/long-content/
 }
 ```
 
-:::demo-wrapper
+:::window
 
 <div class="demo1-user-list">
   <div class="demo1-user-list__item"><span></span><p class="username">隔壁家的老王</p></div>
