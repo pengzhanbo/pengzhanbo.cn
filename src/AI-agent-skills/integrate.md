@@ -48,7 +48,7 @@ copyright:
 
 ### 解析 frontmatter {#parsing-frontmatter}
 
-```
+```txt
 function parseMetadata(skillPath):
     content = readFile(skillPath + "/SKILL.md")
     frontmatter = extractYAMLFrontmatter(content)

@@ -44,7 +44,7 @@ permalink: /article/wucfrrye/
 :::code-tabs
 @tab 场景解读
 
-```
+```txt
 // 情况1: 无鼠标，纯触屏设备（如手机、iPad）
 // any-hover 不匹配
 // hover 不匹配
@@ -60,7 +60,7 @@ permalink: /article/wucfrrye/
 
 @tab 总结
 
-```
+```txt
 💡 简单来说，`any-hover` 只要系统有一个能悬停的输入设备就匹配，而 `hover` 只有当==主==输入设备支持悬停才匹配。
 ```
 

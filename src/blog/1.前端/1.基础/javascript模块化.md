@@ -105,7 +105,7 @@ AMD 采用 **异步加载模块** 的方式。
 
 AMD规范仅定义了一个 `define` 函数，它是一个全局变量：
 
-```
+```txt
 define(id?, dependencies?, factory);
 ```
 
@@ -120,7 +120,7 @@ CMD规范，即 公共模块定义([Common Module Definition](https://github.com
 
 CMD规范 定义了 一个 `define` 函数，它是一个全局变量：
 
-```
+```txt
 define(id?, dependencies?, factory);
 ```
 

@@ -86,7 +86,7 @@ content: "第" counter(chapter) "章：";
 
 现实中的文档往往需要多级编号，比如：
 
-```
+```txt
 1. 前端技术
   1.1 HTML
   1.2 CSS

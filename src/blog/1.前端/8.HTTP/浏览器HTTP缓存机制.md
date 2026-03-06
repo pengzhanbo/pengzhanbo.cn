@@ -157,7 +157,7 @@ Expires 字段虽然能够定义缓存有效时间，但是这个时间的设置
 
 Cache-Control 语法如下：
 
-```
+```txt
 Cache-Control: <cache-directive>
 ```
 
@@ -195,7 +195,7 @@ Cache-Control: <cache-directive>
 
 - `Cache-Control` 允许自由组合可选值：
 
-  ```
+  ```txt
   Cache-Control: max-age=3600, must-revalidate
   ```
 
@@ -229,7 +229,7 @@ http1.1 新增了 `Last-Modified`、`ETag`、 `If-Match`、`If-None-Match`、`If
 
 - `If-Modified-Since`: 该字段格式如下
 
-  ```
+  ```txt
   If-Modified-Since: <Last-Modified-Value>
   ```
 
@@ -239,7 +239,7 @@ http1.1 新增了 `Last-Modified`、`ETag`、 `If-Match`、`If-None-Match`、`If
 
 - `If-Unmodified-Since`: 该字段格式如下
 
-  ```
+  ```txt
   If-Unmodified-Since: <Last-Modified-Value>
   ```
 
@@ -256,7 +256,7 @@ Last-Modified 由于是使用的资源最后修改时间来确定资源是否有
 
 服务器会通过某种算法，给资源计算得出一个唯一标识符，在把资源响应给客户端的时候，会在实体首部加上该字段一起返回给客户端。
 
-```
+```txt
 ETag: ETag-Value
 ```
 
@@ -268,7 +268,7 @@ ETag: ETag-Value
 
 - `If-None-Match` 该字段格式如下
 
-  ```
+  ```txt
   If-None-Match: <ETag-Value>
   ```
 
@@ -278,7 +278,7 @@ ETag: ETag-Value
 
 - `If-Match` 该字段格式如下
 
-  ```
+  ```txt
   If-Match: <ETag-Value>
   ```
 
@@ -305,7 +305,7 @@ ETag: ETag-Value
 
 而 Vary 则是用于处理这类问题的头部字段，只需要在响应报文加上：
 
-```
+```txt
 Vary: User-Agent
 ```
 
@@ -313,7 +313,7 @@ Vary: User-Agent
 
 Vary 字段也接受条件组合的形式
 
-```
+```txt
 Vary: User-Agent, Accept-Encoding
 ```
 

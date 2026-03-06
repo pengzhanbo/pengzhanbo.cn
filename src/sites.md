@@ -81,7 +81,9 @@ article: false
   <LinkCard title="Egg" icon="https://www.eggjs.org/logo.svg" href="https://eggjs.org/" />
   <LinkCard title="Midway" icon="https://midwayjs.org/img/logo.svg" href="https://midwayjs.org/" />
   <LinkCard title="Thinkjs" icon="https://thinkjs.org/static/img/new/logo.png" href="https://thinkjs.org/" />
-  <LinkCard title="Adonis" icon="https://adonisjs.com/icons/favicon-32x32.png" href="https://adonisjs.com/" />
+  <LinkCard title="Adonis" icon="https://adonisjs.com/assets/apple-icon-180x180-9a7N4Jr0.png" href="https://adonisjs.com/" />
+  <LinkCard title="Honojs" icon="https://hono.dev/images/logo.svg" href="https://hono.dev/" />
+  <LinkCard title="Elysia" icon="https://elysiajs.com/assets/elysia.svg" href="https://elysiajs.com/" />
 </CardGrid>
 
 ### 微前端

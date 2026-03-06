@@ -67,7 +67,7 @@ permalink: /article/exports-esm-and-cjs/
 const pkg = require('esm-only-package')
 ```
 
-```
+```txt
 Error [ERR_REQUIRE_ESM]: require() of ES Module esm-only-package not supported.
 ```
 

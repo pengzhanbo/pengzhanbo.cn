@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.30.3",
   "description": "My personal blog site",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -15,21 +15,21 @@
     "gen:font": "tsx ./scripts/web-fonts.ts"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.443",
+    "@iconify/json": "^2.2.446",
     "@pengzhanbo/utils": "^3.3.1",
     "@vuepress/bundler-vite": "2.0.0-rc.26",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.123",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.123",
     "@vuepress/shiki-twoslash": "2.0.0-rc.123",
     "gitmojis": "^3.15.0",
-    "katex": "^0.16.33",
+    "katex": "^0.16.35",
     "mermaid": "^11.12.3",
     "vue": "^3.5.29",
     "vuepress": "2.0.0-rc.26",
-    "vuepress-theme-plume": "1.0.0-rc.191"
+    "vuepress-theme-plume": "1.0.0-rc.192"
   },
   "devDependencies": {
-    "@pengzhanbo/eslint-config-vue": "^2.0.1",
+    "@pengzhanbo/eslint-config-vue": "^2.1.0",
     "@types/express": "^5.0.6",
     "dotenv": "^17.3.1",
     "eslint": "^10.0.2",
@@ -47,10 +47,11 @@
     ],
     "patchedDependencies": {
       "floating-vue@5.2.2": "patches/floating-vue@5.2.2.patch"
-    },
-    "overrides": {
-      "@vueuse/core": "^14.2.1",
-      "markdown-it": "^14.1.1"
     }
+  },
+  "resolutions": {
+    "@vueuse/core": "^14.2.1",
+    "markdown-it": "^14.1.1",
+    "vite": "^8.0.0-beta.16"
   }
 }

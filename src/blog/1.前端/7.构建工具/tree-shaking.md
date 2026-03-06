@@ -43,7 +43,7 @@ ES6 模块在编译时就能确定导入导出的关系，而 CommonJS 在运行
 
 打包工具会构建模块依赖图：
 
-```
+```txt
 Entry → Module A → Module B → Module C
                 → Module D (未使用)
 ```

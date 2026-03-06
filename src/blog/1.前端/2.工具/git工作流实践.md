@@ -18,7 +18,7 @@ banner: https://assets.processon.com/chart_image/6251bfce1efad407891be6c8.png
 
 典型的软件版本迭代遵循这样的路径：
 
-```
+```txt
 需求评审 → 需求确认 → 开发阶段 → 测试环境测试 → 预生产发布验证 → 生产环境发布验证 → 发布完成
 ```
 

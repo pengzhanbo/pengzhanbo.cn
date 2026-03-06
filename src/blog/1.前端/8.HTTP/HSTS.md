@@ -34,7 +34,7 @@ permalink: /article/1w4onzn1/
 
 `HSTS` 通过声明 `HTTP` 头部字段 `HTTP-Strict-Transport-Security` 来启用和配置策略：
 
-```
+```txt
 Strict-Transport-Security: max-age=<expire-time>
 Strict-Transport-Security: max-age=<expire-time>; includeSubDomains
 Strict-Transport-Security: max-age=<expire-time>; preload
@@ -83,6 +83,6 @@ Chrome、Firefox 等浏览器里，当尝试访问该域名下的内容时，会
 
 当前域名，以及所有子域名，开启 `HSTS`, 过期时间为 一年。
 
-```
+```txt
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```

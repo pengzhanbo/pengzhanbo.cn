@@ -73,7 +73,7 @@ git rebase -i HEAD~5
 
 编辑器将显示类似内容：
 
-```
+```txt
 pick a1b2c3d 添加用户登录功能
 pick e4f5g6h 修复登录bug
 pick h7i8j9k 添加用户注册
@@ -167,7 +167,7 @@ git merge feature-branch
 
 **Merge 后的历史结构：**
 
-```
+```txt
 *   Merge branch 'feature'
 |\
 | * Feature commit 3
@@ -181,7 +181,7 @@ git merge feature-branch
 
 **Rebase 后的历史结构：**
 
-```
+```txt
 * Feature commit 3
 * Feature commit 2
 * Feature commit 1
