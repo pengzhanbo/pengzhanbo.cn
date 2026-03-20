@@ -16,6 +16,7 @@ export default defineCollection({
       prefix: 'about',
       items: [
         'equipping-agents-for-the-real-world-with-agent-skills',
+        '5-agent-skills-design-patterns',
       ],
     },
   ],
