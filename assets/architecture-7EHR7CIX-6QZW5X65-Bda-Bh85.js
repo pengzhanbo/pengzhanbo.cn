@@ -1,0 +1,1 @@
+import{Hr as e}from"./common-yNp3ynXU.js";export{e as createArchitectureServices};
