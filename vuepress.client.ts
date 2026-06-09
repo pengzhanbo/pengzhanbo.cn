@@ -6,7 +6,6 @@ import NpmBadgeGroup from 'vuepress-theme-plume/features/NpmBadgeGroup.vue'
 import PageContextMenu from 'vuepress-theme-plume/features/PageContextMenu.vue'
 import RepoCard from 'vuepress-theme-plume/features/RepoCard.vue'
 import { defineClientConfig } from 'vuepress/client'
-// import Qiniu from '~theme/components/AD/Qiniu.vue'
 import Landing from '~theme/components/Landing.vue'
 import { useStatistics } from '~theme/composables/statistics'
 
@@ -31,7 +30,6 @@ export default defineClientConfig({
   },
   layouts: {
     Layout: h(Layout, null, {
-      // 'aside-top': () => h(Qiniu),
       'doc-title-after': () => h(PageContextMenu),
     }),
   },
