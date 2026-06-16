@@ -18,6 +18,7 @@ export default config({
     'ts/no-unsafe-function-type': 'off',
     'no-debugger': 'off',
     'no-new-func': 'off',
+    'antfu/no-top-level-await': 'off',
     'ts/no-empty-object-type': 'off',
     'ts/ban-ts-comment': 'off',
     '@typescript-eslint/prefer-literal-enum-member': 'off',
