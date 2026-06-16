@@ -1,0 +1,429 @@
+---
+url: /article/d5z98qs5/index.md
+---
+在 JavaScript 的发展历程中，ES6 引入了一个革命性的新特性——**Symbol**。作为 JavaScript 的第七种原始数据类型，Symbol 为开发者提供了创建唯一标识符的能力，从根本上解决了属性名冲突的问题。
+
+## 什么是 Symbol？
+
+Symbol 是一种新的**原始数据类型**（primitive type），与 `string`、`number`、`boolean` 等并列。它的核心特性是**唯一性**——每个 Symbol 值都是独一无二的。
+
+```javascript
+// 创建 Symbol
+const symbol1 = Symbol('')
+const symbol2 = Symbol('')
+
+console.log(symbol1 === symbol2) // false
+console.log(typeof symbol1) // 'symbol'
+```
+
+:::tip 关键特性
+
+* 每个 Symbol 都是唯一的，即使描述相同
+* 不可变性：一旦创建就不能修改
+* 原始类型：`typeof` 返回 `'symbol'`
+  :::
+
+## Symbol 的基本用法
+
+### 创建 Symbol
+
+```javascript
+// 无描述创建
+// eslint-disable-next-line symbol-description
+const sym1 = Symbol()
+
+// 带描述创建（仅用于调试）
+const sym2 = Symbol('description')
+const sym3 = Symbol('description')
+
+console.log(sym2 === sym3) // false - 即使描述相同，值也不同
+```
+
+### 描述信息的获取
+
+```javascript
+const sym = Symbol('用户ID')
+console.log(sym.description) // '用户ID' (ES2019+)
+console.log(sym.toString()) // 'Symbol(用户ID)'
+```
+
+## Symbol 的核心应用场景
+
+### 1. 作为对象属性键
+
+Symbol 的主要价值在于作为对象的属性名，彻底避免命名冲突。
+
+```javascript
+const USER_ID = Symbol('user_id')
+const USER_NAME = Symbol('user_name')
+
+const user = {
+  [USER_ID]: '12345',
+  [USER_NAME]: '张三',
+  age: 25
+}
+
+console.log(user[USER_ID]) // '12345'
+console.log(user[USER_NAME]) // '张三'
+```
+
+:::warning 重要特性
+Symbol 属性在常规遍历中**不可见**：
+
+```javascript
+const obj = {
+  [Symbol('hidden')]: '隐藏属性',
+  visible: '可见属性'
+}
+
+console.log(Object.keys(obj)) // ['visible']
+console.log(Object.getOwnPropertyNames(obj)) // ['visible']
+
+for (let key in obj) {
+  console.log(key) // 只输出 'visible'
+}
+```
+
+:::
+
+### 2. 获取 Symbol 属性
+
+虽然 Symbol 属性在常规遍历中不可见，但可以通过专门的方法访问：
+
+```javascript
+const obj = {
+  [Symbol('secret')]: '机密数据',
+  public: '公开数据'
+}
+
+// 获取所有 Symbol 属性
+const symbols = Object.getOwnPropertySymbols(obj)
+console.log(symbols) // [Symbol(secret)]
+console.log(obj[symbols[0]]) // '机密数据'
+
+// 获取所有键（包括 Symbol）
+const allKeys = Reflect.ownKeys(obj)
+console.log(allKeys) // ['public', Symbol(secret)]
+```
+
+### 3. 替代常量定义
+
+传统字符串常量容易因拼写错误导致 bug，而 Symbol 从根本上解决了这个问题。
+
+:::code-tabs
+@tab 传统方式（易出错）
+
+```javascript
+const STATUS = {
+  PENDING: 'pending',
+  SUCCESS: 'succes' // 拼写错误！
+}
+
+function handleStatus(status) {
+  if (status === STATUS.SUCCES) { // 这里也拼写错误
+    // 永远不会执行
+  }
+}
+```
+
+@tab Symbol 方式（安全）
+
+```javascript
+const STATUS = {
+  PENDING: Symbol('pending'),
+  SUCCESS: Symbol('success'),
+  ERROR: Symbol('error')
+}
+
+function handleStatus(status) {
+  if (status === STATUS.SUCCESS) { // 引用正确，不会出错
+    console.log('操作成功')
+  }
+}
+```
+
+:::
+
+### 4. 模拟私有属性
+
+在 ES6 引入真正的私有字段之前，Symbol 是模拟私有属性的最佳方案。
+
+```javascript title="user.js"
+const PASSWORD = Symbol('password')
+
+class User {
+  constructor(username, password) {
+    this.username = username
+    this[PASSWORD] = password
+  }
+
+  checkPassword(inputPassword) {
+    return this[PASSWORD] === inputPassword
+  }
+}
+
+export default User
+```
+
+```javascript title="main.js"
+import User from './user.js'
+
+const user = new User('admin', '123456')
+
+console.log(user.checkPassword('123456')) // true
+console.log(user.PASSWORD) // undefined
+console.log(user[Symbol('password')]) // undefined - 无法访问
+```
+
+## 全局 Symbol 注册表
+
+如果需要在不同地方共享同一个 Symbol，可以使用全局注册表。
+
+### Symbol.for() 和 Symbol.keyFor()
+
+```javascript
+// 创建或获取全局 Symbol
+const globalSym1 = Symbol.for('app.config')
+const globalSym2 = Symbol.for('app.config')
+
+console.log(globalSym1 === globalSym2) // true
+
+// 获取全局 Symbol 的描述
+console.log(Symbol.keyFor(globalSym1)) // 'app.config'
+
+// 非全局 Symbol 返回 undefined
+const localSym = Symbol('local')
+console.log(Symbol.keyFor(localSym)) // undefined
+```
+
+:::info 使用场景
+全局 Symbol 适合在多个模块间共享配置、状态或标识符，确保使用同一个 Symbol 实例。
+:::
+
+## 内置 Symbol 值（Well-known Symbols）
+
+ES6 提供了一系列内置 Symbol，用于定制对象的内部行为。
+
+### Symbol.iterator - 定义迭代器
+
+```javascript
+class Range {
+  constructor(start, end) {
+    this.start = start
+    this.end = end
+  }
+
+  [Symbol.iterator]() {
+    let current = this.start
+    const end = this.end
+
+    return {
+      next() {
+        if (current <= end) {
+          return { value: current++, done: false }
+        }
+        return { done: true }
+      }
+    }
+  }
+}
+
+const range = new Range(1, 3)
+for (const num of range) {
+  console.log(num) // 1, 2, 3
+}
+```
+
+### Symbol.toStringTag - 自定义类型标签
+
+```javascript
+class Collection {
+  constructor() {
+    this.items = []
+  }
+
+  get [Symbol.toStringTag]() {
+    return 'CustomCollection'
+  }
+}
+
+const coll = new Collection()
+console.log(Object.prototype.toString.call(coll)) // '[object CustomCollection]'
+```
+
+### Symbol.toPrimitive - 类型转换控制
+
+```javascript
+const temperature = {
+  value: 25,
+  unit: '°C',
+
+  [Symbol.toPrimitive](hint) {
+    switch (hint) {
+      case 'string':
+        return `${this.value}${this.unit}`
+      case 'number':
+        return this.value
+      default:
+        return this.value.toString()
+    }
+  }
+}
+
+console.log(String(temperature)) // "25°C"
+console.log(Number(temperature)) // 25
+console.log(temperature + 5) // 30
+```
+
+### 其他重要内置 Symbol
+
+* **Symbol.hasInstance**: 自定义 `instanceof` 行为
+* **Symbol.isConcatSpreadable**: 控制数组连接时的展开行为
+* **Symbol.species**: 指定派生对象的构造函数
+* **Symbol.match/replace/search/split**: 自定义字符串匹配行为
+
+## Symbol 与 JSON
+
+:::caution 注意
+Symbol 属性在 JSON 序列化时会被完全忽略：
+
+```javascript
+const obj = {
+  name: 'Alice',
+  [Symbol('id')]: 123
+}
+
+console.log(JSON.stringify(obj)) // '{"name":"Alice"}'
+```
+
+:::
+
+## 实际开发中的最佳实践
+
+### 1. 库开发中的属性扩展
+
+```javascript
+// 安全地为内置对象添加扩展
+const CUSTOM_FILTER = Symbol('customFilter')
+
+// eslint-disable-next-line no-extend-native
+Array.prototype[CUSTOM_FILTER] = function (predicate) {
+  const result = []
+  for (let i = 0; i < this.length; i++) {
+    if (predicate(this[i], i, this)) {
+      result.push(this[i])
+    }
+  }
+  return result
+}
+
+const numbers = [1, 2, 3, 4, 5]
+const evens = numbers[CUSTOM_FILTER](n => n % 2 === 0)
+console.log(evens) // [2, 4]
+```
+
+### 2. 元数据存储
+
+```javascript
+const METADATA = Symbol('metadata')
+
+class ApiClient {
+  constructor(baseURL) {
+    this.baseURL = baseURL
+    this[METADATA] = {
+      requestCount: 0,
+      lastRequest: null
+    }
+  }
+
+  async get(url) {
+    this[METADATA].requestCount++
+    this[METADATA].lastRequest = new Date()
+
+    // 实际的请求逻辑...
+    console.log(`请求 ${this.baseURL}${url}`)
+  }
+
+  getStats() {
+    return { ...this[METADATA] }
+  }
+}
+
+const client = new ApiClient('https://api.example.com')
+await client.get('/users')
+console.log(client.getStats()) // { requestCount: 1, lastRequest: ... }
+```
+
+### 3. 事件系统
+
+```javascript
+const EVENT_TYPES = {
+  CLICK: Symbol('click'),
+  HOVER: Symbol('hover'),
+  FOCUS: Symbol('focus')
+}
+
+class EventEmitter {
+  constructor() {
+    this.listeners = new Map()
+  }
+
+  on(eventType, handler) {
+    if (!this.listeners.has(eventType)) {
+      this.listeners.set(eventType, new Set())
+    }
+    this.listeners.get(eventType).add(handler)
+  }
+
+  emit(eventType, data) {
+    const handlers = this.listeners.get(eventType)
+    if (handlers) {
+      handlers.forEach(handler => handler(data))
+    }
+  }
+}
+
+const emitter = new EventEmitter()
+emitter.on(EVENT_TYPES.CLICK, (data) => {
+  console.log('点击事件:', data)
+})
+
+emitter.emit(EVENT_TYPES.CLICK, { x: 100, y: 200 })
+```
+
+## 注意事项和限制
+
+:::important 重要提醒
+
+1. **类型转换限制**: Symbol 不能隐式转换为字符串或数字
+
+   ```javascript
+   const sym = Symbol('test')
+   // console.log('Symbol: ' + sym); // TypeError!
+   console.log(String(sym)) // 正确方式
+   ```
+
+2. **不是真正的私有**: 通过 `Object.getOwnPropertySymbols()` 仍然可以访问
+
+3. **模块依赖**: 模拟私有属性时，Symbol 必须在同一模块中定义
+   :::
+
+## 总结
+
+Symbol 作为 ES6 引入的重要特性，为 JavaScript 带来了：
+
+* **🎯 唯一性保障**: 从根本上解决属性名冲突
+* **🔒 半私有属性**: 提供比字符串键更隐蔽的属性定义
+* **⚙️ 元编程能力**: 通过内置 Symbol 定制对象行为
+* **🔄 跨模块共享**: 全局 Symbol 注册表支持
+
+在实际开发中，Symbol 特别适合：
+
+* 库和框架开发
+* 需要避免属性冲突的场景
+* 定义内部元数据
+* 实现自定义迭代器和类型转换
+
+虽然 ES2022 引入了真正的私有字段（`#` 语法），但 Symbol 在避免命名冲突和元编程方面仍然具有不可替代的价值。
+
+\==掌握 Symbol 是深入理解现代 JavaScript 的关键一步=={.success}，它为我们提供了更安全、更灵活的编程模式。
