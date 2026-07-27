@@ -16,6 +16,6 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true
   },
-  "include": ["**/.vuepress/**/*", "vuepress.client.ts", "vuepress.config.ts"],
+  "include": ["**/.vuepress/**/*", "vuepress.client.ts", "vuepress.config.ts", "scripts/**/*"],
   "exclude": ["node_modules", ".cache", ".temp", "dist"]
 }

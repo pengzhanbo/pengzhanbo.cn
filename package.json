@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@11.9.0",
+  "packageManager": "pnpm@11.17.0",
   "description": "My personal blog site",
   "author": "pengzhanbo",
   "license": "GPL-3.0",
@@ -15,27 +15,27 @@
     "gen:font": "tsx ./scripts/web-fonts.ts"
   },
   "dependencies": {
-    "@iconify/json": "^2.2.495",
-    "@pengzhanbo/utils": "^3.7.3",
+    "@iconify/json": "^2.2.505",
+    "@pengzhanbo/utils": "^3.9.0",
     "@vuepress/bundler-vite": "2.0.0-rc.30",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.131",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.130",
     "@vuepress/shiki-twoslash": "2.0.0-rc.131",
     "gitmojis": "^3.15.0",
-    "katex": "^0.17.0",
+    "katex": "^0.18.1",
     "mermaid": "^11.16.0",
     "vuepress": "2.0.0-rc.30",
     "vuepress-theme-plume": "1.0.0-rc.204"
   },
   "devDependencies": {
-    "@pengzhanbo/eslint-config-vue": "^2.7.0",
+    "@pengzhanbo/eslint-config-vue": "^2.7.1",
     "@types/express": "^5.0.6",
-    "@types/node": "^26.1.0",
+    "@types/node": "^26.1.1",
     "dotenv": "^17.4.2",
-    "eslint": "^10.6.0",
+    "eslint": "^10.7.0",
     "http-server": "^14.1.1",
     "tsconfig-vuepress": "^7.0.0",
-    "tsx": "^4.23.0",
+    "tsx": "^4.23.1",
     "typescript": "^6.0.3"
   }
 }
