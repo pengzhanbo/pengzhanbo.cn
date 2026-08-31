@@ -1004,29 +1004,57 @@ AI 模型网页版对话应用，通常免费使用
 <AIModels :list="[
   { name: 'Cursor', logo: 'https://cursor.com/marketing-static/icon-192x192.png', url: 'https://cursor.com/cn' },
   { name: 'Windsurf', logo: 'https://windsurf.com/favicon.svg', url: 'https://windsurf.com/editor', border: true },
-  { name: 'Trae', logo: 'https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png', href: 'https://www.trae.cn/' }
+  { name: 'Trae', logo: 'https://lf-cdn.trae.com.cn/obj/trae-com-cn/trae_website_prod_cn/favicon.png', href: 'https://www.trae.cn/' },
+  {
+    name: 'CodeBuddy',
+    logo: 'https://download.codebuddy.cn/web/website/91541fc9837f594933a81b4d19c295c075b3f329/assets/logo.svg',
+    url: 'https://www.codebuddy.cn/',
+  },
+  { name: 'ZCode', logo: 'https://zcode.z.ai/favicon-192x192.png', url: 'https://zcode.z.ai/cn'},
+  { name: 'Zed', logo: 'https://zed.dev/favicon_black_64.png', url: 'https://zed.dev/' },
+  { name: 'Qoder', logo: 'https://qoder.cn/favIcon.svg', url: 'https://qoder.cn/' },
 ]" />
 
 ### CLI AI 工具
 
 <CardGrid>
-  <RepoCard repo="google-gemini/gemini-cli" />
   <RepoCard repo="anthropics/claude-code" />
+  <RepoCard repo="openai/codex" />
+  <RepoCard repo="deepseek-ai/deepseek-harness" />
+  <RepoCard repo="earendil-works/pi" />
+  <RepoCard repo="anomalyco/opencode" />
+  <RepoCard repo="MoonshotAI/kimi-code" />
+  <RepoCard repo="QwenLM/qwen-code" />
+  <RepoCard repo="google-gemini/gemini-cli" />
+  <RepoCard repo="github/copilot-cli" />
+  <RepoCard repo="esengine/DeepSeek-Reasonix" />
+  <RepoCard repo="Hmbown/CodeWhale" />
+  <RepoCard repo="Kilo-Org/kilocode" />
+  <RepoCard repo="Yeachan-Heo/oh-my-claudecode" />
+  <RepoCard repo="can1357/oh-my-pi" />
   <RepoCard repo="code-yeongyu/oh-my-opencode" />
+  <RepoCard repo="Yeachan-Heo/oh-my-codex" />
 </CardGrid>
 
 ## 优质开源项目
 
 <CardGrid>
   <RepoCard repo="langchain-ai/langchain" />
+  <RepoCard repo="affaan-m/ECC" />
+  <RepoCard repo="x1xhlol/system-prompts-and-models-of-ai-tools" />
   <RepoCard repo="jlowin/fastmcp" />
   <RepoCard repo="openai/tiktoken"/>
-  <RepoCard repo="x1xhlol/system-prompts-and-models-of-ai-tools" />
+  <RepoCard repo="nexu-io/open-design" />
+  <RepoCard repo="bytedance/deer-flow" />
+  <RepoCard repo="headroomlabs-ai/headroom" />
   <RepoCard repo="firecrawl/firecrawl"/>
   <RepoCard repo="transitive-bullshit/agentic" />
+  <RepoCard repo="ruvnet/ruflo" />
   <RepoCard repo="cloudwego/eino" />
   <RepoCard repo="jingyaogong/minimind"/>
+  <RepoCard repo="colbymchenry/codegraph" />
   <RepoCard repo="anthropics/skills" />
+  <RepoCard repo="VoltAgent/awesome-design-md" />
   <RepoCard repo="QuantumNous/new-api" />
   <RepoCard repo="666ghj/BettaFish"/>
   <RepoCard repo="shareAI-lab/share-best-prompt"/>

@@ -60,22 +60,6 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ---
 
-### vite-plugin-image-placeholder
-
-<NpmBadgeGroup repo="pengzhanbo/vite-plugin-image-placeholder">
-  <NpmBadge type="stars" />
-  <NpmBadge type="version" label="npm" />
-  <NpmBadge type="dt" />
-  <NpmBadge type="license" />
-  <NpmBadge type="source" />
-</NpmBadgeGroup>
-
-**说明：**
-
-在项目开发过程中，为未准备好图片资源的内容区域，生成占位图片。
-
----
-
 ### rspack-plugin-mock
 
 <NpmBadgeGroup repo="pengzhanbo/rspack-plugin-mock">
@@ -94,34 +78,84 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ---
 
-### vulcan
+### vitepress-tuck
 
-<NpmBadgeGroup repo="pengzhanbo/vulcan">
+<NpmBadgeGroup repo="pengzhanbo/vitepress-tuck">
   <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dm" />
   <NpmBadge type="license" />
   <NpmBadge type="source" />
 </NpmBadgeGroup>
 
 **说明：**
 
-基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。
+vitepress-tuck 是一个专为 VitePress 设计的插件开发库与插件集合。它通过提供一套简洁统一的插件接口定义和配置合并机制，大幅降低了 VitePress 插件的开发门槛，同时也为插件使用者提供了更友好的接入体验。
+
+- **低门槛** — 插件开发者只需关注核心逻辑，无需处理复杂的 VitePress 配置合并与生命周期编排
+- **易接入** — 插件使用者通过 defineConfig 传入 plugins 数组即可使用，插件自动完成配置注入
+- **渐进兼容** — 所有插件同时兼容 vitepress-tuck 和 VitePress 原生接入方式
+
+vitepress-tuck 当前包含 20+ 个 vitepress 插件，包括但不限于：
+
+- `vitepress-plugin-code-tree` — 代码树插件，用于在文档中展示代码树结构。
+- `vitepress-plugin-file-tree` — 文件树插件，用于在文档中展示文件树结构。
+- `vitepress-plugin-icons` — 图标插件，用于在文档中插入图标。
+- `vitepress-plugin-obsidian` — 兼容 obsidian 官方的 markdown 扩展语法。
+- `vitepress-plugin-steps` — 步骤插件，用于在文档中展示步骤列表。
+- `vitepress-plugin-mermaid-tuck` — Mermaid 插件，用于在文档中插入 Mermaid 图。
+- `vitepress-plugin-plantuml` — PlantUML 插件，用于在文档中插入 PlantUML 图。
+- `vitepress-plugin-repo-card` — 仓库卡片插件，用于在文档中展示 github/gitee 仓库卡片。
+
+[查看 **vitepress-tuck** 使用文档](https://tuck.pengzhanbo.cn){.read-more}
 
 ---
 
-### @any-hooks/solid
+### tiny-image-size
 
-<NpmBadgeGroup repo="any-hooks/solid-hooks" name="@any-hooks/solid">
+<NpmBadgeGroup repo="pengzhanbo/tiny-image-size">
   <NpmBadge type="stars" />
   <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dm" />
   <NpmBadge type="license" />
   <NpmBadge type="source" />
 </NpmBadgeGroup>
 
 **说明：**
 
-一套高质量可靠的 Solidjs Hooks 库。
+零依赖的**图像尺寸检测库** —— 仅解析图像文件头字节即可识别图像类型并解析宽高，无需下载或解码完整图片。
 
-[使用文档](https://solid-hooks.netlify.app/en-US)
+- **仅解析文件头** —— 只需读取文件签名与携带尺寸信息的元数据块，无需依赖完整图像数据
+- **流式友好** —— 只需图片开头的少量字节即可解析出尺寸，可基于文件的部分读取或网络响应的部分数据完成解析，内存占用有界，网络带宽消耗近乎为零
+- 零依赖，单一 ESM 产物（约 10 KB，含类型声明）
+- 完整 TypeScript 类型支持
+- 支持任何 JavaScript 运行环境（Node.js、Bun、Deno、浏览器等）
+- 支持自动检测类型，也可显式指定类型以跳过检测
+- 支持 20 种常见图像格式：
+  `bmp` · `cur` · `dds` · `gif` · `heif` · `icns` · `ico` · `j2c` · `jp2` · `jpg` · `jxl` · `jxl-stream` · `ktx` · `png` · `pnm` · `psd` · `svg` · `tga` · `tiff` · `webp`
+
+---
+
+### chinese-simple2traditional
+
+<NpmBadgeGroup repo="pengzhanbo/chinese-simple2traditional">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dt" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+中文繁简体转换。
+
+- 内置字库，零依赖，支持任何运行环境。
+- 支持 3077+ 常用简体字 和 4919+ 繁体字/异体字。
+- 支持 3577+ 简体短语转繁体的特殊情况。
+- 支持 117+ 繁体短语/异体短语 转简体的特殊情况。
+
+[使用文档](https://github.com/pengzhanbo/chinese-simple2traditional) | [在线演示](https://han-convert.netlify.app/)
 
 ---
 
@@ -159,46 +193,6 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 
 ---
 
-### geo-pattern-ts
-
-<NpmBadgeGroup repo="pengzhanbo/geo-pattern-ts">
-  <NpmBadge type="stars" />
-  <NpmBadge type="version" label="npm" />
-  <NpmBadge type="license" />
-  <NpmBadge type="source" />
-</NpmBadgeGroup>
-
-**说明：**
-
-生成漂亮的SVG图案。
-
-[使用文档](https://github.com/pengzhanbo/geo-pattern-ts) | [在线演示](https://geo-pattern.netlify.app)
-
----
-
-### chinese-simple2traditional
-
-<NpmBadgeGroup repo="pengzhanbo/chinese-simple2traditional">
-  <NpmBadge type="stars" />
-  <NpmBadge type="version" label="npm" />
-  <NpmBadge type="dt" />
-  <NpmBadge type="license" />
-  <NpmBadge type="source" />
-</NpmBadgeGroup>
-
-**说明：**
-
-中文繁简体转换。
-
-- 内置字库，零依赖，支持任何运行环境。
-- 支持 3077+ 常用简体字 和 4919+ 繁体字/异体字。
-- 支持 3577+ 简体短语转繁体的特殊情况。
-- 支持 117+ 繁体短语/异体短语 转简体的特殊情况。
-
-[使用文档](https://github.com/pengzhanbo/chinese-simple2traditional) | [在线演示](https://han-convert.netlify.app/)
-
----
-
 ### caniuse-embed
 
 <NpmBadgeGroup repo="pengzhanbo/caniuse-embed">
@@ -216,6 +210,70 @@ plume 主题尽可能的内置你可能需要的功能，以及搭建站点所�
 显示10个主要浏览器多个版本的功能支持数据。可配置、可靠且完全响应。
 
 [使用文档](https://caniuse-embed.vercel.app/zh-CN)
+
+---
+
+### @any-hooks/solid
+
+<NpmBadgeGroup repo="any-hooks/solid-hooks" name="@any-hooks/solid">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+一套高质量可靠的 Solidjs Hooks 库。
+
+[使用文档](https://solid-hooks.netlify.app/en-US)
+
+---
+
+### vite-plugin-image-placeholder
+
+<NpmBadgeGroup repo="pengzhanbo/vite-plugin-image-placeholder">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="dt" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+在项目开发过程中，为未准备好图片资源的内容区域，生成占位图片。
+
+---
+
+### geo-pattern-ts
+
+<NpmBadgeGroup repo="pengzhanbo/geo-pattern-ts">
+  <NpmBadge type="stars" />
+  <NpmBadge type="version" label="npm" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+生成漂亮的SVG图案。
+
+[使用文档](https://github.com/pengzhanbo/geo-pattern-ts) | [在线演示](https://geo-pattern.netlify.app)
+
+---
+
+### vulcan
+
+<NpmBadgeGroup repo="pengzhanbo/vulcan">
+  <NpmBadge type="stars" />
+  <NpmBadge type="license" />
+  <NpmBadge type="source" />
+</NpmBadgeGroup>
+
+**说明：**
+
+基于 vite + vue3 的项目模板，帮助快速创建 Mobile Web 应用。
 
 ---
 
