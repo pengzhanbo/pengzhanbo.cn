@@ -2,7 +2,6 @@ import process from 'node:process'
 import { viteBundler } from '@vuepress/bundler-vite'
 import { baiduAnalyticsPlugin } from '@vuepress/plugin-baidu-analytics'
 import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
-import dotenv from 'dotenv'
 import { defineUserConfig } from 'vuepress'
 import { fs, getDirname, path, tinyglobby } from 'vuepress/utils'
 import theme from './.vuepress/theme.js'
@@ -13,7 +12,7 @@ const resolve = (...dirs: string[]) => path.resolve(__dirname, ...dirs)
 const isProd = process.env.NODE_ENV === 'production'
 
 if (!process.env.CI) {
-  dotenv.config({ path: '.env.local' })
+  process.loadEnvFile('./.env.local')
 }
 
 export default defineUserConfig({
