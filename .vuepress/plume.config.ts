@@ -8,6 +8,8 @@ export default defineThemeConfig({
   navbar,
   collections,
 
+  readAid: 'left',
+
   profile: {
     name: '鹏展博',
     avatar: '/images/blogger-fav.png',
