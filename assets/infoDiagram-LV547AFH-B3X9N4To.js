@@ -1,0 +1,2 @@
+import{Qr as e,bn as t,pn as n,qn as r,ri as i}from"./common-XHNOHELw.js";var a={parse:i(async t=>{let r=await n(`info`,t);e.debug(r)},`parse`)},o={version:`11.17.2`},s={parser:a,db:{getVersion:i(()=>o.version,`getVersion`)},renderer:{draw:i((n,i,a)=>{e.debug(`rendering info diagram
+`+n);let o=t(i);r(o,100,400,!0),o.append(`g`).append(`text`).attr(`x`,100).attr(`y`,40).attr(`class`,`version`).attr(`font-size`,32).style(`text-anchor`,`middle`).text(`v${a}`)},`draw`)}};export{s as diagram};

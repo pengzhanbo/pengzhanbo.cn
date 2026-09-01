@@ -1,0 +1,1 @@
+import{zt as e}from"./common-XHNOHELw.js";export{e as createArchitectureServices};

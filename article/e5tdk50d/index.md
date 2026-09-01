@@ -1,0 +1,255 @@
+---
+url: /article/e5tdk50d/index.md
+---
+> 掌握类型系统的核心概念，让你的 TypeScript 水平更上一层楼
+
+## 引言：为什么需要了解协变与逆变？
+
+作为 TypeScript 开发者，你可能经常遇到一些看似"不合理"的类型错误。比如，为什么 `string[]` 可以赋值给 `(string | number)[]`，但 `(string | number)[]` 却不能赋值给 `string[]`？这背后就是协变与逆变在起作用。
+
+理解这两个概念不仅能帮你解决日常开发中的类型困惑，还能让你写出更安全、更健壮的类型代码。
+
+## 核心概念：用现实世界类比理解
+
+### 什么是协变（Covariance）？
+
+**简单理解**：协变就是"保持方向一致"。
+
+**现实类比**：
+想象一个宠物店：
+
+* 如果你承诺"我会照顾任何品种的狗"
+* 那么你当然也能"照顾金毛犬"（因为金毛是狗的子类型）
+
+在类型系统中，如果 `金毛犬` 是 `狗` 的子类型，那么 `照顾金毛犬[]` 也是 `照顾狗[]` 的子类型。
+
+```typescript
+// 基础类型
+class Animal { name!: string }
+class Dog extends Animal { bark() {} }
+class Cat extends Animal { meow() {} }
+
+// 协变示例：数组类型
+let dogs: Dog[] = [new Dog(), new Dog()]
+let animals: Animal[] = dogs // ✅ 允许：Dog[] 可以赋值给 Animal[]
+
+// 因为：Dog extends Animal
+// 所以：Dog[] 也 "extends" Animal[] （这就是协变）
+```
+
+### 什么是逆变（Contravariance）？
+
+**简单理解**：逆变就是"方向反转"。
+
+**现实类比**：
+想象一个宠物领养活动：
+
+* 如果你承诺"我能处理任何动物相关的工作"
+* 那么你其实也能"处理狗相关的工作"（因为狗是动物的子类型）
+
+注意这里的方向：`处理动物` 是 `处理狗` 的子类型，方向反了！
+
+```typescript
+// 函数参数类型的逆变
+type AnimalHandler = (animal: Animal) => void
+type DogHandler = (dog: Dog) => void
+
+let handleAnimal: AnimalHandler = (animal: Animal) => {
+  console.log(animal.name)
+}
+
+let handleDog: DogHandler = handleAnimal // ✅ 允许：AnimalHandler 可以赋值给 DogHandler
+
+// 为什么？因为任何需要处理狗的函数，我给它一个能处理所有动物的函数，绝对安全！
+```
+
+## TypeScript 中的协变与逆变实践
+
+### 1. 数组和对象是协变的
+
+这是最常见的协变场景：
+
+```typescript
+// 数组协变
+let stringArray: string[] = ['hello', 'world']
+let stringOrNumberArray: (string | number)[] = stringArray // ✅ 允许
+
+// 对象属性协变
+interface Base {
+  pet: Animal
+}
+
+interface Derived {
+  pet: Dog // Dog 是 Animal 的子类型
+}
+
+let derived: Derived = { pet: new Dog() }
+let base: Base = derived // ✅ 允许
+```
+
+### 2. 函数参数是逆变的
+
+这是 TypeScript 中最重要的逆变场景：
+
+```typescript
+// 函数类型比较
+type ProcessAnimal = (animal: Animal) => void
+type ProcessDog = (dog: Dog) => void
+
+// 这是安全的：能处理所有动物的人，肯定能处理狗
+let processDog: ProcessDog = (dog: Dog) => { /* 只处理狗 */ }
+let processAnimal: ProcessAnimal = processDog // ❌ 错误！为什么？
+
+// 等等，这里为什么报错？
+```
+
+实际上，在 TypeScript 的严格模式下，函数参数是逆变的：
+
+```typescript
+// 正确的逆变示例
+let processAnimal: ProcessAnimal = (animal: Animal) => {
+  console.log(animal.name)
+}
+
+let processDog: ProcessDog = processAnimal // ✅ 允许！
+
+// 理解：任何需要处理狗的地方，我给它一个能处理所有动物的函数，绝对安全
+// 因为 processAnimal 能处理 Animal，当然也能处理 Dog（Dog 是 Animal 的子类型）
+```
+
+### 3. 函数返回值是协变的
+
+```typescript
+type GetAnimal = () => Animal
+type GetDog = () => Dog
+
+let getDog: GetDog = () => new Dog()
+let getAnimal: GetAnimal = getDog // ✅ 允许
+
+// 理解：任何需要返回动物的地方，我给它一个返回狗的函数，完全没问题
+// 因为狗就是动物（Dog extends Animal）
+```
+
+## 实际应用场景
+
+### 场景 1：事件处理函数
+
+```typescript
+// React 事件处理器的类型安全
+interface BaseEvent {
+  preventDefault: () => void
+}
+
+interface MouseEvent extends BaseEvent {
+  clientX: number
+  clientY: number
+}
+
+// 处理基础事件的函数
+function handleBaseEvent(event: BaseEvent) {
+  event.preventDefault()
+}
+
+// 处理鼠标事件的函数
+function handleMouseEvent(event: MouseEvent) {
+  console.log(`Click at: ${event.clientX}, ${event.clientY}`)
+  event.preventDefault()
+}
+
+// 在需要 MouseEventHandler 的地方，我们可以使用更通用的 BaseEventHandler
+let mouseHandler: (event: MouseEvent) => void = handleBaseEvent // ✅ 安全！
+
+// 反过来就不安全：
+// let baseHandler: (event: BaseEvent) => void = handleMouseEvent; // ❌ 危险！
+```
+
+### 场景 2：回调函数类型安全
+
+```typescript
+// 数据处理器
+type DataProcessor<T> = (data: T) => void
+
+// 具体的处理器
+const stringProcessor: DataProcessor<string> = (str) => {
+  console.log(str.toUpperCase())
+}
+
+const anyProcessor: DataProcessor<any> = (data) => {
+  console.log(data)
+}
+
+// 逆变的应用：更通用的处理器可以赋值给更具体的处理器
+let processString: DataProcessor<string> = anyProcessor // ✅ 安全
+
+// 协变的应用（在返回值中）
+type DataFactory<T> = () => T
+
+const stringFactory: DataFactory<string> = () => 'hello'
+const anyFactory: DataFactory<any> = stringFactory // ✅ 安全
+```
+
+### 场景 3：泛型约束
+
+```typescript
+// 协变在 Promise 中的应用
+async function getDog(): Promise<Dog> {
+  return new Dog()
+}
+
+// 可以赋值给返回更通用类型的函数
+async function getAnimal(): Promise<Animal> {
+  return getDog() // ✅ Promise<Dog> 可以赋值给 Promise<Animal>
+}
+
+// 逆变在函数参数中的应用
+function processAnimal(processor: (animal: Animal) => void) {
+  processor(new Animal())
+}
+
+function processDog(processor: (dog: Dog) => void) {
+  processor(new Dog())
+}
+
+// 可以接受更通用的处理器
+processDog((animal: Animal) => console.log(animal.name)) // ✅ 安全
+```
+
+## 记忆技巧与理解要点
+
+### 协变记忆口诀
+
+> "子类型可以替代父类型"
+> 数组、Promise、返回值都遵循这个规则
+
+### 逆变记忆口诀
+
+> "处理父类型的函数可以替代处理子类型的函数"
+> 函数参数遵循这个规则
+
+### 安全原则
+
+始终考虑**类型安全**。TypeScript 的所有类型规则都是为了确保运行时不会出现类型错误。
+
+```typescript
+// 为什么这个不安全？思考一下：
+let animalArray: Animal[] = [new Animal(), new Animal()]
+let dogArray: Dog[] = animalArray // ❌ 错误！
+
+// 如果允许，就会出现这样的运行时错误：
+dogArray[0].bark() // 💥 运行时错误！animal 没有 bark 方法
+```
+
+## 总结
+
+* **协变**：子类型关系保持不变（`Dog[]` 是 `Animal[]` 的子类型）
+* **逆变**：子类型关系反转（`(Animal) => void` 是 `(Dog) => void` 的子类型）
+* **应用**：
+  * 数组、对象属性、Promise、函数返回值：协变
+  * 函数参数：逆变
+* **核心思想**：所有规则都是为了类型安全，防止运行时错误
+
+理解了协变和逆变，你就能真正掌握 TypeScript 类型系统的设计哲学，写出更加类型安全的代码！
+
+## 参考
+
+* [TypeScript 官方文档：类型兼容性](https://www.typescriptlang.org/docs/handbook/type-compatibility.html){.read-more}

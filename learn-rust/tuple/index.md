@@ -1,0 +1,30 @@
+---
+url: /learn-rust/tuple/index.md
+---
+元组是由多种类型组合到一起形成的，因此它是复合类型，元组的长度是固定的，元组中元素的顺序也是固定的。
+
+```rust
+fn main() {
+  let tup: (i32, u32, String) = (10, 20, String::from("hello"));
+  println!("{:?}", tup);
+}
+```
+
+### 模式匹配解构元组
+
+```rust
+fn main() {
+  let tup: (i32, u32, String) = (10, 20, String::from("hello"));
+  let (x, y, s) = tup;
+  println!("{}, {}, {}", x, y, s);
+}
+```
+
+### 用 `.` 访问元组
+
+```rust
+fn main() {
+  let tup: (i32, u32, String) = (10, 20, String::from("hello"));
+  println!("{}, {}, {}", tup.0, tup.1, tup.2);
+}
+```

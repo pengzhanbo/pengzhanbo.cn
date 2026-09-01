@@ -1,0 +1,378 @@
+---
+url: /article/gov29h98/index.md
+---
+在现代前端开发中，异步编程已成为不可或缺的核心技能。无论是处理用户交互、网络请求还是文件操作，异步编程都能帮助我们构建更流畅、响应更快的应用。本文将深入探讨 JavaScript 异步编程的演进历程、核心概念和最佳实践。
+
+## 异步编程的必要性
+
+JavaScript 作为一门单线程语言，如果所有操作都同步执行，遇到耗时任务时就会阻塞整个线程，导致页面卡顿甚至无响应。异步编程通过非阻塞的方式处理这些任务，让主线程能够继续响应其他操作。
+
+:::tip 现实类比
+想象你在餐厅点餐：同步方式就像你站在柜台前等待厨师做好每一道菜才点下一道；异步方式则是你点完所有菜后找个座位等待，期间可以玩手机、聊天，服务员会在菜准备好时通知你。
+:::
+
+## 异步编程的演进历程
+
+### 1. 回调函数（Callback）
+
+回调函数是最基础的异步处理方式：
+
+```javascript title="回调函数示例"
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = { name: 'John', age: 30 }
+    callback(null, data)
+  }, 1000)
+}
+
+fetchData((error, result) => {
+  if (error) {
+    console.error('Error:', error)
+  }
+  else {
+    console.log('Data:', result)
+  }
+})
+```
+
+:::warning 回调地狱
+当多个异步操作需要顺序执行时，回调函数容易形成"金字塔"结构：
+
+```javascript
+getUser(userId, (user) => {
+  getPosts(user.id, (posts) => {
+    getComments(posts[0].id, (comments) => {
+      // 更多嵌套...
+    })
+  })
+})
+```
+
+:::
+
+### 2. Promise
+
+ES6 引入的 Promise 提供了更优雅的异步处理方式：
+
+```javascript title="Promise 基础使用"
+function fetchUser(userId) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (userId) {
+        resolve({ id: userId, name: 'Alice' })
+      }
+      else {
+        reject(new Error('User ID is required'))
+      }
+    }, 1000)
+  })
+}
+
+fetchUser(123)
+  .then((user) => {
+    console.log('User:', user)
+    return user.name
+  })
+  .then((name) => {
+    console.log('Name:', name)
+  })
+  .catch((error) => {
+    console.error('Error:', error)
+  })
+```
+
+::: code-tabs
+@tab Promise.all
+
+```javascript
+// 并行执行多个异步操作
+Promise.all([
+  fetchUser(1),
+  fetchUser(2),
+  fetchUser(3)
+]).then((users) => {
+  console.log('All users:', users)
+}).catch((error) => {
+  console.error('One request failed:', error)
+})
+```
+
+@tab Promise.race
+
+```javascript
+// 获取最先完成的结果
+Promise.race([
+  fetchFromServerA(),
+  fetchFromServerB()
+]).then((firstResult) => {
+  console.log('First response:', firstResult)
+})
+```
+
+:::
+
+### 3. Async/Await
+
+ES2017 引入的 async/await 让异步代码看起来像同步代码：
+
+```javascript title="Async/Await 使用"
+async function getUserData(userId) {
+  try {
+    const user = await fetchUser(userId)
+    const posts = await fetchUserPosts(user.id)
+    const comments = await fetchPostComments(posts[0].id)
+
+    return {
+      user,
+      posts,
+      comments
+    }
+  }
+  catch (error) {
+    console.error('Failed to fetch user data:', error)
+    throw error
+  }
+}
+
+// 使用
+getUserData(123)
+  .then(data => console.log('User data:', data))
+  .catch(error => console.error('Error:', error))
+```
+
+## 异步编程的核心概念
+
+### 1. 事件循环（Event Loop）
+
+JavaScript 的事件循环机制是异步编程的基石：
+
+```javascript title="事件循环示例"
+console.log('Start')
+
+setTimeout(() => {
+  console.log('Timeout 1')
+}, 0)
+
+Promise.resolve().then(() => {
+  console.log('Promise 1')
+})
+
+console.log('End')
+
+// 输出顺序：
+// Start
+// End
+// Promise 1
+// Timeout 1
+```
+
+:::info 执行顺序
+
+* 同步任务立即执行
+* 微任务（Promise）在当前任务结束后立即执行
+* 宏任务（setTimeout）在下一个事件循环中执行
+  :::
+
+### 2. 错误处理
+
+:::steps
+
+* **Promise 错误处理**：
+
+  ```javascript
+  fetchUser(null)
+    .then(user => console.log(user))
+    .catch(error => console.error('Caught:', error))
+  ```
+
+* **Async/Await 错误处理**：
+
+  ```javascript
+  async function safeFetch() {
+    try {
+      const user = await fetchUser(null)
+      return user
+    }
+    catch (error) {
+      console.error('Fetch failed:', error)
+      return null
+    }
+  }
+  ```
+
+* **全局错误处理**：
+
+  ```javascript
+  window.addEventListener('unhandledrejection', (event) => {
+    console.warn('Unhandled promise rejection:', event.reason)
+    event.preventDefault()
+  })
+  ```
+
+:::
+
+## 实际应用场景
+
+### 1. 并发请求优化
+
+```javascript title="并发请求模式"
+async function fetchDashboardData() {
+  const [user, notifications, messages] = await Promise.all([
+    fetchUser(currentUserId),
+    fetchNotifications(),
+    fetchMessages()
+  ])
+
+  return { user, notifications, messages }
+}
+
+// 带错误处理的并发
+async function fetchWithFallback() {
+  try {
+    const data = await Promise.allSettled([
+      fetchFromPrimary(),
+      fetchFromBackup()
+    ])
+
+    const successful = data.find(result => result.status === 'fulfilled')
+    return successful?.value || null
+  }
+  catch (error) {
+    console.error('All requests failed')
+    return null
+  }
+}
+```
+
+### 2. 请求取消
+
+```javascript title="可取消的异步操作"
+class CancelableFetch {
+  constructor() {
+    this.controller = new AbortController()
+  }
+
+  async fetch(url) {
+    try {
+      const response = await fetch(url, {
+        signal: this.controller.signal
+      })
+      return await response.json()
+    }
+    catch (error) {
+      if (error.name === 'AbortError') {
+        console.log('Request was canceled')
+      }
+      throw error
+    }
+  }
+
+  cancel() {
+    this.controller.abort()
+  }
+}
+
+// 使用
+const fetchInstance = new CancelableFetch()
+fetchInstance.fetch('/api/data')
+  .then(data => console.log(data))
+  .catch(error => console.error(error))
+
+// 需要时取消
+// fetchInstance.cancel();
+```
+
+## 性能优化技巧
+
+### 1. 防抖与节流
+
+::: code-tabs
+@tab 防抖
+
+```javascript
+function debounce(func, wait) {
+  let timeout
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout)
+      func(...args)
+    }
+    clearTimeout(timeout)
+    timeout = setTimeout(later, wait)
+  }
+}
+
+// 搜索框使用
+const search = debounce((query) => {
+  fetchResults(query)
+}, 300)
+```
+
+@tab 节流
+
+```javascript
+function throttle(func, limit) {
+  let inThrottle
+  return function (...args) {
+    if (!inThrottle) {
+      func.apply(this, args)
+      inThrottle = true
+      setTimeout(() => inThrottle = false, limit)
+    }
+  }
+}
+
+// 滚动事件使用
+window.addEventListener('scroll', throttle(() => {
+  checkPosition()
+}, 100))
+```
+
+:::
+
+### 2. 懒加载与预加载
+
+```javascript title="图片懒加载"
+class LazyLoader {
+  constructor() {
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.loadImage(entry.target)
+          this.observer.unobserve(entry.target)
+        }
+      })
+    })
+  }
+
+  observe(element) {
+    this.observer.observe(element)
+  }
+
+  loadImage(img) {
+    const src = img.getAttribute('data-src')
+    if (src) {
+      img.src = src
+      img.removeAttribute('data-src')
+    }
+  }
+}
+```
+
+## 最佳实践总结
+
+:::important 关键要点
+
+1. **优先使用 async/await**：代码更清晰，错误处理更简单
+2. **合理处理错误**：不要忽略 Promise 拒绝，使用 try-catch 或 .catch()
+3. **避免过度嵌套**：使用 Promise.all 处理并行任务
+4. **考虑性能影响**：适当使用防抖、节流和懒加载
+5. **提供加载状态**：给用户明确的反馈
+6. **测试异步代码**：确保在各种场景下都能正常工作
+   :::
+
+## 参考
+
+* [MDN Web Docs: 使用 Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
+* [JavaScript Info: Async/await](https://javascript.info/async-await)
+* [Google Developers: Promises](https://developers.google.com/web/fundamentals/primers/promises)
