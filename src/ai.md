@@ -1036,6 +1036,17 @@ AI 模型网页版对话应用，通常免费使用
   <RepoCard repo="Yeachan-Heo/oh-my-codex" />
 </CardGrid>
 
+--- 
+
+<CardGrid>
+  <RepoCard repo="openclaw/openclaw" />
+  <RepoCard repo="NousResearch/hermes-agent" />
+  <RepoCard repo="sipeed/picoclaw" />
+  <RepoCard repo="HKUDS/nanobot" />
+  <RepoCard repo="zeroclaw-labs/zeroclaw" />
+  <RepoCard repo="NVIDIA/NemoClaw" />
+</CardGrid>
+
 ## 优质开源项目
 
 <CardGrid>
