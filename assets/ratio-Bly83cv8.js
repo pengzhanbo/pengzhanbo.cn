@@ -1,0 +1,1 @@
+var e=`/images/defensive-css/ratio.png`;export{e as t};
