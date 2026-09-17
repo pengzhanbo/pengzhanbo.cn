@@ -10,7 +10,7 @@ shamefullyHoist: true
 shellEmulator: true
 
 overrides:
-  '@vueuse/core': ^14.4.0
+  '@vueuse/core': ^15.0.0
   esbuild: ^0.28.2
   markdown-it: 14.3.1
   vite: ^8.3.0
