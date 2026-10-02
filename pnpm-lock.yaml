@@ -186,8 +186,8 @@ importers:
         specifier: 2.0.0-rc.134
         version: 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(typescript@6.0.3)(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3)))
       '@vuepress/plugin-google-analytics':
-        specifier: 2.0.0-rc.134
-        version: 2.0.0-rc.134(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3)))
+        specifier: 2.0.0-rc.135
+        version: 2.0.0-rc.135(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3)))
       '@vuepress/shiki-twoslash':
         specifier: 2.0.0-rc.134
         version: 2.0.0-rc.134(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(supports-color@7.2.0)(typescript@6.0.3)(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3)))
@@ -1519,8 +1519,8 @@ packages:
     peerDependencies:
       vuepress: 2.0.0-rc.31
 
-  '@vuepress/plugin-google-analytics@2.0.0-rc.134':
-    resolution: {integrity: sha512-kNvxPOfdBhr3ekEOBYsoz73wUyfWXRftvZYJxeu9uGe13RvWrX1ka+VlXwTGqrKYVYBeEvBOC1QV+/UcpFRslQ==}
+  '@vuepress/plugin-google-analytics@2.0.0-rc.135':
+    resolution: {integrity: sha512-zuGJLiuQmURaiBXQU5jab29EDSsUVIQOd8eH9F+NslG/GrRgp72wI9ASliDmhI8hXv8fnohL49yVps4shBqIcg==}
     peerDependencies:
       vuepress: 2.0.0-rc.31
 
@@ -6014,7 +6014,7 @@ snapshots:
       - '@vuepress/bundler-webpack'
       - typescript
 
-  '@vuepress/plugin-google-analytics@2.0.0-rc.134(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3)))':
+  '@vuepress/plugin-google-analytics@2.0.0-rc.135(vuepress@2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3)))':
     dependencies:
       vuepress: 2.0.0-rc.31(@vue/compiler-sfc@3.5.42)(@vuepress/bundler-vite@2.0.0-rc.31(@types/node@26.6.1)(@vue/compiler-sfc@3.5.42)(esbuild@0.28.2)(supports-color@7.2.0)(tsx@4.23.13)(typescript@6.0.3)(yaml@2.9.1))(esbuild@0.28.2)(rolldown@1.2.8)(supports-color@7.2.0)(typescript@6.0.3)(vite@8.3.0(@types/node@26.6.1)(esbuild@0.28.2)(tsx@4.23.13)(yaml@2.9.1))(vue@3.5.42(typescript@6.0.3))
 
