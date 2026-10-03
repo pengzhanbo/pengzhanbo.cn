@@ -1,0 +1,400 @@
+---
+url: /article/wsn3vekb/index.md
+---
+在 JavaScript 的进阶之路上，迭代器和生成器是两个非常重要且强大的特性。它们不仅改变了我们遍历数据的方式，更为异步编程带来了全新的思路。本文将深入探讨这两个 ES6+ 的核心特性，帮助你掌握现代 JavaScript 开发的关键技能。
+
+## 迭代器（Iterator）
+
+### 什么是迭代器？
+
+迭代器是一个对象，它定义了一个序列，并在终止时可能附带一个返回值。更具体地说，迭代器是通过使用 `next()` 方法实现了**迭代器协议**的对象。
+
+:::info 迭代器协议
+迭代器协议要求对象必须实现一个 `next()` 方法，该方法返回包含两个属性的对象：
+
+* `value`：序列中的下一个值
+* `done`：如果已经迭代到序列中的最后一个值，则为 `true`
+  :::
+
+### 基础示例
+
+```javascript title="基础迭代器示例"
+function makeRangeIterator(start = 0, end = Infinity, step = 1) {
+  let nextIndex = start
+  let iterationCount = 0
+
+  const rangeIterator = {
+    next() {
+      let result
+      if (nextIndex < end) {
+        result = { value: nextIndex, done: false }
+        nextIndex += step
+        iterationCount++
+        return result
+      }
+      return { value: iterationCount, done: true }
+    },
+  }
+  return rangeIterator
+}
+
+// 使用迭代器
+let it = makeRangeIterator(1, 10, 2)
+let result = it.next()
+while (!result.done) {
+  console.log(result.value) // 1, 3, 5, 7, 9
+  result = it.next()
+}
+console.log(`已迭代序列的大小：${result.value}`) // 5
+```
+
+### 迭代器的价值
+
+迭代器的真正价值在于它们可以表示**无限序列**，而数组必须完整分配内存：
+
+```javascript title="无限序列示例"
+function* infiniteSequence() {
+  let i = 0
+  while (true) {
+    yield i++
+  }
+}
+
+const infinite = infiniteSequence()
+console.log(infinite.next().value) // 0
+console.log(infinite.next().value) // 1
+console.log(infinite.next().value) // 2
+// 可以无限继续...
+```
+
+## 可迭代对象（Iterable）
+
+### 什么是可迭代对象？
+
+若一个对象拥有迭代行为（比如在 `for...of` 中会循环一些值），那么它就是一个可迭代对象。要实现可迭代，对象必须实现 `[Symbol.iterator]()` 方法。
+
+:::tip 内置可迭代对象
+
+* `String`、`Array`、`TypedArray`
+* `Map` 和 `Set`
+* `arguments` 对象
+* DOM NodeList 对象
+  :::
+
+### 自定义可迭代对象
+
+```javascript title="自定义可迭代对象"
+const myIterable = {
+  * [Symbol.iterator]() {
+    yield 1
+    yield 2
+    yield 3
+  },
+}
+
+// 使用 for...of 遍历
+for (let value of myIterable) {
+  console.log(value) // 1, 2, 3
+}
+
+// 使用展开语法
+console.log([...myIterable]) // [1, 2, 3]
+```
+
+### 斐波那契数列迭代器
+
+```javascript title="斐波那契数列迭代器"
+const fibonacci = {
+  [Symbol.iterator]() {
+    let pre = 0
+    let cur = 1
+    return {
+      next() {
+        [pre, cur] = [cur, pre + cur]
+        return { value: cur, done: false }
+      }
+    }
+  }
+}
+
+for (let num of fibonacci) {
+  if (num > 1000)
+    break
+  console.log(num) // 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987
+}
+```
+
+## 生成器（Generator）
+
+### 什么是生成器？
+
+生成器函数是 ES6 提供的一种异步编程解决方案，语法行为与传统函数完全不同。生成器函数使用 `function*` 语法编写。
+
+:::warning 重要特性
+
+* 调用生成器函数不会立即执行，而是返回一个生成器对象
+* 生成器对象实现了迭代器协议
+* 可以使用 `yield` 关键字暂停函数执行
+  :::
+
+### 基础生成器示例
+
+```javascript title="基础生成器"
+function* simpleGenerator() {
+  yield 'Hello'
+  yield 'World'
+  yield '!'
+}
+
+const generator = simpleGenerator()
+
+console.log(generator.next()) // { value: 'Hello', done: false }
+console.log(generator.next()) // { value: 'World', done: false }
+console.log(generator.next()) // { value: '!', done: false }
+console.log(generator.next()) // { value: undefined, done: true }
+```
+
+### 使用生成器重写范围迭代器
+
+```javascript title="生成器版本的范围迭代器"
+function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
+  let iterationCount = 0
+  for (let i = start; i < end; i += step) {
+    iterationCount++
+    yield i
+  }
+  return iterationCount
+}
+
+const range = makeRangeIterator(1, 10, 2)
+for (let value of range) {
+  console.log(value) // 1, 3, 5, 7, 9
+}
+```
+
+## 高级生成器特性
+
+### 双向通信
+
+生成器支持双向通信，可以通过 `next()` 方法向生成器传递值：
+
+```javascript title="双向通信示例"
+function* twoWayGenerator() {
+  const name = yield 'What is your name?'
+  const age = yield `Hello ${name}, how old are you?`
+  return `So you are ${age} years old, ${name}!`
+}
+
+const gen = twoWayGenerator()
+
+console.log(gen.next().value) // "What is your name?"
+console.log(gen.next('Alice').value) // "Hello Alice, how old are you?"
+console.log(gen.next(25).value) // "So you are 25 years old, Alice!"
+```
+
+### 错误处理
+
+生成器支持错误处理，可以通过 `throw()` 方法向生成器抛出错误：
+
+```javascript title="错误处理示例"
+function* errorHandlingGenerator() {
+  try {
+    yield 'Start'
+    yield 'Processing...'
+    yield 'End'
+  }
+  catch (error) {
+    yield `Caught error: ${error.message}`
+  }
+}
+
+const errorGen = errorHandlingGenerator()
+console.log(errorGen.next().value) // "Start"
+console.log(errorGen.next().value) // "Processing..."
+console.log(errorGen.throw(new Error('Something went wrong!')).value)
+// "Caught error: Something went wrong!"
+```
+
+### yield\* 委托
+
+`yield*` 表达式用于委托给另一个生成器或可迭代对象：
+
+```javascript title="yield* 委托示例"
+function* generatorA() {
+  yield 'A1'
+  yield 'A2'
+}
+
+function* generatorB() {
+  yield 'B1'
+  yield* generatorA()
+  yield 'B2'
+}
+
+console.log([...generatorB()]) // ['B1', 'A1', 'A2', 'B2']
+```
+
+## 实际应用场景
+
+### 1. 异步流程控制
+
+在 async/await 出现之前，生成器是处理异步操作的重要工具：
+
+```javascript title="异步流程控制"
+function* asyncFlow() {
+  try {
+    const user = yield fetchUser()
+    const posts = yield fetchUserPosts(user.id)
+    const comments = yield fetchPostComments(posts[0].id)
+    return { user, posts, comments }
+  }
+  catch (error) {
+    console.error('Flow failed:', error)
+  }
+}
+
+// 运行器函数
+function runGenerator(generator) {
+  const iterator = generator()
+
+  function handle(result) {
+    if (result.done)
+      return Promise.resolve(result.value)
+
+    return Promise.resolve(result.value)
+      .then(res => handle(iterator.next(res)))
+      .catch(err => handle(iterator.throw(err)))
+  }
+
+  try {
+    return handle(iterator.next())
+  }
+  catch (err) {
+    return Promise.reject(err)
+  }
+}
+
+runGenerator(asyncFlow).then(console.log)
+```
+
+### 2. 状态机
+
+生成器非常适合实现状态机：
+
+```javascript title="状态机示例"
+function* trafficLight() {
+  while (true) {
+    yield '🔴 Red - Stop'
+    yield '🟡 Yellow - Prepare'
+    yield '🟢 Green - Go'
+    yield '🟡 Yellow - Slow down'
+  }
+}
+
+const light = trafficLight()
+console.log(light.next().value) // "🔴 Red - Stop"
+console.log(light.next().value) // "🟡 Yellow - Prepare"
+console.log(light.next().value) // "🟢 Green - Go"
+```
+
+### 3. 数据流处理
+
+```javascript title="数据流处理"
+function* dataProcessor() {
+  let data = yield
+  while (true) {
+    // 处理数据
+    data = data.toUpperCase()
+    data = yield data
+  }
+}
+
+const processor = dataProcessor()
+processor.next() // 启动生成器
+
+console.log(processor.next('hello').value) // "HELLO"
+console.log(processor.next('world').value) // "WORLD"
+console.log(processor.next('generator').value) // "GENERATOR"
+```
+
+## 性能考虑和最佳实践
+
+### 性能提示
+
+:::caution 性能注意事项
+
+1. **内存使用**：生成器按需计算值，适合处理大数据集
+2. **一次性使用**：大多数生成器只能迭代一次
+3. **错误处理**：确保正确处理生成器中的异常
+   :::
+
+### 最佳实践
+
+:::steps
+
+* **使用场景判断**：在需要惰性求值或处理无限序列时使用生成器
+* **错误处理**：在生成器内部使用 try-catch 处理可能的错误
+* **资源清理**：使用 `return()` 方法及时清理资源
+* **代码可读性**：对于简单的迭代，优先使用内置迭代方法
+
+:::
+
+## 现代 JavaScript 中的迭代器和生成器
+
+### 与 async/await 的关系
+
+虽然 async/await 已经成为异步编程的主流，但生成器仍然是理解异步编程原理的重要基础：
+
+```javascript title="生成器与异步函数对比"
+// 生成器方式
+function* fetchDataGenerator() {
+  const user = yield fetch('/api/user')
+  const posts = yield fetch('/api/posts')
+  return { user, posts }
+}
+
+// async/await 方式
+async function fetchDataAsync() {
+  const user = await fetch('/api/user')
+  const posts = await fetch('/api/posts')
+  return { user, posts }
+}
+```
+
+### 最新特性支持
+
+现代 JavaScript 环境对迭代器和生成器有很好的支持：
+
+```javascript title="环境支持检查"
+const supportsGenerators = function* () {}.constructor === Function
+const supportsSymbol = typeof Symbol === 'function' && Symbol.iterator
+
+console.log('Generator support:', supportsGenerators)
+console.log('Symbol.iterator support:', supportsSymbol)
+```
+
+## 总结
+
+迭代器和生成器是 JavaScript 中非常强大的特性，它们：
+
+1. **提供统一的迭代机制**：让不同数据结构可以使用相同的遍历方式
+2. **支持惰性求值**：只在需要时计算值，节省内存
+3. **简化异步编程**：为 async/await 奠定了基础
+4. **增强代码表达能力**：让复杂的状态管理和数据流处理更加清晰
+
+:::important 关键要点
+
+* 迭代器是实现了 `next()` 方法的对象
+* 可迭代对象必须实现 `[Symbol.iterator]()` 方法
+* 生成器使用 `function*` 声明，通过 `yield` 暂停执行
+* 生成器支持双向通信和错误处理
+* 在实际项目中，合理使用这些特性可以显著提升代码质量
+  :::
+
+掌握迭代器和生成器，你将能够编写更加优雅、高效的 JavaScript 代码，为理解现代前端框架和库的实现原理打下坚实基础。
+
+## 参考
+
+* [MDN 迭代器和生成器指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+* [ECMAScript 规范中的迭代协议](https://tc39.es/ecma262/#sec-iteration)
+* [生成器与协程的关系](https://en.wikipedia.org/wiki/Coroutine)
