@@ -1,20 +1,20 @@
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeExclude:
-  - '@vuepress-plume/plugin-fonts@1.0.0-rc.211'
-  - '@vuepress-plume/plugin-search@1.0.0-rc.211'
-  - vuepress-plugin-md-power@1.0.0-rc.211
-  - vuepress-theme-plume@1.0.0-rc.211
+  - '@vuepress-plume/plugin-fonts@1.0.0-rc.212'
+  - '@vuepress-plume/plugin-search@1.0.0-rc.212'
+  - vuepress-plugin-md-power@1.0.0-rc.212
+  - vuepress-theme-plume@1.0.0-rc.212
 
 trustPolicy: no-downgrade
 shamefullyHoist: true
 shellEmulator: true
 
 overrides:
-  '@vueuse/core': ^14.4.0
+  '@vueuse/core': ^15.0.0
   esbuild: ^0.28.2
   markdown-it: 14.3.1
-  vite: ^8.3.0
-  vue: ^3.5.42
+  vite: ^8.3.2
+  vue: ^3.5.43
 
 allowBuilds:
   esbuild: true
