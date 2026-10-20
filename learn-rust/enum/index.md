@@ -1,0 +1,81 @@
+---
+url: /learn-rust/enum/index.md
+---
+枚举(enum 或 enumeration)允许你通过列举可能的成员来定义一个**枚举类型。**
+
+```rust
+enum PokerSuit {
+  Clubs,
+  Spades,
+  Diamonds,
+  Hearts,
+}
+```
+
+**枚举类型是一个类型，它会包含所有可能的枚举成员, 而枚举值是该类型中的具体某个成员的实例。**
+
+## 枚举成员实例
+
+通过 `::` 操作符访问具体成员
+
+```rust
+let clubs = PokerSuit::Clubs;
+```
+
+## 枚举值
+
+声明枚举值类型
+
+```rust
+enum PokerSuit {
+  Clubs(u8),
+  Spades(u8),
+  Diamonds(u8),
+  Hearts(u8),
+}
+
+let clubs_8 = PokerSuit::Clubs(8);
+```
+
+**任何类型的数据都可以放入枚举成员中** : 例如字符串、数值、结构体甚至另一个枚举。
+
+```rust
+enum Message {
+    Quit,
+    Move { x: i32, y: i32 },
+    Write(String),
+    ChangeColor(i32, i32, i32),
+}
+
+fn main() {
+    let m1 = Message::Quit;
+    let m2 = Message::Move{x:1,y:1};
+    let m3 = Message::ChangeColor(255,255,0);
+}
+```
+
+## 枚举泛型
+
+泛型参数 `T` ，声明该枚举成员类型为 `T`， `T` 可以是任意类型
+
+```rust
+enum AnyWay<T> {
+  Any(T),
+  Nothing,
+}
+
+fn main() {
+  let any: AnyWay<i32> = AnyWay::Any(8);
+}
+```
+
+## Option 枚举
+
+```rust
+enum Option<T> {
+  Some(T), // 表示含有值
+  None, // 表示没有值
+}
+```
+
+可用于处理 没有有效值 的场景。

@@ -1,0 +1,749 @@
+---
+url: /article/g8wq3mzt/index.md
+---
+本文是对 2018 年那篇 [《正则表达式使用手册》](/article/e8qbp0dh/) 的重写，结合 2026 年的现状做了全面更新。
+
+这些年 JavaScript 正则表达式发生了不小的变化：`ES2018` 带来了命名捕获组、后行断言、Unicode 属性转义和 `s` 标志；`ES2022` 增加了 `d` 标志；`ES2024` 增加了 `v` 标志；`ES2025` 又补上了 `RegExp.escape()`、内联修饰符和重复命名捕获组。
+
+本文基于 `ECMAScript 2025` 规范与当前主流运行时（Node.js 24 LTS、Chrome/Edge、Safari、Firefox 的最新版本）编写，目标是：**准确、完整、可用于 2026 年的工程实践**。
+
+:::warning 语言范围
+
+正则表达式的方言差异极大。本文只讨论 **JavaScript（ECMAScript）** 的 `RegExp`，不要想当然地套用到 Python、PCRE、Go 或 Rust —— 它们的转义规则、锚点语义、Unicode 行为都不完全相同。文中会标注若干易混淆的差异点。
+
+:::
+
+## 一、正则表达式是什么
+
+`正则表达式`（Regular Expression）是一种**描述文本模式**的形式化语言，用来在字符串中查找、校验、提取或替换符合规则的子串。
+
+一个最小例子：
+
+```js
+const text = `name:Mark  tel:13800138000
+name:Jhon  tel:13800138888`
+
+const result = text.match(/tel:(1\d{10})/)
+// ["tel:13800138000", "13800138000", index: 0, ...]
+
+console.log(result[1]) // 13800138000
+```
+
+`/tel:(1\d{10})/` 就是正则表达式，其中 `()` 表示「捕获」匹配到的内容，`\d` 表示数字，`{10}` 表示重复 10 次。
+
+但需要先明确一点：**JavaScript 的 `RegExp` 是回溯（backtracking）引擎**。它功能强、语法丰富（支持反向引用、任意断言），代价是最坏情况下可能产生指数级的时间复杂度（见第十节）。
+
+## 二、创建正则的两种方式
+
+### 2.1 字面量与构造函数
+
+```js
+// 1. 字面量
+const re1 = /\d+/g
+
+// 2. 构造函数
+const re2 = new RegExp('\\d+', 'g')
+```
+
+二者生成的正则对象**语义完全一致**，`re1.source === re2.source`、`re1.flags === re2.flags`。区别在于：
+
+| 维度         | 字面量 `/\d+/g`                | 构造函数 `new RegExp()`    |
+| ------------ | ------------------------------ | -------------------------- |
+| 适用场景     | 模式静态、写在代码里           | 模式需要动态拼接           |
+| 转义成本     | 低，所见即所得                 | 高，反斜杠要写两遍         |
+| 语法错误时机 | **解析期**报错，构建时就能发现 | **运行期**抛 `SyntaxError` |
+
+```js
+// 构造函数需要双重转义，容易写错
+const re = new RegExp('\\d{4}-\\d{2}')
+
+// 推荐写法：用 String.raw 避免双重转义
+const re2 = new RegExp(String.raw`\d{4}-\d{2}`)
+```
+
+### 2.2 一个常见的误解
+
+一个流传很广的说法是「正则字面量在编译期就完成了，性能更好」。这需要澄清：
+
+* 从 `ES5` 开始，**正则字面量每次求值都会创建一个新的 `RegExp` 对象**，并不存在「只编译一次」的对象复用：
+
+```js
+function make() {
+  return /a/
+}
+console.log(make() === make()) // false，两个不同的对象
+```
+
+* 引擎确实会缓存**编译后的模式**，所以重复使用字面量的匹配开销很低；但如果你需要**跨调用累积 `lastIndex`**（典型场景是 `exec` 循环遍历），就必须复用同一个对象，应该把它提取成模块级常量：
+
+```js
+// 推荐：模块顶层只创建一次
+const RE_DATE = /\d{4}-\d{2}-\d{2}/g
+
+RE_DATE.exec('2026-09-10 与 2025-01-01')[0] // '2026-09-10'
+RE_DATE.exec('2026-09-10 与 2025-01-01')[0] // '2025-01-01'，靠 lastIndex 递增
+```
+
+### 2.3 动态构造用户输入：`RegExp.escape()`
+
+如果你把用户输入拼进正则，**必须转义**，否则用户输入里的 `.`、`*`、`(` 会改变模式语义，甚至直接抛 `SyntaxError`：
+
+```js
+// ❌ 危险：输入 "1+1" 会变成非法正则
+const keyword = searchInput // 来自用户
+new RegExp(keyword)
+
+// ✅ ES2025：安全地把任意字符串转成字面量模式
+new RegExp(RegExp.escape(keyword), 'g')
+```
+
+`RegExp.escape()` 已进入 `ES2025`，是 Baseline 2025 特性。
+它比手写的 `replace(/[.*+?^${}()|[\]\\]/g, '\\$&')` 更可靠：手写版本必须同时兼容 `u` 与 `v` 两套转义规则，
+很容易漏 —— 例如 `RegExp.escape('a-b')` 返回的是 `'\\x61\\x2db'`，连 `a` 都被转成了 `\x61`，
+正是为了避免 `-` 与相邻字符被解析成范围。**不要自己造轮子。**
+
+## 三、元字符速查表
+
+正则表达式由`元字符`与普通字符组成。元字符需要按特殊含义解释，普通字符按字面匹配。
+
+|   字符    | 含义                                                                                                                                  |
+| :-------: | ------------------------------------------------------------------------------------------------------------------------------------- |
+|    `\`    | 转义符。`\d` 表示「数字」而非字母 `d`；`\.` 表示「普通的点字符」。                                                                    |
+|    `^`    | 匹配**输入的开头**（开启 `m` 时为每行开头）。                                                                                         |
+|    `$`    | 匹配**输入的结尾**（开启 `m` 时为每行结尾）。⚠️ 与 Python/Perl 不同，JS 不加 `m` 时 **不会**在末尾换行符之前匹配。                     |
+|    `*`    | 前一个**原子**重复 0 次或多次。                                                                                                       |
+|    `+`    | 前一个原子重复 1 次或多次。                                                                                                           |
+|    `?`    | 前一个原子重复 0 次或 1 次；跟在量词之后时表示「懒惰」（见第五节）。                                                                  |
+|    `.`    | 匹配除**行终止符**外的任意字符。行终止符不止 `\n`：还包括 `\r`、`\u2028`（行分隔符）、`\u2029`（段分隔符）。加 `s` 后可匹配所有字符。 |
+|  `x\|y`   | 分支：匹配 `x` 或 `y`。                                                                                                               |
+|  `[xyz]`  | 字符类，匹配集合中任意一个字符。可用 `-` 指定范围。                                                                                   |
+| `[^xyz]`  | 反向字符类，匹配**不在**集合中的任意一个字符。                                                                                        |
+|   `{n}`   | 前一个原子恰好重复 n 次。                                                                                                             |
+|  `{m,n}`  | 前一个原子重复 m 到 n 次（尽量多）。`{m,}` 表示至少 m 次。⚠️ JS **不支持** `{,n}` 简写（见 5.4）。                                     |
+|   `(x)`   | 捕获分组，匹配并保存 `x`，同时分配一个编号（从 1 开始）。                                                                             |
+|  `(?:x)`  | 非捕获分组，只分组不保存。                                                                                                            |
+| `(?<n>x)` | 命名捕获分组，保存为 `groups.n`。                                                                                                     |
+| `x(?=y)`  | 正向前瞻：`x` 后面必须是 `y`，但 `y` 不消耗。                                                                                         |
+| `x(?!y)`  | 负向前瞻：`x` 后面不能是 `y`。                                                                                                        |
+| `(?<=y)x` | 正向后行断言：`x` 前面必须是 `y`。                                                                                                    |
+| `(?<!y)x` | 负向后行断言：`x` 前面不能是 `y`。                                                                                                    |
+|   `\b`    | 单词边界（`\w` 与非 `\w` 之间的位置）。                                                                                               |
+|   `\B`    | 非单词边界。                                                                                                                          |
+|  `[\b]`   | 退格字符 `U+0008`。注意：在字符类内 `\b` 是退格，不是边界。                                                                           |
+|   `\d`    | ASCII 数字，等价 `[0-9]`（**即使开启 `u` 也仍是 ASCII**）。                                                                           |
+|   `\D`    | 非 ASCII 数字，等价 `[^0-9]`。                                                                                                        |
+|   `\w`    | ASCII 单字字符，等价 `[A-Za-z0-9_]`（**即使开启 `u` 也仍是 ASCII**）。                                                                |
+|   `\W`    | 非 ASCII 单字字符。                                                                                                                   |
+|   `\s`    | 空白字符，等价 `[\f\n\r\t\v\u0020\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]`。                                    |
+|   `\S`    | 非空白字符。                                                                                                                          |
+|   `\n`    | 换行 `U+000A`。                                                                                                                       |
+|   `\r`    | 回车 `U+000D`。                                                                                                                       |
+|   `\t`    | 水平制表符 `U+0009`。                                                                                                                 |
+|   `\v`    | 垂直制表符 `U+000B`。                                                                                                                 |
+|   `\f`    | 换页符 `U+000C`。                                                                                                                     |
+|   `\0`    | `NUL` 字符（后面不能紧跟数字，否则会被当成八进制/反向引用）。                                                                         |
+|  `\xhh`   | 匹配编码为两位十六进制的字符。                                                                                                        |
+| `\uhhhh`  | 匹配编码为四位十六进制的字符。                                                                                                        |
+| `\u{h…h}` | 匹配码点（**需要 `u` 或 `v` 标志**），可表示大于 `U+FFFF` 的字符。                                                                    |
+|   `\cX`   | 控制字符，例如 `\cJ` 等价于 `\n`。                                                                                                    |
+| `\1` `\2` | 反向引用，匹配第 n 个捕获组此前捕获到的内容。                                                                                         |
+|  `\k<n>`  | 反向引用，匹配命名捕获组 `n` 的内容。                                                                                                 |
+| `\p{...}` | Unicode 属性转义（**需要 `u` 或 `v` 标志**），匹配属于该属性的字符。                                                                  |
+| `\P{...}` | Unicode 属性转义的反集。                                                                                                              |
+
+### 3.1 字符类内的转义规则
+
+在 `[...]` 内部，元字符的「特殊身份」会发生变化：
+
+| 字符            | 在 `[]` 内是否需要转义     | 说明                                       |
+| --------------- | -------------------------- | ------------------------------------------ |
+| `-`             | **需要**（作为普通字符时） | 否则会被当成范围，如 `[a-z]`               |
+| `]` `\` `^`     | **需要**                   | `^` 仅在第一个位置特殊，其余位置是普通字符 |
+| `.` `*` `+` `?` | 不需要                     | 在 `[]` 内失去特殊含义，写不写 `\` 都行    |
+
+:::tip `v` 模式下更严格
+
+上表适用于非 `v` 模式。开启 `v` 标志后，字符类内的保留字符更多：`( ) [ ] { } / - \ |` 都必须转义，`&&`、`~~` 这类「双标点」也被保留给集合运算。所以 `/[()]/u` 合法，而 `/[()]/v` 会直接抛 `SyntaxError`。
+
+:::
+
+```js
+// 匹配连字符、右括号和反斜杠本身
+const re = /[\]\\-]/
+```
+
+### 3.2 关于 `\s` 的一个过时细节
+
+很多资料会把 `\u180e`（蒙古文元音分隔符）算进 `\s`。**这是过时的**：自 Unicode 6.3 起 `U+180E` 已被重新归类为非空白字符，规范中的 `\s` 集合也已将它移除。可以用 `/\s/.test('\u180e')` 验证，结果为 `false`。
+
+## 四、Unicode：JS 正则最容易踩坑的地方
+
+### 4.1 `\d`、`\w` 永远只匹配 ASCII
+
+这是 JavaScript 与其他语言（如 Python 的 `re` 带 `UNICODE` 模式、.NET）最显著的差异之一：
+
+```js
+/\d/.test('٣')        // false —— 阿拉伯-印度数字 3
+/\d/.test('３')        // false —— 全角数字 3
+/\d/u.test('٣')       // false —— 加了 u 也一样！
+/\w/.test('中')        // false —— 汉字不算「单字字符」
+```
+
+`u` 标志**只改变解析规则与码点处理方式，不改变 `\d`/`\w` 的字符集合**。要匹配 Unicode 语义下的「数字」「字母」，必须用属性转义：
+
+```js
+/\p{Decimal_Number}/u.test('٣')  // true
+/\p{Letter}/u.test('中')          // true
+/^\p{Letter}\p{Mark}*$/u.test('e\u0301') // true —— 字母 + 组合音标
+```
+
+### 4.2 `u` 标志
+
+`u`（unicode）标志的主要作用：
+
+1. 按**码点**而非 UTF-16 码元解析模式，正确处理 `😀` 这类由代理对组成的字符；
+2. 启用 `\u{...}` 码点转义与 `\p{...}` 属性转义；
+3. 让正则**严格化**：非法转义、孤立的量词会直接抛 `SyntaxError`，而不是被当作字面量。这是好事，能提前暴露错误。
+
+```js
+/^.$/.test('😀')    // false，. 只吃掉一个码元
+/^.$/u.test('😀')   // true，u 模式下 . 匹配一个码点
+/^\u{1F600}$/u.test('😀') // true
+```
+
+### 4.3 `v` 标志（ES2024）：Unicode 集合运算
+
+`v`（unicodeSets）是 `u` 的**超集**，二者**互斥**（`new RegExp('a', 'uv')` 会抛 `SyntaxError`）。它带来三样东西：
+
+```js
+// 1. 集合运算：交集 &&、差集 --
+/[\p{Letter}--[a-z]]/v.test('中')  // true，是非 ASCII 的字母
+/[\p{Letter}--[a-z]]/v.test('a')   // false
+/[\p{Script=Greek}&&\p{Letter}]/v.test('α') // true
+
+// 2. 嵌套字符类
+/[[a-z]--[aeiou]]/v.test('b') // true
+
+// 3. 字符类中的字符串字面量与「字符串属性」
+/[\q{ab|c}]/v.test('ab')       // true，\q{} 里是字符串候选
+/^\p{RGI_Emoji}$/v.test('😀')   // true，属性可以是「字符串集合」而非单字符
+```
+
+在 `v` 模式下，字符类的转义规则比 `u` 更严格（见 3.1 的说明），升级时要注意兼容性。
+
+:::info 该用 `u` 还是 `v`？
+
+`v` 是 `u` 的超集，但**不能**用它来「顺便兼容」：`v` 模式下部分在 `u` 下合法的模式会报错。策略上：只用 `u` 即可满足需求时优先 `u`（兼容面更广）；确实需要集合运算或字符串属性时再用 `v`。目标运行时较老（如需支持 2022 年前的浏览器）时，可用 `Regex+`、`regexpu` 之类的工具降级编译。
+
+:::
+
+## 五、量词、贪婪与懒惰
+
+### 5.1 量词作用于「前一个原子」
+
+量词 `* + ? {n,m}` 只作用于它**前面紧邻的那一个原子**（一个字符、一个字符类、一个分组或一个断言）：
+
+```js
+/ab*/.exec('abbbbbc')[0] // 'abbbbb'，* 只作用于 b
+/(ab)*/.exec('ababab')[0] // 'ababab'，* 作用于整个分组
+```
+
+### 5.2 `?` 的两种身份
+
+`?` 有两种完全不同的含义，取决于它出现的位置：
+
+1. **作为量词**：跟在原子后面，表示重复 0 或 1 次 —— `ab?` 可匹配 `a` 或 `ab`；
+2. **作为懒惰后缀**：跟在另一个量词（`*`、`+`、`?`、`{m,n}`）后面，把该量词从贪婪改为懒惰 —— `ab??`、`a*?`。
+
+### 5.3 贪婪 vs 懒惰
+
+默认是**贪婪**的：在能满足整体匹配的前提下，尽可能多地匹配。
+
+```js
+const greedy = /<div>.*<\/div>/
+const lazy = /<div>.*?<\/div>/
+const str = '<div>aaa</div>bbb<div></div>ccc'
+
+str.match(greedy)[0] // '<div>aaa</div>bbb<div></div>'
+str.match(lazy)[0] // '<div>aaa</div>'
+```
+
+懒惰量词的语义归纳：
+
+| 写法      | 最少匹配 | 最多匹配 |
+| --------- | -------- | -------- |
+| `x*?`     | 0 个     | 不限     |
+| `x+?`     | 1 个     | 不限     |
+| `x??`     | 0 个     | 1 个     |
+| `x{m,n}?` | m 个     | n 个     |
+
+但要注意：**懒惰只影响「优先尝试多少」，不改变匹配能力**。如果整体匹配要求「必须多」，懒惰量词仍会退让到多：
+
+```js
+// 懒惰不会改变「能否匹配」，只改变「优先尝试多短」
+'aaab'.match(/a+?b/)[0] // 'aaab' —— a+? 必须扩展到 3 个 a，整体才能匹配
+'<div>aaa</div>'.match(/<div>.*?<\/div>/)[0] // '<div>aaa</div>' —— 这里「最短」即可成功，所以只吃到第一个 </div>
+```
+
+### 5.4 注意：`{,n}` 不是合法量词
+
+`{,1}` 常被误认为表示「0 次到 1 次」，**这在 JavaScript 中是错误的**。ECMAScript 只定义了三种量词形式：`{n}`、`{n,}`、`{n,m}`，没有 `{,m}`。
+
+```js
+/a{,1}/.test('a')      // false
+/a{,1}/.test('a{,1}')  // true —— {,1} 被当成了字面量字符
+
+// 只有在 u / v 模式下，{,1} 才会因为「不完整的量词」直接抛错
+new RegExp('a{,1}', 'u') // SyntaxError: Incomplete quantifier
+```
+
+另外，`{m,n}` 中若 `m > n` 会直接抛错：
+
+```js
+new RegExp('a{2,1}') // SyntaxError: numbers out of order in {} quantifier
+```
+
+### 5.5 原子组与占有量词在原生 JS 中不存在
+
+`(?>...)`（原子组）与 `a++`、`a*+`（占有量词）能有效防止回溯爆炸，但**原生 JavaScript 至今没有实现**（截至 2026 年仍未进入标准）。PCRE / Java / .NET 用户迁移到 JS 时，需要改用断言或重构模式，或使用 `Regex+` 库以编译期展开的方式模拟。
+
+## 六、断言（零宽匹配）
+
+断言只检验「某个位置附近的条件」，**不消耗字符**，因此不计入匹配结果，也不会推进匹配位置。
+
+```js
+// 前瞻
+/\d+(?=元)/.exec('价格 100元')     // ['100']，只匹配数字，'元' 被断言但未消耗
+/(?<=\$)\d+/.exec('价格 $100')     // ['100']，后行断言
+
+// 否定
+/\d+(?!元)/.exec('价格 100块')     // ['100']
+/(?<!\$)\b\d+\b/.exec('价格 100块') // ['100']
+```
+
+三个必须知道的细节：
+
+1. **断言中的捕获组仍会被捕获**。这一点常被忽略：
+
+```js
+/(?=(b))a?/.exec('ab') // ['', 'b'] —— 前瞻里的 (b) 贡献了第 1 个捕获组
+```
+
+2. **后行断言（lookbehind）自 ES2018 起已成为标准**，主流运行时全面支持。
+3. **「固定长度」限制是历史遗留**：V8 曾要求后行断言内为定长模式，该限制早已解除，现代 JS 允许变长后行断言（如 `/(?<=\d+)[a-z]/`）。
+
+## 七、分组、捕获与反向引用
+
+### 7.1 编号分组
+
+```js
+const re = /a(bc)d(ef)/
+// 第 1 组 (bc)，第 2 组 (ef)
+```
+
+在**模式内部**用 `\1`、`\2` 反向引用；在**替换串**里用 `$1`、`$2`：
+
+```js
+// 模式内部反向引用：简化重复
+/a(bc)d\1/.test('abcdbc') // true，\1 = 'bc'
+
+// 替换串引用
+'apple pear'.replace(/(\w+)\s(\w+)/, '$2 $1') // 'pear apple'
+```
+
+分组编号按**左括号出现顺序**，从 1 开始，包括嵌套分组；非捕获组 `(?:)` 不占编号。
+
+### 7.2 命名分组（推荐）
+
+从 `ES2018` 起，编号之外还可以给分组命名，可读性远好于 `$1`：
+
+```js
+const re = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/
+
+const m = '2026-09-10'.match(re)
+m.groups.year  // '2026'
+m.groups.month // '09'
+
+// 反向引用
+/(?<word>\w+)\s+\k<word>/.exec('hello hello')[0] // 'hello hello'
+
+// 替换
+'2026-09-10'.replace(re, '$<day>/$<month>/$<year>') // '10/09/2026'
+```
+
+### 7.3 重复命名分组（ES2025）
+
+同一模式的不同分支（`|`）中允许复用同一个组名，规范会保证同一时刻只有其中一个分支参与匹配：
+
+```js
+// ⚠️ 分支顺序仍然重要：若把 \d+ 写在前面，'2026-09-10' 会先被匹配成 '2026'
+const re = /(?<value>\d{4}-\d{2}-\d{2})|(?<value>\d+)/
+
+re.exec('2026-09-10').groups.value // '2026-09-10'
+re.exec('2026').groups.value // '2026'
+```
+
+这解决了「解析两种格式、希望统一取 `value`」的长期痛点。注意限制：**只有互斥的分支才能同名**，`(?<a>x)(?<a>y)` 这种会抛 `SyntaxError`。
+
+### 7.4 不要再用 `RegExp.$1`
+
+`RegExp.$1`~`$9` 不应该再被使用：
+
+* 它们是 `Annex B` 的遗留特性，属于规范附录中的「兼容性包袱」，不出现在正式规范正文；
+* 它们是**全局可变状态**，任何一次正则匹配都会覆写，模块间会相互污染，调试极其困难；
+* 在 `g` 标志、`matchAll`、`replace` 回调等场景下的行为不直观。
+
+```js
+// ❌ 不要这样写
+/b(c)/.test('abc')
+console.log(RegExp.$1) // 'c' —— 依赖全局副作用
+
+// ✅ 用匹配结果本身
+const m = /b(c)/.exec('abc')
+console.log(m[1]) // 'c'
+console.log(m?.groups?.x) // 命名分组更佳
+```
+
+## 八、标志（flags）全景
+
+| 标志  | 名称        | 引入版本 | 作用                                                |
+| :---: | ----------- | -------- | --------------------------------------------------- |
+|  `g`  | global      | ES3      | 全局查找所有匹配（配合 `lastIndex` 有状态）         |
+|  `i`  | ignoreCase  | ES3      | 忽略大小写                                          |
+|  `m`  | multiline   | ES3      | `^` `$` 按行匹配                                    |
+|  `u`  | unicode     | ES2015   | Unicode 码点模式，启用 `\u{}`、`\p{}`               |
+|  `y`  | sticky      | ES2015   | 粘性匹配，**只从 `lastIndex` 位置开始**，不向前搜索 |
+|  `s`  | dotAll      | ES2018   | 让 `.` 匹配包括行终止符在内的任意字符               |
+|  `d`  | hasIndices  | ES2022   | 额外返回 `indices`，含每个分组的起止下标            |
+|  `v`  | unicodeSets | ES2024   | `u` 的超集，字符类集合运算与字符串属性              |
+
+### 8.1 `m` 的准确含义
+
+`m` 改变了 `^` 和 `$` 的行为：它们开始识别**行终止符**（`\n`、`\r`、`\u2028`、`\u2029`），在每行的开头/结尾也能匹配。
+
+```js
+/^b/m.test('a\nb')   // true
+/^b/m.test('a\u2028b') // true
+```
+
+顺带一个跨语言陷阱：**JS 的 `$` 在不加 `m` 时不会在末尾换行符之前匹配**，这与 Python、Perl 不同：
+
+```js
+/a$/.test('a\n') // false —— $ 只认整个输入的末尾
+/a$/m.test('a\n') // true —— 加了 m 之后按行匹配
+```
+
+### 8.2 `y`（sticky）与 `g` 的区别
+
+两者都依赖 `lastIndex`，区别在于：
+
+* `g`：从 `lastIndex` 开始**向后搜索**，找到一个匹配即可；
+* `y`：**只**在 `lastIndex` 处精确匹配，失败即失败，不向后扫描。
+
+```js
+const re = /foo/y
+
+re.lastIndex = 2
+re.test('xxfoo') // true —— 下标 2 处正好是 'foo'
+
+re.lastIndex = 0
+re.test('xxfoo') // false —— 粘性匹配不会向后搜索
+
+// 对比：g 标志会向后搜索
+const reG = /foo/g
+reG.test('xxfoo') // true
+```
+
+更典型的用途是**分词/流式解析**：用 `y` 可以把多个小正则串成词法分析器，逐字符推进：
+
+```js
+const tokens = [/\d+/y, /[a-z]+/y, /\s+/y]
+const input = '12abc 34'
+const out = []
+let pos = 0
+
+while (pos < input.length) {
+  const start = pos
+  for (const re of tokens) {
+    re.lastIndex = pos
+    const m = re.exec(input)
+    if (m) {
+      if (!/^\s+$/.test(m[0]))
+        out.push(m[0])
+      pos = re.lastIndex
+      break
+    }
+  }
+  // 没有任何词法单元匹配时，跳过该字符，避免死循环
+  if (pos === start)
+    pos++
+}
+
+console.log(out) // ['12', 'abc', '34']
+```
+
+### 8.3 `s`（dotAll）
+
+```js
+/a.b/.test('a\nb') // false，. 不匹配行终止符
+/a.b/s.test('a\nb') // true，s 让 . 匹配一切
+```
+
+### 8.4 `d`（hasIndices）
+
+开启后，`exec` / `match` 的结果会带 `indices` 数组，给出**每个捕获组在原字符串中的 `[start, end)` 下标**，对语法高亮、编辑器定位、增量批注极其有用：
+
+```js
+const m = '2026-09-10'.match(/(?<year>\d{4})-(?<month>\d{2})/d)
+
+m.indices[0] // [0, 7]，整体匹配
+m.indices.groups.year // [0, 4]
+m.indices.groups.month // [5, 7]
+```
+
+### 8.5 标志组合的限制
+
+```js
+new RegExp('a', 'gg') // SyntaxError：重复标志
+new RegExp('a', 'uv') // SyntaxError：u 与 v 互斥
+```
+
+### 8.6 内联修饰符（ES2025）
+
+`ES2025` 起可以把标志**作用到局部**，而不必全局打开：
+
+```js
+// 只让中间这一段忽略大小写
+/^(?i:hello) world$/.test('HELLO world') // true
+
+// 也可以关闭：在 i 标志已全局开启时，局部关闭 i
+/^(?-i:a)$/i.test('A') // false
+```
+
+语法为 `(?flags:...)` 或 `(?flags-flags:...)`，可用标志为 `i`、`m`、`s`。
+
+## 九、常用 API 与方法选择
+
+多数正则的 bug 不是模式写错，而是**方法选错**。先看对照表：
+
+| 需求                     | 方法                              | 关键点                                  |
+| ------------------------ | --------------------------------- | --------------------------------------- |
+| 是否存在匹配（布尔）     | `re.test(str)`                    | 带 `g`/`y` 时依赖 `lastIndex`，有状态   |
+| 取第一个匹配的完整信息   | `re.exec(str)` 或 `str.match(re)` | 带 `g` 时 `exec` 会推进 `lastIndex`     |
+| 取所有匹配的**捕获组**   | `str.matchAll(re)`                | **必须带 `g`**，否则抛 `TypeError`      |
+| 取所有匹配（不要捕获组） | `str.match(re)`                   | 带 `g` 时**只返回完整匹配**，丢失分组   |
+| 替换（首个 / 全部）      | `replace` / `replaceAll`          | `replaceAll` 的正则**必须带 `g`**       |
+| 查找下标                 | `str.search(re)`                  | 不支持 `y` 的粘性语义，忽略 `lastIndex` |
+| 切分                     | `str.split(re)`                   | 带捕获组时，捕获内容会进入结果数组      |
+| 字符串内是否含子串       | `str.includes()`                  | 纯文本匹配不要用 `test` 构造正则        |
+
+三个高频陷阱：
+
+```js
+// 陷阱 1：match + g 会丢弃捕获组
+'2026-09'.match(/(\d{4})-(\d{2})/)
+// ['2026-09', '2026', '09']
+
+'2026-09'.match(/(\d{4})-(\d{2})/g)
+// ['2026-09'] —— 分组没了！需要遍历时请用 matchAll
+
+// 陷阱 2：复用带 g 的正则，lastIndex 会「记住」上次位置
+const re = /a/g
+re.test('a') // true，lastIndex = 1
+re.test('a') // false！从下标 1 开始只剩空串 —— 经典 bug
+re.test('a') // true，lastIndex 归零后重新开始
+
+// 修复：不要跨调用复用带状态的正则；或每次显式重置
+re.lastIndex = 0
+
+// 或者干脆用无状态的写法
+/a/.test('a')
+```
+
+```js
+// 陷阱 3：split 的捕获组会出现在结果里
+'a1b2c'.split(/(\d)/) // ['a', '1', 'b', '2', 'c']
+'a1b2c'.split(/\d/) // ['a', 'b', 'c']  —— 想要这个结果就不要加捕获组
+```
+
+### 9.1 `replace` 的替换模式
+
+`replace` / `replaceAll` 的第二个参数可以是字符串或函数。
+
+字符串替换模式中的特殊记号：
+
+| 记号      | 含义                            |
+| --------- | ------------------------------- |
+| `$$`      | 插入一个 `$`                    |
+| `$&`      | 插入整个匹配                    |
+| ``$` ``   | 插入匹配之前的子串              |
+| `$'`      | 插入匹配之后的子串              |
+| `$n`      | 插入第 n 个捕获组（`$1`~`$99`） |
+| `$<name>` | 插入命名捕获组                  |
+
+```js
+// 函数形式：可做任意计算，且能拿到 offset（配合 d 标志还能拿到 indices）
+const masked = '13800138000'.replace(
+  /(\d{3})\d{4}(\d{4})/,
+  (_, head, tail) => `${head}****${tail}`
+)
+// '138****8000'
+```
+
+:::tip 回调参数个数不固定
+
+函数形式的基础签名是 `(match, p1, p2, ..., offset, string)`。如果模式里含有**命名分组**，末尾还会多出一个 `groups` 对象；捕获组数量不同，参数个数也不同。所以不要按位置硬编码 —— 用 rest 参数收集捕获组，或直接用命名分组。
+
+:::
+
+### 9.2 自定义匹配行为：`Symbol.*` 协议
+
+`String.prototype` 上的 `match`、`matchAll`、`replace`、`replaceAll`、`search`、`split` **并不是硬编码只认 `RegExp`**。规范里它们的做法是：先读取参数上的协议方法，存在就委托调用，不存在才走内部的 `RegExpCreate` 兜底。
+
+| `String` 方法                             | 读取的协议键         | 委托调用形式                       |
+| ----------------------------------------- | -------------------- | ---------------------------------- |
+| `str.match(x)`                            | `x[Symbol.match]`    | `x[Symbol.match](str)`             |
+| `str.matchAll(x)`                         | `x[Symbol.matchAll]` | `x[Symbol.matchAll](str)`          |
+| `str.replace(x, r)`                       | `x[Symbol.replace]`  | `x[Symbol.replace](str, r)`        |
+| `str.replaceAll(x, r)`                    | 同上                 | 同上                               |
+| `str.search(x)`                           | `x[Symbol.search]`   | `x[Symbol.search](str)`            |
+| `str.split(x, l)`                         | `x[Symbol.split]`    | `x[Symbol.split](str, l)`          |
+| `str.includes / startsWith / endsWith(x)` | `x[Symbol.match]`    | **不调用**，只用于 `IsRegExp` 判定 |
+
+这带来两个直接结论：
+
+1. **任何对象**只要实现了对应的 `Symbol` 方法，就能被 `String` 方法接受 —— 这是实现自定义匹配器（惰性编译、流式匹配、代理上报）的标准扩展点。
+2. `RegExp` 自身的行为也正是由 `RegExp.prototype[Symbol.*]` 定义的，所以**子类化时覆写这些方法**就能改变语义，而不必去 hack 内部实现。
+
+#### `IsRegExp` 与 `Symbol.match = false`
+
+`includes` / `startsWith` / `endsWith` 会先做一次 `IsRegExp` 判定，判定入口正是 `Symbol.match`：只要这个属性**不是 `undefined`**，就取它的真值来决定「算不算正则」。
+
+```js
+'abc'.includes(/b/)
+// TypeError: First argument to String.prototype.includes must not be a regular expression
+
+// 把 Symbol.match 设为 false，就不再被当作正则
+const re = /foo/
+re[Symbol.match] = false
+
+'/foo/'.startsWith(re) // true
+'foo'.startsWith(re) // false —— 注意：这里比较的是 toString()
+```
+
+:::warning 别被这个技巧误导
+
+`Symbol.match = false` 只是让 `String` 方法「不把它当正则」，随后仍按普通字符串处理 —— `ToString(re)` 得到的是 `/foo/`（`RegExp.prototype.toString()` 的结果），**不是** `re.source`。
+
+如果确实想按 `source` 做字面量查找，必须连同 `toString` 一起覆盖：
+
+```js
+const re2 = /foo/
+re2[Symbol.match] = false
+re2.toString = () => re2.source
+
+'a foo b'.includes(re2) // true
+```
+
+:::
+
+#### 自定义匹配器：惰性编译 + 复用协议
+
+一个实用场景：模块导入时不立刻编译正则（或在统一封装的 `Pattern` 对象里延迟编译），只要实现对应 `Symbol` 就能无缝接入原生 API：
+
+```js
+function keywordPattern(keyword, flags = 'g') {
+  let re // 延迟编译：首次被使用时才创建
+  const get = () => (re ??= new RegExp(keyword, flags))
+
+  return {
+    // matchAll 会先按 IsRegExp 判定，再读取 flags 并要求其中含 'g'
+    flags,
+    [Symbol.match]: str => get()[Symbol.match](str),
+    [Symbol.matchAll]: str => get()[Symbol.matchAll](str),
+    [Symbol.replace]: (str, repl) => get()[Symbol.replace](str, repl),
+  }
+}
+
+const p = keywordPattern(String.raw`\d+`)
+
+'abc123def456'.match(p) // ['123', '456'] —— 带 g 时 match 返回全部完整匹配
+[...'abc123def456'.matchAll(p)].map(m => m[0]) // ['123', '456']
+'abc123'.replace(p, '#') // 'abc#'
+'abc123'.replaceAll(p, '#') // 'abc#' —— 自定义对象不受 replaceAll 的 g 校验限制
+```
+
+#### 覆写 `Symbol.split`：让分隔符保留在结果里
+
+`String.prototype.split` 会丢弃分隔符。通过子类覆写 `[Symbol.split]` 可以改变这一点：
+
+```js
+class KeepSeparator extends RegExp {
+  [Symbol.split](str, limit) {
+    return String(str).split(new RegExp(`(${this.source})`, this.flags), limit)
+  }
+}
+
+'a,b,c'.split(new KeepSeparator(',')) // ['a', ',', 'b', ',', 'c']
+```
+
+#### 四个容易踩的契约细节
+
+1. **协议属性必须「可调用或为 `undefined`」**。写成 `{ [Symbol.match]: false }` 再交给 `str.match`，会因为「存在但不可调用」在 `GetMethod` 处直接抛 `TypeError`（`includes` 这类只做布尔判定的方法不受影响）。
+2. **`matchAll` 有一道额外的 `flags` 检查**：若参数按 `IsRegExp` 判定为正则（即定义了 `Symbol.match`），它会读取 `flags` 并要求其中含 `g`，否则抛 `TypeError: The .flags property ... cannot be null or undefined`。自定义对象因此必须暴露一个含 `g` 的 `flags` 属性。
+3. **协议方法的返回值不做类型校验**。`'a1'.match({ [Symbol.match]: () => 42 })` 的结果就是 `42` —— 类型正确性完全由你的实现负责。
+4. **`replaceAll` 对原生正则要求 `g`，但对自定义对象不做校验**（读到 `Symbol.replace` 后就提前返回了）。也就是说，只要实现了 `[Symbol.replace]`，即使 `flags` 里没有 `g` 也能被 `replaceAll` 接受 —— 这是特性，也意味着实现写错时更难被发现。
+
+## 十、性能与安全：ReDoS
+
+这是生产环境中最要紧、也最容易被忽略的一节。
+
+**回溯引擎的最坏时间复杂度是指数级的。**当模式中存在**嵌套量词**（如 `(a*)*`、`(a+)+`、`(.*)*`）且输入不匹配时，引擎会尝试所有可能的组合爆炸式回溯：
+
+```js
+// 危险模式：嵌套量词，输入全是 a 且不含 b 时必然全量回溯
+const evil = /^(a*)*b$/
+
+evil.test('a'.repeat(12)) // 0ms
+evil.test('a'.repeat(20)) // 约 16ms
+evil.test('a'.repeat(24)) // 约 250ms
+evil.test('a'.repeat(28)) // 约 4s
+// ⚠️ 长度每多 2 个字符，耗时约变为 4 倍 —— 不要在生产代码里尝试更长的输入
+```
+
+按这个趋势外推，`'a'.repeat(35)` 就已经是**分钟级**了。也就是说：攻击者只需要几十个字符的输入，就能把单核 CPU 完全占满。这也是 Cloudflare、Stack Overflow 等大型服务历史上出现过的线上故障原因，相关 CVE 至今仍在持续产生。
+
+**工程防护清单：**
+
+1. **永远不要把不可信输入直接当作模式**。用户提供模式时，用 `node-re2`（RE2 线性引擎）或 `re2js`；仅提供「关键字」时用 `RegExp.escape()`。
+2. **警惕嵌套量词与「万能 `.*`」**。`.*a.*b` 已是二次复杂度；用更具体的字符类替代 `.`，例如用 `[^"]*` 代替 `.*`。
+3. **明确边界**：能加 `^...$` 就加上，避免引擎在无关位置上反复尝试。
+4. **限制输入长度**：在进入正则前做长度上限校验，把爆炸的规模挡在门外。
+5. **可用前置断言替代「回溯试探」**，例如用 `(?!...)` 快速排除。
+6. **注意工具链里的正则**：glob 转换、路由匹配、语法高亮、lint 规则都可能引入 ReDoS —— 历年的相关 CVE 中，相当一部分来自 `braces`、`micromatch` 这类 glob 转换依赖。
+
+:::info 前沿：V8 的线性匹配实验
+
+V8 提供实验性的线性匹配引擎（需启动参数 `--enable-experimental-regexp-engine`，并在正则后添加 `/l` 标志），可在不支持反向引用和断言子集时保证线性时间。TC39 也在 2026 年提出了「线性时间标志」的 Stage 0 提案。
+
+需要明确：**这还不是标准，也不应依赖**。当前生产环境的稳妥做法仍是上面 6 条 + RE2 类引擎。
+
+:::
+
+:::warning 不要用正则做的事
+
+* **解析 HTML / XML**：正则无法处理嵌套结构。用 `DOMParser` 或专用解析器。
+* **严格校验邮箱**：RFC 5322 的完整正则既不可读也不可靠。工程上只做「宽松格式检查」，最终以「发送验证邮件」为准。
+* **解析 JSON / CSV**：请用 `JSON.parse` 与成熟的 CSV 解析库。
+* **校验身份证/银行卡号**：校验位需要算术，正则只能验长度和字符集。
+
+:::
+
+## 参考资料
+
+* [MDN：JavaScript 正则表达式指南](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
+* [MDN：RegExp.escape()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/escape)
+* [TC39 proposal：RegExp v flag（ES2024）](https://github.com/tc39/proposal-regexp-v-flag)
+* [TC39 proposal：Regular Expression Pattern Modifiers（ES2025）](https://github.com/tc39/proposal-regexp-modifiers)
+* [OWASP：Regular expression Denial of Service - ReDoS](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS)
+* [Regex+：让 JS 正则支持原子组与注释的库](https://github.com/slevithan/regex)
