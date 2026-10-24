@@ -196,7 +196,7 @@ importers:
         version: 3.15.0
       katex:
         specifier: ^0.19.0
-        version: 0.19.0
+        version: 0.19.1
       mermaid:
         specifier: ^12.2.0
         version: 12.2.0
@@ -3138,6 +3138,10 @@ packages:
 
   katex@0.19.0:
     resolution: {integrity: sha512-v6Tznz3zJ7u3niRCoDTsumM2+HA2XXcCu+WAacCeHD2z3p9A9Ks987o5FzfTGBN0e8A0vjEgIDvLbICrXpdw/Q==}
+    hasBin: true
+
+  katex@0.19.1:
+    resolution: {integrity: sha512-jG8uKntjSEcm2EpQOh0XturpPuuC9r3Sq5HLHdsFdWZT27E672SF19QEi+of0/YeOy15lDgRhKvr5614uRrEfA==}
     hasBin: true
 
   keyv@5.6.0:
@@ -7921,6 +7925,10 @@ snapshots:
       commander: 15.0.0
 
   katex@0.19.0:
+    dependencies:
+      commander: 15.0.0
+
+  katex@0.19.1:
     dependencies:
       commander: 15.0.0
 
