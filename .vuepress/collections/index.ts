@@ -9,7 +9,7 @@ import typeChallenges from './type-challenges.js'
 import webpack from './webpack.js'
 
 export default defineCollections([
-  { type: 'post', title: '博客', dir: 'blog', linkPrefix: '/article/' },
+  { type: 'post', title: '博客', dir: 'blog', linkPrefix: '/article/', relatedPosts: true, feed: true },
   interviewQuestion,
   typeChallenges,
   learnRust,
@@ -18,6 +18,6 @@ export default defineCollections([
   webpack,
   frontendOpenSources,
   aiAgentSkills,
-  { type: 'doc', dir: '设计模式', title: '设计模式', linkPrefix: '/design-pattern/', sidebar: 'auto' },
-  { type: 'doc', dir: '算法', title: '算法', linkPrefix: '/algorithm/', sidebar: 'auto' },
+  { type: 'doc', dir: '设计模式', title: '设计模式', linkPrefix: '/design-pattern/', sidebar: 'auto', feed: true },
+  { type: 'doc', dir: '算法', title: '算法', linkPrefix: '/algorithm/', sidebar: 'auto', feed: true },
 ])

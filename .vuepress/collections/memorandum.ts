@@ -5,6 +5,7 @@ export default defineCollection({
   title: '备忘录',
   dir: '备忘录',
   linkPrefix: '/memorandum/',
+  feed: true,
   sidebar: [
     '',
     'ssh',

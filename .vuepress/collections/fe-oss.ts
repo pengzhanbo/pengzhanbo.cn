@@ -4,6 +4,7 @@ export default defineCollection({
   type: 'doc',
   title: '开源库指南',
   dir: '开源库指南',
+  feed: true,
   linkPrefix: '/fe-oss/',
   sidebar: [
     'intro',

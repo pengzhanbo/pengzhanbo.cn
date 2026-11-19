@@ -5,6 +5,7 @@ export default defineCollection({
   title: 'rust学习简记',
   linkPrefix: '/learn-rust/',
   dir: 'rust学习简记',
+  feed: true,
   sidebar: [
     '',
     {

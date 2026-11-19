@@ -5,6 +5,7 @@ export default defineCollection({
   title: 'Type Challenges',
   linkPrefix: '/type-challenges/',
   dir: 'type-challenges',
+  feed: true,
   sidebar: [
     '',
     {

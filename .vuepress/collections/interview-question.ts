@@ -5,6 +5,7 @@ export default defineCollection({
   title: '面试题',
   linkPrefix: '/interview-question/',
   dir: '面试题',
+  feed: true,
   sidebar: [
     {
       prefix: 'HTML',

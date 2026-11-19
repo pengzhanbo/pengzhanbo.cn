@@ -3,6 +3,7 @@ import { defineCollection } from 'vuepress-theme-plume'
 export default defineCollection({
   type: 'doc',
   title: '防御性CSS',
+  feed: true,
   linkPrefix: '/defensive-css/',
   dir: '防御性CSS',
   sidebar: [

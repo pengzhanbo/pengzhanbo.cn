@@ -1,6 +1,7 @@
 import { defineThemeConfig } from 'vuepress-theme-plume'
 import collections from './collections/index.js'
 import navbar from './navbar.js'
+import { readerPreferences } from './reader.js'
 
 export default defineThemeConfig({
   logo: '/logo.png',
@@ -8,7 +9,8 @@ export default defineThemeConfig({
   navbar,
   collections,
 
-  readAid: 'left',
+  readerPreferences,
+  feed: { perCollection: true },
 
   profile: {
     name: '鹏展博',

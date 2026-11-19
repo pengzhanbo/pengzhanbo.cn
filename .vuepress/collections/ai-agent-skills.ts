@@ -3,6 +3,7 @@ import { defineCollection } from 'vuepress-theme-plume'
 export default defineCollection({
   type: 'doc',
   title: 'Agent Skills',
+  feed: true,
   linkPrefix: '/ai-agent-skills/',
   dir: 'AI-agent-skills',
   sidebar: [
