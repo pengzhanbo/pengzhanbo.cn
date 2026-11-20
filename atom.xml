@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://pengzhanbo.cn/#feed</id>
+  <title>鹏展博</title>
+  <subtitle>热爱生活</subtitle>
+  <updated>2026-09-11T04:02:46+00:00</updated>
+  <link href="https://pengzhanbo.cn/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pengzhanbo.cn/" />
+  <generator uri="https://theme-plume.vuejs.press">vuepress-theme-plume</generator>
+  <author>
+    <name>鹏展博</name>
+  </author>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/5-agent-skills-design-patterns/</id>
+    <title>每位ADK开发者都应掌握的5种智能体技能设计模式</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/5-agent-skills-design-patterns/" />
+    <published>2026-03-19T12:10:23+00:00</published>
+    <updated>2026-03-20T14:23:03+00:00</updated>
+    <summary type="text">原文来源: Google Cloud Tech on X (Twitter) 作者: @Saboo_Shubham_ 和 @lavinigam 当谈到 SKILL.md 时，开发者往往执着于格式——写好 YAML、整理目录结构、遵循规范。但随着超过 30 个 Agent 工具（如 Claude Code、Gemini CLI 和 Cursor）采用相同...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/g8wq3mzt/</id>
+    <title>JavaScript 正则表达式完全指南</title>
+    <link href="https://pengzhanbo.cn/article/g8wq3mzt/" />
+    <published>2026-02-10T10:30:00+00:00</published>
+    <updated>2026-09-11T04:02:46+00:00</updated>
+    <summary type="text">本文是对 2018 年那篇 的重写，结合 2026 年的现状做了全面更新。 这些年 JavaScript 正则表达式发生了不小的变化：ES2018 带来了命名捕获组、后行断言、Unicode 属性转义和 s 标志；ES2022 增加了 d 标志；ES2024 增加了 v 标志；ES2025 又补上了 RegExp.escape()、内联修饰符和重复命名...</summary>
+    <category term="javascript" />
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/equipping-agents-for-the-real-world-with-agent-skills/</id>
+    <title>使用 Agent Skills 为真实世界装备代理</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/equipping-agents-for-the-real-world-with-agent-skills/" />
+    <published>2026-01-08T21:38:34+00:00</published>
+    <updated>2026-01-08T15:21:58+00:00</updated>
+    <summary type="text">Claude 功能强大，但实际工作需要流程知识与组织情境。 现推出智能体技能——一种通过文件与文件夹构建专业智能体的全新方式。 更新：我们已发布 Agent Skills 作为跨平台可移植性的开放标准。（2025年12月18日） 随着模型能力的提升，我们现在可以构建能够与成熟计算环境交互的通用智能体。 例如，Claude Code 就能通过本地代码执行...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/wu41neza/</id>
+    <title>为什么你应该停止使用 enum</title>
+    <link href="https://pengzhanbo.cn/article/wu41neza/" />
+    <published>2026-01-06T15:33:00+00:00</published>
+    <updated>2026-01-08T07:53:19+00:00</updated>
+    <summary type="text">什么是 enum ？ 在 TypeScript 中，enum 是一种用于定义一组命名常量的数据类型。它看起来很像其他语言中的枚举，例如 C# 或 Java： 枚举被设计为既能作为 类型 使用，也能作为 值 使用，这让它们看起来很方便。 然而，在 TypeScript 项目中，尤其是现代前端开发中，枚举并不是最佳实践。 接下来，我们将深入探讨为什么你应该...</summary>
+    <category term="typescript" />
+    <category term="前端" />
+    <category term="TypeScript" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/integrate/</id>
+    <title>集成 Skills</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/integrate/" />
+    <published>2026-01-04T16:37:02+00:00</published>
+    <updated>2026-03-06T15:49:04+00:00</updated>
+    <summary type="text">将 Skills 集成到你的 智能体 中。 如何为您的智能体或工具添加 Agent Skills 支持。 本指南说明如何为 AI智能体或开发工具添加 Skills 支持。 集成方法 集成技能的两种主要方法： 基于文件系统的智能体 在计算机环境（bash/unix）中运行，代表 Skills 最全面的选项。 当模型发出如 cat /path/to/my-...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/specification/</id>
+    <title>规范说明</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/specification/" />
+    <published>2026-01-04T16:36:15+00:00</published>
+    <updated>2026-01-04T12:47:10+00:00</updated>
+    <summary type="text">Agent Skills 的完整格式规范。 本文档定义了 Agent Skills 的格式。 目录结构 Skill 是一个至少包含 SKILL.md 文件的目录： 您可以选择性地包含 额外目录，例如 scripts/、references/ 和 assets/，以支持您的 Skill 。 SKILL.md 格式 SKILL.md 文件必须包含 YAML...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/what-are-skills/</id>
+    <title>什么是 Skills ?</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/what-are-skills/" />
+    <published>2026-01-04T16:35:38+00:00</published>
+    <updated>2026-01-04T12:47:10+00:00</updated>
+    <summary type="text">Agent Skills 是一种轻量级、开放的格式，用于通过专业知识和工作流扩展AI智能体的能力。 Skills 的核心是一个包含 SKILL.md 文件的文件夹。 该文件包含元数据（至少包含 name 和 description）以及指导智能体执行特定任务的指令。 Skills 还可以捆绑脚本、模板和参考资料。 Skills 如何运作 技能采用 渐进...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/overview/</id>
+    <title>概述</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/overview/" />
+    <published>2026-01-04T16:35:03+00:00</published>
+    <updated>2026-01-04T13:06:48+00:00</updated>
+    <summary type="text">一种简单、开放的格式，用于为智能体提供新能力和专业知识。 Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并使用它们来更准确、更高效地完成任务。 为什么选择 Agent Skills ? 智能体能力日益增强，但常常缺乏可靠执行实际工作所需的上下文信息。 Skills 机制通过为智能体提供程序性知识及公司、团队和用户特定上下文（可...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/ai-agent-skills/</id>
+    <title>Agent Skills</title>
+    <link href="https://pengzhanbo.cn/ai-agent-skills/" />
+    <published>2026-01-04T16:26:52+00:00</published>
+    <updated>2026-01-28T12:46:52+00:00</updated>
+    <summary type="text">概述 Agent Skills 是 一种简单、开放的格式，用于为智能体提供新能力和专业知识。 Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并使用它们来更准确、更高效地完成任务。 本文档 翻译自 Agent Skills。仅供个人学习使用。 翻译版本仓库提交节点为 75287b2 仓库地址 Skills 搜索 CLI 工具 相...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/o0trf4ov/</id>
+    <title>给 JavaScript 开发者的 Go 语言指南</title>
+    <link href="https://pengzhanbo.cn/article/o0trf4ov/" />
+    <published>2025-12-07T20:17:50+00:00</published>
+    <updated>2026-04-21T12:35:17+00:00</updated>
+    <summary type="text">写这篇文章，其实有些晚了，早在今年的 3 月份（2025 年）， 微软宣布 Typescript 官方编译器将移植到 Go，并承诺速度比当前编译器要快 10 倍。这引起了 Javascript 社区对 Go 语言的广泛关注。 因此，这篇文章旨在为对 Go 语言 感到好奇或希望进一步了解的 JavaScript 开发者 提供一个起点。 我将尝试涵盖 Go...</summary>
+    <category term="golang" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/rdx1yx85/</id>
+    <title>一文读懂 RAG (检索增强生成)</title>
+    <link href="https://pengzhanbo.cn/article/rdx1yx85/" />
+    <published>2025-11-19T10:30:14+00:00</published>
+    <updated>2026-01-04T12:47:10+00:00</updated>
+    <summary type="text">如果你和大模型聊过天（比如 GPT-4），你可能特别佩服它那种信手拈来的知识和妙语连珠的能力。但说实话，你可能也坑过——它会正儿八经地瞎扯（我们叫它“幻觉”），或压根不知道昨天发生了啥新闻。 这就像是你有个极其博学的“神经病最强大脑”，但他的记忆最后更新时间定格在好几年前。 那么问题来了，有没有办法让这颗脑袋不仅能查内存，还能实时联网查外部资料？特别是...</summary>
+    <category term="AI" />
+    <category term="python" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/wo7znd9i/</id>
+    <title>从零开始实现最小化的 AI MCP 服务</title>
+    <link href="https://pengzhanbo.cn/article/wo7znd9i/" />
+    <published>2025-11-10T10:37:50+00:00</published>
+    <updated>2025-11-19T16:43:52+00:00</updated>
+    <summary type="text">今天，我们就来聊聊一个日益流行的开放标准——模型上下文协议（Model Context Protocol，简称 MCP），并用 TypeScript 从零开始，构建一个最小但功能齐全的 MCP 服务。 别担心，本文专为初学者打造，我将用最通俗易懂的语言，带你一步步揭开 MCP 的神秘面纱，让你不仅知道它是什么，更能亲手实现它！ 什么是 MCP？ 简单来...</summary>
+    <category term="AI" />
+    <category term="MCP" />
+    <category term="typescript" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/ag2zktg5/</id>
+    <title>从零开始实现最小化的 AI Agent</title>
+    <link href="https://pengzhanbo.cn/article/ag2zktg5/" />
+    <published>2025-11-02T11:49:34+00:00</published>
+    <updated>2025-11-16T13:09:34+00:00</updated>
+    <summary type="text">在人工智能飞速发展的今天，AI Agent 的概念越来越火热，它不再是简单的问答机器人，而是能够自主感知环境、独立思考、并采取行动以达成目标的智能实体。想象一下一个能帮你管理日常事务、自动处理邮件，甚至帮你写代码的“数字助理”，这就是 AI Agent 的魅力所在。 但对于许多开发者来说，AI Agent 似乎是一个复杂且遥不可及的系统。别担心！本文将...</summary>
+    <category term="AI" />
+    <category term="agent" />
+    <category term="python" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/wucfrrye/</id>
+    <title>CSS 媒体查询与用户体验</title>
+    <link href="https://pengzhanbo.cn/article/wucfrrye/" />
+    <published>2025-10-28T21:43:11+00:00</published>
+    <updated>2026-03-06T15:49:04+00:00</updated>
+    <summary type="text">我们都知道，在如今设备多样化的时代，响应式设计已经不再是“加分项”，而是“必选项”。 而 CSS 媒体查询，正是我们实现响应式布局的得力助手。 但你有没有想过，媒体查询除了可以根据屏幕尺寸适配布局，还能更进一步地与用户交互方式、设备特性以及个人偏好等要素结合，从而 提供更智能、更个性化的用户体验呢？ 今天，我们就来深入探讨一些高级的、与用户体验息息相关...</summary>
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/gu55hnjs/</id>
+    <title>CSS @function：原生 CSS 函数定义</title>
+    <link href="https://pengzhanbo.cn/article/gu55hnjs/" />
+    <published>2025-10-19T13:07:39+00:00</published>
+    <updated>2025-10-20T13:42:35+00:00</updated>
+    <summary type="text">重要提示 本文讨论的是 原生 CSS @function 规则，而非 Sass/Less 等预处理器中的函数功能。这是 CSS 规范中正在发展的新特性，用于在原生 CSS 中定义可重用的函数逻辑。 @function 目前的浏览器兼容性堪忧，不建议在生产中使用 什么是 CSS @function？ CSS @function 规则允许开发者定义自定义函...</summary>
+    <category term="css" />
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/fc6faley/</id>
+    <title>Prompt Engineering：与 AI 对话的艺术与科学</title>
+    <link href="https://pengzhanbo.cn/article/fc6faley/" />
+    <published>2025-09-17T00:41:01+00:00</published>
+    <updated>2025-11-19T21:21:11+00:00</updated>
+    <summary type="text">在人工智能快速发展的今天，我们与 AI 的交互方式正在发生根本性变化。其中，Prompt Engineering（提示工程）作为一门新兴的技能，正成为解锁 AI 潜力的关键所在。 什么是 Prompt Engineering？ Prompt Engineering 指的是设计、优化和完善输入给 AI 模型的提示（prompt），以获得更准确、相关和有用...</summary>
+    <category term="AI" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/ofdnzflv/</id>
+    <title>Web Animations API 入门</title>
+    <link href="https://pengzhanbo.cn/article/ofdnzflv/" />
+    <published>2025-08-19T10:30:29+00:00</published>
+    <updated>2025-10-19T13:30:27+00:00</updated>
+    <summary type="text">在现代前端开发中，创造流畅、高性能的动画效果已成为提升用户体验的关键。Web Animations API 为我们提供了一种强大而灵活的方式来控制动画，让我们一起来探索它的魅力！ 什么是 Web Animations API？ Web Animations API (WAAPI) 是一个现代的 JavaScript API，它允许开发者使用 JavaS...</summary>
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/xqniz7cb/</id>
+    <title>View Transitions API：打造丝滑流畅的页面动画</title>
+    <link href="https://pengzhanbo.cn/article/xqniz7cb/" />
+    <published>2025-07-27T00:54:37+00:00</published>
+    <updated>2025-10-19T13:30:27+00:00</updated>
+    <summary type="text">在现代 Web 开发中，流畅的页面过渡效果能够显著提升用户体验。View Transitions API 是一个革命性的浏览器原生 API，它让创建复杂的页面过渡动画变得前所未有的简单。本文将带你从零开始，全面掌握这个强大的 API。 什么是 View Transitions API？ View Transitions API 是一个新的 Web 标准...</summary>
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/fe-oss/unconfig/</id>
+    <title>unconfig</title>
+    <link href="https://pengzhanbo.cn/fe-oss/unconfig/" />
+    <published>2025-06-22T01:06:19+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 unconfig 是一个轻量级、高度灵活的 Node.js 开源工具库，专注于简化配置文件读取的过程。 它由 Vue 和 Vite 核心团队成员 Anthony Fu 开发，旨在解决工具库和框架中多格式配置文件的兼容性问题。 unconfig 默认支持 ts, mjs, js, json 安装 使用</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/h3gsxe94/</id>
+    <title>chokidar 从 v3 到 v4 升级指南</title>
+    <link href="https://pengzhanbo.cn/article/h3gsxe94/" />
+    <published>2025-06-15T20:09:19+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">众所周知，chokidar 是前端最广泛使用的 文件监听工具。 在 NPM 上每周有约 1 亿次的下载量，是 webpack / vite 等主流的前端构建工具的必不可少的依赖之一。 但是从 v3 升级到 v4 ，它有一个非常重要的破坏性变更，这导致了我们升级过程不够平滑。 在这篇文章中，将说明如何进行升级。 从 v3 到 v4 的破坏性变更 我们先看...</summary>
+    <category term="前端" />
+    <category term="Node" />
+  </entry>
+</feed>

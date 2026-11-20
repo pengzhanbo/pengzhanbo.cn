@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://pengzhanbo.cn/blog/#feed</id>
+  <title>博客</title>
+  <subtitle>热爱生活</subtitle>
+  <updated>2026-09-11T04:02:46+00:00</updated>
+  <link href="https://pengzhanbo.cn/blog/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pengzhanbo.cn/blog/" />
+  <generator uri="https://theme-plume.vuejs.press">vuepress-theme-plume</generator>
+  <author>
+    <name>鹏展博</name>
+  </author>
+  <entry>
+    <id>https://pengzhanbo.cn/article/g8wq3mzt/</id>
+    <title>JavaScript 正则表达式完全指南</title>
+    <link href="https://pengzhanbo.cn/article/g8wq3mzt/" />
+    <published>2026-02-10T10:30:00+00:00</published>
+    <updated>2026-09-11T04:02:46+00:00</updated>
+    <summary type="text">本文是对 2018 年那篇 的重写，结合 2026 年的现状做了全面更新。 这些年 JavaScript 正则表达式发生了不小的变化：ES2018 带来了命名捕获组、后行断言、Unicode 属性转义和 s 标志；ES2022 增加了 d 标志；ES2024 增加了 v 标志；ES2025 又补上了 RegExp.escape()、内联修饰符和重复命名...</summary>
+    <category term="javascript" />
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/wu41neza/</id>
+    <title>为什么你应该停止使用 enum</title>
+    <link href="https://pengzhanbo.cn/article/wu41neza/" />
+    <published>2026-01-06T15:33:00+00:00</published>
+    <updated>2026-01-08T07:53:19+00:00</updated>
+    <summary type="text">什么是 enum ？ 在 TypeScript 中，enum 是一种用于定义一组命名常量的数据类型。它看起来很像其他语言中的枚举，例如 C# 或 Java： 枚举被设计为既能作为 类型 使用，也能作为 值 使用，这让它们看起来很方便。 然而，在 TypeScript 项目中，尤其是现代前端开发中，枚举并不是最佳实践。 接下来，我们将深入探讨为什么你应该...</summary>
+    <category term="typescript" />
+    <category term="前端" />
+    <category term="TypeScript" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/o0trf4ov/</id>
+    <title>给 JavaScript 开发者的 Go 语言指南</title>
+    <link href="https://pengzhanbo.cn/article/o0trf4ov/" />
+    <published>2025-12-07T20:17:50+00:00</published>
+    <updated>2026-04-21T12:35:17+00:00</updated>
+    <summary type="text">写这篇文章，其实有些晚了，早在今年的 3 月份（2025 年）， 微软宣布 Typescript 官方编译器将移植到 Go，并承诺速度比当前编译器要快 10 倍。这引起了 Javascript 社区对 Go 语言的广泛关注。 因此，这篇文章旨在为对 Go 语言 感到好奇或希望进一步了解的 JavaScript 开发者 提供一个起点。 我将尝试涵盖 Go...</summary>
+    <category term="golang" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/rdx1yx85/</id>
+    <title>一文读懂 RAG (检索增强生成)</title>
+    <link href="https://pengzhanbo.cn/article/rdx1yx85/" />
+    <published>2025-11-19T10:30:14+00:00</published>
+    <updated>2026-01-04T12:47:10+00:00</updated>
+    <summary type="text">如果你和大模型聊过天（比如 GPT-4），你可能特别佩服它那种信手拈来的知识和妙语连珠的能力。但说实话，你可能也坑过——它会正儿八经地瞎扯（我们叫它“幻觉”），或压根不知道昨天发生了啥新闻。 这就像是你有个极其博学的“神经病最强大脑”，但他的记忆最后更新时间定格在好几年前。 那么问题来了，有没有办法让这颗脑袋不仅能查内存，还能实时联网查外部资料？特别是...</summary>
+    <category term="AI" />
+    <category term="python" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/wo7znd9i/</id>
+    <title>从零开始实现最小化的 AI MCP 服务</title>
+    <link href="https://pengzhanbo.cn/article/wo7znd9i/" />
+    <published>2025-11-10T10:37:50+00:00</published>
+    <updated>2025-11-19T16:43:52+00:00</updated>
+    <summary type="text">今天，我们就来聊聊一个日益流行的开放标准——模型上下文协议（Model Context Protocol，简称 MCP），并用 TypeScript 从零开始，构建一个最小但功能齐全的 MCP 服务。 别担心，本文专为初学者打造，我将用最通俗易懂的语言，带你一步步揭开 MCP 的神秘面纱，让你不仅知道它是什么，更能亲手实现它！ 什么是 MCP？ 简单来...</summary>
+    <category term="AI" />
+    <category term="MCP" />
+    <category term="typescript" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/ag2zktg5/</id>
+    <title>从零开始实现最小化的 AI Agent</title>
+    <link href="https://pengzhanbo.cn/article/ag2zktg5/" />
+    <published>2025-11-02T11:49:34+00:00</published>
+    <updated>2025-11-16T13:09:34+00:00</updated>
+    <summary type="text">在人工智能飞速发展的今天，AI Agent 的概念越来越火热，它不再是简单的问答机器人，而是能够自主感知环境、独立思考、并采取行动以达成目标的智能实体。想象一下一个能帮你管理日常事务、自动处理邮件，甚至帮你写代码的“数字助理”，这就是 AI Agent 的魅力所在。 但对于许多开发者来说，AI Agent 似乎是一个复杂且遥不可及的系统。别担心！本文将...</summary>
+    <category term="AI" />
+    <category term="agent" />
+    <category term="python" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/wucfrrye/</id>
+    <title>CSS 媒体查询与用户体验</title>
+    <link href="https://pengzhanbo.cn/article/wucfrrye/" />
+    <published>2025-10-28T21:43:11+00:00</published>
+    <updated>2026-03-06T15:49:04+00:00</updated>
+    <summary type="text">我们都知道，在如今设备多样化的时代，响应式设计已经不再是“加分项”，而是“必选项”。 而 CSS 媒体查询，正是我们实现响应式布局的得力助手。 但你有没有想过，媒体查询除了可以根据屏幕尺寸适配布局，还能更进一步地与用户交互方式、设备特性以及个人偏好等要素结合，从而 提供更智能、更个性化的用户体验呢？ 今天，我们就来深入探讨一些高级的、与用户体验息息相关...</summary>
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/gu55hnjs/</id>
+    <title>CSS @function：原生 CSS 函数定义</title>
+    <link href="https://pengzhanbo.cn/article/gu55hnjs/" />
+    <published>2025-10-19T13:07:39+00:00</published>
+    <updated>2025-10-20T13:42:35+00:00</updated>
+    <summary type="text">重要提示 本文讨论的是 原生 CSS @function 规则，而非 Sass/Less 等预处理器中的函数功能。这是 CSS 规范中正在发展的新特性，用于在原生 CSS 中定义可重用的函数逻辑。 @function 目前的浏览器兼容性堪忧，不建议在生产中使用 什么是 CSS @function？ CSS @function 规则允许开发者定义自定义函...</summary>
+    <category term="css" />
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/fc6faley/</id>
+    <title>Prompt Engineering：与 AI 对话的艺术与科学</title>
+    <link href="https://pengzhanbo.cn/article/fc6faley/" />
+    <published>2025-09-17T00:41:01+00:00</published>
+    <updated>2025-11-19T21:21:11+00:00</updated>
+    <summary type="text">在人工智能快速发展的今天，我们与 AI 的交互方式正在发生根本性变化。其中，Prompt Engineering（提示工程）作为一门新兴的技能，正成为解锁 AI 潜力的关键所在。 什么是 Prompt Engineering？ Prompt Engineering 指的是设计、优化和完善输入给 AI 模型的提示（prompt），以获得更准确、相关和有用...</summary>
+    <category term="AI" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/ofdnzflv/</id>
+    <title>Web Animations API 入门</title>
+    <link href="https://pengzhanbo.cn/article/ofdnzflv/" />
+    <published>2025-08-19T10:30:29+00:00</published>
+    <updated>2025-10-19T13:30:27+00:00</updated>
+    <summary type="text">在现代前端开发中，创造流畅、高性能的动画效果已成为提升用户体验的关键。Web Animations API 为我们提供了一种强大而灵活的方式来控制动画，让我们一起来探索它的魅力！ 什么是 Web Animations API？ Web Animations API (WAAPI) 是一个现代的 JavaScript API，它允许开发者使用 JavaS...</summary>
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/xqniz7cb/</id>
+    <title>View Transitions API：打造丝滑流畅的页面动画</title>
+    <link href="https://pengzhanbo.cn/article/xqniz7cb/" />
+    <published>2025-07-27T00:54:37+00:00</published>
+    <updated>2025-10-19T13:30:27+00:00</updated>
+    <summary type="text">在现代 Web 开发中，流畅的页面过渡效果能够显著提升用户体验。View Transitions API 是一个革命性的浏览器原生 API，它让创建复杂的页面过渡动画变得前所未有的简单。本文将带你从零开始，全面掌握这个强大的 API。 什么是 View Transitions API？ View Transitions API 是一个新的 Web 标准...</summary>
+    <category term="前端" />
+    <category term="基础" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/h3gsxe94/</id>
+    <title>chokidar 从 v3 到 v4 升级指南</title>
+    <link href="https://pengzhanbo.cn/article/h3gsxe94/" />
+    <published>2025-06-15T20:09:19+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">众所周知，chokidar 是前端最广泛使用的 文件监听工具。 在 NPM 上每周有约 1 亿次的下载量，是 webpack / vite 等主流的前端构建工具的必不可少的依赖之一。 但是从 v3 升级到 v4 ，它有一个非常重要的破坏性变更，这导致了我们升级过程不够平滑。 在这篇文章中，将说明如何进行升级。 从 v3 到 v4 的破坏性变更 我们先看...</summary>
+    <category term="前端" />
+    <category term="Node" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/675ocjcc/</id>
+    <title>从 tsup 到 tsdown</title>
+    <link href="https://pengzhanbo.cn/article/675ocjcc/" />
+    <published>2025-06-02T15:58:36+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">前言 最近，VoidZero 推出了一个 基于 rolldown 的全新的构建工具 tsdown。 本着尝鲜的态度，我把我在开发维护中的一部分开源项目，将构建工具从 tsup 切换到 tsdown。 迁移过程 自动迁移 tsdown 提供了迁移脚本，可以直接运行以下命令完成迁移: 手动迁移 卸载 tsup，安装 tsdown 重命名 tsup.conf...</summary>
+    <category term="前端" />
+    <category term="构建工具" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/or9sfaj3/</id>
+    <title>怎么写前端开发的 AI prompt ？</title>
+    <link href="https://pengzhanbo.cn/article/or9sfaj3/" />
+    <published>2025-05-05T18:18:06+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">前言 早上 10 点，当你准备正式开始今天的开发任务时，发现隔壁的前端同学悠闲的看着屏幕，AI 正在输出着代码， 他看了几眼觉得不错便接受了这份代码，于是你也开始让你的 AI 工具帮你写代码。 以下示例来自于 Trae 生成的结果 你不假思索的告诉 AI ： 于是，AI 框框一顿输出： emmmm，是有个页面了，但是不对，你发现 用户名和密码没有进行校...</summary>
+    <category term="AI" />
+    <category term="工具" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/m0kwurpc/</id>
+    <title>React 原理解析——优先级调度</title>
+    <link href="https://pengzhanbo.cn/article/m0kwurpc/" />
+    <published>2025-04-10T16:08:36+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">🚧 施工中... React 的并发渲染能力依赖于其精细的优先级调度系统，Lanes 模型 是这一系统的基石。 Lanes 模型 它使用 31 位二进制掩码 表示不同优先级的更新任务，每个位称为一个 &quot;Lane&quot;（优先级通道）。 每个 Lane 对应一个二进制位，共 31 个 优先级从右向左递减（SyncLane 在 bit 2）...</summary>
+    <category term="react" />
+    <category term="前端" />
+    <category term="React" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/ldvuv37p/</id>
+    <title>React组件渲染性能优化</title>
+    <link href="https://pengzhanbo.cn/article/ldvuv37p/" />
+    <published>2025-04-05T22:16:48+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">在大型 React 应用中，组件渲染性能直接影响用户体验。 渲染机制与优化 当父组件状态变化时，React 默认会重新渲染该组件及其所有子组件，即使子组件的 props 未改变。 这种机制可能导致不必要的渲染开销： 因此，优化核心策略是 阻断不必要的渲染链，我们可以通过 浅比较(shallow comparison) 来实现这一目标。 类组件渲染性能优...</summary>
+    <category term="react" />
+    <category term="前端" />
+    <category term="React" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/ur80anlr/</id>
+    <title>React 原理解析：Diff 算法机制与优化策略</title>
+    <link href="https://pengzhanbo.cn/article/ur80anlr/" />
+    <published>2025-04-03T16:27:00+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">React 的 Diff 算法是其高性能渲染的核心保障，本文将从原理到实现剖析这一关键机制。 Diff 算法：React 高效渲染的基石 在 React 框架中，Diff 算法扮演着至关重要的角色，它决定了在组件状态或属性变更时，React 如何高效地更新 DOM 结构。 其核心功能是在构建 workInProgress Fiber Tree 时，智能...</summary>
+    <category term="react" />
+    <category term="前端" />
+    <category term="React" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/6lgzinfk/</id>
+    <title>React 原理解析：Fiber 架构与双缓冲机制</title>
+    <link href="https://pengzhanbo.cn/article/6lgzinfk/" />
+    <published>2025-03-25T16:09:01+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">Fiber 架构的核心概念 Fiber 节点的本质 Fiber 节点是 React 16 引入的核心架构元素，它代表了 组件树中的工作单元 。 每个 Fiber 节点对应一个 React 元素，构成了一种 基于链表的虚拟 DOM 实现。 Fiber 的三重含义 Fiber 架构包含三个维度的设计理念： 架构层面：取代传统递归更新（Stack Recon...</summary>
+    <category term="react" />
+    <category term="前端" />
+    <category term="React" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/8kq3oe32/</id>
+    <title>React 渲染机制解析：从调度到提交</title>
+    <link href="https://pengzhanbo.cn/article/8kq3oe32/" />
+    <published>2025-03-15T14:18:59+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">核心概念回顾 在深入渲染流程前，先回顾 Fiber 架构的三个核心模块： Scheduler（调度器）：基于任务优先级调度任务执行顺序 Reconciler（协调器）：计算新旧虚拟 DOM 树的差异 Renderer（渲染器）：将更新后的虚拟 DOM 转换为实际 UI 这三个模块共同构成了 React 高效灵活的渲染机制。下面通过完整渲染流程解析它们如...</summary>
+    <category term="react" />
+    <category term="前端" />
+    <category term="React" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/article/uocv0xza/</id>
+    <title>React 架构演进探析 —— 从栈式协调到Fiber架构</title>
+    <link href="https://pengzhanbo.cn/article/uocv0xza/" />
+    <published>2025-03-05T11:25:45+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">前言 在探讨 React 内部机制时，经常提及一个关键转折点：React 16 引入了Fiber架构。这引发了一系列核心问题：何为 Fiber 架构？它所取代的原有架构是什么？React 团队引入 Fiber 架构的根本动因何在？ 本文旨在系统解析Fiber架构的核心概念与设计思想，揭示其如何解决历史架构的瓶颈。深入的技术细节（如具体调度算法、优先级机...</summary>
+    <category term="react" />
+    <category term="前端" />
+    <category term="React" />
+  </entry>
+</feed>

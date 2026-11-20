@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>rust学习简记</title>
+    <link>https://pengzhanbo.cn/learn-rust/</link>
+    <description>热爱生活</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 07 Oct 2025 17:39:39 +0000</lastBuildDate>
+    <generator>vuepress-theme-plume</generator>
+    <atom:link href="https://pengzhanbo.cn/learn-rust/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>数字类型</title>
+      <link>https://pengzhanbo.cn/learn-rust/number-type/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/number-type/</guid>
+      <pubDate>Sat, 04 Jun 2022 05:41:05 +0000</pubDate>
+      <description>在Rust 中， 数字类型主要分为 整数类型 和 浮点类型。 类型定义的形式： 有无符号 + 类型大小(位数) 无符号数 只能取正数， 有符号数 既可以取正数也可以取负数 整数类型 整数是指没有小数部分的数字。在Rust中，内置了如下的整数类型： 每个有符号类型规定的数字，取值范围为 : −(2n−1) ~ 2n−1−1 ，其中 n 为位长度。 如 i...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>引用与借用</title>
+      <link>https://pengzhanbo.cn/learn-rust/borrowing/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/borrowing/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:45:16 +0000</pubDate>
+      <description>借用 借用（borrowing） 是指，获取变量的引用。 引用与解引用 在Rust中，通过 &amp; 进行引用， 通过 * 进行解引用。 不可变引用 不可变引用 仅允许使用值，但不获取所有权。 当引用离开作用域后，其指向的值也不会被丢弃。 可变引用 可变引用通过 &amp;mut 声明： 同一个作用域，特定数据只能有一个可变引用 同一个值的可变引用和...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>所有权</title>
+      <link>https://pengzhanbo.cn/learn-rust/ownership/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/ownership/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:45:05 +0000</pubDate>
+      <description>所有权原则 Rust中每一个值都被一个变量所拥有，该变量被称为值的所有者 一个值只能同时被一个变量所拥有，或者说一个值只能有一个拥有者 当所有者（变量）离开作用域时，这个值将被抛弃（drop） 所有权转移 当 s1 赋予 s2 后，Rust 认为 s1 不再有效，因此也无需在 s1 离开作用域后 drop 任何东西，这就是把所有权从 s1 转移给了 s...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>数组</title>
+      <link>https://pengzhanbo.cn/learn-rust/array/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/array/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:44:57 +0000</pubDate>
+      <description>在 Rust 中， 常用的数组有两种： array 速度很快但长度固定 Vector 可动态增长但有性能损耗 array 将多个类型相同的元素依次组合在一起，就是一个数组。 长度固定 元素必须具有相同的类型 依次线性排列 这里说的数组是 Rust 的基本类型，是固定长度的，这点与其他编程语言不同，其它编程语言的数组往往是可变长度的，与 Rust 中的动...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>枚举</title>
+      <link>https://pengzhanbo.cn/learn-rust/enum/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/enum/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:44:47 +0000</pubDate>
+      <description>枚举(enum 或 enumeration)允许你通过列举可能的成员来定义一个枚举类型。 枚举类型是一个类型，它会包含所有可能的枚举成员, 而枚举值是该类型中的具体某个成员的实例。 枚举成员实例 通过 :: 操作符访问具体成员 枚举值 声明枚举值类型 任何类型的数据都可以放入枚举成员中 : 例如字符串、数值、结构体甚至另一个枚举。 枚举泛型 泛型参数 ...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>结构体</title>
+      <link>https://pengzhanbo.cn/learn-rust/struct/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/struct/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:44:38 +0000</pubDate>
+      <description>定义 通过关键词 struct 定义 一个清晰明确的结构体 名称 几个有名字的结构体 字段 创建实例 初始化实例时，每个字段都需要进行初始化 初始化实例时，字段顺序不需要和结构体定义时保持一致 访问结构体实例 通过 . 操作符访问实例： 必须要将结构体实例声明为可变的，才能修改实例的字段 不支持将结构体实例的某个字段单独声明为可变的 更新结构体实例 可...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>元组</title>
+      <link>https://pengzhanbo.cn/learn-rust/tuple/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/tuple/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:44:32 +0000</pubDate>
+      <description>元组是由多种类型组合到一起形成的，因此它是复合类型，元组的长度是固定的，元组中元素的顺序也是固定的。 模式匹配解构元组 用 . 访问元组</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>字符串与切片</title>
+      <link>https://pengzhanbo.cn/learn-rust/string-slice/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/string-slice/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:44:11 +0000</pubDate>
+      <description>切片 切片 是对集合中的部分引用 。 字符串切片 即是 对字符串类型的部分引用 字符串字面量 即 字符串切片 字符串 字符串是由字符组成的连续集合。 Rust 中的字符是 Unicode 类型，因此每个字符占据 4 个字节内存空间，但是在字符串中不一样，字符串是 UTF-8 编码，也就是字符串中的字符所占的字节数是变化的(1 - 4)，这样有助于大幅降...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>复合类型</title>
+      <link>https://pengzhanbo.cn/learn-rust/compound-type/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/compound-type/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:44:02 +0000</pubDate>
+      <description>复合类型指，由其他类型组合而成的类型，如： 结构体 Struct 枚举 enum 数组 array 字符串 String</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>函数</title>
+      <link>https://pengzhanbo.cn/learn-rust/function/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/function/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:43:50 +0000</pubDate>
+      <description>Untitled 函数要点 函数名和变量名使用 蛇形命名法 例如 fn add_two() -&gt; {} 函数的位置可以随便放，rust不关心我们在哪里定义了函数 每个函数参数都需要标注类型 函数返回 函数的返回值就是函数的最后一条 表达式 的返回值 也可以使用 return 提前返回 特殊返回类型: 无返回值 () 函数没有返回值，那么返回一个 ...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>语句和表达式</title>
+      <link>https://pengzhanbo.cn/learn-rust/statement/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/statement/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:43:41 +0000</pubDate>
+      <description>语句和表达式 Rust 中，函数体是由一系列 语句 组成，最后由一个 表达式 来返回值。 在 Rust 语言中，基于 语句(statement) 和 表达式(expression) 的方式是非常重要的，需要明确区分这两个概念。 语句 语句 指： 完成了某一个具体的操作，但不会产生返回值 示例： 表达式 表达式 总是要返回值 表达式 不能包含 分号 表达...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>字符,布尔,单元类型</title>
+      <link>https://pengzhanbo.cn/learn-rust/char-bool/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/char-bool/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:41:30 +0000</pubDate>
+      <description>字符 Rust 中的 字符 只能通过 &apos;&apos; 来表示。 &quot;&quot; 是Rust中用于表示 字符串的。和 &apos;&apos; 二者不能混用。 Rust 的字符不仅仅是 ASCII ，所有的 Unicode 值都可以作为 Rust 字符，包括单个的中文、日文、韩文、emoji 表情符号等等，都是合法的字符类型。Unicode 值的范围从 U+0000 ~ U...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>基本类型</title>
+      <link>https://pengzhanbo.cn/learn-rust/base-type/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/base-type/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:40:54 +0000</pubDate>
+      <description>基本类型 指一个最小化原子类型，无法解构为其他类型(一般意义上)，包括： 数字类型 有符号整数 (i8, i16, i32, i64, isize)、 无符号整数 (u8, u16, u32, u64, usize) 字符串 字符串字面量和字符串切片 &amp;str 布尔类型 true 和false 字符类型 表示单个 Unicode 字符，存储为 ...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>类型推导</title>
+      <link>https://pengzhanbo.cn/learn-rust/type-inference/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/type-inference/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:40:45 +0000</pubDate>
+      <description>Rust 是一门 静态类型语言。 编译器必须在编译器知道我们所有变量的类型，但这并不意味着需要为每个变量指定类型。 因为 Rust 编译器很聪明，它可以根据变量的值和上下文中的使用方式来自动推导出变量的类型 ，同时编译器也不够聪明，在某些情况下，它无法推导出变量类型，需要手动去给予一个类型标注。</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>变量</title>
+      <link>https://pengzhanbo.cn/learn-rust/variable/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/variable/</guid>
+      <pubDate>Fri, 03 Jun 2022 05:40:30 +0000</pubDate>
+      <description>声明变量 在 Rust 中， 通过 let 关键字声明变量。 变量命名 在命名方面，与其他语言没有区别，但是需要遵循 Rust 命名规范 变量绑定 在其他语言， var a = &apos;hello&apos; 表示将 字符串 hello 赋值给了变量 a 。 在 Rust中， let a = &apos;hello&apos; ，这个过程被称为 变量绑定。 使用 绑定 而不是 赋值 ,是...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>Cargo</title>
+      <link>https://pengzhanbo.cn/learn-rust/cargo/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/cargo/</guid>
+      <pubDate>Thu, 02 Jun 2022 05:14:57 +0000</pubDate>
+      <description>包管理器 cargo 是 rust 的包管理工具。在安装 rustup 时已经一并安装完成，可直接使用。 cargo 提供了一系列的工具，从项目的建立、构建、测试、运行、到部署，为 rust 项目提供了尽可能完善的工具。 Cargo.toml Cargo.toml 是 cargo 特有的项目数据描述文件。它存储了项目的所有元配置信息，如果 Rust 开...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>编辑器扩展</title>
+      <link>https://pengzhanbo.cn/learn-rust/editor-extension/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/editor-extension/</guid>
+      <pubDate>Thu, 02 Jun 2022 05:14:46 +0000</pubDate>
+      <description>推荐使用 vs code 编辑器， 并安装 rust-analyzer 扩展。</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>安装</title>
+      <link>https://pengzhanbo.cn/learn-rust/install/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/install/</guid>
+      <pubDate>Thu, 02 Jun 2022 05:14:06 +0000</pubDate>
+      <description>在 Linux或 MacOS 上安装 终端中输入如下命令： 这个命令将会下载一个脚本，并开始安装最新版本的 rustup 工具。 安装成功，将有如下提示： 安装C编译器（非必须） rust 依赖 libc 和 链接器 linker 。如果遇到提示链接器无法执行的错误，需要再手动安装一个C语言编译器： MacOS下： Linux下： 根据Linux的发行...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>rust学习简记</title>
+      <link>https://pengzhanbo.cn/learn-rust/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/learn-rust/</guid>
+      <pubDate>Thu, 02 Jun 2022 03:40:46 +0000</pubDate>
+      <description>阅读 《Rust Course》， 以及 《Rusty Book》 所做的简要笔记。 Rust Course Rusty Book</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+  </channel>
+</rss>

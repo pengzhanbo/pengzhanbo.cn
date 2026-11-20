@@ -1,0 +1,78 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "备忘录",
+  "home_page_url": "https://pengzhanbo.cn/memorandum/",
+  "feed_url": "https://pengzhanbo.cn/memorandum/feed.json",
+  "description": "热爱生活",
+  "language": "zh-CN",
+  "authors": [
+    {
+      "name": "鹏展博"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://pengzhanbo.cn/memorandum/git/emoji/",
+      "url": "https://pengzhanbo.cn/memorandum/git/emoji/",
+      "title": "git emoji",
+      "summary": "概述 在 git 提交信息中受支持的 emoji 。 使用 输入： 输出： emoji 列表 数据源 gitmoji",
+      "content_text": "概述 在 git 提交信息中受支持的 emoji 。 使用 输入： 输出： emoji 列表 数据源 gitmoji",
+      "date_published": "2025-04-09T10:54:23+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/memorandum/cargo/",
+      "url": "https://pengzhanbo.cn/memorandum/cargo/",
+      "title": "cargo",
+      "summary": "安装/升级 适用于 Linux 和 MacOS 在 Windows 中，下载 rustup-init.exe 并运行。 切换源 配置文件： ~/.cargo/config 切换源需要删除缓存目录",
+      "content_text": "安装/升级 适用于 Linux 和 MacOS 在 Windows 中，下载 rustup-init.exe 并运行。 切换源 配置文件： ~/.cargo/config 切换源需要删除缓存目录",
+      "date_published": "2022-06-21T17:40:42+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/memorandum/git/",
+      "url": "https://pengzhanbo.cn/memorandum/git/",
+      "title": "git",
+      "summary": "分支 提交 配置 解决中文乱码 不再将 文件权限变更 作为改动 设置大小写敏感 代理 统计查询 查看 个人代码量 每人增删行数 查看提交者排名 submodule 子模块 切换到子模块的特定提交 切换到父仓库的特定提交，并更新子模块 获取并切换子模块的最新标签 子模块递归",
+      "content_text": "分支 提交 配置 解决中文乱码 不再将 文件权限变更 作为改动 设置大小写敏感 代理 统计查询 查看 个人代码量 每人增删行数 查看提交者排名 submodule 子模块 切换到子模块的特定提交 切换到父仓库的特定提交，并更新子模块 获取并切换子模块的最新标签 子模块递归",
+      "date_published": "2021-09-21T00:34:10+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/memorandum/pm2/",
+      "url": "https://pengzhanbo.cn/memorandum/pm2/",
+      "title": "pm2",
+      "summary": "启动 启动 node 进程 启动其它应用程序 流程管理 可以将 app_name 替换为： all: 表示所有进程 id: 指定特定 id 的进程 检查状态 列出 PM2 的所有应用状态 日志 终端仪表板 Web 的仪表板 集群模式 常用命令行参数 更新 PM2",
+      "content_text": "启动 启动 node 进程 启动其它应用程序 流程管理 可以将 app_name 替换为： all: 表示所有进程 id: 指定特定 id 的进程 检查状态 列出 PM2 的所有应用状态 日志 终端仪表板 Web 的仪表板 集群模式 常用命令行参数 更新 PM2",
+      "date_published": "2021-09-20T22:02:09+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/memorandum/grep/",
+      "url": "https://pengzhanbo.cn/memorandum/grep/",
+      "title": "grep",
+      "summary": "参数 规则表达式",
+      "content_text": "参数 规则表达式",
+      "date_published": "2021-05-21T21:51:49+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/memorandum/nginx/",
+      "url": "https://pengzhanbo.cn/memorandum/nginx/",
+      "title": "nginx",
+      "summary": "服务管理 全局变量 监听端口 域名 (server_name) 负载均衡 简单实例 权重 ip_hash 解决负载均衡 session 的问题 fair 响应时间短的优先分配 url_hash 按访问url的hash结果来分配请求 keepalive 激活缓存以连接到上游服务器 server 可选参数 反向代理 负载均衡 + 反向代理 升级连接（适用于...",
+      "content_text": "服务管理 全局变量 监听端口 域名 (server_name) 负载均衡 简单实例 权重 ip_hash 解决负载均衡 session 的问题 fair 响应时间短的优先分配 url_hash 按访问url的hash结果来分配请求 keepalive 激活缓存以连接到上游服务器 server 可选参数 反向代理 负载均衡 + 反向代理 升级连接（适用于...",
+      "date_published": "2019-07-02T11:15:28+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/memorandum/ssh/",
+      "url": "https://pengzhanbo.cn/memorandum/ssh/",
+      "title": "ssh",
+      "summary": "配置位置 执行远程命令 SCP 从远程复制到本地 两台服务器之间的副本 从本地复制到远程 复制整个文件夹 复制文件夹中的所有文件 从服务器文件夹复制到当前文件夹 keygen -t 指定密钥类型, rsa | ed25519 | dsa | ecdsa -b 指定密钥长度 -C 指定注释 指定文件名 从私钥生成公钥 更改私钥密码 从 known_hos...",
+      "content_text": "配置位置 执行远程命令 SCP 从远程复制到本地 两台服务器之间的副本 从本地复制到远程 复制整个文件夹 复制文件夹中的所有文件 从服务器文件夹复制到当前文件夹 keygen -t 指定密钥类型, rsa | ed25519 | dsa | ecdsa -b 指定密钥长度 -C 指定注释 指定文件名 从私钥生成公钥 更改私钥密码 从 known_hos...",
+      "date_published": "2019-04-13T18:58:37+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    }
+  ]
+}

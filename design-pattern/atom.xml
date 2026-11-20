@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://pengzhanbo.cn/design-pattern/#feed</id>
+  <title>设计模式</title>
+  <subtitle>热爱生活</subtitle>
+  <updated>2025-10-07T17:39:39+00:00</updated>
+  <link href="https://pengzhanbo.cn/design-pattern/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pengzhanbo.cn/design-pattern/" />
+  <generator uri="https://theme-plume.vuejs.press">vuepress-theme-plume</generator>
+  <author>
+    <name>鹏展博</name>
+  </author>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/builder/</id>
+    <title>建造者模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/builder/" />
+    <published>2018-05-06T10:31:58+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是建造者模式？ Builder(建造者)模式 是一种创建型设计模式。 它用于分步骤构建复杂对象。 它通过将对象的构造过程与其表示分离，允许相同的构建过程创建不同的表示。 该模式的核心思想是： 分离构建步骤：将对象的构建分解为多个独立步骤。 统一构建流程：通过一个指挥者（Director）控制构建顺序。 灵活组合：通过不同建造者（Builder）实现...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/composite/</id>
+    <title>组合模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/composite/" />
+    <published>2018-05-05T17:30:04+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是组合模式？ Composite（组合）模式 是一种结构型设计模式。 它用于将对象组织成树形结构，以表示 “部分-整体” 的层次关系。 它允许客户端以统一的方式处理单个对象和组合对象，忽略对象层次结构的差异。 组合模式主要由以下部分组成： Component（抽象构件） 定义所有对象的通用接口（包括叶子节点和容器）。 声明操作子节点的方法（如 ad...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/interceptor/</id>
+    <title>拦截过滤器模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/interceptor/" />
+    <published>2018-05-05T15:28:53+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是拦截过滤器模式？ Interceptor(拦截过滤器)模式 是一种结构型设计模式。 它用于在请求处理流程中动态添加预处理（如验证、日志）和后处理逻辑。 它通过可插拔的过滤器链在核心业务逻辑执行前后拦截请求/响应，实现横切关注点（Cross-Cutting Concerns）的解耦。 它主要由 四个部分 组成： 过滤器（Filter） 执行具体拦截...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/visitor/</id>
+    <title>访问者模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/visitor/" />
+    <published>2018-05-05T09:29:31+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是访问者模式？ Visitor（访问者）模式 是一种行为型设计模式。 它允许在不修改现有对象结构的前提下，为对象结构中的元素添加新的操作。 核心思想是将数据操作与数据结构分离，通过“访问者”对象实现对不同元素的操作扩展。 访问者模式主要由以下部分组成： Visitor（访问者） 声明访问具体元素的方法（visitElementA, visitEle...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/strategy/</id>
+    <title>策略模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/strategy/" />
+    <published>2018-05-04T10:25:36+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">提示 策略模式在 JavaScript 中通过函数和对象的灵活性，简洁地实现了算法的动态替换。 它特别适用于需要消除条件分支、支持扩展的场景，但需权衡策略管理的复杂度。 合理使用该模式，可显著提升代码的可维护性和可读性。 什么是策略模式？ Strategy(策略)模式 是一种行为设计模式。 它允许定义一系列算法，并将每个算法封装成独立的对象，使得它们可...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/filter/</id>
+    <title>过滤器模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/filter/" />
+    <published>2018-05-03T10:28:03+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是过滤器模式？ Filter(过滤器)模式 是一种结构型设计模式。 它允许使用不同标准过滤一组对象，并通过逻辑操作（AND、OR）组合这些标准。 核心思想是 解耦过滤逻辑与业务代码，使系统更灵活、可扩展。 在 JavaScript 中，通常结合高阶函数（如 filter()）实现。 实现 Filter(过滤器)模式 简单实现（函数式风格） 类实现（...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/adapter/</id>
+    <title>适配器模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/adapter/" />
+    <published>2018-05-03T10:17:04+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是适配器模式？ Adapter(适配器)模式 是一种结构型设计模式。 用于将不兼容的接口转换为客户端期望的接口。它通过创建一个中间层（适配器）， 使原本因接口不匹配而无法协作的类或对象能够协同工作。适配器模式的核心是 转换，而非修改原有代码。 实现适配器模式 在 JavaScript 中，适配器模式可以通过以下两种方式实现： 对象适配器 通过组合（...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/middleware/</id>
+    <title>中间件模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/middleware/" />
+    <published>2018-05-02T14:27:32+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">提示 中间件模式通过将复杂流程分解为独立处理单元，显著提升了代码的可维护性和扩展性， 是 JavaScript 生态中不可或缺的设计模式。 什么是中间件模式？ Middleware(中间件)模式 是一种通过串联多个处理函数来处理请求的设计模式。 每个函数（中间件）接收输入，执行特定操作，可选择修改数据，并将控制权传递给下一个函数。 这种模式在 Web ...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/mvvm/</id>
+    <title>MVVM</title>
+    <link href="https://pengzhanbo.cn/design-pattern/mvvm/" />
+    <published>2018-04-30T17:03:02+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是 MVVM 模式？ MVVM（Model-View-ViewModel） 是一种用于分离用户界面逻辑与业务逻辑的架构模式，核心是数据驱动视图。 它通过 ViewModel 将 Model 和 View 解耦，实现双向数据绑定： Model 数据模型（如 API 数据、业务逻辑）。 View 用户界面（DOM 元素）。 ViewModel 连接 M...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/mvp/</id>
+    <title>MVP</title>
+    <link href="https://pengzhanbo.cn/design-pattern/mvp/" />
+    <published>2018-04-30T13:02:37+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">提示 MVP 模式通过强制视图与逻辑解耦，显著提升前端代码的可维护性和可测试性，特别适合业务复杂的 Web 应用。 尽管在现代框架（如 React/Vue）中部分职责被组件化替代，但其分层思想仍深刻影响前端架构设计。 什么是MVP模式？ MVP (模型-视图-表示器) 是 一种用户界面架构模式，核心目标是分离业务逻辑与视图逻辑， 提升代码可维护性和可测...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/mvc/</id>
+    <title>MVC</title>
+    <link href="https://pengzhanbo.cn/design-pattern/mvc/" />
+    <published>2018-04-29T10:02:12+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">相关信息 MVC 实际上是三个经典设计模式的变体：Observer （观察者）模式、Strategy （策略）模式 和 Composite（组合）模式。 它也可以使用 Factory （工厂）模式 和 Template（模板）模式。 什么是MVC模式？ MVC 是一种软件设计模式，它将应用程序分成三个部分：Model，View，Controller。 ...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/proxy/</id>
+    <title>代理模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/proxy/" />
+    <published>2018-04-28T17:01:25+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是代理模式？ Proxy(代理)模式 是一种结构型设计模式。 通过创建一个代理对象来控制对另一个对象的访问。 在 JavaScript 中，ES6 的 Proxy 对象是代理模式的典型实现，允许你拦截并自定义对象的基本操作（如属性读取、赋值、函数调用等）。 实现代理模式 JavaScript 通过 Proxy 构造函数实现代理模式，其核心是定义一个...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/module/</id>
+    <title>模块模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/module/" />
+    <published>2018-04-26T10:00:36+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">建议优先使用 ES6 模块（静态加载、显式依赖）和 class（面向对象）实现类似功能。 模块模式的价值更多体现在遗留项目维护或需要精细控制闭包的场景中。 什么是模块模式？ Module (模块)模式 是用于封装代码、实现私有作用域的一种设计模式。 它通过闭包和立即执行函数表达式（IIFE），将变量和方法划分为“私有”和“公有”两部分，从而减少全局污染...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/decorator/</id>
+    <title>装饰者模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/decorator/" />
+    <published>2018-04-25T10:59:06+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是装饰者模式？ Decorator(装饰者)模式 是一种结构型设计模式。 它允许动态地为对象添加额外的职责，而无需修改其原有代码。 它通过将对象包装在装饰者类中，以透明的方式扩展功能，避免了静态继承带来的类爆炸问题， 符合开闭原则（对扩展开放，对修改关闭）。 实现装饰者模式 在 JavaScript 中，装饰者模式可以通过以下方式实现： 函数装饰（...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/mixin/</id>
+    <title>混入模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/mixin/" />
+    <published>2018-04-24T20:58:31+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">提示 Mixin 模式在 JavaScript 中提供了一种强大的代码复用机制，尤其适合需要横向扩展功能的场景。 然而，需谨慎处理命名冲突和代码组织问题。随着 ES6 Class 和组合式 API（如 Vue 3 Composables、React Hooks）的普及，Mixin 的使用有所减少，但其核心思想（组合优于继承）仍是现代开发的重要原则。 什...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/facade/</id>
+    <title>外观模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/facade/" />
+    <published>2018-04-23T16:57:52+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">当系统复杂度达到需要频繁查阅文档才能调用时，就是考虑引入外观模式的最佳时机。它如同一位优秀的翻译官，在复杂的技术细节与简洁的业务逻辑之间架起沟通的桥梁。 什么是外观模式？ Facade(外观)模式 是一种结构型设计模式，核心思想是 为复杂的子系统提供一个简化的统一接口。 如同建筑外墙隐藏内部结构，它通过创建一个高层接口，将底层模块的复杂性屏蔽，使客户端...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/prototype/</id>
+    <title>原型模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/prototype/" />
+    <published>2018-04-22T15:56:31+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是原型模式？ Prototype(原型)模式 是一种 创建型设计模式。 其核心思想是通过 复制现有对象（原型对象）来创建新对象，而不是通过类实例化。 在 JavaScript 中，由于语言本身的 基于原型的继承机制，原型模式天然地与对象的行为和继承紧密结合。 提示 原型模式在 JavaScript 中既是设计模式，也是语言核心机制。 它适合高频创建...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/publish-subscribe/</id>
+    <title>发布/订阅模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/publish-subscribe/" />
+    <published>2018-04-21T19:55:15+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">发布/订阅模式 是观察者模式的一种变体。 发布/订阅模式 在 JavaScript 中非常常见，比如： 浏览器的 事件监听系统 Node.js 中的 EventEmitter 模块 自定义事件 CustomEvent WebSocket 消息推送 什么是发布/订阅模式？ Publish/Subscribe (发布/订阅)模式，是一种行为型设计模式，用于...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/mediator/</id>
+    <title>中介者模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/mediator/" />
+    <published>2018-04-18T10:38:47+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">中介者，指 “协助谈判和解决冲突的中立方” 什么是中介者模式？ 中介者模式 是一种行为型设计模式。它允许我们公开一个统一的接口，系统的不同部分可以通过该接口进行通信。 如果一个系统的各个组件之间看起来有太多的直接关系，也许是时候需要一个中心控制点了，以便各个组件可以通过 这个中心控制点进行通信。 Mediator 模式促进松散耦合的方式是：确保组件的交...</summary>
+    <category term="设计模式" />
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/design-pattern/observer/</id>
+    <title>观察者模式</title>
+    <link href="https://pengzhanbo.cn/design-pattern/observer/" />
+    <published>2018-04-17T00:14:11+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">什么是观察者模式？ 《设计模式：可复用面向对象软件的基础》 一个或多个观察者对目标的状态感兴趣，它们通过将自己依附在目标对象上以便注册所感兴趣的内容。 目标状态发生改变并且观察者可能对这些状态感兴趣，就会发送一个通知消息，调用每个观察者的更新方法。 当观察者不在对目标状态感兴趣时，它们可以简单地将自己从中分离。 在 观察者模式 中，一个对象被称为 被观...</summary>
+    <category term="设计模式" />
+  </entry>
+</feed>

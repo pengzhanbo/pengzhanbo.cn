@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Type Challenges</title>
+    <link>https://pengzhanbo.cn/type-challenges/</link>
+    <description>热爱生活</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 07 Oct 2025 17:39:39 +0000</lastBuildDate>
+    <generator>vuepress-theme-plume</generator>
+    <atom:link href="https://pengzhanbo.cn/type-challenges/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>isAlphabet</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/is-alphabet/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/is-alphabet/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:37:45 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>trace</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/trace/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/trace/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:37:11 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>longestCommonPrefix</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/longest-common-prefix/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/longest-common-prefix/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:36:47 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>definedPartialRecord</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/defined-partial-record/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/defined-partial-record/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:35:56 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>compareArrayLength</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/compare-array-length/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/compare-array-length/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:35:17 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>shitariteraru</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/shitariteraru/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/shitariteraru/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:34:53 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>pascalsTriangle</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/pascals-triangle/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/pascals-triangle/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:33:47 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>towerOfHanoi</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/tower-of-hanoi/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/tower-of-hanoi/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:31:38 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>isOdd</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/is-odd/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/is-odd/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:30:58 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>deepOmit</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/deep-omit/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/deep-omit/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:30:35 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>extractToObject</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/extract-to-object/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/extract-to-object/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:30:05 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>publicType</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/public-type/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/public-type/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:29:40 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>checkRepeatedTuple</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/check-repeated-tuple/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/check-repeated-tuple/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:29:17 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>mergeAll</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/merge-all/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/merge-all/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:28:49 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>cartesianProduct</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/cartesian-product/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/cartesian-product/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:28:03 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>triangularNumber</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/triangular-number/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/triangular-number/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:27:21 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>square</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/square/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/square/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:26:40 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>jsonSchemaToTypeScript</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/json-schema-to-typescript/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/json-schema-to-typescript/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:25:59 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>transpose</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/transpose/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/transpose/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:23:18 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>replaceFirst</title>
+      <link>https://pengzhanbo.cn/type-challenges/medium/replace-first/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/type-challenges/medium/replace-first/</guid>
+      <pubDate>Wed, 18 Dec 2024 15:22:45 +0000</pubDate>
+      <description>题目 解题思路 答案 验证 参考</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+  </channel>
+</rss>

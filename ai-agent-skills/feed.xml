@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    <title>Agent Skills</title>
+    <link>https://pengzhanbo.cn/ai-agent-skills/</link>
+    <description>热爱生活</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 20 Mar 2026 14:23:03 +0000</lastBuildDate>
+    <generator>vuepress-theme-plume</generator>
+    <atom:link href="https://pengzhanbo.cn/ai-agent-skills/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>每位ADK开发者都应掌握的5种智能体技能设计模式</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/5-agent-skills-design-patterns/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/5-agent-skills-design-patterns/</guid>
+      <pubDate>Thu, 19 Mar 2026 12:10:23 +0000</pubDate>
+      <description>原文来源: Google Cloud Tech on X (Twitter) 作者: @Saboo_Shubham_ 和 @lavinigam 当谈到 SKILL.md 时，开发者往往执着于格式——写好 YAML、整理目录结构、遵循规范。但随着超过 30 个 Agent 工具（如 Claude Code、Gemini CLI 和 Cursor）采用相同...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>使用 Agent Skills 为真实世界装备代理</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/equipping-agents-for-the-real-world-with-agent-skills/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/equipping-agents-for-the-real-world-with-agent-skills/</guid>
+      <pubDate>Thu, 08 Jan 2026 21:38:34 +0000</pubDate>
+      <description>Claude 功能强大，但实际工作需要流程知识与组织情境。 现推出智能体技能——一种通过文件与文件夹构建专业智能体的全新方式。 更新：我们已发布 Agent Skills 作为跨平台可移植性的开放标准。（2025年12月18日） 随着模型能力的提升，我们现在可以构建能够与成熟计算环境交互的通用智能体。 例如，Claude Code 就能通过本地代码执行...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>集成 Skills</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/integrate/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/integrate/</guid>
+      <pubDate>Sun, 04 Jan 2026 16:37:02 +0000</pubDate>
+      <description>将 Skills 集成到你的 智能体 中。 如何为您的智能体或工具添加 Agent Skills 支持。 本指南说明如何为 AI智能体或开发工具添加 Skills 支持。 集成方法 集成技能的两种主要方法： 基于文件系统的智能体 在计算机环境（bash/unix）中运行，代表 Skills 最全面的选项。 当模型发出如 cat /path/to/my-...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>规范说明</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/specification/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/specification/</guid>
+      <pubDate>Sun, 04 Jan 2026 16:36:15 +0000</pubDate>
+      <description>Agent Skills 的完整格式规范。 本文档定义了 Agent Skills 的格式。 目录结构 Skill 是一个至少包含 SKILL.md 文件的目录： 您可以选择性地包含 额外目录，例如 scripts/、references/ 和 assets/，以支持您的 Skill 。 SKILL.md 格式 SKILL.md 文件必须包含 YAML...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>什么是 Skills ?</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/what-are-skills/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/what-are-skills/</guid>
+      <pubDate>Sun, 04 Jan 2026 16:35:38 +0000</pubDate>
+      <description>Agent Skills 是一种轻量级、开放的格式，用于通过专业知识和工作流扩展AI智能体的能力。 Skills 的核心是一个包含 SKILL.md 文件的文件夹。 该文件包含元数据（至少包含 name 和 description）以及指导智能体执行特定任务的指令。 Skills 还可以捆绑脚本、模板和参考资料。 Skills 如何运作 技能采用 渐进...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>概述</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/overview/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/overview/</guid>
+      <pubDate>Sun, 04 Jan 2026 16:35:03 +0000</pubDate>
+      <description>一种简单、开放的格式，用于为智能体提供新能力和专业知识。 Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并使用它们来更准确、更高效地完成任务。 为什么选择 Agent Skills ? 智能体能力日益增强，但常常缺乏可靠执行实际工作所需的上下文信息。 Skills 机制通过为智能体提供程序性知识及公司、团队和用户特定上下文（可...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+    <item>
+      <title>Agent Skills</title>
+      <link>https://pengzhanbo.cn/ai-agent-skills/</link>
+      <guid isPermaLink="true">https://pengzhanbo.cn/ai-agent-skills/</guid>
+      <pubDate>Sun, 04 Jan 2026 16:26:52 +0000</pubDate>
+      <description>概述 Agent Skills 是 一种简单、开放的格式，用于为智能体提供新能力和专业知识。 Agent Skills 是包含指令、脚本和资源的文件夹，智能体可以发现并使用它们来更准确、更高效地完成任务。 本文档 翻译自 Agent Skills。仅供个人学习使用。 翻译版本仓库提交节点为 75287b2 仓库地址 Skills 搜索 CLI 工具 相...</description>
+      <dc:creator>鹏展博</dc:creator>
+    </item>
+  </channel>
+</rss>

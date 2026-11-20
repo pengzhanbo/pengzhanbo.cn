@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://pengzhanbo.cn/type-challenges/#feed</id>
+  <title>Type Challenges</title>
+  <subtitle>热爱生活</subtitle>
+  <updated>2025-10-07T17:39:39+00:00</updated>
+  <link href="https://pengzhanbo.cn/type-challenges/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pengzhanbo.cn/type-challenges/" />
+  <generator uri="https://theme-plume.vuejs.press">vuepress-theme-plume</generator>
+  <author>
+    <name>鹏展博</name>
+  </author>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/is-alphabet/</id>
+    <title>isAlphabet</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/is-alphabet/" />
+    <published>2024-12-18T15:37:45+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/trace/</id>
+    <title>trace</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/trace/" />
+    <published>2024-12-18T15:37:11+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/longest-common-prefix/</id>
+    <title>longestCommonPrefix</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/longest-common-prefix/" />
+    <published>2024-12-18T15:36:47+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/defined-partial-record/</id>
+    <title>definedPartialRecord</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/defined-partial-record/" />
+    <published>2024-12-18T15:35:56+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/compare-array-length/</id>
+    <title>compareArrayLength</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/compare-array-length/" />
+    <published>2024-12-18T15:35:17+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/shitariteraru/</id>
+    <title>shitariteraru</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/shitariteraru/" />
+    <published>2024-12-18T15:34:53+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/pascals-triangle/</id>
+    <title>pascalsTriangle</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/pascals-triangle/" />
+    <published>2024-12-18T15:33:47+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/tower-of-hanoi/</id>
+    <title>towerOfHanoi</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/tower-of-hanoi/" />
+    <published>2024-12-18T15:31:38+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/is-odd/</id>
+    <title>isOdd</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/is-odd/" />
+    <published>2024-12-18T15:30:58+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/deep-omit/</id>
+    <title>deepOmit</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/deep-omit/" />
+    <published>2024-12-18T15:30:35+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/extract-to-object/</id>
+    <title>extractToObject</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/extract-to-object/" />
+    <published>2024-12-18T15:30:05+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/public-type/</id>
+    <title>publicType</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/public-type/" />
+    <published>2024-12-18T15:29:40+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/check-repeated-tuple/</id>
+    <title>checkRepeatedTuple</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/check-repeated-tuple/" />
+    <published>2024-12-18T15:29:17+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/merge-all/</id>
+    <title>mergeAll</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/merge-all/" />
+    <published>2024-12-18T15:28:49+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/cartesian-product/</id>
+    <title>cartesianProduct</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/cartesian-product/" />
+    <published>2024-12-18T15:28:03+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/triangular-number/</id>
+    <title>triangularNumber</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/triangular-number/" />
+    <published>2024-12-18T15:27:21+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/square/</id>
+    <title>square</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/square/" />
+    <published>2024-12-18T15:26:40+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/json-schema-to-typescript/</id>
+    <title>jsonSchemaToTypeScript</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/json-schema-to-typescript/" />
+    <published>2024-12-18T15:25:59+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/transpose/</id>
+    <title>transpose</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/transpose/" />
+    <published>2024-12-18T15:23:18+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/type-challenges/medium/replace-first/</id>
+    <title>replaceFirst</title>
+    <link href="https://pengzhanbo.cn/type-challenges/medium/replace-first/" />
+    <published>2024-12-18T15:22:45+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">题目 解题思路 答案 验证 参考</summary>
+  </entry>
+</feed>

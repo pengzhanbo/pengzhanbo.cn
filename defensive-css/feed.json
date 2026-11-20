@@ -1,0 +1,195 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "防御性CSS",
+  "home_page_url": "https://pengzhanbo.cn/defensive-css/",
+  "feed_url": "https://pengzhanbo.cn/defensive-css/feed.json",
+  "description": "热爱生活",
+  "language": "zh-CN",
+  "authors": [
+    {
+      "name": "鹏展博"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/grouping-vendor-selector/",
+      "url": "https://pengzhanbo.cn/defensive-css/grouping-vendor-selector/",
+      "title": "Grouping Vendor Selector",
+      "summary": "Grouping Vendor Selector 不建议对带有不同浏览器前缀的选择器进行分组。 例如，设置输入占位符的样式需要每个浏览器有多个选择器。 这是由于， 根据 W3C ，如果选择器分组中，有某一个 选择器 无效，则会使整个分组的所有选择器都无效。 相反，请这样做：",
+      "content_text": "Grouping Vendor Selector 不建议对带有不同浏览器前缀的选择器进行分组。 例如，设置输入占位符的样式需要每个浏览器有多个选择器。 这是由于， 根据 W3C ，如果选择器分组中，有某一个 选择器 无效，则会使整个分组的所有选择器都无效。 相反，请这样做：",
+      "date_published": "2024-01-17T18:55:35+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/button-minimum-width/",
+      "url": "https://pengzhanbo.cn/defensive-css/button-minimum-width/",
+      "title": "Button Minimum Width",
+      "summary": "Button Minimum Width 一个常见的错误是假设按钮宽度应等于其内容加水平填充。 这对于单语言网站（例如：英语）可能如预期般工作，但对于多语言网站很容易出现意外的问题。 请看以下示例： 英语： Done 中文： 完成 阿拉伯语： تم 可以看到， 在 英语 和 中文 下， 按钮的宽度表现很好，因为其内容足够长。 但是在 阿拉伯语 中， 按...",
+      "content_text": "Button Minimum Width 一个常见的错误是假设按钮宽度应等于其内容加水平填充。 这对于单语言网站（例如：英语）可能如预期般工作，但对于多语言网站很容易出现意外的问题。 请看以下示例： 英语： Done 中文： 完成 阿拉伯语： تم 可以看到， 在 英语 和 中文 下， 按钮的宽度表现很好，因为其内容足够长。 但是在 阿拉伯语 中， 按...",
+      "date_published": "2023-08-12T10:00:16+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/input-zoom-on-ios-safari/",
+      "url": "https://pengzhanbo.cn/defensive-css/input-zoom-on-ios-safari/",
+      "title": "Input Zoom On iOS Safari",
+      "summary": "Input Zoom On iOS Safari 在 iOS Safari 中， 当我们 聚焦 一个 input 元素进行输入时，默认情况整个网页都会进行缩放。 这是 Safari 的默认行为。虽然在输入时方法 input 输入框，可以让用户看到 更大的文字， 但是，不再聚焦 input 元素，离开输入框后，整个网页并不会缩小复原，这就很让人恼了。 i...",
+      "content_text": "Input Zoom On iOS Safari 在 iOS Safari 中， 当我们 聚焦 一个 input 元素进行输入时，默认情况整个网页都会进行缩放。 这是 Safari 的默认行为。虽然在输入时方法 input 输入框，可以让用户看到 更大的文字， 但是，不再聚焦 input 元素，离开输入框后，整个网页并不会缩小复原，这就很让人恼了。 i...",
+      "date_published": "2023-08-11T17:18:20+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/default-flexbox-stretching/",
+      "url": "https://pengzhanbo.cn/defensive-css/default-flexbox-stretching/",
+      "title": "Default FlexBox Stretching",
+      "summary": "Default FlexBox Stretching 在 flexbox 中，flex 项的默认行为是拉伸。如果子项的内容长于其同级项，则会导致其他项拉伸。 但这不容易被发现， 除非我们向 Flex 项中添加比预期更长的内容。 在这个示例中，我们有一个包含 图像、标题、介绍 的组件。 内容长度合适时： 一份美食 这是一份看起来美味的食物 内容长度过长时...",
+      "content_text": "Default FlexBox Stretching 在 flexbox 中，flex 项的默认行为是拉伸。如果子项的内容长于其同级项，则会导致其他项拉伸。 但这不容易被发现， 除非我们向 Flex 项中添加比预期更长的内容。 在这个示例中，我们有一个包含 图像、标题、介绍 的组件。 内容长度合适时： 一份美食 这是一份看起来美味的食物 内容长度过长时...",
+      "date_published": "2023-08-11T10:23:19+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/image-inner-border/",
+      "url": "https://pengzhanbo.cn/defensive-css/image-inner-border/",
+      "title": "Image Inner Border",
+      "summary": "Image inner border 在处理用户头像时，以清晰的方式显示它们，并且与 视图 很好的保持统一性，可能具有一定的挑战性。 因为有些 头像的亮度很高，有些头像的亮度很低，又有可能有些是 jpg 格式，有些是 png 格式， 对透明度的支持不一，就很可能与背景色 混合 在一起。 avatar.png avatar.jpg 由于头像存在透明部分，...",
+      "content_text": "Image inner border 在处理用户头像时，以清晰的方式显示它们，并且与 视图 很好的保持统一性，可能具有一定的挑战性。 因为有些 头像的亮度很高，有些头像的亮度很低，又有可能有些是 jpg 格式，有些是 png 格式， 对透明度的支持不一，就很可能与背景色 混合 在一起。 avatar.png avatar.jpg 由于头像存在透明部分，...",
+      "date_published": "2023-08-10T17:16:05+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/accidental-hover-on-mobile/",
+      "url": "https://pengzhanbo.cn/defensive-css/accidental-hover-on-mobile/",
+      "title": "Accidental Hover On Mobile",
+      "summary": "Accidental Hover On Mobile 在应用中，我们会使用 hover 效果向用户提供 元素可点击或者出于活动状态的提示。 这在具有鼠标或触控面板的设备来说表现良好，但是这在移动端的设备上， hover 效果可能会令人困惑。 在页面中滚动时，手指可能会意外地轻点半下，这将触发特定元素的 hover 状态。 如果是桌面端浏览器，请打开 控...",
+      "content_text": "Accidental Hover On Mobile 在应用中，我们会使用 hover 效果向用户提供 元素可点击或者出于活动状态的提示。 这在具有鼠标或触控面板的设备来说表现良好，但是这在移动端的设备上， hover 效果可能会令人困惑。 在页面中滚动时，手指可能会意外地轻点半下，这将触发特定元素的 hover 状态。 如果是桌面端浏览器，请打开 控...",
+      "date_published": "2023-08-10T14:18:47+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/vertical-media-queries/",
+      "url": "https://pengzhanbo.cn/defensive-css/vertical-media-queries/",
+      "title": "Vertical Media Queries",
+      "summary": "Vertical Media Queries 有时候，构建一个组件，并且通过调整浏览器的宽度的大小进行测试，是非常有用的。 但可能会经常的忽略针对 高度 进行测试。 一种常见的场景是，在一个 main 和 aside 布局的场景中，一些 辅助的导航链接位于 aside 的底部位置。 请看以下示例，辅助导航链接 通过 position:sticky 粘在...",
+      "content_text": "Vertical Media Queries 有时候，构建一个组件，并且通过调整浏览器的宽度的大小进行测试，是非常有用的。 但可能会经常的忽略针对 高度 进行测试。 一种常见的场景是，在一个 main 和 aside 布局的场景中，一些 辅助的导航链接位于 aside 的底部位置。 请看以下示例，辅助导航链接 通过 position:sticky 粘在...",
+      "date_published": "2023-08-10T10:23:42+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/text-over-image/",
+      "url": "https://pengzhanbo.cn/defensive-css/text-over-image/",
+      "title": "Text Over Image",
+      "summary": "Text Over Image 在 图像 上显示文本时，需要考虑 图像 加载失败时的情况，文本会成什么样。 看下面的示例： 美食 但是，当图片加载失败时, 文本几乎看不见。 美食 我们可以通过为 <img> 元素添加背景颜色来解决这个问题。 仅当图像加载失败时，此背景才可见。 美食 美食",
+      "content_text": "Text Over Image 在 图像 上显示文本时，需要考虑 图像 加载失败时的情况，文本会成什么样。 看下面的示例： 美食 但是，当图片加载失败时, 文本几乎看不见。 美食 我们可以通过为 <img> 元素添加背景颜色来解决这个问题。 仅当图像加载失败时，此背景才可见。 美食 美食",
+      "date_published": "2023-08-09T17:59:42+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/using-space-between/",
+      "url": "https://pengzhanbo.cn/defensive-css/using-space-between/",
+      "title": "Using Space Between",
+      "summary": "Using Space Between 在 Flex 容器中， 我们可以使用 space-between 来定义项目之间的间距。 当子项的数量 符合我们的 布局预期时，在 UI 效果上来看还不错。 但是，如果 项目的数量过多或过少时，布局就会看起来很糟糕。 请看下面示例： justify-content: space-between 项目为 4 个时，...",
+      "content_text": "Using Space Between 在 Flex 容器中， 我们可以使用 space-between 来定义项目之间的间距。 当子项的数量 符合我们的 布局预期时，在 UI 效果上来看还不错。 但是，如果 项目的数量过多或过少时，布局就会看起来很糟糕。 请看下面示例： justify-content: space-between 项目为 4 个时，...",
+      "date_published": "2023-08-09T13:25:55+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/scrollbar-on-demand/",
+      "url": "https://pengzhanbo.cn/defensive-css/scrollbar-on-demand/",
+      "title": "Scrollbar On Demand",
+      "summary": "Scrollbar On Demand 按需使用滚动条。当下，我们可以控制是否显示滚动条，或者仅在内容较长的时候显示滚动条。 但强烈建议在不确定内容的情况下使用 auto 作为 overflow 属性值。 overflow-y: scroll 關關雎鳩，在河之洲。窈窕淑女，君子好逑。 參差荇菜，左右流之。窈窕淑女，寤寐求之。 關關雎鳩，在河之洲。窈窕淑...",
+      "content_text": "Scrollbar On Demand 按需使用滚动条。当下，我们可以控制是否显示滚动条，或者仅在内容较长的时候显示滚动条。 但强烈建议在不确定内容的情况下使用 auto 作为 overflow 属性值。 overflow-y: scroll 關關雎鳩，在河之洲。窈窕淑女，君子好逑。 參差荇菜，左右流之。窈窕淑女，寤寐求之。 關關雎鳩，在河之洲。窈窕淑...",
+      "date_published": "2023-08-08T22:54:46+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/scroll-gutter/",
+      "url": "https://pengzhanbo.cn/defensive-css/scroll-gutter/",
+      "title": "Scroll Gutter",
+      "summary": "Scroll Gutter 与滚动相关的另一件事是滚动条装订线。 以前面的 为例，当内容变长时，添加滚动条将导致布局偏移。 发生布局偏移的原因是为滚动条保留空间。 {{ show ? '重置内容' : '添加内容' }} 關關雎鳩，在河之洲。窈窕淑女，君子好逑。 參差荇菜，左右流之。窈窕淑女，寤寐求之。 求之不得，寤寐思服。悠哉悠哉，輾轉反側。 參差荇...",
+      "content_text": "Scroll Gutter 与滚动相关的另一件事是滚动条装订线。 以前面的 为例，当内容变长时，添加滚动条将导致布局偏移。 发生布局偏移的原因是为滚动条保留空间。 {{ show ? '重置内容' : '添加内容' }} 關關雎鳩，在河之洲。窈窕淑女，君子好逑。 參差荇菜，左右流之。窈窕淑女，寤寐求之。 求之不得，寤寐思服。悠哉悠哉，輾轉反側。 參差荇...",
+      "date_published": "2023-08-08T21:58:55+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/scroll-chaining/",
+      "url": "https://pengzhanbo.cn/defensive-css/scroll-chaining/",
+      "title": "Scroll Chaining",
+      "summary": "Scroll Chaining 我们可能会经常遇到， 当我们打开一个 modal 框并开始滚动，并滚动到底后继续滚动时， modal 框的外部容器 body 元素还会继续滚动。 这被称之为 滚动关联(scroll chaining) 。 關關雎鳩，在河之洲。窈窕淑女，君子好逑。 參差荇菜，左右流之。窈窕淑女，寤寐求之。 求之不得，寤寐思服。悠哉悠哉，輾...",
+      "content_text": "Scroll Chaining 我们可能会经常遇到， 当我们打开一个 modal 框并开始滚动，并滚动到底后继续滚动时， modal 框的外部容器 body 元素还会继续滚动。 这被称之为 滚动关联(scroll chaining) 。 關關雎鳩，在河之洲。窈窕淑女，君子好逑。 參差荇菜，左右流之。窈窕淑女，寤寐求之。 求之不得，寤寐思服。悠哉悠哉，輾...",
+      "date_published": "2023-08-08T20:59:44+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/sticky-with-grid/",
+      "url": "https://pengzhanbo.cn/defensive-css/sticky-with-grid/",
+      "title": "Position Sticky With CSS Grid",
+      "summary": "Position Sticky With CSS Grid 你有没有试过与 网格布局的 子项 一起使用 position: sticky？ 网格项的默认行为是拉伸。因此，以下示例中的 aside 元素等于 main 元素高度。 main 若要使其按预期工作，需要重置 align-self 属性。 main",
+      "content_text": "Position Sticky With CSS Grid 你有没有试过与 网格布局的 子项 一起使用 position: sticky？ 网格项的默认行为是拉伸。因此，以下示例中的 aside 元素等于 main 元素高度。 main 若要使其按预期工作，需要重置 align-self 属性。 main",
+      "date_published": "2023-08-08T09:38:52+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/image-maximum-width/",
+      "url": "https://pengzhanbo.cn/defensive-css/image-maximum-width/",
+      "title": "Image Maximum Width",
+      "summary": "Image Maximum Width 作为一般规则， 请不要忘记为 所有图像设置 max-width: 100%。 这可以添加到你的 CSS 重置 规则中。",
+      "content_text": "Image Maximum Width 作为一般规则， 请不要忘记为 所有图像设置 max-width: 100%。 这可以添加到你的 CSS 重置 规则中。",
+      "date_published": "2023-08-07T19:16:30+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/minimum-content-size-in-grid/",
+      "url": "https://pengzhanbo.cn/defensive-css/minimum-content-size-in-grid/",
+      "title": "Minimum Content Size In CSS Grid",
+      "summary": "Minimum Content Size In CSS Grid 网格布局的最小内容大小： CSS 网格的子项具有默认的最小内容大小，即 auto 。 这意味着，如果存在大于网格项的元素，它将溢出。 gridboxgridbox 由于 左侧栏中的内容长度过宽，大于剩余的内容空间，导致了 内容溢出。 为了解决这个问题，我们有三种不同的解决方案： 在 网格...",
+      "content_text": "Minimum Content Size In CSS Grid 网格布局的最小内容大小： CSS 网格的子项具有默认的最小内容大小，即 auto 。 这意味着，如果存在大于网格项的元素，它将溢出。 gridboxgridbox 由于 左侧栏中的内容长度过宽，大于剩余的内容空间，导致了 内容溢出。 为了解决这个问题，我们有三种不同的解决方案： 在 网格...",
+      "date_published": "2023-08-07T11:32:57+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/fixed-sizes/",
+      "url": "https://pengzhanbo.cn/defensive-css/fixed-sizes/",
+      "title": "Fixed sizes",
+      "summary": "Fixed sizes 破坏布局的常见情况之一是， 具有固定宽度或固定高度的容器，填充了长度不一的内容， 当内容过长时，就会发生 内容溢出的情况，导致 布局被破坏。 固定高度 一种常见的情况是， 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了...",
+      "content_text": "Fixed sizes 破坏布局的常见情况之一是， 具有固定宽度或固定高度的容器，填充了长度不一的内容， 当内容过长时，就会发生 内容溢出的情况，导致 布局被破坏。 固定高度 一种常见的情况是， 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了布局被破坏。 一个卡片容器的高度是固定的，但是 它的内容 却大于 容器的高度， 导致了...",
+      "date_published": "2023-08-07T09:25:43+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/minimum-content-size-in-flex-box/",
+      "url": "https://pengzhanbo.cn/defensive-css/minimum-content-size-in-flex-box/",
+      "title": "Minimum Content Size In CSS FlexBox",
+      "summary": "Minimum Content Size In CSS FlexBox CSS FlexBox 的 最小内容大小： 如果 flex 项的文本元素或图像大于项本身，则浏览器不会收缩它们。这是 flexbox 的默认行为。 I am a card cardcardcardcardcardcard 可以看到内容发生了溢出，即使我们使用 overflow-wr...",
+      "content_text": "Minimum Content Size In CSS FlexBox CSS FlexBox 的 最小内容大小： 如果 flex 项的文本元素或图像大于项本身，则浏览器不会收缩它们。这是 flexbox 的默认行为。 I am a card cardcardcardcardcardcard 可以看到内容发生了溢出，即使我们使用 overflow-wr...",
+      "date_published": "2023-08-06T23:20:23+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/variable-fallback/",
+      "url": "https://pengzhanbo.cn/defensive-css/variable-fallback/",
+      "title": "CSS Variable Fallback",
+      "summary": "CSS Variable Fallback CSS 变量越来越多的应用于前端开发中。 但我们可能在使用 CSS 变量的过程中，可能由于某些原因导致 CSS 变量值为空，特别是，如果这个 CSS 变量 的值是通过 JavaScript 控制的。 下面有一个例子： 变量 --actions-width 在 CSS 函数 calc() 中使用， 它的值通过 ...",
+      "content_text": "CSS Variable Fallback CSS 变量越来越多的应用于前端开发中。 但我们可能在使用 CSS 变量的过程中，可能由于某些原因导致 CSS 变量值为空，特别是，如果这个 CSS 变量 的值是通过 JavaScript 控制的。 下面有一个例子： 变量 --actions-width 在 CSS 函数 calc() 中使用， 它的值通过 ...",
+      "date_published": "2023-08-06T16:10:58+00:00",
+      "date_modified": "2025-10-07T17:39:39+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/grid-fixed-values/",
+      "url": "https://pengzhanbo.cn/defensive-css/grid-fixed-values/",
+      "title": "Grid fixed values",
+      "summary": "Grid fixed values 假设我们有一个 网格 布局，包含一个 aside 和 一个 main。 CSS 如下所示： main 由于空间不足，这将在较小的视口尺寸上导致溢出。 为避免此类问题，请在使用上述 CSS 网格时始终使用媒体查询。 在视口尺寸较小时，换行显示，在视口尺寸较大时，使用 网格布局。 main 调整浏览器窗口大小查看效果。",
+      "content_text": "Grid fixed values 假设我们有一个 网格 布局，包含一个 aside 和 一个 main。 CSS 如下所示： main 由于空间不足，这将在较小的视口尺寸上导致溢出。 为避免此类问题，请在使用上述 CSS 网格时始终使用媒体查询。 在视口尺寸较小时，换行显示，在视口尺寸较大时，使用 网格布局。 main 调整浏览器窗口大小查看效果。",
+      "date_published": "2023-08-06T10:46:45+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    },
+    {
+      "id": "https://pengzhanbo.cn/defensive-css/background-repeat/",
+      "url": "https://pengzhanbo.cn/defensive-css/background-repeat/",
+      "title": "Background repeat",
+      "summary": "Background repeat 通常，当使用大图像作为背景时，我们往往会忘记考虑在大屏幕上查看时的情况。 默认情况下，该背景将重复。 这在笔记本电脑屏幕上大多不可见，但在较大的屏幕上可以清楚地看到。 小屏幕 大屏幕 为提前避免该行为，请确保重置 background-repeat 。",
+      "content_text": "Background repeat 通常，当使用大图像作为背景时，我们往往会忘记考虑在大屏幕上查看时的情况。 默认情况下，该背景将重复。 这在笔记本电脑屏幕上大多不可见，但在较大的屏幕上可以清楚地看到。 小屏幕 大屏幕 为提前避免该行为，请确保重置 background-repeat 。",
+      "date_published": "2023-08-05T22:56:46+00:00",
+      "date_modified": "2026-02-25T16:46:48+00:00"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
+  <id>https://pengzhanbo.cn/algorithm/#feed</id>
+  <title>算法</title>
+  <subtitle>热爱生活</subtitle>
+  <updated>2025-11-02T06:43:52+00:00</updated>
+  <link href="https://pengzhanbo.cn/algorithm/atom.xml" rel="self" type="application/atom+xml" />
+  <link href="https://pengzhanbo.cn/algorithm/" />
+  <generator uri="https://theme-plume.vuejs.press">vuepress-theme-plume</generator>
+  <author>
+    <name>鹏展博</name>
+  </author>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/recursion/</id>
+    <title>递归</title>
+    <link href="https://pengzhanbo.cn/algorithm/recursion/" />
+    <published>2019-06-09T08:49:10+00:00</published>
+    <updated>2025-11-02T06:43:52+00:00</updated>
+    <summary type="text">概述 递归 ，在数学和计算机科学中是指在函数的定义中使用函数自身的方法， 在计算机科学中还额外指一种 通过重复将问题分解为同类的子问题而解决问题的方法。 递归的基本思想是某个函数直接或者间接地调用自身，这样原问题的求解就转换为了许多性质相同但是规模更小的子问题。 求解时只需要关注如何把原问题划分成符合条件的子问题，而不需要过分关注这个子问题是如何被解决...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/shell-sort/</id>
+    <title>希尔排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/shell-sort/" />
+    <published>2019-06-09T08:47:17+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 希尔排序（Shell sort），也称为缩小增量排序法，是 的一种改进版本。 希尔排序以它的发明者 希尔（Donald Shell）命名。 核心思想 让距离较远的元素先部分有序，减少后续插入排序的工作量。 核心概念 增量序列 (Gap Sequence) 决定如何划分子序列。初始间隔较大，逐步缩小至 1（最后一次为标准的插入排序）。 常用序列：希...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/bucket-sort/</id>
+    <title>桶排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/bucket-sort/" />
+    <published>2019-06-09T08:47:08+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 桶排序（Bucket Sort） 是一种分布式排序算法，适用于数据分布均匀的场景。 核心思想 将数据分散到多个有序的桶中，对每个桶单独排序，最后合并所有桶。 基本原理 分桶：根据元素范围创建固定数量的桶，将元素分配到对应的桶中。 桶内排序：对每个非空桶单独排序（通常用插入排序等简单算法）。 合并结果：按桶顺序合并所有元素。 过程 桶排序按下列步骤...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/heap-sort/</id>
+    <title>堆排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/heap-sort/" />
+    <published>2019-06-09T08:46:57+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 堆排序（Heap Sort） 是一种基于 二叉堆 数据结构的高效排序算法。 核心思想 构建最大堆（Max-Heap）：将无序数组转换为满足堆性质的结构（父节点 ≥ 子节点）。 反复提取最大值：将堆顶（最大值）与末尾元素交换，缩小堆范围，重新调整堆。 重复调整：直到堆大小为1，数组即有序。 时间复杂度 堆排序的最优时间复杂度、平均时间复杂度、最坏时...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/merge-sort/</id>
+    <title>归并排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/merge-sort/" />
+    <published>2019-06-09T08:46:20+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 归并排序（merge sort） 是高效的基于比较的稳定排序算法 核心思想 将数组递归拆分为最小单元，再逐步合并有序子序列。 基本原理 分解（Divide） 将长度为 n 的数组递归地拆分为两个长度为 n/2 的子数组，直到子数组长度为 1（天然有序）。 合并（Merge） 归并排序最核心的部分是合并（merge）过程：将两个有序的数组 a[i]...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/quick-sort/</id>
+    <title>快速排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/quick-sort/" />
+    <published>2019-06-09T08:46:04+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 快速排序（Quick sort），又称为 分区交换排序（partition-exchange sort），简称 快排，是一种被广泛运用的排序算法。 核心思想是 选择一个基准值，将数组分成两个子数组（小于基准值和大于基准值），然后递归排序子数组。 基本原理 快速排序的工作原理是通过 分治 的方式来将一个数组排序。 快速排序分为三个过程： 选择基准值...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/insertion-sort/</id>
+    <title>插入排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/insertion-sort/" />
+    <published>2019-06-09T08:45:46+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 插入排序（Insertion sort） 是一种简单直观的排序算法。 核心思想 将数组分为 已排序区间 和 未排序区间 ，每次从未排序区间取出一个元素， 在已排序区间中找到合适的位置插入（类似整理扑克牌）。 时间复杂度 插入排序的最优时间复杂度为 O(n)，在数列几乎有序时效率很高。 插入排序的最坏时间复杂度和平均时间复杂度都为 O(n2)。 空...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/bubble-sort/</id>
+    <title>冒泡排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/bubble-sort/" />
+    <published>2019-06-09T08:45:06+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 冒泡排序（Bubble sort） 一种基础的比较排序算法。 核心思想 重复遍历数组，依次比较相邻元素，将较大值向后交换，如同气泡上浮的过程。 算法步骤 外层循环：控制遍历轮数（n-1 轮） 内层循环：比较相邻元素，将较大值后移 优化点：每轮结束后，末尾元素已有序，可减少比较范围 提前终止：当某轮无交换时，说明数组已有序，提前结束 时间复杂度 在...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/selection-sort/</id>
+    <title>选择排序</title>
+    <link href="https://pengzhanbo.cn/algorithm/selection-sort/" />
+    <published>2019-06-09T08:44:50+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 选择排序（Selection sort） 是一种简单直观的排序算法。 核心思想 每次从未排序部分中选择最小（或最大）元素，将其与未排序部分的起始位置交换。 重复此过程直到所有元素有序。 算法步骤 将数组分为 已排序区（左侧）和 未排序区（右侧） 初始状态：已排序区为空，未排序区为整个数组 遍历未排序区，找到最小元素的索引 将最小元素与未排序区的第...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/overview/</id>
+    <title>介绍</title>
+    <link href="https://pengzhanbo.cn/algorithm/overview/" />
+    <published>2019-06-09T08:18:40+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 算法 ，顾名思义，即计算的方法。 算法通常用于解决特定的计算任务，但与可以直接在计算机上运行的程序不同，算法使用数学化的描述，更加侧重于思想，可以被看作抽象的程序。 同一个算法可以有许多种不同的实现方式，两个不同的程序里也可能使用了同一种算法。 复杂度 时间复杂度 和 空间复杂度 是衡量一个算法效率的重要标准。 基本操作数 同一个算法在不同的计算...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/breadth-first-search/</id>
+    <title>广度优先搜索</title>
+    <link href="https://pengzhanbo.cn/algorithm/breadth-first-search/" />
+    <published>2019-06-09T08:16:38+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 广度优先搜索（Breadth-First Search）（BFS） 是一种用于遍历或搜索树/图数据结构的算法。 是图上最基础、最重要的搜索算法之一。 所谓广度优先。就是每次都尝试访问同一层的节点。 如果同一层都访问完了，再访问下一层。 这样做的结果是，BFS 算法找到的路径是从起点开始的 最短 合法路径。换言之，这条路径所包含的边数最小。 在 B...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/depth-first-search/</id>
+    <title>深度优先搜索</title>
+    <link href="https://pengzhanbo.cn/algorithm/depth-first-search/" />
+    <published>2019-06-09T08:16:24+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 深度优先搜索（Depth-First Search）（DFS） 是一种用于遍历或搜索树或图的算法。 其核心思想是尽可能深地探索分支，直到达到末端，然后回溯并探索其他分支。 该算法常常与 BFS 并列，但两者除了都能遍历图的连通块以外，用途完全不同，很少有能混用两种算法的情况。 过程 DFS 最显著的特征在于其 递归调用自身。 同时与 BFS 类似...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/dynamic-programming/</id>
+    <title>动态规划</title>
+    <link href="https://pengzhanbo.cn/algorithm/dynamic-programming/" />
+    <published>2019-06-09T08:15:04+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">动态规划 学习需要长时间的练习和强化，此篇目前仅处于 草稿 状态，在未来会引入更多的 DP 问题进行更为深入的学习。 概述 动态规划（Dynamic Programming 一种 通过将复杂问题分解为重叠子问题，并存储子问题解以避免重复计算的优化技术。 它适用于具有 最优子结构 和 重叠子问题 特性的问题。 动态规划原理 能用动态规划解决的问题，需要满...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/backtracking/</id>
+    <title>回溯算法</title>
+    <link href="https://pengzhanbo.cn/algorithm/backtracking/" />
+    <published>2019-06-09T08:14:53+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 回溯算法 是一种通过尝试所有可能的候选解来解决问题的通用算法。 当发现当前候选解不可能满足条件时，会回退（回溯）到上一步，尝试其他选择。 它本质上是 深度优先搜索（DFS） 的一种优化形式，通过剪枝减少不必要的搜索。 核心思想 试错：逐步构建候选解 剪枝：发现无效解时立即回溯 状态管理：记录当前路径，回溯时撤销选择 实现 子集问题（无重复元素） ...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/greedy/</id>
+    <title>贪心算法</title>
+    <link href="https://pengzhanbo.cn/algorithm/greedy/" />
+    <published>2019-06-09T08:14:30+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 贪心算法（Greedy Algorithm） 是用计算机来模拟一个 贪心 的人做出决策的过程。 这个人十分贪婪，每一步行动总是按某种指标选取最优的操作。而且他目光短浅，总是只看眼前，并不考虑以后可能造成的影响。 可想而知，并不是所有的时候贪心法都能获得最优解，所以一般使用贪心法的时候，都要确保自己能证明其正确性。 适用范围 贪心算法在 有最优子结...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/binary-search/</id>
+    <title>二分查找</title>
+    <link href="https://pengzhanbo.cn/algorithm/binary-search/" />
+    <published>2019-06-09T08:13:28+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 二分查找（Binary Search），也称 折半搜索（half-interval search）、对数搜索（logarithmic search） 。 是一种高效的搜索算法，适用于已排序的数据集（如数组）。 它通过不断将搜索范围减半来定位目标值，时间复杂度为 O(logn) ，远优于线性查找的 O(n) 。 核心思想 分而治之：每次比较目标值与...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/divide-and-conquer/</id>
+    <title>分治算法</title>
+    <link href="https://pengzhanbo.cn/algorithm/divide-and-conquer/" />
+    <published>2019-06-09T08:12:08+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 分治算法（Divide and Conquer） , 字面上的解释是「分而治之」。 把一个复杂的问题分成两个或更多的相同或相似的子问题，直到最后子问题可以简单的直接求解，原问题的解即子问题的解的合并。 核心流程包含三步： 分解（Divide）：将原问题拆分为独立子问题 解决（Conquer）：递归求解子问题 合并（Combine）：将子问题的解合...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/data-structure/array/</id>
+    <title>数组</title>
+    <link href="https://pengzhanbo.cn/algorithm/data-structure/array/" />
+    <published>2019-06-08T19:50:17+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 数组（Array） 是一种有序的线性数据结构，它的每个元素都是一个独立的数据项，可以通过下标快速访问。 核心特性 有序性:数组中的元素按照一定的顺序排列，可以通过下标访问特定位置的元素。 线性性:数组中的元素是连续存储的，可以通过下标访问特定位置的元素。 可变性:数组可以动态增加或删除元素，可以根据需要调整数组的大小。 相关问题 LeetCode...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/data-structure/graph/</id>
+    <title>图</title>
+    <link href="https://pengzhanbo.cn/algorithm/data-structure/graph/" />
+    <published>2019-06-08T14:05:06+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">维基百科 - 图论 受限于篇幅和作者个人水平，本篇仅粗略的介绍 图 的一些基本概念，有兴趣的读者可以自行了解更多的知识。 概述 图（Graph） 是一种表示多对多关系的非线性数据结构，由 顶点（Vertex） 和 边（Edge） 组成。 图的核心概念 顶点（Vertex）：图中的基本元素（节点） 边（Edge）：连接两个顶点的关系（可带权重） 类型： ...</summary>
+  </entry>
+  <entry>
+    <id>https://pengzhanbo.cn/algorithm/data-structure/binary-tree/</id>
+    <title>二叉树</title>
+    <link href="https://pengzhanbo.cn/algorithm/data-structure/binary-tree/" />
+    <published>2019-06-08T10:11:58+00:00</published>
+    <updated>2025-10-07T17:39:39+00:00</updated>
+    <summary type="text">概述 二叉树（Binary Tree） 是一种非线性数据结构，每个节点最多有两个子节点（左子节点和右子节点）。 核心特性 度：节点拥有的子树数（二叉树节点度 ≤ 2） 层次：根节点为第 1 层，逐级递增 深度：从根到节点的路径长度 高度：从节点到最深叶子的路径长度 二叉树基础节点实现 特殊二叉树 完全二叉树：除最后一层外全满，最后一层左对齐 满二叉树：...</summary>
+  </entry>
+</feed>
