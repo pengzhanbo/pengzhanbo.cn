@@ -1,9 +1,9 @@
 minimumReleaseAgeExcludePrune: true
 minimumReleaseAgeExclude:
-  - '@vuepress-plume/plugin-fonts@1.0.0-rc.218'
-  - '@vuepress-plume/plugin-search@1.0.0-rc.218'
-  - vuepress-plugin-md-power@1.0.0-rc.218
-  - vuepress-theme-plume@1.0.0-rc.218
+  - '@vuepress-plume/plugin-fonts@1.0.0-rc.219'
+  - '@vuepress-plume/plugin-search@1.0.0-rc.219'
+  - vuepress-plugin-md-power@1.0.0-rc.219
+  - vuepress-theme-plume@1.0.0-rc.219
 
 trustPolicy: no-downgrade
 shamefullyHoist: true
