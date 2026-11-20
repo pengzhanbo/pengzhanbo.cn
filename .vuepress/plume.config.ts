@@ -10,7 +10,7 @@ export default defineThemeConfig({
   collections,
 
   readerPreferences,
-  feed: { perCollection: true },
+  feed: { perCollection: true, formats: ['atom', 'rss', 'json'] },
 
   profile: {
     name: '鹏展博',
