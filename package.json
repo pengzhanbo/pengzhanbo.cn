@@ -20,7 +20,7 @@
     "@vuepress/bundler-vite": "2.0.0-rc.32",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.138",
     "@vuepress/plugin-google-analytics": "2.0.0-rc.138",
-    "@vuepress/shiki-twoslash": "2.0.0-rc.138",
+    "@vuepress/shiki-twoslash": "2.0.0-rc.142",
     "gitmojis": "^3.15.0",
     "katex": "^0.19.1",
     "mermaid": "^12.3.0",
