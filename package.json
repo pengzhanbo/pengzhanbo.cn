@@ -19,12 +19,12 @@
     "@pengzhanbo/utils": "^3.12.0",
     "@vuepress/bundler-vite": "2.0.0-rc.32",
     "@vuepress/plugin-baidu-analytics": "2.0.0-rc.138",
-    "@vuepress/plugin-google-analytics": "2.0.0-rc.138",
+    "@vuepress/plugin-google-analytics": "2.0.0-rc.142",
     "@vuepress/shiki-twoslash": "2.0.0-rc.138",
     "gitmojis": "^3.15.0",
     "katex": "^0.19.1",
     "mermaid": "^12.3.0",
-    "vuepress": "2.0.0-rc.32",
+    "vuepress": "2.0.0-rc.33",
     "vuepress-theme-plume": "1.0.0-rc.219"
   },
   "devDependencies": {
